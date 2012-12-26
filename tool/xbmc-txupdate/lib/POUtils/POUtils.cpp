@@ -253,16 +253,6 @@ void CPODocument::ParseEntry()
         }
       }
 
-      else if (HasPrefix(strLine, "msgid") && strLine.size() > 7)
-      {
-        pPlaceToParse = &m_Entry.msgID;
-        if (!ReadStringLine(strLine, pPlaceToParse,6))
-        {
-          CLog::Log(logWARNING, "POParser: wrong msgid format. Failed entry: %s", m_Entry.Content.c_str());
-          pPlaceToParse = NULL;
-        }
-      }
-
       else if (HasPrefix(strLine, "msgid_plural") && strLine.size() > 14)
       {
         pPlaceToParse = &m_Entry.msgIDPlur;
@@ -273,12 +263,12 @@ void CPODocument::ParseEntry()
         }
       }
 
-      else if (HasPrefix(strLine, "msgstr") && strLine.size() > 8)
+      else if (HasPrefix(strLine, "msgid") && strLine.size() > 7)
       {
-        pPlaceToParse = &m_Entry.msgStr;
-        if (!ReadStringLine(strLine, pPlaceToParse,7))
+        pPlaceToParse = &m_Entry.msgID;
+        if (!ReadStringLine(strLine, pPlaceToParse,6))
         {
-          CLog::Log(logWARNING, "POParser: wrong msgstr format. Failed entry: %s", m_Entry.Content.c_str());
+          CLog::Log(logWARNING, "POParser: wrong msgid format. Failed entry: %s", m_Entry.Content.c_str());
           pPlaceToParse = NULL;
         }
       }
@@ -290,6 +280,16 @@ void CPODocument::ParseEntry()
         if (!ReadStringLine(strLine, pPlaceToParse,10))
         {
           CLog::Log(logWARNING, "POParser: wrong msgstr[] format. Failed entry: %s", m_Entry.Content.c_str());
+          pPlaceToParse = NULL;
+        }
+      }
+
+      else if (HasPrefix(strLine, "msgstr") && strLine.size() > 8)
+      {
+        pPlaceToParse = &m_Entry.msgStr;
+        if (!ReadStringLine(strLine, pPlaceToParse,7))
+        {
+          CLog::Log(logWARNING, "POParser: wrong msgstr format. Failed entry: %s", m_Entry.Content.c_str());
           pPlaceToParse = NULL;
         }
       }
@@ -333,6 +333,8 @@ bool CPODocument::ReadStringLine(const std::string &line, std::string * pStrToAp
   if (line[linesize-1] != '\"' || line[skip] != '\"') return false;
   std::string strToAppend;
   strToAppend.append(line, skip + 1, linesize - skip - 2);
+  if (!g_CharsetUtils.IsValidUTF8(strToAppend))
+    CLog::Log(logERROR, "POUtils::ReadStringLine: wrong utf8 sequence found in string: %s", strToAppend.c_str());
   pStrToAppend->append(g_CharsetUtils.UnescapeCPPString(strToAppend));
   return true;
 };
@@ -413,6 +415,8 @@ bool CPODocument::SaveFile(const std::string &pofilename)
     CLog::Log(logERROR, "POParser: Error opening output file: %s\n", pofilename.c_str());
     return false;
   }
+  if (m_strOutBuffer.find('\x00') != std::string::npos)
+    CLog::Log(logERROR, "CPODocument::SaveFile: Unexpected zero byte in file: %s", pofilename.c_str());
   fprintf(pPOTFile, "%s", m_strOutBuffer.c_str());
   fclose(pPOTFile);
 

@@ -124,7 +124,7 @@ void CPOHandler::ClearCPOEntry (CPOEntry &entry)
 };
 
 
-bool CPOHandler::GetXMLEncoding(const TiXmlDocument* pDoc, std::string& strEncoding)
+bool CPOHandler::GetXMLEncoding( const TiXmlDocument* pDoc, std::string& strEncoding)
 {
   const TiXmlNode* pNode=NULL;
   while ((pNode=pDoc->IterateChildren(pNode)) && pNode->Type()!=TiXmlNode::TINYXML_DECLARATION) {}
@@ -139,7 +139,7 @@ bool CPOHandler::GetXMLEncoding(const TiXmlDocument* pDoc, std::string& strEncod
   return !strEncoding.empty(); // Other encoding then UTF8?
 }
 
-void CPOHandler::GetXMLComment(const TiXmlNode *pCommentNode, CPOEntry &currEntry)
+void CPOHandler::GetXMLComment(std::string strXMLEncoding, const TiXmlNode *pCommentNode, CPOEntry &currEntry)
 {
   int nodeType;
   CPOEntry prevCommEntry;
@@ -151,9 +151,9 @@ void CPOHandler::GetXMLComment(const TiXmlNode *pCommentNode, CPOEntry &currEntr
     if (nodeType == TiXmlNode::TINYXML_COMMENT)
     {
       if (pCommentNode->m_CommentLFPassed)
-        prevCommEntry.interlineComm.push_back(g_CharsetUtils.UnWhitespace(pCommentNode->Value()));
+        prevCommEntry.interlineComm.push_back(g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value())));
       else
-        currEntry.extractedComm.push_back(g_CharsetUtils.UnWhitespace(pCommentNode->Value()));
+        currEntry.extractedComm.push_back(g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value())));
     }
     pCommentNode = pCommentNode->NextSibling();
   }
@@ -174,6 +174,7 @@ bool CPOHandler::FetchXMLURLToMem (std::string strURL)
   m_CommsCntr = 0;
   TiXmlDocument XMLDoc;
 
+  strXMLBuffer.push_back('\n'); // with some addon.xml files, EOF mark is missing. That gives us a TinyXML failure. To avoid, we add an LF
   g_File.ConvertStrLineEnds(strXMLBuffer);
   strXMLBuffer += "\n";
 
@@ -196,7 +197,7 @@ bool CPOHandler::FetchXMLURLToMem (std::string strURL)
   CPOEntry currEntry, commHolder, prevcommHolder;
 
   if (m_bPOIsEnglish)
-    GetXMLComment(pRootElement->FirstChild(), currEntry);
+    GetXMLComment(strXMLEncoding, pRootElement->FirstChild(), currEntry);
 
   const TiXmlElement *pChildElement = pRootElement->FirstChildElement("string");
   const char* pAttrId = NULL;
@@ -224,7 +225,7 @@ bool CPOHandler::FetchXMLURLToMem (std::string strURL)
           currEntry.msgStr = strUtf8;
 
         if (m_bPOIsEnglish)
-          GetXMLComment(pChildElement->NextSibling(), currEntry);
+          GetXMLComment(strXMLEncoding, pChildElement->NextSibling(), currEntry);
 
         m_mapStrings[id] = currEntry;
       }
@@ -394,43 +395,26 @@ void CPOHandler::SetPreHeader (std::string &strPreText)
   if (strPreText.empty())
     return;
 
-  std::string strOutHeader;
-  size_t startPos;
-
-  if ((startPos = m_strHeader.find("msgid \"\"")) != std::string::npos)
-    m_strHeader = m_strHeader.substr(startPos);
-
-  size_t pos1, pos2;
-  pos1 = m_strHeader.find("\"Last-Translator:") + 17;
-  pos2 = m_strHeader.find("\\n\"", pos1);
-
-  if (pos1 != std::string::npos && pos2 != std::string::npos)
-  {
-    std::string strCleanFromNames = m_strHeader.substr(0, pos1) + " XBMC Translation Team" +
-                                    m_strHeader.substr(pos2, m_strHeader.size() - pos2 + 1);
-    m_strHeader = strCleanFromNames;
-  }
-
-  strOutHeader += "# XBMC Media Center language file\n";
-
-  strOutHeader += strPreText + m_strHeader;
-  m_strHeader = strOutHeader;
+  m_strHeader = "# XBMC Media Center language file\n";
+  m_strHeader += strPreText;
 }
 
 void CPOHandler::SetHeaderNEW (std::string strLangCode)
 {
+  m_strLangCode = strLangCode;
   std::stringstream ss;//create a stringstream
   ss << g_LCodeHandler.GetnPlurals(strLangCode);
   std::string strnplurals = ss.str();
 
   m_strHeader += "msgid \"\"\n";
   m_strHeader += "msgstr \"\"\n";
-  m_strHeader += "\"Project-Id-Version: XBMC-Addons\\n\"\n";
+  m_strHeader += "\"Project-Id-Version: " + g_Settings.GetProjectnameLong() + "\\n\"\n";
   m_strHeader += "\"Report-Msgid-Bugs-To: " + g_Settings.GetSupportEmailAdd() + "\\n\"\n";
-  m_strHeader += "\"POT-Creation-Date: " + g_File.GetCurrTime() + "\\n\"\n";
+  m_strHeader += "\"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
   m_strHeader += "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-  m_strHeader += "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
-  m_strHeader += "\"Language-Team: LANGUAGE\\n\"\n";
+  m_strHeader += "\"Last-Translator: XBMC Translation Team\\n\"\n";
+  m_strHeader += "\"Language-Team: " + g_LCodeHandler.FindLang(strLangCode) + " (http://www.transifex.com/projects/p/" + g_Settings.GetProjectname() +"/language/"
+                 + strLangCode +"/)" + "\\n\"\n";
   m_strHeader += "\"MIME-Version: 1.0\\n\"\n";
   m_strHeader += "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
   m_strHeader += "\"Content-Transfer-Encoding: 8bit\\n\"\n";
@@ -499,6 +483,10 @@ bool CPOHandler::WriteXMLFile(const std::string &strOutputPOFilename)
   std::string strXMLDoc;
 
   strXMLDoc += "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>\n";
+  strXMLDoc += "<!-- Translated using Transifex web application. For support, or if you would like to to help out, please visit your language team! -->\n";
+  strXMLDoc += "<!-- " + g_LCodeHandler.FindLang(m_strLangCode) + " language-Team URL: " + "http://www.transifex.com/projects/p/" + g_Settings.GetProjectname() +"/language/"
+  + m_strLangCode +"/ -->\n";
+  strXMLDoc += "<!-- Report language file syntax bugs at: " + g_Settings.GetSupportEmailAdd() + " -->\n\n";
   strXMLDoc += "<strings>\n";
 
   for (itStrings it = m_mapStrings.begin(); it != m_mapStrings.end(); it++)
@@ -533,7 +521,7 @@ bool CPOHandler::WriteXMLFile(const std::string &strOutputPOFilename)
     strXMLDoc += "\n";
   }
 
-  strXMLDoc += "</strings>";
+  strXMLDoc += "</strings>\n";
 
   g_File.WriteFileFromStr(strOutputPOFilename, strXMLDoc);
 

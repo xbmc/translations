@@ -33,6 +33,9 @@ CXMLResdata::CXMLResdata()
   Restype = UNKNOWN;
   bWritePO = true;
   bWriteXML = false;
+  bHasChangelog = true;
+  strLogFormat = "[B]%i[/B]\n\n- Updated language files from Transifex\n\n";
+  strLogFilename = "changelog.txt";
 }
 
 CXMLResdata::~CXMLResdata()
@@ -71,7 +74,7 @@ bool CUpdateXMLHandler::LoadXMLToMem (std::string rootDir)
     CLog::Log(logINFO, "UpdXMLHandler: Found projectname in xbmc-txupdate.xml file: %s",strProjName.c_str());
     g_Settings.SetProjectname(strProjName);
   }
-  else    
+  else
     CLog::Log(logERROR, "UpdXMLHandler: No projectname specified in xbmc-txupdate.xml file. Cannot continue. "
                         "Please specify the Transifex projectname in the xml file");
 
@@ -161,12 +164,29 @@ bool CUpdateXMLHandler::LoadXMLToMem (std::string rootDir)
         currResData.strLangFileType = pChildURLElement->Attribute("filetype"); // For PO no need to explicitly specify. Only for XML.
       if (pChildURLElement->Attribute("URLsuffix"))
         currResData.strURLSuffix = pChildURLElement->Attribute("URLsuffix"); // Some http servers need suffix strings after filename(eg. gitweb)
+      if (pChildURLElement->Attribute("HasChangelog"))
+      {
+        std::string strHaschangelog = pChildURLElement->Attribute("HasChangelog"); // Note if the addon has upstream changelog
+        currResData.bHasChangelog = strHaschangelog == "true";
+      }
+      if (pChildURLElement->Attribute("LogFormat"))
+      {
+        std::string strLogFormat = pChildURLElement->Attribute("LogFormat");
+        currResData.strLogFormat = strLogFormat;
+      }
+      if (pChildURLElement->Attribute("LogFilename"))
+      {
+        std::string strLogFilename = pChildURLElement->Attribute("LogFilename");
+        currResData.strLogFilename = strLogFilename;
+      }
 
       const TiXmlElement *pChildUpstrLElement = pChildResElement->FirstChildElement("upstreamLangs");
       if (pChildUpstrLElement && pChildUpstrLElement->FirstChild())
         currResData.strLangsFromUpstream = pChildUpstrLElement->FirstChild()->Value();
 
       const TiXmlElement *pChildResTypeElement = pChildResElement->FirstChildElement("resourceType");
+      if (pChildResTypeElement->Attribute("AddonXMLSuffix"))
+        currResData.strAddonXMLSuffix = pChildResTypeElement->Attribute("AddonXMLSuffix"); // Some addons have unique addon.xml filename eg. pvr addons with .in suffix
       if (pChildResTypeElement && pChildResTypeElement->FirstChild())
       {
         strType = pChildResTypeElement->FirstChild()->Value();
@@ -187,14 +207,16 @@ bool CUpdateXMLHandler::LoadXMLToMem (std::string rootDir)
         currResData.strResDirectory = pChildResDirElement->FirstChild()->Value();
       if (pChildResDirElement->Attribute("writePO"))
       {
-	std::string strBool = pChildResDirElement->Attribute("writePO");
+	      std::string strBool = pChildResDirElement->Attribute("writePO");
         currResData.bWritePO = strBool == "true";
       }
       if (pChildResDirElement->Attribute("writeXML"))
       {
-	std::string strBool = pChildResDirElement->Attribute("writeXML");
+	      std::string strBool = pChildResDirElement->Attribute("writeXML");
         currResData.bWriteXML = strBool == "true";
       }
+      if (pChildResDirElement->Attribute("DIRprefix"))
+        currResData.strDIRprefix = pChildResDirElement->Attribute("DIRprefix"); // If there is any SUBdirectory needed in the tree
 
       const TiXmlElement *pChildTXNameElement = pChildResElement->FirstChildElement("TXname");
       if (pChildTXNameElement && pChildTXNameElement->FirstChild())

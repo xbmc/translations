@@ -31,6 +31,8 @@ public:
   bool LoadAddonXMLFile (std::string strAddonXMLFilename);
   bool UpdateAddonXMLFile (std::string strAddonXMLFilename);
   bool FetchAddonXMLFileUpstr (std::string strURL);
+  bool UpdateAddonChangelogFile (std::string strFilename, std::string strFormat);
+  bool FetchAddonChangelogFile (std::string strURL);
   bool LoadCoreVersion(std::string filename);
   bool FetchCoreVersionUpstr(std::string strURL);
   std::string GetResHeaderPretext () const {return m_strResourceData;}
@@ -38,11 +40,19 @@ public:
   void SetMapAddonXMLData (std::map<std::string, CAddonXMLEntry> mapData) {m_mapAddonXMLData = mapData;}
   std::string GetStrAddonXMLFile() const {return m_strAddonXMLFile;}
   void SetStrAddonXMLFile(std::string const &strAddonXMLFile) {m_strAddonXMLFile = strAddonXMLFile;}
+  std::string GetAddonVersion () const {return m_strAddonVersion;}
+  void SetAddonVersion(std::string const &strAddonVersion) {m_strAddonVersion = strAddonVersion;}
+  std::string GetAddonChangelogFile () const {return m_strChangelogFile;}
+  void SetAddonChangelogFile(std::string const &strAddonChangelogFile) {m_strChangelogFile = strAddonChangelogFile;}
+  std::string GetAddonLogFilename () const {return m_strLogFilename;}
+  void SetAddonLogFilename(std::string const &strAddonLogFilename) {m_strLogFilename = strAddonLogFilename;}
 
 protected:
   bool ProcessAddonXMLFile (std::string AddonXMLFilename, TiXmlDocument &xmlAddonXML);
   bool ProcessCoreVersion(std::string filename, std::string &strBuffer);
   bool GetEncoding(const TiXmlDocument* pDoc, std::string& strEncoding);
+  void BumpVersionNumber();
+  void UpdateVersionNumber();
   std::string CstrToString(const char * StrToEscape);
   std::string GetXMLEntry (std::string const &strprefix, size_t &pos1, size_t &pos2);
   void CleanWSBetweenXMLEntries (std::string &strXMLString);
@@ -50,4 +60,7 @@ protected:
   std::map<std::string, CAddonXMLEntry>::iterator itAddonXMLData;
   std::string m_strResourceData;
   std::string m_strAddonXMLFile;
+  std::string m_strAddonVersion;
+  std::string m_strChangelogFile;
+  std::string m_strLogFilename;
 };

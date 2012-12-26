@@ -34,6 +34,7 @@
 #include "lib/ProjectHandler.h"
 #include "lib/HTTPUtils.h"
 #include "lib/xbmclangcodes.h"
+#include "lib/Settings.h"
 
 using namespace std;
 
@@ -140,7 +141,15 @@ int main(int argc, char* argv[])
 
     if (bDownloadNeeded)
     {
+      if (!g_File.FileExist(WorkingDir + ".httpcache" + DirSepChar + ".lastdloadtime") ||
+          g_File.GetFileAge(WorkingDir + ".httpcache" + DirSepChar + ".lastdloadtime") > g_Settings.GetHTTPCacheExpire() * 60)
+      {
+        g_File.DeleteDirectory(WorkingDir + ".httpcache"); // Clean the complete cache as all our files in there are outdated
+        g_HTTPHandler.SetCacheDir(WorkingDir + ".httpcache");
+      }
+
       g_File.WriteFileFromStr(WorkingDir + ".httpcache" + DirSepChar + ".dload_merge_status", "fail");
+      g_File.WriteFileFromStr(WorkingDir + ".httpcache" + DirSepChar + ".lastdloadtime", "Last download time: " + g_File.GetCurrTime());
 
       printf("\n");
       printf("----------------------------------------\n");

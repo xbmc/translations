@@ -63,7 +63,7 @@ std::list<std::string> CJSONHandler::ParseResources(std::string strJSON)
   return listResources;
 };
 
-std::list<std::string> CJSONHandler::ParseAvailLanguagesTX(std::string strJSON)
+std::list<std::string> CJSONHandler::ParseAvailLanguagesTX(std::string strJSON, bool bIsXBMCCore)
 {
   Json::Value root;   // will contains the root value after parsing.
   Json::Reader reader;
@@ -92,7 +92,7 @@ std::list<std::string> CJSONHandler::ParseAvailLanguagesTX(std::string strJSON)
 
     // we only add language codes to the list which has a minimum ready percentage defined in the xml file
     // we make an exception with all English derived languages, as they can have only a few srings changed
-    if (lang.find("en_") != std::string::npos || strtol(&strCompletedPerc[0], NULL, 10) > g_Settings.GetMinCompletion()-1)
+    if (lang.find("en_") != std::string::npos || strtol(&strCompletedPerc[0], NULL, 10) > g_Settings.GetMinCompletion()-1 || !bIsXBMCCore)
     {
       strLangsToFetch += lang + ": " + strCompletedPerc + ", ";
       listLangs.push_back(lang);
@@ -228,3 +228,18 @@ void CJSONHandler::ParseUploadedStrForNewRes(std::string const &strJSON, size_t 
 
   return;
 };
+
+std::string CJSONHandler::ParseLongProjectName(std::string const &strJSON)
+{
+  Json::Value root;   // will contains the root value after parsing.
+  Json::Reader reader;
+
+  bool parsingSuccessful = reader.parse(strJSON, root );
+  if ( !parsingSuccessful )
+  {
+    CLog::Log(logERROR, "JSONHandler::ParseLongProjectName: no valid JSON data");
+    return "";
+  }
+
+  return root.get("name", "").asString();
+}

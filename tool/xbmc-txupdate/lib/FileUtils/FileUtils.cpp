@@ -103,6 +103,76 @@ std::string CFile::GetCurrTime()
   return strTimeCleaned;
 };
 
+std::string CFile::GetCurrYear()
+{
+  std::string strTime(64, '\0');
+  time_t now = std::time(0);
+  struct std::tm* gmtm = std::gmtime(&now);
+
+  if (gmtm != NULL)
+  {
+    sprintf(&strTime[0], "%04i", gmtm->tm_year + 1900);
+  }
+  std::string strTimeCleaned = strTime.c_str();
+  return strTimeCleaned;
+};
+
+std::string CFile::GetCurrMonth()
+{
+  std::string strTime(64, '\0');
+  time_t now = std::time(0);
+  struct std::tm* gmtm = std::gmtime(&now);
+  
+  if (gmtm != NULL)
+  {
+    sprintf(&strTime[0], "%02i", gmtm->tm_mon + 1);
+  }
+  std::string strTimeCleaned = strTime.c_str();
+  return strTimeCleaned;
+};
+
+std::string CFile::GetCurrDay()
+{
+  std::string strTime(64, '\0');
+  time_t now = std::time(0);
+  struct std::tm* gmtm = std::gmtime(&now);
+  
+  if (gmtm != NULL)
+  {
+    sprintf(&strTime[0], "%02i", gmtm->tm_mday);
+  }
+  std::string strTimeCleaned = strTime.c_str();
+  return strTimeCleaned;
+};
+
+std::string CFile::GetCurrMonthText()
+{
+  time_t now = std::time(0);
+  struct std::tm* gmtm = std::gmtime(&now);
+
+  std::string strTimeCleaned;
+  if (gmtm != NULL)
+  {
+    switch (gmtm->tm_mon + 1)
+    {
+      case 1:  strTimeCleaned = "Jan"; break;
+      case 2:  strTimeCleaned = "Feb"; break;
+      case 3:  strTimeCleaned = "Mar"; break;
+      case 4:  strTimeCleaned = "Apr"; break;
+      case 5:  strTimeCleaned = "May"; break;
+      case 6:  strTimeCleaned = "Jun"; break;
+      case 7:  strTimeCleaned = "Jul"; break;
+      case 8:  strTimeCleaned = "Aug"; break;
+      case 9:  strTimeCleaned = "Sep"; break;
+      case 10:  strTimeCleaned = "Oct"; break;
+      case 11:  strTimeCleaned = "Nov"; break;
+      case 12:  strTimeCleaned = "Dec"; break;
+      default: CLog::Log(logWARNING, "FileUtils::GetCurrMonthText: wrong month numer");
+    }
+  }
+  return strTimeCleaned;
+};
+
 void CFile::CopyFile(std::string strSourceFileName, std::string strDestFileName)
 {
   ifstream source(strSourceFileName.c_str(), std::ios::binary);

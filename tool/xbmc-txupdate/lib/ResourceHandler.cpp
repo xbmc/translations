@@ -46,7 +46,7 @@ CPOHandler* CResourceHandler::GetPOData(std::string strLang)
 
 // Download from Transifex related functions
 
-bool CResourceHandler::FetchPOFilesTXToMem(std::string strURL)
+bool CResourceHandler::FetchPOFilesTXToMem(std::string strURL, bool bIsXBMCCore)
 {
   g_HTTPHandler.Cleanup();
   g_HTTPHandler.ReInit();
@@ -59,7 +59,7 @@ bool CResourceHandler::FetchPOFilesTXToMem(std::string strURL)
   char cstrtemp[strtemp.size()];
   strcpy(cstrtemp, strtemp.c_str());
 
-  std::list<std::string> listLangsTX = g_Json.ParseAvailLanguagesTX(strtemp);
+  std::list<std::string> listLangsTX = g_Json.ParseAvailLanguagesTX(strtemp, bIsXBMCCore);
 
   CPOHandler POHandler;
 
@@ -96,7 +96,9 @@ bool CResourceHandler::FetchPOFilesUpstreamToMem(CXMLResdata XMLResdata, std::li
   }
   else
   {
-    m_AddonXMLHandler.FetchAddonXMLFileUpstr(XMLResdata.strUpstreamURL + "addon.xml" + XMLResdata.strURLSuffix);
+    m_AddonXMLHandler.FetchAddonXMLFileUpstr(XMLResdata.strUpstreamURL + "addon.xml" + XMLResdata.strAddonXMLSuffix + XMLResdata.strURLSuffix);
+    if (XMLResdata.bHasChangelog)
+      m_AddonXMLHandler.FetchAddonChangelogFile(XMLResdata.strUpstreamURL + XMLResdata.strLogFilename + XMLResdata.strURLSuffix);
     if (XMLResdata.Restype == SKIN)
       strLangdirPrefix = "language/";
     else if (XMLResdata.Restype == ADDON)
@@ -175,7 +177,7 @@ bool CResourceHandler::FetchPOFilesUpstreamToMem(CXMLResdata XMLResdata, std::li
     if (XMLResdata.strLangFileType == "xml")
       bResult = POHandler.FetchXMLURLToMem(XMLResdata.strUpstreamURL + strLangdirPrefix + g_LCodeHandler.FindLang(*it) + DirSepChar + "strings.xml" + XMLResdata.strURLSuffix);
     else
-      bResult = POHandler.FetchPOURLToMem(XMLResdata.strUpstreamURL + strLangdirPrefix + g_LCodeHandler.FindLang(*it) + DirSepChar + "strings.po" + XMLResdata.strURLSuffix,true);
+      bResult = POHandler.FetchPOURLToMem(XMLResdata.strUpstreamURL + strLangdirPrefix + g_LCodeHandler.FindLang(*it) + DirSepChar + "strings.po" + XMLResdata.strURLSuffix,false);
     if (bResult)
     {
       m_mapPOFiles[*it] = POHandler;
@@ -197,15 +199,15 @@ bool CResourceHandler::WritePOToFiles(std::string strProjRootDir, std::string st
   switch (XMLResdata.Restype)
   {
     case ADDON: case ADDON_NOSTRINGS:
-      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + DirSepChar + strResname +DirSepChar;
+      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + DirSepChar + strResname + DirSepChar + XMLResdata.strDIRprefix + DirSepChar;
       strLangDir = strResourceDir + "resources" + DirSepChar + "language" + DirSepChar;
       break;
     case SKIN:
-      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar  + XMLResdata.strResDirectory + DirSepChar + strResname +DirSepChar;
+      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar  + XMLResdata.strResDirectory + DirSepChar + strResname + DirSepChar+ XMLResdata.strDIRprefix + DirSepChar;
       strLangDir = strResourceDir + "language" + DirSepChar;
       break;
     case CORE:
-      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + DirSepChar;
+      strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + DirSepChar + XMLResdata.strDIRprefix + DirSepChar;
       strLangDir = strResourceDir + "language" + DirSepChar;
       break;
     default:
@@ -234,7 +236,11 @@ bool CResourceHandler::WritePOToFiles(std::string strProjRootDir, std::string st
 
   // update local addon.xml file
   if (strResname != "xbmc.core" && strPrefixDir == g_Settings.GetMergedLangfilesDir())
-    m_AddonXMLHandler.UpdateAddonXMLFile(strResourceDir + "addon.xml");
+  {
+    m_AddonXMLHandler.UpdateAddonXMLFile(strResourceDir + "addon.xml" + XMLResdata.strAddonXMLSuffix);
+    if (XMLResdata.bHasChangelog)
+      m_AddonXMLHandler.UpdateAddonChangelogFile(strResourceDir + XMLResdata.strLogFilename, XMLResdata.strLogFormat);
+  }
 
   return true;
 }

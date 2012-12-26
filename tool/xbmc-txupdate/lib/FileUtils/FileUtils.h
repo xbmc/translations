@@ -59,6 +59,10 @@ public:
   void ConvertStrLineEnds(std::string &strToConvert);
   int DeleteDirectory(std::string strDirPath);
   std::string GetCurrTime();
+  std::string GetCurrYear();
+  std::string GetCurrMonth();
+  std::string GetCurrDay();
+  std::string GetCurrMonthText();
 };
 
 extern CFile g_File;

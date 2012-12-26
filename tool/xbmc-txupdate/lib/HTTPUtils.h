@@ -28,6 +28,7 @@
 #include <stdio.h>
 #include <curl/curl.h>
 #include "TinyXML/tinyxml.h"
+#include "POHandler.h"
 
 struct CLoginData
 {
@@ -41,7 +42,7 @@ public:
   CHTTPHandler();
   ~CHTTPHandler();
   void ReInit();
-  std::string GetURLToSTR(std::string strURL);
+  std::string GetURLToSTR(std::string strURL, bool bSkiperror = false);
   void Cleanup();
   void SetCacheDir(std::string strCacheDir);
   bool LoadCredentials (std::string CredentialsFilename);
@@ -50,11 +51,12 @@ public:
   bool CreateNewResource(std::string strResname, std::string strENPOFilePath, std::string strURL, size_t &stradded,
                          std::string const &strURLENTransl);
   void DeleteCachedFile(std::string const &strURL, std::string strPrefix);
+  bool ComparePOFilesInMem(CPOHandler * pPOHandler1, CPOHandler * pPOHandler2, bool bLangIsEN) const;
 
 private:
   CURL *m_curlHandle;
   std::string m_strCacheDir;
-  long curlURLToCache(std::string strCacheFile, std::string strURL);
+  long curlURLToCache(std::string strCacheFile, std::string strURL, bool bSkiperror);
   long curlPUTPOFileToURL(std::string const &strFilePath, std::string const &strURL, size_t &stradded, size_t &strupd);
 
   CLoginData GetCredentials (std::string strURL);

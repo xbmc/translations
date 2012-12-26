@@ -65,7 +65,7 @@ bool CProjectHandler::FetchResourcesFromTransifex()
 
     m_mapResourcesTX[strResname]=ResourceHandler;
     m_mapResourcesTX[strResname].FetchPOFilesTXToMem("https://www.transifex.com/api/2/project/" + g_Settings.GetProjectname() +
-                                              "/resource/" + *it + "/");
+                                              "/resource/" + *it + "/", strResname == "xbmc.core");
     CLog::DecIdent(4);
     printf(" )\n");
   }
@@ -146,19 +146,25 @@ bool CProjectHandler::CreateMergedResources()
 
     CResourceHandler mergedResHandler, updTXResHandler;
 
-    // Get available pretext for Resource Header. First use the upstream one, if not avail. the TX one
+    // Get available pretext for Resource Header. we use the upstream one
     std::string strResPreHeader;
     if (m_mapResourcesUpstr.find(*itResAvail) != m_mapResourcesUpstr.end())
       strResPreHeader = m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetResHeaderPretext();
-    else if (m_mapResourcesTX.find(*itResAvail) != m_mapResourcesTX.end())
-      strResPreHeader = m_mapResourcesTX[*itResAvail].GetXMLHandler()->GetResHeaderPretext();
+    else
+      CLog::Log(logERROR, "CreateMergedResources: Not able to read addon data for header text");
 
     CAddonXMLEntry * pENAddonXMLEntry;
 
     if ((pENAddonXMLEntry = GetAddonDataFromXML(&m_mapResourcesUpstr, *itResAvail, "en")) != NULL)
     {
       mergedResHandler.GetXMLHandler()->SetStrAddonXMLFile(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetStrAddonXMLFile());
+      mergedResHandler.GetXMLHandler()->SetAddonVersion(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonVersion());
+      mergedResHandler.GetXMLHandler()->SetAddonChangelogFile(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonChangelogFile());
+      mergedResHandler.GetXMLHandler()->SetAddonLogFilename(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonLogFilename());
       updTXResHandler.GetXMLHandler()->SetStrAddonXMLFile(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetStrAddonXMLFile());
+      updTXResHandler.GetXMLHandler()->SetAddonVersion(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonVersion());
+      updTXResHandler.GetXMLHandler()->SetAddonChangelogFile(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonChangelogFile());
+      updTXResHandler.GetXMLHandler()->SetAddonLogFilename(m_mapResourcesUpstr[*itResAvail].GetXMLHandler()->GetAddonLogFilename());
     }
     else if (*itResAvail != "xbmc.core")
       CLog::Log(logERROR, "CreateMergedResources: No Upstream AddonXML file found as source for merging");
@@ -201,7 +207,9 @@ bool CProjectHandler::CreateMergedResources()
       {
         size_t numID = pcurrPOHandlerEN->GetNumPOEntryByIdx(POEntryIdx)->numID;
 
-        const CPOEntry* pcurrPOEntryEN = pcurrPOHandlerEN->GetNumPOEntryByIdx(POEntryIdx);
+        CPOEntry currPOEntryEN = *(pcurrPOHandlerEN->GetNumPOEntryByIdx(POEntryIdx));
+        currPOEntryEN.msgStr.clear();
+        CPOEntry* pcurrPOEntryEN = &currPOEntryEN;
 
         pPOEntryTX = SafeGetPOEntry(m_mapResourcesTX, *itResAvail, strLangCode, numID);
         pPOEntryUpstr = SafeGetPOEntry(m_mapResourcesUpstr, *itResAvail, strLangCode, numID);
@@ -224,37 +232,26 @@ bool CProjectHandler::CreateMergedResources()
           mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, true); // we got this entry from a strings.xml file
           updTXPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, false);
         }
-        else if (strLangCode != "en")
-          mergedPOHandler.AddNumPOEntryByID(numID, *pcurrPOEntryEN, *pcurrPOEntryEN, true);
+// We don't add untranslated entries to the non-English PO files
+//        else if (strLangCode != "en")
+//          mergedPOHandler.AddNumPOEntryByID(numID, *pcurrPOEntryEN, *pcurrPOEntryEN, true);
       }
 
-      CPOHandler * pPOHandlerTX, * pPOHandlerUpst;
+      CPOHandler * pPOHandlerTX;
       pPOHandlerTX = SafeGetPOHandler(m_mapResourcesTX, *itResAvail, strLangCode);
-      pPOHandlerUpst = SafeGetPOHandler(m_mapResourcesUpstr, *itResAvail, strLangCode);
 
       if (mergedPOHandler.GetNumEntriesCount() !=0 || mergedPOHandler.GetClassEntriesCount() !=0)
       {
-        if (pPOHandlerTX && strLangCode != "en")
-          mergedPOHandler.SetHeader(pPOHandlerTX->GetHeader());
-        else if (pPOHandlerUpst && !pcurrPOHandlerEN->GetIfSourceIsXML())
-          mergedPOHandler.SetHeader(pPOHandlerUpst->GetHeader());
-        else
-          mergedPOHandler.SetHeaderNEW(*itlang);
-
         mergedPOHandler.SetPreHeader(strResPreHeader);
+        mergedPOHandler.SetHeaderNEW(*itlang);
         mergedResHandler.AddPOData(mergedPOHandler, strLangCode);
       }
 
-      if (updTXPOHandler.GetNumEntriesCount() !=0 || updTXPOHandler.GetClassEntriesCount() !=0)
+      if ((updTXPOHandler.GetNumEntriesCount() !=0 || updTXPOHandler.GetClassEntriesCount() !=0) &&
+        (strLangCode != "en" || !g_HTTPHandler.ComparePOFilesInMem(&updTXPOHandler, pPOHandlerTX, strLangCode == "en")))
       {
-        if (pPOHandlerTX && strLangCode != "en")
-          updTXPOHandler.SetHeader(pPOHandlerTX->GetHeader());
-        else if (pPOHandlerUpst && !pcurrPOHandlerEN->GetIfSourceIsXML())
-          updTXPOHandler.SetHeader(pPOHandlerUpst->GetHeader());
-        else // no upstream nor on tx we have a valid header. Creating a new one
-          updTXPOHandler.SetHeaderNEW(*itlang);
-
         updTXPOHandler.SetPreHeader(strResPreHeader);
+        updTXPOHandler.SetHeaderNEW(*itlang);
         updTXResHandler.AddPOData(updTXPOHandler, strLangCode);
       }
 
@@ -396,9 +393,6 @@ void CProjectHandler::UploadTXUpdateFiles(std::string strProjRootDir)
   if (strtemp.empty())
     CLog::Log(logERROR, "ProjectHandler::FetchResourcesFromTransifex: error getting resources from transifex.net");
 
-  char cstrtemp[strtemp.size()];
-  strcpy(cstrtemp, strtemp.c_str());
-
   std::list<std::string> listResourceNamesTX = g_Json.ParseResources(strtemp);
 
   std::map<std::string, CXMLResdata> mapUpdateXMLHandler = m_UpdateXMLHandler.GetResMap();
@@ -420,11 +414,11 @@ void CProjectHandler::UploadTXUpdateFiles(std::string strProjRootDir)
     switch (XMLResdata.Restype)
     {
       case ADDON: case ADDON_NOSTRINGS:
-        strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + strResname +DirSepChar;
+        strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + strResname + DirSepChar + XMLResdata.strDIRprefix + DirSepChar;
         strLangDir = strResourceDir + "resources" + DirSepChar + "language" + DirSepChar;
         break;
       case SKIN:
-        strResourceDir = strProjRootDir + strPrefixDir + DirSepChar  + XMLResdata.strResDirectory + strResname +DirSepChar;
+        strResourceDir = strProjRootDir + strPrefixDir + DirSepChar + XMLResdata.strResDirectory + strResname + DirSepChar + XMLResdata.strDIRprefix + DirSepChar;
         strLangDir = strResourceDir + "language" + DirSepChar;
         break;
       case CORE:
@@ -512,14 +506,15 @@ bool CProjectHandler::FindResInList(std::list<std::string> const &listResourceNa
 std::list<std::string> CProjectHandler::GetLangsFromDir(std::string const &strLangDir)
 {
   std::list<std::string> listDirs;
+  bool bEnglishExists = true;
   if (!g_File.DirExists(strLangDir + "English"))
-    return listDirs;
+    bEnglishExists = false;
 
   DIR* Dir;
   struct dirent *DirEntry;
   Dir = opendir(strLangDir.c_str());
 
-  while((DirEntry=readdir(Dir)))
+  while(Dir && (DirEntry=readdir(Dir)))
   {
     if (DirEntry->d_type == DT_DIR && DirEntry->d_name[0] != '.')
     {
@@ -530,7 +525,8 @@ std::list<std::string> CProjectHandler::GetLangsFromDir(std::string const &strLa
   }
 
   listDirs.sort();
-  listDirs.push_front("en");
+  if (bEnglishExists)
+    listDirs.push_front("en");
 
   return listDirs;
 };

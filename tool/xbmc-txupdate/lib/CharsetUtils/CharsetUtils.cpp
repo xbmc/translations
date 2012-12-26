@@ -137,156 +137,122 @@ std::string CCharsetUtils::UnWhitespace(std::string strInput)
   return strInput;
 }
 
-std::string CCharsetUtils::ToUTF8(const std::string& strEncoding, const std::string& str)
+std::string CCharsetUtils::ToUTF8(std::string strEncoding, const std::string& str)
 {
-  if (strEncoding.empty())
-    return str;
+  if (strEncoding.empty() || strEncoding == "utf8" || strEncoding == "UTF8" || strEncoding == "utf-8" || strEncoding == "UTF-8")
+  {
+    if (IsValidUTF8(str))
+      return str;
 
-  std::string ret;
-  stringCharsetToUtf8(strEncoding, str, ret);
+    CLog::Log(logWARNING, "CharsetUtils::ToUTF8: Invalid character sequence in UTF8 string, trying windows-1252 for string: %s", str.c_str());
+    strEncoding = "windows-1252"; // The most common is that user thinks that he is typing utf8, but he uses cp-1252 codepage
+  }
+
+  std::string ret = stringCharsetToUtf8(strEncoding, str);
+
+  if (!IsValidUTF8(ret))
+    CLog::Log(logERROR, "CharsetUtils::ToUTF8: Wrong character encoding given, not able to convert to UTF8. String is: %s", str.c_str());
+
   return ret;
 }
 
-void CCharsetUtils::stringCharsetToUtf8(const std::string& strSourceCharset, const std::string& strSource,
-                         std::string& strDest)
+std::string CCharsetUtils::stringCharsetToUtf8(const std::string& strCP, std::string strIn)
 {
-  iconv_t iconvString;
-  ICONV_PREPARE(iconvString);
-  convert(iconvString,UTF8_DEST_MULTIPLIER,strSourceCharset,"UTF-8",strSource,strDest);
-  iconv_close(iconvString);
-}
-
-void CCharsetUtils::convert(iconv_t& type, int multiplier, const std::string& strFromCharset,
-                    const std::string& strToCharset, const std::string& strSource,
-                    std::string& strDest)
-{
-  if(!convert_checked(type, multiplier, strFromCharset, strToCharset, strSource, strDest))
-    strDest = strSource;
-}
-
-bool CCharsetUtils::convert_checked(iconv_t& type, int multiplier, const std::string& strFromCharset,
-                            const std::string& strToCharset, const std::string& strSource,
-                            std::string& strDest)
-{
-  if (type == (iconv_t)-1)
+  //Part1 Initalize
+  iconv_t conv_desc;
+  conv_desc = iconv_open ("UTF-8", strCP.c_str());
+  if (conv_desc == (iconv_t)-1) /* Initialization failure. */
   {
-    type = iconv_open(strToCharset.c_str(), strFromCharset.c_str());
-    if (type == (iconv_t)-1) //iconv_open failed
-    {
-      printf("iconv_open() failed from %s to %s", strFromCharset.c_str(), strToCharset.c_str());
-      return false;
-    }
-  }
-
-  if (strSource.empty())
-  {
-    strDest.clear(); //empty strings are easy
-    return true;
-  }
-
-  //input buffer for iconv() is the buffer from strSource
-  size_t      inBufSize  = (strSource.length() + 1) * sizeof(strSource[0]);
-  const char* inBuf      = (const char*)strSource.c_str();
-
-  //allocate output buffer for iconv()
-  size_t      outBufSize = (strSource.length() + 1) * multiplier;
-  char*       outBuf     = (char*)malloc(outBufSize);
-
-  size_t      inBytesAvail  = inBufSize;  //how many bytes iconv() can read
-  size_t      outBytesAvail = outBufSize; //how many bytes iconv() can write
-  const char* inBufStart    = inBuf;      //where in our input buffer iconv() should start reading
-  char*       outBufStart   = outBuf;     //where in out output buffer iconv() should start writing
-
-  while(1)
-  {
-    //iconv() will update inBufStart, inBytesAvail, outBufStart and outBytesAvail
-    size_t returnV = iconv_const(type, &inBufStart, &inBytesAvail, &outBufStart, &outBytesAvail);
-
-    if ((returnV == (size_t)-1) && (errno != EINVAL))
-    {
-      if (errno == E2BIG) //output buffer is not big enough
-      {
-        //save where iconv() ended converting, realloc might make outBufStart invalid
-        size_t bytesConverted = outBufSize - outBytesAvail;
-
-        //make buffer twice as big
-        outBufSize   *= 2;
-        char* newBuf  = (char*)realloc(outBuf, outBufSize);
-        if (!newBuf)
-        {
-          printf("realloc failed with buffer=%p size=%zu errno=%d(%s)",
-                  outBuf, outBufSize, errno, strerror(errno));
-          free(outBuf);
-          return false;
-        }
-        outBuf = newBuf;
-
-        //update the buffer pointer and counter
-        outBufStart   = outBuf + bytesConverted;
-        outBytesAvail = outBufSize - bytesConverted;
-
-        //continue in the loop and convert the rest
-      }
-      else if (errno == EILSEQ) //An invalid multibyte sequence has been encountered in the input
-      {
-        //skip invalid byte
-        inBufStart++;
-        inBytesAvail--;
-
-        //continue in the loop and convert the rest
-      }
-      else //iconv() had some other error
-      {
-        printf("iconv() failed from %s to %s, errno=%d(%s)",
-               strFromCharset.c_str(), strToCharset.c_str(), errno, strerror(errno));
-        free(outBuf);
-        return false;
-      }
-    }
+    if (errno == EINVAL)
+      CLog::Log(logERROR, "Libiconv: Conversion from '%s' to UTF-8 is not supported by libiconv\n", strCP.c_str());
     else
-    {
-      //complete the conversion, otherwise the current data will prefix the data on the next call
-      returnV = iconv_const(type, NULL, NULL, &outBufStart, &outBytesAvail);
-      if (returnV == (size_t)-1)
-        printf("failed cleanup errno=%d(%s)", errno, strerror(errno));
+      CLog::Log(logERROR, "Libiconv Initialization failure: %s\n", strerror (errno));
+  }
 
-      //we're done
+  //Part2 Convert
+  size_t iconv_value;
+  std::string strOut;
+  strOut.resize(strIn.size()*4 + 1, '\x00');
+
+  size_t lenStrIn = strIn.size();
+  size_t lenStrOut = strOut.size();
+
+  char * pStrOut = &strOut[0];
+  strIn  += '\x00';
+  char * pStrIn = &strIn[0];
+
+  iconv_value = iconv (conv_desc, &pStrIn, &lenStrIn, &pStrOut, &lenStrOut);
+
+  strOut.resize(strOut.size()-lenStrOut);
+
+  if (iconv_value == (size_t) -1) /* Handle failures. */
+  {
+    CLog::Log(logWARNING, "Liconv failed: with codepage: %s, in string: %s\n", strCP.c_str(), strOut.c_str());
+    switch (errno)
+    {
+      case EILSEQ:
+        CLog::Log(logERROR, "Invalid multibyte sequence.\n");
         break;
+      case EINVAL:
+        CLog::Log(logERROR, "Incomplete multibyte sequence.\n");
+        break;
+      case E2BIG:
+        CLog::Log(logERROR, "No more room.\n");
+        break;
+      default:
+        CLog::Log(logERROR, "Error: %s.\n", strerror (errno));
     }
   }
 
-  size_t bytesWritten = outBufSize - outBytesAvail;
-  strDest.clear();
-  strDest.resize(bytesWritten);
-  char*  dest         = &strDest[0];
+  //Part3: Close the library
+  if (iconv_close (conv_desc) != 0)
+    CLog::Log(logERROR,  "Libiconv_close failed: %s\n", strerror (errno));
 
-  //copy the output from iconv() into the CStdString
-  memcpy(dest, outBuf, bytesWritten);
-
-//  strDest.clear();
-
-  free(outBuf);
-
-  return true;
+  return strOut;
 }
 
-size_t CCharsetUtils::iconv_const (void* cd, const char** inbuf, size_t *inbytesleft,
-                    char* * outbuf, size_t *outbytesleft)
+bool CCharsetUtils::IsValidUTF8(std::string const &strToCheck)
 {
-  struct iconv_param_adapter
-  {
-    iconv_param_adapter(const char** p) : p(p) {}
-    iconv_param_adapter(char**p) : p((const char**)p) {}
-    operator char**() const
-    {
-      return(char**)p;
-    }
-    operator const char**() const
-    {
-      return(const char**)p;
-    }
-    const char** p;
-  };
+  if (strToCheck.find('\x00') != std::string::npos)
+    CLog::Log(logERROR, "CharsetUtils::IsValidUTF8: zero byte detected in string: %s", strToCheck.c_str());
 
-  return iconv((iconv_t)cd, iconv_param_adapter(inbuf), inbytesleft, outbuf, outbytesleft);
-}
+  int numContBExpected =0;
+  for (std::string::const_iterator it = strToCheck.begin(); it != strToCheck.end(); it++)
+  {
+    unsigned char ch = (unsigned char) *it;
+
+    if (ch <= 0x7f) //We are at the ASCII range
+    {
+      if (numContBExpected ==0)
+        continue;
+      else
+        return false; // we were expecting a continuation byte, but we are not getting one
+    }
+
+    if (ch==0xc0 || ch==0xc1 || ch>=0xf5) //invalid characters in an utf8 string
+      return false;
+
+    if ((ch & 0xc0) == 0xc0 && (numContBExpected !=0)) // we have a code entry start, but
+      return false; // we are still expecting a continuation byte not a new code start
+
+    if ((ch & 0xc0) == 0x80)
+    {
+      if (numContBExpected == 0) // we have a continuation byte, but
+        return false; // we are not expecting one
+      numContBExpected--;
+      continue;
+    }
+
+    if ((ch & 0xe0) == 0xc0) // we have a 2byte long code entry start
+      numContBExpected = 1;
+    else if ((ch & 0xf0) == 0xe0) // we have a 3byte long code entry start
+      numContBExpected = 2;
+    else if ((ch & 0xf8) == 0xf0) // we have a 4byte long code entry start
+      numContBExpected = 3;
+    else if ((ch & 0xfc) == 0xf8) // we have a 5byte long code entry start which is invalid by new standards
+      return false;
+    else if ((ch & 0xfe) == 0xfc) // we have a 6byte long code entry start which is invalid by new standards
+      return false;
+  }
+  return true;
+};

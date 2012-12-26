@@ -38,6 +38,7 @@ public:
   ~CSettings();
   void SetProjectname(std::string strName);
   std::string GetProjectname();
+  std::string GetProjectnameLong();
   void SetHTTPCacheExpire(size_t exptime);
   size_t GetHTTPCacheExpire();
   void SetMinCompletion(int complperc);
@@ -57,6 +58,7 @@ private:
   std::string m_strMergedLangfilesDir;
   std::string m_strTXUpdateLangfilesDir;
   std::string m_strSupportEmailAdd;
+  std::string m_strProjectnameLong;
   bool m_bForceComm;
 };
 
