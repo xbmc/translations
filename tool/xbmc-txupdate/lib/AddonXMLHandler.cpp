@@ -242,12 +242,10 @@ bool CAddonXMLHandler::UpdateAddonXMLFile (std::string strAddonXMLFilename)
     if (!bisSecondClose && *it == '<')
     {
       size_t pos  = it - strPrevMetaData.begin();
-      std::string temp = strPrevMetaData.substr(pos+1,1);
       if (strPrevMetaData.substr(pos+1,1) != "/" && strPrevMetaData.substr(pos+1,7) != "summary" && 
           strPrevMetaData.substr(pos+1,11) != "description" && strPrevMetaData.substr(pos+1,10) != "disclaimer")
       {
         bisEntryToKeep = true;
-        bisSecondClose = false;
       }
     }
     if (bisEntryToKeep)
@@ -259,6 +257,7 @@ bool CAddonXMLHandler::UpdateAddonXMLFile (std::string strAddonXMLFilename)
         vecEntryToKeep.push_back(strEntry);
         strEntry.clear();
         bisEntryToKeep = false;
+        bisSecondClose = false;
       }
       else
         bisSecondClose = true;
