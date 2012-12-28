@@ -245,6 +245,8 @@ bool CAddonXMLHandler::UpdateAddonXMLFile (std::string strAddonXMLFilename)
       if (strPrevMetaData.substr(pos+1,1) != "/" && strPrevMetaData.substr(pos+1,7) != "summary" && 
           strPrevMetaData.substr(pos+1,11) != "description" && strPrevMetaData.substr(pos+1,10) != "disclaimer")
       {
+        if (strPrevMetaData.substr(pos+1,3) == "!--")
+          bisSecondClose = true;
         bisEntryToKeep = true;
       }
     }
