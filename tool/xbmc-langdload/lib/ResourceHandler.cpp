@@ -35,7 +35,7 @@ CResourceHandler::CResourceHandler()
 CResourceHandler::~CResourceHandler()
 {};
 
-bool CResourceHandler::DloadLangFiles(CXMLResdata XMLResdata)
+bool CResourceHandler::DloadLangFiles(CXMLResdata &XMLResdata)
 {
   g_HTTPHandler.Cleanup();
   g_HTTPHandler.ReInit();
@@ -63,7 +63,11 @@ bool CResourceHandler::DloadLangFiles(CXMLResdata XMLResdata)
     g_File.AddToFilename(strFilename, "addon.xml");
     strFilename += XMLResdata.strAddonXMLSuffix;
 
-    g_HTTPHandler.DloadURLToFile(strDloadURL, strFilename);
+    std::string strAddonXMLFile = g_HTTPHandler.GetURLToSTR(strDloadURL);
+    if (!XMLResdata.strGittemplate.empty())
+      XMLResdata.strAddonVersion = GetAddonVersion(strAddonXMLFile);
+    g_File.WriteFileFromStr(strFilename, strAddonXMLFile);
+
     CLog::Log(logINFO, "ResHandler: addon.xml downloaded for resource: %s",XMLResdata.strResNameFull.c_str());
   }
 
@@ -84,7 +88,10 @@ bool CResourceHandler::DloadLangFiles(CXMLResdata XMLResdata)
   }
 
   if (XMLResdata.Restype == ADDON_NOSTRINGS)
+  {
+    CLog::DecIdent(2);
     return true;
+  }
 
   std::list<std::string> listLangs;
 
@@ -106,7 +113,7 @@ bool CResourceHandler::DloadLangFiles(CXMLResdata XMLResdata)
   std::string strFilenamePre = XMLResdata.strResLocalDirectory;
   g_File.AddToFilename(strFilenamePre, GetLangDir(XMLResdata));
 
-  CLog::Log(logINFO, "ResHandler: Downloadeding language files:");
+  CLog::Log(logINFO, "ResHandler: Downloading language files:");
 
   for (std::list<std::string>::iterator it = listLangs.begin(); it != listLangs.end(); it++)
   {
@@ -189,4 +196,26 @@ std::string CResourceHandler::GetLangURLSuffix(CXMLResdata const &XMLResdata)
       CLog::Log(logERROR, "ResHandler: No resourcetype defined for resource: %s",XMLResdata.strResName.c_str());
   }
   return strLangURLSuffix;
+}
+
+std::string CResourceHandler::GetAddonVersion(std::string const &strAddonXMLFile)
+{
+  if (strAddonXMLFile.empty())
+    CLog::Log(logERROR, "CResourceHandler::GetAddonVersion: Error reading the addon.xml file. File is empty.");
+
+  TiXmlDocument xmlAddonXML;
+
+  if (!xmlAddonXML.Parse(strAddonXMLFile.c_str(), 0, TIXML_DEFAULT_ENCODING))
+    CLog::Log(logERROR, "CResourceHandler::GetAddonVersion: XML file problem: %s\n", xmlAddonXML.ErrorDesc());
+
+  TiXmlElement* pRootElement = xmlAddonXML.RootElement();
+  if (!pRootElement || pRootElement->NoChildren() || pRootElement->ValueTStr()!="addon")
+    CLog::Log(logERROR, "CResourceHandler::GetAddonVersion: No root element called \"addon\" in xml file. Cannot continue.");
+
+  std::string strAddonVersion;
+  if (!pRootElement->Attribute("version") || (strAddonVersion = pRootElement->Attribute("version")) == "")
+    CLog::Log(logERROR, "CResourceHandler::GetAddonVersion: No addon version is specified in the addon.xml file. Cannot continue. "
+    "Please contact the addon developer about this problem!");
+
+  return strAddonVersion;
 }

@@ -28,9 +28,10 @@ class CResourceHandler
 public:
   CResourceHandler();
   ~CResourceHandler();
-  bool DloadLangFiles(CXMLResdata XMLResdata);
+  bool DloadLangFiles(CXMLResdata &XMLResdata);
 
 protected:
   std::string GetLangDir(CXMLResdata const &XMLResdata);
   std::string GetLangURLSuffix(CXMLResdata const &XMLResdata);
+  std::string GetAddonVersion(std::string const &strAddonXMLFile);
 };

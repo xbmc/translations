@@ -35,6 +35,7 @@ public:
   std::string strAddonName;
   std::string strAddonDir;
   std::string strGittemplate;
+  std::string strGitExecPath;
   bool bSkipChangelog;
   bool bSkipEnglishFile;
 };
@@ -61,6 +62,9 @@ public:
   std::string strLogFilename;
   std::string strResLocalDirectory;
   std::string strResName;
+  std::string strGittemplate;
+  std::string strAddonVersion;
+  std::string strGitExecPath;
   bool bWritePO, bWriteXML, bHasChangelog;
   bool bSkipChangelog;
   bool bSkipEnglishFile;

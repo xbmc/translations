@@ -46,6 +46,7 @@ CInputData::CInputData()
 {
   bSkipChangelog = false;
   bSkipEnglishFile =false;
+  strGitExecPath = "C:\\Program Files (x86)\\Git\\bin\\";
 }
 
 CInputData::~CInputData()
@@ -253,6 +254,9 @@ std::list<CInputData> CInputXMLHandler::ReadXMLToMem(string strFileName)
     const TiXmlElement *pChildGittemplElement = pChildResElement->FirstChildElement("gittemplate");
     if (pChildGittemplElement && pChildGittemplElement->FirstChild())
       currInputData.strGittemplate = pChildGittemplElement->FirstChild()->Value();
+    std::string strGitExecPath;
+    if (pChildGittemplElement->Attribute("gitexecpath") && (strGitExecPath = pChildGittemplElement->Attribute("gitexecpath")) != "")
+      currInputData.strGitExecPath = strGitExecPath;
 
     listInputData.push_back(currInputData);
 

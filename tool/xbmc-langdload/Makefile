@@ -22,7 +22,7 @@ else
    LDFLAGS      := ${RELEASE_LDFLAGS}
 endif
 
-INCS := -Ilib/Json-cpp/include
+INCS := -I/home/atti/Dev/translations/xbmc-langdload/lib/Json-cpp/include
 
 OUTPUT := xbmc-langdload
 

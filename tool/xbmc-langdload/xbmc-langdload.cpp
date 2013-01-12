@@ -28,6 +28,7 @@
 #include <string>
 #include <list>
 #include <stdio.h>
+#include <stdlib.h>
 #include "lib/HTTPUtils.h"
 #include "lib/Log.h"
 #include "lib/XMLHandler.h"
@@ -61,7 +62,9 @@ void PrintUsage()
   (
   "Note for Windows users: In case you have whitespace or any special character\n"
   "in the directory/file argument, please use apostrophe around them. For example:\n"
-  "xbmc-langdload.exe xbmc-skins/skin.essence \"C:\\some dir\\\"\n\n"
+  "xbmc-langdload.exe xbmc-skins/skin.essence \"C:\\some dir\\\"\n"
+  "Also make sure you have write access to the local directory.\n"
+  "Please run the command prompt in admin mode\n\n"
   );
   #endif
   return;
@@ -173,8 +176,35 @@ int main(int argc, char* argv[])
         XMLResdata.strResLocalDirectory = it->strAddonDir;
         XMLResdata.bSkipChangelog = it->bSkipChangelog;
         XMLResdata.bSkipEnglishFile = it->bSkipEnglishFile;
+        XMLResdata.strGittemplate = it->strGittemplate;
+        XMLResdata.strGitExecPath = it->strGitExecPath;
 
         ResourceHandler.DloadLangFiles(XMLResdata);
+
+        if (!XMLResdata.strGittemplate.empty())
+        {
+          size_t pos;
+          std::string strFormat = XMLResdata.strGittemplate;
+          if ((pos = strFormat.find("%v")) != std::string::npos)
+            strFormat.replace(pos, 2, XMLResdata.strAddonVersion.c_str());
+          if ((pos = strFormat.find("%n")) != std::string::npos)
+            strFormat.replace(pos, 2, XMLResdata.strResName.c_str());
+
+          std::string strCommand;
+          std::string strCDDirectory = XMLResdata.strResLocalDirectory;
+
+#ifdef _MSC_VER
+          strCommand += "cd " + strCDDirectory + " & ";
+          strCommand += "\"" + XMLResdata.strGitExecPath + "sh.exe\" --login -i -c \"git add -A `git rev-parse --show-toplevel`\" & ";
+          strCommand += "\"" + XMLResdata.strGitExecPath + "sh.exe\" --login -i -c \"git commit -m '" + strFormat + "'\"";
+#else
+          strCommand += "cd " + strCDDirectory + ";";
+          strCommand += "git add -A `git rev-parse --show-toplevel`;";
+          strCommand += "git commit -m \"" + strFormat + "\"";
+#endif
+          CLog::Log(logINFO, "GIT commit with the following command: %s", strCommand.c_str());
+          system (strCommand.c_str());
+        }
       }
       else
         CLog::Log(logWARNING, "Addon name not found on xbmc github repository: %s", it->strAddonName.c_str());
@@ -188,7 +218,7 @@ int main(int argc, char* argv[])
         printf ("                                %s (%s%s%s )\n", it->first.c_str(), it->second.bWritePO? " PO":"",
                 it->second.bWriteXML? " XML":"", it->second.bHasChangelog? " changelog.txt":"");
       }
-    }   
+    }
 
     std::string strLogMessage = "PROCESS FINISHED WITH " + g_File.IntToStr(CLog::GetWarnCount()) + " WARNINGS";
     std::string strLogHeader;
