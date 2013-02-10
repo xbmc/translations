@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.image.bigpictures" name="The Big Picture" version="3.0.6" provider-name="Tristan Fischer (sphere@dersphere.de)">
+<addon id="script.image.bigpictures" name="The Big Picture" version="4.0.1" provider-name="Tristan Fischer (sphere@dersphere.de)">
     <requires>
-        <import addon="xbmc.python" version="2.0"/>
-        <import addon="script.module.beautifulsoup" version="3.0.8"/>
-        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.bigpictures" version="1.0.0"/>
     </requires>
-    <extension point="xbmc.python.script" library="addon.py">
+    <extension point="xbmc.python.script" library="script.py">
         <provides>image</provides>
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides />
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="be">Photojournalism</summary>
@@ -49,5 +51,7 @@
         <description lang="sv">Detta tillägg ger tillgång till vackra album och foton från några trevliga fotojournalism webbplatser.[CR]- Boston.com: The Big Picture[CR]- The Atlantic: In Focus[CR]- Sacramento Bee: The Frame[CR]- Wallstreetjournal: The Photo Journal[CR]- TotallyCoolPix.com[CR]- Time.com: LightBox - Closeup</description>
         <!-- translation commit: 57be6eca35e70e101e45aa09a73de9b01194321e -->
         <platform>all</platform>
+        <language />
+        <summary lang="cs">
     </extension>
 </addon>
