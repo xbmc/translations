@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.mediaportal.tvserver"
-  version="1.6.9"
+  version="1.7.9"
   name="MediaPortal PVR Client"
   provider-name="Marcel Groothuis">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.6.0"/>
+    <import addon="xbmc.pvr" version="1.7.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
@@ -48,6 +48,7 @@
     <summary lang="sk">XBMC rozhranie pre MediaPortal TV server (verzia ffmpeg + tsreader)</summary>
     <summary lang="sl">XBMC-jev vmesnik za MediaPortal TV strežnik (ffmpeg + tsreader)</summary>
     <summary lang="sv">XBMC frontend för MediaPortal TV-server (ffmpeg + tsreader versionen)</summary>
+    <summary lang="ta_IN">MediaPortal டிவி சேவையகம் (ffmpeg + tsreader பதிப்பு) க்கான XBMC முன்நிலை</summary>
     <summary lang="vi">Giao tiếp XBMC cho MediaPortal TV Server (phiên bản ffmpeg + tsreader)</summary>
     <summary lang="zh">XBMC的MediaPortal TV服务器前端（ffmpeg + tsreader版）</summary>
     <summary lang="zh_TW">MediaPortal電視服務器的XBMC前端 (ffmpeg+tsreader版本)</summary>
@@ -82,12 +83,13 @@
     <description lang="sk">Rozhranie pre MediaPortal TV server. Podporuje streamovanie živého televízneho vysielania a nahrávok, počúvanie rozhlasových kanálov, EPG a časovače. Tento doplnok zlučuje dohromady bývalé doplnky ffmpeg a tsreader.</description>
     <description lang="sl">Vmesnik za MediaPortal TV strežnik. Podpira pretakanje televizije v živo &amp; posnetkov, poslušanje radia, EPG in časovnike. Ta dodatek združuje prejšnja dodatka ffmpeg in tsreader.</description>
     <description lang="sv">MediaPortal TV-server frontend. Stödjer strömning av direktsänd TV &amp; inspelningar, lyssna på radiokanaler, EPG och timers. Detta tillägg kombinerar dom tidigare ffmpeg och tsreader tilläggen. </description>
+    <description lang="ta_IN">MediaPortal TV Server முன்நிலை. லைவ் டிவி &amp; பதிவுகளின் ஸ்ட்ரீமிங் செய்யவும், ரேடியோ சேனல்கள் கேட்கவும் மற்றும் EPG, துணைபுரிகிறது. இந்த துனைபயன் முன்னாள் ffmpeg மற்றும் tsreader துணை நிரல்கள் ஒருங்கிணைக்கிறது.</description>
     <description lang="vi">Giao tiếp cho MediaPortal TV Server. Hỗ trợ truyền phát và thu chương trình Live TV, nghe Radio, hẹn giờ và hiển thị lịch trình chiếu (EPG). Addon này kết hợp cho các addon cũ của ffmpeg và tsreader.</description>
     <description lang="zh">MediaPortal TV服务器前端，支持直播电视播放和录制、收听电台、电子节目单和定时器。这个插件结合了这前的ffmpeg和tsreader插件。</description>
     <description lang="zh_TW">MediaPortal電視服務器的前端。支援的串流檔案包括有：電視直播和錄影，收聽廣播頻道，電子節目表和計時器。這個插件結合了先前ffmpeg和tsreader的插件。</description>
     <disclaimer lang="af">Hierdie is onstabiele sagteware! Die outeurs is op geen manier verantwoordelik vir gefaalde opnames, inkorrekte tydhouers, gemorsde ure, of enige ander ongewensde effekte.</disclaimer>
     <disclaimer lang="be">This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects..</disclaimer>
-    <disclaimer lang="ca">Això és programari inestable! Els autors no són en absolut responsables d'enregistraments fallist, temporitzadors incorrectes, hores tudades, o qualsevol altra efecte indesitjable...</disclaimer>
+    <disclaimer lang="ca">Això és programari inestable! Els autors no són de cap manera responsables dels enregistraments que han fallat, temporitzadors incorrectes, hores perdudes, o qualsevols altres efectes indesitjables..</disclaimer>
     <disclaimer lang="cs">Tento software není stabilní. Autoři nejsou žádným způsobem zodpovědní za selhání při nahrávání, neplatné časovače, ztracený čas, či jakékoliv jiné nežádoucí události...</disclaimer>
     <disclaimer lang="da">Dette er ustabil software! Ophavsmændene er på ingen måde ansvarlige for mislykkede optagelser, ukorrekte timere, spildte timer, eller andre uønskede konsekvenser..</disclaimer>
     <disclaimer lang="de">Diese Software ist noch in der Entwicklung! Die Autoren sind nicht für fehlgeschlagene Aufnahmen, falsche Timer, verschwendete Zeit oder andere ungewollte Effekte verantwortlich.</disclaimer>
@@ -119,8 +121,9 @@
     <disclaimer lang="sl">To je nestabilna programska oprema! Avtorji niso odgovorni za neuspela snemanja, nepravilne časovnike, zapravljen čas in katerikoli drug neželen učinek...</disclaimer>
     <disclaimer lang="sq">Ky program nuk është ende stabil! Autorët së këtij programi nuk janë në as një menyr përgjegjës për rregistrime të gabuara, timer të pasaktë, kohë të humbur ose efekte të tillë të padëshirueshëm.</disclaimer>
     <disclaimer lang="sv">Detta är ostabil mjukvara! Upphovsmännen är inte ansvariga för misslyckade inspelningar, inkorrekta timers, bortslösade timmar, eller några andra oönskade effekter..</disclaimer>
+    <disclaimer lang="ta_IN">இந்த நிலையற்ற மென்பொருள்! தோல்வியடைந்தது பதிவுகள், தவறான டைமர்கள், வீணாகி மணி, அல்லது வேறு எந்த விரும்பத்தகாத விளைவுகலுக்கு இதன் ஆசிரியர்கள் பொறுப்பு இல்லை.</disclaimer>
     <disclaimer lang="tr">Bu stabil olmayan program! Yapımcılar hatalı kayıtlardan, bozuk sürelerden, harcanan vakitten veya herhangi bir olumsuz etkiden dolayı sorumlu tutulamaz.</disclaimer>
-    <disclaimer lang="uk">Це нестабільна програма! Автори не несуть відповідальності за попсуті записи, неправильні таймери, втрачений час та інші небажані ефекти.</disclaimer>
+    <disclaimer lang="uk">Це нестабільна програма! Автор не несуть жодної відповідальності за зіпсуті записи, неправильні таймери, потрачений час, та інші небажані ефекти.</disclaimer>
     <disclaimer lang="vi">Đây là phần mềm không ổn định! Các tác giả không chịu trách nhiệm đối với bản ghi âm thất bại, giờ không chính xác, giờ lãng phí, hoặc bất kỳ tác dụng không mong muốn khác...</disclaimer>
     <disclaimer lang="zh">这是不稳定版的软件！作者不对录制失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
     <disclaimer lang="zh_TW">這是測試版軟體！其原創作者並無法對於以下情況負責，包含：錄影失敗，不正確的定時設定，多餘時數，或任何產生的其它不良影響...</disclaimer>
