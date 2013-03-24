@@ -112,6 +112,7 @@ std::string CLCodeHandler::VerifyLangCode(std::string LangCode)
   // common mistakes, we correct them on the fly
   if (LangCode == "kr") LangCode = "ko";
   if (LangCode == "cr") LangCode = "hr";
+  if (LangCode == "cz") LangCode = "cs";
  
   if (strOldCode != LangCode)
     CLog::Log(logWARNING, "LangCodes: problematic language code: %s was corrected to %s", strOldCode.c_str(), LangCode.c_str());

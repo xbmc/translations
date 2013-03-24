@@ -431,7 +431,7 @@ void CPODocument::WriteHeader(const std::string &strHeader)
   m_strOutBuffer += strHeader;
 };
 
-void CPODocument::WritePOEntry(const CPOEntry &currEntry)
+void CPODocument::WritePOEntry(const CPOEntry &currEntry, unsigned int nplurals)
 {
   m_bhasLFWritten = false;
 
@@ -466,10 +466,41 @@ void CPODocument::WritePOEntry(const CPOEntry &currEntry)
 
   WriteLF();
   m_strOutBuffer += "msgid \""  + g_CharsetUtils.EscapeStringCPP(currEntry.msgID) +  "\"\n";
-  if (m_bIsForeignLang)
-    m_strOutBuffer += "msgstr \"" + g_CharsetUtils.EscapeStringCPP(currEntry.msgStr) + "\"\n";
+  if (!currEntry.msgIDPlur.empty())
+  {
+    m_strOutBuffer += "msgid_plural \""  + g_CharsetUtils.EscapeStringCPP(currEntry.msgIDPlur) +  "\"\n";
+    if (m_bIsForeignLang)
+    { // we have a plural entry with non English strings
+      for (unsigned int n = 0 ; n != nplurals ; n++)
+      {
+        std::string strValue;
+        if (n < currEntry.msgStrPlural.size())
+          strValue = currEntry.msgStrPlural[n];
+
+        std::stringstream ss;//create a stringstream
+        ss << n;
+        std::string strnplurals = ss.str();
+        m_strOutBuffer += "msgstr[" + strnplurals +"] \"" + g_CharsetUtils.EscapeStringCPP(strValue) + "\"\n";
+      }
+    }
+    else
+    { // we have a plural entry with English strings
+      for (unsigned int n = 0 ; n != nplurals ; n++)
+      {
+        std::stringstream ss;//create a stringstream
+        ss << n;
+        std::string strnplurals = ss.str();
+        m_strOutBuffer += "msgstr[" + strnplurals +"] \"\"\n";
+      }
+    }
+  }
   else
-    m_strOutBuffer += "msgstr \"\"\n";
+  {
+    if (m_bIsForeignLang)
+      m_strOutBuffer += "msgstr \"" + g_CharsetUtils.EscapeStringCPP(currEntry.msgStr) + "\"\n";
+    else
+      m_strOutBuffer += "msgstr \"\"\n";
+  }
 
   m_writtenEntry++;
 };

@@ -141,6 +141,7 @@ bool CProjectHandler::CreateMergedResources()
   for (std::list<std::string>::iterator itResAvail = listMergedResource.begin(); itResAvail != listMergedResource.end(); itResAvail++)
   {
     printf("Merging resource: %s\n", itResAvail->c_str());
+    CLog::SetSyntaxAddon(*itResAvail);
     CLog::Log(logINFO, "CreateMergedResources: Merging resource:%s", itResAvail->c_str());
     CLog::IncIdent(4);
 
@@ -175,6 +176,7 @@ bool CProjectHandler::CreateMergedResources()
 
     for (std::list<std::string>::iterator itlang = listMergedLangs.begin(); itlang != listMergedLangs.end(); itlang++)
     {
+      CLog::SetSyntaxLang(*itlang);
       std::string strLangCode = *itlang;
       CPOHandler mergedPOHandler, updTXPOHandler;
       const CPOEntry* pPOEntryTX;
@@ -214,29 +216,81 @@ bool CProjectHandler::CreateMergedResources()
         pPOEntryTX = SafeGetPOEntry(m_mapResourcesTX, *itResAvail, strLangCode, numID);
         pPOEntryUpstr = SafeGetPOEntry(m_mapResourcesUpstr, *itResAvail, strLangCode, numID);
 
-        if (strLangCode == "en")
+        CheckPOEntrySyntax(pPOEntryTX, strLangCode, pcurrPOEntryEN);
+
+        if (strLangCode == "en") // English entry
         {
           mergedPOHandler.AddNumPOEntryByID(numID, *pcurrPOEntryEN, *pcurrPOEntryEN, true);
           updTXPOHandler.AddNumPOEntryByID(numID, *pcurrPOEntryEN, *pcurrPOEntryEN, true);
         }
-
-        if (strLangCode != "en" && pPOEntryTX && pPOEntryTX->msgID == pcurrPOEntryEN->msgID && !pPOEntryTX->msgStr.empty())
+        //1. Tx entry single
+        else if (pPOEntryTX && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStr.empty() &&
+                 pPOEntryTX->msgID == pcurrPOEntryEN->msgID)
+        {
           mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
-        else if (strLangCode != "en" && pPOEntryUpstr && (pPOEntryUpstr->msgID == pcurrPOEntryEN->msgID) && !pPOEntryUpstr->msgStr.empty())
+        }
+        //2. Tx entry plural
+        else if (pPOEntryTX && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStrPlural.empty() &&
+                 pPOEntryTX->msgIDPlur == pcurrPOEntryEN->msgIDPlur)
+        {
+          mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
+        }
+        //3. Upstr entry single
+        else if (pPOEntryUpstr && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStr.empty() &&
+                (pPOEntryUpstr->msgID.empty() || pPOEntryUpstr->msgID == pcurrPOEntryEN->msgID)) //if it is empty it is from a strings.xml file
         {
           mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, true);
           updTXPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, false);
         }
-        else if (strLangCode != "en" && pPOEntryUpstr && pPOEntryUpstr->msgID.empty() && !pPOEntryUpstr->msgStr.empty())
+        //4. Upstr entry plural
+        else if (pPOEntryUpstr && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStrPlural.empty() &&
+                 pPOEntryUpstr->msgIDPlur == pcurrPOEntryEN->msgIDPlur)
         {
-          mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, true); // we got this entry from a strings.xml file
+          mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, true);
           updTXPOHandler.AddNumPOEntryByID(numID, *pPOEntryUpstr, *pcurrPOEntryEN, false);
         }
-// We don't add untranslated entries to the non-English PO files
-//        else if (strLangCode != "en")
-//          mergedPOHandler.AddNumPOEntryByID(numID, *pcurrPOEntryEN, *pcurrPOEntryEN, true);
+
       }
 
+
+      
+      
+      // Handle classic non-id based po entries
+      for (size_t POEntryIdx = 0; pcurrPOHandlerEN && POEntryIdx != pcurrPOHandlerEN->GetClassEntriesCount(); POEntryIdx++)
+      {
+
+        CPOEntry currPOEntryEN = *(pcurrPOHandlerEN->GetClassicPOEntryByIdx(POEntryIdx));
+        currPOEntryEN.msgStr.clear();
+        CPOEntry* pcurrPOEntryEN = &currPOEntryEN;
+
+        pPOEntryTX = SafeGetPOEntry(m_mapResourcesTX, *itResAvail, strLangCode, currPOEntryEN);
+        pPOEntryUpstr = SafeGetPOEntry(m_mapResourcesUpstr, *itResAvail, strLangCode, currPOEntryEN);
+
+        CheckPOEntrySyntax(pPOEntryTX, strLangCode, pcurrPOEntryEN);
+
+        if (strLangCode == "en")
+        {
+          mergedPOHandler.AddClassicEntry(*pcurrPOEntryEN, *pcurrPOEntryEN, true);
+          updTXPOHandler.AddClassicEntry(*pcurrPOEntryEN, *pcurrPOEntryEN, true);
+        }
+        else if (pPOEntryTX && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStr.empty()) // Tx entry single
+          mergedPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+        else if (pPOEntryTX && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStrPlural.empty()) // Tx entry plural
+          mergedPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+        else if (pPOEntryUpstr && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStr.empty()) // Upstr entry single
+        {
+          mergedPOHandler.AddClassicEntry(*pPOEntryUpstr, *pcurrPOEntryEN, true);
+          updTXPOHandler.AddClassicEntry(*pPOEntryUpstr, *pcurrPOEntryEN, false);
+        }
+        else if (pPOEntryUpstr && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStrPlural.empty()) // Upstr entry plural
+        {
+          mergedPOHandler.AddClassicEntry(*pPOEntryUpstr, *pcurrPOEntryEN, true);
+          updTXPOHandler.AddClassicEntry(*pPOEntryUpstr, *pcurrPOEntryEN, false);
+        }
+      }
+      
+      
+      
       CPOHandler * pPOHandlerTX;
       pPOHandlerTX = SafeGetPOHandler(m_mapResourcesTX, *itResAvail, strLangCode);
 
@@ -353,6 +407,22 @@ const CPOEntry * CProjectHandler::SafeGetPOEntry(std::map<std::string, CResource
   if (!mapResHandl[strResname].GetPOData(strLangCode))
     return NULL;
   return mapResHandl[strResname].GetPOData(strLangCode)->GetNumPOEntryByID(numID);
+}
+
+const CPOEntry * CProjectHandler::SafeGetPOEntry(std::map<std::string, CResourceHandler> &mapResHandl, const std::string &strResname,
+                                                 std::string &strLangCode, CPOEntry const &currPOEntryEN)
+{
+  CPOEntry POEntryToFind;
+  POEntryToFind.Type = currPOEntryEN.Type;
+  POEntryToFind.msgCtxt = currPOEntryEN.msgCtxt;
+  POEntryToFind.msgID = currPOEntryEN.msgID;
+  POEntryToFind.msgIDPlur = currPOEntryEN.msgIDPlur;
+
+  if (mapResHandl.find(strResname) == mapResHandl.end())
+    return NULL;
+  if (!mapResHandl[strResname].GetPOData(strLangCode))
+    return NULL;
+  return mapResHandl[strResname].GetPOData(strLangCode)->PLookforClassicEntry(POEntryToFind);
 }
 
 CPOHandler * CProjectHandler::SafeGetPOHandler(std::map<std::string, CResourceHandler> &mapResHandl, const std::string &strResname,
@@ -530,3 +600,60 @@ std::list<std::string> CProjectHandler::GetLangsFromDir(std::string const &strLa
 
   return listDirs;
 };
+
+void CProjectHandler::CheckPOEntrySyntax(const CPOEntry * pPOEntry, std::string const &strLangCode, const CPOEntry * pcurrPOEntryEN)
+{
+  if (!pPOEntry)
+    return;
+
+  CheckCharCount(pPOEntry, strLangCode, pcurrPOEntryEN, '%');
+  CheckCharCount(pPOEntry, strLangCode, pcurrPOEntryEN, '\n');
+
+  return;
+}
+
+std::string CProjectHandler::GetEntryContent(const CPOEntry * pPOEntry, std::string const &strLangCode)
+{
+  if (!pPOEntry)
+    return "";
+
+  std::string strReturn;
+  strReturn += "\n";
+
+  if (pPOEntry->Type == ID_FOUND)
+    strReturn += "msgctxt \"#" + g_CharsetUtils.IntToStr(pPOEntry->numID) + "\"\n";
+  else if (!pPOEntry->msgCtxt.empty())
+    strReturn += "msgctxt \"" + g_CharsetUtils.EscapeStringCPP(pPOEntry->msgCtxt) + "\"\n";
+
+  strReturn += "msgid \""  + g_CharsetUtils.EscapeStringCPP(pPOEntry->msgID) +  "\"\n";
+
+  if (strLangCode != "en")
+    strReturn += "msgstr \"" + g_CharsetUtils.EscapeStringCPP(pPOEntry->msgStr) + "\"\n";
+  else
+    strReturn += "msgstr \"\"\n";
+
+  return strReturn;
+}
+
+void CProjectHandler::CheckCharCount(const CPOEntry * pPOEntry, std::string const &strLangCode, const CPOEntry * pcurrPOEntryEN, char chrToCheck)
+{
+  // check '%' count in msgid and msgstr entries
+  size_t count = g_CharsetUtils.GetCharCountInStr(pcurrPOEntryEN->msgID, chrToCheck);
+  if (!pPOEntry->msgIDPlur.empty() && count != g_CharsetUtils.GetCharCountInStr(pPOEntry->msgIDPlur, chrToCheck))
+    CLog::SyntaxLog(logWARNING, "Warning: count missmatch of char \"%s\"%s",
+                   g_CharsetUtils.EscapeStringCPP(g_CharsetUtils.ChrToStr(chrToCheck)).c_str(), GetEntryContent(pPOEntry, strLangCode).c_str());
+
+  if (strLangCode != "en")
+  {
+    if (!pPOEntry->msgStr.empty() && count != g_CharsetUtils.GetCharCountInStr(pPOEntry->msgStr, chrToCheck))
+      CLog::SyntaxLog(logWARNING, "Warning: count missmatch of char \"%s\"%s",
+                      g_CharsetUtils.EscapeStringCPP(g_CharsetUtils.ChrToStr(chrToCheck)).c_str(), GetEntryContent(pPOEntry, strLangCode).c_str());
+
+      for (std::vector<std::string>::const_iterator it =  pPOEntry->msgStrPlural.begin() ; it != pPOEntry->msgStrPlural.end() ; it++)
+      {
+        if (count != g_CharsetUtils.GetCharCountInStr(*it, '%'))
+          CLog::SyntaxLog(logWARNING, "Warning: count missmatch of char \"%s\"%s",
+                          g_CharsetUtils.EscapeStringCPP(g_CharsetUtils.ChrToStr(chrToCheck)).c_str(), GetEntryContent(pPOEntry, strLangCode).c_str());
+      }
+  }
+}

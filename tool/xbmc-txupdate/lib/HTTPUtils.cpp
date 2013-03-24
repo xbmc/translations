@@ -45,27 +45,24 @@ std::string CHTTPHandler::GetURLToSTR(std::string strURL, bool bSkiperror /*=fal
 {
   std::string strBuffer;
   std::string strCacheFile = CacheFileNameFromURL(strURL);
-  bool bIsTooLongUrl = strCacheFile == "cache_for_long_URL_download";
-  strCacheFile = m_strCacheDir + "GET" + strCacheFile;
+  strCacheFile = m_strCacheDir + "GET/" + strCacheFile;
 
   if (!g_File.FileExist(strCacheFile) || g_File.GetFileAge(strCacheFile) > g_Settings.GetHTTPCacheExpire() * 60)
   {
-    long result = curlURLToCache(strCacheFile, strURL, bSkiperror);
+    long result = curlURLToCache(strCacheFile, strURL, bSkiperror, strBuffer);
     if (result < 200 || result >= 400)
       return "";
   }
+  else
+    strBuffer = g_File.ReadFileToStr(strCacheFile);
 
-  strBuffer = g_File.ReadFileToStr(strCacheFile);
-
-  if (bIsTooLongUrl)
-    g_File.DeleteFile(strCacheFile);
   return strBuffer;
 };
 
-long CHTTPHandler::curlURLToCache(std::string strCacheFile, std::string strURL, bool bSkiperror)
+long CHTTPHandler::curlURLToCache(std::string strCacheFile, std::string strURL, bool bSkiperror, std::string &strBuffer)
 {
   CURLcode curlResult;
-  FILE *dloadfile;
+  strBuffer.clear();
 
   strURL = URLEncode(strURL);
 
@@ -73,16 +70,15 @@ long CHTTPHandler::curlURLToCache(std::string strCacheFile, std::string strURL, 
 
     if(m_curlHandle) 
     {
-      dloadfile = fopen((strCacheFile + "_dload").c_str(),"wb");
       curl_easy_setopt(m_curlHandle, CURLOPT_URL, strURL.c_str());
-      curl_easy_setopt(m_curlHandle, CURLOPT_WRITEFUNCTION, Write_CurlData_File);
+      curl_easy_setopt(m_curlHandle, CURLOPT_WRITEFUNCTION, Write_CurlData_String);
       if (!LoginData.strLogin.empty())
       {
         curl_easy_setopt(m_curlHandle, CURLOPT_USERNAME, LoginData.strLogin.c_str());
         curl_easy_setopt(m_curlHandle, CURLOPT_PASSWORD, LoginData.strPassword.c_str());
       }
       curl_easy_setopt(m_curlHandle, CURLOPT_FAILONERROR, true);
-      curl_easy_setopt(m_curlHandle, CURLOPT_WRITEDATA, dloadfile);
+      curl_easy_setopt(m_curlHandle, CURLOPT_WRITEDATA, &strBuffer);
       curl_easy_setopt(m_curlHandle, CURLOPT_USERAGENT, "libcurl-agent/1.0");
       curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
 
@@ -90,24 +86,18 @@ long CHTTPHandler::curlURLToCache(std::string strCacheFile, std::string strURL, 
       long http_code = 0;
       curl_easy_getinfo (m_curlHandle, CURLINFO_RESPONSE_CODE, &http_code);
 
-      fseek (dloadfile, 0, SEEK_END);
-      size_t filesize=ftell (dloadfile);
-      fclose(dloadfile);
-
       if (curlResult == 0 && http_code >= 200 && http_code < 400)
         CLog::Log(logINFO, "HTTPHandler: curlURLToCache finished with success from URL %s to cachefile %s, read filesize: %ibytes",
-                  strURL.c_str(), strCacheFile.c_str(), filesize);
+                  strURL.c_str(), strCacheFile.c_str(), strBuffer.size());
       else
       {
-        g_File.DeleteFile(strCacheFile+"_dload");
         if (!bSkiperror)
         CLog::Log(logERROR, "HTTPHandler: curlURLToCache finished with error code: %i from URL %s to localdir %s",
                   http_code, strURL.c_str(), strCacheFile.c_str());
         CLog::Log(logINFO, "HTTPHandler: curlURLToCache finished with code: %i from URL %s", http_code, strURL.c_str());
         return http_code;
       }
-      g_File.CopyFile(strCacheFile+"_dload", strCacheFile);
-      g_File.DeleteFile(strCacheFile+"_dload");
+      g_File.WriteFileFromStr(strCacheFile, strBuffer);
       return http_code;
     }
     else
@@ -195,14 +185,9 @@ void CHTTPHandler::SetCacheDir(std::string strCacheDir)
 
 std::string CHTTPHandler::CacheFileNameFromURL(std::string strURL)
 {
-  if (strURL.size() > 200)
-  {
-    CLog::Log(logWARNING, "HTTPHandler: Can't make HTTP cache for too long URL: %s", strURL.c_str());
-    return "cache_for_long_URL_download";
-  }
   std::string strResult;
-  std::string strCharsToKeep = "/.=?";
-  std::string strReplaceChars = "_-=?";
+  std::string strCharsToKeep  = "/.-=_() ";
+  std::string strReplaceChars = "/.-=_() ";
 
   std::string hexChars = "01234567890abcdef"; 
 
@@ -212,7 +197,8 @@ std::string CHTTPHandler::CacheFileNameFromURL(std::string strURL)
       strResult += *it;
     else
     {
-      if (size_t pos = strCharsToKeep.find(*it) != std::string::npos)
+      size_t pos = strCharsToKeep.find(*it);
+      if (pos != std::string::npos)
         strResult += strReplaceChars[pos];
       else
       {
@@ -222,6 +208,9 @@ std::string CHTTPHandler::CacheFileNameFromURL(std::string strURL)
       }
     }
   }
+
+  if (strResult.at(strResult.size()-1) == '/')
+    strResult[strResult.size()-1] = '-';
 
   return strResult;
 };
@@ -305,10 +294,9 @@ bool CHTTPHandler::PutFileToURL(std::string const &strFilePath, std::string cons
 {
   std::string strBuffer;
   std::string strCacheFile = CacheFileNameFromURL(strURL);
-  bool bIsTooLongUrl = strCacheFile == "cache_for_long_URL_download";
-  strCacheFile = m_strCacheDir + "PUT" + strCacheFile;
+  strCacheFile = m_strCacheDir + "PUT/" + strCacheFile;
 
-  if (!bIsTooLongUrl && g_File.FileExist(strCacheFile) && ComparePOFiles(strCacheFile, strFilePath))
+  if (g_File.FileExist(strCacheFile) && ComparePOFiles(strCacheFile, strFilePath))
   {
     CLog::Log(logINFO, "HTTPHandler::PutFileToURL: not necesarry to upload file as it has not changed from last upload. File: %s",
               strFilePath.c_str());
@@ -325,8 +313,8 @@ bool CHTTPHandler::PutFileToURL(std::string const &strFilePath, std::string cons
   }
 
   CLog::Log(logINFO, "HTTPHandler::PutFileToURL: File upload was successful so creating a copy at the .httpcache directory");
-  if (!bIsTooLongUrl)
-    g_File.CopyFile(strFilePath, strCacheFile);
+  g_File.CopyFile(strFilePath, strCacheFile);
+
   buploaded = true;
 
   return true;
@@ -424,7 +412,9 @@ bool CHTTPHandler::ComparePOFilesInMem(CPOHandler * pPOHandler1, CPOHandler * pP
     if (bLangIsEN)
     {
       POEntry1.msgStr.clear();
+      POEntry1.msgStrPlural.clear();
       POEntry2.msgStr.clear();
+      POEntry2.msgStrPlural.clear();
     }
 
     if (!(POEntry1 == POEntry2))
@@ -445,8 +435,7 @@ bool CHTTPHandler::CreateNewResource(std::string strResname, std::string strENPO
                                      std::string const &strURLENTransl)
 {
   std::string strCacheFile = CacheFileNameFromURL(strURLENTransl);
-  bool bIsTooLongUrl = strCacheFile == "cache_for_long_URL_download";
-  strCacheFile = m_strCacheDir + "PUT" + strCacheFile;
+  strCacheFile = m_strCacheDir + "PUT/" + strCacheFile;
 
   CURLcode curlResult;
 
@@ -495,8 +484,7 @@ bool CHTTPHandler::CreateNewResource(std::string strResname, std::string strENPO
     {
       CLog::Log(logINFO, "CHTTPHandler::CreateNewResource finished with success for resource %s from EN PO file %s to URL %s",
                 strResname.c_str(), strENPOFilePath.c_str(), strURL.c_str());
-      if (!bIsTooLongUrl)
-        g_File.CopyFile(strENPOFilePath, strCacheFile);
+      g_File.CopyFile(strENPOFilePath, strCacheFile);
       g_Json.ParseUploadedStrForNewRes(strServerResp, stradded);
     }
     else
@@ -514,10 +502,8 @@ bool CHTTPHandler::CreateNewResource(std::string strResname, std::string strENPO
 void CHTTPHandler::DeleteCachedFile (std::string const &strURL, std::string strPrefix)
 {
   std::string strCacheFile = CacheFileNameFromURL(strURL);
-  if (strCacheFile == "cache_for_long_URL_download")
-    return;
 
-  strCacheFile = m_strCacheDir + strPrefix + strCacheFile;
+  strCacheFile = m_strCacheDir + strPrefix + "/" + strCacheFile;
   if (g_File.FileExist(strCacheFile))
     g_File.DeleteFile(strCacheFile);
 }

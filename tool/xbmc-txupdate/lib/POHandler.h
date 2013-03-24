@@ -39,7 +39,8 @@ public:
   bool WritePOFile(const std::string &strOutputPOFilename);
   bool WriteXMLFile(const std::string &strOutputPOFilename);
   bool LookforClassicEntry (CPOEntry &EntryToFind);
-  void AddClassicEntry (CPOEntry &EntryToAdd);
+  const CPOEntry*  PLookforClassicEntry (CPOEntry &EntryToFind);
+  bool AddClassicEntry (CPOEntry EntryToAdd, CPOEntry const &POEntryEN, bool bCopyComments);
   bool ModifyClassicEntry (CPOEntry &EntryToFind, CPOEntry EntryNewValue);
   bool DeleteClassicEntry (CPOEntry &EntryToFind);
 
@@ -68,9 +69,12 @@ protected:
   itStrings IterateToMapIndex(itStrings it, size_t index);
   bool GetXMLEncoding(const TiXmlDocument* pDoc, std::string& strEncoding);
   void GetXMLComment(std::string strXMLEncoding, const TiXmlNode *pCommentNode, CPOEntry &currEntry);
+  int GetPluralNumOfVec(std::vector<std::string> &vecPluralStrings);
+  void ParsePOHeader();
 
   std::string m_strHeader;
   std::string m_strLangCode;
+  int m_nplurals;
 
   std::map<uint32_t, CPOEntry> m_mapStrings;
   std::vector<CPOEntry> m_vecClassicEntries;

@@ -41,6 +41,7 @@ class CCharsetUtils
 {
 public:
   std::string IntToStr(int number);
+  std::string ChrToStr(char chr);
   std::string UnescapeCPPString(const std::string &strInput);
   std::string EscapeStringCPP(const std::string &strInput);
   std::string EscapeStringXML(const std::string &strInput);
@@ -48,6 +49,7 @@ public:
   std::string UnWhitespace(std::string strInput);
   std::string stringCharsetToUtf8(const std::string& strCP, std::string strIn);
   bool IsValidUTF8(std::string const &strToCheck);
+  size_t GetCharCountInStr(std::string const &strToCheck, unsigned char chrToFInd);
 };
 
 extern CCharsetUtils g_CharsetUtils;

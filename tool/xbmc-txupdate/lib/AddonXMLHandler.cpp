@@ -114,18 +114,18 @@ bool CAddonXMLHandler::ProcessAddonXMLFile (std::string AddonXMLFilename, TiXmlD
     m_strResourceData += g_CharsetUtils.ToUTF8(addonXMLEncoding, CstrToString(pMainAttrId)) + "\n";
 
   pMainAttrId=pRootElement->Attribute("version");
-  m_strResourceData += "# Addon version: ";
+//  m_strResourceData += "# Addon version: ";
   if (!pMainAttrId)
   {
     CLog::Log(logWARNING, "AddonXMLHandler: No version name was available in addon.xml file: %s\n", AddonXMLFilename.c_str());
-    m_strResourceData += "0.0.1\n";
+//    m_strResourceData += "0.0.1\n";
     m_strAddonVersion = "0.0.1";
   }
   else
   {
     m_strAddonVersion = g_CharsetUtils.ToUTF8(addonXMLEncoding, CstrToString(pMainAttrId));
     BumpVersionNumber();
-    m_strResourceData += g_CharsetUtils.ToUTF8(addonXMLEncoding, m_strAddonVersion) + "\n";
+//    m_strResourceData += g_CharsetUtils.ToUTF8(addonXMLEncoding, m_strAddonVersion) + "\n";
   }
 
   pMainAttrId=pRootElement->Attribute("provider-name");
@@ -463,6 +463,8 @@ bool CAddonXMLHandler::ProcessCoreVersion(std::string filename, std::string &str
 {
 
   m_strResourceData.clear();
+  return true; // Don't include the version text in the PO files
+
   size_t startpos = strBuffer.find("#define VERSION_MAJOR ") + 22;
   size_t endpos = strBuffer.find_first_of(" \n\r", startpos);
   m_strResourceData += "# XBMC-core v" + strBuffer.substr(startpos, endpos-startpos);

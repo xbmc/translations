@@ -93,7 +93,7 @@ public:
   void ParseEntry();
   CPOEntry GetEntryData() const {return m_Entry;}
   void WriteHeader(const std::string &strHeader);
-  void WritePOEntry(const CPOEntry &currEntry);
+  void WritePOEntry(const CPOEntry &currEntry, unsigned int nplurals);
   void SetIfIsEnglish(bool bIsENLang) {m_bIsForeignLang = !bIsENLang;}
   bool FetchURLToMem(const std::string &strURL, bool bSkipError);
   bool ParseStrToMem(const std::string &strPOData, std::string const &strFilePath);

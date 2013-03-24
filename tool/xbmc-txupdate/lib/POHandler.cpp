@@ -57,6 +57,8 @@ bool CPOHandler::ProcessPOFile(CPODocument &PODoc)
 
   m_strHeader = PODoc.GetEntryData().Content.substr(1);
 
+  ParsePOHeader();
+
   m_mapStrings.clear();
   m_vecClassicEntries.clear();
   m_CommsCntr = 0;
@@ -93,6 +95,12 @@ bool CPOHandler::ProcessPOFile(CPODocument &PODoc)
       currEntry.interlineComm = vecILCommnts;
       bMultipleComment = false;
       vecILCommnts.clear();
+
+      if (!currEntry.msgIDPlur.empty())
+      {
+        if (GetPluralNumOfVec(currEntry.msgStrPlural) != m_nplurals)
+          currEntry.msgStrPlural.clear(); // in case there is insufficient number of translated plurals we completely clear it
+      }
 
       if (currType == ID_FOUND)
         m_mapStrings[currEntry.numID] = currEntry;
@@ -251,22 +259,27 @@ bool CPOHandler::WritePOFile(const std::string &strOutputPOFilename)
   CPOEntry POEntry;
   POEntry.msgCtxt = "Addon Summary";
   if (LookforClassicEntry(POEntry))
-    PODoc.WritePOEntry(POEntry);
+    PODoc.WritePOEntry(POEntry, m_nplurals);
 
   ClearCPOEntry(POEntry);
   POEntry.msgCtxt = "Addon Description";
   if (LookforClassicEntry(POEntry))
-    PODoc.WritePOEntry(POEntry);
+    PODoc.WritePOEntry(POEntry, m_nplurals);
 
   ClearCPOEntry(POEntry);
   POEntry.msgCtxt = "Addon Disclaimer";
   if (LookforClassicEntry(POEntry))
-    PODoc.WritePOEntry(POEntry);
+    PODoc.WritePOEntry(POEntry, m_nplurals);
 
   for (itStrings it = m_mapStrings.begin(); it != m_mapStrings.end(); it++)
   {
-    CPOEntry currEntry = it->second;
-    PODoc.WritePOEntry(currEntry);
+    PODoc.WritePOEntry(it->second, m_nplurals);
+  }
+
+  for (itClassicEntries itclass = m_vecClassicEntries.begin(); itclass != m_vecClassicEntries.end(); itclass++)
+  {
+    if (itclass->msgCtxt != "Addon Summary" && itclass->msgCtxt != "Addon Description" && itclass->msgCtxt != "Addon Disclaimer")
+      PODoc.WritePOEntry(*itclass, m_nplurals);
   }
 
   PODoc.SaveFile(strOutputPOFilename);
@@ -289,9 +302,45 @@ bool CPOHandler::LookforClassicEntry (CPOEntry &EntryToFind)
   return false;
 }
 
-void CPOHandler::AddClassicEntry (CPOEntry &EntryToAdd)
+const CPOEntry*  CPOHandler::PLookforClassicEntry (CPOEntry &EntryToFind)
 {
+  for (itClassicEntries it = m_vecClassicEntries.begin(); it != m_vecClassicEntries.end(); it++)
+  {
+    if (*it == EntryToFind)
+    {
+      EntryToFind = *it;
+      return &(*it);
+    }
+  }
+  return NULL;
+}
+
+bool CPOHandler::AddClassicEntry (CPOEntry EntryToAdd, CPOEntry const &POEntryEN, bool bCopyComments)
+{
+  CPOEntry EntryToFind;
+  EntryToFind.msgCtxt = EntryToAdd.msgCtxt;
+  EntryToFind.msgID = EntryToAdd.msgID;
+  EntryToFind.msgIDPlur = EntryToAdd.msgIDPlur;
+  if (LookforClassicEntry(EntryToFind))  // The entry already exists
+    return false;
+
+  if (bCopyComments)
+  {
+    EntryToAdd.extractedComm = POEntryEN.extractedComm;
+    EntryToAdd.interlineComm = POEntryEN.interlineComm;
+    EntryToAdd.referenceComm = POEntryEN.referenceComm;
+    EntryToAdd.translatorComm = POEntryEN.translatorComm;
+  }
+  else
+  {
+    EntryToAdd.extractedComm.clear();
+    EntryToAdd.interlineComm.clear();
+    EntryToAdd.referenceComm.clear();
+    EntryToAdd.translatorComm.clear();
+  }
+
   m_vecClassicEntries.push_back(EntryToAdd);
+  return true;
 };
 
 bool CPOHandler::ModifyClassicEntry (CPOEntry &EntryToFind, CPOEntry EntryNewValue)
@@ -392,9 +441,6 @@ void CPOHandler::GetAddonMetaData (CAddonXMLEntry &AddonXMLEntry, CAddonXMLEntry
 
 void CPOHandler::SetPreHeader (std::string &strPreText)
 {
-  if (strPreText.empty())
-    return;
-
   m_strHeader = "# XBMC Media Center language file\n";
   m_strHeader += strPreText;
 }
@@ -403,7 +449,8 @@ void CPOHandler::SetHeaderNEW (std::string strLangCode)
 {
   m_strLangCode = strLangCode;
   std::stringstream ss;//create a stringstream
-  ss << g_LCodeHandler.GetnPlurals(strLangCode);
+  m_nplurals = g_LCodeHandler.GetnPlurals(strLangCode);
+  ss << m_nplurals;
   std::string strnplurals = ss.str();
 
   m_strHeader += "msgid \"\"\n";
@@ -527,3 +574,28 @@ bool CPOHandler::WriteXMLFile(const std::string &strOutputPOFilename)
 
   return true;
 };
+
+int CPOHandler::GetPluralNumOfVec(std::vector<std::string> &vecPluralStrings)
+{
+  int num = 0;
+  for (std::vector<std::string>::iterator it = vecPluralStrings.begin(); it != vecPluralStrings.end(); it++)
+  {
+    if (!it->empty())
+      num++;
+  }
+  return num;
+}
+
+void CPOHandler::ParsePOHeader() // extract nplurals number from the PO file header
+{
+  size_t pos1, pos2;
+  pos1 = m_strHeader.find("nplurals=",0)+9;
+  if (pos1 == std::string::npos)
+    CLog::Log(logERROR, "POHandler: No valid nplurals entry found in PO header");
+  pos2 = m_strHeader.find(";",pos1);
+  if (pos2 == std::string::npos)
+    CLog::Log(logERROR, "POHandler: No valid nplurals entry found in PO header");
+  std::stringstream ss;//create a stringstream
+  ss << m_strHeader.substr(pos1, pos2-pos1);
+  ss >> m_nplurals;
+}

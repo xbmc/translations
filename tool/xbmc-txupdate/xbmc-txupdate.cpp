@@ -129,7 +129,8 @@ int main(int argc, char* argv[])
     if (WorkingDir[WorkingDir.length()-1] != DirSepChar)
       WorkingDir.append(&DirSepChar);
 
-    CLog::Init(WorkingDir + "xbmc-txupdate.log");
+    CLog::SetbWriteSyntaxLog(bDownloadNeeded);
+    CLog::Init(WorkingDir + "xbmc-txupdate.log", WorkingDir + "txupdate-syntax.log");
     CLog::Log(logINFO, "Root Directory: %s", WorkingDir.c_str());
 
     g_HTTPHandler.LoadCredentials(WorkingDir + ".passwords.xml");
@@ -207,6 +208,7 @@ int main(int argc, char* argv[])
 
     if (bUploadNeeded)
     {
+      CLog::SetbWriteSyntaxLog(false);
       if (!bForceUpload && g_File.ReadFileToStrE(WorkingDir + ".httpcache" + DirSepChar + ".dload_merge_status") != "ok")
         CLog::Log(logERROR, "There was no successful download and merge run before. Please (re)run download and merge.");
 
@@ -222,11 +224,14 @@ int main(int argc, char* argv[])
       TXProject.UploadTXUpdateFiles(WorkingDir);
     }
 
+    CLog::SetbWriteSyntaxLog(bDownloadNeeded);
+
     if (CLog::GetWarnCount() ==0)
     {
       printf("\n");
       printf("--------------------------------------------\n");
       printf("PROCESS FINISHED SUCCESFULLY WITHOUT WARNINGS\n");
+      printf("SYNTAX WARNINGS %i\n", CLog::GetSyntaxWarnCount());
       printf("--------------------------------------------\n\n");
     }
     else
@@ -234,13 +239,17 @@ int main(int argc, char* argv[])
       printf("\n");
       printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
       printf("PROCESS FINISHED WITH %i WARNINGS\n", CLog::GetWarnCount());
+      printf("SYNTAX WARNINGS %i\n", CLog::GetSyntaxWarnCount());
       printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n");
     }
 
+    CLog::Close();
+    g_HTTPHandler.Cleanup();
   }
   catch (const int calcError)
   {
     g_HTTPHandler.Cleanup();
+    CLog::Close();
     return 0;
   }
 }

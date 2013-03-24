@@ -25,10 +25,10 @@
 #include <string>
 #include <map>
 
-enum TLogLevel { logERROR, logWARNING, logINFO, logDEBUG, logLINEFEED, logCLOSETABLE, logADDTABLEHEADER};
+enum TLogLevel { logERROR, logWARNING, logINFO, logDEBUG, logLINEFEED, logCLOSETABLE, logADDTABLEHEADER };
 
 const std::string listLogTypes[] = {"ERROR", "WARNING", "INFO", "DEBUG"};
-const std::string VERSION = "0.9";
+const std::string VERSION = "0.92";
 
 struct CLogIdent
 {
@@ -43,11 +43,17 @@ public:
   ~CLog();
   static void Close();
   static void Log(TLogLevel loglevel, const char *format, ... );
+  static void SyntaxLog(TLogLevel loglevel, const char *format, ... );
+  static void SetSyntaxLang(std::string const &strLang);
+  static void SetSyntaxAddon(std::string const &strAddon);
   static void LogTable(TLogLevel loglevel, std::string strTableName, const char *format, ... );
-  static bool Init(std::string logfile);
+  static bool Init(std::string logfile, std::string syntaxlogfile);
   static void IncIdent(int numident);
   static void DecIdent(int numident);
   static void ClearIdent();
   static void ResetWarnCounter();
   static int GetWarnCount();
+  static int GetSyntaxWarnCount();
+  static bool GetbWriteSyntaxLog();
+  static void SetbWriteSyntaxLog(bool bWriteSyntaxLog);
 };

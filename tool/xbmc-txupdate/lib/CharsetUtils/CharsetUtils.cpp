@@ -24,6 +24,7 @@
 #include <errno.h>
 #include "../Log.h"
 #include <sstream>
+#include <algorithm>
 
 CCharsetUtils g_CharsetUtils;
 
@@ -32,6 +33,13 @@ std::string CCharsetUtils::IntToStr(int number)
   std::stringstream ss;//create a stringstream
   ss << number;//add number to the stream
   return ss.str();//return a string with the contents of the stream
+};
+
+std::string CCharsetUtils::ChrToStr(char chr)
+{
+  std::stringstream ss;
+  ss << chr;
+  return ss.str(); //return a string with the contents of the stream
 };
 
 std::string CCharsetUtils::UnescapeCPPString(const std::string &strInput)
@@ -256,3 +264,8 @@ bool CCharsetUtils::IsValidUTF8(std::string const &strToCheck)
   }
   return true;
 };
+
+size_t CCharsetUtils::GetCharCountInStr(std::string const &strToCheck, unsigned char chrToFInd)
+{
+  return std::count(strToCheck.begin(), strToCheck.end(), chrToFInd);
+}

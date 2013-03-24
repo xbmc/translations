@@ -56,7 +56,7 @@ public:
 private:
   CURL *m_curlHandle;
   std::string m_strCacheDir;
-  long curlURLToCache(std::string strCacheFile, std::string strURL, bool bSkiperror);
+  long curlURLToCache(std::string strCacheFile, std::string strURL, bool bSkiperror, std::string &strBuffer);
   long curlPUTPOFileToURL(std::string const &strFilePath, std::string const &strURL, size_t &stradded, size_t &strupd);
 
   CLoginData GetCredentials (std::string strURL);
