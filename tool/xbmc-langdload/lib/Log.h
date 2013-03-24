@@ -28,7 +28,7 @@
 enum TLogLevel { logERROR, logWARNING, logINFO, logDEBUG, logLINEFEED, logCLOSETABLE, logADDTABLEHEADER};
 
 const std::string listLogTypes[] = {"ERROR", "WARNING", "INFO", "DEBUG"};
-const std::string VERSION = "0.82";
+const std::string VERSION = "0.83";
 
 struct CLogIdent
 {
