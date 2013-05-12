@@ -1,0 +1,314 @@
+2013-05-10 v-0-1-18
+  (fix) run service.py async
+  (add) BT Computer Icon
+  
+2013-04-22 c-0-1-17
+  (add) RPi Keyboard Layout support
+  (add) about dialog displays build info (official / inofficial)
+  (change) oe module only read file if exists
+  
+2013-04-20 v-0.1.16
+  (change) optimize update thread
+  
+2013-04-18 v-0.1.15
+  (change) new update function
+  (change) wait for bt adapter loop reduced to 3
+  
+2013-04-15 v-0.1.14
+  (add) save hostname
+  (add) help hints
+
+2013-04-09 v-0.1.13
+  (add) begin update v2 development 
+  
+2013-04-09 v-0.1.12
+  (add) loop to wait for bluez to find the bt adapter 
+  
+2013-04-08 v-0.1.11
+  (fix) bluetooth error on enable / disable
+  (change) Bluetooth Agent redesign, monitor dbus always.
+  (change) restore: delete file on abort. ask for reboot on success
+
+2013-04-04 v-0.1.10
+  (fix) delete backup file on abort
+  (change) backup / restore write tar file. bzip is bit slow
+
+2013-04-01 v-0.1.9
+  (change) backup / restore rebuild
+  
+2013-04-01 v-0.1.8
+  (fix) autoupdate
+  
+2013-04-01 v-0.1.7
+  (add) license headers
+  (change) use hd-idle for hdd spindown
+  
+2013-03-30 v-0.1.6 
+  (fix) hide ssh service if kernel parameter is set (read file)
+  
+2013-03-30 v-0.1.5 
+  (add) hide ssh service if kernel parameter is set 
+  
+2013-03-27 v-0.1.4 
+  (fix) enable / disable | wifi / ethernet 
+  
+2013-03-25 v-0.1.3
+  (fix) Move Update Files after extract
+  (fix) network service autoconnect
+  (add) start service addon on startup
+
+2013-03-11 v-0.1.2
+  (add) Info Text Placeholder added in Strings.xml
+  (add) Display InfoText Placeholder in bottom
+
+2013-03-08 v-0.1.1
+  (change) about dialog change donate text
+  (change) connman context menu order
+  
+2013-03-08 v-0.1.0
+  (change) about dialog rework
+  
+2013-03-08 v-0.0.29
+  (change) Check for updates every 6 hours
+  (add) Network wait 
+  (change) extract updates to /storage/.xbmc/temp and move on complete
+  (add) backup .xbmc and .config
+  (add) restore from zip
+  (change) vpn now works with .config files found in /storage/.config/config-vpn
+  (add) oe module copy_file added
+  (fix) set_busy fixed
+  (fix) enable / disable ethernet
+
+2013-02-22 v-0.0.28
+  (fix) update url for update.openelec.tv
+
+2013-02-22 v-0.0.28
+  (fix) global file lock for xml config
+  (change) inet socket changed to unix socket
+  (add) hostname validation
+  (add) tethering SSID name validation
+  (add) tethering password validation
+  (add) timeserver validation
+  (add) validate needed data for a mount
+  (fix) auto update notification
+  (fix) some manual update fixes
+  (add) search updates manual added
+  (change) update rework
+
+2013-02-18 v-0.0.26
+  (fix) wizard fixes for 025
+
+2013-02-18 v-0.0.25
+  (change) optimize service load_value (samba conf)
+  (fix) error if no mounts defined
+  (change) optimized images from seo
+  (change) unused pictures removed
+  (change) use service as main window
+
+2013-02-17 v-0.0.24
+  (fix) double mount 
+
+2013-02-17 v-0.0.23
+  (change) upload logfiles moved to system
+  (change) connman double code removed
+  (fix) double mount (i hope)
+  (change) main menu fokus double paint removed (flickering)
+
+2013-02-16 v-0.0.22
+  (change) discovery button removed
+  (change) double paint focused main menu entry
+  (add) remove vpn added
+  (change) english string.xml from chewitt
+  (change) bluetooth autodiscovery if entry is selected
+  (add) double mount prevention
+ 
+2013-02-15 v-0.0.21 
+  (fix) edit vpn removed
+  (change) orderd context menu entrys
+  (add) trust and connect to bluetooth context menu
+  (change) error message on dismaount fail
+  (change) no window preload, load select and context window ondemand
+  (change) update monitor modified 
+  (fix) only mount drives from service if everything is defined
+  (fix) samba uses kill not kill -9
+  (changed) last save buttons removed
+  (change) default tethering data set
+ 
+2013-02-12 v-0.0.20 
+  (fix) user, pass separator in cifs mount
+  (fix) create .update folder if does not exists pre update
+  (fix) dismount network drives while edit 
+
+2013-02-12 v-0.0.19 
+  (fix) MOUNT Network Path
+
+2013-02-12 v-0.0.18 
+  (fix) SYSLOG_SERVER
+
+2013-02-12 v-0.0.17 
+  (fix) syscontrol file newline fixed
+  (fix) missing blutooth mouse icon
+  (fix) navigation problems in connection window
+  (fix) localisation fixed in mainWindow.xml
+  (change) background removed (RFE SEO)
+  (add) HDD idle enable boolean
+  (change) temporary snapshot update location changed to update.openelec.tv
+  (add) mount network drives
+
+2013-02-11 v-0.0.16 
+  (fix) busy dialog in create_device
+  (change) write SYSLOG_REMOTE=true to /storage/.cache/syslog/remote
+  (fix) wizard does not end on first start
+  (fix) list navigation changed to loop
+  (fix) button navigation changed (left and up = list)
+  (add) bluetoothd disable option in powersaving (system)
+  (add) bluetoothd start by service script
+  (add) context menu for bt and network list
+  (change) most buttons removed
+  (add) write version to log on startup
+
+2013-02-10 v-0.0.15
+  (fix) Passkey Window Bug
+  (fix) Cleanup more ressources on exit
+  (change) add handler to Bluetooth Calls
+  (change) add handler to Connman Connect
+  (change) test ps3 pairing fix
+  (fix) check already paired
+  (fix) disconnect bt device
+
+2013-02-09 v-0.0.14
+  (fix) Bug for Default Icon
+
+2013-02-09 v-0.0.13
+  (add) Remote Syslog Support
+  (add) Bluetooth Passkey Window
+  
+2013-02-08 v-0.0.12
+  (fix) Passkey Display
+  (fix) Button Focus (Logfiles)
+  
+2013-02-08 v-0.0.11
+  (change) About Dialog Changed to prevent display on Addon Startup 
+  (change) Blutooth Support (BETA)
+
+2013-02-03 v-0.0.10
+  (fix) Intention error 
+  
+2013-02-03 v-0-0-9
+  (change) get available lcd drivers from /usr/lib/lcdproc
+  (change) connman vpn new api
+  (fix) write sshd.conf
+  (fix) file selection bug
+  (change) read keyboard layouts from xml
+  (add) keyboard type option
+  (add) option to write "/storage/.cache/reset_xbmc"
+  (add) option to write "/storage/.cache/reset_oe"
+  (add) Bluetooth Support (ALPHA)
+
+2013-01-23 v-0.0.8 
+  (fix) ssh changes 
+  (fix) bug in local update folder
+  (fix) cron / avahi dont read settings bug
+  (change) make busy dialog global 
+  (fix) lock / unlock removed
+  (change) some wizard text changes
+  (change) .tv removed from Name
+  
+2013-01-23 v-0.0.7
+  (add) LCD Driver 'CFontz'
+  (fix) hdd spindown default disabled
+  (add) cron service 
+  (fix) avahi service startup
+  (fix) avahi directory security 755
+  (fix) cron directory security 755
+  (fix) select window scrollbar focus 
+  (fix) wizard networklist focus problems
+  (fix) wizard network list misalignments
+  (fix) write sshd.conf for ssh startup
+  (fix) language selector fixed
+  (change) some buttons removed
+  (fix) info dialog button access
+  (change) reduce buttons for connections
+  (change) add delete button to service window
+  (change) wizard: samba / ssh buttons replaced wit radiobuttons
+  (add) ssh enable_ssh support to detect ssh enabled
+  (add) sshd.conf support to detect ssh enabled
+  (change) wizard image
+  (change) wizard text (many thx to gilphilbert)
+  
+2013-01-20 v-0.0.6
+  (fix) VPN Delete connection
+  (fix) VPN Connect pp2p without setting Domain
+  (fix) Connman Wifi / VPN Agent Redesign
+  (add) set hwclock from connman module
+  (fix) some connman rework
+  (fix) wrong functions for buttons bug
+  (add) proxy config in connection
+  (add) avahi service config
+  (fix) restart networking removed
+  (fix) ssh service start removed
+  (add) cancel button in connection edit window
+  (add) cpupower frequency-set -g ondemand in system.py
+  (add) upload logfiles (paste.fiebach.de)
+  (add) Welcome Wizard
+  
+2013-01-10 v-0.0.5
+  (add) Samba Config
+  (add) SSH Config
+  (add) Service Module
+  (fix) vpn pp2p Username wrong Translation
+  
+2013-01-06 v-0.0.4
+  (fix) home button removed
+  (add) reduce focus effects
+  (fix) list navigation rewritten
+  
+2013-01-06 v-0.0.3
+  (fix) focus problem in edit network dialog
+  (fix) changed update thread pause to 5
+  (fix) clock and info removed
+  (fix) about dialog controls are default hidden
+  
+2013-01-06 v-0.0.2
+  (add) multithreding menu's (should no longer hang)
+  (add) About / Info Dialog Prototype
+  (fix) missing texture if only 1 network is avail
+  (fix) double animation on addon startup fixed
+  (fix) version number changed to 3 diggits
+  
+2013-01-03 v-0.0.1.2
+  (add) System Hostname changeable 
+  (fix) Tethering Username renamed to SSID
+  (add) development release autoupdate
+  (fix) Some Skin misalignements fixed
+  (fix) Fixed manual configure network connection (IPv4)
+  (add) some connman debug code added, will be removed later
+  (add) list object button
+  (add) function to restart network (it is possible that xbmc restarts to)
+  (add) placeholder for menu about / support added
+  
+2013-01-01 v-0.0.1.1
+  (fix) Python Platform module is buggy 
+
+2013-01-01 v-0.0.1.0
+  (add) Autoupdate 
+
+2012-12-30 v-0.0.0.9
+  (fix) Cable Network Tethering removed
+  (add) config file added (/storage/.cache/openelec/settings.xml)
+  (add) functions to read and write xml settings (oe.write_setting, oe.read_settings)
+  (fix) network list refresh now shows xbmc busy dialog
+  (add) addon load shows xbmc busy dialog
+  (add) XBMC service script 
+  (add) set LCD Driver
+  (add) set Keyboard Layout
+  (add) set hdd Stanby
+
+2012-12-29 v-0.0.0.8
+  VPN Redesign 
+  Config Global Timeservers 
+
+2012-12-28 v-0.0.0.7
+  Advanced PPTP VPN options added
+  VPN Testing with old Connman Method ConnectProvider()
+
