@@ -1,15 +1,67 @@
-v.1.5.1
+v.1.5.3.009
+- widened tolerance on 16:9 proportion check from last.fm
+- musicbrainz lookup now validates artist based on releases, recordings, then works
+- updated musicbrainz search to better deal with featured artists
+- updated musicbrainz search to work with add-ons that call AS remotely
+- fixed bug where cached images wouldn't be merged for featured artists
+
+v.1.5.3.008
+- fixed for error regression in removing beginning articles from artist name for search
+
+v.1.5.3.007
+- musicbrainz lookup ignores anything after '(' in title of local song or local album
+- fixed structure of musicbrainz search to produce better results
+- added advanced feature to exclude files from download
+- now save musicbrainz ID in memory to reduce drive reads
+- additional error catching across the board
+- updated cache manager to leave .nfo files intact
+
+v.1.5.3.006
+- cleaned up musicbrainz parsing code
+- added logic to better follow musicbrainz rules for API load
+- fixed featured artist parsing
+- brought some sanity to the unicode and url encoding of the last.fm urls
+- fixed corrupt image downloads on Windows
+- added check for local artist against musicbrainz aliases
+- general code cleanup
+
+v.1.5.3.005
+- completely rewrote musicbrainz lookup (again)
+
+v.1.5.3.004
+- fixed musicbrainz lookup so that it works with streaming audio as well
+
+v.1.5.3.003
+- fix for artists with ampersand in their name
+- fix for last.fm showing unexpected results
+
+v.1.5.3.002
+- artist bio and album list now come from theaudiodb.com by default (Last.fm as fallback)
+- added download of images from fanart.tv
+- added download of images from theaudiodb.com
+- fix so that artists with unicode characters in name return results from Last.fm
+- changed over to urllib2 for web downloads
+
+v.1.5.3.001
+- added musicbrainz ID support
+- rearranged settings some to make options clearer
+- dropped support for htbackdrops.com (site gone)
+
+v.1.5.2
 - added ability to parse multiple featured artists from title of song
 - fixed bug on Windows where once override or fallback were set they could not be unset
 - updated artist bio infolabel to filter out link to READ MORE on last.fm
 - changed to using JSON call to get artist array from XBMC rather than manually splitting
-- (hopefully) fixed unicode support
+- updated unicode support
 - fixed issue where files ending with capitalized extensions were ignored
 - fixed issue where artist bio not downloaded when using override image directory
 - fixed issue where selecting HD Aspect Ratio for Last.fm downloads resulted in no images
 - updated language files from Transifex
 - changed over to Frodo .po language files
 - updated addon.xml with new information and format for repo database
+
+v1.5.1
+internal beta test
 
 v.1.5.0
 - updated language files from Transifex
