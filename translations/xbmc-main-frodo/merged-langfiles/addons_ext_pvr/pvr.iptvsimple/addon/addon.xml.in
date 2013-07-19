@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="pvr.iptvsimple"
+  version="1.8.1"
+  name="PVR IPTV Simple Client"
+  provider-name="nightik">
+  <requires>
+    <c-pluff version="0.1"/>
+    <import addon="xbmc.pvr" version="1.8.0"/>
+  </requires>
+  <extension
+    point="xbmc.pvrclient"
+    library_linux="XBMC_IPTV_Simple.pvr"
+    library_osx="XBMC_IPTV_Simple.pvr"
+    library_wingl="XBMC_IPTV_Simple_win32.dll"
+    library_windx="XBMC_IPTV_Simple_win32.dll"
+    library_android="libXBMC_IPTV_Simple.so" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">XBMC PVR addon for IPTV support. https://github.com/afedchin/xbmc-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="ru">XBMC PVR аддон для поддержки IPTV.  https://github.com/afedchin/xbmc-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="zh">支持IPTV的XBMC PVR插件。https://github.com/afedchin/xbmc-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <description lang="en">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
+    <description lang="ru">Интерфейс для IPTV. Поддерживает просмотр потокового ТВ для юникаст/мультикаст источников, прослушивание радиоканалов и работу с электронным телегидом.</description>
+    <description lang="zh">IPTV简单PVR客户端，支持m3u播放列表、组播/单播流媒体直播电视、收听电台和电子节目单。</description>
+    <disclaimer lang="en">This is unstable software! The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
+    <disclaimer lang="fr">Ce logiciel est instable! Les auteurs ne sont en aucun cas responsables des lectures ratés, mauvais horaires du guide électronique des programmes, temps perdu ou autres effets indésirables.</disclaimer>
+    <disclaimer lang="ru">Это нестабильная программа! Авторы не несут ответственности за неудачные воспроизведение, неверные время EPG, потраченное время и прочие нежелательные эффекты.</disclaimer>
+    <disclaimer lang="zh">这是不稳定版的软件！作者不对播放失败、错误电子节目单定时、耽误时间或其它不良影响负责。</disclaimer>
+    <platform>@OS@</platform>
+  </extension>
+</addon>
