@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-07-28 08:10+0000\n"
-"Last-Translator: Martijn Kaijser <machine.sanctum@gmail.com>\n"
+"PO-Revision-Date: 2013-08-14 07:30+0000\n"
+"Last-Translator: Voyager1 <voyager@xbmc.org>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/xbmc-main/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1710,6 +1710,11 @@ msgctxt "#420"
 msgid "HDMI"
 msgstr "HDMI"
 
+#: system/settings/settings.xml
+msgctxt "#421"
+msgid "Stream silence when idle"
+msgstr "Stilte streamen bij inactiviteit"
+
 msgctxt "#422"
 msgid "Delete album info"
 msgstr "Albuminformatie wissen"
@@ -2447,6 +2452,11 @@ msgstr "Bits/sample"
 msgctxt "#613"
 msgid "Sample rate"
 msgstr "Samplefrequentie"
+
+#: xbmc/playlists/SmartPlayList.cpp
+msgctxt "#614"
+msgid "Virtual folder"
+msgstr "Virtuele map"
 
 #: system/settings/settings.xml
 msgctxt "#620"
@@ -3470,6 +3480,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Zeroconf publishing"
 
 #: system/settings/settings.xml
+msgctxt "#1269"
+msgid "Allow volume control"
+msgstr "Laat toe om het volume aan te passen"
+
 msgctxt "#1270"
 msgid "Allow XBMC to receive AirPlay content"
 msgstr "Ontvangen van AirPlay-inhoud door XBMC toelaten"
@@ -5505,6 +5519,11 @@ msgctxt "#13435"
 msgid "Enable HQ Scalers for scalings above"
 msgstr "Zet HQ Schalers aan voor schalen van bovenstaande"
 
+#: xbmc/settings/GUISettings.cpp
+msgctxt "#13436"
+msgid "Allow hardware acceleration (libstagefright)"
+msgstr "Hardwareversnelling inschakelen (libstagefright)"
+
 #: system/settings/settings.xml
 msgctxt "#13500"
 msgid "A/V sync method"
@@ -6369,6 +6388,14 @@ msgstr "Als niet-bekeken markeren"
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "Titel aanpassen"
+
+msgctxt "#16106"
+msgid "Manage ..."
+msgstr "Beheren..."
+
+msgctxt "#16107"
+msgid "Edit sort title"
+msgstr "Sorteertitel aanpassen"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16200"
@@ -9546,6 +9573,11 @@ msgctxt "#20434"
 msgid "Sets"
 msgstr "Sets"
 
+#: system/settings/settings.xml
+msgctxt "#20435"
+msgid "Combine split video items"
+msgstr "Combineer verdeelde video items"
+
 msgctxt "#20436"
 msgid "Export actor thumbs?"
 msgstr "Acteurminiaturen exporteren"
@@ -9632,6 +9664,11 @@ msgstr "Luisteraar"
 msgctxt "#20455"
 msgid "Listeners"
 msgstr "Luisteraars"
+
+#: system/settings/settings.xml
+msgctxt "#20456"
+msgid "Flatten library hierarchy"
+msgstr "Maak de hierarchie van de bibliotheek plat"
 
 msgctxt "#20457"
 msgid "Movie set"
@@ -11622,6 +11659,13 @@ msgid "7.1"
 msgstr "7.1"
 
 #: system/settings/settings.xml
+msgctxt "#34111"
+msgid ""
+"When activated silence is output in order to keep alive receiver, otherwise "
+"sink is drained in idle state"
+msgstr "Wanneer dit ingeschakeld is zal stilte gestuurd worden om de ontvanger 'wakker' te houden, in het andere geval stopt de geluidsuitvoer volledig bij inactiviteit."
+
+#: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
 msgstr "Interface geluiden afspelen"
@@ -12398,8 +12442,10 @@ msgstr "Nog geen informatie beschikbaar."
 
 #: system/settings/settings.xml
 msgctxt "#36169"
-msgid "No info available yet."
-msgstr "Nog geen informatie beschikbaar."
+msgid ""
+"Resampling and other sound processing quality. Low quality is fast, higher "
+"quality will consume more CPU."
+msgstr "Kwaliteit van geluidsaanpassing door re-sampling. Lage kwaliteit is snel, hogere kwaliteit zal meer CPU gebruiken. "
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12445,10 +12491,10 @@ msgstr "Nog geen informatie beschikbaar."
 msgctxt "#36177"
 msgid ""
 "Toggle between Choose, Play (default), Resume and Show Information. Choose "
-"will an select item, e.g. open a directory in files mode. Resume will "
+"will select an item, e.g. open a directory in files mode. Resume will "
 "automatically resume videos from the last position that you were viewing "
 "them, even after restarting the system."
-msgstr "Kies tussen Kies, Afspelen (standaard), Hervatten en Informatie tonen. Kies zal een item selecteren, bv. een folder openen in bestandsmode. Hervatten zal automatisch video's hervatten vanaf de laatst bekeken positie, zelfs na het herstarten van het systeem."
+msgstr "Kies tussen Kiezen, Afspelen (standaard), Hervatten en Informatie tonen. Kiezen zal een item selecteren, bv. een folder openen in bestandsbeheermodus. Hervatten zal automatisch video's hervatten vanaf de laatst bekeken positie, zelfs na het herstarten van het systeem."
 
 #: system/settings/settings.xml
 msgctxt "#36178"
@@ -12476,13 +12522,18 @@ msgstr "Nog geen informatie beschikbaar."
 
 #: system/settings/settings.xml
 msgctxt "#36182"
-msgid "No info available yet."
-msgstr "Nog geen informatie beschikbaar."
+msgid ""
+"Enables direct playback of videos that are in folders, without having to "
+"open those folders first, as well as displaying multi-part video files as "
+"single items in non-library views."
+msgstr "Laat toe om videos in mappen meteen af te spelen zonder deze mappen eerst te moeten openen, en laat meerdelige video items zien als enkelvoudige items in niet-bibliotheek modus."
 
 #: system/settings/settings.xml
 msgctxt "#36183"
-msgid "No info available yet."
-msgstr "Nog geen informatie beschikbaar."
+msgid ""
+"Removes the title, genre etc nodes from the library view. Selecting a "
+"category takes you straight to the title view."
+msgstr "Laat titel, genre, enz. selectieniveau's weg uit de bibliotheek. Een categorie selecteren brengt u meteen naar de titel-lijst."
 
 #: system/settings/settings.xml
 msgctxt "#36184"
@@ -12921,6 +12972,16 @@ msgstr "Selecteer de standaard bron voor artiestinformatie. Kijk in het Add-ons 
 msgctxt "#36259"
 msgid "Check for new and removed media files on XBMC startup."
 msgstr "Controleer of er nieuwe of verwijderde mediabestanden zijn bij het opstarten van XBMC."
+
+#: system/settings/settings.xml
+msgctxt "#36260"
+msgid "No info available yet."
+msgstr "Nog geen informatie."
+
+#: system/settings/settings.xml
+msgctxt "#36261"
+msgid "Path where taken screenshots will be stored."
+msgstr "Locatie waar screenshots bewaard worden."
 
 #: system/settings/settings.xml
 msgctxt "#36262"
@@ -13410,6 +13471,13 @@ msgid "No info available yet."
 msgstr "Nog geen informatie beschikbaar."
 
 #: system/settings/settings.xml
+msgctxt "#36350"
+msgid ""
+"Automatically send 'Wake-On-Lan' to server(s) right before trying to access "
+"shared files or services."
+msgstr "Automatisch 'Wake-On-Lan' naar server(s) sturen, vlak voordat er toegang gezocht wordt tot gedeelde bestanden of diensten."
+
+#: system/settings/settings.xml
 msgctxt "#36351"
 msgid "No info available yet."
 msgstr "Nog geen informatie beschikbaar."
@@ -13793,6 +13861,151 @@ msgstr "Definieer locaties die gebruikt worden voor weersvoorspellingen."
 msgctxt "#36420"
 msgid "No info available yet."
 msgstr "Nog geen informatie beschikbaar."
+
+#: system/settings/settings.xml
+msgctxt "#36500"
+msgid "Stereoscopic mode (current)"
+msgstr "Stereoscopische modus (huidig)"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36501"
+msgid "Stereoscopic mode"
+msgstr "Stereoscopische modus"
+
+#: system/settings/settings.xml
+msgctxt "#36502"
+msgid "None"
+msgstr "Geen"
+
+#: system/settings/settings.xml
+msgctxt "#36503"
+msgid "Over/Under"
+msgstr "Boven/Onder"
+
+#: system/settings/settings.xml
+msgctxt "#36504"
+msgid "Side by side"
+msgstr "Naast elkaar"
+
+#: system/settings/settings.xml
+msgctxt "#36505"
+msgid "Anaglyph Red/Cyan"
+msgstr "Anaglyph Rood/Cyaan"
+
+#: system/settings/settings.xml
+msgctxt "#36506"
+msgid "Anaglyph Green/Magenta"
+msgstr "Anaglyph Groen/Magenta"
+
+#: system/settings/settings.xml
+msgctxt "#36507"
+msgid "Interlaced"
+msgstr "Interlaced"
+
+#: system/settings/settings.xml
+msgctxt "#36508"
+msgid "Hardware Based"
+msgstr "Hardware-gebaseerd"
+
+#: system/settings/settings.xml
+msgctxt "#36509"
+msgid "Monoscopic - 2D"
+msgstr "Monoscopisch - 2D"
+
+#: system/settings/settings.xml
+msgctxt "#36520"
+msgid "Playback mode of stereoscopic videos"
+msgstr "Weergavemodus van stereoscopische videos"
+
+#: system/settings/settings.xml
+msgctxt "#36521"
+msgid "Ask me"
+msgstr "Vraag"
+
+#: system/settings/settings.xml
+msgctxt "#36522"
+msgid "Use preferred mode"
+msgstr "Voorkeursmodus gebruiken"
+
+#: system/settings/settings.xml
+msgctxt "#36524"
+msgid "Preferred mode"
+msgstr "Voorkeursmodus"
+
+#: settings/DisplaySettings.cpp
+msgctxt "#36525"
+msgid "Same as movie (autodetect)"
+msgstr "Zelfde als film (auto-detectie)"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36526"
+msgid "Disable stereoscopic mode when playback is stopped"
+msgstr "Schakel stereoscopische modus uit wanneer het afspelen gestopt is"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36527"
+msgid "This video is stereoscopic. Select playback mode"
+msgstr "Deze video is stereoscopisch. Kies weergavemodus."
+
+#: system/settings/settings.xml
+msgctxt "#36528"
+msgid "Select stereoscopic mode"
+msgstr "Kies stereoscopische modus."
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36529"
+msgid "Mono (2D)"
+msgstr "Mono (2D)"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36530"
+msgid "Preferred mode"
+msgstr "Voorkeursmodus"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36531"
+msgid "Select alternate mode..."
+msgstr "Kies alternatieve modus..."
+
+#: settings/DisplaySettings.cpp
+msgctxt "#36532"
+msgid "Same as movie"
+msgstr "Zelfde als film"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36535"
+msgid "Stereoscopic mode of video"
+msgstr "Stereoscopische modus van video"
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36536"
+msgid "Stereoscopic mode inverted"
+msgstr "Stereoscopische modus omgekeerd"
+
+#: system/settings/settings.xml
+msgctxt "#36537"
+msgid "No info available yet."
+msgstr "Nog geen informatie."
+
+#: system/settings/settings.xml
+msgctxt "#36538"
+msgid "No info available yet."
+msgstr "Nog geen informatie."
+
+#: system/settings/settings.xml
+msgctxt "#36539"
+msgid "No info available yet."
+msgstr "Nog geen informatie."
+
+#: system/settings/settings.xml
+msgctxt "#36540"
+msgid "No info available yet."
+msgstr "Nog geen informatie."
+
+#: system/settings/settings.xml
+msgctxt "#36541"
+msgid "Allows volume control from AirPlay clients."
+msgstr "Laat toe om het volume aan te passen van AirPlay clients."
 
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"

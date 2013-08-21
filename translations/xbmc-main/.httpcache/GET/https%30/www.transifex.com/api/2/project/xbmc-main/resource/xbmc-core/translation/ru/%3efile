@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-08-11 11:10+0000\n"
+"PO-Revision-Date: 2013-08-20 20:40+0000\n"
 "Last-Translator: Roman Miroshnychenko <romanvm@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-main/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -1712,6 +1712,11 @@ msgctxt "#420"
 msgid "HDMI"
 msgstr "HDMI"
 
+#: system/settings/settings.xml
+msgctxt "#421"
+msgid "Stream silence when idle"
+msgstr ""
+
 msgctxt "#422"
 msgid "Delete album info"
 msgstr "Удалить сведения об альбоме"
@@ -2449,6 +2454,11 @@ msgstr "Бит/сэмпл"
 msgctxt "#613"
 msgid "Sample rate"
 msgstr "Частотность"
+
+#: xbmc/playlists/SmartPlayList.cpp
+msgctxt "#614"
+msgid "Virtual folder"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#620"
@@ -3472,6 +3482,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Объявлять эти сервисы другим системам по Zeroconf"
 
 #: system/settings/settings.xml
+msgctxt "#1269"
+msgid "Allow volume control"
+msgstr ""
+
 msgctxt "#1270"
 msgid "Allow XBMC to receive AirPlay content"
 msgstr "Разрешить XBMC получать содержимое AirPlay"
@@ -5507,6 +5521,11 @@ msgctxt "#13435"
 msgid "Enable HQ Scalers for scalings above"
 msgstr "Разрешить высококачественное масштабирование"
 
+#: xbmc/settings/GUISettings.cpp
+msgctxt "#13436"
+msgid "Allow hardware acceleration (libstagefright)"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13500"
 msgid "A/V sync method"
@@ -6371,6 +6390,14 @@ msgstr "Отмет. как непросмотренное"
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "Изменить название"
+
+msgctxt "#16106"
+msgid "Manage ..."
+msgstr ""
+
+msgctxt "#16107"
+msgid "Edit sort title"
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16200"
@@ -9377,7 +9404,7 @@ msgstr "Загрузка сведений о клипе…"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#20395"
 msgid "Mixed"
-msgstr "Смешанный"
+msgstr "Муз. микс"
 
 msgctxt "#20396"
 msgid "Go to albums by artist"
@@ -9548,6 +9575,11 @@ msgctxt "#20434"
 msgid "Sets"
 msgstr "Киноциклы"
 
+#: system/settings/settings.xml
+msgctxt "#20435"
+msgid "Combine split video items"
+msgstr ""
+
 msgctxt "#20436"
 msgid "Export actor thumbs?"
 msgstr "Экспортировать эскизы актеров?"
@@ -9634,6 +9666,11 @@ msgstr "Слушатель"
 msgctxt "#20455"
 msgid "Listeners"
 msgstr "Слушателей"
+
+#: system/settings/settings.xml
+msgctxt "#20456"
+msgid "Flatten library hierarchy"
+msgstr ""
 
 msgctxt "#20457"
 msgid "Movie set"
@@ -11624,6 +11661,13 @@ msgid "7.1"
 msgstr "7.1"
 
 #: system/settings/settings.xml
+msgctxt "#34111"
+msgid ""
+"When activated silence is output in order to keep alive receiver, otherwise "
+"sink is drained in idle state"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
 msgstr "Звуки интерфейса"
@@ -12400,8 +12444,10 @@ msgstr "Информация пока недоступна."
 
 #: system/settings/settings.xml
 msgctxt "#36169"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
+msgid ""
+"Resampling and other sound processing quality. Low quality is fast, higher "
+"quality will consume more CPU."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12447,10 +12493,10 @@ msgstr "Информация пока недоступна."
 msgctxt "#36177"
 msgid ""
 "Toggle between Choose, Play (default), Resume and Show Information. Choose "
-"will an select item, e.g. open a directory in files mode. Resume will "
+"will select an item, e.g. open a directory in files mode. Resume will "
 "automatically resume videos from the last position that you were viewing "
 "them, even after restarting the system."
-msgstr "Возможные действия: воспроизвести файл (по умолчанию), выбрать объект (например, открыть папку в режиме показа файлов) либо автоматически продолжить воспроизведение видео с места остановки даже после перезапуска системы."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36178"
@@ -12478,13 +12524,18 @@ msgstr "Информация пока недоступна."
 
 #: system/settings/settings.xml
 msgctxt "#36182"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
+msgid ""
+"Enables direct playback of videos that are in folders, without having to "
+"open those folders first, as well as displaying multi-part video files as "
+"single items in non-library views."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36183"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
+msgid ""
+"Removes the title, genre etc nodes from the library view. Selecting a "
+"category takes you straight to the title view."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36184"
@@ -12923,6 +12974,16 @@ msgstr "Выбрать используемый по умолчанию исто
 msgctxt "#36259"
 msgid "Check for new and removed media files on XBMC startup."
 msgstr "Сканировать новые и удаленные медиафайлы при запуске XBMC."
+
+#: system/settings/settings.xml
+msgctxt "#36260"
+msgid "No info available yet."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36261"
+msgid "Path where taken screenshots will be stored."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36262"
@@ -13412,6 +13473,13 @@ msgid "No info available yet."
 msgstr "Информация пока недоступна."
 
 #: system/settings/settings.xml
+msgctxt "#36350"
+msgid ""
+"Automatically send 'Wake-On-Lan' to server(s) right before trying to access "
+"shared files or services."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36351"
 msgid "No info available yet."
 msgstr "Информация пока недоступна."
@@ -13795,6 +13863,151 @@ msgstr "Укажите месположения, для которых нужн�
 msgctxt "#36420"
 msgid "No info available yet."
 msgstr "Информация пока недоступна."
+
+#: system/settings/settings.xml
+msgctxt "#36500"
+msgid "Stereoscopic mode (current)"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36501"
+msgid "Stereoscopic mode"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36502"
+msgid "None"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36503"
+msgid "Over/Under"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36504"
+msgid "Side by side"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36505"
+msgid "Anaglyph Red/Cyan"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36506"
+msgid "Anaglyph Green/Magenta"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36507"
+msgid "Interlaced"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36508"
+msgid "Hardware Based"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36509"
+msgid "Monoscopic - 2D"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36520"
+msgid "Playback mode of stereoscopic videos"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36521"
+msgid "Ask me"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36522"
+msgid "Use preferred mode"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36524"
+msgid "Preferred mode"
+msgstr ""
+
+#: settings/DisplaySettings.cpp
+msgctxt "#36525"
+msgid "Same as movie (autodetect)"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36526"
+msgid "Disable stereoscopic mode when playback is stopped"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36527"
+msgid "This video is stereoscopic. Select playback mode"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36528"
+msgid "Select stereoscopic mode"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36529"
+msgid "Mono (2D)"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36530"
+msgid "Preferred mode"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36531"
+msgid "Select alternate mode..."
+msgstr ""
+
+#: settings/DisplaySettings.cpp
+msgctxt "#36532"
+msgid "Same as movie"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36535"
+msgid "Stereoscopic mode of video"
+msgstr ""
+
+#: guilib/StereoscopicsManager.cpp
+msgctxt "#36536"
+msgid "Stereoscopic mode inverted"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36537"
+msgid "No info available yet."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36538"
+msgid "No info available yet."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36539"
+msgid "No info available yet."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36540"
+msgid "No info available yet."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36541"
+msgid "Allows volume control from AirPlay clients."
+msgstr ""
 
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"
