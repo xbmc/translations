@@ -1,5 +1,36 @@
-2013/07/13 --> v 12.0.4
+2013/09/12 --> v 12.0.13
 Update: Language files from Transifex
+
+2013/09/10 --> v 12.1.0
+Update: Next official Frodo release
+
+2013/09/09 --> v 12.0.12
+Update: DB cleanup didn't work with Sql due to a subquery in a delete statement
+
+2013/09/05 --> v 12.0.11
+Fix:    DB cleanup deleted empty directories in Folders table.
+
+2013/09/03 --> v 12.0.10
+Fix:    DB cleanup deleted rootfolders in Folders table.
+
+2013/08/29 --> v 12.0.9
+Fix:    Renaming a directory wasn't recognized. Now you can use full rescan (Menu: "Paths of picture folders->Scan all paths" -> Dialog: Click on "yes") to clean-up (delete) the DB entries.
+
+2013/08/28 --> v 12.0.8
+Fix:    If there were pictures without a valid EXIF DateTime then creating Date Ranges would produce script errors.
+
+2013/08/25 --> v 12.0.7
+Update: Scanpath.py hardened in case files are read-only.
+
+2013/08/15 --> v 12.0.6
+Fix:    Load/Save filter wizard settings didn't work with MySql
+
+2013/08/13 --> v 12.0.5
+Fix:    "Browse by folders" displayed wrong picture count when using MySql
+
+2013/08/04 --> v 12.0.4
+Update: Language files from Transifex
+Fix:    MyPictureDB.file_insert() cannot insert null when using MySql
 
 2013/07/08 --> v 12.0.3
 Fix:    MyPictureDB.count_pics_in_folder() corrected

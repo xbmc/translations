@@ -1,54 +1,29 @@
-v.1.5.3.10
+v.1.5.5.2
 - updated language files from Transifex
 
-v.1.5.3.009
-- widened tolerance on 16:9 proportion check from last.fm
-- musicbrainz lookup now validates artist based on releases, recordings, then works
-- updated musicbrainz search to better deal with featured artists
-- updated musicbrainz search to work with add-ons that call AS remotely
-- fixed bug where cached images wouldn't be merged for featured artists
+v.1.5.5.001
+- fix for SpotifyMC stuttering when using Artist Slideshow
 
-v.1.5.3.008
-- fixed for error regression in removing beginning articles from artist name for search
-
-v.1.5.3.007
-- musicbrainz lookup ignores anything after '(' in title of local song or local album
-- fixed structure of musicbrainz search to produce better results
-- added advanced feature to exclude files from download
-- now save musicbrainz ID in memory to reduce drive reads
-- additional error catching across the board
-- updated cache manager to leave .nfo files intact
-
-v.1.5.3.006
-- cleaned up musicbrainz parsing code
-- added logic to better follow musicbrainz rules for API load
-- fixed featured artist parsing
-- brought some sanity to the unicode and url encoding of the last.fm urls
-- fixed corrupt image downloads on Windows
-- added check for local artist against musicbrainz aliases
-- general code cleanup
-
-v.1.5.3.005
-- completely rewrote musicbrainz lookup (again)
-
-v.1.5.3.004
-- fixed musicbrainz lookup so that it works with streaming audio as well
-
-v.1.5.3.003
-- fix for artists with ampersand in their name
-- fix for last.fm showing unexpected results
-
-v.1.5.3.002
+v.1.5.4
 - artist bio and album list now come from theaudiodb.com by default (Last.fm as fallback)
 - added download of images from fanart.tv
 - added download of images from theaudiodb.com
-- fix so that artists with unicode characters in name return results from Last.fm
-- changed over to urllib2 for web downloads
-
-v.1.5.3.001
 - added musicbrainz ID support
+- updated URL for htbackdrops to htbackdrops.org
+- added advanced feature to exclude files from download
 - rearranged settings some to make options clearer
-- dropped support for htbackdrops.com (site gone)
+- set new location for .nfo files separate from image files
+- added migration code to move old .nfo files to new locations and names
+- updated cache manager to leave .nfo files intact
+- fixed bug where cached images wouldn't be merged for featured artists
+- fixed featured artist parsing
+- fixed last.fm showing unexpected results
+- fixed artists with unicode characters in name returning no results from Last.fm
+- changed over to urllib2 for downloads
+- additional error catching across the board
+
+v1.5.3
+internal beta test
 
 v.1.5.2
 - added ability to parse multiple featured artists from title of song

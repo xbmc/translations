@@ -1,4 +1,83 @@
-2013-07-13 v0.1.25
+2013-09-09 v0.2.12
+  (fix) do not check for update if /storage/.update/SYSTEM exists
+
+2013-09-07 v0.2.11
+  (fix) dns/ntp sort order on save
+
+2013-08-20 v0.2.9
+  (fix) wait for execute to close
+  (fix) dont restart services (SYSTEMD) on startup
+  
+2013-08-19 v0.2.8
+  (change) move service configs to .cache/settings/*.conf
+
+2013-08-18 v0.2.7
+  (fix) default obexd toot dir
+
+2013-08-12 v0.2.6
+  (fix) cpu flag x64
+  (fix) some minor execute return values
+  (add) systemd service configuration
+  
+2013-08-11 v0.2.5
+  (fix) update temp directory
+  
+2013-08-11 v0.2.4
+  (chg) notification redesign
+  (add) notification Icon
+  
+2013-08-11 v0.2.3
+  (fix) samba menu entry
+  (fix) ssh default value
+  (fix) discovery error on exit
+  (add) some values added to defaults.py
+  (add) folder select option
+  (fix) obex_root default value added
+  
+2013-08-09 v0.2.2
+  (chg) some code cleanup
+  (add) make obex optional
+  (add) central default config file (defaults.py)
+  
+2013-08-07 v0.2.1
+  (fix) ssh menu 
+  (fix) syslog menu
+  (add) obex file transfer agent
+  
+2013-08-02 v0.2.0
+  (change) initial release for dbus redesign
+  
+2013-07-29 v0.1.31
+  (change) menu loader redesign
+  (fix) kill update thread on exit
+  
+2013-07-23 v0.1.30
+  (change) use subprocess.Popen to start LCDd
+  (fix) stop LCDd on driver change
+
+2013-07-18 v0.1.29
+  (change) fix bluetooth entry in service menu
+  (change) disable logging until OE DEBUG != true
+  
+2013-07-18 v0.1.28
+  (change) use subprocess.Popen() instead of os.system() to start services
+  
+2013-07-18 v0.1.27
+  (change) move ssh config file to $CONFIG_CACHE
+  (fix) save service config files on startup
+
+2013-07-18 v0.1.26
+  (change) services not restarted on addon startup
+  (change) (re)start samba via initscript
+  (change) (re)start bluetooth via initscript
+  (change) (re)start crond via initscript
+  (change) (re)start avahi via initscript
+
+2013-07-14 v0.1.25
+  (fix) backup. handle mountpoints under backupdirs
+  (fix) backup. do not dereference symlinks
+  (fix) backup: do not skip empty dirs
+  (updated) language files from Transifex
   (change) read SYSTEMID from /etc/machine-id
   (change) replace /storage/.xbmc with oe.XBMC_USER_HOME
   (change) replace /storage/.config with oe.USER_CONFIG
