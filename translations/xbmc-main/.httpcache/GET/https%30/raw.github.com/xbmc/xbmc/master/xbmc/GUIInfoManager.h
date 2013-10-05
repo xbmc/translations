@@ -275,6 +275,7 @@ namespace INFO
 #define VIDEOPLAYER_VOTES             309
 #define VIDEOPLAYER_IS_STEREOSCOPIC   310
 #define VIDEOPLAYER_STEREOSCOPIC_MODE 311
+#define VIDEOPLAYER_SUBTITLES_LANG    312
 
 #define CONTAINER_CAN_FILTER         342
 #define CONTAINER_CAN_FILTERADVANCED 343
@@ -488,9 +489,9 @@ namespace INFO
 #define CONTROL_GROUP_HAS_FOCUS     29999
 #define CONTROL_HAS_FOCUS           30000
 
-#define VERSION_MAJOR 13
-#define VERSION_MINOR 0
-#define VERSION_TAG "-ALPHA7"
+#define VERSION_MAJOR               13
+#define VERSION_MINOR               0
+#define VERSION_TAG                 "-ALPHA9"
 
 #define LISTITEM_START              35000
 #define LISTITEM_THUMB              (LISTITEM_START)
