@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-14 19:50+0000\n"
-"Last-Translator: Martin_SlovakDroiD <martin@droid.sk>\n"
+"PO-Revision-Date: 2013-11-16 21:40+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/xbmc-main/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -462,7 +462,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Vymazať tieto súbory? - Vymazanie je nenávratné!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Priebeh"
@@ -494,6 +494,7 @@ msgstr "Obrazovka"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albumy"
@@ -502,6 +503,7 @@ msgstr "Albumy"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Interpreti"
@@ -685,10 +687,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Zobrazovať 4:3 videa"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Charakter:"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Štýly"
@@ -698,7 +702,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Skladba"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Dĺžka"
@@ -712,7 +716,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Skladby"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Recenzia"
@@ -785,14 +789,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Webové rozhranie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Stručné info"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Obsah filmu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Hlasov"
@@ -801,6 +808,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Obsadenie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Obsah"
@@ -822,7 +830,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Kalibrácia používateľského rozhrania..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Kalibrácia obrazu..."
@@ -831,10 +839,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Zmäkčenie"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Priblíženie"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Pomer strán"
@@ -871,6 +881,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Rýchlosť"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Vertikálne posunutie"
@@ -898,7 +909,8 @@ msgid "Video filters"
 msgstr "Video filtre"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Žiadne"
@@ -1182,11 +1194,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AV prijímač s možnosťou dekódovania AAC"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "AV prijímač s možnosťou dekódovania MP1"
@@ -1328,18 +1335,18 @@ msgstr "Konverzia snímkovania"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Audio výstup"
+msgid "Output configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analógový"
+msgid "Fixed"
+msgstr "Pevné"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Optický/Koax"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1361,6 +1368,7 @@ msgstr "Prispôsobenie snímkovania"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Herci"
@@ -1371,8 +1379,8 @@ msgstr "Rok"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Zvyšovať hlasitosť pri downmixe"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1381,8 +1389,8 @@ msgstr "AV prijímač s možnosťou dekódovania DTS-HD"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "AV prijímač s možnosťou dekódovania viackanálového LPCM"
+msgid "Enable passthrough"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1710,13 +1718,13 @@ msgstr "Deň"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Stream silence when idle"
+msgid "Keep audio device alive"
+msgstr ""
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1867,6 +1875,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Prepnúť zobrazenie"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Titulky"
@@ -1887,14 +1900,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Podsvietenie"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Jas"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Kontrast"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gamma"
@@ -2066,6 +2082,7 @@ msgstr "Manuálne nastavenia"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Žáner"
@@ -2219,7 +2236,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Veľkosť"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Stopa"
@@ -2228,24 +2245,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Čas"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Názov"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Interpret"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Playlist"
@@ -2254,6 +2274,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Súbor"
@@ -2263,16 +2284,17 @@ msgstr "Súbor"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Rok"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Hodnotenie"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Typ"
@@ -2281,47 +2303,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Použitie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Autor albumu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Počet prehratí"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Naposledy prehrané"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Komentár"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Dátum pridania"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Predvolené"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Štúdio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Umiestnenie"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Krajina"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Práve prebieha"
@@ -2374,6 +2402,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Párty režim"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Náhodné"
@@ -2502,34 +2531,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Režim zobrazenia"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normálne"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Zväčšiť"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Natiahnuť 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Široké priblíženie"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Natiahnuť 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Originálna veľkosť"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Vlastné"
@@ -2603,6 +2635,7 @@ msgid "Browse for library"
 msgstr "Vyberte knižnicu"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Roky"
@@ -2632,6 +2665,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Informácie o skladbe"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Nelineárne roztiahnutie"
@@ -2850,6 +2884,7 @@ msgid "Mirror image"
 msgstr "Otočiť"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Ste si istý?"
@@ -3288,8 +3323,8 @@ msgid "Program Add-ons"
 msgstr "-Programy (doplnky)"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Nastavenie náhľadu doplnku"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3958,30 +3993,32 @@ msgid "Reset"
 msgstr "Obnoviť"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Úroveň: základná"
+msgid "Basic"
+msgstr ""
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Úroveň: štandardná"
+msgid "Standard"
+msgstr "Štandardný"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Úroveň: pokročilá"
+msgid "Advanced"
+msgstr ""
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Úroveň: expert"
+msgid "Expert"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Prehliadač doplnkov"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Obnoviť nastavenia"
+msgid "Reset above settings to default"
+msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Skutočne chcete obnoviť nastavenia v tejto kategórii?"
@@ -3993,6 +4030,21 @@ msgstr "Pomocník"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "K dispozícii nie je žiadny Pomocník"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4208,66 +4260,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Prerábam index..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Vrátiť sa do sekcie 'Hudba'"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Vrátiť sa do sekcie 'Videá'"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Začať od začiatku"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Pokračovať od %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Ok"
@@ -4277,6 +4347,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Zamknuté! Vložte heslo..."
@@ -4286,14 +4357,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Zadajte heslo"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Zadajte hlavné heslo"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Zadajte heslo pre odomknutie"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "alebo stlačte C pre zrušenie"
@@ -4327,14 +4401,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Odstrániť zámok"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Číselné Heslo"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Kombinácia tlačidiel na Gamepad-e"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Textové Heslo"
@@ -4364,18 +4441,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Zadané heslá nie sú totožné."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Vstup Nepovolený"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Limit pre opakovanie bol prekročený."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "Systém sa teraz vypne."
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Položka zamknutá"
@@ -4425,30 +4506,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Žiadne heslo, skúste znova."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Hlavný zámok"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Vypnúť systém ak boli prekročené pokusy na hlavný zámok"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Hlavný kľúč nie je správny!"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Prosím vložte správny hlavný kľúč!"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Nastavenia & Správca súborov"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Nastaviť ako predvolené pre všetky videá"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Toto vymaže všetky uložené hodnoty"
@@ -4463,18 +4553,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Používať efekty priblíženia a posunutia obrázku"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12 hodinový formát"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24 hodinový formát"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Deň/Mesiac"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Mesiac/Deň"
@@ -4484,14 +4578,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Doba používania"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Minút"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Hodiny"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Dni"
@@ -4526,18 +4623,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Systém"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Okamžitý HD Spindown"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Iba Video"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Oneskorenie"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimálna dĺžka súboru"
@@ -4567,10 +4668,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Úsporný režim"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Ukončiť"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Reštartovať"
@@ -4580,42 +4683,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Minimalizovať"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Funkcia tlačítka pre vypnutie"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Vypnúť systém"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Zabrániť vypnutiu pri nečinnosti"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Povoliť vypnutie pri nečinnosti"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Existuje nejaké aktívne pripojenie, (napr. cez SSH) ?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Vymeniteľný pevný disk pripojený"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Nebezpečné vybratie zariadenia"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Zariadenie bolo úspšne odobrané"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick bol pripojený"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick bol odpojený"
@@ -4675,10 +4788,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Chyba pre %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Nízka úroveň batérie"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Blikací filter"
@@ -4708,26 +4823,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Vždy povolené"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Test rozlíšenia"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Uložiť rozlíšenie?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Chcete ponechať toto rozlíšenie?"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Vysoko kvalitný prepočet (upscaling)"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Zakázané"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Povolené pre SD obsah"
@@ -4748,14 +4869,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ prepočet (upscaling)"
@@ -4765,43 +4889,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU farebná konverzia - Studio level"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Stmavovať ostatné obrazovky"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Zakázané"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Povolené"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Zistené aktívne spojenie!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Ak budete pokračovať, môžeťe stratiť ovládanie XBMC"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "natrvalo. Určiťe chcete zastaviť event server?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Zmeniť režim diaľkového ovládania Apple?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Ak práve používate diaľkové ovládanie Apple na ovládanie"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "XBMC, zmenou nastavenia možete ovplyvniť Vašu"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "schopnosť ovládať ho. Chcete pokračovať?"
@@ -4821,38 +4958,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Primárny DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Inicializácia zlyhala"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Nikdy"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Ihneď"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Po %i sekundách"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "Dátum inštalácie disku:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "Počet zapnutí disku:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profily"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Vymazať profil '%s'?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Posledný otvorený profil:"
@@ -5400,6 +5546,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(Hodnotenie užívateľov IMDb)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Naj 250"
@@ -5431,20 +5578,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Vykresľovacia metóda"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Zistiť automaticky"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Jednoduchý shader (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Pokročilý shader (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Softvér"
@@ -5501,7 +5650,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Aktivovať hardwarovú akceleráciu (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixel Shadery"
@@ -5545,6 +5694,10 @@ msgstr "Povoliť hardvérovú akceleráciu (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Povoliť hardvérovú akceleráciu (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5646,6 +5799,14 @@ msgstr "%.1f Sekunda"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Sekúnd"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr ""
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr ""
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6292,23 +6453,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Zadajte hľadaný výraz"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Žiadne"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Automaticky"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Deinterlácia"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (Opačný)"
@@ -6363,6 +6528,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Párty režim playlist"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "De-interlácia (Polovičná)"
@@ -6371,18 +6537,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Deinterlácia videa"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Spôsob deinterlácie"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Vypnuté"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Automaticky"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Zapnuté"
@@ -6412,8 +6582,8 @@ msgid "Edit title"
 msgstr "Upraviť titul"
 
 msgctxt "#16106"
-msgid "Manage ..."
-msgstr "Spravovať ..."
+msgid "Manage..."
+msgstr ""
 
 msgctxt "#16107"
 msgid "Edit sort title"
@@ -6454,110 +6624,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Zlyhalo zmazanie najmenej jedného súboru"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Spôsob úpravy videa"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Najbližší sused"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilineárny"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bikubický"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bikubický (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Dočasný"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Dočasný/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU) Redukcia šumu"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU) Ostrosť"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Inverzný Telecine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 optimalizovaný"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Automaticky"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Dočasný (Polovičný)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Dočasný/Spatial (polovičný)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Best"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 optimalizovaný"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Software Blend"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Post-processing"
@@ -6983,6 +7180,21 @@ msgstr "Zadajte názov nahrávky"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Upozornenie"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr ""
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7466,9 +7678,9 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "Nebolo možné zapnúť žiadny PVR doplnok. Skontrolujte nastavenia alebo pre viac informácii si pozrite výpis z denníka."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7515,8 +7727,8 @@ msgstr "Zobraziť oznámenie pri aktualizáciách časovačov"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
-msgstr "Použiť čísla kanálov backendov (funguje iba s 1 zapnutým PVR doplnkom)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
+msgstr ""
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -7539,16 +7751,16 @@ msgid "Starting background threads"
 msgstr "Spúšťajú sa vlákna na pozadí"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "Nie je zapnutý žiadny PVR doplnok"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "Správca PVR bol aktivovaný bez toho, aby bol zapnutý"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "akýkoľvek PVR doplnok. Zapnite aspoň jeden doplnok,"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7675,16 +7887,16 @@ msgid "* All recordings"
 msgstr "* Všetky nahrávky"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "Nie je možné nájsť žiadne PVR doplnky"
+msgid "No PVR Add-ons could be found"
+msgstr ""
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "Aby bolo možné použiť PVR funkcie, je potrebný"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "tuner, backend softvér a doplnok pre backend."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8425,6 +8637,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "a nový názov priečinku je správny"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "Prístupnosť"
@@ -8627,6 +8840,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Párty sa začala!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Pravdivé"
@@ -8652,14 +8866,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Prejsť do hl. priečinku"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Weave"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Weave (naopak)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Miešať"
@@ -9160,6 +9377,7 @@ msgstr "Odomknúť zdroje"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Herec"
@@ -9170,6 +9388,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Réžia"
@@ -9214,6 +9433,7 @@ msgstr "ako"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Réžia"
@@ -9259,6 +9479,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Sezóna %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Epizóda"
@@ -9266,6 +9487,7 @@ msgstr "Epizóda"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Epizódy"
@@ -9282,6 +9504,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Odstrániť seriál z knižnice"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Seriál"
@@ -9321,6 +9544,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Obrázok sezóny"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Sezóna"
@@ -9388,6 +9612,7 @@ msgstr "Naposledy pridané epizódy"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Štúdiá"
@@ -9509,12 +9734,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Hľadá sa nový obsah"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Premiéra"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Scenár"
@@ -9544,10 +9770,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Vždy"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Má ukážku"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Nepravdivé"
@@ -9667,6 +9895,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Chcete pokračovať v aktualizácii?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Krajina"
@@ -9692,6 +9921,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Zmenšiť hierarchiu knižnice"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Kolekcia filmov"
@@ -9706,6 +9936,7 @@ msgstr "Zoskupovať filmy do kolekcií"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Značky"
@@ -9961,50 +10192,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Použiť 'trasúce' animácie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "obsahuje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "neobsahuje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "je"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "nie je"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "začína na"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "končí na"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "viac ako"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "menej ako"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "násl."
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "pred."
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "je posledný"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "nie je posledný"
@@ -10139,26 +10382,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Názov epizódy"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Rozlíšenie videa"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Počet audio kanálov"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Kodek videa"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Koded audia"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Jazyk audia"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Jazyk titulkov"
@@ -10195,10 +10444,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Medzipamäť plná pred dosiahnutím potrebného množstva pre nepretržité prehrávanie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Externé úložisko"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Počet pozretých epizód"
@@ -10258,6 +10509,21 @@ msgstr "%d do %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s do %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10514,7 +10780,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Sťahujem informácie o interpretovi"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Životopis"
@@ -10537,26 +10803,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informácie o interpretovi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Nástroje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Dátum narodenia"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Dátum založenia"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Zameranie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Dátum rozpadu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Dátum smrti"
@@ -10565,6 +10837,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Aktívne roky"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Label"
@@ -11000,10 +11273,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Dostupné aktualizácie"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Závislosti sa nestretli"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11012,17 +11285,25 @@ msgstr "Doplnok nemá správnu štruktúru"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "%s je použitá následovným nainštalovaným doplnkom"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Tento doplnok sa nedá odinštalovať"
+msgid "This Add-on cannot be uninstalled"
+msgstr ""
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Obnoviť zmeny"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Dostupné doplnky"
@@ -11032,10 +11313,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Verzia:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Upozornenie"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Licencia:"
@@ -11138,6 +11421,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Zamknúť správcu doplnkov"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr ""
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11150,8 +11438,8 @@ msgstr "(na čiernej listine)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Doplnok bol v repozitáry označený ako nefunkčný."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11188,6 +11476,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Vo vzhľade chýbajú nejaké súbory"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr ""
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Notifikácie"
@@ -11216,22 +11568,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Názov: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Vyberte položku k prehraniu"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Režim knižnice"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY klávesnica"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Preposielané audio"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Kvalita ukážky"
@@ -11297,8 +11654,8 @@ msgid "Clips"
 msgstr "Klipy"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Pre aktiváciu reštartujte doplnok"
+msgid "Restart plug-in to enable"
+msgstr ""
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11683,9 +12040,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "When activated silence is output in order to keep alive receiver, otherwise sink is drained in idle state"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11709,6 +12071,36 @@ msgstr "Vždy"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Nikdy"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr ""
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11850,6 +12242,11 @@ msgstr "Zapnúť podporu pákových ovládačov a gamepadov"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Zakázať joystick, pokiaľ je toto zariadenie prítomné"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr ""
 
 #: Unknown
 msgctxt "#35500"
@@ -12465,9 +12862,11 @@ msgstr "Maximum video speed adjust to match actual screen refresh rate."
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Resampling and other sound processing quality. Low quality is fast, higher quality will consume more CPU."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12660,8 +13059,8 @@ msgstr "Momentálne nie sú k dispozícii žiadne informácie."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "Enable the Personal Video Recorder (PVR) features in XBMC. This requires that at least one PVR add-on is installed."
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12810,8 +13209,8 @@ msgstr "Show the last viewed channel if switching to live tv."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
-msgstr "Display signal quality information in the codec information window (if supported by the add-on and backend)."
+"supported by the Add-on and backend)."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36230"
@@ -12846,29 +13245,29 @@ msgstr "Duration of the recording when pressing the record button, or when creat
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "Priority of the recording. Higher number means higher priority. Defaults to 50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "Delete recording after this time. Defaults to 99 days. Not supported by all add-ons and backends."
+"Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "Start recordings before the actual time. Defaults to 2 minutes. Not supported by all add-ons and backends."
+"supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "End recordings after the actual time. Defaults to 10 minutes. Not supported by all add-ons and backends."
+"by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13558,13 +13957,21 @@ msgstr "Momentálne nie sú k dispozícii žiadne informácie."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Type of connection to the audio equipment."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Select your physical speaker layout."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13574,9 +13981,9 @@ msgstr "Boost AC3 streams that have been downmixed to 2 channels."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Upmix 2 channel stereo sources so the number of audio channels matches the number of speakers."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13590,17 +13997,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Select this option if your receiver is capable of decoding DTS streams."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Select this option if your receiver is capable of decoding AAC streams."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Select this option if your receiver is capable of decoding LPCM streams."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13617,16 +14026,16 @@ msgstr "Select this option if your receiver is capable of decoding DTS-HD stream
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Select the device you use to play audio decoded by XBMC such as mp3's and FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Select the device you use to play encoded formats, these are any of the formats checked above in the 'capable receiver' options."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13897,6 +14306,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Enable hardware video decode using AMLogic decoder"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Stereoscopic mode (current)"
@@ -13911,12 +14327,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "None"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Over/Under"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Side by side"
@@ -13960,6 +14376,13 @@ msgstr "Ask me"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Use preferred mode"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14006,12 +14429,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Same as movie"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Stereoscopic mode of video"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Stereoscopic mode inverted"
@@ -14113,3 +14549,10 @@ msgstr "Dual audio output"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Boost centre channel when downmixing"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr ""

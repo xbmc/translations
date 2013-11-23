@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-11-14 16:40+0000\n"
+"PO-Revision-Date: 2013-11-17 10:50+0000\n"
 "Last-Translator: Özgür BASKIN <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xbmc-main/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -464,7 +464,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Bu dosyalar silinsin mi? - Silinen dosyalar geri alınamaz!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Durum"
@@ -496,6 +496,7 @@ msgstr "Görüntü"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albümler"
@@ -504,6 +505,7 @@ msgstr "Albümler"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Sanatçılar"
@@ -687,10 +689,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "4:3 videoları görüntüleme biçimi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Nitelik"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stiller"
@@ -700,7 +704,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Şarkı"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Süre"
@@ -714,7 +718,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Parçalar"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Yorum"
@@ -787,14 +791,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Web arabirimi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Hakkında"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "İçerik"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Oylar"
@@ -803,6 +810,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Oyuncular"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "İçerik"
@@ -824,7 +832,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Kullanıcı arabirimini ayarla..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Video ayarı..."
@@ -833,10 +841,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Yumuşat"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Yakınlaştırma miktarı"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Piksel oranı"
@@ -873,6 +883,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Hız"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Dikey Kaydırma"
@@ -900,7 +911,8 @@ msgid "Video filters"
 msgstr "Video filtreleri"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Hiçbiri"
@@ -1184,11 +1196,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Yer İşaretleri"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC destekli alıcı"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 destekli alıcı"
@@ -1330,18 +1337,18 @@ msgstr "Çerçeve hızı çeviricisi"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Ses çıkışı"
+msgid "Output configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analog"
+msgid "Fixed"
+msgstr "Sabit"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Optik/Koaksiyel"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1363,6 +1370,7 @@ msgstr "Kare hızını ayarla"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Aktörler"
@@ -1373,8 +1381,8 @@ msgstr "Yıl"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Downmix yaparken ses seviyesini yükselt"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1383,8 +1391,8 @@ msgstr "DTS-HD destekli alıcı"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Çok Kanallı LPCM destekli alıcı"
+msgid "Enable passthrough"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1712,13 +1720,13 @@ msgstr "Yüksek"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Boştayken yayını sessizleştir"
+msgid "Keep audio device alive"
+msgstr ""
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1869,6 +1877,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Görünümü değiştir"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Altyazılar"
@@ -1889,14 +1902,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Arka Işık"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Parlaklık"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Kontrast"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gama"
@@ -2068,6 +2084,7 @@ msgstr "El ile yapılan ayarlar"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Tarz"
@@ -2221,7 +2238,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Boyut"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Parça"
@@ -2230,24 +2247,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Zaman"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Başlık"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Sanatçı"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Albüm"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Çalma listesi"
@@ -2256,6 +2276,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Dosya"
@@ -2265,16 +2286,17 @@ msgstr "Dosya"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Yıl"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Derecelendirme"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Tür"
@@ -2283,47 +2305,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Kullanım"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Albüm sanatçısı"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Çalma sayısı"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Son çalınan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Açıklama"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Eklenme tarihi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Varsayılan"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Stüdyo"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Yol"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Ülke"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "İşlem sürüyor"
@@ -2376,6 +2404,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Parti modu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Rastgele"
@@ -2504,34 +2533,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Görünüm modu"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normal"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Yakınlaştır"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "4:3'e genişlet"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Geniş yakınlaştırma"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "16:9'a genişlet"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Özgün Boyut"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Özel"
@@ -2605,6 +2637,7 @@ msgid "Browse for library"
 msgstr "Kitaplığa gözat"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Yıllar"
@@ -2634,6 +2667,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Şarkı bilgisi"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Doğrusal olmayan genişletme"
@@ -2852,6 +2886,7 @@ msgid "Mirror image"
 msgstr "Resmi aynala"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Emin misiniz?"
@@ -3290,7 +3325,7 @@ msgid "Program Add-ons"
 msgstr "Program Eklentileri"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
+msgid "Set plug-in thumb"
 msgstr "Eklenti küçük resmini ayarla"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
@@ -3960,30 +3995,32 @@ msgid "Reset"
 msgstr "Sıfırla"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Düzey:Temel"
+msgid "Basic"
+msgstr "Temel"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Düzey:Standart"
+msgid "Standard"
+msgstr "Standart"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Düzey:Gelişmiş"
+msgid "Advanced"
+msgstr "Gelişmiş"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Düzey:Uzman"
+msgid "Expert"
+msgstr "Uzman"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Eklenti tarayıcısı"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Ayarları sıfırla"
+msgid "Reset above settings to default"
+msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Bu kategorideki ayarları sıfırlamak istediğinize emin misiniz?"
@@ -3995,6 +4032,21 @@ msgstr "Yardım"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Yardım mevcut değil"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4210,66 +4262,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Dizini yeniden oluştur..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Müzik penceresine dön"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Videolar penceresine dön"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Baştan başlat"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Sürdür: %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Tamam"
@@ -4279,6 +4349,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Kilitli! Kodu girin..."
@@ -4288,14 +4359,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Parola girin"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Yönetici kodunu girin"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Kilit açma kodunu girin"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "veya çıkmak için C'ye basın"
@@ -4329,14 +4403,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Kilidi kaldır"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Sayısal parola"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Gamepad tuş kombinasyonu"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Tam metin parola"
@@ -4366,18 +4443,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Girilen parola eşleşmedi."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Giriş reddedildi"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Parola deneme hakkı tükendi."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "Sistem şimdi kapatılacak."
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Öğe kilitli"
@@ -4427,30 +4508,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Boş parola girildi. Yeniden deneyin."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Yönetici kilidi"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Eğer Yönetici Kilidi denemesi aşılırsa sistemi kapat"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Geçersiz yönetici kodu"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Lütfen doğru yönetici şifresini girin"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Ayarlar ve dosya yöneticisi"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Tüm videolar için varsayılan olarak ayarla"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Bu işlem önceden kaydedilmiş değerleri sıfırlar"
@@ -4465,18 +4555,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Kaydırma ve yakınlaştırma efektleri kullan"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12 saatlik zaman biçimi"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24 saatlik zaman biçimi"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Gün/Ay"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Ay/Gün"
@@ -4486,14 +4580,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Sistemin çalışma süresi"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Dakika"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Saat"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Gün"
@@ -4528,18 +4625,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Sistem"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Anlık sabit disk yavaşlatma"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Sadece Video"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Gecikme"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimum dosya süresi"
@@ -4569,10 +4670,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Askıya Al"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Çıkış"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Yeniden Başlat"
@@ -4582,42 +4685,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Simge Durumuna Küçült"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Güç düğmesi eylemi"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Sistemi Kapat"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Boşta kalma kapatmasını engelle"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Boşta kalma kapatmasına izin ver"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Başka bir oturum mu etkin, ssh üzerinden olabilir mi?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Çıkarılabilir sabit disk bağlandı"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Aygıt güvensiz bir şekilde kaldırıldı"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Aygıt başarıyla kaldırıldı"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick takılı"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick takılı değil"
@@ -4677,10 +4790,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "%s hatası"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Düşük pil ile çalışıyor"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Titreme filtresi"
@@ -4710,26 +4825,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Her zaman etkin"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Çözünürlüğü test et ve uygula"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Çözünürlük kaydedilsin mi?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Bu çözünürlük ayarlarını saklamak ister misiniz?"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Yüksek kalite upscaling"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Devre dışı"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "SD içeriği için etkinleştir"
@@ -4750,14 +4871,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ Upscaling düzeyi"
@@ -4767,43 +4891,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU Stüdyo düzeyi renk dönüştürme"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Diğer görüntüleri temizle"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Devre dışı"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Görüntüleri temizle"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Etkin bağlantılar algılandı!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Devam ederseniz, XBMC'yi kontrol etmek mümkün olmayabilir."
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "Olay sunucusunu durdurmak istediğinize emin misiniz?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Apple Kumanda modu değiştirilsin mi?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "XBMC'yi kontrol etmek için Apple Kumandayı kullanıyorsanız,"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "bu ayarı değiştirmek kontrol yeteneğini etkileyebilir."
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "Devam etmek istiyor musunuz?"
@@ -4823,38 +4960,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Birincil DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Başlatma işlemi başarısız"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Hiçbir zaman"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Hemen"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "%i saniye sonra"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD yükleme tarihi:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD güç döngüsü sayısı:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profiller"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "'%s' profili silinsin mi?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "En son yüklenen profil:"
@@ -5402,6 +5548,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(IMDb kullanıcı derecelendirmesi)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "En İyi 250"
@@ -5433,20 +5580,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "İşleyici yöntemi"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Otomatik algıla"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Basit gölgeleme (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Gelişmiş gölgeleme (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Yazılım"
@@ -5503,7 +5652,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Donanım hızlandırmasına izin ver (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Piksel Gölgelendiriciler"
@@ -5547,6 +5696,10 @@ msgstr "Donanım hızlandırmasına izin ver (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Donanım hızlandırmasına izin ver (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5648,6 +5801,14 @@ msgstr "%.1f Saniye"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Saniye"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d Dakika"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d Dakika"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6294,23 +6455,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Arama dizesi girin"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Yok"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Otomatik seç"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "De-interlace"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (inverted)"
@@ -6365,6 +6530,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Parti modu çalma listesi"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "De-interlace (Yarım)"
@@ -6373,18 +6539,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Deinterlace video"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Deinterlace yöntemi"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Kapalı"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Otomatik"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Açık"
@@ -6414,7 +6584,7 @@ msgid "Edit title"
 msgstr "Başlığı düzenle"
 
 msgctxt "#16106"
-msgid "Manage ..."
+msgid "Manage..."
 msgstr "Yönet..."
 
 msgctxt "#16107"
@@ -6456,110 +6626,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "En az bir dosya silinemedi"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Video ölçekleme yöntemi"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "En yakın komşu"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinear"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubic"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubic (yazılım)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (yazılım)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (yazılım)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Temporal"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Temporal/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU)Gürültü Azaltma"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU)Netlik"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Ters Telesine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "İyileştirilmiş Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Otomatik"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Temporal (Yarım)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Temporal/Spatial (Yarım)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Best"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "İyileştirilmiş Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Software Blend"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Post-processing"
@@ -6985,6 +7182,21 @@ msgstr "Kayıt için ad girin"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Uyarı"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Sağlayıcı"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7468,9 +7680,9 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "PVR eklentisi etkin olmayabilir. Ayarlarınızı veya daha fazla bilgi için günlük dosyasını denetleyin."
+msgstr "PVR eklentisi etkin olmayabilir. Ayarlarınızı veya daha fazla bilgi için günlük dosyasını kontrol edin."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7517,7 +7729,7 @@ msgstr "Zamanlayıcı güncellemelerinde bildirim göster"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
 msgstr "Arka uç kanal numaralarını kullan (sadece 1 tane etkin PVR eklentisi ile çalışır)"
 
 msgctxt "#19235"
@@ -7541,7 +7753,7 @@ msgid "Starting background threads"
 msgstr "Arka plan iş parçacıkları başlatılıyor"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
+msgid "No PVR Add-on enabled"
 msgstr "Hiçbir PVR eklentisi etkin değil"
 
 msgctxt "#19241"
@@ -7549,8 +7761,8 @@ msgid "The PVR manager has been enabled without any"
 msgstr "PVR yöneticisi hiçbir PVR eklentisi olmadan"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "etkinleştirildi. PVR işlevselliğini kullanabilmek için"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7677,7 +7889,7 @@ msgid "* All recordings"
 msgstr "* Bütün kayıtlar"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
+msgid "No PVR Add-ons could be found"
 msgstr "Hiçbir PVR eklentisi bulunamadı"
 
 msgctxt "#19272"
@@ -7685,8 +7897,8 @@ msgid "You need a tuner, backend software, and an"
 msgstr "PVR'yi kullanabilmek için tv tarayıcısı, arka uç yazılımı"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "ve arka uç için eklentiye ihtiyacınınız var."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8427,6 +8639,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "geçerli olduğundan emin olun"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA derecelendirmesi"
@@ -8629,6 +8842,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Partiye devam!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Doğru"
@@ -8654,14 +8868,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Kök dizine git"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Weave"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Weave (ters)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Karıştır"
@@ -9162,6 +9379,7 @@ msgstr "Kaynakların kilidini kaldır"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Aktör"
@@ -9172,6 +9390,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Yönetmen"
@@ -9216,6 +9435,7 @@ msgstr "​"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Yönetmenler"
@@ -9261,6 +9481,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Sezon %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Bölüm"
@@ -9268,6 +9489,7 @@ msgstr "Bölüm"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Bölüm"
@@ -9284,6 +9506,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "TV programını kitaplıktan kaldır"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "TV programı"
@@ -9323,6 +9546,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Sezon resmi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Sezon"
@@ -9390,6 +9614,7 @@ msgstr "Son eklenen bölümler"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Stüdyolar"
@@ -9511,12 +9736,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Yeni içerik için taranıyor"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "İlk gösterim"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Yazar"
@@ -9546,10 +9772,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Her zaman"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Fragmanı var"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Yanlış"
@@ -9669,6 +9897,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Taramaya devam etmek istiyor musunuz?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Ülkeler"
@@ -9694,6 +9923,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr ""
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Film kümesi"
@@ -9708,6 +9938,7 @@ msgstr "Group movies in sets"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Etiketler"
@@ -9963,50 +10194,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Ara animasyonları kullan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "içeriyor"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "içermiyor"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "​"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "​"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "başlangıçta"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "bitişte"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "daha fazla"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "daha az"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "sonra"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "önce"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "sonuncu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "en sonuncu değil"
@@ -10141,26 +10384,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Bölüm başlığı"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Video çözünürlüğü"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Ses kanalları"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Video codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Ses codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Ses dili"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Altyazı dili"
@@ -10197,10 +10446,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Önbellek sürekli oynatma için gerekli miktara ulaşamadan doldu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Harici depolama"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "İzlenen bölüm sayısı"
@@ -10260,6 +10511,21 @@ msgstr "%d ile %d arasında"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s ile %s arasında"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10516,7 +10782,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Sanatçı bilgisi karşıdan yükleniyor"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Biyografi"
@@ -10539,26 +10805,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Sanatçı bilgisi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Enstrümanlar"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Doğum"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Biçimlendirilmiş"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Temalar"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Dağılmış"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Ölüm"
@@ -10567,6 +10839,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Etkin yıllar"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Etiket"
@@ -11002,10 +11275,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Kullanılabilir Güncellemeler"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Bağımlılıklar karşılanmadı"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11014,17 +11287,25 @@ msgstr "Eklenti doğru bir yapıya sahip değil"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "%s yüklü eklenti(ler) tarafından kullanılıyor"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
+msgid "This Add-on cannot be uninstalled"
 msgstr "Bu eklenti kaldırılamaz"
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Geri alma"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Kullanılabilir Eklentiler"
@@ -11034,10 +11315,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Sürüm:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Yasal Uyarı"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Lisans:"
@@ -11140,6 +11423,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Eklenti yöneticisini kilitle"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr "Bu eklenti devre dışı bırakılamaz"
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11152,8 +11440,8 @@ msgstr "(kara listede)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Depodaki eklenti bozuk olarak işaretlenmiş."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11190,6 +11478,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Bazı dış görünüm dosyaları eksik"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr "%d altyazı bulundu"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr "Altyazı bulunamadı"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr "Altyazılar indiriliyor..."
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr "Altyazıları film klasörüne kaydet"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Bildirimler"
@@ -11218,22 +11570,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Başlık: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Çalınacak öğeyi seç"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Kitaplık Modu"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY klavye"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Passthrough Ses kullanımda"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Fragman kalitesi"
@@ -11299,7 +11656,7 @@ msgid "Clips"
 msgstr "Klipler"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
+msgid "Restart plug-in to enable"
 msgstr "Etkinleştirmek için eklentiyi yeniden başlat"
 
 msgctxt "#33018"
@@ -11685,8 +12042,13 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -11711,6 +12073,36 @@ msgstr "Her zaman"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Hiçbir zaman"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11852,6 +12244,11 @@ msgstr "Joystick ve gamepad desteğini etkinleştir"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Bu aygıt mevcut iken oyun çubuğunu kullanma"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr ""
 
 #: Unknown
 msgctxt "#35500"
@@ -12467,8 +12864,10 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12662,8 +13061,8 @@ msgstr "Bilgi mevcut değil."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "XBMC'nin Kişisel Video Kaydedici (PVR) özelliklerini etkinleştir. En az bir PVR eklentisinin yüklü olması gerekir."
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12812,7 +13211,7 @@ msgstr "Canlı TV ye geçildiğinde son seyredilen kanala geç."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
+"supported by the Add-on and backend)."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12848,28 +13247,28 @@ msgstr ""
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
+"Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
+"supported by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
+"by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13560,13 +13959,21 @@ msgstr "Bilgi mevcut değil."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Ses ekipmanının bağlantı tipi."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Fiziksel hoparlör yerleşiminizi seçiniz."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13576,8 +13983,8 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13592,17 +13999,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Eğer alıcınız DTS çözme desteğine sahipse bu seçeneği seçin."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Eğer alıcınız AAC çözme desteğine sahipse bu seçeneği seçin."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Eğer alıcınız LPCM çözme desteğine sahipse bu seçeneği seçin."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13619,15 +14028,15 @@ msgstr "Eğer alıcınız DTS-HD çözme desteğine sahipse bu seçeneği seçin
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13899,6 +14308,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "AMLogic kod çözücü kullanarak donanımsal video çözücüyü etkinleştir"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Stereoskopik mod (varsayılan)"
@@ -13913,12 +14329,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Hiçbiri"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Üstünde/Altında"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Yan yana"
@@ -13962,6 +14378,13 @@ msgstr "Bana sor"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Tercih edilen modu kullan"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14008,12 +14431,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Film ile aynı"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Stereoskopik video modu"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Ters çevrilmiş Stereoskopik mod"
@@ -14114,4 +14550,11 @@ msgstr "Çift ses çıkışı"
 #: system/settings/rbp.xml
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
 msgstr ""

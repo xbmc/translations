@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-07 20:20+0000\n"
+"PO-Revision-Date: 2013-11-16 21:40+0000\n"
 "Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/projects/p/xbmc-main/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -459,7 +459,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Выдаліць гэтыя файлы ? - Выдаленьне ня можа быць адмененае!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Статус"
@@ -491,6 +491,7 @@ msgstr "Дысплэй"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Альбомы"
@@ -499,6 +500,7 @@ msgstr "Альбомы"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Выканаўцы"
@@ -682,10 +684,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Паказваць відэа 4:3 як"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Настроі"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Стылі"
@@ -695,7 +699,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Кампазыцыя"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Працягласьць"
@@ -709,7 +713,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Трэкі"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Агляд"
@@ -782,14 +786,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Інтэфэйс ўэб"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Tagline"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Plot outline"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Галасы"
@@ -798,6 +805,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Cast"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Plot"
@@ -819,7 +827,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Калібраваць карыстальніцкі інтэрфэйс"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Калібраваньне відэа..."
@@ -828,10 +836,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Soften"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Наколькі павялічваць"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Суадносіны піксэлю"
@@ -868,6 +878,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Хуткасьць"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Зрух па вэртыкалі"
@@ -895,7 +906,8 @@ msgid "Video filters"
 msgstr "Фільтры відэа"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Няма"
@@ -1179,11 +1191,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Закладкі"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC capable receiver"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 capable receiver"
@@ -1325,18 +1332,18 @@ msgstr "Канвэртаваньне часьціні кадраў"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Вывад аўдыё"
-
-#: system/settings/settings.xml
-msgctxt "#338"
-msgid "Analogue"
+msgid "Output configuration"
 msgstr ""
 
 #: system/settings/settings.xml
+msgctxt "#338"
+msgid "Fixed"
+msgstr "Фіксаванае"
+
+#: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Аптычны/кааксіяльны"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1358,6 +1365,7 @@ msgstr "Наставіць часьціню кадраў"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Акторы"
@@ -1368,8 +1376,8 @@ msgstr "Год"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Павялічваць гучнасьць у ціхага"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1378,8 +1386,8 @@ msgstr "DTS-HD capable receiver"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Multichannel LPCM capable receiver"
+msgid "Enable passthrough"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1707,12 +1715,12 @@ msgstr "Найбольшая"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
+msgid "Keep audio device alive"
 msgstr ""
 
 msgctxt "#422"
@@ -1864,6 +1872,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Пераключыць выгляд"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Субтытры"
@@ -1884,14 +1897,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Палсьвятленьне"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Яркасьць"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Кантраснасьць"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Гама"
@@ -2063,6 +2079,7 @@ msgstr "Ручныя налады"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Жанр"
@@ -2216,7 +2233,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Памеру"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Трэк"
@@ -2225,24 +2242,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Час"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Загаловак"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Выканаўца"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Альбом"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Сьпіс прайграваньня"
@@ -2251,6 +2271,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Файл"
@@ -2260,16 +2281,17 @@ msgstr "Файл"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Год"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Рэйтынг"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Тып"
@@ -2278,47 +2300,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Выкарыстаньне"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Выканаўца альбома"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Колькасьць прайграваньняў"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Апошняе прайграваньне"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Камэнтар"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Калі дададзены"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Стандартны"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Студыя"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Шлях"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Краіна"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Выконваецца"
@@ -2371,6 +2399,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Рэжым вечарынкі"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Выпадкова"
@@ -2499,34 +2528,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Рэжым прагляду"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Як звычайна"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Павялічанае"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Расьцягнутае 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Шырокае і павялічанае"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Расьцягнутае 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Зыходны памер"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Дапасаваны"
@@ -2600,6 +2632,7 @@ msgid "Browse for library"
 msgstr "Пашукаць бібліятэку"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Гады"
@@ -2629,6 +2662,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Зьвесткі пра кампазыцыю"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Нелінейнае расьцягваньне"
@@ -2847,6 +2881,7 @@ msgid "Mirror image"
 msgstr "Mirror image"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Вы ўпэўнены ?"
@@ -3285,8 +3320,8 @@ msgid "Program Add-ons"
 msgstr "Праграмы-дадаткі"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Вызначыць мініятуру ўбудовы"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3955,30 +3990,32 @@ msgid "Reset"
 msgstr "Reset"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Узровень: базавы"
+msgid "Basic"
+msgstr ""
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Узровень: стандартны"
+msgid "Standard"
+msgstr "Standard"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Узровень: пашыраны"
+msgid "Advanced"
+msgstr ""
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Узровень: экспэрт"
+msgid "Expert"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Reset settings"
+msgid "Reset above settings to default"
+msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Are you sure you want to reset the settings in this category?"
@@ -3990,6 +4027,21 @@ msgstr "Дапамога"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Даведка адсутнічае"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4205,66 +4257,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Перабудоўваньне індэксы..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Вярнуцца да вакна музыкі"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Вярнуцца да вакна відэа"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Пачаць спачатку"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Працягнуць з %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Добра"
@@ -4274,6 +4344,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Заблякавана ! Увядзіце код..."
@@ -4283,14 +4354,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Увядзіце пароль"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Увядзіце майстар-код"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Увядзіце код каб разблякаваць"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "ці націсьніце C каб скасаваць"
@@ -4324,14 +4398,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Выдаліць блякаваньне"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Лічбавы пароль"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Спалучэньне кнопак гэймпаду"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Тэкставы пароль"
@@ -4361,18 +4438,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Уведзеныя паролі не супадаюць"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Доступ забаронены"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Перавышаная колькасьць спробаў паролю."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "Зараз сыстэма будзе выключаная."
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Складнік заблякаваны"
@@ -4422,30 +4503,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Пароль быў пусты. Паспрабуйце зноў."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Агульнае блякаваньне"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Shutdown system if Master Lock retries exceeded"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Master code is not valid"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Please enter a valid master code"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Settings & file manager"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Усталяваць як стандартнае для ўсіх відэа"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "This will reset any previously saved values"
@@ -4460,18 +4550,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Выкарыстоўваць эфэкты зруху й сумеру"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12-гадзінны"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24-гадзінны"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Day/Month"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Месяц / Дзень"
@@ -4481,14 +4575,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Час працы"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Хвілінаў"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Гадзін"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Дзён"
@@ -4523,18 +4620,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Сыстэма"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Immediate HD spindown"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Video only"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Delay"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimum file duration"
@@ -4564,10 +4665,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Прыпыніць"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Выйсьці"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Перастартаваць кампутар"
@@ -4577,42 +4680,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr ""
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Power button action"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Выключыць кампутар"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Не выключаць падчас чаканьня"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Allow idle shutdown"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Is another session active, perhaps over ssh?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Mounted removable harddrive"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Unsafe device removal"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Successfully removed device"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick plugged"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick unplugged"
@@ -4672,10 +4785,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Failed for %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Running low on battery"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Flicker filter"
@@ -4705,26 +4820,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Заўсёды дазволена"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Test & apply resolution"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Save resolution?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Would you like to keep this resolution?"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "High quality upscaling"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Забаронена"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Enabled for SD content"
@@ -4745,14 +4866,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ Upscaling level"
@@ -4762,43 +4886,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr ""
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Blank other displays"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Забаронена"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Blank displays"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Active connections detected!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "If you proceed, you might not be able to control XBMC"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "any longer. Are you sure you want to stop the Event server?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Change Apple Remote mode?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "If you are currently using the Apple Remote to control"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "XBMC, changing this setting might affect your ability"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "to continue controlling it. Do you want to proceed?"
@@ -4818,38 +4955,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Primary DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr ""
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Ніколі"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Immediately"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "After %i secs"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD install date:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD power cycle count:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Профілі"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Delete profile '%s'?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Last loaded profile:"
@@ -5397,6 +5543,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(IMDb user rating)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250"
@@ -5428,20 +5575,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Мэтад рэндэрынгу"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Аўтавызначэньне"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Базавыя шэйдэры (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Адмысловыя шэйдэры (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Праграмна"
@@ -5498,7 +5647,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Дазволіць паскарэньне абсталяваньня (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixel Shaders"
@@ -5541,6 +5690,10 @@ msgstr ""
 
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
+msgstr ""
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -5643,6 +5796,14 @@ msgstr "%.1f Second"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Seconds"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr ""
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr ""
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6289,23 +6450,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Увядзіце тэкст для пошуку"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Няма"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Аўтаматычны выбар"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "De-interlace"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (інвэртаваны)"
@@ -6360,6 +6525,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Сьпіс прайграваньня для вечарынкі"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "De-interlace (Half)"
@@ -6368,18 +6534,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Рабіць deinterlace"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Мэтад deinterlacе"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Не"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Аўтаматычна"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Так"
@@ -6409,7 +6579,7 @@ msgid "Edit title"
 msgstr "Рэдагаваць загаловак"
 
 msgctxt "#16106"
-msgid "Manage ..."
+msgid "Manage..."
 msgstr ""
 
 msgctxt "#16107"
@@ -6451,110 +6621,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Failed to delete at least one file"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Мэтад маштабаваньня відэа"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Nearest neighbour"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinear"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubic"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubic (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Temporal"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Temporal/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU)Noise Reduction"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU)Sharpness"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Inverse Telecine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Auto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Temporal (Half)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Temporal/Spatial (Half)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA лепшы"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Software Blend"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Пасьля-апрацоўка"
@@ -6980,6 +7177,21 @@ msgstr "Enter the name for the recording"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Увага"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr ""
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7463,9 +7675,9 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "No PVR add-on could be enabled. Check your settings or the log for more info."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7512,7 +7724,7 @@ msgstr "Паказваць паведамленьне пра абнаўлень�
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
 msgstr ""
 
 msgctxt "#19235"
@@ -7536,16 +7748,16 @@ msgid "Starting background threads"
 msgstr "Starting background threads"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "Няма ўключаных дадаткаў PVR"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "The PVR manager has been enabled without any"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "enabled PVR add-on. Enable at least one add-on"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7672,16 +7884,16 @@ msgid "* All recordings"
 msgstr "* All recordings"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "Ня знойдзены дадаткі PVR"
+msgid "No PVR Add-ons could be found"
+msgstr ""
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "Вам патрэбны прыймач, апраграмаваньне да яго,"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "і дадатак які можа выкарыстоўваць ваш PVR."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8422,6 +8634,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "and that the new folder name is valid"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA rating"
@@ -8624,6 +8837,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Party on!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "True"
@@ -8649,14 +8863,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Перайсьці да пачатку"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Weave"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Weave (inverted)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Blend"
@@ -9157,6 +9374,7 @@ msgstr "Unlock sources"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Актор"
@@ -9167,6 +9385,7 @@ msgstr "Фільм"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Рэжысэр"
@@ -9211,6 +9430,7 @@ msgstr "as"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Directors"
@@ -9256,6 +9476,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Season %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Эпізод"
@@ -9263,6 +9484,7 @@ msgstr "Эпізод"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Эпізоды"
@@ -9279,6 +9501,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Remove TV show from library"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "ТВ шоў"
@@ -9318,6 +9541,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Выява сэзону"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Сэзон"
@@ -9385,6 +9609,7 @@ msgstr "Надоечы дададзеныя эпізоды"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Studios"
@@ -9506,12 +9731,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Scanning for new content"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "First aired"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Writer"
@@ -9541,10 +9767,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Заўсёды"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Has trailer"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "False"
@@ -9664,6 +9892,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Would you like to continue scanning?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Countries"
@@ -9689,6 +9918,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr ""
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Movie set"
@@ -9703,6 +9933,7 @@ msgstr "Групаваць фільмы"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Цэтлікі"
@@ -9958,50 +10189,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Use tween animations"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "утрымлівае"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "не ўтрымлівае"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "супадае з"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "не супадае з"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "пачынаецца з "
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "сканчаецца на"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "большы за"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "меншы за"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "пасьля"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "перад"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "у апошніх"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "не ў апошніх"
@@ -10136,26 +10379,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Episode title"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Разрознасьць відэа"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Audio channels"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Video codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Audio codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Audio language"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Subtitle language"
@@ -10192,10 +10441,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Cache filled before reaching required amount for continous playback"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "External storage"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Watched episode count"
@@ -10255,6 +10506,21 @@ msgstr "%d to %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s to %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10511,7 +10777,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Downloading artist information"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Biography"
@@ -10534,26 +10800,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Artist information"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instruments"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Born"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Formed"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Themes"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Disbanded"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Died"
@@ -10562,6 +10834,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Years active"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Лэйбл"
@@ -10997,10 +11270,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Ёсьць абнаўленьні"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Dependencies not met"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11009,17 +11282,25 @@ msgstr "Дадатак мае некарэктную структуру"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "%s is used by the following installed add-on(s)"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "This add-on cannot be uninstalled"
+msgid "This Add-on cannot be uninstalled"
+msgstr ""
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Да папярэдняй"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Даступныя дадаткі"
@@ -11029,10 +11310,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Вэрсія:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Папярэджаньні"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Ліцэнзія:"
@@ -11135,6 +11418,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Блякаваць кіраўніка дадаткамі"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr ""
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11147,8 +11435,8 @@ msgstr "(blacklisted)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Add-on has been marked as broken in repository."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11185,6 +11473,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Некаторыя файлы адсутнічаюць у аздабленьні"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr ""
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Апавяшчэньні"
@@ -11213,22 +11565,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Title: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Select playback item"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Library Mode"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY keyboard"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Passthrough Audio in use"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Trailer quality"
@@ -11294,8 +11651,8 @@ msgid "Clips"
 msgstr "Clips"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Restart plugin to enable"
+msgid "Restart plug-in to enable"
+msgstr ""
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11680,8 +12037,13 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -11706,6 +12068,36 @@ msgstr "Заўжды"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Ніколі"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr ""
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11847,6 +12239,11 @@ msgstr "Дазволіць падтрымку джойсьціка і гэймп
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Disable joystick when this device is present"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr ""
 
 #: Unknown
 msgctxt "#35500"
@@ -12462,8 +12859,10 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12657,8 +13056,8 @@ msgstr "No info available yet."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "Enable the Personal Video Recorder (PVR) features in XBMC. This requires that at least one PVR add-on is installed."
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12807,8 +13206,8 @@ msgstr "Show the last viewed channel if switching to live tv."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
-msgstr "Display signal quality information in the codec information window (if supported by the add-on and backend)."
+"supported by the Add-on and backend)."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36230"
@@ -12843,29 +13242,29 @@ msgstr "Duration of the recording when pressing the record button, or when creat
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "Priority of the recording. Higher number means higher priority. Defaults to 50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "Delete recording after this time. Defaults to 99 days. Not supported by all add-ons and backends."
+"Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "Start recordings before the actual time. Defaults to 2 minutes. Not supported by all add-ons and backends."
+"supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "End recordings after the actual time. Defaults to 10 minutes. Not supported by all add-ons and backends."
+"by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13555,13 +13954,21 @@ msgstr "No info available yet."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Type of connection to the audio equipment."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Select your physical speaker layout."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13571,9 +13978,9 @@ msgstr "Boost AC3 streams that have been downmixed to 2 channels."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Upmix 2 channel stereo sources so the number of audio channels matches the number of speakers."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13587,17 +13994,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Select this option if your receiver is capable of decoding DTS streams."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Select this option if your receiver is capable of decoding AAC streams."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Select this option if your receiver is capable of decoding LPCM streams."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13614,16 +14023,16 @@ msgstr "Select this option if your receiver is capable of decoding DTS-HD stream
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Select the device you use to play audio decoded by XBMC such as mp3's and FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Select the device you use to play encoded formats, these are any of the formats checked above in the 'capable receiver' options."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13894,6 +14303,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr ""
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr ""
@@ -13908,12 +14324,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr ""
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr ""
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr ""
@@ -13956,6 +14372,13 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36522"
 msgid "Use preferred mode"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -14003,12 +14426,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr ""
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr ""
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr ""
@@ -14109,4 +14545,11 @@ msgstr ""
 #: system/settings/rbp.xml
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
 msgstr ""

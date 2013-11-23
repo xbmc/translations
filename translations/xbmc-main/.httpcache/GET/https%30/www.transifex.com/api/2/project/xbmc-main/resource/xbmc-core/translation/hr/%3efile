@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-11-14 20:00+0000\n"
+"PO-Revision-Date: 2013-11-17 20:30+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xbmc-main/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -469,7 +469,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Obriši ove datoteke? - Obrisane datoteke nije moguće vratiti!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Stanje"
@@ -501,6 +501,7 @@ msgstr "Zaslon"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albumi"
@@ -509,6 +510,7 @@ msgstr "Albumi"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Izvođači"
@@ -692,10 +694,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Prikaži 4:3 video snimke kao"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Raspoloženja"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stilovi"
@@ -705,7 +709,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Pjesma"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Trajanje"
@@ -719,7 +723,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Pjesme"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Recenzije"
@@ -792,14 +796,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Web sučelje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Redak oznake"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Prikaz kratkog sadržaja"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Glasovi"
@@ -808,6 +815,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Uloge"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Kratak sadržaj"
@@ -829,7 +837,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Kalibrirajte korisničko sučelje..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Kalibracija slike..."
@@ -838,10 +846,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Mekanije"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Razina zumiranja"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Omjer slike - ručno postavljanje"
@@ -878,6 +888,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Brzina"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Okomiti pomak"
@@ -905,7 +916,8 @@ msgid "Video filters"
 msgstr "Video filtri"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Nijedan"
@@ -1189,11 +1201,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Zabilješke"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC kompatibilan prijemnik"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 kompatibilan prijamnik"
@@ -1335,18 +1342,18 @@ msgstr "Pretvorba sličica"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Zvučni izlaz"
+msgid "Output configuration"
+msgstr "Izlazno podešavanje"
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analogno"
+msgid "Fixed"
+msgstr "Fiksni"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Optički/Koaksijalno"
+msgid "Optimized"
+msgstr "Optimizirano"
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1368,6 +1375,7 @@ msgstr "Prilagodi broj sličica"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Glumci"
@@ -1378,8 +1386,8 @@ msgstr "Godina"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Pojačaj razinu glasnoće zvuka pri spajanju broja kanala"
+msgid "Normalize levels on downmix"
+msgstr "Normalizacija razina pri spajanju kanala"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1388,8 +1396,8 @@ msgstr "DTS-HD kompatibilan prijamnik"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Višekanalni LPCM kompatibilan prijamnik"
+msgid "Enable passthrough"
+msgstr "Omogući izlazni uređaj"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1717,13 +1725,13 @@ msgstr "Maks"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr "Najbolje odgovarajuće"
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Streamaj tišinu tijekom mirovanja"
+msgid "Keep audio device alive"
+msgstr "Drži zvučni uređaj aktivnim"
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1874,6 +1882,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Promjeni prikaz"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr "Ograničenje frekvencije (kHz)"
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Podnaslovi"
@@ -1894,14 +1907,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Pozadinsko osvjetljenje"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Svjetlina"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Kontrast"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gama"
@@ -2073,6 +2089,7 @@ msgstr "Ručne postavke"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Izvođač"
@@ -2226,7 +2243,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Veličina"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Pjesmi"
@@ -2235,24 +2252,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Trajanju"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Naslovu"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Izvođaču"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Albumu"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Popisu izvođenja"
@@ -2261,6 +2281,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Datoteka"
@@ -2270,16 +2291,17 @@ msgstr "Datoteka"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Godina"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Ocjena"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Vrsta"
@@ -2288,47 +2310,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Korištenje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Izvođač albuma"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Broj reprodukcija"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Posljednja reprodukcija"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Komentar"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Datumu dodavanja"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Zadano"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Studio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Putanja"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Zemlja"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "U tijeku"
@@ -2381,6 +2409,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Party način"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Naizmjenično"
@@ -2462,7 +2491,7 @@ msgstr "Upiši broj"
 
 msgctxt "#612"
 msgid "Bits/sample"
-msgstr "Bitovi/Uzorak"
+msgstr "Bitovi/uzorak"
 
 msgctxt "#613"
 msgid "Sample rate"
@@ -2509,34 +2538,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Način prikaza"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normalan"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Zumiranje"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Raširi na 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Široko zumiranje"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Raširi na 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Izvorna veličina"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Prilagođeno"
@@ -2610,6 +2642,7 @@ msgid "Browse for library"
 msgstr "Pregledaj zbirku"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Godine"
@@ -2639,6 +2672,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Informacije pjesme"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Nelinearno rastezanje"
@@ -2857,6 +2891,7 @@ msgid "Mirror image"
 msgstr "Zrcalna slika"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Jeste li sigurni?"
@@ -3295,8 +3330,8 @@ msgid "Program Add-ons"
 msgstr "Programski dodaci"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Postavi minijaturu priključka"
+msgid "Set plug-in thumb"
+msgstr "Postavi minijaturu dodatka"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3965,30 +4000,32 @@ msgid "Reset"
 msgstr "Vrati na početno"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Razina: Osnovna"
+msgid "Basic"
+msgstr "Osnovna"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Razina: Standardna"
+msgid "Standard"
+msgstr "Standardno"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Razina: Napredna"
+msgid "Advanced"
+msgstr "Napredna"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Razina: Stručna"
+msgid "Expert"
+msgstr "Stručna"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Preglednik dodataka"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Vrati postavke na početno"
+msgid "Reset above settings to default"
+msgstr "Vrati postavke iznad na uobičajeno"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Sigurno želite vratiti postavke na početno za ovu kategoriju?"
@@ -4000,6 +4037,21 @@ msgstr "Pomoć"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Pomoć nije dostupna"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr "Vrati sve vidljive postavke na njihove uobičajene vrijednosti."
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr "Nema dostupnih kategorija"
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr "Pokušajte promijeniti razinu postavki da bi vidjeli dodatne kategorije i postavke."
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4215,66 +4267,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Obnovi indeks..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Vrati se na prozor glazbe"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Vrati se na prozor videa"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Pokreni ispočetka"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Nastavi od %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "U redu"
@@ -4284,6 +4354,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Zaključano! Upišite kôd..."
@@ -4293,14 +4364,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Upiši lozinku"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Upiši glavni kôd"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Upišite kôd otključavanja"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "ili pritisnite C za prekid"
@@ -4334,14 +4408,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Ukloni ključ"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Brojčana lozinka"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Kombinacija tipki Gamepad kontrolera"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Lozinka cijelog teksta"
@@ -4371,18 +4448,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Upisane lozinke se ne podudaraju."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Pristup zabranjen"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Broj unosa lozinke je promašen."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
+msgid "The system will now power down."
 msgstr "Sustav će se sada isključiti."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Stavka zaključana"
@@ -4432,30 +4513,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Upis lozinke je prazan. Pokušajte ponovno."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Glavni ključ"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Isključi sustav ako je broj unosa glavnog ključa promašen."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Glavni ključ nije važeći!"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Upišite valjani glavni ključ"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Postavke i Upravitelja datoteka"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Postavi kao zadano za sve video snimke"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Ovo će poništiti sve prijašnje spremljene vrijednosti"
@@ -4470,18 +4560,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Koristi efekte obrezivanja i zumiranja slike"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12 satno vrijeme"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24 satno vrijeme"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Dan/Mjesec"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Mjesec/Dan"
@@ -4491,14 +4585,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Sustav pokrenut"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Minuta"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Sati"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Dani"
@@ -4533,18 +4630,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Sustav"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Trenutno HDD isključivanje"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Samo video"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Odgoda"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimalno trajanje datoteke"
@@ -4574,10 +4675,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Suspenzija"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Izlaz"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Ponovno pokretanje"
@@ -4587,42 +4690,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Smanji"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Radnja tipke uključivanja"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Isključi sustav"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Spriječi gašenje pri mirovanju"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Dopusti gašenje pri mirovanju"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Je li neka druga sesija aktivna, možda preko ssh?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Montiran prijenosni uređaj"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Nesigurno uklanjanje uređaja "
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Uspješno uklanjanje uređaja"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick spojen"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick odspojen"
@@ -4682,10 +4795,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Neuspjelo za %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Rad na praznoj bateriji"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Flicker filter"
@@ -4715,26 +4830,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Uvijek omogućeno"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Isprobaj i primijeni razlučivost"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Spremi razlučivost?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Želite li zadržati ovu razlučivost?"
+msgid "Would you like to keep this change?"
+msgstr "Želite li zadržati ovu promjenu?"
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Visoko kvalitetan upscale"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Onemogućeno"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Omogućeno za SD sadržaje"
@@ -4755,14 +4876,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ Upscaling razina"
@@ -4772,43 +4896,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU Studijska razina pretvorbe boje"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr "Zadrži presvlaku?"
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Zacrni ostale zaslone"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Onemogućeno"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Zacrni zaslone"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Aktivne veze su otkrivene!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Ukoliko nastavite, možda više nećete moći upravljati XBMC-om"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "Sigurno želite zaustaviti poslužitelj događaja?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Promijeni način rada Apple daljinskog upravljača?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Ukoliko koristite Apple daljinski upravljač, za upravljanje"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "XBMC-om, promjena ove postavke mogla bi utjecati"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "na mogućnost upravljanja. Želite li nastaviti?"
@@ -4828,38 +4965,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Primarni DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Neuspjelo pokretanje"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Nikada"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Odmah"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Poslije %i sek."
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD datum instaliranja:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD naponski zbroj ciklusa:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profili"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Obriši profil '%s'?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Zadnji učitani profil:"
@@ -5407,6 +5553,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(IMDb ocjene korisnika)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250:"
@@ -5438,20 +5585,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Način prikazivanja"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automatsko otkrivanje"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Osnovni shaderi (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Napredni shaderi (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Softver"
@@ -5508,7 +5657,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Dopusti hardversko ubrzanje (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixel shaders"
@@ -5552,6 +5701,10 @@ msgstr "Dopusti hardversko ubrzanje (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Dopusti hardversko ubrzanje (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr "Višenizno dekôdiranje sličica (manje pouzdano)"
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5653,6 +5806,14 @@ msgstr "%.1f sekunda"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f sekundi"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d minuta"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d minuta"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6299,23 +6460,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Upišite zahtjev za pretraživanje"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Ništa"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Automatski odabir"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Deinterlace"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (obrnut)"
@@ -6370,6 +6535,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Party način popisa izvođenja"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Deinterlace (Pola)"
@@ -6378,18 +6544,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Deinterlace video"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Deinterlace način"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Isključeno"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Automatski"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Uključeno"
@@ -6419,7 +6589,7 @@ msgid "Edit title"
 msgstr "Uredi naslov"
 
 msgctxt "#16106"
-msgid "Manage ..."
+msgid "Manage..."
 msgstr "Upravljanje..."
 
 msgctxt "#16107"
@@ -6461,110 +6631,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Neuspješno brisanje barem jedne datoteke"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Način povećanja videa"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Najbliži susjed"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinearno"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bikubno"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bikubno (softverski)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (softverski)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (softverski)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Privremen"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Privremen/Prostoran"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU) smanjenje šuma"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU) oštrina"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Inverzno TV film"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 optimizirano"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Automatski"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Privremen (Pola)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Privremen/Prostoran (Pola)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA najbolje"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 optimizirano"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Softverski spojen"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Dodatna obrada"
@@ -6990,6 +7187,21 @@ msgstr "Upišite naziv snimanja"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Upozorenje"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr "Usluga"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr "Mux"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Pružatelj usluge"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7473,7 +7685,7 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
 msgstr "Nijedan PVR dodatak ne može biti omogućen. Provjerite postavke ili zapis za više informacija."
 
@@ -7522,7 +7734,7 @@ msgstr "Prikaži obavijest pri ažuriranju zakazanih snimanja"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
 msgstr "Koristi brojeve TV programa sa pozadinskog softvera (radi samo sa 1 omogućenim PVR dodatkom)"
 
 msgctxt "#19235"
@@ -7546,7 +7758,7 @@ msgid "Starting background threads"
 msgstr "Pokrećem radnje u pozadini"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
+msgid "No PVR Add-on enabled"
 msgstr "Nema omogućenih PVR dodataka"
 
 msgctxt "#19241"
@@ -7554,7 +7766,7 @@ msgid "The PVR manager has been enabled without any"
 msgstr "PVR upravitelj je omogućen bez ijednog"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
 msgstr "omogućenog PVR dodatka. Omogućite bar jedan dodatak"
 
 msgctxt "#19243"
@@ -7682,7 +7894,7 @@ msgid "* All recordings"
 msgstr "* Sva snimanja"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
+msgid "No PVR Add-ons could be found"
 msgstr "PVR dodaci se ne mogu pronaći"
 
 msgctxt "#19272"
@@ -7690,8 +7902,8 @@ msgid "You need a tuner, backend software, and an"
 msgstr "Potreban vam je prijemnik, pozadinski softver, i"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "dodatak za pozadinski softver da bi mogli koristiti PVR."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr "Dodatak za pozadinski softver da bi mogli koristiti PVR."
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8432,6 +8644,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "i da je novi naziv mape valjan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA ocjena:"
@@ -8634,6 +8847,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Zabava!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Istina"
@@ -8659,14 +8873,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Idi na 'root'"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Satkano"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Satkano (okrenuto)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Uklopi"
@@ -9167,6 +9384,7 @@ msgstr "Otključaj izvore"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Glumac"
@@ -9177,6 +9395,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Redatelj"
@@ -9221,6 +9440,7 @@ msgstr "kao"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Redatelji"
@@ -9266,6 +9486,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Sezona %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Epizoda"
@@ -9273,6 +9494,7 @@ msgstr "Epizoda"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Epizode"
@@ -9289,6 +9511,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Ukloni TV emisjiu iz zbirke"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "TV serija"
@@ -9328,6 +9551,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Slika sezone"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Sezona"
@@ -9395,6 +9619,7 @@ msgstr "Nedavno dodane epizode"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Studiji"
@@ -9516,12 +9741,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Pretraživanje novog sadržaja"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Prvo emitiranje"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Pisac"
@@ -9551,10 +9777,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Uvijek"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Ima najavu filma"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Nesipravan"
@@ -9674,6 +9902,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Želite li nastaviti pretraživanje?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Zemlje"
@@ -9699,6 +9928,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Poravnana hijerarhija zbirke"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Filmska kolekcija"
@@ -9713,6 +9943,7 @@ msgstr "Grupiraj filmove u kolekcije"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Oznake"
@@ -9968,50 +10199,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Koristi između animacije"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "sadrži"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "ne sadrži"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "je"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "nije"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "počinje sa"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "završava sa"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "veće od"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "manje od"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "poslije"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "prije"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "u zadnjem"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "nije u zadnjem"
@@ -10146,26 +10389,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Naslov epizode"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Video razlučivost"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Broj zvučnih kanala"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Video kôdek"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Zvučni kôdek"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Jezik zvuka"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Jezik podnaslova"
@@ -10202,10 +10451,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Predmemorija se popunjava prije nego što dosegne potrebnu količinu za nesmetano reproduciranje"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Vanjska pohrana"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Broj odgledanih epizoda"
@@ -10265,6 +10516,21 @@ msgstr "%d u %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s u %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr "Preferiraj vanjske podnaslove"
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr "Preferiraj vanjske podnaslove umjesto lokalnih"
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr "(Vanjski)"
 
 msgctxt "#21800"
 msgid "File name"
@@ -10521,7 +10787,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Preuzimanje informacije izvođača"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Životopis"
@@ -10544,26 +10810,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informacije izvođača"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instrumenti"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Rođen/a"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Osnovan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Teme"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Raspušten"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Preminuo/la"
@@ -10572,6 +10844,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Godina aktivni"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Naslov"
@@ -11007,10 +11280,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Dostupna ažuriranja"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Zavisnosti nisu ispunjene"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr "Međuzavisnosti nisu ispunjene. Kontaktirajte autora dodatka."
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11019,17 +11292,25 @@ msgstr "Dodatak nema ispravnu strukturu"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "%s koriste sljedeći instaliran(i) dodatak(ci)"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr "%s koristi sljedeće instalirane dodatke"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Ovaj dodatak se ne može deinstalirati"
+msgid "This Add-on cannot be uninstalled"
+msgstr "Ovaj dodatak se ne može ukloniti"
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Vrati na staro"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr "Nekompatiblno"
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Dostupni dodaci"
@@ -11039,10 +11320,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Inačica:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Odricanje od odgovornosti"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Licenca:"
@@ -11145,6 +11428,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Zaključaj Upravitelja dodatka"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr "Ovaj dodatak se ne može onemogućiti"
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11157,8 +11445,8 @@ msgstr "(crni-popis)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Dodatak je označen kao pokvaren u repozitoriju."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr "Dodatak je nekompatibilan ili je označen kao pokvaren u repozitoriju."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11195,6 +11483,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Presvlaci nedostaju neke datoteke"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr "Dodatak je nekompatibilan uslijed nezadovoljenih međuzavisnosti."
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr "Pauziraj prilikom pretraživanja podnaslova"
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr "Ako nisu spremljeni u mapu filma podnaslovi će biti preuzeti u prilagođenu mapu podnaslova"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr "Pretraživanje podnslova..."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr "%d podnaslova pronađeno"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr "Nema pronađenih podnaslova"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr "Preuzmanje podnaslova..."
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr "Jezik preuzimanja podnaslova"
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr "Postavite jezik koji će se koristiti prilikom pretraživanja podnaslova. Svi izvori podnaslova neće koristiti sve jezike."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr "Neuspjelo preuzimanje podnaslova"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr "Nema instaliranih izvora podnaslova"
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr "Spremi podnaslov u mapu filma"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Obavijesti"
@@ -11223,22 +11575,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Naslov: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Odaberi stavku reprodukcije"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Način zbirke"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY tipkovnica"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
-msgstr "Korist se Audio Passthrough"
+msgstr "Zvučni izlazni uređaj se korist"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Kvaliteta najave"
@@ -11304,8 +11661,8 @@ msgid "Clips"
 msgstr "Isječci"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Ponovo pokrenite priključak za omogućavanje"
+msgid "Restart plug-in to enable"
+msgstr "Ponovno pokreni dodatak za omogućavanje"
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11690,9 +12047,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "Kada je aktivirana, tišina je izlaz u svrhu održavanja prijemnika uključenim, drugačije se prijemnik isključi"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr "Odaberite ponašanje kada zvuk nije potreban, za reprodukciju ili za zvukove grafičkog sučelja (GUI). [Uvijek] - neprekidan zvučni signal na izlazu, ovo drži izlazni zvučni uređaj aktivnim za svaki novi zvuk, isto tako ovo može blokirati zvučni uređaj ostalim aplikacijama. [1- 10 minuta] - isto kao i 'Uvijek' osim što nakon odabranog vremenskog razdoblja zvuk ulazi u stanje suspenzije [Isključeno] - izlazni zvuk ulazi u stanje suspenzije. Napomena - zvukovi mogu biti nedostupni ako zvuk uđe u stanje suspenzije."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11716,6 +12078,36 @@ msgstr "Uvijek"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Nikada"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11857,6 +12249,11 @@ msgstr "Omogući podršku za joystick i gamepad kontrolere"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Onemogući joystick dok je ovaj uređaj prisutan"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr "Omogući tipke sustava u cjelozaslonskom prikazu"
 
 #: Unknown
 msgctxt "#35500"
@@ -12472,9 +12869,11 @@ msgstr "Najveća brzina video prilagođavanja za poklapanje s trenutnom brzinom 
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Ponovno uzrokovanje i ostali procesi obrade zvuka. Kod manje kvaliteta je veća brzina, a veće kvalitete veće opterećenje CPU-a."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr "Odaberite kavalitetu ponovnog uzrokovanja za slučajeve gdje zvučni izlaz treba biti drugačijeg uzorka od onog kojeg koristi izvor. [Manje] je brže i imati će minimalan utjecaj na resurse sustava poput opterećenja CPU-a, [Srednje] i [Visoko] koristiti će postupno više resursa sustava."
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12667,7 +13066,7 @@ msgstr "Informacije još nisu dostupne."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
+"that at least one PVR Add-on is installed."
 msgstr "Omogući značajku Osobnog Video Snimača (PVR) u XBMC-u. To zahtijeva bar jedan instalirani PVR dodatak."
 
 #: system/settings/settings.xml
@@ -12817,7 +13216,7 @@ msgstr "Prikaži posljednji gledani program ako pokrećete televiziju."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
+"supported by the Add-on and backend)."
 msgstr "Prikaži informacije kvalitete signala u prozoru informacija kôdeka (ako je podržano dodatkom pozadinskog softvera)."
 
 #: system/settings/settings.xml
@@ -12853,28 +13252,28 @@ msgstr "Trajanje snimanja kada je snimanje pokrenuto tipkom snimanja, ili kada r
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
 msgstr "Prioritet snimanja. Veći broj znači veći prioritet. Zadani broj je 50. Nije podržano na svim dodacima i pozadinskim softverima."
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
+"Add-ons and backends."
 msgstr "Obriši snimanja nakon ovoliko vremena. Zadano je 99 dana. Nije podržano na svim dodacima i pozadinskim softverima."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
+"supported by all Add-ons and backends."
 msgstr "Pokreni snimanja prije zadanog vremena. Zadane su 2 minute. Nije podržano na svim dodacima i pozadinskim softverima."
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
+"by all Add-ons and backends."
 msgstr "Zaustavi snimanja nakon zadanog vremena. Zadano je 10 minuta. Nije podržano na svim dodacima i pozadinskim softverima."
 
 #: system/settings/settings.xml
@@ -13565,13 +13964,21 @@ msgstr "Informacije još nisu dostupne."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Vrsta veze sa zvučnom opremom."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr "Odaberite kako su svojstva zvučnog izlaza postavljena: [Nepromjenjivo] - izlazna svojstva su postavljena na određeno uzrokovanje i podešavanja zvučnika svo vrijeme; [Najbolje odgovarajuće] - izlazna svojstva su postavljena da se uvijek što bliže podudraju svojstivima izvora koliko je to moguće; [Optimizirano] - izlazna svojstva su postavljena na početku reprodukcije i neće se promijeniti ako se svojstva izvora promijene."
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Odaberite vaš fizički izlaz zvučnika."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr "Odaberite maksimalan broj zvučnih kanala/zvučnika dostupnih za zvučno dekôdiranje."
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13581,9 +13988,9 @@ msgstr "Pojačaj AC3 streamove koji su pretvoreni u 2 kanala."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Pretvori 2 kanalni stereo izvor tako da se broj zvučnih kanala podudara sa brojem zvučnika."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr "Odaberite za omogućavanje razdvajanja 2-kanalnog stereo izvora u broj zvučnih kanala određenih zvučnim podešavanjima."
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13597,17 +14004,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Odaberite ovu mogućnost ako je vaš prijemnik sposoban dekôdirati DTS zvučne zapise."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Odaberite ovu mogućnost ako je vaš prijemnik sposoban dekôdirati AAC zvučne zapise."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr "Odaberite maksimalan broj zvučnih kanala/zvučnika dostupnih za zvučno dekôdiranje. Ako se optički/digitalani izlazi koriste, to mora biti postavljeno na 2.0. "
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Odaberite ovu mogućnost ako je vaš prijemnik sposoban dekôdirati LPCM zvučne zapise."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr "Odaberite za omogućavanje izlazne zvučne mogućnosti za reprodukciju enkôdiranog zvuka poput Dolby Digitala."
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13624,16 +14033,16 @@ msgstr "Odaberite ovu mogućnost ako je vaš prijemnik sposoban dekôdirati DTS-
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Odaberite uređaj koji koristite za reprodukciju pjesama dekôdiranih XBMC-om poput mp3 i FLAC-a."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr "Odaberite uređaj koji će se koristiti za reprodukciju pjesama, dekôdiranih poput mp3 i FLAC-a."
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Odaberite uređaj koji koristite za reprodukciju enkôdiranih formata, to su bilo koji formati odabrani iznad u 'kompatibilan prijemnik' mogućnosti."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr "Odaberite uređaj koji će se koristiti za reprodukciju enkôdiranih formata, to su bilo koji formati odabrani ispod u 'kompatibilan prijemnik' mogućnosti."
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13904,6 +14313,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Omogući hardversko dekôdiranje video datoteka koristeći AMLogic dekôder."
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr "Koristi ffmpeg višenizno dekôdiranje sličica kada hardversko dekôdiranje ne radi ili je onemogućeno. (manje pouzdano nego zadani jednonizni način)"
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Stereoskopski način (trenutno)"
@@ -13918,12 +14334,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Nijedan"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Iznad/Ispod"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Usporedno"
@@ -13967,6 +14383,13 @@ msgstr "Pitaj me"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Koristi željeni način"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr "Maksimalna brzina uzorkovanja za SPDIF ili brzina uzorkovanje za nepromjenjivo izlazno podešavanje"
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14013,12 +14436,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Isti kao film"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr "Odaberite kako je zvuk spojen, npr. iz 5.1 u 2.0: [Omogućeno] održava dinamički raspon izvornog zvučnog izvora kada je spojen, ipak glasnoća zvuka će biti tiša; [Onemogućeno] održava razinu glasnoće zvuka izvornog zvučnog izvora, ipak dinamički raspon je kompresiran. Napomena - Dinamički raspon je razlika između najtišeg i najglasnijeg zvuka u zvučnom izvoru."
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Stereoskopski način videa"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Stereoskopski način, obrnut"
@@ -14120,3 +14556,10 @@ msgstr "Dvostruki zvučni izlaz"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Pojačaj središnji kanal pri spajanju kanala zvuka"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr "Omogućava tipke sustava poput 'Print Screen', 'Alt-Tab' i tipke glasnoće zvuka u cjelozaslonskom prikazu"

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-18 08:10+0000\n"
-"Last-Translator: taxigps <taxigps@sina.com>\n"
+"PO-Revision-Date: 2013-11-16 21:40+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Chinese (http://www.transifex.com/projects/p/xbmc-main/language/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -463,7 +463,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "删除这些文件？ - 删除文件不能撤销！"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "状态"
@@ -495,6 +495,7 @@ msgstr "显示器"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "专辑"
@@ -503,6 +504,7 @@ msgstr "专辑"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "歌手"
@@ -686,10 +688,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "将 4:3 视频显示为"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "心情"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "风格"
@@ -699,7 +703,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "歌曲"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "时长"
@@ -713,7 +717,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "音轨"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "评论"
@@ -786,14 +790,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Web 界面"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "标语"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "剧情摘要"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "投票"
@@ -802,6 +809,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "演员"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "剧情"
@@ -823,7 +831,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "校准用户界面..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "视频校准..."
@@ -832,10 +840,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "柔化"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "缩放"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "画面宽高比"
@@ -872,6 +882,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "速度"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "纵向偏移"
@@ -899,7 +910,8 @@ msgid "Video filters"
 msgstr "视频滤镜"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "无"
@@ -1183,11 +1195,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "书签"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC 兼容功放"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 兼容功放"
@@ -1329,18 +1336,18 @@ msgstr "帧率转换"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "音频输出"
+msgid "Output configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "模拟"
+msgid "Fixed"
+msgstr "固定"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "光纤/同轴"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1362,6 +1369,7 @@ msgstr "调整帧率"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "演员"
@@ -1372,8 +1380,8 @@ msgstr "年份"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "增大混缩音量"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1382,8 +1390,8 @@ msgstr "DTS-HD 兼容功放"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "多通道 LPCM 兼容功放"
+msgid "Enable passthrough"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1711,13 +1719,13 @@ msgstr "高"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "空闲时流静音"
+msgid "Keep audio device alive"
+msgstr ""
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1868,6 +1876,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "切换视图"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "字幕"
@@ -1888,14 +1901,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "背光"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "亮度"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "对比度"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "伽码"
@@ -2067,6 +2083,7 @@ msgstr "人工设置"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "类型"
@@ -2220,7 +2237,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "大小"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "音轨"
@@ -2229,24 +2246,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "时间"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "标题"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "歌手"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "专辑"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "播放列表"
@@ -2255,6 +2275,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "标签"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "文件"
@@ -2264,16 +2285,17 @@ msgstr "文件"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "年份"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "评价"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "类型"
@@ -2282,47 +2304,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "使用次数"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "专辑歌手"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "播放次数"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "最后播放"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "注释"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "加入日期"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "默认"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "制作公司"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "路径"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "国家"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "进行中"
@@ -2375,6 +2403,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "舞会模式"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "随机"
@@ -2503,34 +2532,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "视图模式"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "正常"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "满屏"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "拉伸为4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "宽屏"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "拉伸为16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "原始大小"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "自定义"
@@ -2604,6 +2636,7 @@ msgid "Browse for library"
 msgstr "浏览资料库"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "年份"
@@ -2633,6 +2666,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "歌曲信息"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "非线性拉伸"
@@ -2851,6 +2885,7 @@ msgid "Mirror image"
 msgstr "镜像图像"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "确定？"
@@ -3289,8 +3324,8 @@ msgid "Program Add-ons"
 msgstr "程序插件"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "设置插件缩略图"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3959,30 +3994,32 @@ msgid "Reset"
 msgstr "重置"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "级别：基础"
+msgid "Basic"
+msgstr ""
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "级别：标准"
+msgid "Standard"
+msgstr "标准"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "级别：高级"
+msgid "Advanced"
+msgstr ""
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "级别：专家"
+msgid "Expert"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "插件浏览器"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "重置设置"
+msgid "Reset above settings to default"
+msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "你确定要重置此功能模块的所有设置？"
@@ -3994,6 +4031,21 @@ msgstr "帮助"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "无可用帮助"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4209,66 +4261,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "重新生成索引..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "返回到音乐窗口"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "返回到视频窗口"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "从头开始播放"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "从 %s 处继续播放"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "确定"
@@ -4278,6 +4348,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "已锁定！输入密码..."
@@ -4287,14 +4358,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "输入密码"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "输入管理员密码"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "输入解锁密码"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "或按 C 取消"
@@ -4328,14 +4402,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "移除锁定"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "数字密码"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "手柄按键组合"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "全文字密码"
@@ -4365,18 +4442,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "输入密码不正确。"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "拒绝访问"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "已达密码重试次数限制。"
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "系统将立刻关闭。"
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "项目已锁定"
@@ -4426,30 +4507,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "密码不能为空，请重试。"
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "管理员锁定"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "管理员锁定达到重试次数时关机"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "管理员密码错误"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "请输入正确的管理员密码"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "设置 & 文件管理"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "设为所有视频的默认设置"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "将重置之前保存的所有设置值"
@@ -4464,18 +4554,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "使用移动和缩放特效"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12小时时钟"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24小时时钟"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "日/月"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "月/日"
@@ -4485,14 +4579,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "系统运行时间"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "分钟"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "小时"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "天"
@@ -4527,18 +4624,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "系统"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "立即关闭硬盘"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "只有视频"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- 延迟"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- 最小影音文件时长"
@@ -4568,10 +4669,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "待机"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "退出"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "重启"
@@ -4581,42 +4684,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "最小化"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "电源按钮作用"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "关闭系统电源"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "禁止闲置关机"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "允许闲置关机"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "是否有通过 SSH 连接的会话存在？"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "挂载移动硬盘"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "不安全的移除设备"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "成功移除设备"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "游戏杆插入"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "游戏杆拔出"
@@ -4676,10 +4789,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "%s 失败"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "电池电量不足"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "防闪烁滤镜"
@@ -4709,26 +4824,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "始终开启"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "测试 & 应用分辨率"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "保存此分辨率？"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "是否保存此分辨率？"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "高品质倍线"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "禁用"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "对标清内容启用"
@@ -4749,14 +4870,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU 高品质倍线等级"
@@ -4766,43 +4890,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU 演播室级色彩转换"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "其他显示器空白显示"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "禁用"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "空白显示"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "检测到活动连接！"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "如果继续此操作，可能会无法控制你的"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "XBMC，你是否确认要停止事件服务器？"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "改变苹果遥控器的模式？"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "如果你现在正在使用苹果遥控器"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "控制 XBMC，修改这些设置将影响对"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "系统的控制。你确认要处理吗？"
@@ -4822,38 +4959,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "主 DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "初始化失败"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "从不"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "立即"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "隔 %i 秒后"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "硬盘安装日期："
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "硬盘运转周期："
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "用户配置"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "删除用户配置“%s”？"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "最近载入的用户配置："
@@ -5401,6 +5547,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "（IMDb 用户评价）"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250"
@@ -5432,20 +5579,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "渲染模式"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "自动检测"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "基本着色（ARB）"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "高级着色（GLSL）"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "软件着色"
@@ -5502,7 +5651,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "允许硬件加速（OpenMax）"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "像素着色器"
@@ -5546,6 +5695,10 @@ msgstr "允许硬件加速（amcodec）"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "允许硬件加速（MediaCodec）"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5647,6 +5800,14 @@ msgstr "%.1f 秒"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f 秒"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr ""
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr ""
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6293,23 +6454,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "输入查询字符串"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "无"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "自动选择"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "去隔行"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "场内插值法"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "场内插值法（反向）"
@@ -6364,6 +6529,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "舞会模式播放列表"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "去隔行（半速）"
@@ -6372,18 +6538,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "去隔行视频"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "去隔行算法"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "关"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "自动"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "开"
@@ -6413,8 +6583,8 @@ msgid "Edit title"
 msgstr "编辑标题"
 
 msgctxt "#16106"
-msgid "Manage ..."
-msgstr "管理..."
+msgid "Manage..."
+msgstr ""
 
 msgctxt "#16107"
 msgid "Edit sort title"
@@ -6455,110 +6625,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "至少一个文件删除失败"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "视频扫描方式"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "最邻近"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "双线性"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "双三次"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "正弦8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "双三次（软件）"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos（软件）"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "正弦（软件）"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "时间平滑"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "时间/空间平滑"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "（VDPAU）降噪"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "（VDPAU）锐化"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "帧率逆转换"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 优化"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "自动"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "时间平滑（半速）"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "时间/空间平滑（半速）"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA 场内插值"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA 最优"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 优化"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "软件混合"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - 场内插值"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "后处理"
@@ -6984,6 +7181,21 @@ msgstr "输入录像名称"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "注意"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr ""
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7467,9 +7679,9 @@ msgstr "电子节目单"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "无可激活的 PVR 插件，检查你的设置或详细日志记录。"
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7516,8 +7728,8 @@ msgstr "定时器更新时显示提示信息"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
-msgstr "使用后端频道号（仅能用于一个已启用的 PVR 插件）"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
+msgstr ""
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -7540,16 +7752,16 @@ msgid "Starting background threads"
 msgstr "启动后台线程"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "无启用的 PVR 插件"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "PVR 管理已启用，但无任何已启用"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "的 PVR 插件。使用 PVR 功能前"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7676,16 +7888,16 @@ msgid "* All recordings"
 msgstr "* 所有录像"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "未找到 PVR 插件"
+msgid "No PVR Add-ons could be found"
+msgstr ""
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "你需要一个电视卡、后端软件，和"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "一个用于后端的插件才能使用 PVR。"
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8426,6 +8638,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "且新文件夹名是有效的"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA 分级"
@@ -8628,6 +8841,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "舞会模式开启！"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "真"
@@ -8653,14 +8867,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "转到根目录"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "交织"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "交织（反转）"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "混合"
@@ -9161,6 +9378,7 @@ msgstr "取消源锁定"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "演员"
@@ -9171,6 +9389,7 @@ msgstr "影片"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "导演"
@@ -9215,6 +9434,7 @@ msgstr "饰演"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "导演"
@@ -9260,6 +9480,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "第%i季"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "集"
@@ -9267,6 +9488,7 @@ msgstr "集"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "集"
@@ -9283,6 +9505,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "从资料库移除剧集"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "剧集"
@@ -9322,6 +9545,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "季图片"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "季"
@@ -9389,6 +9613,7 @@ msgstr "最近加入的剧集"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "制作公司"
@@ -9510,12 +9735,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "扫描新内容"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "首播"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "编剧"
@@ -9545,10 +9771,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "总是"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "有预告片"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "假"
@@ -9668,6 +9896,7 @@ msgid "Would you like to continue scanning?"
 msgstr "要继续扫描吗？"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "国家"
@@ -9693,6 +9922,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "减少资料库层级"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "电影集"
@@ -9707,6 +9937,7 @@ msgstr "电影按电影集分组"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "标签"
@@ -9962,50 +10193,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "使用 Tween 动画效果"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "包含"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "未包含"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "是"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "不是"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "开始于"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "结束于"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "大于"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "小于"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "之后"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "之前"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "最后"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "非最后"
@@ -10140,26 +10383,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "集标题"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "视频分辨率"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "音频声道数"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "视频编码"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "音频编码"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "对白语言"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "字幕语言"
@@ -10196,10 +10445,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "缓存在达到连续播放所需数量之前已满"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "外部存储器"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "已看集数"
@@ -10259,6 +10510,21 @@ msgstr "%d 到 %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s 到 %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10515,7 +10781,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "下载歌手信息"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "传记"
@@ -10538,26 +10804,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "歌手信息"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "乐器"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "出生日期"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "出道时间"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "风格"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "解散时间"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "去世时间"
@@ -10566,6 +10838,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "活跃年代"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "标签"
@@ -11001,10 +11274,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "可更新项"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "依赖项目未找到"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11013,17 +11286,25 @@ msgstr "插件结构不完整"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "下列已安装插件依赖 %s"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "此插件无法卸载"
+msgid "This Add-on cannot be uninstalled"
+msgstr ""
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "撤消"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "可用插件"
@@ -11033,10 +11314,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "版本："
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "免责声明"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "许可证："
@@ -11139,6 +11422,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "锁定插件管理"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr ""
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11151,8 +11439,8 @@ msgstr "（列入黑名单）"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "库中的插件被标记为已失效。"
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11189,6 +11477,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "皮肤缺少部分文件"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr ""
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "提示信息"
@@ -11217,22 +11569,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "标题：%d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "选择播放项目"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "资料库模式"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY 键盘"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "音频直通输出启用中"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "预告片质量"
@@ -11298,8 +11655,8 @@ msgid "Clips"
 msgstr "片段"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "重启插件以启用"
+msgid "Restart plug-in to enable"
+msgstr ""
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11684,9 +12041,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "激活时输出静音以使功放保持激活，否则信宿将进入空闲状态"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11710,6 +12072,36 @@ msgstr "总是"
 msgctxt "#34123"
 msgid "Never"
 msgstr "从不"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr ""
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11851,6 +12243,11 @@ msgstr "启用游戏杆和游戏手柄支持"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "当此设备接入时禁用游戏杆"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr ""
 
 #: Unknown
 msgctxt "#35500"
@@ -12466,9 +12863,11 @@ msgstr "最大视频速度调节以适应实际的屏幕刷新率。"
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "重采样及其它声音处理质量。低质量速度快，高质量增加 CPU 占用。"
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12661,8 +13060,8 @@ msgstr "无可用信息。"
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "启用 XBMC 的个人视频录像机（PVR）功能。需要至少安装有一个 PVR 插件。"
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12811,8 +13210,8 @@ msgstr "切换到直播电视时显示前次浏览的频道。"
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
-msgstr "在编码信息窗显示信号质量信息（如果插件和后端支持）。"
+"supported by the Add-on and backend)."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36230"
@@ -12847,29 +13246,29 @@ msgstr "按下录像按钮或创建新的手动计时器时的录像时长，默
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "录像的优先级，数值大表示优先级高，默认为50。并非所有插件和后端都支持。"
+"50. Not supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "删除录像的期限，默认为99天。并非所有插件和后端都支持。"
+"Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "开始录像的提前量，默认为2分钟。并非所有插件和后端都支持。"
+"supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "结束录像的延迟量，默认为10分钟。并非所有插件和后端都支持。"
+"by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13559,13 +13958,21 @@ msgstr "无可用信息。"
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "连接音频设备的类型。"
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "选择你的物理扬声器布局。"
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13575,9 +13982,9 @@ msgstr "增大混缩为2声道的 AC3 音频流音量。"
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "将双声道立体声音源上混为多声道以匹配扬声器数量。"
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13591,17 +13998,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "当你的功放能解码 DTS 音频流时选择此项。"
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "当你的功放能解码 AAC 音频流时选择此项。"
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "当你的功放能解码 LPCM 音频流时选择此项。"
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13618,16 +14027,16 @@ msgstr "当你的功放能解码 DTS-HD 音频流时选择此项。"
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "选择用于播放 XBMC 解码的 mp3 和 FLAC 等音频的设备。"
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "选择用于播放未解码格式，也就是上面选择功放兼容的编码格式音频的播放设备。"
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13898,6 +14307,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "启用 AMLogic 解码器的视频硬解码"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "立体模式（当前）"
@@ -13912,12 +14328,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "无"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "上下模式"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "左右模式"
@@ -13961,6 +14377,13 @@ msgstr "询问"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "使用首选模式"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14007,12 +14430,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "同影片格式"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "视频立体模式"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "立体模式反转"
@@ -14114,3 +14550,10 @@ msgstr "双音频输出"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "混缩时增大中置声道音量"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr ""

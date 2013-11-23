@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-29 19:40+0000\n"
+"PO-Revision-Date: 2013-11-20 23:10+0000\n"
 "Last-Translator: CutSickAss <cutsickass@yahoo.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/xbmc-main/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -460,7 +460,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Διαγραφή αυτών των αρχείων; - Τα αρχεία σας θα διαγραφούν οριστικά!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Κατάσταση"
@@ -492,6 +492,7 @@ msgstr "Απεικόνιση"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Άλμπουμ"
@@ -500,6 +501,7 @@ msgstr "Άλμπουμ"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Καλλιτέχνες"
@@ -683,10 +685,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Προβολή των βίντεο με αναλογία 4:3 ως"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Τάσεις"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Στυλ"
@@ -696,7 +700,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Τραγούδι"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Διάρκεια"
@@ -710,7 +714,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Κομμάτια"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Κριτική"
@@ -783,14 +787,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Διεπαφή ιστού"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Σλόγκαν"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Περίληψη πλοκής"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Ψήφοι"
@@ -799,6 +806,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Διανομή ρόλων"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Πλοκή"
@@ -820,7 +828,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Βαθμονόμηση οθόνης..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Βαθμονόμηση βίντεο..."
@@ -829,10 +837,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Απάλυνση εικόνας"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Ποσοστό μεγέθυνσης"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Λόγος εικονοστοιχείων"
@@ -869,6 +879,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Ταχύτητα"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Κατακόρυφη μετατόπιση"
@@ -896,7 +907,8 @@ msgid "Video filters"
 msgstr "Φίλτρα βίντεο"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Κανένα"
@@ -1180,11 +1192,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "Δέκτης με υποστήριξη AAC"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "Δέκτης με υποστήριξη MP1"
@@ -1326,18 +1333,18 @@ msgstr "Μετατροπή δειγματοληψίας"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Έξοδος ήχου"
+msgid "Output configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Αναλογικό"
+msgid "Fixed"
+msgstr "Σταθερή"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Οπτική/Coax"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1359,6 +1366,7 @@ msgstr "Προσαρμογή δειγματοληψίας"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Ηθοποιοί"
@@ -1369,8 +1377,8 @@ msgstr "Έτος"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Ενίσχυση έντασης ήχου κατά το χειρισμό downmix"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1379,8 +1387,8 @@ msgstr "Δέκτης με υποστήριξη DTS-HD"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Δέκτης με υποστήριξη πολυκάναλου LPCM"
+msgid "Enable passthrough"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1708,13 +1716,13 @@ msgstr "Μεγ."
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Μετάδοση σιγής κατά την αδράνεια"
+msgid "Keep audio device alive"
+msgstr ""
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1865,6 +1873,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Αλλαγή προβολής"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Υπότιτλοι"
@@ -1885,14 +1898,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Οπίσθιος φωτισμός"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Φωτεινότητα"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Αντίθεση"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Συντελεστής γάμμα"
@@ -2064,6 +2080,7 @@ msgstr "Χειροκίνητες ρυθμίσεις"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Είδος"
@@ -2217,7 +2234,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Κομμάτι"
@@ -2226,24 +2243,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Διάρκεια"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Τίτλος"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Καλλιτέχνης"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Άλμπουμ"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Λίστα αναπαραγωγής"
@@ -2252,6 +2272,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Αρχείο"
@@ -2261,16 +2282,17 @@ msgstr "Αρχείο"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Έτος"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Αξιολόγηση"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Τύπος"
@@ -2279,47 +2301,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Χρήση"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Καλλιτέχνης Άλμπουμ"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Αναπαράχθηκε"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Τελευταία αναπαραγωγή"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Σχόλια"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Ημ/νία προσθήκης"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Προεπιλεγμένη"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Στούντιο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Διαδρομή"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Χώρα"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Σε εξέλιξη"
@@ -2372,6 +2400,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Λειτουργία party"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Τυχαίο"
@@ -2500,34 +2529,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Τύπος Προβολής"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Φυσιολογικό"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Μεγέθυνση"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Επέκταση 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Ευρεία μεγέθυνση"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Επέκταση 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Κανονικό μέγεθος"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Προσαρμογή"
@@ -2601,6 +2633,7 @@ msgid "Browse for library"
 msgstr "Αναζήτηση συλλογής"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Έτος"
@@ -2630,6 +2663,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Πληροφορίες τραγουδιού"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Μη γραμμική παραμόρφωση"
@@ -2848,6 +2882,7 @@ msgid "Mirror image"
 msgstr "Kατοπτρική εικόνα"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Είστε σίγουρος;"
@@ -3286,8 +3321,8 @@ msgid "Program Add-ons"
 msgstr "Πρόσθετες Εφαρμογές"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Ορισμός μικρογραφίας plugin"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3956,30 +3991,32 @@ msgid "Reset"
 msgstr "Επαναφορά"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Επίπεδο: Βασικό"
+msgid "Basic"
+msgstr "Βασικό"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Επίπεδο: Κανονικό"
+msgid "Standard"
+msgstr "Τυπική"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Επίπεδο: Προχωρημένο"
+msgid "Advanced"
+msgstr "Για Προχωρημένους"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Επίπεδο: Ανώτερο"
+msgid "Expert"
+msgstr "Για Ειδικούς"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Περιηγητής πρόσθετων"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Επαναφορά ρυθμίσεων"
+msgid "Reset above settings to default"
+msgstr "Επαναφορά των παραπάνω ρυθμίσεων στις προεπιλογές"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Είστε σίγουροι ότι επιθυμείτε να επαναφέρετε όλες τις ρυθμίσεις σε αυτήν την κατηγορία;"
@@ -3991,6 +4028,21 @@ msgstr "Βοήθεια"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Δεν υπάρχει διαθέσιμη βοήθεια"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr "Θα επαναφέρει όλες τις ορατές ρυθμίσεις στις προεπιλεγμένες τιμές τους."
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr "Δεν υπάρχουν διαθέσιμες κατηγορίες"
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4206,66 +4258,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Ανακατασκευή περιεχομένων..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Επιστροφή στη μουσική"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Επιστροφή στα βίντεο"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Εκκίνηση από την αρχή"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Συνέχιση από %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Επιλογή"
@@ -4275,6 +4345,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Κλειδώθηκε! Εισαγωγή κωδικού..."
@@ -4284,14 +4355,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Εισαγωγή κωδικού πρόσβασης"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Εισαγωγή κεντρικού κωδικού"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Εισάγετε κωδικό ξεκλειδώματος"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "ή πιέστε C για ακύρωση"
@@ -4325,14 +4399,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Αφαίρεση κλειδώματος"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Αριθμητικός κωδικός πρόσβασης"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Συνδυασμός πλήκτρων (combo) του μοχλού"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Κωδικός πρόσβασης πλήρους κειμένου"
@@ -4362,18 +4439,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Οι κωδικοί δεν ταιριάζουν."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Δεν επιτρέπεται η πρόσβαση"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Οι προσπάθειες εισαγωγής κωδικού εξαντλήθηκαν."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "Το σύστημα τώρα θα απενεργοποιηθεί."
+msgid "The system will now power down."
+msgstr "Το σύστημα θα απενεργοποιηθεί τώρα."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Το αντικείμενο κλειδώθηκε"
@@ -4423,30 +4504,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Το πεδίο του κωδικού ήταν κενό. Δοκιμάστε ξανά."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Κεντρικό κλείδωμα"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Απενεργοποίηση συστήματος όταν εξαντληθούν οι προσπάθειες εισόδου"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Ο κεντρικός κωδικός δεν είναι έγκυρος"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Παρακαλώ εισάγετε έναν έγκυρο κεντρικό κωδικό"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Ρυθμίσεις & διαχείριση αρχείων"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Ορισμός ως προεπιλογή για όλα τα βίντεο"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Θα διαγραφούν όλες οι αποθηκευμένες τιμές"
@@ -4461,18 +4551,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Εφέ προσαρμογής αναλογιών σήματος (pan & zoom)"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "Ρολόι 12 ωρών"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "Ρολόι 24 ωρών"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Μέρα/Μήνας"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Μήνας/Μέρα"
@@ -4482,14 +4576,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Χρόνος λειτουργίας συστήματος"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Λεπτά"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Ώρες"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Μέρες"
@@ -4524,18 +4621,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Σύστημα"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Άμεση ελάττωση περιστροφής (Spindown)"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Βίντεο μόνο"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Καθυστέρηση"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Ελάχιστη διάρκεια αρχείου"
@@ -4565,10 +4666,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Αναστολή"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Έξοδος"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Επανεκκίνηση"
@@ -4578,42 +4681,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Ελαχιστοποίηση"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Λειτουργία πλήκτρου τροφοδοσίας"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Απενεργοποίηση"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Αποτροπή τερματισμού λόγω αδράνειας"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Να επιτρέπεται τερματισμός λόγω αδράνειας"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Είναι ενεργή άλλη συνεδρία, ίσως μέσω ssh;"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Προσαρτήθηκε αφαιρούμενος δίσκος"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Μη ασφαλής αφαίρεση συσκευής"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Η συσκευή αφαιρέθηκε επιτυχώς"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Συνδέθηκε χειριστήριο"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Αποσυνδέθηκε χειριστήριο"
@@ -4673,10 +4786,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Αποτυχία για %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Έχει αποφορτιστεί η μπαταρία"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Φίλτρο Flicker (τρεμόπαιγμα οθόνης)"
@@ -4706,26 +4821,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Πάντα ενεργός"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Δοκιμή & εφαρμογή ανάλυσης"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Αποθήκευση ανάλυσης;"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Θέλετε να διατηρήσετε αυτή την ανάλυση;"
+msgid "Would you like to keep this change?"
+msgstr "Επιθυμείτε να διατηρήσετε αυτήν την αλλαγή;"
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Υψηλής ποιότητας Upscaling"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Ανενεργό"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Ενεργό για περιεχόμενο SD"
@@ -4746,14 +4867,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ επίπεδο Upscaling"
@@ -4763,43 +4887,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU μετατροπή χρώματος επιπέδου Στούντιο"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr "Διατήρηση κελύφους;"
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Κενό σε άλλες οθόνες"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Ανενεργή"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Κενές οθόνες"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Έχουν ανιχνευτεί ενεργές συνδέσεις!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Αν συνεχίσετε, μπορεί να χάσετε τον έλεγχο του XBMC."
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "Να διακοπεί η λειτουργία του απομακρυσμένου διακομιστή συμβάντων;"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Αλλαγή λειτουργίας συσκευής Apple Remote;"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Εάν χρησιμοποιείτε τώρα τη συσκευή Apple Remote για να"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "ελέγχετε το XBMC, η αλλαγή αυτής της ρύθμισης θα επηρεάσει"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "την ικανότητα ελέγχου του. Θέλετε να συνεχίσετε;"
@@ -4819,38 +4956,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Πρωτεύον DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Αποτυχία έναρξης"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Ποτέ"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Αμέσως"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Μετά από %i δευτ."
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "Ημερομηνία εγκατάστασης HDD:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "Πλήθος κύκλων ενέργειας HDD:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Προφίλ"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Διαγραφή προφίλ '%s';"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Προηγούμενο προφίλ:"
@@ -5398,6 +5544,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(Αξιολόγηση IMDb)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "250 κορυφαία"
@@ -5429,20 +5576,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Μέθοδος απόδοσης"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Αυτόματη ανίχνευση"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Στοιχειώδεις σκιαστές (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Προηγμένοι σκιαστές (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Λογισμικό"
@@ -5499,7 +5648,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Χρήση επιτάχυνσης υλικού (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Σκιάσεις Pixel"
@@ -5543,6 +5692,10 @@ msgstr "Χρήση επιτάχυνσης υλικού (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Χρήση επιτάχυνσης υλικού (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5644,6 +5797,14 @@ msgstr "%.1f Δευτερόλεπτο"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Δευτερόλεπτα"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d Λεπτό"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d Λεπτά"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6290,23 +6451,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Εισαγωγή κειμένου αναζήτησης"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Καμία"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Αυτόματη επιλογή"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Απόπλεξη"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (αντιστροφή)"
@@ -6361,6 +6526,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Λίστα αναπ/γής σε λειτουργία party"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Απόπλεξη (κατά το ήμισυ)"
@@ -6369,18 +6535,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Απόπλεξη βίντεο (Deinterlace)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Μέθοδος απόπλεξης"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Ανενεργή"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Αυτόματη"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Ενεργή"
@@ -6410,8 +6580,8 @@ msgid "Edit title"
 msgstr "Επεξεργασία τίτλου"
 
 msgctxt "#16106"
-msgid "Manage ..."
-msgstr "Διαχείριση ..."
+msgid "Manage..."
+msgstr "Διαχείριση..."
 
 msgctxt "#16107"
 msgid "Edit sort title"
@@ -6452,110 +6622,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Αποτυχία διαγραφής τουλάχιστον ενός αρχείου"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Μέθοδος προσαρμογής ανάλυσης βίντεο"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Εγγύτερη προσέγγιση"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinear"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubic"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubic (λογισμικό)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (λογισμικό)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (λογισμικό)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Χρονική"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Χρονική/Χωρική"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU) Μείωση θορύβου"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU) Οξύτητα"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Αντίστροφη Telecine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 βελτιστοποιημένο"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Αυτόματη"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Χρονική (κατά το ήμισυ)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Χρονική/Χωρική (κατά το ήμισυ)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Best"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 βελτιστοποιημένο"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Blend λογισμικού"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Μετα-επεξεργασία"
@@ -6981,6 +7178,21 @@ msgstr "Εισάγετε τίτλο για την εγγραφή"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Προσοχή"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr "Υπηρεσία"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr "Μίξη"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Πάροχος"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7464,9 +7676,9 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "Δεν ήταν δυνατό να ενεργοποιηθεί κανένα πρόσθετο PVR. Ελέγξτε τις ρυθμίσεις σας ή το αρχείο καταγραφής για περισσότερες πληροφορίες."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7513,8 +7725,8 @@ msgstr "Εμφάνιση ειδοποίησης κατά τις ενημερώσ
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
-msgstr "Χρήση αριθμών καναλιών backend (δουλεύει μόνο με 1 ενεργό πρόσθετο PVR)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
+msgstr ""
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -7537,16 +7749,16 @@ msgid "Starting background threads"
 msgstr "Εκκίνηση νημάτων παρασκηνίου"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "Δεν υπάρχει ενεργό πρόσθετο PVR"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "Ο διαχειριστής PVR ενεργοποιήθηκε χωρίς κανένα"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "ενεργό πρόσθετο PVR. Ενεργοποιήστε τουλάχιστον ένα"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7673,16 +7885,16 @@ msgid "* All recordings"
 msgstr "* Όλες οι εγγραφές"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "Δε βρέθηκαν πρόσθετα PVR"
+msgid "No PVR Add-ons could be found"
+msgstr "Δε βρέθηκαν Πρόσθετα PVR"
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "Χρειάζεστε ένα δέκτη (tuner), ένα backend, και ένα"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "πρόσθετο προκειμένου το backend να κάνει χρήση του PVR."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8423,6 +8635,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "και ότι το νέο όνομα είναι έγκυρο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "Καταλληλότητα"
@@ -8625,6 +8838,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Party on!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Αληθές"
@@ -8650,14 +8864,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Μετάβαση σε αρχ. φάκελο"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Weave"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Weave (αντιστροφή)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Blend"
@@ -9158,6 +9375,7 @@ msgstr "Ξεκλείδωμα πηγών"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Ηθοποιός"
@@ -9168,6 +9386,7 @@ msgstr "Ταινία"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Σκηνοθεσία"
@@ -9212,6 +9431,7 @@ msgstr "ως"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Σκηνοθέτες"
@@ -9257,6 +9477,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Κύκλος %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Επεισόδιο"
@@ -9264,6 +9485,7 @@ msgstr "Επεισόδιο"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Επεισόδια"
@@ -9280,6 +9502,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Αφαίρεση τηλ. σειράς από τη συλλογή"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Τηλ. Σειρά"
@@ -9319,6 +9542,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Εικόνα κύκλου"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Κύκλος"
@@ -9386,6 +9610,7 @@ msgstr "Επεισόδια που προστέθηκαν πρόσφατα"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Στούντιο"
@@ -9507,12 +9732,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Έλεγχος για νέα περιεχόμενα"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Πρεμιέρα"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Σενάριο"
@@ -9542,10 +9768,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Πάντα"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Έχει διαφημιστικό"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Ψευδές"
@@ -9665,6 +9893,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Επιθυμείτε να συνεχίσετε την αναζήτηση;"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Χώρες"
@@ -9690,6 +9919,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Ενιαία λίστα ιεραρχίας συλλογής"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Ομάδα Ταινιών"
@@ -9704,6 +9934,7 @@ msgstr "Ομαδοποίηση ταινιών"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Ετικέτες"
@@ -9959,50 +10190,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Χρήση εφέ παλινδρομικής κίνησης"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "περιέχει"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "δεν περιέχει"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "είναι"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "δεν είναι"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "αρχίζει με"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "τελειώνει σε"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "μεγαλύτερο από"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "μικρότερο από"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "μετά"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "πριν"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "στο τελευταίο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "όχι στο τελευταίο"
@@ -10137,26 +10380,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Τίτλος επεισοδίου"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Ανάλυση βίντεο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Κανάλια ήχου"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Κωδικοποίηση βίντεο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Κωδικοποίηση ήχου"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Γλώσσα ήχου"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Γλώσσα υποτίτλων"
@@ -10193,10 +10442,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Η λανθάνουσα μνήμη γέμισε πριν φθάσει το απαιτούμενο μέγεθος για συνεχόμενη αναπαραγωγή"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Εξωτερικός χώρος αποθήκευσης"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Πλήθος προβληθέντων επεισοδίων"
@@ -10256,6 +10507,21 @@ msgstr "%d με %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s με %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr "Προτίμηση εξωτερικών υποτίτλων"
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr "Προτίμηση εξωτερικών υποτίτλων έναντι των εσωτερικών"
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr "(Εξωτερικός)"
 
 msgctxt "#21800"
 msgid "File name"
@@ -10512,7 +10778,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Λήψη πληροφοριών για τον καλλιτέχνη"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Βιογραφία"
@@ -10535,26 +10801,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Πληροφορίες καλλιτέχνη"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Όργανα"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Γεννήθηκε"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Δημιουργία"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Θεματολόγιο"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Διαλύθηκε"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Πέθανε"
@@ -10563,6 +10835,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Έτη σταδιοδρομίας"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Ετικέτα"
@@ -10998,10 +11271,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Διαθέσιμες ενημερώσεις"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Δεν πληρούνται οι εξαρτήσεις"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr "Δεν πληρούνται οι εξαρτήσεις. Επικοινωνήστε με το δημιουργό του Πρόσθετου."
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11010,17 +11283,25 @@ msgstr "Το πρόσθετο δεν έχει τη σωστή δομή"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "Το %s χρησιμοποιείται από τα εγκατεστημένα πρόσθετα"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Αδυναμία απεγκατάστασης αυτού του πρόσθετου"
+msgid "This Add-on cannot be uninstalled"
+msgstr "Αυτό το Πρόσθετο δεν μπορεί να απεγκατασταθεί"
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Επαναφορά"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr "Μη-Συμβατό"
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Διαθέσιμα πρόσθετα"
@@ -11030,10 +11311,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Έκδοση:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Αποποίηση ευθυνών"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Άδεια χρήσης:"
@@ -11136,6 +11419,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Κλείδωμα διαχειριστή πρόσθετων"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr "Αυτό το Πρόσθετο δεν μπορεί να απενεργοποιηθεί"
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11148,8 +11436,8 @@ msgstr "(ανεπιθύμητο)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Το πρόσθετο έχει επισημανθεί ως κατεστραμμένο στο αποθετήριο."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11186,6 +11474,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Λείπουν κάποια αρχεία από το κέλυφος"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr "Παύση κατά την αναζήτηση υποτίτλων"
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr "Αναζήτηση υποτίτλων ..."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr "Βρέθηκαν %d υπότιτλοι"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr "Δε βρέθηκαν υπότιτλοι"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr "Γίνεται λήψη υποτίτλων ..."
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr "Γλώσσες για τις οποίες να γίνει λήψη υποτίτλων"
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr "Αποτυχία λήψης υποτίτλου"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr "Δεν εγκαταστάθηκαν υπηρεσίες υποτίτλων"
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr "Αποθήκευση υποτίτλων στο φάκελο της ταινίας"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Ειδοποιήσεις"
@@ -11214,22 +11566,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Τίτλος: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Επιλογή αντικειμένου για αναπαραγωγή"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Λειτουργία Συλλογής"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "Διάταξη πληκτρολογίου QWERTY"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Σε λειτουργία η διέλευση ήχου"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Ποιότητα διαφημιστικού"
@@ -11295,8 +11652,8 @@ msgid "Clips"
 msgstr "Κλιπ"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Επανεκκίνηση plugin για την ενεργοποίησή του"
+msgid "Restart plug-in to enable"
+msgstr "Επανεκκινήστε το plugin για ενεργοποίηση"
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11681,9 +12038,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "Αν ενεργοποιηθεί, μεταδίδει σήμα σιγής στην έξοδο ήχου προκειμένου να παραμείνει ενεργός ο δέκτης, διαφορετικά ο αποδέκτης αδειάζει κατά την αδράνεια"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11707,6 +12069,36 @@ msgstr "Πάντα"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Ποτέ"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11848,6 +12240,11 @@ msgstr "Ενεργοποίηση υποστήριξης χειριστηρίων
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Απενεργοποίηση χειριστηρίου κατά την παρουσία αυτής της συσκευής"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr "Πλήκτρα συστήματος στην πλήρη οθόνη"
 
 #: Unknown
 msgctxt "#35500"
@@ -12463,9 +12860,11 @@ msgstr "Η μέγιστη ταχύτητα βίντεο να ισούται με
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Ποιότητα επανάληψης δειγματοληψίας και άλλης επεξεργασίας ήχου. Η χαμηλή ποιότητα είναι ταχύτερη, η υψηλή ποιότητα καταναλώνει περισσότερη επεξεργαστική ισχύ."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12658,8 +13057,8 @@ msgstr "Μη διαθέσιμες πληροφορίες."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "Ενεργοποίηση των λειτουργιών του Προσωπικού Εγγραφέα Βίντεο (Personal Video Recorder, PVR) στο XBMC. Απαιτείται να είναι εγκατεστημένο τουλάχιστον ένα πρόσθετο PVR."
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12808,8 +13207,8 @@ msgstr "Εμφάνιση του τελευταίου καναλιού αν αλ�
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
-msgstr "Εμφάνιση ποιότητας σήματος στο παράθυρο πληροφοριών κωδικοποίησης (αν υποστηρίζεται από το πρόσθετο και το backend)."
+"supported by the Add-on and backend)."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36230"
@@ -12844,29 +13243,29 @@ msgstr "Διάρκεια της εγγραφής κατά την πίεση το
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "Προτεραιότητα της εγγραφής. Μεγαλύτερος αριθμός δείχνει μεγαλύτερη προτεραιότητα. Η προεπιλογή είναι 50. Δεν υποστηρίζεται από όλα τα πρόσθετα και τα backend."
+"50. Not supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "Διαγραφή των εγγραφών μετά από αυτό το χρονικό διάστημα. Προεπιλογή είναι οι 99 ημέρες. Δεν υποστηρίζεται από όλα τα πρόσθετα και τα backend."
+"Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "Έναρξη της εγγραφής πριν από την ακριβή ώρα. Προεπιλογή είναι τα 2 λεπτά. Δεν υποστηρίζεται από όλα τα πρόσθετα και τα backend."
+"supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "Λήξη της εγγραφής μετά την ακριβή ώρα. Προεπιλογή είναι τα 10 λεπτά. Δεν υποστηρίζεται από όλα τα πρόσθετα και τα backend."
+"by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13556,13 +13955,21 @@ msgstr "Μη διαθέσιμες πληροφορίες."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Τύπος σύνδεσης του ηχητικού εξοπλισμού."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Επιλογή της διαρρύθμισης των ηχείων σας."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13572,9 +13979,9 @@ msgstr "Ενίσχυση των ροών AC3 που έχουν υποστεί do
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Upmix 2-κάναλων στερεοφωνικών πηγών, ούτως ώστε ο αριθμός των καναλιών να συμπίπτει με το πλήθος των ηχείων."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13588,17 +13995,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Επιλογή αυτής της ρύθμισης αν ο δέκτης σας υποστηρίζει αποκωδικοποίηση ροών DTS."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Επιλογή αυτής της ρύθμισης αν ο δέκτης σας υποστηρίζει αποκωδικοποίηση ροών AAC."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Επιλογή αυτής της ρύθμισης αν ο δέκτης σας υποστηρίζει αποκωδικοποίηση ροών LPCM."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13615,16 +14024,16 @@ msgstr "Επιλογή αυτής της ρύθμισης αν ο δέκτης �
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Επιλογή της συσκευής για αναπαραγωγή ήχου που αποκωδικοποιείται από το XBMC όπως αρχεία MP3 και FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Επιλογή της συσκευής για αναπαραγωγή κωδικοποιημένων μορφών, όπως όλα εκείνες που έχουν τσεκαριστεί ανωτέρω στις επιλογές 'δέκτης με υποστήριξη'."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13895,6 +14304,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Ενεργοποίηση αποκωδικοποίησης υλικού AMLogic των αρχείων βίντεο"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Στερεοσκοπική προβολή (τρέχουσα)"
@@ -13909,12 +14325,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Κανένα"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Πάνω/Κάτω"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Το ένα δίπλα στο άλλο"
@@ -13958,6 +14374,13 @@ msgstr "Ρωτήστε με"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Χρήση προτιμώμενης λειτουργίας"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14004,12 +14427,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Όπως η ταινία"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Στερεοσκοπική προβολή του βίντεο"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Ανεστραμμένη στερεοσκοπική προβολή"
@@ -14111,3 +14547,10 @@ msgstr "Διπλή έξοδος ήχου"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Ενίσχυση του κεντρικού καναλιού κατά το χειρισμό downmix"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr ""

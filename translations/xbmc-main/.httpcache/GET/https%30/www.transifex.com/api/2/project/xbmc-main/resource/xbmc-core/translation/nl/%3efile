@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-25 13:40+0000\n"
-"Last-Translator: Martijn Kaijser <machine.sanctum@gmail.com>\n"
+"PO-Revision-Date: 2013-11-21 13:00+0000\n"
+"Last-Translator: Klojum <Klojum2001@outlook.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/xbmc-main/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -466,7 +466,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Deze bestanden verwijderen? Dit kan niet meer ongedaan worden gemaakt!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Status"
@@ -498,6 +498,7 @@ msgstr "Beeldscherm"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albums"
@@ -506,6 +507,7 @@ msgstr "Albums"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Artiesten"
@@ -689,10 +691,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Geef 4:3 video's weer als"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Stemmingen"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stijlen"
@@ -702,7 +706,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Tracklist"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Tijdsduur"
@@ -716,7 +720,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Nummer"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Beschrijving"
@@ -789,14 +793,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Webinterface"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Slagzin"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Plot"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Stemmen"
@@ -805,6 +812,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Acteurs"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Plot"
@@ -826,19 +834,21 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Gebruikersomgeving kalibreren"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
-msgstr "Beeldscherm kalibreren..."
+msgstr "Beeld kalibreren..."
 
 msgctxt "#215"
 msgid "Soften"
 msgstr "Verzachten"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Zoomen"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Uitrekken"
@@ -875,6 +885,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Snelheid"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Verticale verschuiving"
@@ -902,7 +913,8 @@ msgid "Video filters"
 msgstr "Videofilters"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Geen"
@@ -1186,11 +1198,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Favorieten"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC geschikte ontvanger"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 geschikte ontvanger"
@@ -1332,18 +1339,18 @@ msgstr "Framerateconversie"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Geluidsuitvoer"
+msgid "Output configuration"
+msgstr "Uitgangsconfiguratie"
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analoog"
+msgid "Fixed"
+msgstr "Vast"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Digitaal"
+msgid "Optimized"
+msgstr "Geoptimaliseerd"
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1365,6 +1372,7 @@ msgstr "Framerate aanpassen"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Acteurs"
@@ -1375,8 +1383,8 @@ msgstr "Jaar"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Volume verhogen bij downmixen"
+msgid "Normalize levels on downmix"
+msgstr "Normaliseer niveaus bij downmixen"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1385,8 +1393,8 @@ msgstr "DTS-HD geschikte obtvanger"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Multichannel LPCM geschikte ontvanger"
+msgid "Enable passthrough"
+msgstr "Activeer Passthrough"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1714,13 +1722,13 @@ msgstr "Max"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr "Beste overeenkomst"
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Stilte streamen bij inactiviteit"
+msgid "Keep audio device alive"
+msgstr "Audioapparaat 'levend' houden"
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1871,6 +1879,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Layout wijzigen"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr "Sampling rate (kHz) limiteren"
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Ondertitels"
@@ -1891,14 +1904,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Verlichting"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Helderheid"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Contrast"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gamma"
@@ -2070,6 +2086,7 @@ msgstr "Handmatige instellingen"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Genre"
@@ -2223,7 +2240,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Grootte"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Nummer"
@@ -2232,24 +2249,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Tijd"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Titel"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Artiest"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Afspeellijst"
@@ -2258,6 +2278,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Bestand"
@@ -2267,16 +2288,17 @@ msgstr "Bestand"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Jaar"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Score"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Type"
@@ -2285,47 +2307,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Gebruik"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Album artiest"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Aantal keer afgespeeld"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Laatst afgespeeld"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Opmerking"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Datum toegevoegd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Standaard"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Filmstudio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Pad"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Land"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Bezig"
@@ -2378,6 +2406,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Feestmix"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Willekeurig"
@@ -2506,34 +2535,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Weergave"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normaal"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Inzoomen"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Uitrekken 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Uitrekken 14:9"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Uitrekken 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Originele grootte"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Eigen instelling"
@@ -2607,6 +2639,7 @@ msgid "Browse for library"
 msgstr "Bibliotheek openen"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Jaren"
@@ -2636,6 +2669,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Muziekinformatie"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Niet-lineair uitrekken"
@@ -2854,6 +2888,7 @@ msgid "Mirror image"
 msgstr "Spiegel afbeelding"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Weet u het zeker?"
@@ -3292,7 +3327,7 @@ msgid "Program Add-ons"
 msgstr "Programma add-ons"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
+msgid "Set plug-in thumb"
 msgstr "Plugin-afbeelding instellen"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
@@ -3962,30 +3997,32 @@ msgid "Reset"
 msgstr "Reset"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Nivo: Eenvoudig"
+msgid "Basic"
+msgstr "Basis"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Nivo: Standaard"
+msgid "Standard"
+msgstr "Standaard"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Nivo: Geavanceerd"
+msgid "Advanced"
+msgstr "Geavanceerd"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Nivo: Expert"
+msgid "Expert"
+msgstr "Expert"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Addon verkenner"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Instellingen terugzetten"
+msgid "Reset above settings to default"
+msgstr "Herstel bovengenoemde instellingen naar standaard"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Weet je zeker dat je alle instellingen in deze categorie naar de standaard wilt terugzetten?"
@@ -3997,6 +4034,21 @@ msgstr "Hulp"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Geen hulp beschikbaar"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr "Herstelt alle zichtbare instellingen naar hun standaardwaarden."
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr "Geen categorieën beschikbaar"
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr "Probeer het instellingsniveau te veranderen om  extra categorien en instellingen te zien."
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4212,66 +4264,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Herindexeren"
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Terug naar Muziek"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Terug naar Video's"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Starten vanaf begin"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Hervatten vanaf %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "ok"
@@ -4281,6 +4351,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Vergrendeld! voer code in..."
@@ -4290,14 +4361,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Voer het wachtwoord in"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Voer de vergrendelcode in"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Voer de vergrendelcode in om te ontgrendelen"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "of druk op C om te annuleren"
@@ -4331,14 +4405,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Vergrendeling verwijderen"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Numeriek wachtwoord"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Knoppencombinatie"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Normaal wachtwoord"
@@ -4368,18 +4445,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Ingevoerd wachtwoord klopt niet."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Toegang geweigerd"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Maximaal aantal pogingen bereikt"
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "XBMC wordt nu uitgeschakeld."
+msgid "The system will now power down."
+msgstr "Het systeem zal nu worden uitgeschakeld."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Item vergrendeld"
@@ -4429,30 +4510,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Geen wachtwoord ingegeven. Probeer opnieuw."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Vergrendelen"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "XBMC uitschakelen na max. aantal mislukte pogingen"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Vergrendelcode is onjuist!"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Voer een geldige vergrendelcode in!"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Instellingen vergrendelen"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Stel in als de standaard voor alle video's"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Dit zal alle voorgaande opgeslagen waarden resetten"
@@ -4467,18 +4557,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Pan- en zoomeffecten gebruiken"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12-uursformaat"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24-uursformaat"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Dag/Maand"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Maand/Dag"
@@ -4488,14 +4582,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Systeem actief"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "minuten"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "uren"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "dagen"
@@ -4530,18 +4627,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Systeem"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Harde schijf onmiddellijk uitschakelen"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Alleen beeld"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Vertraging"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimale bestandsduur"
@@ -4571,10 +4672,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Slaapstand"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Afsluiten"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Opnieuw opstarten"
@@ -4584,42 +4687,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "minimaliseren"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Actie voor aan/uitknop"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Systeem uitschakelen"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Voorkom inactieve uitschakeling"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Sta inactieve uitschakeling toe"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Er is een andere sessie actief, wellicht SSH?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Verwisselbare harde schijf aankoppelen?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Apparaat onveilig verwijderd"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Apparaat succesvol verwijderd"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick aangesloten"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick los gekoppeld"
@@ -4679,10 +4792,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Gefaald voor %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Lage accuspanning"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Flikkerfilter"
@@ -4712,26 +4827,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Altijd aan"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Resolutie testen en toepassen"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Resolutie behouden?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Wilt u deze resolutie behouden?"
+msgid "Would you like to keep this change?"
+msgstr "Wilt u deze verandering behouden?"
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Hoge kwaliteit beeldverbetering"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Inschakelen voor SD-beelden"
@@ -4752,14 +4873,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ Upscaling level"
@@ -4769,43 +4893,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU Studio level kleur conversie"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr "Skin behouden?"
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Stop doorgifte videosignaal aan andere beeldschermen"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Stop doorgifte videosignaal"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Actieve verbindingen gedetecteerd!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Als u doorgaat, kunt u XBMC mogelijk niet meer"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "besturen. Weet u zeker dat u de Event Server wilt stoppen?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Verander Apple afstandsbedieningsmodus?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Als u op dit moment de Apple afstandsbediening gebruikt"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "om XBMC te besturen, kan het veranderen van deze instelling"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "de mogelijkheid om het te blijven besturen beïnvloeden. Doorgaan?"
@@ -4825,38 +4962,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "DNS-server"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Initialiseren mislukt"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Nooit"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Direct"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Na %i sec."
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD installatiedatum:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD Power Cycle teller:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profielen"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Profiel '%s' verwijderen?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Laatst gebruikt profiel:"
@@ -5404,6 +5550,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "IMDb-score"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250"
@@ -5435,20 +5582,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Rendermethode"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automatisch detecteren"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Eenvoudige shaders (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Geavanceerde shaders (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Software"
@@ -5505,7 +5654,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Hardwareversnelling inschakelen (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixelshaders"
@@ -5549,6 +5698,10 @@ msgstr "Hardwareversnelling inschakelen (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Hardwareversnelling inschakelen (mediacodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr "Frame multi-threaded decodering (minder betrouwbaar)"
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5650,6 +5803,14 @@ msgstr "%.1f Seconde"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Seconden"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d minuut"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d Minuten"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6012,7 +6173,7 @@ msgstr "Tijdzone"
 #: system/settings/settings.xml
 msgctxt "#14081"
 msgid "File lists"
-msgstr "Bestandlijsten"
+msgstr "Bestandslijsten"
 
 #: system/settings/settings.xml
 msgctxt "#14082"
@@ -6296,23 +6457,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Geef zoekopdracht"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Geen"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Automatisch selecteren"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Deinterlace"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Synchroniseer oneven"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Synchroniseer even"
@@ -6367,6 +6532,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Feestmix afspeellijst"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Deinterlace (Half)"
@@ -6375,18 +6541,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Deinterlace video"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Deinterlace methode"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Uit"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Auto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Aan"
@@ -6416,7 +6586,7 @@ msgid "Edit title"
 msgstr "Titel aanpassen"
 
 msgctxt "#16106"
-msgid "Manage ..."
+msgid "Manage..."
 msgstr "Beheren..."
 
 msgctxt "#16107"
@@ -6458,110 +6628,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Tenminste 1 bestand is niet verwijderd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Videoschalingsmethode"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Naaste buur"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinear"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubic"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubic (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "(VDPAU)Temporal"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "(VDPAU)Temporal/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU)Ruisonderdrukking"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU)Scherpte"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Inverse telecine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 geoptimaliseerd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Auto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Temporal (Half)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Temporal/Spatial (Half)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Best"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 geoptimaliseerd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Software menging"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Kwaliteitsverbetering video"
@@ -6987,6 +7184,21 @@ msgstr "Naam van de opname"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Waarschuwing"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr "Dienst"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr "Mux"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Provider"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7470,9 +7682,9 @@ msgstr "TV gids"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "Kon geen PVR add-on inschakelen. Kijk je instellingen of het logbestand na."
+msgstr "Geen PVR Add-on kon worden geactiveerd. Controleer uw instellingen of kijk in het logbestand voor meer informatie."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7519,8 +7731,8 @@ msgstr "Toon een melding bij timer updates"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
-msgstr "Gebruik kanaalnummers van de backend (werkt alleen als 1 PVR addon actief is)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
+msgstr "Gebruik kanaalnummers van de backend (alleen als 1 PVR add-on actief is)"
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -7543,16 +7755,16 @@ msgid "Starting background threads"
 msgstr "Achtergrond threads worden gestart"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "No PVR add-on enabled"
+msgid "No PVR Add-on enabled"
+msgstr "Geen PVR add-on ingeschakeld"
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "De PVR manager is ingeschakeld zonder ingeschakelde"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "PVR add-on. Schakel tenminste een add-on"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr "Geactiveerde PVR add-on. Schakel tenminste een add-on in"
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7679,7 +7891,7 @@ msgid "* All recordings"
 msgstr "* Alle opnames"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
+msgid "No PVR Add-ons could be found"
 msgstr "Er konden geen PVR add-ons gevonden worden"
 
 msgctxt "#19272"
@@ -7687,8 +7899,8 @@ msgid "You need a tuner, backend software, and an"
 msgstr "U heeft een tuner, backend software, en een"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "add-on voor de backend om PVR te kunnen gebruiken."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr "Add-on voor de backend om PVR te kunnen gebruiken."
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8429,6 +8641,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "en of de nieuwe mapnaam geldig is"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA-waardering:"
@@ -8631,6 +8844,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Feesten maar!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Waar"
@@ -8656,14 +8870,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Naar beginscherm gaan"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Weven"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Weven (omgekeerd)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Overgaan"
@@ -9164,6 +9381,7 @@ msgstr "Locaties vrijgeven"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Acteur"
@@ -9174,6 +9392,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Regisseur"
@@ -9218,6 +9437,7 @@ msgstr "als"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Regisseurs"
@@ -9263,6 +9483,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Seizoen %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Aflevering"
@@ -9270,6 +9491,7 @@ msgstr "Aflevering"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Afleveringen"
@@ -9286,6 +9508,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Serie uit bibliotheek verwijderen"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Serie"
@@ -9325,6 +9548,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Afbeelding van seizoen"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Seizoen"
@@ -9392,6 +9616,7 @@ msgstr "Onlangs toegevoegde afleveringen tv-series"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Filmstudio's"
@@ -9513,12 +9738,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Bezig met scannen naar nieuwe inhoud"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Eerst uitgez."
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Schrijver"
@@ -9548,10 +9774,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Altijd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Trailer"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Onwaar"
@@ -9671,6 +9899,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Wilt u doorgaan met scannen?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Landen"
@@ -9696,6 +9925,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Maak de hierarchie van de bibliotheek plat"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Filmsets"
@@ -9710,6 +9940,7 @@ msgstr "Groepeer films in sets"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Labels"
@@ -9965,50 +10196,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Animatie gebruiken bij schermovergang"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "bevat"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "bevat niet"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "is"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "is niet"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "begint met"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "eindigt met"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "groter dan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "kleiner dan"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "na"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "voor"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "in laatste"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "niet in laatste"
@@ -10143,26 +10386,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Titel afl."
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Videoresolutie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Audiokanalen"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Videocodec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Audiocodec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Audiotaal"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Ondertiteltaal"
@@ -10199,10 +10448,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Cache is vol voordat benodigde hoeveelheid is bereikt voor continu afspelen"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Externe opslag"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Aantal bekeken afleveringen"
@@ -10262,6 +10513,21 @@ msgstr "%d naar %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s naar %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr "Voorkeur voor externe ondertitels"
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr "Voorkeur voor externe ondertitels ten opzichte van interne"
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr "(extern)"
 
 msgctxt "#21800"
 msgid "File name"
@@ -10518,7 +10784,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Artiestinformatie downloaden"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Biografie"
@@ -10541,26 +10807,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Artiestinformatie"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instrumenten"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Geboren"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Gevormed"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Thema's"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Uit elkaar"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Gestorven op"
@@ -10569,6 +10841,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Periode"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Platenlabel"
@@ -11004,10 +11277,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Beschikbare updates"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Niet voldaan aan afhankelijkheden"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr "Afhankelijkheden komen niet overeen. Neem contact op met de Add-on auteur."
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11016,17 +11289,25 @@ msgstr "Add-on heeft niet de juiste structuur"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
+msgid "%s is used by the following installed Add-on(s)"
 msgstr "%s wordt gebruikt door volgende geinstalleerde add-on(s)"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Deze add-on kan niet verwijderd worden"
+msgid "This Add-on cannot be uninstalled"
+msgstr "Deze add-on kan niet worden verwijderd"
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Ongedaan maken"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr "Niet compatibel"
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Beschikbare add-ons"
@@ -11036,10 +11317,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Versie:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Disclaimer"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Licentie:"
@@ -11142,6 +11425,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Add-onmanager vastzetten"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr "Deze Add-on kan niet worden gedeactiveerd"
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11154,8 +11442,8 @@ msgstr "(geblacklist)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Add-on is gemarkeerd als niet werkend in het repository."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr "Add-on is niet compatibel of is gemarkeerd als niet werkend in het repository."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11192,6 +11480,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Skin mist enkele bestanden"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr "Add-on is niet compatibel vanwege onvervulde afhankelijkheden."
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr "Pauzeer wanneer er wordt gezocht naar ondertitels"
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr "Als de ondertitels niet worden opgeslagen in de filmmap dan worden de ondertitels gedownload naar een aangepaste ondertitelmap"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr "Zoeken naar ondertitels..."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr "%d ondertitels gevonden"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr "Geen ondertitels gevonden"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr "Downloaden ondertitels..."
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr "Talen van te downloaden ondertitels"
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr "Stel te gebruiken talen in wanneer er wordt gezocht naar ondertitels. Niet alle ondertitel diensten gebruiken alle talen."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr "Niet gelukt ondertitel te downloaden"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr "Geen ondertitel dienst geïnstalleerd"
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr "Sla ondertitels op in filmmap"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Mededelingen"
@@ -11220,22 +11572,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Titel\"%d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Selecteer afspeel item"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Bibliotheekmodus"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY-toetsenbordindeling "
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Passthrough audio in gebruik"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Trailerkwaliteit"
@@ -11301,8 +11658,8 @@ msgid "Clips"
 msgstr "Clips"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Herstart plugin om deze in te schakelen"
+msgid "Restart plug-in to enable"
+msgstr "Herstart Plug-in om te activeren"
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11687,9 +12044,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "Wanneer dit ingeschakeld is zal stilte gestuurd worden om de ontvanger 'wakker' te houden, in het andere geval stopt de geluidsuitvoer volledig bij inactiviteit."
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr "Selecteer het gedrag in wanneer geen geluid is vereist voor ofwel afspelen of GUI geluiden. [Altijd] - Doorlopend onhoorbaar signaal is uitgang, dit behoud het ontvangende geluidsapparaat beschikbaar voor alle nieuwe geluiden, Echter dit kan eveneens ook geluid van andere applicaties blokkeren. [1- 10 minuten] - Hetzelfde als altijd behalve na de geselecteerde periode of tijd wanneer geluid in en onderbroken staat gaat [uit] - Geluidsuitvoer in een onderbroken staat. opmerking - geluiden kunnen worden gemist als geluiden worden onderbroken."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11713,6 +12075,36 @@ msgstr "Altijd"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Nooit"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11855,6 +12247,11 @@ msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Zet joysticks uit wanneer die present zijn"
 
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr "Activeer systeem knoppen in volledig scherm"
+
 #: Unknown
 msgctxt "#35500"
 msgid "Location"
@@ -11940,7 +12337,7 @@ msgstr "Kon de COM poort niet detecteren. Stel het manueel in."
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36012"
 msgid "Could not initialise the CEC adaptor. Please check your settings."
-msgstr "Kon de CEC adapter niet initialiseren. Controleer je instellingen."
+msgstr "Kon de CEC adapter niet initialiseren. Controleer uw instellingen."
 
 #: system/peripherals.xml
 msgctxt "#36015"
@@ -12033,7 +12430,7 @@ msgstr "Deze gebruiker heeft geen toestemming om de CEC adapter te openen."
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36032"
 msgid "The port is busy. Only one program can access the CEC adaptor"
-msgstr "Deze poort is in gebruik. Slechts een programma tegelijkertijd kan toegang hebben tot de CEC adapter"
+msgstr "Deze poort is in gebruik. Slechts één programma tegelijkertijd kan toegang hebben tot de CEC adapter"
 
 #: system/peripherals.xml
 msgctxt "#36033"
@@ -12464,14 +12861,16 @@ msgstr "Audio moet gesynchroniseerd blijven: dit is mogelijk ofwel via 'resampli
 #: system/settings/settings.xml
 msgctxt "#36168"
 msgid "Maximum video speed adjust to match actual screen refresh rate."
-msgstr "Pas de maximum videosnelheid aan gelijk aan de actuele beeldschermverversingssnelheid "
+msgstr "Maximale aanpassing van de videosnelheid aan de actuele beeldschermverversingssnelheid."
 
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Kwaliteit van geluidsaanpassing door re-sampling. Lage kwaliteit is snel, hogere kwaliteit zal meer CPU gebruiken. "
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr "Selecteer de kwaliteit van resampling voor gevallen waarbij de audio-uitvoer op een andere sampling rate moet zijn dan die gebruikt door de bron. [laag] is snel en heeft weinig invloed op systeembronnen zoals het gebruik van de processor, [gemiddeld] & [hoog] Zal geleidelijk meer systeembronnen gebruiken."
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12664,8 +13063,8 @@ msgstr "Nog geen informatie beschikbaar."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "Zet de Personal Video Recorder (PVR) features aan in XBMC. Dit vereist dan minstens één PVR add-on geïnstalleerd is."
+"that at least one PVR Add-on is installed."
+msgstr "Activeer de personal Video Recorder (PVR) functies in XBMC. dit vereist dat minstens één PVR Add-on is geïnstalleerd."
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12814,7 +13213,7 @@ msgstr "Toon het laatstbekeken kanaal bij het schakelen naar Live TV."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
+"supported by the Add-on and backend)."
 msgstr "Toon signaalkwaliteitsinformatie in het codec informatiescherm (indien ondersteund door de add-on en back-end)."
 
 #: system/settings/settings.xml
@@ -12850,29 +13249,29 @@ msgstr "Duurtijd van de opname wanneer de opnameknop ingedrukt wordt, of wanneer
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "Prioriteit van de opname. Een hoger getal betekent een hogere prioriteit. Standaard 50. Niet ondersteund door alle add-ons en back-ends."
+"50. Not supported by all Add-ons and backends."
+msgstr "Prioriteit van de opname. Een hoger getal betekent een hogere prioriteit. Standaard op 50. Niet ondersteund door alle add-ons en back-ends."
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "Verwijder opname automatisch na deze tijd. Standaard 99 dagen. Niet ondersteund door alle add-ons en back-ends."
+"Add-ons and backends."
+msgstr "Verwijder opname automatisch na deze tijd. Standaard op 99 dagen. Niet ondersteund door alle add-ons en back-ends."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "Start opnames voor de eigenlijke starttijd. Standaard 2 minuten. Niet ondersteund door alle add-ons en back-ends."
+"supported by all Add-ons and backends."
+msgstr "Start opnames voor de eigenlijke starttijd. Standaard op 2 minuten. Niet ondersteund door alle add-ons en back-ends."
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "Beëindig opnames na de eigenlijke eindtijd. Standaard 10 minuten later. Niet ondersteund door alle add-ons en back-ends."
+"by all Add-ons and backends."
+msgstr "Beëindig opnames na de eigenlijke tijd. Standaard op 10 minuten. Niet ondersteund door alle add-ons en back-ends."
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13562,13 +13961,21 @@ msgstr "Nog geen informatie beschikbaar."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Type verbinding naar de audio uitrusting."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr "Selecteer hoe de eigenschappen van de geluidsuitvoer zijn ingesteld: [Vast] - uitvoer eigenschappen zijn ingesteld naar de gespecificeerde sampling rate & speaker configuratie ten alle tijde; [Beste overeenkomst] - uitvoereigenschappen zijn zo ingesteld dat ze altijd zo dicht mogelijk overeenkomen met de broneigenschappen als mogelijk; [Geoptimaliseerd] - uitvoereigenschappen zijn ingesteld bij het begin van afspelen en zullen niet veranderen als de eigenschappen van de bron veranderen."
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Selecteer uw fysische luidspreker layout."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr "Selecteer het maximum aantal geluidskanalen/speakers beschikbaar voor gedecodeerde geluiden."
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13578,9 +13985,9 @@ msgstr "Versterk AC3 geluid dat gedownmixt werd naar 2 kanalen."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Upmix 2-kanaals stereo bronnen zodat het aantal audiokanalen gelijk is aan het aantal luidsprekers."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr "Selecteer om upmixing te activeren van 2-kanaals stereobronnen naar het aantal geluidskanalen gespecificeerd door de speaker configuratie."
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13594,17 +14001,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Kies deze optie als uw ontvanger DTS digitaal geluid kan decoderen."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Kies deze optie als uw ontvanger AAC digitaal geluid kan decoderen."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr "Selecteer het maximum aantal geluidskanalen/speakers beschikbaar voor gedecodeerde geluiden. Als optische/coax digitale uitgangen worden gebruikt moet dit worden ingesteld op 2.0"
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Kies deze optie als uw ontvanger LPCM digitaal geluid kan decoderen."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr "Selecteer om doorvoer geluidsopties voor afpelen van gecodeerde audio zoals Dolby Digital te activeren."
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13621,16 +14030,16 @@ msgstr "Kies deze optie als uw ontvanger DTS-HD digitaal geluid kan decoderen."
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Selecteer het apparaat waarmee door XBMC gedecodeerd geluid zoals MP3's en FLAC moet afgespeeld worden."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr "Selecteer het apparaat dat moet worden gebruikt voor het afspelen van gedecodeerd geluid zoals MP3"
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Selecteer het apparaat waarmee gecodeerde geluidsformaten moeten afgespeeld worden. De formaten zijn diegene die aangevinkt zijn hierboven in de 'geschikte ontvanger' opties."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr "Selecteer het apparaat dat moet worden gebruikt voor het afspelen van gecodeerde formaten. Dit zijn alle formaten genoemd in de 'capabele ontvanger' opties."
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13901,6 +14310,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Schakel Hardware video decodering in met gebruik van AMLogic decoder"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr "Gebruik ffmpeg frame multi-thread decoderen wanneer hardware decodering niet werkt of is gedeactiveerd. (Minder betrouwbaar dan de standaard single thread modus)"
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Stereoscopische modus (huidig)"
@@ -13915,12 +14331,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Geen"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Boven/Onder"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Naast elkaar"
@@ -13964,6 +14380,13 @@ msgstr "Vraag"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Voorkeursmodus gebruiken"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr "Maximum sampling rate voor spdif of sampling rate voor vaste uitvoer configuratie"
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14010,12 +14433,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Zelfde als film"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr "Selecteer hoe geluid wordt gedownmixed. als voorbeeld van 5.1 naar 2.0: [Geactiveerd] behoudt het dynamische bereik van de originele geluidsbron wanneer er wordt gedownmixed, echter volume zal lager zijn [Gedeactiveerd] behoudt het volumeniveau van de originele geluidsbron echter het dynamische bereik is gecomprimeerd. Opmerking - dynamisch bereik is het verschil tussen de zachtste en hardste geluiden in een geluidsbron."
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Stereoscopische modus van video"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Stereoscopische modus omgekeerd"
@@ -14048,7 +14484,7 @@ msgstr "Laat toe om het volume aan te passen van AirPlay clients."
 #: system/settings/rbp.xml
 msgctxt "#36542"
 msgid "Output to both analogue (headphones) and HDMI"
-msgstr "Uitzenden naar zowel analoog (koptelefoon) als HDMI"
+msgstr "Uitvoeren naar zowel analoog (koptelefoon) als HDMI"
 
 #: system/settings/rbp.xml
 msgctxt "#36543"
@@ -14111,9 +14547,16 @@ msgstr "Kies deze optie als uw receiver (versterker) in staat is om E-AC3 digita
 #: system/settings/rbp.xml
 msgctxt "#37017"
 msgid "Dual audio output"
-msgstr "Tweezijdige Geluidsuitvoer"
+msgstr "Dubbele Geluidsuitvoer"
 
 #: system/settings/rbp.xml
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Boost middenkanaal bij downmixen"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr "Activeer systeemknoppen zoals Printscreen, Alt-tab en volumeknoppen bij volledig scherm"

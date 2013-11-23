@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-11-16 07:37+0000\n"
+"PO-Revision-Date: 2013-11-19 19:10+0000\n"
 "Last-Translator: huwwaters <huwwaters@gmail.com>\n"
 "Language-Team: Welsh (http://www.transifex.com/projects/p/xbmc-main/language/cy/)\n"
 "MIME-Version: 1.0\n"
@@ -461,7 +461,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Dileu'r ffeiliau? - Nid oes modd dadwneud hyn!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Statws"
@@ -493,6 +493,7 @@ msgstr "Dangosydd"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Album"
@@ -501,6 +502,7 @@ msgstr "Album"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Artistiaid"
@@ -684,10 +686,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Dangos fideo 4:3 fel"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Hwyliau"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Arddulliau"
@@ -697,7 +701,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Cân"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Hyd"
@@ -711,7 +715,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Traciau"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Adolygiadau"
@@ -784,14 +788,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Rhyngwyneb gwe"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Llinell tag"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Amlinelliad y stori"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Pleidleisiau"
@@ -800,6 +807,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Cast"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Plot"
@@ -821,7 +829,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Calibro rhyngwyneb y defnyddiwr..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Calibro'r fideo..."
@@ -830,10 +838,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Meddalu"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Maint y chwyddo"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Cymhareb picseli"
@@ -870,6 +880,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Cyflymder"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Symud fertigol"
@@ -897,7 +908,8 @@ msgid "Video filters"
 msgstr "Hidlau fideo"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Dim"
@@ -1181,11 +1193,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Nodau Tudalen"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "Derbynnydd AAC galluog"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "Derbynnydd MP1 galluog"
@@ -1327,18 +1334,18 @@ msgstr "Trosi'r raddfa fframiau"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Allbwn sain"
+msgid "Output configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analog"
+msgid "Fixed"
+msgstr "Sefydlog"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Optegol/Coax"
+msgid "Optimized"
+msgstr ""
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1360,6 +1367,7 @@ msgstr "Newid graddfa ffrâm"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Actorion"
@@ -1370,8 +1378,8 @@ msgstr "Blwyddyn"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Codi lefel sain wrth gymysgu i lawr"
+msgid "Normalize levels on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1380,7 +1388,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
+msgid "Enable passthrough"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -1454,7 +1462,7 @@ msgstr "Trefnu: Ffeil"
 #: system/settings/settings.xml
 msgctxt "#364"
 msgid "Dolby Digital (AC3) capable receiver"
-msgstr ""
+msgstr "Derbynnydd Dolby Digital (AC3) galluog"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1709,12 +1717,12 @@ msgstr "Uchel"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
+msgid "Keep audio device alive"
 msgstr ""
 
 msgctxt "#422"
@@ -1866,6 +1874,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Newid golwg"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Subs"
@@ -1886,14 +1899,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Golau cefn"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Disgleirdeb"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Cyferbyniad"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gamma"
@@ -2065,6 +2081,7 @@ msgstr "Gosodiadau â llaw"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Math"
@@ -2218,7 +2235,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Maint"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Trac"
@@ -2227,24 +2244,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Amser"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Teitl"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Artist"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Albwm"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Rhestr Chwarae"
@@ -2253,6 +2273,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "Enw"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Ffeil"
@@ -2262,16 +2283,17 @@ msgstr "Ffeil"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Blwyddyn"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Graddio"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Math"
@@ -2280,47 +2302,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Defnydd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Artist albwm"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Cyfrif chwarae"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Chwarae diwethaf"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Sylw"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Dyddiad ychwanegwyd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Rhagosodiad"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Stiwdio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Llwybr"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Gwlad"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Cynnydd"
@@ -2373,6 +2401,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Modd parti"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Hap"
@@ -2501,34 +2530,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Modd gweld"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normal"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Chwyddo"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Ymestyn 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Chwyddo Llydan"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Ymestyn 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Maint Gwreiddiol"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Cyfaddas"
@@ -2602,6 +2634,7 @@ msgid "Browse for library"
 msgstr "Pori am lyfrgell"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Blynyddoedd"
@@ -2631,6 +2664,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Gwybodaeth am gan"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Ymestyniad anllinynol"
@@ -2849,6 +2883,7 @@ msgid "Mirror image"
 msgstr "Delwedd drych"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Ydych chi'n siŵr?"
@@ -3287,8 +3322,8 @@ msgid "Program Add-ons"
 msgstr "Ychwanegion Rhaglenni"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Gosod ategyn llun bach"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3957,30 +3992,32 @@ msgid "Reset"
 msgstr "Ailosod"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr ""
+msgid "Basic"
+msgstr "Sylfaenol"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr ""
+msgid "Standard"
+msgstr "Safonnol"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr ""
+msgid "Advanced"
+msgstr "Uwch"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr ""
+msgid "Expert"
+msgstr "Arbenigwr"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
+msgid "Reset above settings to default"
 msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr ""
@@ -3992,6 +4029,21 @@ msgstr "Cymorth"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Dim cymorth ar gael"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr "Dim categorïau ar gael"
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4207,66 +4259,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Ailadeiladu mynegai..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Dychwelyd i'r ffenestr cerddoriaeth"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Dychwelyd i'r ffenestr fideo"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Cychwyn o'r cychwyn"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Ailgychwyn o %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Iawn"
@@ -4276,6 +4346,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Wedi cloi! Rhowch y cod..."
@@ -4285,14 +4356,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Rhowch y cyfrinair"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Rhowch y prif gyfrinair"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Rhowch y cod datgloi"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "neu pwyso C i ddiddymu"
@@ -4326,14 +4400,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Tynnu clo"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Cyfrinair rhifol"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Cyfuniad botwm pad chwarae"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Cyfrinair testun llawn"
@@ -4363,18 +4440,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Nid yw'r cyfrineiriau'n cydfynd."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Mynediad wedi ei wrthod"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Dim cais cyfrinair pellach."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "Bydd y system nawr yn cau."
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Eitem wedi ei gloi"
@@ -4424,30 +4505,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Roedd y cyfrinair yn wag. Ceisio eto."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Prif glo"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Cau'r system os fydd ceisio agor y Prif Glo yn rhy niferus"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Nid yw'r prif god yn ddilys"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Rhowch prif god dilys"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Rheolwr gosodiadau a ffeiliau"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Gosod fel y rhagosodedig ar gyfer pob fideo"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Bydd hyn yn ailosod urhyw werthoedd cadwyd yn flaenorol"
@@ -4462,18 +4552,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Defnyddio effeithiau chwyddo a throi"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "Cloc 12 awr"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "Cloc 24 awr"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Diwrnod/Mis"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Mis/Diwrnod"
@@ -4483,14 +4577,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "System ar waith ers"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Munud"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Awr"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Diwrnod"
@@ -4525,18 +4622,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "System"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Diffodd y disc caled yn syth"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Fideo'n unig"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Oedi"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Lleiafswm amser ffeil"
@@ -4566,10 +4667,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Oedi"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Gadael"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Ailgychwyn"
@@ -4579,42 +4682,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr ""
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Gweithred botwm pŵer"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Diffodd y System"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Atal cau wrth oedi"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Caniatáu cau wrth oedi"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Oes sesiwn arall yn fyw, ar draws ssh efallai?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Disg caled tynadwy arosodedig"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Tynnu dyfais anniogel"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Tynnu dyfais yn llwyddianus"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Ffon hwyl wedi ei gysylltu"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Ffon hwyl wedi ei ddatgysylltu"
@@ -4674,10 +4787,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr ""
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Mae'r batri'n rhedeg yn isel"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Hidl Flicker"
@@ -4707,26 +4822,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Galluogwyd bob amser"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Profi a gosod cydraniad"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Cadw'r cydraniad?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Hoffech chi gadw'r cydraniad hwn?"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Uwchraddio ansawdd uchel"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Analluogwyd"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Galluogwyd ar gyfer cynnwys sd"
@@ -4747,14 +4868,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "Lefel Uwchraddio VDPAU HQ"
@@ -4764,43 +4888,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr ""
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Gwagio dangosyddion eraill"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Anablwyd"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Dangosyddion gwag"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Canfuwyd cysylltiadau byw!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Os ewch yn eich blaen, efallai na fydd modd i chi reoli XBMC"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "ymhellach. Ydych ch'n siŵr eich bod am atal y gweinydd Event?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Newid modd Apple Remote?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Os ydych yn defnyddio Apple Remote i reoli XBMC,"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr " bydd newid y gosodiad hwn o bosib yn effeithio"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr " ar eich gallu i barhau i'w reoli. Hoffech chi barhau?"
@@ -4820,38 +4957,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "DNS Cynradd"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr ""
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Byth"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Nawr"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Wedi %i eiliad"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "Dyddiad gosod HDD:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "Cyfrif cylch pŵer HDD:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Proffiliau"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Diweddaru proffil '%s'?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Proffil diwethaf lwythwyd:"
@@ -5399,6 +5545,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(Graddio defnyddwyr IMDb)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "250 Gorau"
@@ -5430,20 +5577,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Dull rendro"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Awto ganfod"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Cysgodwyr sylfaenol (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Cysgodwyr uwch (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Meddalwedd"
@@ -5500,7 +5649,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Caniatáu cyflymu caledwedd (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Cysgodwyr picseli"
@@ -5543,6 +5692,10 @@ msgstr ""
 
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
+msgstr ""
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -5645,6 +5798,14 @@ msgstr "%.1f Eiliad"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Eiliad"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d Munud"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d Munud"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6291,23 +6452,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Rhowch llinyn chwilio"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Dim"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Awtoddewis"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Dadgydblethiad"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (yn groes)"
@@ -6362,6 +6527,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Rhestr chwarae'r modd parti"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Dadgydblethiad (Hanner)"
@@ -6370,18 +6536,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Dadgydblethiad fideo"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Dull dadgydblethu"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Diffodd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Awto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Ymlaen"
@@ -6411,7 +6581,7 @@ msgid "Edit title"
 msgstr "Golygu teitl"
 
 msgctxt "#16106"
-msgid "Manage ..."
+msgid "Manage..."
 msgstr ""
 
 msgctxt "#16107"
@@ -6453,110 +6623,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Methwyd dileu o leiaf un ffeil"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Dull graddio fideo"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Cymydog agosaf"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Deulinell"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Deugiwbig"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Deugiwbig (meddalwedd)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (meddalwedd)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (meddalwedd)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Amserol"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Amserol/Gofodol"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU)Lleihau Sain"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU)Miniogrwydd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Telcine yn groes"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Awto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Amserol (Hanner)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Amserol/Gofodol (Hanner)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Gorau"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Cymysgedd Meddalwedd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr ""
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Ôl-brosesu"
@@ -6982,6 +7179,21 @@ msgstr "Rhowch enw i'r recordiad"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Rhybudd"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr "Gwasanaeth"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Darparwr"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7465,9 +7677,9 @@ msgstr "Amserlenydd Fideo Personol"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "Nid oedd modd galluogi ychwanegion Recordydd. Gwiriwch eich gosodiadau neu gofnod am ragor o wybodaeth."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7514,7 +7726,7 @@ msgstr "Hysbysu am ddiweddaru amseryddion"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
 msgstr ""
 
 msgctxt "#19235"
@@ -7538,16 +7750,16 @@ msgid "Starting background threads"
 msgstr "Cychwyn trywyddau cefndirol"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "Dim ychwanegion Recordydd wedi eu galluogi"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "Mae'r rheolwr Recordydd wedi ei alluogi heb unrhyw ychwanegyn"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "Recordydd wedi ei alluogi. Galluogwch o leiaf un"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7674,16 +7886,16 @@ msgid "* All recordings"
 msgstr "* Pob recordiad"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "Heb ganfod ychwanegion Recordydd"
+msgid "No PVR Add-ons could be found"
+msgstr ""
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "Mae angen tiwniwr, meddalwedd offer cefn ac"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "ychwanegyn ar gyfer y offer cefn er mwyn defnyddio'r Recordydd."
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8424,6 +8636,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "a bod enw'r ffolder newydd yn ddilys"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "Graddio MPAA"
@@ -8626,6 +8839,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Partiwch!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Gwir"
@@ -8651,14 +8865,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Mynd i'r gwraidd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Gwead"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Gwead (o chwith)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Cymysgedd"
@@ -9159,6 +9376,7 @@ msgstr "Datgloi'r ffynonellau"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Actor"
@@ -9169,6 +9387,7 @@ msgstr "Ffilm"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Cyfarwyddwr"
@@ -9213,6 +9432,7 @@ msgstr "fel"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Cyfarwyddwyr"
@@ -9258,6 +9478,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Tymor %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Rhifyn"
@@ -9265,6 +9486,7 @@ msgstr "Rhifyn"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Rhifynnau"
@@ -9281,6 +9503,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Tynnu rhaglen deledu o'r llyfrgell"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Rhaglen deledu"
@@ -9320,6 +9543,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Delwedd y tymor"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Tymor"
@@ -9387,6 +9611,7 @@ msgstr "Rhifynau ychwanegwyd yn ddiweddar"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Studios"
@@ -9508,12 +9733,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Sganio am gynnwys newydd"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Darlledwyd gyntaf"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Awdur"
@@ -9543,10 +9769,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Bob tro"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Hysbysiad ar gael"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Gau"
@@ -9666,6 +9894,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Hoffech chi barhau i sganio?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Gwledydd"
@@ -9691,6 +9920,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr ""
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Set ffilmiau"
@@ -9705,6 +9935,7 @@ msgstr "Grwpio ffilmiau mewn setiau"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Tagiau"
@@ -9960,50 +10191,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Defnyddio animeiddiad tween"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "yn cynnwys"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "nad yw'n cynnwys"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "yn"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "nad yw"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "cychwyn gyda"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "gorffen gyda"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "mwy na"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "llai na"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "wedi"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "cyn"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "yn yr olaf"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "nad yw yn yr olaf"
@@ -10138,26 +10381,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Teitl rhifyn"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Cydraniad fideo"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Sianeli sain"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Codec fideo"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Codec sain"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Iaith sain"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Iaith isdeitlau"
@@ -10194,17 +10443,19 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Mae'r storfa wedi ei llanw cyn cyrraedd yr hyn sy'n angenrheidiol ar gyfer chwarae"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Gofod Storio Allanol"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Cyfrif rhifyn gwyliwyd"
 
 msgctxt "#21458"
 msgid "Group by"
-msgstr ""
+msgstr "Grwpio yn ôl"
 
 msgctxt "#21459"
 msgid "mixed"
@@ -10257,6 +10508,21 @@ msgstr "%d i %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s i %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10513,7 +10779,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Llwytho i lawr gwybodaeth am artistiaid"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Bywgraffiad"
@@ -10536,26 +10802,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Gwybodaeth am artist"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Offerynau"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Ganed"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Ffurfiwyd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Themâu"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Gwahanwyd"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Marw"
@@ -10564,6 +10836,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Blynyddoedd gweithredol"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Label"
@@ -10999,10 +11272,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Diweddariadau ar Gael"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Dibyniaethau heb eu bodloni"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11011,17 +11284,25 @@ msgstr "Nid oes gan yr Ychwanegyn y strwythur cywir"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "Mae %s yn cael ei ddefnyddio gan yr ychwanegyn canlynol"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Nid oes modd dadosod yr ychwanegyn hwn"
+msgid "This Add-on cannot be uninstalled"
+msgstr ""
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Camu nôl"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Ychwanegion ar Gael"
@@ -11031,10 +11312,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Fersiwn:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Gwadiad"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Trwydded:"
@@ -11137,6 +11420,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Cloi rheolwr Ychwanegion"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr ""
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11149,8 +11437,8 @@ msgstr "(negyddol)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Mae'r Ychwanegyn wedi ei nodi ei fod wedi torri yn y storfa."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11187,6 +11475,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Mae rhai ffeiliau ar goll yn y croen"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr ""
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Hysbysiadau"
@@ -11215,22 +11567,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Teitl: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Dewis eitem chwarae nôl"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Modd llyfrgell"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "Bysellfwrdd QWERTY"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Yn defnyddio Sain Trwodd"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Ansawdd hysbysiad"
@@ -11296,8 +11653,8 @@ msgid "Clips"
 msgstr "Clipiau"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Ailgychwyn ategyn i'w alluogi"
+msgid "Restart plug-in to enable"
+msgstr ""
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11617,12 +11974,12 @@ msgstr "Flac"
 #: system/settings/settings.xml
 msgctxt "#34006"
 msgid "MPEG-4 Audio (FFmpeg M4A AAC)"
-msgstr ""
+msgstr "Sain MPEG-4 (FFmpeg M4A AAC)"
 
 #: system/settings/settings.xml
 msgctxt "#34007"
 msgid "Windows Media Audio 2 (FFmpeg wmav2)"
-msgstr ""
+msgstr "Sain Windows Media 2 (FFmpeg wmav2)"
 
 #: system/settings/settings.xml
 msgctxt "#34100"
@@ -11682,8 +12039,13 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -11708,6 +12070,36 @@ msgstr "Pob tro"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Byth"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11848,6 +12240,11 @@ msgstr "Galluogi cynnal ffon hwyl a pad gemau"
 #: system/peripherals.xml
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
 msgstr ""
 
 #: Unknown
@@ -12464,8 +12861,10 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12659,7 +13058,7 @@ msgstr "Dim gwybodaeth ar gael ar hyn o bryd."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
+"that at least one PVR Add-on is installed."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12809,7 +13208,7 @@ msgstr ""
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
+"supported by the Add-on and backend)."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -12845,28 +13244,28 @@ msgstr ""
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
+"Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
+"supported by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
+"by all Add-ons and backends."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13557,12 +13956,20 @@ msgstr "Dim gwybodaeth ar gael ar hyn o bryd."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13573,8 +13980,8 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13589,16 +13996,18 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr ""
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13616,15 +14025,15 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
 msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -13896,6 +14305,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr ""
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr ""
@@ -13910,12 +14326,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Dim"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Trosodd/Tanodd"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr ""
@@ -13958,6 +14374,13 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36522"
 msgid "Use preferred mode"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -14005,12 +14428,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr ""
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr ""
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr ""
@@ -14111,4 +14547,11 @@ msgstr "Allbwn sain ddeuol"
 #: system/settings/rbp.xml
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
 msgstr ""

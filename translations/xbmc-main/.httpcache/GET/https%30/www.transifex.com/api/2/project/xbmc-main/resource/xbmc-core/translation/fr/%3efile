@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-10-16 12:30+0000\n"
+"PO-Revision-Date: 2013-11-22 16:40+0000\n"
 "Last-Translator: mikebzh44 <mikael.bertho@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/xbmc-main/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -477,7 +477,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Supprimer ces fichiers ? Ceci sera définitif !"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Statut"
@@ -509,6 +509,7 @@ msgstr "Affichage"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albums"
@@ -517,6 +518,7 @@ msgstr "Albums"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Artistes"
@@ -700,10 +702,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Affichage 4:3"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Humeurs"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Styles"
@@ -713,7 +717,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Chanson"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Durée"
@@ -727,7 +731,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Pistes"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Revue"
@@ -800,14 +804,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Interface Web"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Accroche"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Intrigue"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Votes"
@@ -816,6 +823,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Casting"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Résumé"
@@ -837,7 +845,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Calibrer l'interface utilisateur..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Étalonnage de l'écran..."
@@ -846,10 +854,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Adoucir"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Niveau de Zoom"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Rapport largeur/hauteur"
@@ -886,6 +896,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Vitesse"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Hauteur de l'image"
@@ -913,7 +924,8 @@ msgid "Video filters"
 msgstr "Filtres Vidéo"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Aucun"
@@ -1197,11 +1209,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Signets"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "récepteur compatible AAC"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "récepteur compatible MP1"
@@ -1343,18 +1350,18 @@ msgstr "Conversion du taux de rafraîchissement"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Sortie audio"
+msgid "Output configuration"
+msgstr "Configuration de la sortie"
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analogue"
+msgid "Fixed"
+msgstr "Fixe"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Numérique"
+msgid "Optimized"
+msgstr "Optimisé"
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1376,6 +1383,7 @@ msgstr "Ajuster le taux de rafraîchissement"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Acteurs"
@@ -1386,8 +1394,8 @@ msgstr "Année"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Amplifier le volume lors du démultiplexage"
+msgid "Normalize levels on downmix"
+msgstr "Normalise le volume lors du démultiplexage"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1396,8 +1404,8 @@ msgstr "récepteur compatible DTS-HD"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "récepteur compatible  LPCM multicanaux"
+msgid "Enable passthrough"
+msgstr "Activer le passthrough"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1725,13 +1733,13 @@ msgstr "Max."
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr "Meilleure correspondance"
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Silence quand inactif"
+msgid "Keep audio device alive"
+msgstr "Garde le périphérique audio actif"
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1882,6 +1890,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Changer de vue"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr "Limiter le taux d'échantillonnage (kHz)"
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Sous-titres"
@@ -1902,14 +1915,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Contre-jour"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Luminosité"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Contraste"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gamma"
@@ -2081,6 +2097,7 @@ msgstr "Paramètres manuels"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Genre"
@@ -2234,7 +2251,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Taille"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Piste"
@@ -2243,24 +2260,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Durée"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Titre"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Artiste"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Playliste"
@@ -2269,6 +2289,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "ID"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Fichier"
@@ -2278,16 +2299,17 @@ msgstr "Fichier"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Année"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Intérêt"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Type"
@@ -2296,47 +2318,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Utilisation"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Artiste de l'album"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Comptabilisation des lectures"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Dernière lecture"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Commentaire"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Ajouté le"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Défaut"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Studio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Chemin"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Pays"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "En cours"
@@ -2389,6 +2417,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Mix de soirée"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Aléatoire"
@@ -2517,34 +2546,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Type de vue"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normale"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Agrandissement"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Étirée 4:3"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Étirée 14:9"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Étirée 16:9"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Taille Originale"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Personnalisé"
@@ -2618,6 +2650,7 @@ msgid "Browse for library"
 msgstr "Rechercher une médiathèque"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Années"
@@ -2647,6 +2680,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Information de la chanson"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Étirement non-linéaire"
@@ -2865,6 +2899,7 @@ msgid "Mirror image"
 msgstr "Refléter l'image"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Êtes-vous sûr(e) ?"
@@ -3303,8 +3338,8 @@ msgid "Program Add-ons"
 msgstr "Extensions programme"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Choisir une vignette plugin"
+msgid "Set plug-in thumb"
+msgstr "Choisir une vignette plug-in"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3973,30 +4008,32 @@ msgid "Reset"
 msgstr "Réinitialiser"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Niveau : Basique"
+msgid "Basic"
+msgstr "Basique"
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Niveau : Standard"
+msgid "Standard"
+msgstr "Standard"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Niveau : Avancé"
+msgid "Advanced"
+msgstr "Avancé"
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Niveau : Expert"
+msgid "Expert"
+msgstr "Expert"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Extension navigateur"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Réinitialiser les préférences"
+msgid "Reset above settings to default"
+msgstr "Réinitialiser toutes les préférences ci-dessus aux valeurs par défaut"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Êtes-vous sûr de vouloir réinitialiser les paramètres de cette catégorie?"
@@ -4008,6 +4045,21 @@ msgstr "Aide"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Pas d'aide disponible"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr "Réinitialiser toutes les préférences visibles aux valeurs par défaut."
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr "Aucune catégorie disponible"
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr "Essayez de changer le niveau de paramètres pour voir d'autres catégories et paramètres."
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4223,66 +4275,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Reconstruire l'index..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Revenir à l'écran musique"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Revenir à l'écran vidéos"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Reprendre depuis le début"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Reprendre depuis %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Ok"
@@ -4292,6 +4362,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Verrouillé ! Entrer le code"
@@ -4301,14 +4372,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Indiquer le mot de passe"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Indiquer le code Administrateur"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Indiquer le code de déverrouillage"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "ou appuyez sur C pour annuler"
@@ -4342,14 +4416,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Désactiver le verrouillage"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Mot de passe numérique"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Combinaison de boutons"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Mot de passe texte"
@@ -4379,18 +4456,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Les mots de passe saisis ne correspondent pas."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Accès refusé"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Dépassement du nombre d'essais autorisés."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
+msgid "The system will now power down."
 msgstr "Le système va maintenant s'éteindre."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Sécurisé"
@@ -4440,30 +4521,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Le mot de passe saisi est vide. Recommencez."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Verrou administrateur"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Éteindre le système après trop de tentatives"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Le code Administrateur n'est pas valide"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Merci d'entrer un code Administrateur valide"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Paramètres & Fichiers"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Définir par défaut pour toutes les vidéos"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Les configurations précédentes serons perdues"
@@ -4478,18 +4568,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Utiliser les effets Pan et Zoom"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "Horloge mode 12 Heures"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "Horloge mode 24 Heures"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Jour/Mois"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Mois/Jour"
@@ -4499,14 +4593,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Système démarré depuis "
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "minutes"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "heures"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "jours"
@@ -4541,18 +4638,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Système"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Ralentissement immédiat du DD"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Vidéo seulement"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Délai"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Durée minimale du fichier"
@@ -4582,10 +4683,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Suspendre"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Sortir"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Redémarrer"
@@ -4595,42 +4698,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Minimiser"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Action du bouton Power"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Arrêt du système"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Désactiver l'arrêt sur inactivité"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Autoriser l'arrêt sur inactivité"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Une autre session est en cours, peut être en ssh ?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Disque dur externe monté"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Déconnexion non sécurisée du périphérique"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Périphérique déconnecté avec succès"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Manette connectée"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Manette déconnectée"
@@ -4690,10 +4803,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Échoué pour %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Batterie faible"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Filtre de scintillement"
@@ -4723,26 +4838,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Toujours activé"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Tester & appliquer la résolution"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Appliquer cette résolution ?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Voulez-vous conserver cette résolution ?"
+msgid "Would you like to keep this change?"
+msgstr "Voulez-vous conserver ce changement ?"
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Conversion en définition supérieure Haute Qualité"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Désactivé"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "Activé pour contenu SD"
@@ -4763,14 +4884,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU niveau Upscaling HQ"
@@ -4780,43 +4904,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "Conversion des niveaux de couleurs VDPAU"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr "Garder le thème ?"
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "Vider les autres écrans"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Désactivé"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Vider l'écran"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Connexions actives détectées !"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "En continuant, vous ne serez plus en mesure de"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr " contrôler XBMC. Êtes-vous sûr d'arrêter le serveur ?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Changer le mode de la télécommande Apple ?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "En cas d'utilisation de la télécommande Apple pour contrôler"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "XBMC, le changement de ce paramètre peut affecter"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "ce contrôle. Appliquer la modification ?"
@@ -4836,38 +4973,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "DNS Primaire "
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "L'initialisation a échoué"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Jamais"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Immédiatement"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "Après %i secs"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD Installé le :"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "Disque dur Nb. de cycles marche/arrêt complets :"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profils"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Supprimer le profil '%s' ?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Dernier profil chargé :"
@@ -5415,6 +5561,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(Note Spectateurs IMDb)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250 :"
@@ -5446,20 +5593,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Méthode de rendu"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Détection auto"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Shaders Basiques (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Shaders Avancés (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Logiciel"
@@ -5516,7 +5665,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Activer l'accélération matérielle (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixel Shaders"
@@ -5560,6 +5709,10 @@ msgstr "Autoriser l'accélération matérielle (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Autoriser l'accélération matérielle (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr "Décodage vidéo multi thread (moins fiable)"
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5661,6 +5814,14 @@ msgstr "%.1f Seconde"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f Secondes"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr "%d Minute"
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr "%d Minutes"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6307,23 +6468,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Saisissez le nom de votre recherche"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Aucun"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Sélection automatique"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Désentrelacement"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (inversé)"
@@ -6378,6 +6543,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Playliste Mix de soirée"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Désentrelacement (moitié)"
@@ -6386,18 +6552,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Désentrelacement vidéo"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "Méthode de désentrelacement"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Off"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Automatique"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "On"
@@ -6427,8 +6597,8 @@ msgid "Edit title"
 msgstr "Éditer le titre"
 
 msgctxt "#16106"
-msgid "Manage ..."
-msgstr "Gérer ..."
+msgid "Manage..."
+msgstr "Gérer..."
 
 msgctxt "#16107"
 msgid "Edit sort title"
@@ -6469,110 +6639,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Échec de la suppression d'un ou plusieurs fichiers"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Méthode de mise à l'échelle"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "La plus proche"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinéaire"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubique"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubique (logiciel)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (logiciel)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (logiciel)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Temporel"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Temporel/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU) Réduction bruit"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU) Netteté"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Téléciné inversé"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Optimisation Lanczos3"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Automatique"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Temporel (Demi)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Temporel/Spatial (Demi)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "Meilleur DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Optimisation Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Mélange logiciel"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Après traitement Vidéo"
@@ -6998,6 +7195,21 @@ msgstr "Nommer l'enregistrement"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Attention"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr "Service"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr "Fournisseur"
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7481,7 +7693,7 @@ msgstr "Guide des Programmes"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
 msgstr "Impossible d'activer une extension d'Enregistreur Vidéo. Vérifiez le journal pour plus de détails."
 
@@ -7530,7 +7742,7 @@ msgstr "Afficher à la mise à jour de la minuterie"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
 msgstr "Utiliser les N° de chaînes du serveur (seulement si 1 extension PVR active)"
 
 msgctxt "#19235"
@@ -7554,7 +7766,7 @@ msgid "Starting background threads"
 msgstr "Démarrage des services d'arrière-plan"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
+msgid "No PVR Add-on enabled"
 msgstr "Pas d'extension d'Enregistreur Vidéo activée"
 
 msgctxt "#19241"
@@ -7562,7 +7774,7 @@ msgid "The PVR manager has been enabled without any"
 msgstr "Le gestionnaire d'Enregistreur Vidéo a été activé sans"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
 msgstr "qu'une extension d'enregistrement ne le soit. Activez-en au moins une "
 
 msgctxt "#19243"
@@ -7690,7 +7902,7 @@ msgid "* All recordings"
 msgstr "* Tous les enregistrements"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
+msgid "No PVR Add-ons could be found"
 msgstr "Aucune extension d'Enregistreur Vidéo trouvée"
 
 msgctxt "#19272"
@@ -7698,7 +7910,7 @@ msgid "You need a tuner, backend software, and an"
 msgstr "Vous avez besoin d'un tuner, d'un logiciel applicatif et d'une"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
+msgid "Add-on for the backend to be able to use PVR."
 msgstr "extension de traitement pour utiliser l'Enregistreur Vidéo."
 
 msgctxt "#19274"
@@ -8440,6 +8652,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "et que le nom du nouveau dossier soit valide"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "Avis MPAA"
@@ -8642,6 +8855,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "C'est Party !"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Vrai"
@@ -8667,14 +8881,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Aller à la racine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Trame"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Trame (inversé)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Mélange"
@@ -9175,6 +9392,7 @@ msgstr "Déverrouiller les sources"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Acteur"
@@ -9185,6 +9403,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Réalisateur"
@@ -9229,6 +9448,7 @@ msgstr "est"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Réalisateurs"
@@ -9274,6 +9494,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Saison %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Épisode"
@@ -9281,6 +9502,7 @@ msgstr "Épisode"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Épisodes"
@@ -9297,6 +9519,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Retirer la série TV..."
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Série TV"
@@ -9336,6 +9559,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Image de la saison"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Saison"
@@ -9403,6 +9627,7 @@ msgstr "Épisodes TV ajoutés récemment"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Studios"
@@ -9524,12 +9749,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Recherche de nouveaux contenus"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Diffusion"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Scénariste"
@@ -9559,10 +9785,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Toujours"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Propose une bande-annonce"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Faux"
@@ -9682,6 +9910,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Voulez-vous continuer le balayage ?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Pays"
@@ -9707,6 +9936,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Aplatir la hiérarchie de la bibliothèque"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Saga"
@@ -9721,6 +9951,7 @@ msgstr "Grouper les films en saga"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Étiquettes"
@@ -9976,50 +10207,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Utiliser des animations dans l'intervalle"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "contient"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "ne contient pas"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "est"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "n'est pas"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "commence par"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "termine par"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "supérieur à"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "inférieur à"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "après"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "avant"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "dans le dernier"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "pas dans le dernier"
@@ -10154,26 +10397,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Titre de l'épisode"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Résolution de la vidéo"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Canaux audio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Codec vidéo"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Codec audio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Langue audio"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Langue des sous-titres"
@@ -10210,10 +10459,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "Contenu du cache insuffisant pour une lecture continue"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Stockage externe"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Nombre d'épisodes vus"
@@ -10273,6 +10524,21 @@ msgstr "%d à %d"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "%s à %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr "Préférer les sous-titres externes"
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr "Préférer les sous-titres externes aux sous-titres internes"
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr "(Externe)"
 
 msgctxt "#21800"
 msgid "File name"
@@ -10529,7 +10795,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Téléchargement des informations de l'artiste"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Biographie"
@@ -10552,26 +10818,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informations sur l'artiste"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instruments"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Naissance"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Créé"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Thèmes"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Dissous"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Décédé"
@@ -10580,6 +10852,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Années actives"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Label(s)"
@@ -11015,10 +11288,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Mises à jour disponibles"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Dépendances non supportées"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr "Dépendances non satisfaites. Merci de contacter l'auteur de l'extension."
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11027,17 +11300,25 @@ msgstr "Structure de l'extension incorrecte"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
+msgid "%s is used by the following installed Add-on(s)"
 msgstr "%s est utilisé par l'(es) extension(s) suivante(s)"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
+msgid "This Add-on cannot be uninstalled"
 msgstr "Cette extension ne peut être désinstallée"
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Annulation de la transaction"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr "Incompatible"
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Extensions disponibles"
@@ -11047,10 +11328,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Version :"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Avertissement"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Licence :"
@@ -11153,6 +11436,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Verrouiller le gestionnaire d'extension"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr "Cette extension ne peut être désactivée"
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11165,8 +11453,8 @@ msgstr "(sur liste noire)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "Le dépot indique cette extension comme inutilisable."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr "Le dépôt indique que cette extension est incompatible ou inutilisable."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11203,6 +11491,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Le thème est incomplet"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr "L'extension est incompatible à cause de dépendances non satisfaites."
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr "Pause lors de la recherche de sous-titres"
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr "S'ils ne sont pas enregistrés dans le répertoire des sous-titres du film, ils seront téléchargés dans un répertoire de sous-titres personnalisé"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr "Recherche de sous-titres..."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr "%d sous-titres trouvés"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr "Aucuns sous-titres trouvés"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr "Téléchargement des sous-titres ..."
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr "Langues pour les sous-titres à télécharger"
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr "définir les langues à utiliser lors de la recherche de sous-titres. Tous les services de sous-titres n'utilisent pas toutes les langues."
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr "Échec lors du téléchargement des sous-titres"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr "Aucun service de sous-titres installé"
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr "Sauvegarder les sous-titres dans le répertoire du film"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Notifications"
@@ -11231,22 +11583,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Titre[nbsp]: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Choisir l'élément à lire"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Médiathèque"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "Clavier QWERTY"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Passthrough Audio en cours"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Qualité de la bande-annonce"
@@ -11312,7 +11669,7 @@ msgid "Clips"
 msgstr "Clips"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
+msgid "Restart plug-in to enable"
 msgstr "Relancer l'extension pour activer"
 
 msgctxt "#33018"
@@ -11698,9 +12055,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "Quand le silence est activé, sortie audio pour garder le récepteur éveillé, sinon risque d'entrer en mode repos"
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr "Choisir le comportement quand aucun son n'est requis aussi bien pour la lecture que pour la navigation. [Toujours] - un signal inaudible continue est émis afin de garder le périphérique audio actif, cependant cela peut bloquer les sons des autres applications. [1-10 Minutes] - Identique à Toujours excepté qu'après la fin de la période sélectionnée, le périphérique audio entrera en veille. [Off] - le périphérique audio entrera en veille. Note - des sons peuvent être manqués si le périphérique entre en veille."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11724,6 +12086,36 @@ msgstr "Toujours"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Jamais"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr "44.1"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr "48.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr "88.2"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr "96.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr "192.0"
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11865,6 +12257,11 @@ msgstr "Activer le support du joystick et du gamepad"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Désactiver le joystick quand ce dispositif est connecté"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr "Activer les touches systèmes en plein écran"
 
 #: Unknown
 msgctxt "#35500"
@@ -12480,9 +12877,11 @@ msgstr "Ajustement maximal de la vitesse d'affichage vidéo pour correspondre au
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Ré-échantillonnage et autre traitement du son. Rapide en faible qualité, consomme plus de CPU en meilleure qualité."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr "Sélectionner la qualité du ré-échantillonnage dans le cas ou la sortie audio a besoin d'être à un taux différent de celui de la source. [Bas] est rapide et minimisera l'impact sur des ressources systèmes comme la CPU, [Moyen] & [Haut] vont utiliser progressivement plus de ressources système."
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12675,8 +13074,8 @@ msgstr "Pas d'information actuellement disponible."
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "Activer les fonctionnalités de magnétoscope numérique dans XBMC. Cela nécessite au moins une extension compatible installée."
+"that at least one PVR Add-on is installed."
+msgstr "Activer les fonctionnalités de magnétoscope numérique (PVR) dans XBMC. Cela nécessite au moins une extension compatible installée."
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12825,7 +13224,7 @@ msgstr "Afficher la dernière chaîne visionnée en sélectionnant TV en direct.
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
+"supported by the Add-on and backend)."
 msgstr "Afficher la qualité du signal dans la fenêtre des informations codecs (si supporté par l'extension et le serveur)."
 
 #: system/settings/settings.xml
@@ -12861,28 +13260,28 @@ msgstr "Durée de l'enregistrement en pressant le bouton Enregistrer, ou en cré
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
+"50. Not supported by all Add-ons and backends."
 msgstr "Priorité de l'enregistrement. Plus le nombre est grand, plus la priorité est haute. Par défaut 50. Pas supporté par tous les extensions et tous les serveurs."
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
+"Add-ons and backends."
 msgstr "Supprimer les enregistrements après le délai. Par défaut 99 jours. Pas supporté par tous les extensions et tous les serveurs."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
+"supported by all Add-ons and backends."
 msgstr "Démarrer l'enregistrement avant l'heure programmée. Par défaut 2 minutes. Pas supporté par tous les extensions et tous les serveurs."
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
+"by all Add-ons and backends."
 msgstr "Terminer l'enregistrement après l'heure programmée. Par défaut 10 minutes. Pas supporté par tous les extensions et tous les serveurs."
 
 #: system/settings/settings.xml
@@ -13573,13 +13972,21 @@ msgstr "Pas d'information actuellement disponible."
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "Type de connection à votre matériel audio."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr "Sélectionner commet les propriétés de la sortie audio seront positionnées : [Fixe] - les propriétés de sortie sont positionnées pour le taux d'échantillonnage spécifié et les configuration des enceintes une fois pour toute ; [Meilleure correspondance] - les propriétés de sortie sont positionnées pour être toujours le plus proche possible de la source ; [Optimisé] - les propriétés de sortie sont positionnées au début de la lecture et ne changeront pas si les propriétés de la source changent."
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Sélectionner la disposition physique de vos haut-parleurs."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr "Sélectionner le nombre maximum de canaux audio/haut-parleurs disponibles pour le décodage audio."
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13589,9 +13996,9 @@ msgstr "Amplifier les flux AC3 qui ont été réduit à 2 voies."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Surmixer les sources stéréo à 2 voies afin que le nombre de voies audio correspondent au nombre de haut-parleurs."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr "Sélectionner pour activer le surmixage des sources stéréo à 2 voies au nombre de voies audio spécifiées par la configuration des haut-parleurs."
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13605,17 +14012,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Sélectionner cette option si votre récepteur est capable de décoder les flux DTS."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Sélectionner cette option si votre récepteur est capable de décoder les flux AAC."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr "Sélectionner le nombre maximum de canaux audio/haut-parleurs disponibles pour le décodage audio. Si des sorties optiques/coaxiales sont utilisés, ce nombre doit être défini à 2.0"
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Sélectionner cette option si votre récepteur est capable de décoder les flux LPCM."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr "Sélectionner pour activer les options audio de passthrough pour la lecture de pistes audio encodées comme le Dolby Digital."
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13632,16 +14041,16 @@ msgstr "Sélectionner cette option si votre récepteur est capable de décoder l
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Sélectionner le périphérique que vous utilisez pour la lecture des fichiers audio décodés par XBMC, tels que mp3's et FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr "Sélectionner le périphérique à utiliser pour la lecture des fichiers audio décodés tels que mp3"
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Sélectionner le périphérique que vous utilisez pour la lecture des format encodés, qui peuvent être n'importe lequel des formats sélectionnés au dessus dans les options 'capacité du récepteur'."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr "Sélectionner le périphérique à utiliser pour la lecture des format encodés, qui peuvent être n'importe lequel des formats ci-dessous dans les options 'capacité du récepteur'."
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13912,6 +14321,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Activer le décodage vidéo matériel en utilisant le décodeur AMLogic"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr "Utilise le décodage vidéo multi thread de ffmpeg quand le décodage matériel ne marche pas ou est désactivé. (moins fiable que le mode par défaut mono thread)"
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Mode stéréoscopique (actuel)"
@@ -13926,12 +14342,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Aucun"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Dessus/Dessous"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Côte à côte"
@@ -13975,6 +14391,13 @@ msgstr "Demandez moi"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Utiliser le mode préféré"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr "Taux d'échantillonnage maxi pour SPDIF ou taux d'échantillonnage pour la configuration sortie fixe"
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14021,12 +14444,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "Comme le film"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr "Choisir comment l'audio est ré-échantillonné (downmix), par exemple pour passer de 5.1 à 2.0 : [Activé] maintient l'étendue dynamique de la source audio originale mais le volume sera moins élevé. [Désactivé] maintient le volume de la source audio originale mais l'étendue dynamique est compressée. Note - l'étendue dynamique est la différence entre le son le plus faible et le plus fort dans une source audio."
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "Mode stéréoscopique de la vidéo"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Mode stéréoscopique inversé"
@@ -14128,3 +14564,10 @@ msgstr "Double sortie audio"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Augmenter la voie centrale lors du remixage"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr "Active les touches systèmes comme impression alt-tab ou les touches de volume lors du plein écran"

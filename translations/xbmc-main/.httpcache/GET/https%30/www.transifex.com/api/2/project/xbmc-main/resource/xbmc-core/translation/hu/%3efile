@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-11-11 11:20+0000\n"
+"PO-Revision-Date: 2013-11-19 00:40+0000\n"
 "Last-Translator: osztraksajt <osztraksajt@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/xbmc-main/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -464,7 +464,7 @@ msgctxt "#125"
 msgid "Delete these files? - Deleting files cannot be undone!"
 msgstr "Kijelölt mappák és fájlok törlése? Nem visszaállítható!"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
 msgid "Status"
 msgstr "Állapot"
@@ -496,6 +496,7 @@ msgstr "Képernyő"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#132"
 msgid "Albums"
 msgstr "Albumok"
@@ -504,6 +505,7 @@ msgstr "Albumok"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#133"
 msgid "Artists"
 msgstr "Előadók"
@@ -687,10 +689,12 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "4:3 képarányú videók megjelenítési módja"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#175"
 msgid "Moods"
 msgstr "Hangulatok"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stílusok"
@@ -700,7 +704,7 @@ msgctxt "#179"
 msgid "Song"
 msgstr "Zeneszám"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#180"
 msgid "Duration"
 msgstr "Hossz"
@@ -714,7 +718,7 @@ msgctxt "#182"
 msgid "Tracks"
 msgstr "Zeneszámok"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
 msgstr "Ismertető"
@@ -787,14 +791,17 @@ msgctxt "#199"
 msgid "Web interface"
 msgstr "Webes kezelőfelület"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
 msgid "Tagline"
 msgstr "Röviden"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
 msgstr "Tartalom"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Szavazatok"
@@ -803,6 +810,7 @@ msgctxt "#206"
 msgid "Cast"
 msgstr "Szereplők"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#207"
 msgid "Plot"
 msgstr "Tartalom"
@@ -824,7 +832,7 @@ msgctxt "#213"
 msgid "Calibrate user interface..."
 msgstr "Felhasználói felület kalibrálása..."
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#214"
 msgid "Video calibration..."
 msgstr "Képernyő kalibrálása"
@@ -833,10 +841,12 @@ msgctxt "#215"
 msgid "Soften"
 msgstr "Lágyítás"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#216"
 msgid "Zoom amount"
 msgstr "Nagyítási arány"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#217"
 msgid "Pixel ratio"
 msgstr "Képpontarány"
@@ -873,6 +883,7 @@ msgctxt "#224"
 msgid "Speed"
 msgstr "Sebesség"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
 msgid "Vertical Shift"
 msgstr "Függőleges eltolás"
@@ -900,7 +911,8 @@ msgid "Video filters"
 msgstr "Képszűrők"
 
 #: system/peripherals.xml xbmc/addons/guiviewstateaddonbrowser.cpp
-#: xbmc/dialogs/GUIDialogMediaSource.cpp system/settings/settings.xml
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/playlists/SmartPlaylist.cpp
+#: system/settings/settings.xml
 msgctxt "#231"
 msgid "None"
 msgstr "Nincs"
@@ -1184,11 +1196,6 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: system/settings/settings.xml
-msgctxt "#299"
-msgid "AAC capable receiver"
-msgstr "AAC kompatibilis vevőkészülék"
-
 msgctxt "#300"
 msgid "MP1 capable receiver"
 msgstr "MP1 kompatibilis vevőkészülék"
@@ -1330,18 +1337,18 @@ msgstr "Képkockasebesség konvertálás"
 
 #: system/settings/settings.xml
 msgctxt "#337"
-msgid "Audio output"
-msgstr "Hangkimenet"
+msgid "Output configuration"
+msgstr "Kimenet konfiguráció"
 
 #: system/settings/settings.xml
 msgctxt "#338"
-msgid "Analogue"
-msgstr "Analóg"
+msgid "Fixed"
+msgstr "Rögzített"
 
 #: system/settings/settings.xml
 msgctxt "#339"
-msgid "Optical/Coax"
-msgstr "Optikai/Coax"
+msgid "Optimized"
+msgstr "Optimalizált"
 
 msgctxt "#340"
 msgid "Various artists"
@@ -1363,6 +1370,7 @@ msgstr "Képkockasebesség igazítás"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#344"
 msgid "Actors"
 msgstr "Színészek"
@@ -1373,8 +1381,8 @@ msgstr "Év"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Boost volume level on downmix"
-msgstr "Csatornalekeverésnél hangerő emelése"
+msgid "Normalize levels on downmix"
+msgstr "Csatornalekeverésnél hangerő kiegyenlítése"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -1383,8 +1391,8 @@ msgstr "Nagy felbontású DTS kompatibilis vevőkészülék"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Multichannel LPCM capable receiver"
-msgstr "Többcsatornás LPCM kompatibilis vevőkészülék"
+msgid "Enable passthrough"
+msgstr "Hang közvetlen átengedésének engedélyezése"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1712,13 +1720,13 @@ msgstr "Max"
 
 #: system/settings/settings.xml
 msgctxt "#420"
-msgid "HDMI"
-msgstr "HDMI"
+msgid "Best Match"
+msgstr "Leginkább Egyező"
 
 #: system/settings/settings.xml
 msgctxt "#421"
-msgid "Stream silence when idle"
-msgstr "Néma adatfolyam továbbítása üresjárat esetén."
+msgid "Keep audio device alive"
+msgstr "Hangeszköz ébren tartása"
 
 msgctxt "#422"
 msgid "Delete album info"
@@ -1869,6 +1877,11 @@ msgctxt "#457"
 msgid "Switch view"
 msgstr "Nézet váltása"
 
+#: system/settings/settings.xml
+msgctxt "#458"
+msgid "Limit sampling rate (kHz)"
+msgstr ""
+
 msgctxt "#459"
 msgid "Subs"
 msgstr "Feliratok"
@@ -1889,14 +1902,17 @@ msgctxt "#463"
 msgid "Backlight"
 msgstr "Háttérvilágítás"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#464"
 msgid "Brightness"
 msgstr "Fényerő"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#465"
 msgid "Contrast"
 msgstr "Kontraszt"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#466"
 msgid "Gamma"
 msgstr "Gamma"
@@ -2068,6 +2084,7 @@ msgstr "Kézi beállítások"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#515"
 msgid "Genre"
 msgstr "Műfaj"
@@ -2221,7 +2238,7 @@ msgctxt "#553"
 msgid "Size"
 msgstr "Méret"
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#554"
 msgid "Track"
 msgstr "Szám"
@@ -2230,24 +2247,27 @@ msgctxt "#555"
 msgid "Time"
 msgstr "Idő"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#556"
 msgid "Title"
 msgstr "Cím"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#557"
 msgid "Artist"
 msgstr "Előadó"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Lejátszási lista"
@@ -2256,6 +2276,7 @@ msgctxt "#560"
 msgid "ID"
 msgstr "Azonosító"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#561"
 msgid "File"
 msgstr "Fájl"
@@ -2265,16 +2286,17 @@ msgstr "Fájl"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#562"
 msgid "Year"
 msgstr "Év"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#563"
 msgid "Rating"
 msgstr "Pontszám"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
 msgid "Type"
 msgstr "Típus"
@@ -2283,47 +2305,53 @@ msgctxt "#565"
 msgid "Usage"
 msgstr "Használat"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
 msgstr "Album előadó"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Lejátszás-számláló"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Utoljára játszott"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#569"
 msgid "Comment"
 msgstr "Leírás"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#570"
 msgid "Date added"
 msgstr "Hozzáadás"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#571"
 msgid "Default"
 msgstr "Eredeti"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#572"
 msgid "Studio"
 msgstr "Stúdió"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
 msgstr "Elérési út"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#574"
 msgid "Country"
 msgstr "Ország"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#575"
 msgid "In progress"
 msgstr "Folyamatban"
@@ -2376,6 +2404,7 @@ msgctxt "#589"
 msgid "Party mode"
 msgstr "Partymód"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#590"
 msgid "Random"
 msgstr "Véletlenszerű"
@@ -2504,34 +2533,37 @@ msgctxt "#629"
 msgid "View mode"
 msgstr "Nézet mód"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
 msgid "Normal"
 msgstr "Normál"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#631"
 msgid "Zoom"
 msgstr "Nagyítás"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "Széthúzás 4:3-ra"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Széles nagyítás"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "Széthúzás 16:9-re"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
 msgid "Original Size"
 msgstr "Eredeti méret"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
 msgstr "Egyéni"
@@ -2605,6 +2637,7 @@ msgid "Browse for library"
 msgstr "Médiatár keresése"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#652"
 msgid "Years"
 msgstr "Év"
@@ -2634,6 +2667,7 @@ msgctxt "#658"
 msgid "Song information"
 msgstr "Dal információ"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
 msgstr "Nemlineáris széthúzás"
@@ -2852,6 +2886,7 @@ msgid "Mirror image"
 msgstr "Kép tükrözése"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Megerősítés?"
@@ -3290,8 +3325,8 @@ msgid "Program Add-ons"
 msgstr "Program kiegészítők"
 
 msgctxt "#1044"
-msgid "Set plugin thumb"
-msgstr "Kiegészítő minikép beállítása"
+msgid "Set plug-in thumb"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#1045"
@@ -3960,30 +3995,32 @@ msgid "Reset"
 msgstr "Visszaállítás"
 
 msgctxt "#10036"
-msgid "Level: Basic"
-msgstr "Alapszint"
+msgid "Basic"
+msgstr ""
 
 msgctxt "#10037"
-msgid "Level: Standard"
-msgstr "Normál szint"
+msgid "Standard"
+msgstr "Standard"
 
 msgctxt "#10038"
-msgid "Level: Advanced"
-msgstr "Haladó szint"
+msgid "Advanced"
+msgstr ""
 
 msgctxt "#10039"
-msgid "Level: Expert"
-msgstr "Profi szint"
+msgid "Expert"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10040"
 msgid "Add-on browser"
 msgstr "Kiegészítő böngésző"
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10041"
-msgid "Reset settings"
-msgstr "Beállítások nullázása"
+msgid "Reset above settings to default"
+msgstr ""
 
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
 msgstr "Biztosan nullázni akarja a kategória beállításait?"
@@ -3995,6 +4032,21 @@ msgstr "Súgó"
 msgctxt "#10044"
 msgid "No help available"
 msgstr "Nem áll rendelkezésre súgó"
+
+msgctxt "#10045"
+msgid "Resets all the visible settings to their default values."
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10046"
+msgid "No categories available"
+msgstr ""
+
+#: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
+msgctxt "#10047"
+msgid ""
+"Try changing the setting level to see additional categories and settings."
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4210,66 +4262,84 @@ msgctxt "#12009"
 msgid "Rebuild index..."
 msgstr "Index újraépítése..."
 
+#: unknown
 msgctxt "#12010"
 msgid "Return to music window"
 msgstr "Vissza a Zenékhez"
 
+#: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
 msgstr "Vissza a Videókhoz"
 
+#: xbmc\Autorun.cpp xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Lejátszás az elejéről"
 
+#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Folytatás innen: %s"
 
+#: skin.confluence skin.touched
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
+#: skin.confluence skin.touched
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
+#: skin.confluence skin.touched
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
+#: skin.confluence skin.touched
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
+#: skin.confluence skin.touched
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
+#: skin.confluence skin.touched
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
+#: skin.confluence skin.touched
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
+#: skin.confluence skin.touched
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
+#: skin.confluence skin.touched
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
+#: skin.confluence skin.touched
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
 
+#: unknown
 msgctxt "#12320"
 msgid "c"
 msgstr "c"
 
+#: skin.confluence
 msgctxt "#12321"
 msgid "Ok"
 msgstr "Ok"
@@ -4279,6 +4349,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Zárolva! Kód szükséges..."
@@ -4288,14 +4359,17 @@ msgctxt "#12326"
 msgid "Enter password"
 msgstr "Jelszó"
 
+#: unknown
 msgctxt "#12327"
 msgid "Enter master code"
 msgstr "Mesterkód"
 
+#: unknown
 msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "Feloldási kód megadása"
 
+#: unknown
 msgctxt "#12329"
 msgid "or press C to cancel"
 msgstr "ill. nyomj C-t a visszalépéshez"
@@ -4329,14 +4403,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Zárolás törlése"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Numerikus jelszó"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Gamepad gombkombináció"
 
+#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Szöveges jelszó"
@@ -4366,18 +4443,22 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "A két jelszó nem egyezik."
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Hozzáférés megtagadva"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Túl sok sikertelen próbálkozás."
 
+#: unknown
 msgctxt "#12347"
-msgid "The system will now shut off."
-msgstr "A rendszer leáll."
+msgid "The system will now power down."
+msgstr ""
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Az elem zárolva"
@@ -4427,30 +4508,39 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Érvénytelen jelszó. Próbáld újra."
 
+#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Mester zárolás"
 
+#: unknown
 msgctxt "#12362"
 msgid "Shutdown system if Master Lock retries exceeded"
 msgstr "Leállítás, ha a mesterkód próbálkozások száma eléri a"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid"
 msgstr "Érvénytelen mesterkód"
 
+#: xbmc\GUIPassword.cpp
 msgctxt "#12368"
 msgid "Please enter a valid master code"
 msgstr "Adj meg érvényes mesterkódot"
 
+#: unknown
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Beállítások & Fájlkezelő"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all videos"
 msgstr "Beállítás alapértelmezettként"
 
+#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values"
 msgstr "Minden eddigi beállítás törlése?"
@@ -4465,18 +4555,22 @@ msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Pásztázás és nagyítás (pan&zoom) effektek használata"
 
+#: unknown
 msgctxt "#12383"
 msgid "12 hour clock"
 msgstr "12 órás számozás"
 
+#: unknown
 msgctxt "#12384"
 msgid "24 hour clock"
 msgstr "24 órás számozás"
 
+#: unknown
 msgctxt "#12385"
 msgid "Day/Month"
 msgstr "Nap/Hónap"
 
+#: unknown
 msgctxt "#12386"
 msgid "Month/Day"
 msgstr "Hónap/Nap"
@@ -4486,14 +4580,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Rendszer üzemidő"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "perc"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "óra"
 
+#: skin.confluence xbmc\utils\SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "nap"
@@ -4528,18 +4625,22 @@ msgctxt "#13000"
 msgid "System"
 msgstr "Rendszer"
 
+#: unknown
 msgctxt "#13001"
 msgid "Immediate HD spindown"
 msgstr "Azonnali merevlemez kikapcsolás"
 
+#: unknown
 msgctxt "#13002"
 msgid "Video only"
 msgstr "Csak videó"
 
+#: unknown
 msgctxt "#13003"
 msgid "- Delay"
 msgstr "- Késleltetés"
 
+#: unknown
 msgctxt "#13004"
 msgid "- Minimum file duration"
 msgstr "- Minimum fájl hossz"
@@ -4569,10 +4670,12 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Alvó üzemmód"
 
+#: skin.confluence skin.touched
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Kilépés"
 
+#: skin.confluence skin.touched
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Újraindítás"
@@ -4582,42 +4685,52 @@ msgctxt "#13014"
 msgid "Minimise"
 msgstr "Minimalizás"
 
+#: unknown
 msgctxt "#13015"
 msgid "Power button action"
 msgstr "Be(ki)kapcsoló gomb művelet"
 
+#: skin.confluence skin.touched
 msgctxt "#13016"
 msgid "Power off System"
 msgstr "Gép kikapcsolása"
 
+#: skin.confluence
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "Véletlen leállítás megakadályozása"
 
+#: skin.confluence
 msgctxt "#13018"
 msgid "Allow idle shutdown"
 msgstr "Véletlen leállítás engedélyezése"
 
+#: unknown
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Lehet hogy egy másik bejelentkezés aktív (ssh)?"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable harddrive"
 msgstr "Külső meghajtó csatlakoztatva"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe device removal"
 msgstr "Nem biztonságos eltávolítás"
 
+#: xbmc\linux\HALManager.cpp xbmc\storage\MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed device"
 msgstr "Eszköz sikeresen eltávolítva"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13024"
 msgid "Joystick plugged"
 msgstr "Joystick csatlakoztatva"
 
+#: xbmc\linux\HALManager.cpp
 msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick eltávolítva"
@@ -4677,10 +4790,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Meghiúsult ehhez: %s"
 
+#: xbmc\powermanagement\PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Az akkumlátor kezd lemerülni"
 
+#: xbmc\interfaces\legacy\Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Villogásszűrő"
@@ -4710,26 +4825,32 @@ msgctxt "#13108"
 msgid "Always enabled"
 msgstr "Mindig"
 
+#: unknown
 msgctxt "#13109"
 msgid "Test & apply resolution"
 msgstr "Felbontás tesztelése"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save resolution?"
 msgstr "Felbontás mentése?"
 
+#: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
-msgid "Would you like to keep this resolution?"
-msgstr "Jelenlegi felbontás megtartása?"
+msgid "Would you like to keep this change?"
+msgstr ""
 
+#: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
 msgstr "Magas minőségű szoftveres felskálázás"
 
+#: unknown
 msgctxt "#13113"
 msgid "Disabled"
 msgstr "Letiltva"
 
+#: unknown
 msgctxt "#13114"
 msgid "Enabled for SD content"
 msgstr "SD tartalom esetén bekapcsolva"
@@ -4750,14 +4871,17 @@ msgctxt "#13118"
 msgid "Lanczos"
 msgstr "Lanczos"
 
+#: unknown
 msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
+#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
 
+#: system/settings/settings.xml
 msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr "VDPAU HQ felskálázás (csak megfelelő HW esetén)"
@@ -4767,43 +4891,56 @@ msgctxt "#13122"
 msgid "VDPAU Studio level colour conversion"
 msgstr "VDPAU Studió szint színkonverzió"
 
+msgctxt "#13123"
+msgid "Keep skin?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13130"
 msgid "Blank other displays"
 msgstr "A többi megjelenítő sötétítése"
 
+#: unknown
 msgctxt "#13131"
 msgid "Disabled"
 msgstr "Letiltva"
 
+#: unknown
 msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Megjelenítők sötétítése"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Aktív kapcsolatok észlelhetők!"
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
 msgid "If you proceed, you might not be able to control XBMC"
 msgstr "Továbblépés esetén az XBMC esetleg nem lesz irányítható."
 
+#: xbmc\network\NetworkServices.cpp
 msgctxt "#13142"
 msgid "any longer. Are you sure you want to stop the Event server?"
 msgstr "Eseménykiszolgáló leállítása?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Apple távirányítómód váltása?"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
 msgid "If you are currently using the Apple Remote to control"
 msgstr "Ha jelenleg az Apple távirányító van használatban,"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13146"
 msgid "XBMC, changing this setting might affect your ability"
 msgstr "ennek a beállításnak a használata a távirányítás"
 
+#: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13147"
 msgid "to continue controlling it. Do you want to proceed?"
 msgstr "lehetőségének elvesztését jelentheti. Folytatod?"
@@ -4823,38 +4960,47 @@ msgctxt "#13161"
 msgid "Primary DNS"
 msgstr "Elsődleges DNS"
 
+#: unknown
 msgctxt "#13162"
 msgid "Initialise failed"
 msgstr "Inicializálás sikertelen"
 
+#: skin.confluence
 msgctxt "#13170"
 msgid "Never"
 msgstr "Soha"
 
+#: unknown
 msgctxt "#13171"
 msgid "Immediately"
 msgstr "Azonnal"
 
+#: unknown
 msgctxt "#13172"
 msgid "After %i secs"
 msgstr "%i másodperc után"
 
+#: unknown
 msgctxt "#13173"
 msgid "HDD install date:"
 msgstr "HDD telepítés dátuma:"
 
+#: unknown
 msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD indítások száma:"
 
+#: skin.confluence skin.touched xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profilok"
 
+#: xbmc\profiles\ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Törlöd ezt a profilt: '%s'?"
 
+#: unknown
 msgctxt "#13204"
 msgid "Last loaded profile:"
 msgstr "Utoljára betöltött profil:"
@@ -5402,6 +5548,7 @@ msgctxt "#13408"
 msgid "(IMDb user rating)"
 msgstr "(IMDb nézői értékelés)"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
 msgid "Top 250"
 msgstr "Top 250"
@@ -5433,20 +5580,22 @@ msgctxt "#13415"
 msgid "Render method"
 msgstr "Renderelés módja"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automatikus"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13417"
 msgid "Basic shaders (ARB)"
 msgstr "Alap árnyékolók (ARB)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13418"
 msgid "Advanced shaders (GLSL)"
 msgstr "Fejlett árnyékolók (GLSL)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13419"
 msgid "Software"
 msgstr "Szoftveres"
@@ -5503,7 +5652,7 @@ msgctxt "#13430"
 msgid "Allow hardware acceleration (OpenMax)"
 msgstr "Hardveres gyorsítás engedélyezése (OpenMax)"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel Shaders"
 msgstr "Pixel árnyékolók (PS)"
@@ -5547,6 +5696,10 @@ msgstr "Hardvergyorsítás engedélyezése (amcodec)"
 msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Hardvergyorsítás engedélyezése (MediaCodec)"
+
+msgctxt "#13440"
+msgid "Frame Multi Threaded Decoding (less reliable)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -5648,6 +5801,14 @@ msgstr "%.1f másodperc"
 msgctxt "#13553"
 msgid "%.1f Seconds"
 msgstr "%.1f másodperc"
+
+msgctxt "#13554"
+msgid "%d Minute"
+msgstr ""
+
+msgctxt "#13555"
+msgid "%d Minutes"
+msgstr ""
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
@@ -6294,23 +6455,27 @@ msgctxt "#16017"
 msgid "Enter search string"
 msgstr "Keresőszó"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#16018"
 msgid "None"
 msgstr "Nincs"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16019"
 msgid "Auto select"
 msgstr "Automatikus kiválasztás"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "De-interlace"
 msgstr "Teljes képkockasebességgel"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
 msgid "Bob"
 msgstr "Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob (inverted)"
 msgstr "Bob (fordított)"
@@ -6365,6 +6530,7 @@ msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "Partymód lejátszáslista"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "De-interlace (Half)"
 msgstr "Fél képkockasebességgel (Half)"
@@ -6373,18 +6539,22 @@ msgctxt "#16037"
 msgid "Deinterlace video"
 msgstr "Videó váltottsorosság mentesítése (Deinterlace)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16038"
 msgid "Deinterlace method"
 msgstr "A mentesítés módja"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16039"
 msgid "Off"
 msgstr "Ki"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16040"
 msgid "Auto"
 msgstr "Auto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16041"
 msgid "On"
 msgstr "Be"
@@ -6414,8 +6584,8 @@ msgid "Edit title"
 msgstr "Cím szerkesztése"
 
 msgctxt "#16106"
-msgid "Manage ..."
-msgstr "Kezelés ..."
+msgid "Manage..."
+msgstr ""
 
 msgctxt "#16107"
 msgid "Edit sort title"
@@ -6456,110 +6626,137 @@ msgctxt "#16206"
 msgid "Failed to delete at least one file"
 msgstr "Nem minden fájlt sikerült törölni"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
 msgstr "Képskálázás módja"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
 msgid "Nearest neighbour"
 msgstr "Legközelebbi szomszéd"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
 msgstr "Bilinear"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
 msgstr "Bicubic"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
 msgid "Lanczos2"
 msgstr "Lanczos2"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16305"
 msgid "Lanczos3"
 msgstr "Lanczos3 komplex"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16306"
 msgid "Sinc8"
 msgstr "Sinc8"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
 msgstr "Bicubic (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
 msgid "Lanczos (software)"
 msgstr "Lanczos (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
 msgstr "Sinc (software)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
 msgstr "Temporal"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal/Spatial"
 msgstr "Temporal/Spatial"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "(VDPAU)Noise Reduction"
 msgstr "(VDPAU)Zajszűrés"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "(VDPAU)Sharpness"
 msgstr "(VDPAU)Képélesség"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse Telecine"
 msgstr "Inverse Telecine"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 optimised"
 msgstr "Lanczos3 optimalizált"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
 msgstr "Auto"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (Half)"
 msgstr "Temporal (fél)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal/Spatial (Half)"
 msgstr "Temporal/Spatial (fél)"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA Bob"
 msgstr "DXVA Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA Best"
 msgstr "DXVA Legjobb"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 optimised"
 msgstr "Spline36 optimalizált"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software Blend"
 msgstr "Software Blend"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
 msgstr "Videó minőségjavítás (post processing)"
@@ -6985,6 +7182,21 @@ msgstr "Add meg a felvétel nevét"
 msgctxt "#19098"
 msgid "Warning"
 msgstr "Figyelmeztetés"
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19099"
+msgid "Service"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19100"
+msgid "Mux"
+msgstr ""
+
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#19101"
+msgid "Provider"
+msgstr ""
 
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -7468,9 +7680,9 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled. Check your settings or the log for more "
+"No PVR Add-on could be enabled. Check your settings or the log for more "
 "info."
-msgstr "Nem lehetett egy PVR kiegészítőt sem engedélyezni. Ellenőrizd a beállításokat, vagy a naplót a részletekért."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7517,8 +7729,8 @@ msgstr "Értesítés megjelenítése időzítő frissítésekor"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
-msgid "Use backend channels numbers (only works with 1 enabled PVR add-on)"
-msgstr "A háttér-kiszolgáló csatornaszámozásának használata (1 PVR kiegészítővel)"
+msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
+msgstr ""
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -7541,16 +7753,16 @@ msgid "Starting background threads"
 msgstr "A háttér végrehajtási szálak elindítása"
 
 msgctxt "#19240"
-msgid "No PVR add-on enabled"
-msgstr "Nincs PVR kiegészítő engedélyezve"
+msgid "No PVR Add-on enabled"
+msgstr ""
 
 msgctxt "#19241"
 msgid "The PVR manager has been enabled without any"
 msgstr "A PVR kezelő, PVR kiegészítő nélkül lett"
 
 msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "engedélyezve. Engedélyezz legalább egy"
+msgid "enabled PVR Add-on. Enable at least one Add-on"
+msgstr ""
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
@@ -7677,16 +7889,16 @@ msgid "* All recordings"
 msgstr "* Minden felvétel"
 
 msgctxt "#19271"
-msgid "No PVR add-ons could be found"
-msgstr "Nem található PVR kiegészítő"
+msgid "No PVR Add-ons could be found"
+msgstr ""
 
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an"
 msgstr "A PVR használatához szükség van egy TV kártyára,"
 
 msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "egy háttér-kiszolgálóra és egy PVR kiegészítőre. "
+msgid "Add-on for the backend to be able to use PVR."
+msgstr ""
 
 msgctxt "#19274"
 msgid "Please visit xbmc.org/pvr to learn more."
@@ -8427,6 +8639,7 @@ msgctxt "#20073"
 msgid "and that the new folder name is valid"
 msgstr "és az új mappa neve megfelelő"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
 msgstr "MPAA"
@@ -8629,6 +8842,7 @@ msgctxt "#20121"
 msgid "Party on!"
 msgstr "Party indul!"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20122"
 msgid "True"
 msgstr "Igaz"
@@ -8654,14 +8868,17 @@ msgctxt "#20128"
 msgid "Go to root"
 msgstr "Gyökérbe"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
 msgstr "Összefonás"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave (inverted)"
 msgstr "Összefonás (Inverz)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
 msgstr "Kever"
@@ -9162,6 +9379,7 @@ msgstr "Forrászárolás feloldása"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20337"
 msgid "Actor"
 msgstr "Színész"
@@ -9172,6 +9390,7 @@ msgstr "Film"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20339"
 msgid "Director"
 msgstr "Rendező"
@@ -9216,6 +9435,7 @@ msgstr "mint"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20348"
 msgid "Directors"
 msgstr "Rendezők"
@@ -9261,6 +9481,7 @@ msgctxt "#20358"
 msgid "Season %i"
 msgstr "Évad %i"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20359"
 msgid "Episode"
 msgstr "Epizód"
@@ -9268,6 +9489,7 @@ msgstr "Epizód"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Epizód"
@@ -9284,6 +9506,7 @@ msgctxt "#20363"
 msgid "Remove TV show from library"
 msgstr "Sorozat eltávolítása a médiatárból"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
 msgid "TV show"
 msgstr "Sorozat"
@@ -9323,6 +9546,7 @@ msgctxt "#20372"
 msgid "Season image"
 msgstr "Évad kép"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20373"
 msgid "Season"
 msgstr "Évad"
@@ -9390,6 +9614,7 @@ msgstr "Nemrég bekerült epizódok"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
 msgstr "Stúdiók"
@@ -9511,12 +9736,13 @@ msgctxt "#20415"
 msgid "Scanning for new content"
 msgstr "Új tartalom keresése"
 
-#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
 msgstr "Első adás"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Írta"
@@ -9546,10 +9772,12 @@ msgctxt "#20422"
 msgid "Always"
 msgstr "Mindig"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20423"
 msgid "Has trailer"
 msgstr "Van filmajánló"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20424"
 msgid "False"
 msgstr "Hamis"
@@ -9669,6 +9897,7 @@ msgid "Would you like to continue scanning?"
 msgstr "Szeretnéd a keresést folytatni?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20451"
 msgid "Countries"
 msgstr "Országok"
@@ -9694,6 +9923,7 @@ msgctxt "#20456"
 msgid "Flatten library hierarchy"
 msgstr "Médiatár szerkezet egyszerűsítése."
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
 msgid "Movie set"
 msgstr "Filmgyűjtemény"
@@ -9708,6 +9938,7 @@ msgstr "Filmek csoportosítása készletekbe"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Címkék"
@@ -9963,50 +10194,62 @@ msgctxt "#21399"
 msgid "Use tween animations"
 msgstr "Pattogó animációk használata"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
 msgid "contains"
 msgstr "tartalmazza"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21401"
 msgid "does not contain"
 msgstr "nem tartalmazza"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21402"
 msgid "is"
 msgstr "egyenlő"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21403"
 msgid "is not"
 msgstr "nem egyenlő"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21404"
 msgid "starts with"
 msgstr "kezdődik"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21405"
 msgid "ends with"
 msgstr "végződik"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21406"
 msgid "greater than"
 msgstr "nagyobb, mint"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21407"
 msgid "less than"
 msgstr "kevesebb, mint"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21408"
 msgid "after"
 msgstr "után"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21409"
 msgid "before"
 msgstr "előtt"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21410"
 msgid "in the last"
 msgstr "az utolsó X-ben van"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21411"
 msgid "not in the last"
 msgstr "nincs az utolsó X-ben"
@@ -10141,26 +10384,32 @@ msgctxt "#21442"
 msgid "Episode title"
 msgstr "Epizódcím"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
 msgstr "Felbontás"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21444"
 msgid "Audio channels"
 msgstr "Hangcsatornák"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21445"
 msgid "Video codec"
 msgstr "Videó codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21446"
 msgid "Audio codec"
 msgstr "Hang codec"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21447"
 msgid "Audio language"
 msgstr "Hang nyelve"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "Felirat nyelve"
@@ -10197,10 +10446,12 @@ msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continous playback"
 msgstr "A gyorsítótár még azelőtt megtelt, hogy elegendő lett volna a folyamatos lejátszáshoz"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
 msgid "External storage"
 msgstr "Külső tár"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21457"
 msgid "Watched episode count"
 msgstr "Már látott részek száma"
@@ -10260,6 +10511,21 @@ msgstr "%d -tól %d -ig"
 msgctxt "#21469"
 msgid "%s to %s"
 msgstr "ettől: %s eddig: %s"
+
+#: xbmc/cores/dvdplayer/DVDPlayer.cpp
+msgctxt "#21600"
+msgid "Prefer external subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#21601"
+msgid "Prefer external subtitles to internal ones"
+msgstr ""
+
+#: xbmc/Util.cpp
+msgctxt "#21602"
+msgid "(External)"
+msgstr ""
 
 msgctxt "#21800"
 msgid "File name"
@@ -10516,7 +10782,7 @@ msgctxt "#21886"
 msgid "Downloading artist information"
 msgstr "Előadóinformáció letöltése"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21887"
 msgid "Biography"
 msgstr "Életrajz"
@@ -10539,26 +10805,32 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Információ az előadóról"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Hangszerek"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Született"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Alakult"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
 msgstr "Témák"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Feloszlott"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Meghalt"
@@ -10567,6 +10839,7 @@ msgctxt "#21898"
 msgid "Years active"
 msgstr "Aktív évek"
 
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21899"
 msgid "Label"
 msgstr "Kiadó"
@@ -11002,10 +11275,10 @@ msgctxt "#24043"
 msgid "Available Updates"
 msgstr "Elérhető frissítések"
 
-#: xbmc/addons/addoninstaller.cpp xbmc/addons/Repository.cpp
+#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
-msgid "Dependencies not met"
-msgstr "Előfeltételek nem teljesülnek"
+msgid "Dependencies not met. Please contact Add-on author."
+msgstr ""
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24045"
@@ -11014,17 +11287,25 @@ msgstr "A kiegészítőnek nem megfelelő a felépítése"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24046"
-msgid "%s is used by the following installed add-on(s)"
-msgstr "%s haszálatban van az alábbi kiegészítő(k) által"
+msgid "%s is used by the following installed Add-on(s)"
+msgstr ""
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24047"
-msgid "This add-on cannot be uninstalled"
-msgstr "Ez a kiegészítő nem törölhető"
+msgid "This Add-on cannot be uninstalled"
+msgstr ""
 
+#: skin.confluence
 msgctxt "#24048"
 msgid "Rollback"
 msgstr "Előző verzió"
 
+#: xbmc/addons/AddonsDirectory.cpp
+msgctxt "#24049"
+msgid "Incompatible"
+msgstr ""
+
+#: unknown
 msgctxt "#24050"
 msgid "Available Add-ons"
 msgstr "Elérhető kiegészítők"
@@ -11034,10 +11315,12 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Verzió:"
 
+#: skin.confluence skin.touched
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Figyelmeztetés"
 
+#: unknown
 msgctxt "#24053"
 msgid "License:"
 msgstr "Licenc:"
@@ -11140,6 +11423,11 @@ msgctxt "#24090"
 msgid "Lock Add-on manager"
 msgstr "Kiegészítő-kezelő zárolása"
 
+#: xbmc\addons\GUIDialogAddonInfo.cpp
+msgctxt "#24091"
+msgid "This Add-on cannot be disabled"
+msgstr ""
+
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
 msgid "(current)"
@@ -11152,8 +11440,8 @@ msgstr "(letiltott)"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24096"
-msgid "Add-on has been marked as broken in repository."
-msgstr "A kiegészítőt működésképtelennek jelölték a tárhelyen."
+msgid "Add-on is incompatible or has been marked broken in repository."
+msgstr ""
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -11190,6 +11478,70 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "A felszínhez hiányoznak fájlok"
 
+#: xbmc/addons/Repository.cpp
+msgctxt "#24104"
+msgid "Add-on is incompatible due to unmet dependencies."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24105"
+msgid "Pause when searching for subtitles"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24106"
+msgid ""
+"If not saved to movie folder subtitles will be downloaded to custom subtitle"
+" folder"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24107"
+msgid "Searching for subtitles ..."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24108"
+msgid "%d subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24109"
+msgid "No subtitles found"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24110"
+msgid "Downloading subtitles ..."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24111"
+msgid "Languages to download subtitles for"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24112"
+msgid ""
+"Set languages to use when searching for subtitles. Not all subtitle services"
+" will use all languages."
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24113"
+msgid "Failed to download subtitle"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24114"
+msgid "No subtitle services installed"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#24115"
+msgid "Save subtitles to movie folder"
+msgstr ""
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Értesítések"
@@ -11218,22 +11570,27 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Cím: %d"
 
+#: xbmc\video\windows\GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Lejátszandó elem kiválasztása"
 
+#: skin.confluence skin.touched
 msgctxt "#29800"
 msgid "Library Mode"
 msgstr "Médiatár mód"
 
+#: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY billentyűzet"
 
+#: skin.confluence skin.touched
 msgctxt "#29802"
 msgid "Passthrough Audio in use"
 msgstr "Hangtovábbítás-módban tiltva"
 
+#: unknown
 msgctxt "#33001"
 msgid "Trailer quality"
 msgstr "Filmelőzetes minőség"
@@ -11299,8 +11656,8 @@ msgid "Clips"
 msgstr "Klipek"
 
 msgctxt "#33017"
-msgid "Restart plugin to enable"
-msgstr "Az érvényesítéshez a kiegészítő újraindítása szükséges"
+msgid "Restart plug-in to enable"
+msgstr ""
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -11685,9 +12042,14 @@ msgstr "7.1"
 #: system/settings/settings.xml
 msgctxt "#34111"
 msgid ""
-"When activated silence is output in order to keep alive receiver, otherwise "
-"sink is drained in idle state"
-msgstr "Bekapcsolt állapotban néma adatfolyamot továbbít az erősítő ébren tartása érdekében, a másik esetben a csatorna nem továbbít semmilyen jelet tétlenség esetén."
+"Select the behaviour when no sound is required for either playback or GUI "
+"sounds. [Always] - continuous inaudible signal is output, this keeps the "
+"receiving audio device alive for any new sounds, however this might also "
+"block sound from other applications. [1- 10 Minutes] - same as Always except"
+" that after the selected period of time audio enters a suspended state [Off]"
+" - audio output enters a suspended state. Note - sounds can be missed if "
+"audio enters suspended state."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -11711,6 +12073,36 @@ msgstr "Mindig"
 msgctxt "#34123"
 msgid "Never"
 msgstr "Soha"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34124"
+msgid "44.1"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34125"
+msgid "48.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34126"
+msgid "88.2"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34127"
+msgid "96.0"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34128"
+msgid "192.0"
+msgstr ""
 
 #: xbmc\PlayListPlayer.cpp
 msgctxt "#34201"
@@ -11852,6 +12244,11 @@ msgstr "Botkormány és gombkormány támogatás engedélyezése"
 msgctxt "#35102"
 msgid "Disable joystick when this device is present"
 msgstr "Joystick letiltása amikor ez az eszköz jelen van"
+
+#: system/settings/settings.xml
+msgctxt "#35103"
+msgid "Enable system keys in fullscreen"
+msgstr ""
 
 #: Unknown
 msgctxt "#35500"
@@ -12467,9 +12864,11 @@ msgstr "Maximális megengedett lejátszási sebesség a képfrissítés szinkron
 #: system/settings/settings.xml
 msgctxt "#36169"
 msgid ""
-"Resampling and other sound processing quality. Low quality is fast, higher "
-"quality will consume more CPU."
-msgstr "Újrakeverés és egyéb hangfeldolgozás minősége. Az alacsony minőség gyors feldolgozást, a magas több CPU használatot eredményez."
+"Select the quality of resampling for cases where the audio output needs to "
+"be at a different sampling rate from that used by the source. [Low] is fast "
+"and will have minimal impact on system resources such as the use of the CPU,"
+" [Medium] & [High] will use progressively more system resources."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -12662,8 +13061,8 @@ msgstr "Nincs még információ"
 msgctxt "#36203"
 msgid ""
 "Enable the Personal Video Recorder (PVR) features in XBMC. This requires "
-"that at least one PVR add-on is installed."
-msgstr "A videófelvevő (PVR) funkció engedélyezése az XBMC részére. Legalább egy PVR kiegészítőnek telepítve kell lennie."
+"that at least one PVR Add-on is installed."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -12812,8 +13211,8 @@ msgstr "A legutoljára nézett csatorna használata élő adásra váltáskor."
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
-"supported by the add-on and backend)."
-msgstr "Jelerősség megjelenítése a kodek-információ ablakban (ha az adott háttérszolgáltatás támogatja)."
+"supported by the Add-on and backend)."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36230"
@@ -12848,29 +13247,29 @@ msgstr "A felvétel hossza a felvevőgomb megnyomásakor, vagy kézi időzítés
 msgctxt "#36235"
 msgid ""
 "Priority of the recording. Higher number means higher priority. Defaults to "
-"50. Not supported by all add-ons and backends."
-msgstr "Felvétel prioritása. A magasabb szám magasabb prioritást jelent. Alapértelmezett érték 50. Nem minden kiegészítő és háttérszolgáltatás támogatja."
+"50. Not supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36236"
 msgid ""
 "Delete recording after this time. Defaults to 99 days. Not supported by all "
-"add-ons and backends."
-msgstr "Felvételek törlése ennyi idő után. Alapértelmezetten 99 nap, Nem minden kiegészítő és háttérszolgáltatás támogatja."
+"Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Start recordings before the actual time. Defaults to 2 minutes. Not "
-"supported by all add-ons and backends."
-msgstr "Felvétel elkezdése az aktuális időpont elptt. Alapértelmezett érték 2 perc. Nem minden kiegészítő és háttérszolgáltatás támogatja."
+"supported by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "End recordings after the actual time. Defaults to 10 minutes. Not supported "
-"by all add-ons and backends."
-msgstr "Felvétel befejezése az aktuális idő után. Alapértelmezett érték 10 perc. Nem minden kiegészítő és háttérszolgáltatás támogatja."
+"by all Add-ons and backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -13560,13 +13959,21 @@ msgstr "Nincs még információ"
 
 #: system/settings/settings.xml
 msgctxt "#36361"
-msgid "Type of connection to the audio equipment."
-msgstr "A csatlakozás típusa a hangrendszerhez."
+msgid ""
+"Select how the properties of the audio output are set: [Fixed] - output "
+"properties are set to the specified sampling rate & speaker configuration at"
+" all times; [Best Match] - output properties are set to always be as close a"
+" match to the source properties as possible; [Optimized] - output properties"
+" are set at the start of playback and will not change if the properties of "
+"the source changes."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36362"
-msgid "Select your physical speaker layout."
-msgstr "Válassza ki a hangfalak fizikai elhelyezkedését."
+msgid ""
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -13576,9 +13983,9 @@ msgstr "A 2 csatornára lekevert AC3 hangfolyamok erősítése."
 #: system/settings/settings.xml
 msgctxt "#36364"
 msgid ""
-"Upmix 2 channel stereo sources so the number of audio channels matches the "
-"number of speakers."
-msgstr "Két csatornás hangfolyamok bővítése többcsatornássá a hangrendszernek megfelelően."
+"Select to enable upmixing of 2 channel stereo sources to the number of audio"
+" channels specified by the speaker configuration."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36365"
@@ -13592,17 +13999,19 @@ msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
 msgstr "Válassza ki ezt az opciót ha az erősítője képes a DTS hangsáv dekódolására."
 
-#: system/settings/settings.xml
+#: system/settings/darwin_osx.xml
 msgctxt "#36367"
 msgid ""
-"Select this option if your receiver is capable of decoding AAC streams."
-msgstr "Válassza ki ezt az opciót ha az erősítője képes az AAC hangsáv dekódolására."
+"Select the maximum number of audio channels/speakers available for audio "
+"decoded. If optical/coax digital outputs are used this must be set to 2.0"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select this option if your receiver is capable of decoding LPCM streams."
-msgstr "Válassza ki ezt az opciót ha az erősítője képes az LPCM hangsáv dekódolására."
+"Select to enable the passthrough audio options for playback of encoded audio"
+" such as Dolby Digital."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36369"
@@ -13619,16 +14028,16 @@ msgstr "Válassza ki ezt az opciót ha az erősítője képes a DTS-HD hangsáv 
 #: system/settings/settings.xml
 msgctxt "#36371"
 msgid ""
-"Select the device you use to play audio decoded by XBMC such as mp3's and "
-"FLAC."
-msgstr "Válassza ki a használandó eszközt az XBMC által dekódolt hanganyagokhoz mint pl az mp3 és a FLAC."
+"Select the device to be used for playback of audio that has been decoded "
+"such as mp3"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36372"
 msgid ""
-"Select the device you use to play encoded formats, these are any of the "
-"formats checked above in the 'capable receiver' options."
-msgstr "Válassza ki a lejátszóeszközt a tömörített hangsávokhoz, ezek azok amik meg lettek adva mint az erősítő által támogatott formátum."
+"Select the device to be used for playback of encoded formats, these are any "
+"of the formats below in the 'capable receiver' options."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -13899,6 +14308,13 @@ msgid "Enable hardware video decode using AMLogic decoder"
 msgstr "Engedélyezi az AMLogic hardvergyorsítást"
 
 #: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"Use ffmpeg frame multiple thread decoding when hardware decoding not working"
+" or disabled. (less reliable than default single thread mode)"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic mode (current)"
 msgstr "Sztereógráf mód (aktuális)"
@@ -13913,12 +14329,12 @@ msgctxt "#36502"
 msgid "None"
 msgstr "Nincs"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over/Under"
 msgstr "Felül/Alul 'OU'"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36504"
 msgid "Side by side"
 msgstr "Egymás mellett 'SBS'"
@@ -13962,6 +14378,13 @@ msgstr "Kérdezzen"
 msgctxt "#36522"
 msgid "Use preferred mode"
 msgstr "Használja a preferált módot"
+
+#: system/settings/settings.xml
+msgctxt "#36523"
+msgid ""
+"Maximum sampling rate for spdif or sampling rate for fixed output "
+"configuration"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14008,12 +14431,25 @@ msgctxt "#36532"
 msgid "Same as movie"
 msgstr "A film szerinti"
 
+#: settings/DisplaySettings.cpp
+msgctxt "#36533"
+msgid ""
+"Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
+"maintains the dynamic range of the original audio source when downmixed "
+"however volume will be lower [Disabled] maintains volume level of the "
+"original audio source however the dynamic range is compressed. Note - "
+"Dynamic range is the difference between the quietest and loudest sounds in a"
+" audio source."
+msgstr ""
+
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic mode of video"
 msgstr "A videó sztereógráf módja"
 
 #: guilib/StereoscopicsManager.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Stereoscopic mode inverted"
 msgstr "Sztereógráf mód megfordítva"
@@ -14115,3 +14551,10 @@ msgstr "Dupla hangkimenet"
 msgctxt "#37018"
 msgid "Boost centre channel when downmixing"
 msgstr "Középcsatorna erősítése lekeverés esetén"
+
+#: system/settings/settings.xml
+msgctxt "#37019"
+msgid ""
+"Enables system keys like printscreen, alt-tab and volume keys when in "
+"fullscreen"
+msgstr ""
