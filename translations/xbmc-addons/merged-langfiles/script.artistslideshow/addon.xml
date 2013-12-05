@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.artistslideshow" name="Artist Slideshow" version="1.5.7" provider-name="ronie|pkscuot">
+<addon id="script.artistslideshow" name="Artist Slideshow" version="1.5.8.3" provider-name="ronie|pkscuot">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.elementtree" version="1.2.7"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
 	<extension point="xbmc.python.script" library="default.py">
 		<provides>executable</provides>
@@ -11,6 +11,7 @@
 		<summary lang="ar">حمل صور و معلومات إضافية للفنان المغني حاليا</summary>
 		<summary lang="be">Download images and additional info of the currently playing artist</summary>
 		<summary lang="bg">Сваля изображения и допълнителна инф. за изпълнителя на текущата песен</summary>
+		<summary lang="ca">Descàrrega imatges i informació addicional de l'artista que s'està reproduint</summary>
 		<summary lang="da">Download billeder og ekstra info om kunstneren, der spiller i øjeblikket</summary>
 		<summary lang="de">Downloade Bilder und zusätzliche Informationen des aktuellen abspielenden Künstlers.</summary>
 		<summary lang="el">Κατεβάστε εικόνες και επιπλέον πληροφορίες του τρέχοντος καλλιτέχνη</summary>
@@ -32,28 +33,15 @@
 		<summary lang="pt_BR">Transferência de imagens e informações adicionais de artistas que estejam sendo reproduzidos</summary>
 		<summary lang="ru">Загрузить фото и дополнительную информацию об воспроизводимом исполнителе</summary>
 		<summary lang="sk">Stiahnuť obrázky a dodatočné informácie o práve hrajúcich interpretoch</summary>
-		<summary lang="sv">Ladda ner bilder och ytterligare information om den nu spelande artisten</summary>
+		<summary lang="sv">Ladda ner bilder samt ytterligare information om den spelade artisten</summary>
 		<summary lang="zh">下载当前播放艺人的图片和附加信息</summary>
-		<description lang="de">Addon um Bilder und zusätzliche Informationen von Last.FM, fanart.tv und theaudiodb.com des aktuell laufenden Interpreten herunterzuladen. Die Bilder und Informationen können gemeinsam mit den lokal gespeicherten Bildern vom Skin genutzt werden, um eine Diashow für den aktuelle gespielten Interpreten zu erzeugen.</description>
-		<description lang="el">Πρόσθετο για τη λήψη εικόνων και επιπλέον πληροφοριών από το Last.FM, το fanart.tv και το theaudiodb.com για τον τρέχοντα καλλιτέχνη. Οι εικόνες, μαζί με τοπικές εικόνες του καλλιτέχνη καθώς και πληροφορίες, μπορούν να χρησιμοποιηθούν από το κέλυφος για τη δημιουργία παρουσιάσεων διαφανειών του καλλιτέχνη η μουσική του οποίου ακούγεται.</description>
-		<description lang="en">Addon to download images and additional information from Last.FM, fanart.tv and theaudiodb.com of the currently playing artist. The images, along with local artists' images, and info can be used by the skin to create a slideshow for the artist being listened to.</description>
-		<description lang="es">Addon para descargar imágenes e información adicional de last.fm, fanart.tv y theaudiodb.com sobre el artista que se está escuchando. Las imágenes, junto con las almacenadas localmente, y la información pueden ser usadas por el skin para crear una presentación del artista que se está escuchando.</description>
-		<description lang="gl">Complemento de descarga de imaxes e información adicional de Last.FM, fanart.tv e theaudiodb.com do artista que está a soar. Estas imaxes, xunto cas do artista gardadas en local, e a información pode ser usada polo tema para crear unha presentación. </description>
-		<description lang="he">הרחבה להורדת תמונות ומידע נוסף מ-Last.FM, fanart.tv ו-theaudiodb.com על האמן המנוגן כעת. תמונות אלו ביחד עם תמונות אמנים מקומיות ומידע נוסף ניתנים לשימוש ע"י המעטפת לשם יצירת מצגת עבור האמן המושמע.</description>
-		<description lang="hr">Dodatak za preuzimanje slika i dodatnih informacije trenutno reproduciranog izvođača s Last.FM, fanart.tv i theaudiodb.com. Slike, zajedno sa lokalnim slikama izvođača i informacijama mogu se koristiti sa presvlakom za stvaranje slikovne prezentacije izvođača koji se sluša.</description>
-		<description lang="it">Questo add-on permette di scaricare immagini ed informazioni aggiuntive sull'artista corrente da Last.FM, fanart.tv e theaudiodb.com. Le immagini, oltre alle immagini locali dell'artista, nonché le informazioni scaricate potranno essere usate dalla skin per creare uno slideshow dell'artista corrente.</description>
-		<description lang="ja">現在、演奏しているアーティストのLast.FM, fanart.tv、とtheaudiodb.com からダウンロードした画像と追加情報のアドオン。画像と情報はスキンとして現在演奏しているアーティストのスライドショーを作成できます。</description>
-		<description lang="ko">현재 재생중인 아티스트의 이미지와 추가정보를 Last.FM, fanart.tv, theaudiodb.com에서 다운로드합니다. 다운로드한 이미지와 정보는 로컬 이미지와 함께 현재 재생중인 아티스트 슬라이드쇼에 사용할 수 있습니다.</description>
-		<description lang="nl">Addon om afbeeldingen en bijkomende informatie van Last.FM en Last.FM, fanart.tv en theaudiodb.com van te horen artiest binnen te halen. De afbeeldingen, net als de lokaal aanwezige artiestafbeeldingen en -info kunnen gebruikt worden door de skin om een diashow te tonen van de artiest die nu beluisterd wordt.</description>
-		<description lang="no">Tillegg for å laste ned bilder og ytterligere informasjon fra last.fm, fanart.tv og theaudiodb.com for artisten som spilles av nå. Bildene, sammen med lokale artistbilder, og info kan bli brukt av skallet til å lage en lysbildefremvisning av artisten som det lyttes til.</description>
-		<description lang="pl">Dodatek pobiera zdjęcia, obrazy i dodatkowe informacje aktualnie odtwarzanej muzyki z Last.FM, fanart.tv i theaudiodb.com. Ilustracje, wraz z obrazami artystów oraz informacjami mogą być wykorzystywane przez skórę do tworzenia pokazu slajdów podczas słuchania muzyki.</description>
-		<description lang="pt">Um addon para transferir imagens e informação adicional de Last.FM, fanart.tv e theaudiodb.com para o artista a ser reproduzido actualmente. As imagens, assim como as imagens locais de artistas, e info podem ser utilizadas pelo tema para criar uma apresentação de Slides para o artista que está a ouvir.</description>
-		<description lang="pt_BR">Addon para download de imagens e informações adicionais do Last.FM, fanart.tv e theaudiodb.com do artista sendo reproduzido atualmente. . As imagens online, somado as imagens locais dos artistas, bem como as informações coletadas, podem ser utilizadas pela skin para criar uma apresentação de slides do artista que estiver escutando.</description>
-		<description lang="ru">Дополнение для загрузки изображений и дополнительной информации о воспроизводимом исполнителе с ресурсов Last.FM, fanart.tv и theaudiodb.com. Загруженные изображения, наравне с локальными, а также информация могут быть использованы для создания слайд-шоу во время прослушивания композиций.</description>
+		<description lang="en">Addon to download images and additional information from fanart.tv, theaudiodb.com, and htbackdrops.org of the currently playing artist. The images, along with local artists' images, and info can be used by the skin to create a slideshow for the artist being listened to.</description>
 		<website>http://wiki.xbmc.org/index.php?title=Add-on:Artist_Slideshow</website>
 		<forum>http://forum.xbmc.org/showthread.php?t=124880</forum>
 		<source>https://github.com/pkscout/script.artistslideshow</source>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 		<email>artistslideshow.xbmc@gmail.com</email>
+		<language></language>
 		<platform>all</platform>
 	</extension>
 </addon>
