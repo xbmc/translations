@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-12-06 12:20+0000\n"
+"PO-Revision-Date: 2013-12-28 22:06+0000\n"
 "Last-Translator: elbuve\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xbmc-main/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -5707,7 +5707,7 @@ msgstr "Permitir aceleración de hardware (MediaCodec)"
 
 msgctxt "#13440"
 msgid "Frame Multi Threaded Decoding (less reliable)"
-msgstr ""
+msgstr "Descodificación  (menos fiable)"
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -6779,6 +6779,11 @@ msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
+#: xbmc/cores/VideoRenderers/BaseRenderer.cpp
+msgctxt "#16326"
+msgid "DXVA-HD"
+msgstr "DXVA-HD"
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
@@ -7091,6 +7096,10 @@ msgstr "Esta grabación no se ha podido eliminar. Consulte el log para más deta
 msgctxt "#19069"
 msgid "EPG"
 msgstr "EPG"
+
+msgctxt "#19070"
+msgid "Go to now"
+msgstr "Ir a ahora"
 
 msgctxt "#19071"
 msgid "EPG update interval"
@@ -12094,7 +12103,7 @@ msgid ""
 " that after the selected period of time audio enters a suspended state [Off]"
 " - audio output enters a suspended state. Note - sounds can be missed if "
 "audio enters suspended state."
-msgstr ""
+msgstr "Seleccione el comportamiento cuando no se requiere sonido tanto para la reproducción como para el interfaz. [Siempre] -La señal de salida será inaudible de forma continua, lo que podría bloquear el sonido de otras aplicaciones. [1-10 Minutos] - Igual que \"Siempre\", excepto que tras ese periodo, la señal de audio se suspende. [Apagado] - La señal de audio se suspende. Nota: Algunos sonidos pueden perderse si el audio se suspende."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -12913,7 +12922,7 @@ msgid ""
 "be at a different sampling rate from that used by the source. [Low] is fast "
 "and will have minimal impact on system resources such as the use of the CPU,"
 " [Medium] & [High] will use progressively more system resources."
-msgstr ""
+msgstr "Selecciona la calidad del resampleado, para casos donde la salida de audio necesita una tasa de sampleado diferente de la fuente original. [Baja] es más rápida y tendrá un impacto mínimo en el uso de la CPU y otros recursos del sistema. [Media] y [Alta] usarán más recursos del sistema, de forma progresiva."
 
 #: system/settings/settings.xml
 msgctxt "#36170"
@@ -14011,7 +14020,7 @@ msgid ""
 " match to the source properties as possible; [Optimized] - output properties"
 " are set at the start of playback and will not change if the properties of "
 "the source changes."
-msgstr ""
+msgstr "Seleccionar como se establecen las opciones de salida de audio: [Fijo] - las propiedades de salida se establecen a una frecuencia de muestreo especificada y a la configuración de los altavoces siempre; [Mejor opción] - las propiedades de salida se establecen para parecerse lo más posible a las propiedades de la fuente; [Optimizado] - las propiedades de salida se establecen al inicio de la reproducción y no cambiarán aunque varien las propiedades de la fuente de sonido-"
 
 #: system/settings/settings.xml
 msgctxt "#36362"
@@ -14082,7 +14091,7 @@ msgctxt "#36372"
 msgid ""
 "Select the device to be used for playback of encoded formats, these are any "
 "of the formats below in the 'capable receiver' options."
-msgstr ""
+msgstr "Elige el dispositivo a usar para la reproducción de los distintos formatos, éstos serán algunos de los formatos abajo indicadoe en las opciones de 'receptores disponibles'"
 
 #: system/settings/settings.xml
 msgctxt "#36373"
@@ -14357,7 +14366,7 @@ msgctxt "#36423"
 msgid ""
 "Use ffmpeg frame multiple thread decoding when hardware decoding not working"
 " or disabled. (less reliable than default single thread mode)"
-msgstr ""
+msgstr "usar la decodificación ffmpeg multihilo cuando la decodificación por hardware no funciona o esté deshabilitada. (Es menos fiable que el modo por defecto de un único hilo)"
 
 #: system/settings/settings.xml
 msgctxt "#36500"
@@ -14429,7 +14438,7 @@ msgctxt "#36523"
 msgid ""
 "Maximum sampling rate for spdif or sampling rate for fixed output "
 "configuration"
-msgstr ""
+msgstr "Máxima frecuencia de muestreo para spdif o frecuencoa de muestreo para una configuración fija de salida"
 
 #: system/settings/settings.xml
 msgctxt "#36524"
@@ -14485,7 +14494,7 @@ msgid ""
 "original audio source however the dynamic range is compressed. Note - "
 "Dynamic range is the difference between the quietest and loudest sounds in a"
 " audio source."
-msgstr ""
+msgstr "Elige como el audio es reducido, por ejemplo: de 5.1 a 2.0: [Habilitado] mantiene el rango dinámico de la fuente de audio original en la reducción aunque el volumen será menor [Deshabilitado] mantiene el nivel de volumen de la fuente original del audio aunque se comprima el rango dinámico. Nota - El rango dinámico es la diferencia entre el menor y mayor sonido de la fuente de audio."
 
 #: guilib/StereoscopicsManager.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -14540,6 +14549,18 @@ msgstr "Activar para potenciar los diálogos frente al sonido ambiente cuando se
 msgctxt "#36544"
 msgid "Enable hardware decoding of video files."
 msgstr "Habilitar decodificación de vídeo por hardware."
+
+#: system/settings/settings.xml
+msgctxt "#36545"
+msgid "Subtitle stereoscopic depth"
+msgstr "Profundidad estereoscópica para los subtítulos"
+
+#: system/settings/settings.xml
+msgctxt "#36546"
+msgid ""
+"Sets the visual depth of subtitles for stereoscopic videos. The higher the "
+"value, the closer the subtitles will appear to the viewer."
+msgstr "Establece la profuncidad visual para los subtitulos en videos estereoscópicos. A mayor valor, más cerca aparecerán los subtitulos del espectador."
 
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"
