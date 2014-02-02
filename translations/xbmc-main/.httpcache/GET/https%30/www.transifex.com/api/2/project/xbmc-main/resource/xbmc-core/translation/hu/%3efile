@@ -7,14 +7,14 @@
 # gyeben <gyonkibendeguz@gmail.com>, 2014
 # László Pál <vlad@vlad.hu>, 2013
 # tdudus <gyuri.till@gmail.com>, 2013
-# osztraksajt <osztraksajt@gmail.com>, 2013
+# osztraksajt <osztraksajt@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-01-06 21:50+0000\n"
-"Last-Translator: gyeben <gyonkibendeguz@gmail.com>\n"
+"PO-Revision-Date: 2014-01-18 00:00+0000\n"
+"Last-Translator: osztraksajt <osztraksajt@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/xbmc-main/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -9206,7 +9206,7 @@ msgstr "Előadóinformáció letöltése sikertelen"
 #: system/settings/settings.xml
 msgctxt "#20220"
 msgid "Override song tags with online information"
-msgstr ""
+msgstr "Tárolt zenei adatok felülbírálása online adatokkal"
 
 #: system/settings/settings.xml
 msgctxt "#20221"
@@ -9215,7 +9215,7 @@ msgid ""
 " will override anything you have set in your song tags, such as genres, "
 "year, song artists etc. Useful if you have MusicBrainz identifiers in your "
 "song tags."
-msgstr ""
+msgstr "Ezzel a funkcióval bármely információ ami letöltésre kerül felülbírálja a zene helyi adataiban az információkat úgymint műfaj, év, előadó stb. Akkor hasznos ha a MusicBrainz azonosító szerepel a tag-ekben."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -11605,6 +11605,16 @@ msgid ""
 "Select service that will be used as default to search for Movie subtitles"
 msgstr "Alapértelmezett szolgáltatás kiválasztása a Film felirat kereséshez"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24120"
+msgid "Manual search string"
+msgstr "Keresendő szöveg kézi megadása"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24121"
+msgid "Enter search string"
+msgstr "Keresőszó"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Értesítések"
@@ -13220,8 +13230,8 @@ msgstr "Alapértelmezeten mutatott EPG ablak. Alapértelmezett az Idővonal."
 #: system/settings/settings.xml
 msgctxt "#36220"
 msgid ""
-"Number of days of EPG data to import from backends. Defaults to 2 days."
-msgstr "Hány nap EPG adat kerüljön beimportálásra a háttérszolgáltatásból. Alapértelmezett érték 2 nap."
+"Number of days of EPG data to import from backends. Defaults to 3 days."
+msgstr "Hány nap EPG adat kerüljön beimportálásra a háttérszolgáltatásból. Alapértelmezett érték 3 nap."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -14385,7 +14395,7 @@ msgid ""
 "[Switch to channel] will instantly tune to the related channel; [Show "
 "information] will display a detailed information with plot and further "
 "options; [Record] will create a recording timer for the selected item."
-msgstr ""
+msgstr "Válassza ki mi történjen ha egy EPG elem kiválasztásra kerül: [Tartalom menü mutatása] megnyitja a tatalom menüt ahonnan további műveletek hajthatóak végre; [Váltás csatornára] azonnal átvált a hivatkozott csatornára; [Infó mutatása] megjeleníti a tartalominfókat és egyéb opciókat; [Felvétel] létrehoz egy felvételidőzítőt a kiválasztott elemre."
 
 #: system/settings/settings.xml
 msgctxt "#36425"
@@ -14601,6 +14611,18 @@ msgid ""
 "value, the closer the subtitles will appear to the viewer."
 msgstr "Beállítja a feliratok 3D videóknál látható térbeli mélységét. Minél magasabb az érték, a felirat annál közelebbinek fog látszani a nézőhöz."
 
+#: system/settings/rbp.xml
+msgctxt "#36547"
+msgid "Use higher quality textures for covers and fanart (uses more memory)"
+msgstr "Nagyobb felbontású képek használata a borítókhoz és a fanartokhoz (magasabb memóriahasználat)"
+
+#: system/settings/rbp.xml
+msgctxt "#36548"
+msgid ""
+"Limits resolution of GUI to save memory. Does not affect video playback. Use"
+" 1080 for unlimited. Requires restart."
+msgstr "GUI felbontásának limitálása memória megtakarításhoz. Nem érvényes a videólejátszásra. 1080 a végtelen. Újraindítás szükséges."
+
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"
 msgid "(Visually Impaired)"
@@ -14663,3 +14685,13 @@ msgid ""
 "Enables system keys like printscreen, alt-tab and volume keys when in "
 "fullscreen"
 msgstr "Rendszerbillentyűk engedélyezése teljesképernyős üzemmódban úgymint alt-tab, printscreen, hangerőgombok"
+
+#: system/settings/rbp.xml
+msgctxt "#37020"
+msgid "Enable higher colour depth artwork"
+msgstr "Nagyobb színmélységű képek használata"
+
+#: system/settings/rbp.xml
+msgctxt "#37021"
+msgid "Set GUI resolution limit"
+msgstr "GUI felbontás limitálása"

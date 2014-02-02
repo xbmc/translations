@@ -19,12 +19,13 @@
 # Monster_Inc <1358@gmx-topmail.de>, 2013
 # schmitto, 2013
 # yanniks <kontakt@yanniks.de>, 2013
+# bitboy <zeus557@gmx.de>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-01-10 10:40+0000\n"
+"PO-Revision-Date: 2014-01-21 10:00+0000\n"
 "Last-Translator: daAnda\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xbmc-main/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -2028,7 +2029,7 @@ msgstr "Übersteuerungsreserve"
 
 msgctxt "#495"
 msgid "Upsample videos to GUI resolution"
-msgstr "Videos in GUI-Auflösung abspielen"
+msgstr "Videos in Auflösung der Benutzeroberfläche abspielen"
 
 msgctxt "#496"
 msgid "Calibration"
@@ -3928,7 +3929,7 @@ msgstr "Einstellungen->Bildschirm"
 
 msgctxt "#10010"
 msgid "Settings - Appearance - GUI Calibration"
-msgstr "Einstellungen->Darstellung->GUI-Kalibrierung"
+msgstr "Einstellungen->Darstellung->Benutzeroberflächen-Kalibrierung"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4010,7 +4011,7 @@ msgstr "Zurücksetzen"
 
 msgctxt "#10036"
 msgid "Basic"
-msgstr "Standard"
+msgstr "Einfach"
 
 msgctxt "#10037"
 msgid "Standard"
@@ -6076,7 +6077,7 @@ msgstr "Datumsformat"
 
 msgctxt "#14053"
 msgid "GUI filters"
-msgstr "GUI-Filter"
+msgstr "Benutzeroberflächen-Filter"
 
 msgctxt "#14055"
 msgid "Use background scanning"
@@ -7768,7 +7769,7 @@ msgstr "Zeige Hinweis bei Timer Aktualisierungen"
 #: system/settings/settings.xml
 msgctxt "#19234"
 msgid "Use backend channels numbers (only works with 1 enabled PVR Add-on)"
-msgstr "Verwende Kanalreihenfolge des Backends (nur mit 1 PVR Add-on möglich)"
+msgstr "Verwende Kanalnummerierung des Backends (nur mit 1 PVR Add-on möglich)"
 
 msgctxt "#19235"
 msgid "PVR manager is starting up"
@@ -11616,6 +11617,16 @@ msgid ""
 "Select service that will be used as default to search for Movie subtitles"
 msgstr "Wählen Sie den Dienst der standardmäßig für die Suche nach Untertiteln von Filmen verwendet werden soll"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24120"
+msgid "Manual search string"
+msgstr "Suchbegriff"
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24121"
+msgid "Enter search string"
+msgstr "Suchbegriff eingeben"
+
 msgctxt "#25000"
 msgid "Notifications"
 msgstr "Benachrichtigungen"
@@ -12128,7 +12139,7 @@ msgstr "Wählen Sie das gewünschte Verhalten wenn gerade kein Ton wiedergegeben
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
-msgstr "GUI Sounds abspielen"
+msgstr "Sounds der Benutzeroberfläche abspielen"
 
 #. play GUI sounds
 #: system/settings/settings.xml
@@ -13157,7 +13168,7 @@ msgctxt "#36206"
 msgid ""
 "Use numbering from the backend, instead of configuring them manually over "
 "XBMC."
-msgstr "Benutze Numerierung vom backend, anstelle sie manuell über XBMC zu konfigurieren."
+msgstr "Benutze Numerierung vom Backend, anstelle sie manuell über XBMC zu konfigurieren."
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -13231,8 +13242,8 @@ msgstr "Standard EPG-Anzeigefenster. Standard: Zeitleiste"
 #: system/settings/settings.xml
 msgctxt "#36220"
 msgid ""
-"Number of days of EPG data to import from backends. Defaults to 2 days."
-msgstr "Anzahl der Tage um Daten vom Backend zu importieren. Standard: 2 Tage."
+"Number of days of EPG data to import from backends. Defaults to 3 days."
+msgstr "Anzahl der Tage für die EPG Daten vom Backend importiert werden sollen. Standard ist 3 Tage."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -14612,6 +14623,18 @@ msgid ""
 "value, the closer the subtitles will appear to the viewer."
 msgstr "Legt die visuelle Tiefe der Untertitel für stereoskopische Videos fest. Je höher der Wert, desto näher wirken die Untertitel."
 
+#: system/settings/rbp.xml
+msgctxt "#36547"
+msgid "Use higher quality textures for covers and fanart (uses more memory)"
+msgstr "Cover und Fanarts mit höherer Qualität benutzen (benötigt mehr Speicher)"
+
+#: system/settings/rbp.xml
+msgctxt "#36548"
+msgid ""
+"Limits resolution of GUI to save memory. Does not affect video playback. Use"
+" 1080 for unlimited. Requires restart."
+msgstr "Begrenzt die Auflösung der Benutzeroberfläche um Arbeitsspeicher zu sparen. Dies betrifft nicht die Wiedergabe von Videos. Verwende 1080 für unbegrenzt. Benötigt Neustart. "
+
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"
 msgid "(Visually Impaired)"
@@ -14674,3 +14697,13 @@ msgid ""
 "Enables system keys like printscreen, alt-tab and volume keys when in "
 "fullscreen"
 msgstr "Ermöglicht die Verwendung von System-Tasten wie Drucken, Alt-Tabulator oder Lautstärke im Vollbild-Modus"
+
+#: system/settings/rbp.xml
+msgctxt "#37020"
+msgid "Enable higher colour depth artwork"
+msgstr "Höhere Farbtiefe in Grafiken verwenden"
+
+#: system/settings/rbp.xml
+msgctxt "#37021"
+msgid "Set GUI resolution limit"
+msgstr "Maximale Auflösung der Benutzeroberfläche"
