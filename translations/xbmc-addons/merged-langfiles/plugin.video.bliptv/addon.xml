@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<addon id="plugin.video.bliptv" name="BlipTV" provider-name="TheCollective" version="1.8.5">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.common.plugin.cache" version="2.5.1" />
+    <import addon="script.module.parsedom" version="2.5.1" />
+    <import addon="script.module.simple.downloader" version="1.9.4" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="bg">Видео добавка за Bliptv</summary>
+    <summary lang="ca">Connector de vídeo de Bliptv</summary>
+    <summary lang="cs">Modul videa Bliptv</summary>
+    <summary lang="cy">Ategyn fideo Bliptv</summary>
+    <summary lang="da">Videoplugin til Bliptv</summary>
+    <summary lang="de">Bliptv video plugin</summary>
+    <summary lang="el">Plugin βίντεο Bliptv</summary>
+    <summary lang="en">Bliptv video plugin</summary>
+    <summary lang="es">Plugin de video BlipTV</summary>
+    <summary lang="es_AR">Plugin de video de BlipTV</summary>
+    <summary lang="et">Bliptv video plugin</summary>
+    <summary lang="fr">Plugin vidéo Bliptv</summary>
+    <summary lang="gl">Engadido de vídeo de Bliptv</summary>
+    <summary lang="he">Bliptv תוסף וידאו</summary>
+    <summary lang="hr">Bliptv video dodatak</summary>
+    <summary lang="hu">Bliptv videó kiegészítő</summary>
+    <summary lang="it">Plugin Video Bliptv</summary>
+    <summary lang="ja">Bliptv ビデオプラグイン</summary>
+    <summary lang="ko">Bliptv 비디오 플러그인</summary>
+    <summary lang="lt">Blip.tv Vaizdo įskiepis</summary>
+    <summary lang="mk">Bliptv video plugin</summary>
+    <summary lang="ms">Pemalam video Bliptv</summary>
+    <summary lang="nl">Bliptv video plugin</summary>
+    <summary lang="no">Bliptv video plug-in</summary>
+    <summary lang="pl">Wtyczka wideo Bliptv</summary>
+    <summary lang="pt">Plugin de vídeo Bpiptv</summary>
+    <summary lang="pt_BR">Plugin Vídeo Bliptv</summary>
+    <summary lang="ro">Plugin video Bliptv</summary>
+    <summary lang="ru">Плагин Bliptv</summary>
+    <summary lang="sk">Bliptv video doplnok</summary>
+    <summary lang="sl">Video vtičnik Bliptv</summary>
+    <summary lang="sv">Bliptv videotillägg</summary>
+    <summary lang="ta_IN">Bliptv வீடியோ செருகுநிரல்</summary>
+    <summary lang="tr">Bliptv video eklentisi</summary>
+    <summary lang="uk">Відео додаток Bliptv</summary>
+    <summary lang="vi">Plugin xem video từ BlipTV</summary>
+    <summary lang="zh">Bliptv视频插件</summary>
+    <summary lang="zh_TW">Bliptv 影片外掛插件</summary>
+    <description lang="bg">Добавката ви позволява да разглеждате и гледате видео клипове от BlipTV!</description>
+    <description lang="ca">Connector que et permet cercar i reproduir vídeos des de BlipTV!</description>
+    <description lang="cs">Modul, který vám umožní procházet a přehrávat videa z BlipTV.</description>
+    <description lang="cy">Ategyn sy'n caniatáu i chi bori a chwarae fideos o BlipTV!</description>
+    <description lang="da">Plugin som lader dig gennemse og afspille videoer fra BlipTV!</description>
+    <description lang="de">Dieses Plugin ermöglicht das Durchsuchen und Anzeigen der Videos auf BlipTV.</description>
+    <description lang="el">Plugin που σας επιτρέπει να βρείτε και να παρακολουθήσετε βίντεο από το BlipTV!</description>
+    <description lang="en">Plugin that let's you browse and play videos from BlipTV!</description>
+    <description lang="es">Plugin para examinar y reproducir vídeos de BlipTV!</description>
+    <description lang="es_AR">Plugin que le permite listar y reproducir videos de BlipTV!</description>
+    <description lang="et">Plugin võimaldab lehitseda ja mängida videosid BlipTVs!</description>
+    <description lang="fr">Plugin qui vous permet d'explorer et de lire les vidéos de Blip TV!</description>
+    <description lang="gl">Engadido que lle permite explorar e reproducir vídeos de BlipTV!</description>
+    <description lang="he">תוסף אשר מאפשר לך לעיין ולנגן וידאו מתוך BlipTV!</description>
+    <description lang="hr">Dodatak koji vam omogućuje pregledavanje i reprodukciju  videa sa BlipTV-a!</description>
+    <description lang="hu">A kiegészítő segítségével videókat böngészhetsz és játszhatsz le a BlipTV-ről!</description>
+    <description lang="it">Plugin che permette di sfogliare ed eseguire video da CLibTV!</description>
+    <description lang="ja">BlipTV のビデオをブラウズ・再生するプラグインです！</description>
+    <description lang="ko">BlipTV의 비디오를 탐색하고 재생할 수 있습니다!</description>
+    <description lang="lt">Įskiepis, kuris leidžia jums naršyti ir leisti vaizdo įrašus iš BlipTV!</description>
+    <description lang="ms">Pemalam yang membolehkan anda layar dan main video dari BlipTV!</description>
+    <description lang="nl">Plugin die je laat bladeren door- en video's laat afspelen van BlipTV!</description>
+    <description lang="no">Plug-in som lar deg bla gjennom og spille videoer fra BlipTV!</description>
+    <description lang="pl">Wtyczka umożliwia przeglądanie i odtwarzanie wideo z BlipTV!</description>
+    <description lang="pt">Um plugin que permite navegar e reproduzir vídeos de BlipTV!</description>
+    <description lang="pt_BR">Plugin que deixa você navegar e reproduzir vídeos de BlipTV!</description>
+    <description lang="ro">Plugin care permite parcurgerea și vizualizarea filmelor de la BlipTV!</description>
+    <description lang="ru">Плагин который позволит вам выбирать и просматривать передачи Bliptv</description>
+    <description lang="sk">Doplnok, ktorý Vám umožní prehliadať a prehrávať videá z BlipTV!</description>
+    <description lang="sl">Vtičnik, ki vam omogoča brskanje in predvajanje posnetkov z BlipTV-ja!</description>
+    <description lang="sv">Tillägg som låter dig bläddra och spela videor från BlipTV!</description>
+    <description lang="ta_IN">BlipTV இருந்து உலாவ மற்றும் வீடியோக்களை வாசிக்ககூடிய செருகுநிரல்!</description>
+    <description lang="uk">Додаток, що дає можливість переглядати та програвати відео з BlipTV!</description>
+    <description lang="vi">Plugin này cho phép bạn duyệt và xem video từ BlipTV!</description>
+    <description lang="zh">在Bliptv浏览和播放视频的插件！</description>
+    <description lang="zh_TW">讓您可以從 BlipTV瀏覽並撥放影片的外掛插件!</description>
+    <platform>all</platform>
+  </extension>
+</addon>
