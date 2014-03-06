@@ -67,6 +67,7 @@ CPODocument::CPODocument()
   m_bhasLFWritten = false;
   m_previd = -1;
   m_writtenEntry = 0;
+  m_bIsUpdateTxDoc = false;
 };
 
 CPODocument::~CPODocument() {};
@@ -435,7 +436,7 @@ void CPODocument::WritePOEntry(const CPOEntry &currEntry, unsigned int nplurals)
 {
   m_bhasLFWritten = false;
 
-  if ((!m_bIsForeignLang || g_Settings.GetForcePOComments()) && currEntry.Type == ID_FOUND)
+  if ((!m_bIsForeignLang || g_Settings.GetForcePOComments()) && currEntry.Type == ID_FOUND && !m_bIsUpdateTxDoc)
   {
     int id = currEntry.numID;
     if (id-m_previd >= 2 && m_previd > -1 && !m_bIsForeignLang)

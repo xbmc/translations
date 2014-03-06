@@ -95,6 +95,7 @@ public:
   void WriteHeader(const std::string &strHeader);
   void WritePOEntry(const CPOEntry &currEntry, unsigned int nplurals);
   void SetIfIsEnglish(bool bIsENLang) {m_bIsForeignLang = !bIsENLang;}
+  void SetIfIsUpdDoc(bool bIsUpdTx) {m_bIsUpdateTxDoc = bIsUpdTx;}
   bool FetchURLToMem(const std::string &strURL, bool bSkipError);
   bool ParseStrToMem(const std::string &strPOData, std::string const &strFilePath);
 
@@ -118,6 +119,7 @@ protected:
   std::string m_strOutBuffer;
   bool m_bhasLFWritten;
   bool m_bIsForeignLang;
+  bool m_bIsUpdateTxDoc;
   int m_previd;
   int m_writtenEntry;
 };

@@ -326,48 +326,56 @@ long CHTTPHandler::curlPUTPOFileToURL(std::string const &strFilePath, std::strin
 
   std::string strURL = URLEncode(cstrURL);
 
-  std::string strPO = g_File.ReadFileToStr(strFilePath);
-
-  std::string strPOJson = g_Json.CreateJSONStrFromPOStr(strPO);
-
-  Tputstrdata PutStrData;
-  PutStrData.pPOString = &strPOJson;
-  PutStrData.pos = 0;
-
   std::string strServerResp;
   CLoginData LoginData = GetCredentials(strURL);
 
   if(m_curlHandle) 
   {
-    struct curl_slist *headers=NULL;
-    headers = curl_slist_append( headers, "Content-Type: application/json");
-    headers = curl_slist_append( headers, "charsets: utf-8");
+    struct curl_httppost *post1;
+    struct curl_httppost *postend;
 
-    curl_easy_setopt(m_curlHandle, CURLOPT_READFUNCTION, Read_CurlData_String);
+    post1 = NULL;
+    postend = NULL;
+    curl_formadd(&post1, &postend,
+                 CURLFORM_COPYNAME, "file",
+                 CURLFORM_FILE, strFilePath.c_str(),
+                 CURLFORM_CONTENTTYPE, "application/octet-stream",
+                 CURLFORM_END);
+
     curl_easy_setopt(m_curlHandle, CURLOPT_WRITEFUNCTION, Write_CurlData_String);
     curl_easy_setopt(m_curlHandle, CURLOPT_URL, strURL.c_str());
-    curl_easy_setopt(m_curlHandle, CURLOPT_UPLOAD, 1L);
-    curl_easy_setopt(m_curlHandle, CURLOPT_PUT, 1L);
-    curl_easy_setopt(m_curlHandle, CURLOPT_POST, 0); // disable post, we are doing a PUT not a POST this time
+    curl_easy_setopt(m_curlHandle, CURLOPT_NOPROGRESS, 1L);
+    curl_easy_setopt(m_curlHandle, CURLOPT_HEADER, 1L);
+    curl_easy_setopt(m_curlHandle, CURLOPT_FOLLOWLOCATION, 1L);
+    curl_easy_setopt(m_curlHandle, CURLOPT_HTTPPOST, post1);
+    curl_easy_setopt(m_curlHandle, CURLOPT_USERAGENT, "curl/7.29.0");
+    curl_easy_setopt(m_curlHandle, CURLOPT_MAXREDIRS, 50L);
+    curl_easy_setopt(m_curlHandle, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_easy_setopt(m_curlHandle, CURLOPT_TCP_KEEPALIVE, 1L);
+
     if (!LoginData.strLogin.empty())
     {
       curl_easy_setopt(m_curlHandle, CURLOPT_USERNAME, LoginData.strLogin.c_str());
       curl_easy_setopt(m_curlHandle, CURLOPT_PASSWORD, LoginData.strPassword.c_str());
     }
-    curl_easy_setopt(m_curlHandle, CURLOPT_FAILONERROR, true);
-    curl_easy_setopt(m_curlHandle, CURLOPT_READDATA, &PutStrData);
     curl_easy_setopt(m_curlHandle, CURLOPT_WRITEDATA, &strServerResp);
-    curl_easy_setopt(m_curlHandle, CURLOPT_INFILESIZE_LARGE, (curl_off_t)strPOJson.size());
-    curl_easy_setopt(m_curlHandle, CURLOPT_USERAGENT, "libcurl-agent/1.0");
-    curl_easy_setopt(m_curlHandle, CURLOPT_HTTPHEADER, headers);
     curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_easy_setopt(m_curlHandle, CURLOPT_VERBOSE, 0);
 
     curlResult = curl_easy_perform(m_curlHandle);
 
+    size_t jsonPos = strServerResp.find_first_of("{");
+    if (jsonPos == std::string::npos)
+      CLog::Log(logERROR, "HTTPHandler::curlFileToURL no valid Transifex server response received");
+
+    strServerResp = strServerResp.substr(jsonPos);
     g_Json.ParseUploadedStringsData(strServerResp, stradded, strupd);
 
     long http_code = 0;
     curl_easy_getinfo (m_curlHandle, CURLINFO_RESPONSE_CODE, &http_code);
+
+    curl_formfree(post1);
+    post1 = NULL;
 
     if (curlResult == 0 && http_code >= 200 && http_code < 400)
       CLog::Log(logINFO, "HTTPHandler::curlFileToURL finished with success from File %s to URL %s",

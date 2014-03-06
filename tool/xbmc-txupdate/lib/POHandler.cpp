@@ -29,6 +29,7 @@
 CPOHandler::CPOHandler()
 {
   m_bIsXMLSource = false;
+  m_bPOIsUpdateTX = false;
 };
 
 CPOHandler::~CPOHandler()
@@ -253,6 +254,7 @@ bool CPOHandler::WritePOFile(const std::string &strOutputPOFilename)
   CPODocument PODoc;
 
   PODoc.SetIfIsEnglish(m_bPOIsEnglish);
+  PODoc.SetIfIsUpdDoc(m_bPOIsUpdateTX);
 
   PODoc.WriteHeader(m_strHeader);
 
