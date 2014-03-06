@@ -351,7 +351,7 @@ long CHTTPHandler::curlPUTPOFileToURL(std::string const &strFilePath, std::strin
     curl_easy_setopt(m_curlHandle, CURLOPT_USERAGENT, "curl/7.29.0");
     curl_easy_setopt(m_curlHandle, CURLOPT_MAXREDIRS, 50L);
     curl_easy_setopt(m_curlHandle, CURLOPT_CUSTOMREQUEST, "PUT");
-    curl_easy_setopt(m_curlHandle, CURLOPT_TCP_KEEPALIVE, 1L);
+//    curl_easy_setopt(m_curlHandle, CURLOPT_TCP_KEEPALIVE, 1L);
 
     if (!LoginData.strLogin.empty())
     {
