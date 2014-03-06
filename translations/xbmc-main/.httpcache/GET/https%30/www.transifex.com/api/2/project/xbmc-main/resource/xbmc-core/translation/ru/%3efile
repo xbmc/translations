@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-03-05 14:20+0000\n"
+"PO-Revision-Date: 2014-03-06 20:10+0000\n"
 "Last-Translator: Buzzzzer <buzzzzer@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-main/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -828,10 +828,12 @@ msgctxt "#208"
 msgid "Play"
 msgstr "Воспроизвести"
 
+#. used as label for an action/button to play or navigate to the next item
 msgctxt "#209"
 msgid "Next"
 msgstr "Следующ."
 
+#. used as label for an action/button to play or navigate to the previous item
 msgctxt "#210"
 msgid "Previous"
 msgstr "Предыдущий"
@@ -5968,8 +5970,8 @@ msgid "Apple Remote Error"
 msgstr "Ошибка ДУ Apple"
 
 msgctxt "#13621"
-msgid "Apple Remote support could be enabled."
-msgstr "Можно включить поддержку ДУ Apple."
+msgid "Apple Remote support could not be enabled."
+msgstr "Можно включить поддержку ПДУ Apple."
 
 msgctxt "#14000"
 msgid "Stack"
@@ -7061,6 +7063,9 @@ msgctxt "#19030"
 msgid "Now"
 msgstr "Сейчас"
 
+#. Label prefix for the next playing tv-show (PVR) or media, like "Next: The
+#. Simpsons", "Next: AC/DC - Thunderstruck". It's also used as EPG display
+#. mode (EPG: timeline / now / next)
 msgctxt "#19031"
 msgid "Next"
 msgstr "Далее"
@@ -7414,8 +7419,8 @@ msgid "Cannot use PVR functions while searching."
 msgstr "Невозможно использовать функции PVR во время поиска."
 
 msgctxt "#19119"
-msgid "On which server you want to search?"
-msgstr "Выберите сервер для поиска"
+msgid "On which server do you want to search?"
+msgstr "На каком сервере произвести поиск?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19120"
@@ -11829,7 +11834,7 @@ msgstr "Выбрать тайтл…"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25003"
-msgid "Show bluray menus"
+msgid "Show Blu-ray menus"
 msgstr "Показать меню BluRay"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
@@ -11854,13 +11859,13 @@ msgstr "Главы: %u — длительность: %s"
 
 #: xbmc/cores/dvdplayer/DVDPlayer.cpp
 msgctxt "#25008"
-msgid "Blu-ray Disc playback failed"
-msgstr "Не удалось проиграть диск Blu-ray"
+msgid "Playback of Blu-ray failed"
+msgstr "Воспроизведение Blu-ray невозможно"
 
 #: xbmc/cores/dvdplayer/DVDPlayer.cpp
 msgctxt "#25009"
-msgid "The menu of this Blu-ray Disc is not supported"
-msgstr "Меню этого диска Blu-ray не поддерживается"
+msgid "The menu of this Blu-ray is not supported"
+msgstr "Меню этого Blu-Ray не поддерживается"
 
 #: skin.confluence skin.touched
 msgctxt "#29800"
@@ -13177,11 +13182,6 @@ msgid ""
 "graphics and in some circumstances AMD graphics."
 msgstr "Включить аппаратное декодирование видео файлов VAAPI, в основном используемое в картах от Intel и в некоторых AMD."
 
-#: system/settings/settings.xml
-msgctxt "#36157"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
-
 #. Description of setting "Videos -> Playback -> Allow hardware acceleration
 #. (DXVA2)" with label #13427
 #: system/settings/settings.xml
@@ -13502,7 +13502,7 @@ msgstr "Источник сведений, используемый по умо�
 #: system/settings/settings.xml
 msgctxt "#36201"
 msgid "Category for general settings for PVR/Live TV features."
-msgstr ""
+msgstr "Раздел основных настроек PVR/ТВ."
 
 #: system/settings/settings.xml
 msgctxt "#36202"
@@ -13561,21 +13561,21 @@ msgctxt "#36210"
 msgid ""
 "Prevent the 'connection lost' notification window from displaying when XBMC "
 "is unable to talk to the PVR backend server."
-msgstr ""
+msgstr "Не выводить уведомление \"Соединение потеряно\", когда XBMC не может получить информацию от сервера PVR"
 
 #: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "Category for PVR menus and on-screen display settings, as well as channel "
 "info windows."
-msgstr ""
+msgstr "Раздел настроек меню и наэкранной информации ТВ, таких как сведения о канале."
 
 #: system/settings/settings.xml
 msgctxt "#36212"
 msgid ""
 "Display programming information when changing channels, such as the current "
 "TV show."
-msgstr ""
+msgstr "Выводить информацию при изменении канала, такую как название текущей передачи."
 
 #: system/settings/settings.xml
 msgctxt "#36213"
@@ -13609,12 +13609,12 @@ msgstr "Искать недостающие значки каналов."
 #: system/settings/settings.xml
 msgctxt "#36218"
 msgid "Category for electronic programming guide settings."
-msgstr ""
+msgstr "Категория для установок EPG."
 
 #: system/settings/settings.xml
 msgctxt "#36219"
 msgid "Default electronic programming guide window to show."
-msgstr ""
+msgstr "Окно по умолчанию для отображения EPG."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
@@ -13655,7 +13655,7 @@ msgstr "Удалить базу данных EPG в xbmc и потом повт�
 #: system/settings/settings.xml
 msgctxt "#36226"
 msgid "Category for PVR playback and channel switching settings."
-msgstr ""
+msgstr "Раздел настроек воспроизведения PVR и переключения каналов."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
@@ -13681,7 +13681,7 @@ msgid ""
 "How long XBMC will wait to change the channel if the channel isn't being "
 "received. Useful for over-the-air channels that occasionally lose signal "
 "strength."
-msgstr ""
+msgstr "Как долго XBMC будет ждать смены канала, если не получает сигнал. Полезно для вещания 'по воздуху', когда сила сигнала не постоянна."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -13696,12 +13696,12 @@ msgid ""
 "When pressing channel up or down, the actual channel switch is delayed, "
 "allowing the user to flip to a channel number without waiting for each "
 "channel switch."
-msgstr ""
+msgstr "При переключении каналов вперед или назад, переключение произойдет с задержкой, чтоб можно было успеть выбрать нужный, а не ждать переключения каждого."
 
 #: system/settings/settings.xml
 msgctxt "#36233"
 msgid "Category for default recording duration settings."
-msgstr ""
+msgstr "Категория установок продолжительности записи по-умолчанию."
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -13747,7 +13747,7 @@ msgctxt "#36240"
 msgid ""
 "Category for PVR power management settings, such as when to wake the PVR "
 "backend server."
-msgstr ""
+msgstr "Раздел настроек управления энергосбережением, как и когда пробуждаться серверу PVR."
 
 #: system/settings/settings.xml
 msgctxt "#36241"
@@ -13789,7 +13789,7 @@ msgctxt "#36247"
 msgid ""
 "Category for parental control settings if the PVR backend server supports "
 "parental controls."
-msgstr ""
+msgstr "Раздел настроек родительского контроля, если их  поддерживает сервер PVR."
 
 #: system/settings/settings.xml
 msgctxt "#36248"
@@ -13817,14 +13817,14 @@ msgctxt "#36251"
 msgid ""
 "Category for any specific settings for your PVR backend, if the PVR backend "
 "supports changing those settings in XBMC."
-msgstr ""
+msgstr "Раздел настроек, специфичных для Вашего сервера PVR, если он поддерживает их изменение посредством XBMC."
 
 #: system/settings/settings.xml
 msgctxt "#36252"
 msgid ""
 "This option will bring you to any specific settings for your PVR backend, if"
 " the PVR backend supports changing those settings in XBMC."
-msgstr ""
+msgstr "Этот пункт даст Вам доступ к специфичным настройкам вашего сервера PVR, если он поддерживает их смену через XBMC."
 
 #. Description of settings section "Music" with label #2
 #: system/settings/settings.xml
@@ -13882,11 +13882,6 @@ msgstr "Сканировать новые и удаленные медиафай
 
 #: system/settings/settings.xml
 msgctxt "#36260"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
-
-#: system/settings/settings.xml
-msgctxt "#36261"
 msgid "No info available yet."
 msgstr "Информация пока недоступна."
 
@@ -15053,11 +15048,6 @@ msgstr "Время задержки между нажатиями клавиш �
 msgctxt "#36419"
 msgid "Define locations used for retrieving weather information."
 msgstr "Укажите месположения, для которых нужно получать прогноз погоды."
-
-#: system/settings/settings.xml
-msgctxt "#36420"
-msgid "No info available yet."
-msgstr "Информация пока недоступна."
 
 #. Description of setting "Videos -> Playback -> Prefer VDPAU Video Mixer"
 #. with label #13437
