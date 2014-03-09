@@ -85,7 +85,7 @@ void CLog::Log(TLogLevel loglevel, const char *format, ... )
   if (loglevel == logWARNING)
     m_numWarnings++;
 
-  fprintf(m_pLogFile, g_File.GetCurrTime().c_str());
+  fprintf(m_pLogFile, "%s", g_File.GetCurrTime().c_str());
   std::string strLogType;
   fprintf(m_pLogFile, "\t%s\t", listLogTypes[loglevel].c_str());
 

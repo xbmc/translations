@@ -23,6 +23,17 @@
 #include "POHandler.h"
 #include "TinyXML/tinyxml.h"
 
+struct COtherAddonMetadata
+{
+  std::string strLanguage;
+  std::string strPlatform;
+  std::string strLicense;
+  std::string strForum;
+  std::string strWebsite;
+  std::string strEmail;
+  std::string strSource;
+};
+
 class CAddonXMLHandler
 {
 public:
@@ -46,6 +57,8 @@ public:
   void SetAddonChangelogFile(std::string const &strAddonChangelogFile) {m_strChangelogFile = strAddonChangelogFile;}
   std::string GetAddonLogFilename () const {return m_strLogFilename;}
   void SetAddonLogFilename(std::string const &strAddonLogFilename) {m_strLogFilename = strAddonLogFilename;}
+  COtherAddonMetadata GetAddonMetaData () const {return m_AddonMetadata;}
+  void SetAddonMetadata(COtherAddonMetadata const &MetaData) {m_AddonMetadata = MetaData;}
 
 protected:
   bool ProcessAddonXMLFile (std::string AddonXMLFilename, TiXmlDocument &xmlAddonXML);
@@ -63,4 +76,5 @@ protected:
   std::string m_strAddonVersion;
   std::string m_strChangelogFile;
   std::string m_strLogFilename;
+  COtherAddonMetadata m_AddonMetadata;
 };

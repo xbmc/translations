@@ -49,7 +49,7 @@ void PrintUsage()
   "     -d   Only download to local cache, without performing a merge.\n"
   "     -dm  Download and create merged and tx update files, but no upload performed.\n"
   "     -dmu Download, merge and upload the new files to transifex.\n"
-  "     -u   Only upload the previously prepared files. Note that this needs downlad and merge ran before.\n\n"
+  "     -u   Only upload the previously prepared files. Note that this needs download and merge ran before.\n\n"
   "     No working mode arguments used, performs as -dm\n\n"
   );
   #ifdef _MSC_VER
@@ -214,7 +214,7 @@ int main(int argc, char* argv[])
 
       if (!bForceUpload && g_File.ReadFileToStrE(WorkingDir + ".httpcache" + DirSepChar + ".last_xbmc-txupdate.xml") !=
           g_File.ReadFileToStrE(WorkingDir + "xbmc-txupdate.xml"))
-        CLog::Log(logERROR, "xbmc-txupdate.xml file changed since last downlad and merge. Please (re)run download and merge.");
+        CLog::Log(logERROR, "xbmc-txupdate.xml file changed since last download and merge. Please (re)run download and merge.");
 
       printf("\n");
       printf("-----------------------------------------\n");
@@ -245,11 +245,12 @@ int main(int argc, char* argv[])
 
     CLog::Close();
     g_HTTPHandler.Cleanup();
+    return 0;
   }
   catch (const int calcError)
   {
     g_HTTPHandler.Cleanup();
     CLog::Close();
-    return 0;
+    return 100;
   }
 }

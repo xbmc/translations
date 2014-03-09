@@ -119,9 +119,13 @@ bool CResourceHandler::FetchPOFilesUpstreamToMem(CXMLResdata XMLResdata, std::li
     CLog::Log(logINFO, "ResHandler: using language list dwonloaded with github API");
     size_t pos1, pos2, pos3;
     std::string strGitHubURL, strGitBranch;
-    if (XMLResdata.strUpstreamURL.find("raw.github.com/") == std::string::npos)
+    if (XMLResdata.strUpstreamURL.find("raw.github.com/") != std::string::npos)
+      pos1 = XMLResdata.strUpstreamURL.find("raw.github.com/")+15;
+    else if (XMLResdata.strUpstreamURL.find("raw2.github.com/") != std::string::npos)
+      pos1 = XMLResdata.strUpstreamURL.find("raw2.github.com/")+16;
+    else
       CLog::Log(logERROR, "ResHandler: Wrong Github URL format given");
-    pos1 = XMLResdata.strUpstreamURL.find("raw.github.com/")+15;
+
     pos2 = XMLResdata.strUpstreamURL.find("/", pos1+1);
     pos2 = XMLResdata.strUpstreamURL.find("/", pos2+1);
     pos3 = XMLResdata.strUpstreamURL.find("/", pos2+1);
