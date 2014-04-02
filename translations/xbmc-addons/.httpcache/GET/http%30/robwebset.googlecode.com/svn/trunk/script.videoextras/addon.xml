@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.videoextras" name="VideoExtras" version="1.0.5" provider-name="robwebset">
+<addon id="script.videoextras" name="VideoExtras" version="1.0.6" provider-name="robwebset">
 	<requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   	</requires>
   	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.service" library="service.py" start="login">
+		<provides>executable</provides>
+	</extension>
   	<extension point="xbmc.addon.metadata">
     	<summary lang="ca">Afegeix vídeos extres a les teves pel·lícules i sèries de televisió.</summary>
     	<summary lang="de">Video Extras zu deinen Filmen und TV-Sendungen hinzufügen</summary>
     	<summary lang="el">Προσθήκη DVD Extras στις Ταινίες και τις Τηλεοπτικές σας Σειρές.</summary>
     	<summary lang="en">Add Video Extras to your Movies and TV shows.</summary>
     	<summary lang="es">Añadir extras de vídeo para sus películas y programas de televisión.</summary>
+    	<summary lang="fr_CA">Ajouter des bonus vidéos à vos films et séries télé.</summary>
     	<summary lang="gl">Engadir Extras de Vídeos aos seus Filmes e Series de TV.</summary>
     	<summary lang="he">הוסף ספיישלים (Video Extras) לסרטים ולסדרות שלך.</summary>
     	<summary lang="hu">Videó Extrák a Filmekhez és Sorozatokhoz</summary>
@@ -25,6 +29,7 @@
     	<description lang="el">Σας παρέχει έναν τρόπο να προσθέσετε DVD Extras στη Συλλογή σας. Ελέγξτε τον ιστότοπο του wiki για οδηγίες εγκατάστασης.</description>
     	<description lang="en">Provides a way to add Video Extras to your Video library. Look at the wiki for setup instructions.</description>
     	<description lang="es">Proporciona una manera de añadir extras de vídeos a su biblioteca. Mira el wiki para instrucciones de instalación.</description>
+    	<description lang="fr_CA">Offre une façon d'ajouter des bonus vidéos à votre vidéothèque. Consulter le wiki pour des instructions de configuration.</description>
     	<description lang="gl">Prové dun camiño para engadir Extras á sea biblioteca de Vídeos. Ver na wiki para instruccións da configuración.</description>
     	<description lang="he">מספק אפשרות להוסיף ספיישלים (Video Extras) לספריית הוידאו שלך. פנה לוויקי להוראות התקנה.</description>
     	<description lang="hu">Biztosítja a lehetőséget hogy Extrákat adjon hozzá a Videó Médiatárához. Nézze meg a wiki-t a telepítés beállításához.</description>
@@ -35,6 +40,7 @@
     	<description lang="pt">Permite adicionar extras de vídeo à sua Biblioteca de Vídeos. Leia o wiki para mais instruções de configuração.</description>
     	<description lang="pt_BR">Prove um caminho para vídeo extras via info de vídeo. Ver o wiki para instruções de configuração.</description>
     	<description lang="sv">Tillhandahåller ett sätt att lägga till Video Extras till ditt filmbibliotek. Se wiki för inställningsanvisningar.</description>
+		<language></language>
     	<platform>all</platform>
     	<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     	<forum>http://forum.xbmc.org/showthread.php?tid=178717</forum>

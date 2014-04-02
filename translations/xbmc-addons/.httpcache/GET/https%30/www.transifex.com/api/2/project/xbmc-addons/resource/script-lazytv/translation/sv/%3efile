@@ -3,6 +3,7 @@
 # Addon id: script.lazytv
 # Addon Provider: KodeKarnage
 # Translators:
+# KjellFromHell <bobkant-fyrsvamp@hotmail.com>, 2014
 # LiMiT <limit_@gmx.net>, 2014
 # muken <magnus.sandin@gmail.com>, 2013
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: XBMC Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-03-04 15:36+0000\n"
-"Last-Translator: LiMiT <limit_@gmx.net>\n"
+"PO-Revision-Date: 2014-04-02 07:50+0000\n"
+"Last-Translator: KjellFromHell <bobkant-fyrsvamp@hotmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/xbmc-addons/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,299 +26,402 @@ msgstr "LazyTV"
 
 msgctxt "Addon Description"
 msgid ""
-"LazyTV can be set to one of two primary functions. The first creates and "
-"launches a randomised playlist of the TV episodes. The second populates a "
-"new window with the next available episode for each of your TV Shows. LazyTV"
-" identifies the last viewed episode for each of your shows, and populates "
-"the playlist with the next available episode. You can filter your TV Shows "
-"using a built-in, custom filter or an existing Smart Playlist. The custom "
-"filter allows you to exclude shows based on show name, genre, or rating. "
-"Other features include: set the number of shows in the playlist; exclude "
-"episodes from unwatched series, include multiple episodes of the same show."
-msgstr "LazyTV kan anges att vara en av två primära funktioner. Den första skapar och startar en blandad spellista av TV-avsnitten. Den andra skapar ett nytt fönster med det kommande avsnittet för varje TV-program. LazyTV identifierar det senast sedda avsnittet för varje TV-program och fyller spellistan med det nästa tillgängliga avsnittet. Du kan filtrera dina TV-program genom en inbyggd filtreringsfunktion eller en existerande Smart Spellista. Filtreringsfunktionen tillåter dig att exkludera TV-program in spellistan; exkludera avsnitt från osedda serier eller inkludera flera avsnitt av samma TV-program."
+"You have a huge library of TV shows and you havent viewed half of it. So why does it feel like such a chore to sit down and watch something?\n"
+"LazyTV is here to free you from your battles with indecision, instead letting you lean back and soak up content. With one click you can be channel-surfing your own library, or have what you probably want to watch pop up in a single window.\n"
+"Afterall, you know you want to watch TV, so why do you also have to decide what specifically to watch?\n"
+"\n"
+"Unlike a smart playlist or skin widget, LazyTV doesnt just provide the first unwatched episode of a TV show. It provides the first unwatched episode AFTER the last watched one in your library. A small, but important, distinction.\n"
+"\n"
+"LazyTV offers two main functions:\n"
+"The first creates and launches a randomised playlist of the TV episodes. And not just any episodes, but the next episode it thinks you would want to watch. You also have the option to blend in your movies (both the watched and the unwatched) to complete the channel-surfing experience.\n"
+"The second main function populates a window with the next available episode for each of your TV Shows. One click and your viewing menu is there, immediately.\n"
+"\n"
+"Combine either of the main functions with a playlist of preselected shows to customise your experience even further.\n"
+"Some TV shows, like cartoons or skit shows, can be viewed out of episodic order. So LazyTV gives you the ability to identify these shows and treat them differently. Those shows will be played in a random order.\n"
+"\n"
+"LazyTV also offers two minor functions that extend beyond the addon itself:\n"
+"The first is an option to be notified if you are about to watch an episode that has an unwatched episode before it. This function excludes the TV shows identified as able to be watched out of order.\n"
+"The second option posts a notification when you finish watching a TV episode telling you that the next show is available and asks if you want to view it now.\n"
+"\n"
+"\n"
+"LazyTV contains a service that stores the next episodes' information and monitors your player to pre-empt database changes. This is my attempt to make the addon more responsive on my Raspberry Pi. The Pi still takes a while to \"warm-up\"; a full refresh of the episode data (which occurs at start-up and on a library update) takes about 30 seconds for my ~100 show library*. However, the show list window opens and the random player starts in less than 2 seconds.\n"
+"\n"
+"*The same update takes 2 seconds on my laptop with its i5 processor."
+msgstr ""
 
 msgctxt "#32000"
-msgid "Filter Settings"
-msgstr "Filterinställningar"
+msgid "General Settings"
+msgstr "Allmänna inställningar"
 
 msgctxt "#32001"
-msgid "Filter by Show"
-msgstr "Filtera på program"
+msgid "Primary Function"
+msgstr "Primär funktion"
 
 msgctxt "#32002"
-msgid "Shows to exclude"
-msgstr "Program att excludera"
-
-msgctxt "#32003"
-msgid "Filter by Genre"
-msgstr "Filtrera på genre"
-
-msgctxt "#32004"
-msgid "Genres to exclude"
-msgstr "Genrer att exkludera"
-
-msgctxt "#32005"
-msgid "Filter by Show Length"
-msgstr "Filtrera på programlängd"
-
-msgctxt "#32006"
-msgid "Show lengths to exclude"
-msgstr "programlängder att exkludera"
-
-msgctxt "#32007"
-msgid "Filter by Rating"
-msgstr "Filtrera på betyg"
-
-msgctxt "#32008"
-msgid "Ratings to exclude"
-msgstr "Betyg att exkludera"
-
-msgctxt "#32009"
-msgid "Playlist Settings"
-msgstr "Inställningar för spellista"
-
-msgctxt "#32010"
-msgid "Number of shows in playlist"
-msgstr "Antal program i spellista"
-
-msgctxt "#32011"
-msgid "Allow multiple episodes of same TV Show"
-msgstr "Tillåt multipla avsnitt av samma TV-serie"
-
-msgctxt "#32012"
-msgid "Include episodes from unwatched TV series"
-msgstr "Inkludera avsnitt från osedda TV-serier"
-
-msgctxt "#32013"
-msgid "Exclude partially watched episodes (they start from the beginning)"
-msgstr "Exkludera delvis sedda avsnitt (de startas från början)"
-
-msgctxt "#32014"
-msgid "Begin playlist with latest partially-watched TV Show (will resume)"
-msgstr "Påbörja spellista med senast delvis sedda TV-serier (kommer fortsätta)"
-
-msgctxt "#32015"
-msgid "Include streams (warning: very buggy)"
-msgstr "Inkludera streamar (Varning: mycket buggigt)"
-
-msgctxt "#32070"
-msgid "Function Settings"
-msgstr "Funktionsinställningar"
-
-msgctxt "#32071"
-msgid "Select Primary Function of Addon"
-msgstr "Ange primär funktion för tillägg"
-
-msgctxt "#32072"
-msgid "Create and launch randomised playlist"
-msgstr "Skapa och starta slumpad spellista"
-
-msgctxt "#32073"
 msgid "Produce a list of 'next episodes' for each TV series"
 msgstr "Skala en lista av 'nästa avsnitt' för varje TV-serie"
 
-msgctxt "#32074"
-msgid "Populate based on ..."
-msgstr "Populera baserat på ..."
+msgctxt "#32003"
+msgid "Create and launch randomised playlist"
+msgstr "Skapa och starta slumpad spellista"
 
-msgctxt "#32075"
-msgid "Filter and Playlist Settings"
-msgstr "Inställningar för filter och spellistor"
-
-msgctxt "#32076"
-msgid "Specific default playlist"
-msgstr "Specifik standard-spellista"
-
-msgctxt "#32077"
-msgid "Let me choose the Smart Playlist on Launch"
-msgstr "Låt mig välja den smarta spellistan vid start"
-
-msgctxt "#32078"
-msgid "Choose Smart Playlist"
-msgstr "Välj smart spellista"
-
-msgctxt "#32079"
-msgid "Sort list by ..."
-msgstr "Sortera listan på ..."
-
-msgctxt "#32080"
-msgid "Title"
-msgstr "Titel"
-
-msgctxt "#32081"
-msgid "Last Played"
-msgstr "Senast spelad"
-
-msgctxt "#32082"
-msgid "Number of episodes to add to playlist"
-msgstr "Antal avsnitt att lägga till i spellistan"
-
-msgctxt "#32083"
-msgid "Backfill watched status script"
-msgstr "Återfyll sedd-status-skript"
-
-msgctxt "#32084"
-msgid "Backfill watched status"
-msgstr "Återfyll sedd-status"
-
-msgctxt "#32085"
-msgid "All Shows"
-msgstr "Samtliga program"
-
-msgctxt "#32086"
-msgid "Single Show"
-msgstr "Ett program"
-
-msgctxt "#32087"
-msgid "Choose Show"
-msgstr "Välj program"
-
-msgctxt "#32088"
+msgctxt "#32004"
 msgid "Let me choose on launch"
 msgstr "Låt mig välja vid start"
 
-msgctxt "#32101"
-msgid "TV Shows"
-msgstr "TV Shows"
+msgctxt "#32005"
+msgid "Use Smart Playlist to Filter Shows"
+msgstr "Använd smarta spellistor för filtrering av program"
 
-msgctxt "#32102"
-msgid "Show Genres"
-msgstr "Visa genres"
+msgctxt "#32006"
+msgid "Playlist Selection Method"
+msgstr "Valmetod för spellista"
 
-msgctxt "#32103"
-msgid "Episode Length (seconds)"
-msgstr "Avsnittslängd (sekunder)"
+msgctxt "#32007"
+msgid "Let me choose on launch"
+msgstr "Låt mig välja vid start"
 
-msgctxt "#32104"
-msgid "Rating"
-msgstr "Rating"
+msgctxt "#32008"
+msgid "Choose a default Playlist"
+msgstr "Välj en startspellista"
 
-msgctxt "#32105"
-msgid "Save"
-msgstr "Spara"
+msgctxt "#32009"
+msgid "Select default playlist"
+msgstr "Välj en startspellista "
 
-msgctxt "#32106"
-msgid "Close"
-msgstr "Stäng"
+msgctxt "#32010"
+msgid "Some shows are fine to watch out of order"
+msgstr "En del program går bra att se i slumpvis ordning"
 
-msgctxt "#32107"
-msgid "Exclude All"
-msgstr "Exkludera alla"
+msgctxt "#32011"
+msgid "Select random-order shows"
+msgstr "Välj program för slumpvis visning"
 
-msgctxt "#32108"
-msgid "Clear"
-msgstr "Klart"
+msgctxt "#32012"
+msgid "Only populate with selected TV Shows"
+msgstr "Fyll endast med valda TV-program"
 
-msgctxt "#32109"
-msgid "Excluded"
-msgstr "Exkluderade"
+msgctxt "#32013"
+msgid "Choose shows by ..."
+msgstr "Välj program efter ..."
 
-msgctxt "#32110"
-msgid "Choose %s to Exclude"
-msgstr "Välj %s att exkludera"
+msgctxt "#32014"
+msgid "Manual Selection"
+msgstr "Manuellt val"
 
-msgctxt "#32111"
-msgid "Unrated"
-msgstr "Ej betygsatt"
+msgctxt "#32015"
+msgid "Smart Playlist"
+msgstr "Smart spellista"
 
-msgctxt "#32150"
-msgid "No shows available for the playlist."
-msgstr "Inga program tillgängliga för spellistan."
+msgctxt "#32016"
+msgid "Click here to select TV Shows"
+msgstr "Klicka här för att välja TV-program"
 
-msgctxt "#32151"
-msgid "Initializing..."
-msgstr "Initierar..."
+msgctxt "#32030"
+msgid "Player Options"
+msgstr "Spelaralternativ"
 
-msgctxt "#32152"
-msgid "Populating lists"
-msgstr "Populerar listor"
+msgctxt "#32031"
+msgid "Number of shows in playlist"
+msgstr "Antal program i spellista"
 
-msgctxt "#32153"
-msgid "Populating lists - returned"
-msgstr "Populering av listor - återkommit"
+msgctxt "#32032"
+msgid "Allow multiple episodes of same TV Show"
+msgstr "Tillåt multipla avsnitt av samma TV-serie"
 
-msgctxt "#32154"
-msgid "Creating playlist"
-msgstr "Skapar spellista"
+msgctxt "#32033"
+msgid "Include episodes from unwatched TV series"
+msgstr "Inkludera avsnitt från osedda TV-serier"
 
-msgctxt "#32155"
-msgid "Creating episode list"
-msgstr "Skapar avsnittslista"
+msgctxt "#32034"
+msgid "Begin partially watched episodes from their resume point"
+msgstr "Återuppta delvis visade episoder från senaste position"
 
-msgctxt "#32156"
-msgid "Oh dear, an error has occurred with LazyTV."
-msgstr "Kära nån, ett fel har uppstått med LazyTV."
+msgctxt "#32035"
+msgid "Display episode details when played"
+msgstr "Visa episoddetaljer vid uppspelning"
 
-msgctxt "#32157"
+msgctxt "#32036"
+msgid "Include unwatched movies"
+msgstr "Inkludera ej visade filmer"
+
+msgctxt "#32037"
+msgid "Include watched movies"
+msgstr "Inkludera visade filmer"
+
+msgctxt "#32038"
+msgid "Start watched movies at random time"
+msgstr "Starta visade filmer på slumpmässig tid"
+
+msgctxt "#32039"
+msgid "Simulates changing the TV channel to a movie in progress"
+msgstr "Simulerar kanalbyte till en pågående film"
+
+msgctxt "#32040"
+msgid "Movie weight"
+msgstr "Vikt för film"
+
+msgctxt "#32041"
+msgid "Weight: 1.0 = 1 show, 1 movie, 0.5 = 2 shows, 1 movie"
+msgstr "Vikt: 1.0 = 1 program, 1 film, 0.5 = 2 program, 1 film"
+
+msgctxt "#32042"
+msgid "Weight: 0.0 = unlimited movies"
+msgstr "Vikt: 0.0 = oändligt med film"
+
+msgctxt "#32043"
+msgid "Ignore TV shows (movies only)"
+msgstr "Ignorera TV-program (endast filmer)"
+
+msgctxt "#32060"
+msgid "List Options"
+msgstr "Listalternativ"
+
+msgctxt "#32061"
+msgid "Limit the number of shows"
+msgstr "Begränsa antal TV-program"
+
+msgctxt "#32062"
+msgid "Number of Shows to display"
+msgstr "Antal program att visa"
+
+msgctxt "#32063"
+msgid "Reducing length may help improve speed on slow systems"
+msgstr "Reducerad längd kan förbättra hastigheten på långsamma system"
+
+msgctxt "#32064"
+msgid "Show Name"
+msgstr "Programnamn"
+
+msgctxt "#32065"
+msgid "Last Watched"
+msgstr "Senast visad"
+
+msgctxt "#32066"
+msgid "# Unwatched Episodes"
+msgstr "# Icke visade avsnitt"
+
+msgctxt "#32067"
+msgid "# Watched Episodes"
+msgstr "# Visade avsnitt"
+
+msgctxt "#32068"
+msgid "Season"
+msgstr "Säsong"
+
+msgctxt "#32069"
+msgid "Exclude random play shows"
+msgstr "Exkludera program med slumpmässig uppspelning"
+
+msgctxt "#32080"
+msgid "Other Settings"
+msgstr "Övriga inställningar"
+
+msgctxt "#32081"
+msgid "Prompt to watch next available episode"
+msgstr "Fråga om nästa tillgängliga avsnitt skall visas"
+
+msgctxt "#32082"
+msgid "Prompt duration (max = do not close)"
+msgstr ""
+
+msgctxt "#32083"
+msgid "Notify when previous episode is available"
+msgstr ""
+
+msgctxt "#32084"
 msgid ""
-"Install Buggalo 1.1.5 or higher to report the details of the error to the "
-"author."
-msgstr "Installera Buggalo 1.1.5 eller senare för att rapportera detaljerna kring felet till författaren."
+"Prompt and notify functions also apply to shows played outside of LazyTV"
+msgstr ""
 
-msgctxt "#32158"
+msgctxt "#32085"
+msgid "Enable logging for Testing"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Cloning LazyTV allows multiple Home menu entries."
+msgstr ""
+
+msgctxt "#32087"
+msgid "Clone LazyTV Now"
+msgstr ""
+
+msgctxt "#32088"
+msgid "It would be nice to know if people are using this addon."
+msgstr ""
+
+msgctxt "#32089"
+msgid "Email +1 to the author (no data is sent)"
+msgstr ""
+
+msgctxt "#32100"
 msgid "This addon finds the next episode in each TV show."
 msgstr "Detta tillägg hittar nästa avsnitt för varje TV-serie."
 
-msgctxt "#32159"
+msgctxt "#32101"
 msgid "Do you want a list or a randomised playlist?"
 msgstr "VIll du ha en lista eller en slumpad spellista?"
 
-msgctxt "#32160"
+msgctxt "#32102"
 msgid "Show me"
 msgstr "Visa mig"
 
-msgctxt "#32161"
+msgctxt "#32103"
 msgid "Surprise me"
 msgstr "Överraska mig"
 
-msgctxt "#32200"
-msgid "Error: JSON failed to complete"
-msgstr "Fel: JSON misslyckades med att slutföra"
+msgctxt "#32104"
+msgid "Select the playlist"
+msgstr ""
 
-msgctxt "#32201"
-msgid "Error: no TV Shows found in library"
-msgstr "Fel: hittade inga TV-serier i biblioteket"
+# -- yGUI --
+msgctxt "#32105"
+msgid "Close"
+msgstr "Stäng"
 
-msgctxt "#32202"
-msgid "Error: criteria eliminated all TV Shows"
-msgstr "Error: kriterierna eliminerade alla TV-program"
+# -- service not running message --
+msgctxt "#32106"
+msgid "LazyTV Service is not running."
+msgstr ""
 
-msgctxt "#32203"
-msgid "Error: no Episodes found in library"
-msgstr "Error: inga avsnitt hittades i biblioteket"
+msgctxt "#32107"
+msgid "Would you like to attempt to start it now?"
+msgstr "Vill du försöka starta den nu?"
 
-msgctxt "#32204"
-msgid "Error: criteria eliminated all TV Shows"
-msgstr "Error: kriterierna eliminerade alla TV-program"
+# -- service needs restart to update --
+msgctxt "#32108"
+msgid "LazyTV Service has updated. Please restart to apply changes."
+msgstr ""
 
-msgctxt "#32205"
-msgid "Error: no files found in playlist"
-msgstr "Error: inga filer hittades i spellistan"
+msgctxt "#32109"
+msgid "Would you like to restart it now?"
+msgstr ""
 
-msgctxt "#32206"
-msgid "Error: no TV Shows found in playlist"
-msgstr "Error: inga TV-program hittades i spellistan"
+# -- clone needs updating --
+msgctxt "#32110"
+msgid "LazyTV has updated and this clone is now out of date."
+msgstr ""
 
-msgctxt "#32207"
-msgid "Error: show failed to play."
-msgstr "Error: lyckades inte spela upp programmet"
+msgctxt "#32111"
+msgid "Would you like to update the clone now?"
+msgstr ""
 
-msgctxt "#32208"
-msgid "One-time Debug (resets to false after each run)"
-msgstr "Engångsdebug (återställs till falskt efter varje körning)"
+msgctxt "#32112"
+msgid "Never"
+msgstr "Aldrig"
 
-msgctxt "#32209"
-msgid "Constant Debug (Use with care: adds a ton of data to the log file)"
-msgstr "Konstant debug (används med försiktighet: lägger till massvis i loggfilen)"
+msgctxt "#32113"
+msgid "day"
+msgstr "dag"
 
-msgctxt "#32210"
-msgid "Debug - add library data to the xbmc.log file"
-msgstr "Debug - addera biblioteksdata till xbmc.log fil"
+msgctxt "#32114"
+msgid "days"
+msgstr "dagar"
 
-msgctxt "#32211"
-msgid "Display notification of current show name"
-msgstr "Visa notifiering av namn på nuvarande program"
+msgctxt "#32115"
+msgid "LazyTV is still populating with shows."
+msgstr ""
 
-msgctxt "#32212"
-msgid "Resume shows in playlist"
-msgstr "Återuppta program i spellista"
+msgctxt "#32116"
+msgid "Please wait and try again."
+msgstr "Vänligen vänta och försök igen."
+
+msgctxt "#32139"
+msgid "name your clone"
+msgstr ""
+
+msgctxt "#32140"
+msgid "An error occurred while creating the clone."
+msgstr ""
+
+msgctxt "#32141"
+msgid "Operation cancelled."
+msgstr ""
+
+msgctxt "#32142"
+msgid "This script creates a cloned version of the LazyTV user interface."
+msgstr ""
+
+msgctxt "#32143"
+msgid "It creates a new folder in your addons directory."
+msgstr ""
+
+msgctxt "#32144"
+msgid "Do you wish to continue?"
+msgstr ""
+
+msgctxt "#32145"
+msgid "That name is in use. Please try another."
+msgstr ""
+
+msgctxt "#32146"
+msgid "Cloning successful."
+msgstr ""
+
+msgctxt "#32147"
+msgid "Clone is now ready for use."
+msgstr ""
+
+msgctxt "#32148"
+msgid "An error occurred while updating the clone."
+msgstr ""
+
+msgctxt "#32149"
+msgid "Update successful."
+msgstr ""
+
+msgctxt "#32160"
+msgid "LazyTV - there are previous unwatched episodes"
+msgstr ""
+
+msgctxt "#32161"
+msgid "%s (%sx%s) is in your library."
+msgstr ""
+
+msgctxt "#32162"
+msgid "Would you like to watch it now?"
+msgstr ""
+
+msgctxt "#32163"
+msgid "\"Now Playing\""
+msgstr ""
+
+msgctxt "#32164"
+msgid "LazyTV -the next unwatched episode is in your library."
+msgstr ""
+
+msgctxt "#32165"
+msgid "No, thank you. (Autoclosing in %s seconds)"
+msgstr ""
+
+msgctxt "#32166"
+msgid "Yes, start %s %s now."
+msgstr ""
+
+msgctxt "#32167"
+msgid "LazyTV   (auto-closing in %s seconds)"
+msgstr ""
+
+msgctxt "#32168"
+msgid "%s %s is in your library."
+msgstr ""
+
+msgctxt "#32169"
+msgid "Would you like to watch it now?"
+msgstr ""
+
+msgctxt "#32170"
+msgid "Save"
+msgstr "Spara"
+
+msgctxt "#32171"
+msgid "Select All"
+msgstr ""
+
+msgctxt "#32172"
+msgid "Unselect All"
+msgstr ""
+
+msgctxt "#32173"
+msgid "Database analysis complete"
+msgstr "Databas-analys slutförd"

@@ -1,13 +1,34 @@
--6.0.5 (2014-03-??)
-- Added a new today-week TV Guide xml file and lots of new skinning values.  The new guide can now show yesterday's episodes.
+-6.0.8 (2014-04-??)
+- Fixed a bug where the Yesterday list would omit any shows that didn't also have upcoming episodes.
+- Added a per-show runtime override ability taken from the show's TheTVDB comments (for a main-show + result-show situation).
+- Fixed a bug that could cause an erroneous tuple value in the saved data if a show's time changes w/o any episode changes.
+- Improved the show-searching logic a bit more.
+- Support new "backend=-N N" option for more ListItem querying ("backend=True" is the same as "backend=0 0").
+- Due to a potential conflict in the NextAired.Today property, the *-TVGuide2.xml day-name vars (NextAired.Today, NextAired.Yesterday, NextAired.Tomorrow) are now deprecated.  Use NextAired.TodayText, NextAired.YesterdayText, NextAired.TomorrowText instead.
+- To avoid any backend conflict with NextAired.Today, there is now a backend-script provided value of NextAired.AirsToday that should be used in place of NextAired.Today going forward (the older value will still be supported for quite some time, but the newer value is safer).
+
+-6.0.7 (2014-03-25)
+- The zoneinfo tar file should now be back in the release zip (the new version in 6.0.5 apparently caused it to vanish from the release process).
+- A couple more update improvements (including improvements for really large collections).
+
+-6.0.6 (2014-03-24)
+- Fix a couple timezone issues that could cause the script to exit, including yet another bug in dateutil.
+- Fix an off-by-one error in the DB-upgrade code that could sometimes cause a failure.
+- Make the backend processing capable of bringing in updated data.
+- Tweak am/pm time format a bit.
+
+-6.0.5 (2014-03-22)
+- Added a new today-week TV Guide xml file and lots of new skinning values.  The new guide can also show yesterday's episodes, if desired.
+- Add a means for the user to request new info for a single show.
+- Restored the population of the Classification info.
 - Improved DST timezone support and computation of Airtime between timezones, including better handling of Airtime changes.
-- Make the bg process auto-start a replacement if it notices a version change.
-- Improved the episode search when we're trying to find the show's website ID.
-- Don't put so much data into the debug log by default.
-- Improve a month-period update: work around missing episode-change data in the month-update file.
+- Improved the episode search when we're trying to find the show's website ID.  This includes multi-language searching and better handling of utf-8 characters.
+- Improve a month-period update: work around some (unexpectedly) missing episode-change data in the month-update file.
 - If the interactive update stops fetching data due to failures, mention it to the user in an "OK" dialog.
-- Added the "updateshow=TVShowTitle" option to the script to mark a show as needing updated data.
-- Updated language files from Transifex
+- Added the "updateshow=TVShowTitle" option to re-grab the current data for a single show.
+- Make the background process auto-start a replacement if it notices a version change.
+- Don't put so much data into the debug log by default.  Lots of other logging tweaks.
+- Updated language files from Transifex.
 
 -6.0.4 (2014-03-05)
 - Updated language files from Transifex.
