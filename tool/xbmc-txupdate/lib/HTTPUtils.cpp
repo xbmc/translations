@@ -116,6 +116,7 @@ long CHTTPHandler::curlURLToCache(std::string strCacheFile, std::string strURL, 
         curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYHOST, 0);
         curl_easy_setopt(m_curlHandle, CURLOPT_VERBOSE, 0);
         curl_easy_setopt(m_curlHandle, CURLOPT_SSLVERSION, 3);
+        curl_easy_setopt(m_curlHandle, CURLOPT_FOLLOWLOCATION, true);
 
         curlResult = curl_easy_perform(m_curlHandle);
         curl_easy_getinfo (m_curlHandle, CURLINFO_RESPONSE_CODE, &http_code);
