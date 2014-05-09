@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.forum.browser"
        name="Forum Browser"
-       version="2.1.64"
+       version="2.1.65"
        provider-name="Rick Phillips (ruuk)">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simplejson" version="2.0.9"/>
     <import addon="script.web.viewer" version="0.9.17"/>
     <import addon="script.module.youtube.dl" version="14.304.0"/>
-    <import addon="script.module.password.storage" version="0.1.0" />
+    <import addon="script.module.password.storage" version="0.1.5" />
 	<import addon="script.module.requests2" version="2.2.1"/>
   </requires>
   <extension point="xbmc.python.script"
@@ -22,6 +22,7 @@
     <summary lang="de">Durchsuche Foren innerhalb von XBMC</summary>
     <summary lang="el">Περιήγηση σε φόρουμ μέσω του XBMC</summary>
     <summary lang="en">Browse forums within XBMC</summary>
+    <summary lang="en_NZ">Browse forums within XBMC</summary>
     <summary lang="es">Visitar foros desde XBMC</summary>
     <summary lang="fr">Naviguer dans les forums avec XBMC</summary>
     <summary lang="fr_CA">Parcourir les forums depuis XBMC</summary>
@@ -34,12 +35,14 @@
     <summary lang="nl">Zoek forums vanuit XBMC</summary>
     <summary lang="pl">Przeglądaj fora z użyciem XBMC</summary>
     <summary lang="pt">Navegue por fórums através do XBMC</summary>
-    <summary lang="pt_BR">Navegue pelos fórums através do XBMC</summary>
+    <summary lang="pt_BR">Navegue por fóruns através do XBMC</summary>
     <summary lang="sv">Bläddra bland forum i XBMC</summary>
+    <summary lang="zh">在XBMC里浏览论坛</summary>
     <description lang="be">Browse Forums in XBMC. Supports Tapatalk (including ProBoards, Yuku) and Forumrunner enabled forums for a total of 90,000+ forums. View forums, threads, posts, subscriptions and private messages. Follow links in Web Viewer. Post replies, send private messages, delete posts, quote posts. View images in posts, follow post forum links and download post links.</description>
     <description lang="de">Durchsuchen Forums in XBMC. Unterstützt Tapatalk aktivierte Foren (über 60000) und Forumrunner aktivierte Foren. Unterstützt auch boxee.tv. Foren, Themen, Beiträge , Abonnements und private Nachrichten anzeigen. Folgen Sie den Links im Web Viewer. Beiträge Antworten, private Nachrichten senden, Beiträge löschen, Zitate auch. Anzeigen von Bildern in Beiträgen, Forumsbeiträge Links folgen und Links downloaden. </description>
     <description lang="el">Περιηγηθείτε σε Φόρουμ μέσω του XBMC. Υποστηρίζονται φόρουμ με ενεργό Tapatalk (πάνω από 60000) και Forumrunner, καθώς και το boxee.tv. Δείτε φόρουμ, νήματα, αναρτήσεις, συνδρομές και προσωπικά μηνύματα. Ακολουθήστε συνδέσμους στην Προβολή Ιστού. Αναρτήστε απαντήσεις, στείλτε προσωπικά μηνύματα, διαγράψτε αναρτήσεις, παραθέστε αναρτήσεις. Προβάλλετε εικόνες σε αναρτήσεις, ακολουθήστε συνδέσμους αναρτήσεων λήψεων.</description>
     <description lang="en">Browse Forums in XBMC. Supports Tapatalk enabled forums (over 60000) and Forumrunner enabled forums. Also supports boxee.tv. View forums, threads, posts, subscriptions and private messages. Follow links in Web Viewer. Post replies, send private messages, delete posts, quote posts. View images in posts, follow post forum links and download post links.</description>
+    <description lang="en_NZ">Browse Forums in XBMC. Supports Tapatalk enabled forums (over 60000) and Forumrunner enabled forums. Also supports boxee.tv. View forums, threads, posts, subscriptions and private messages. Follow links in Web Viewer. Post replies, send private messages, delete posts, quote posts. View images in posts, follow post forum links and download post links.</description>
     <description lang="es">Visita foros desde XBMC. Soporta foros válidos para Tapatalk (más de 30.000) y Forumrunner. También soporta boxee.tv. Ve foros, hilos, temas, suscripciones y mensajes privados. Abre enlaces con Web Viewer. Escribe respuestas, manda mensajes privados, borra mensajes y menciona mensajes. Ve imágenes en mensajes, sigue enlaces del foro y descarga enlaces.</description>
     <description lang="fr">Naviguer dans les forums dans XBMC. Supporte Tapatalk  forums activés (plus de 60000) et Forumrunner forums activés. Supporte aussi boxee.tv. Voir les forum, fils de discussion, messages, souscriptions et messages privés.&#10;Suivre les liens dans Web Viewer. Poster des réponses, envoyer des messages privés, effacer des messages, coter des messages. Voir des images dans les messages, suivre les liens des messages de forum et les télécharger.</description>
     <description lang="fr_CA">Parcourir les forums dans XBMC. Prend en charge les forums utilisant Taptalk (plus de 60 000) et ceux utilisant Forumrunner. Prend aussi en charge boxee.tv. Visualiser les forums, les billets, les abonnements et les messages privés. Suivre les liens dans le visualiseur Web. Publier des réponses, envoyer des messages privés, supprimer des billets, citer des billets. Visualiser les images des billets, suivre les liens des billets et télécharger les liens des billets.</description>
@@ -49,7 +52,7 @@
     <description lang="it">Sfoglia i Forum dall'XBMC. Supporta i forum che usano Tapatlk (circa 60000) e Forumrunner. Supporta pure boxee.tv. Vedi i forum, le discussioni, i post, le sottoscrizioni ed i messaggi privati. Segui i link nel Visualizzatore Web. Rispondi ai post, invia messaggi privati, cancella i post e quotali. Vedi le immagini, segui i link dei post e scaricali.</description>
     <description lang="nl">Zoek Forums in XBMC. Ondersteunt Tapatalk gemachtigde forums (over 60000) en Forumrunner gemachtigde forums. Ondersteunt ook boxee.tv. bekijk forums, threads, berichten, inschrijvingen en private berichten. volg links in Web Viewer. Post beantwoordingen, stuur privéberichten, verwijder berichten, quote berichten, bekijk afbeeldingen in berichten, volg post forum links en download post links.</description>
     <description lang="pl">Przeglądaj fora z użyciem XBMC. Posiada wsparcie dla forów opartych o Tapatalk (ponad 60000) oraz Forumrunner. Wspiera również boxee.tv. Przeglądaj fora, wątki, posty, subskrypcje i wiadomości prywatne. Umożliwia podążanie za linkami w przeglądarce internetowej a także umieszczanie odpowiedzi, wysyłanie prywatnych wiadomości, usuwanie czy cytowanie odpowiedzi. Przeglądanie obrazów w wątku, podążanie za linkami z forum i zapisywanie umieszczonych linków.</description>
-    <description lang="pt">Navegue pelos fórums no XBMC. Compatível com fórums tapatalk (mais de 60000) e Forumrunner. Também suporta boxee.tv. Veja fórums, tópicos, mensagens, subscrições e mensagens privadas. Consulte ligações através do Web Viewer. Coloque respostas, envie mensagens privadas, apague mensagens, cite mensagens. Veja imagens nas mensagens, consulte ligações das mensagens do fórum e transfira ligações das mensagens.</description>
+    <description lang="pt">Navegue pelos fórums no XBMC. Compatível com fórums tapatalk (mais de 60000) e Forumrunner. Também suporta boxee.tv. Veja fórums, tópicos, mensagens, subscrições e mensagens privadas. Consulte endereços através do Web Viewer. Coloque respostas, envie mensagens privadas, apague mensagens, cite mensagens. Veja imagens nas mensagens, consulte ligações das mensagens do fórum e transfira ligações das mensagens.</description>
     <description lang="pt_BR">Navegue pelos fórums no XBMC. Compatível com fórums tapatalk (mais de 60000) e Forumrunner. Também suporta boxee.tv. Veja fórums, tópicos, mensagens, subscrições e mensagens privadas. Consulte ligações através do Web Viewer. Coloque respostas, envie mensagens privadas, apague mensagens, cite mensagens. Veja imagens nas mensagens, consulte ligações das mensagens do fórum e transfira ligações das mensagens.</description>
     <description lang="sv">Bläddra bland forum i XBMC. Stödjer Tapatalk (över 60000) och ForumRunner-aktiverade forum. Även boxee.tv stöds. Förhandsgranska forum, trådar, inlägg, prenumerationer och privatmeddelanden. Följ länkar i WebViewer. Gör inlägg, skicka privata meddelanden, ta bort inlägg, citera inlägg. Se bilder i inlägg, följ länkar och ladda ner länkar.</description>
     <platform>all</platform>
