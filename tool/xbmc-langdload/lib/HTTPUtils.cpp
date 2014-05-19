@@ -59,6 +59,7 @@ std::string CHTTPHandler::GetURLToSTR(std::string strURL, bool bSkiperror /*=fal
       curl_easy_setopt(m_curlHandle, CURLOPT_FAILONERROR, true);
       curl_easy_setopt(m_curlHandle, CURLOPT_USERAGENT, "libcurl-agent/1.0");
       curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
+      curl_easy_setopt(m_curlHandle, CURLOPT_FOLLOWLOCATION, true);
 
       curlResult = curl_easy_perform(m_curlHandle);
       long http_code = 0;
