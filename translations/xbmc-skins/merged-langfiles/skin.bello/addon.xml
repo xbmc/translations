@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.bello" version="1.5.6" name="Bello" provider-name="Nessus">
+<addon id="skin.bello" version="2.0.1" name="Bello - Beta" provider-name="Nessus">
   <requires>
-		<import addon="xbmc.gui" version="4.0.0"/>
-		<import addon="service.skin.widgets" version="0.0.25"/>
-		<import addon="script.favourites" version="4.0.9"/>
+		<import addon="xbmc.gui" version="5.0.1"/>
+		<import addon="service.skin.widgets" version="0.0.29"/>
+		<import addon="script.favourites" version="5.0.2"/>
 		<import addon="script.tvtunes" version="3.0.6"/>
-		<import addon="script.tv.show.next.aired" version="5.0.6"/>
-		<import addon="script.artwork.downloader" version="12.0.15"/>
-		<import addon="script.globalsearch" version="1.1.1"/>
-		<import addon="script.artistslideshow" version="1.5.0"/>
-		<import addon="script.playalbum" version="0.1.3"/>				
+		<import addon="script.tv.show.next.aired" version="6.0.10"/>
+		<import addon="script.artwork.downloader" version="12.0.24"/>
+		<import addon="script.globalsearch" version="2.0.8"/>
+		<import addon="script.artistslideshow" version="1.6.5"/>
+		<import addon="script.playalbum" version="1.0.1"/>
+		<import addon="script.videolanguage" version="0.1.0"/>
+		<import addon="script.grab.fanart" version="0.12.8" />	
+    <import addon="service.library.data.provider" version="0.0.1"/>
+    <import addon="script.cinema.experience" version="4.0.10"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.75" debugging="false">
 	    <res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
@@ -24,6 +28,7 @@
     <summary lang="en">A GUI for XBMC Media Center</summary>
     <summary lang="en_AU">A GUI for XBMC Media Centre</summary>
     <summary lang="en_NZ">A GUI for XBMC Media Centre</summary>
+    <summary lang="en_US">A GUI for XBMC Media Center</summary>
     <summary lang="es">Una interfaz gráfica para XBMC</summary>
     <summary lang="fr">Un thème pour XBMC Media Center</summary>
     <summary lang="fr_CA">Une IUG pour le centre multimédia XBMC</summary>
@@ -50,6 +55,7 @@
     <description lang="el">Το Bello είναι ένα Γραφικό Περιβάλλον Εργασίας (GUI) για το Κέντρο Πολυμέσων XBMC. Στόχος του Bello είναι να μεγιστοποιήσει την ψυχαγωγική σας εμπειρία μέσω του γρήγορου, μοναδικού και ενοποιημένου περιβάλλοντός του, που περιλαμβάνει όλες τις νέες λειτουργίες του XBMC.</description>
     <description lang="en">Bello is a GUI for XBMC Media Center. The goal of Bello is to maximize your XBMC entertainment experience with it's fast, unique and unified interface along with all the latest features of XBMC.</description>
     <description lang="en_NZ">Bello is a GUI for XBMC Media Centre. The goal of Bello is to maximise your XBMC entertainment experience with it's fast, unique and unified interface along with all the latest features of XBMC.</description>
+    <description lang="en_US">Bello is a GUI for XBMC Media Center. The goal of Bello is to maximize your XBMC entertainment experience with it's fast, unique and unified interface along with all the latest features of XBMC.</description>
     <description lang="es">Bello es una interfaz gráfica para XBMC. La meta de Bello es maximizar la experiencia de XBMC con su interfaz única, rápida y unificada y las últimas novedades de XBMC. </description>
     <description lang="fr">Bello est un thème pour XBMC Media Center. Le but de Bello est de maximiser votre expérience XBMC avec son interface rapide, fluide et unique pour toutes les fonctionnalités d'XBMC.</description>
     <description lang="fr_CA">Bello est une IUG pour le centre multimédia XBMC. Le but de Bello est de maximiser votre expérience de divertissement XBMC avec une interface rapide, unique et unifiée, ainsi qu'avec toutes les dernières fonctions de XBMC.</description>
@@ -61,6 +67,7 @@
     <description lang="ms">Bello ialah GUI untuk Pusat Media XBMC. Matlamat Bello ialah untuk pengalaman hiburan XBMC yang maksimum dengan antaramuka yang pantas, unik dan sepadu bersama-sama dengan semua fitur terkini XBMC.</description>
     <description lang="nl">Bello is een GUI voor XBMC Media Center. Het doel van Bello is jou XBMC entertainmentbeleving te maximaliseren, dit met zijn snelle unieke en universele  interface samen met de laatste mogelijkheden van XBMC</description>
     <description lang="pl">Bello to graficzny interfejs użytkownika dla XBMC Media Center. Celem Bello jest jaknajprzyjemniejsza praca użytkownika w XBMC z wykorzystaniem szybkiego, unikalnego oraz ujednoliconego interfejsu wraz z wszystkimi najnowszymi funkcjonalnościami XBMC.</description>
+    <description lang="pt_BR">Bello é uma interface gráfica para o XBMC. A meta de Bello é maximizar sua experiência de entretenimento com o XBMC através de sua interface única, rápida e integrada com todos os últimos recursos do XBMC.</description>
     <description lang="ru">Bello - это обложка для XBMC. Ee быстрый, неповторимый и законченный интерфейс вместе возможностями XBMC позволят вам получить максимальное удовольствие от вашей цифровой коллекции.</description>
     <description lang="sv">Bello är ett GUI för XBMC Media Center. Syftet med Bello är att fullborda din XBMC upplevelse med ett snabbt, unikt och samlat gränssnitt tillsammans med de allra senaste funktionerna av XBMC.</description>
     <description lang="zh">Bello是一个XBMC媒体中心的图形界面. Bello的目标是通过快速, 独特和统一的界面以及最新的XBMC特性, 来最大化你的XBMC娱乐体验.</description>
@@ -73,6 +80,7 @@
     <disclaimer lang="en">Mouse usage is not supported</disclaimer>
     <disclaimer lang="en_AU">Mouse usage is not supported</disclaimer>
     <disclaimer lang="en_NZ">Mouse usage is not supported</disclaimer>
+    <disclaimer lang="en_US">Mouse usage is not supported</disclaimer>
     <disclaimer lang="es">El uso de ratón no esta soportado</disclaimer>
     <disclaimer lang="fr">L'utilisation de la souris n'est pas supportée.</disclaimer>
     <disclaimer lang="fr_CA">L'utilisation de la souris n'est pas prise en charge</disclaimer>
