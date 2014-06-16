@@ -1,0 +1,41 @@
+1.2.0:
+- Platform/Architecture configurable in Advanced Settings
+- Cache can be enabled for caching playlists and playlist tracks in memory (disabled by default)
+- Artist display can be configured in Add-on settings
+- Pagination of tracks in playlists and starred can be enabled and configured in Add-on settings
+- Search results are no longer limited to 100 tracks and have always pagination enabled 
+- Updated libspotify for ARM
+- Unavailable tracks are marked on the list by [unavailable] tag. Tracks unavailable for a region cannot be played anymore
+- Fixed issue with not displaying a playlist if it contains broken tracks  
+
+1.1.1:
+
+- Fixed not working add-on on Linux/OE
+- Reverted creation of session during XBMC startup (logging in to Spotify is still done once add-on is accessed)
+
+1.1.0:
+
+- Inbox support showing sent Playlists, Artists, Albums and Tracks
+- Playlist folders support. They are marked in bold in the Playlists menu
+- Several fixes to make Spotlight work on BoxeeBox  
+- Spotify session is created lazily: if client add-on is accessed for the first time
+- Added StartSession, StopSession and HasActiveSession commands to control Spotify session from outside of Spotlight
+
+1.0.2:
+
+- Upgraded to PyspotifyCtypes 0.6 to fix problems on BoxeeBox 
+
+1.0.1b1:
+
+- Issue #4 Fixed machine check to make it work on Gotham and AMD64 and OSX64
+- Issue #3 Fixed search for using international characters
+- Issue #3 Fixed empty playlists when names contains special or international characters
+- Issue #2 Fixed bitrate settings crashing server
+
+1.0b1:
+- Added searching for tracks
+- Added listing playlists
+- Added listing artist albums
+- Added listing album tracks
+- Added displaying starred tracks 
+- Added playing and queueing tracks, albums etc.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.audio.spotlight" version="SPOTLIGHT_VERSION" name="Spotlight" provider-name="Dariusz Biskup">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="ui_addon.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.service"
+             library="server_addon.py" start="login">
+	</extension>             
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Spotlight</summary>
+        <description>Spotify add-on for XBMC using native XBMC menus. It allows searching for tracks, listing: playlists, artist albums, album tracks, starred tracks and playing and queueing tracks, albums etc. It can be operated via mobile client like Yatse.</description>
+        <disclaimer>It requires a Spotify Premium account.</disclaimer>
+    </extension>
+</addon>
