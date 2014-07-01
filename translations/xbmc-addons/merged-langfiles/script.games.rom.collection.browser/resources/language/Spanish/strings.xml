@@ -20,6 +20,7 @@
     <string id="32010">Error: No se pudo crear la carpeta de imágenes.</string>
     <string id="32011">Compruebe los detalles en xbmc.log.</string>
     <string id="32012">Error: No se pudo crear el archivo de imagen.</string>
+    <string id="32013">Error al reanalizar el juego</string>
     <string id="32014">No se puede cargar el Juego seleccionado</string>
     <string id="32015">Error al editar un Juego</string>
     <string id="32016">Error al añadir a Favoritos</string>
@@ -32,6 +33,9 @@
     <string id="32023">No se puede obtener la colección de ROMs con identificación: %s</string>
     <string id="32024">El juego seleccionado se pudo leer en la base de datos.</string>
     <string id="32025">El control con identificación: %s no se pudo encontrar. Comprueba el archivo WindowXML.</string>
+
+    <!-- <string id="32026">Site %s does not exist in config.xml</string> -->
+    <string id="32027">No puedo analizar %s juegos con el analizador %s.[CR]Combinación no válida en los ajustes.</string>
 
     <!-- <string id="32028"></string> -->
     <!-- <string id="32029">can't be used together with offline scrapers.)</string> -->
@@ -47,6 +51,8 @@
     <string id="32038">Error al crear el archivo .cut. Compruebe los detalles en xbmc.log.</string>
     <string id="32039">Error al ejecutar el archivo .7z.</string>
     <string id="32040">Error: El archivo config_template.xml no existe</string>
+    <string id="32041">RCB no puede acceder a la ruta de ROMs.[CR]Comprueba que no tiene caractéres no ASCII.</string>
+    <string id="32042">RCB no puede acceder a la ruta de Artwork.[CR]Comprueba que no tiene caractéres no ASCII.</string>
 
     <!-- Hints / questions -->
     <string id="32100">No se ha encontrado el archivo de configuración.</string>
@@ -105,6 +111,7 @@
     <!-- <string id="32152">Interactive: Select Matches</string> -->
     <string id="32153">Imágenes locales</string>
     <string id="32154">Info. local</string>
+    <string id="32155">Elegir tipo de Artwork</string>
     <string id="32156">Seleccionar propiedad</string>
     <string id="32157">ignorar</string>
     <string id="32158">Ignorar filtro</string>
@@ -115,12 +122,15 @@
     <string id="32163">Ejecutar Juego</string>
     <string id="32164">Por favor, elige disco</string>
     <string id="32165">Ejecutar el juego desde el principio</string>
+    <string id="32166">¿Lanzar un estado guardado del juego?</string>
+    <string id="32167">Elegir slot del estado guardado</string>
     <string id="32168">Introduzca un comando</string>
     <string id="32169">Exportar biblioteca...</string>
     <string id="32170">Exportando Colección ROM</string>
     <string id="32171">Exportar juego</string>
     <string id="32172">Acción cancelada. Config.xml no se escribirá.</string>
     <string id="32173">Elige un escenario</string>
+    <string id="32174">Coger la información y el artwork del juego en línea</string>
     <string id="32175">Información del juego y artwork disponible localmente</string>
     <string id="32176">Elige una plataforma</string>
     <string id="32177">Introduzca el nombre de la plataforma</string>
@@ -134,6 +144,7 @@
     <string id="32185">Estructura de la descripción del juego</string>
     <string id="32186">Un archivo de descripción para cada juego</string>
     <string id="32187">Un archivo de descripción para todos los juegos</string>
+    <string id="32188">Coger la info del juego en línea (o usar info local)</string>
     <string id="32189">%s Descripción del juego</string>
     <string id="32190">Intoduzca la mascara de la descripción de juego</string>
     <string id="32191">%s instrucciones</string>
@@ -141,6 +152,14 @@
     <string id="32193">%s Artwork</string>
     <string id="32194">Retraso pre-ejecución (ms)</string>
     <string id="32195">Retraso post-ejecución (ms)</string>
+    <string id="32196">Retraso de arranque modo Solo (ms)</string>
+    <string id="32197">Usar scripts VB en modo Solo (Sólo Windows)</string>
+    <string id="32198">¿Usar RetroPlayer para lanzar juegos?</string>
+    <string id="32199">Suspender Audio</string>
+    <string id="32200">Minimizar XBMC</string>
+    <string id="32201">Ruta de emu_autoconfig.xml</string>
+    <string id="32202">%s (Instalado)</string>
+    <string id="32203">Emuladores autoconfigurables disponibles</string>
 
     <!-- Settings -->
     <string id="32300">General</string>
@@ -152,8 +171,12 @@
     <string id="32306">Importar Juegos</string>
     <string id="32307">Importar juegos al iniciar XBMC</string>
     <string id="32308">Mostrar el diálogo de opciones de importación</string>
+    <string id="32309">Modo de análisis</string>
+    <string id="32310">Factor de correlación de juegos</string>
+    <string id="32311">Crear fichero NFO local mientras se analiza</string>
     <string id="32312">No importar juegos sin descripción</string>
     <string id="32313">No importar juegos sin imágenes</string>
+    <string id="32314">Reanalizar juegos ya importados</string>
     <string id="32315">Permitir sobrescribir sin valores nulos</string>
     <string id="32316">Usar carpeta adicional para nfo</string>
     <string id="32317">Ruta de la carpeta nfo</string>
@@ -185,8 +208,11 @@
 
     <!-- context menu -->
     <string id="32500">Importar Juegos</string>
+    <string id="32501">Reanalizar el Juego seleccionado</string>
+    <string id="32502">Reanalizar selección</string>
     <string id="32503">Añadir Colección de ROMs</string>
     <string id="32504">Editar Colección de ROMs</string>
+    <string id="32505">Editar Analizadores Fuera de Línea</string>
     <string id="32506">Editar orden del juego</string>
     <string id="32507">Añadir Juego a Favoritos</string>
     <string id="32508">Añadir Selección a Favoritos</string>
@@ -195,6 +221,7 @@
     <string id="32511">Eliminar Colección de ROMs</string>
     <string id="32512">Limpiar base de datos</string>
     <string id="32513">Abrir Configuración del Complemento</string>
+    <string id="32514">Elegir Gameclient (por Juego)</string>
 
     <!-- editromcollection -->
     <string id="32600">Configuración</string>
@@ -220,17 +247,64 @@
     <string id="32620">Añadir ruta de medios</string>
     <string id="32621">Imagenes (Ventana principal)</string>
     <string id="32622">Imagenes (Ventana de Info)</string>
+    <string id="32623">Reproducir vídeo (Ventana principal)</string>
     <string id="32624">Emulador</string>
+    <string id="32625">Parámetros del Emulador</string>
+    <string id="32626">Usar Emulador en Modo Solo</string>
+    <string id="32627">Usar Popen para lanzar el Emulador</string>
+    <string id="32628">No descomprimir archivos Zip</string>
+    <string id="32629">Ruta de Guardado</string>
+    <string id="32630">Máscara de fichero de Guardado</string>
+    <string id="32631">Parámetros de Guardado</string>
+    <string id="32632">Pre-ejecutar</string>
+    <string id="32633">Post-ejecutar</string>
+    <string id="32634">Guardar Configuración</string>
     <string id="32635">Cancelar</string>
+    <string id="32636">Reproducir vídeo (Ventana de info)</string>
+    <string id="32637">Usar RetroPlayer</string>
+    <string id="32638">Gameclient</string>
+
+    <!-- editscraper -->
+    <string id="32700">Analizadores Fuera de Línea</string>
+    <string id="32701">Analizador</string>
+    <string id="32702">Usar descripción única por juego</string>
+    <string id="32703">Ruta descripción</string>
+    <string id="32704">Máscara de archivo de descripción</string>
+    <string id="32705">Pasar instrucción</string>
+    <string id="32706">Buscar juego por crc</string>
+    <string id="32707">Usar nombre de carpeta como crc</string>
+    <string id="32708">Usar nombre de fichero como crc</string>
+    <string id="32709">Eliminar analizador</string>
+    <string id="32710">Añadir analizador</string>
 
     <!-- info -->
     <string id="32750">Región</string>
+    <string id="32751">Media</string>
     <string id="32752">Controlador</string>
     <string id="32753">Rating</string>
+    <string id="32754">Máx. Jugadores</string>
+    <string id="32755">Lanzar contador</string>
+    <string id="32756">Jugar juego</string>
 
     <!-- importdialog -->
     <string id="32800">Importar Juegos</string>
+    <string id="32801">Modo de análisis</string>
+    <string id="32802">Cambiar analizadores en esta ejecución</string>
+
+    <!-- Missing info filter -->
+    <string id="32850">RCB - Falta filtro de información</string>
+    <string id="32851">Modo de filtro</string>
+    <string id="32852">Filtrar juegos sin Artwork</string>
+    <string id="32853">UNO de estos elementos falta</string>
     <string id="32854">Ninguno</string>
+    <string id="32855">Añadir elemento</string>
+    <string id="32856">Eliminar elemento</string>
+    <string id="32857">TODOS estos elementos faltan</string>
+    <string id="32858">Filtrar juegos con falta de información</string>
+
+    <!-- Delete Rom Collection -->
+    <string id="32900">RCB - Borrar Colección de ROMs</string>
+    <string id="32901">Opción eliminable</string>
     <string id="32902">Eliminar</string>
 
     <!-- NEW IDs -->
@@ -250,6 +324,7 @@
     <string id="35010">Error: No se pudo crear la carpeta de imágenes.</string>
     <string id="35011">Compruebe los detalles en xbmc.log.</string>
     <string id="35012">Error: No se pudo crear el archivo de imagen.</string>
+    <string id="35013">Error al reanalizar el juego</string>
     <string id="35014">No se puede cargar el Juego seleccionado</string>
     <string id="35015">Error al editar un Juego</string>
     <string id="35016">Error al añadir a Favoritos</string>
@@ -262,6 +337,9 @@
     <string id="35023">No se puede obtener la colección de ROMs con identificación: %s</string>
     <string id="35024">El juego seleccionado se pudo leer en la base de datos.</string>
     <string id="35025">El control con identificación: %s no se pudo encontrar. Comprueba el archivo WindowXML.</string>
+
+    <!-- <string id="35026">Site %s does not exist in config.xml</string> -->
+    <string id="35027">No puedo analizar %s juegos con el analizador %s.[CR]Combinación no válida en los ajustes.</string>
 
     <!-- <string id="35028"></string> -->
     <!-- <string id="35029">can't be used together with offline scrapers.)</string> -->
@@ -277,6 +355,8 @@
     <string id="35038">Error al crear el archivo .cut. Compruebe los detalles en xbmc.log.</string>
     <string id="35039">Error al ejecutar el archivo .7z.</string>
     <string id="35040">Error: El archivo config_template.xml no existe</string>
+    <string id="35041">RCB no puede acceder a la ruta de ROMs.[CR]Comprueba que no tiene caractéres no ASCII</string>
+    <string id="35042">RCB no puede acceder a la ruta de Artwork.[CR]Comprueba que no tiene caractéres no ASCII</string>
 
     <!-- Hints / questions -->
     <string id="40000">No se ha encontrado el archivo de configuración.</string>
@@ -335,6 +415,7 @@
     <!-- <string id="40052">Interactive: Select Matches</string> -->
     <string id="40053">Imágenes locales</string>
     <string id="40054">Info. local</string>
+    <string id="40055">Elegir tipo de Artwork</string>
     <string id="40056">Seleccionar propiedad</string>
     <string id="40057">ignorar</string>
     <string id="40058">Ignorar filtro</string>
@@ -345,12 +426,15 @@
     <string id="40063">Ejecutar Juego</string>
     <string id="40064">Por favor, elige disco</string>
     <string id="40065">Ejecutar el juego desde el principio</string>
+    <string id="40066">¿Lanzar un estado guardado del juego?</string>
+    <string id="40067">Elegir slot del estado guardado</string>
     <string id="40068">Introduzca un comando</string>
     <string id="40069">Exportar biblioteca...</string>
     <string id="40070">Exportando Colección ROM</string>
     <string id="40071">Exportar juego</string>
     <string id="40072">Acción cancelada. Config.xml no se escribirá.</string>
     <string id="40073">Elige un escenario</string>
+    <string id="40074">Coger la información y el artwork del juego en línea</string>
     <string id="40075">Información del juego y artwork disponible localmente</string>
     <string id="40076">Elige una plataforma</string>
     <string id="40077">Introduzca el nombre de la plataforma</string>
@@ -364,6 +448,7 @@
     <string id="40085">Estructura de la descripción del juego</string>
     <string id="40086">Un archivo de descripción para cada juego</string>
     <string id="40087">Un archivo de descripción para todos los juegos</string>
+    <string id="40088">Coger la info del juego en línea (o usar info local)</string>
     <string id="40089">%s Descripción del juego</string>
     <string id="40090">Intoduzca la mascara de la descripción de juego</string>
     <string id="40091">%s instrucciones</string>
@@ -371,6 +456,14 @@
     <string id="40093">%s Artwork</string>
     <string id="40094">Retraso pre-ejecución (ms)</string>
     <string id="40095">Retraso post-ejecución (ms)</string>
+    <string id="40096">Retraso al lanzar en modo Solo (ms)</string>
+    <string id="40097">Usar scripts VB en modo solo (Sólo Windows)</string>
+    <string id="40098">¿Usar RetroPlayer para lanzar juegos?</string>
+    <string id="40099">Suspender Audio</string>
+    <string id="40100">Minimizar XBMC</string>
+    <string id="40101">Ruta de emu_autoconfig.xml</string>
+    <string id="40102">%s (Instalado)</string>
+    <string id="40103">Emuladores autoconfigurables disponibles</string>
 
     <!-- Settings -->
     <string id="45000">General</string>
@@ -382,8 +475,12 @@
     <string id="45006">Importar Juegos</string>
     <string id="45007">Importar juegos al iniciar XBMC</string>
     <string id="45008">Mostrar el diálogo de opciones de importación</string>
+    <string id="45009">Modo de análisis</string>
+    <string id="45010">Factor de correlación de juegos</string>
+    <string id="45011">Crear fichero nfo local mientras se analiza</string>
     <string id="45012">No importar juegos sin descripción</string>
     <string id="45013">No importar juegos sin imágenes</string>
+    <string id="45014">Reanalizar juegos ya importados</string>
     <string id="45015">Permitir sobrescribir sin valores nulos</string>
     <string id="45016">Usar carpeta adicional para nfo</string>
     <string id="45017">Ruta de la carpeta nfo</string>
@@ -415,8 +512,11 @@
 
     <!-- context menu -->
     <string id="51000">Importar Juegos</string>
+    <string id="51001">Reanalizar el Juego seleccionado</string>
+    <string id="51002">Reanalizar selección</string>
     <string id="51003">Añadir Colección de ROMs</string>
     <string id="51004">Editar Colección de ROMs</string>
+    <string id="51005">Editar Analizadores Fuera de Línea</string>
     <string id="51006">Editar orden del juego</string>
     <string id="51007">Añadir Juego a Favoritos</string>
     <string id="51008">Añadir Selección a Favoritos</string>
@@ -425,6 +525,7 @@
     <string id="51011">Eliminar Colección de ROMs</string>
     <string id="51012">Limpiar base de datos</string>
     <string id="51013">Abrir Configuración del Complemento</string>
+    <string id="51014">Elegir Gameclient (por Juego)</string>
 
     <!-- editromcollection -->
     <string id="52000">Configuración</string>
@@ -450,16 +551,63 @@
     <string id="52020">Añadir ruta de medios</string>
     <string id="52021">Imagenes (Ventana principal)</string>
     <string id="52022">Imagenes (Ventana de Info)</string>
+    <string id="52023">Reproducir vídeo (Ventana principal)</string>
     <string id="52024">Emulador</string>
+    <string id="52025">Parámetros del Emulador</string>
+    <string id="52026">Usar Emulador en Modo Solo</string>
+    <string id="52027">Usar Popen para lanzar el Emulador</string>
+    <string id="52028">No descomprimir archivos Zip</string>
+    <string id="52029">Ruta de Guardado</string>
+    <string id="52030">Máscara de fichero de Guardado</string>
+    <string id="52031">Parámetros de Guardado</string>
+    <string id="52032">Pre-ejecutar</string>
+    <string id="52033">Post-ejecutar</string>
+    <string id="52034">Guardar Configuración</string>
     <string id="52035">Cancelar</string>
+    <string id="52036">Reproducir vídeo (Ventana de info)</string>
+    <string id="52037">Usar RetroPlayer</string>
+    <string id="52038">Gameclient</string>
+
+    <!-- editscraper -->
+    <string id="53000">Analizadores Fuera de Línea</string>
+    <string id="53001">Analizador</string>
+    <string id="53002">Usar descripción única por juego</string>
+    <string id="53003">Ruta descripción</string>
+    <string id="53004">Máscara de archivo de descripción</string>
+    <string id="53005">Pasar instrucción</string>
+    <string id="53006">Buscar juego por crc</string>
+    <string id="53007">Usar nombre de carpeta como crc</string>
+    <string id="53008">Usar nombre de fichero como crc</string>
+    <string id="53009">Eliminar analizador</string>
+    <string id="53010">Añadir analizador</string>
 
     <!-- info -->
     <string id="54000">Región</string>
+    <string id="54001">Media</string>
     <string id="54002">Controlador</string>
     <string id="54003">Valoración</string>
+    <string id="54004">Máx. Jugadores</string>
+    <string id="54005">Lanzar contador</string>
+    <string id="54006">Jugar juego</string>
 
     <!-- importdialog -->
     <string id="55000">Importar Juegos</string>
+    <string id="55001">Modo de análisis</string>
+    <string id="55002">Cambiar analizadores en esta ejecución</string>
+
+    <!-- Missing info filter -->
+    <string id="56000">RCB - Falta filtro de información</string>
+    <string id="56001">Modo de filtro</string>
+    <string id="56002">Filtrar juegos sin Artwork</string>
+    <string id="56003">UNO de estos elementos falta</string>
     <string id="56004">Ninguno</string>
+    <string id="56005">Añadir elemento</string>
+    <string id="56006">Eliminar elemento</string>
+    <string id="56007">TODOS estos elementos faltan</string>
+    <string id="56008">Filtrar juegos con falta de información</string>
+
+    <!-- Delete Rom Collection -->
+    <string id="57000">RCB - Borrar Colección de ROMs</string>
+    <string id="57001">Opción eliminable</string>
     <string id="57002">Eliminar</string>
 </strings>
