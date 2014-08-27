@@ -1,5 +1,5 @@
 /*
- *      Copyright (C) 2012 Team XBMC
+ *      Copyright (C) 2014 Team Kodi
  *      http://www.xbmc.org
  *
  *  This Program is free software; you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with XBMC; see the file COPYING.  If not, write to
+ *  along with Kodi; see the file COPYING.  If not, write to
  *  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
  *  http://www.gnu.org/copyleft/gpl.html
  *
@@ -230,12 +230,16 @@ bool CProjectHandler::CreateMergedResources()
                  pPOEntryTX->msgID == pcurrPOEntryEN->msgID)
         {
           mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
+          if (g_Settings.GetForceTXUpdate())
+            updTXPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
         }
         //2. Tx entry plural
         else if (pPOEntryTX && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStrPlural.empty() &&
                  pPOEntryTX->msgIDPlur == pcurrPOEntryEN->msgIDPlur)
         {
           mergedPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
+          if (g_Settings.GetForceTXUpdate())
+            updTXPOHandler.AddNumPOEntryByID(numID, *pPOEntryTX, *pcurrPOEntryEN, true);
         }
         //3. Upstr entry single
         else if (pPOEntryUpstr && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStr.empty() &&
@@ -276,9 +280,17 @@ bool CProjectHandler::CreateMergedResources()
           updTXPOHandler.AddClassicEntry(*pcurrPOEntryEN, *pcurrPOEntryEN, true);
         }
         else if (pPOEntryTX && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStr.empty()) // Tx entry single
+        {
           mergedPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+          if (g_Settings.GetForceTXUpdate())
+            updTXPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+        }
         else if (pPOEntryTX && !pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryTX->msgStrPlural.empty()) // Tx entry plural
+        {
           mergedPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+          if (g_Settings.GetForceTXUpdate())
+            updTXPOHandler.AddClassicEntry(*pPOEntryTX, *pcurrPOEntryEN, true);
+        }
         else if (pPOEntryUpstr && pcurrPOEntryEN->msgIDPlur.empty() && !pPOEntryUpstr->msgStr.empty()) // Upstr entry single
         {
           mergedPOHandler.AddClassicEntry(*pPOEntryUpstr, *pcurrPOEntryEN, true);
@@ -304,7 +316,8 @@ bool CProjectHandler::CreateMergedResources()
       }
 
       if ((updTXPOHandler.GetNumEntriesCount() !=0 || updTXPOHandler.GetClassEntriesCount() !=0) &&
-        (strLangCode != "en" || !g_HTTPHandler.ComparePOFilesInMem(&updTXPOHandler, pPOHandlerTX, strLangCode == "en")))
+        (strLangCode != "en" || g_Settings.GetForceTXUpdate() ||
+        !g_HTTPHandler.ComparePOFilesInMem(&updTXPOHandler, pPOHandlerTX, strLangCode == "en")))
       {
         updTXPOHandler.SetPreHeader(strResPreHeader);
         updTXPOHandler.SetHeaderNEW(*itlang);

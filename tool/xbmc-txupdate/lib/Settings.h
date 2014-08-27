@@ -1,5 +1,5 @@
 /*
- *      Copyright (C) 2012 Team XBMC
+ *      Copyright (C) 2014 Team Kodi
  *      http://www.xbmc.org
  *
  *  This Program is free software; you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with XBMC; see the file COPYING.  If not, write to
+ *  along with Kodi; see the file COPYING.  If not, write to
  *  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
  *  http://www.gnu.org/copyleft/gpl.html
  *
@@ -48,9 +48,13 @@ public:
   void SetTXUpdateLangfilesDir(std::string const &strTXUpdateLangfilesDir);
   std::string GetTXUpdateLangfilesDir();
   void SetForcePOComments(bool bForceComm);
+  void SetRebrand(bool bRebrand);
   bool GetForcePOComments();
+  bool GetRebrand();
   void SetSupportEmailAdd(std::string const &strEmailAdd);
   std::string GetSupportEmailAdd();
+  bool GetForceTXUpdate();
+  void SetForceTXUpdate(bool bForceTXUpd);
 private:
   size_t m_CacheExpire;
   int m_minComplPercentage;
@@ -60,6 +64,8 @@ private:
   std::string m_strSupportEmailAdd;
   std::string m_strProjectnameLong;
   bool m_bForceComm;
+  bool m_bRebrand;
+  bool m_bForceTXUpd;
 };
 
 extern CSettings g_Settings;

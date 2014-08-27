@@ -1,5 +1,5 @@
 /*
- *      Copyright (C) 2012 Team XBMC
+ *      Copyright (C) 2014 Team Kodi
  *      http://www.xbmc.org
  *
  *  This Program is free software; you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with XBMC; see the file COPYING.  If not, write to
+ *  along with Kodi; see the file COPYING.  If not, write to
  *  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
  *  http://www.gnu.org/copyleft/gpl.html
  *
@@ -128,11 +128,23 @@ bool CUpdateXMLHandler::LoadXMLToMem (std::string rootDir)
     CLog::Log(logINFO, "UpdXMLHandler: No support email address specified in xbmc-txupdate.xml file. Using default value: %s",
               g_Settings.GetSupportEmailAdd().c_str());
 
-  std::string strForcePOComm;
-  if (pRootElement->Attribute("forcePOComm") && (strForcePOComm = pRootElement->Attribute("forcePOComm")) == "true")
+  std::string strAttr;
+  if (pRootElement->Attribute("forcePOComm") && (strAttr = pRootElement->Attribute("forcePOComm")) == "true")
   {
     CLog::Log(logINFO, "UpdXMLHandler: Forced PO file comments for non English languages.", strMergedLangfileDir.c_str());
     g_Settings.SetForcePOComments(true);
+  }
+  
+  if (pRootElement->Attribute("Rebrand") && (strAttr = pRootElement->Attribute("Rebrand")) == "true")
+  {
+    CLog::Log(logINFO, "UpdXMLHandler: Rebrand of XBMC strings to Kodi strings turned on.");
+    g_Settings.SetRebrand(true);
+  }
+
+  if (pRootElement->Attribute("ForceTXUpd") && (strAttr = pRootElement->Attribute("ForceTXUpd")) == "true")
+  {
+    CLog::Log(logINFO, "UpdXMLHandler: Create of TX update files is forced.");
+    g_Settings.SetForceTXUpdate(true);
   }
 
   const TiXmlElement *pChildResElement = pRootElement->FirstChildElement("resource");

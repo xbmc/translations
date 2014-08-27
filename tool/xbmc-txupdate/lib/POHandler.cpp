@@ -1,5 +1,5 @@
 /*
- *      Copyright (C) 2012 Team XBMC
+ *      Copyright (C) 2014 Team Kodi
  *      http://www.xbmc.org
  *
  *  This Program is free software; you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with XBMC; see the file COPYING.  If not, write to
+ *  along with Kodi; see the file COPYING.  If not, write to
  *  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
  *  http://www.gnu.org/copyleft/gpl.html
  *
@@ -160,9 +160,19 @@ void CPOHandler::GetXMLComment(std::string strXMLEncoding, const TiXmlNode *pCom
     if (nodeType == TiXmlNode::TINYXML_COMMENT)
     {
       if (pCommentNode->m_CommentLFPassed)
-        prevCommEntry.interlineComm.push_back(g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value())));
+      {
+        std::string strComm = g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value()));
+        if (g_Settings.GetRebrand())
+          g_CharsetUtils.reBrandXBMCToKodi(&strComm);
+        prevCommEntry.interlineComm.push_back(strComm);
+      }
       else
-        currEntry.extractedComm.push_back(g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value())));
+      {
+        std::string strComm = g_CharsetUtils.ToUTF8(strXMLEncoding, g_CharsetUtils.UnWhitespace(pCommentNode->Value()));
+        if (g_Settings.GetRebrand())
+          g_CharsetUtils.reBrandXBMCToKodi(&strComm);
+        currEntry.extractedComm.push_back(strComm);
+      }
     }
     pCommentNode = pCommentNode->NextSibling();
   }
@@ -235,6 +245,12 @@ bool CPOHandler::FetchXMLURLToMem (std::string strURL)
 
         if (m_bPOIsEnglish)
           GetXMLComment(strXMLEncoding, pChildElement->NextSibling(), currEntry);
+
+        if (g_Settings.GetRebrand())
+        {
+          g_CharsetUtils.reBrandXBMCToKodi(&currEntry.msgID);
+	  g_CharsetUtils.reBrandXBMCToKodi(&currEntry.msgStr);
+        }
 
         m_mapStrings[id] = currEntry;
       }
@@ -393,11 +409,11 @@ void CPOHandler::SetAddonMetaData (CAddonXMLEntry const &AddonXMLEntry, CAddonXM
 
   if (strLang != "en")
   {
-    if (!AddonXMLEntry.strDescription.empty() && AddonXMLEntry.strDescription != PrevAddonXMLEntry.strDescription)
+    if (!AddonXMLEntry.strDescription.empty() && (g_Settings.GetForceTXUpdate() || AddonXMLEntry.strDescription != PrevAddonXMLEntry.strDescription))
       newPOEntryDesc.msgStr = AddonXMLEntry.strDescription;
-    if (!AddonXMLEntry.strDisclaimer.empty() && AddonXMLEntry.strDisclaimer != PrevAddonXMLEntry.strDisclaimer)
+    if (!AddonXMLEntry.strDisclaimer.empty() && (g_Settings.GetForceTXUpdate() || AddonXMLEntry.strDisclaimer != PrevAddonXMLEntry.strDisclaimer))
       newPOEntryDisc.msgStr = AddonXMLEntry.strDisclaimer;
-    if (!AddonXMLEntry.strSummary.empty() && AddonXMLEntry.strSummary != PrevAddonXMLEntry.strSummary)
+    if (!AddonXMLEntry.strSummary.empty() && (g_Settings.GetForceTXUpdate() || AddonXMLEntry.strSummary != PrevAddonXMLEntry.strSummary))
       newPOEntrySumm.msgStr = AddonXMLEntry.strSummary;
   }
 
@@ -443,7 +459,7 @@ void CPOHandler::GetAddonMetaData (CAddonXMLEntry &AddonXMLEntry, CAddonXMLEntry
 
 void CPOHandler::SetPreHeader (std::string &strPreText)
 {
-  m_strHeader = "# XBMC Media Center language file\n";
+  m_strHeader = "# Kodi Media Center language file\n";
   m_strHeader += strPreText;
 }
 
@@ -461,7 +477,7 @@ void CPOHandler::SetHeaderNEW (std::string strLangCode)
   m_strHeader += "\"Report-Msgid-Bugs-To: " + g_Settings.GetSupportEmailAdd() + "\\n\"\n";
   m_strHeader += "\"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
   m_strHeader += "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-  m_strHeader += "\"Last-Translator: XBMC Translation Team\\n\"\n";
+  m_strHeader += "\"Last-Translator: Kodi Translation Team\\n\"\n";
   m_strHeader += "\"Language-Team: " + g_LCodeHandler.FindLang(strLangCode) + " (http://www.transifex.com/projects/p/" + g_Settings.GetProjectname() +"/language/"
                  + strLangCode +"/)" + "\\n\"\n";
   m_strHeader += "\"MIME-Version: 1.0\\n\"\n";
