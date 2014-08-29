@@ -7,7 +7,10 @@
         <provides>audio</provides>
     </extension>
     <extension point="xbmc.service"
-             library="server_addon.py" start="login">
+             library="server_addon.py" start="startup">
+	</extension>             
+    <extension point="xbmc.service"
+             library="login_addon.py" start="login">
 	</extension>             
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
