@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-09 20:12+0000\n"
-"Last-Translator: el buve\n"
+"PO-Revision-Date: 2014-09-11 07:20+0000\n"
+"Last-Translator: alfonskunk <alfonskunk@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xbmc-main/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1263,7 +1263,7 @@ msgstr "Idioma de la interfaz de usuario"
 #: system/settings/settings.xml
 msgctxt "#310"
 msgid "Keyboard layouts"
-msgstr ""
+msgstr "Distribuciones de teclado"
 
 msgctxt "#312"
 msgid "(0=auto)"
@@ -5925,6 +5925,24 @@ msgctxt "#13456"
 msgid "Hardware accelerated"
 msgstr "Aceleración por hardware"
 
+#. Option for video related setting #13454: sw filter
+#: system/settings/settings.xml
+msgctxt "#13457"
+msgid "Prefer VAAPI render method"
+msgstr "Preferir método VAAPI para renderizad"
+
+#: system/settings/settings.xml
+msgctxt "#13458"
+msgid "Allow hardware acceleration (OMXPlayer)"
+msgstr "Permitir aceleración por hardware (OMXPlayer)"
+
+#. Description of setting "Videos -> Playback -> Allow hardware acceleration
+#. (OMXPlayer)" with label #13457
+#: system/settings/settings.xml
+msgctxt "#13459"
+msgid "Use OMXPlayer for decoding of video files."
+msgstr "Usar OMXPlayer para decodificar vídeo."
+
 #: system/settings/settings.xml
 msgctxt "#13500"
 msgid "A/V sync method"
@@ -7019,6 +7037,21 @@ msgstr "VDPAU - Bob"
 msgctxt "#16326"
 msgid "DXVA-HD"
 msgstr "DXVA-HD"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16327"
+msgid "VAAPI Bob"
+msgstr "VAAPI Bob"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16328"
+msgid "VAAPI Motion Adaptive"
+msgstr "Movimiento Adaptativo VAAPI"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16329"
+msgid "VAAPI Motion Compensated"
+msgstr "Movimiento Compensado VAAPI"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -11809,7 +11842,7 @@ msgstr "¿Reintentar conexión?"
 #: xbmc/addons/addon.cpp
 msgctxt "#24081"
 msgid "Helper Add-ons"
-msgstr ""
+msgstr "Add-ons de Asistentes"
 
 #. The label in the add-ons manager for add-on libraries
 #: xbmc/addons/addon.cpp
@@ -11821,7 +11854,7 @@ msgstr "Librerías de Add-ons"
 #: xbmc/addons/addon.cpp
 msgctxt "#24083"
 msgid "Information libraries"
-msgstr ""
+msgstr "Librerías de información"
 
 #. The label in the add-ons manager for visualisation libraries
 #: xbmc/addons/addon.cpp
@@ -15080,7 +15113,7 @@ msgstr "Directorio utilizado para salvar las capturas de pantalla realizadas en 
 msgctxt "#36394"
 msgid ""
 "Enables log messages from additional libraries to be included in the log."
-msgstr ""
+msgstr "Activa el incluiir en el log los mensajes de log de las librerías adicionales."
 
 #. Description of settings category "System -> Master lock" with label #12360
 #: system/settings/settings.xml
@@ -15330,7 +15363,15 @@ msgstr "Define si la decodificación de vídeo debe ser realizada por software (
 #: system/settings/settings.xml
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
-msgstr ""
+msgstr "Seleccionar la disposición de teclado virtual."
+
+#. Description for video related setting #13457: vaapi sw filter
+#: system/settings/settings.xml
+msgctxt "#36433"
+msgid ""
+"If enabled VAAPI render method is prefered. This puts less load on the CPU "
+"but driver may hang!"
+msgstr "Sólo si se ha escogido el metodo VAAPI de renderizado. ¡Esto carga menos la CPU pero el driver puede colgarse!"
 
 #: system/settings/settings.xml
 msgctxt "#36500"
@@ -15633,12 +15674,12 @@ msgstr "episodios"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36908"
 msgid "musicvideo"
-msgstr ""
+msgstr "videoclip"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36909"
 msgid "musicvideos"
-msgstr ""
+msgstr "videoclips"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36910"
@@ -15648,7 +15689,7 @@ msgstr "configurar"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36911"
 msgid "sets"
-msgstr ""
+msgstr "sagas"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36912"
@@ -15790,7 +15831,7 @@ msgstr "Selecciona esta opción si la salida de audio sólo soporta sonido multi
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
-msgstr ""
+msgstr "Configurar las opciones de audio tales como calidad y nivel de compresión"
 
 #: system/settings/rbp.xml
 msgctxt "#37026"
