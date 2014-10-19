@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-23 14:51+0000\n"
-"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
+"PO-Revision-Date: 2014-10-05 14:01+0000\n"
+"Last-Translator: Tivadar Sáfrány <osztraksajt@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/xbmc-main/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -450,7 +450,7 @@ msgstr "Áthelyezés megerősítése"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#122"
 msgid "Confirm delete"
-msgstr ""
+msgstr "Törlés megerősítése"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#123"
@@ -798,7 +798,7 @@ msgstr "Webes kezelőfelület"
 
 msgctxt "#200"
 msgid "Audio encoders"
-msgstr ""
+msgstr "Hang kódolók"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
@@ -990,7 +990,7 @@ msgstr "Méretezés: (%i,%i)->(%i,%i) (Nagyítás: x%2.2f) Arány:%2.2f:1 (Képp
 
 msgctxt "#246"
 msgid "Monitor"
-msgstr ""
+msgstr "Monitor"
 
 msgctxt "#247"
 msgid "Scripts"
@@ -1253,7 +1253,7 @@ msgstr "Kezelőfelület nyelve"
 #: system/settings/settings.xml
 msgctxt "#310"
 msgid "Keyboard layouts"
-msgstr ""
+msgstr "Billentyűzetkiosztás"
 
 msgctxt "#312"
 msgid "(0=auto)"
@@ -2240,7 +2240,7 @@ msgstr "A többcsatornás hangok lekeverése sztereóra"
 #: /xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp /xbmc/xbmc/utils/SortUtils.cpp
 msgctxt "#549"
 msgid "Number"
-msgstr ""
+msgstr "Szám"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#550"
@@ -2723,7 +2723,7 @@ msgstr "Tömörítés erőssége"
 #: system/settings/settings.xml
 msgctxt "#666"
 msgid "Enable component-specific logging"
-msgstr ""
+msgstr "Komponens-specifikus naplózás engedélyezése"
 
 #: system/settings/settings.xml
 msgctxt "#667"
@@ -2733,7 +2733,7 @@ msgstr "Dolby Digital átkódolás engedélyezése"
 #: system/settings/settings.xml
 msgctxt "#668"
 msgid "Specify component-specific logging..."
-msgstr ""
+msgstr "Komponens-specifikus naplózás megadása"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#669"
@@ -2778,17 +2778,17 @@ msgstr "Az AUDIO komponens részletes naplózása"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#677"
 msgid "Verbose logging for AirTunes library"
-msgstr ""
+msgstr "AirTunes könyvtár bőbeszédű naplózása"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#678"
 msgid "Verbose logging for UPnP components"
-msgstr ""
+msgstr "Az UPnP komponens részletes naplózása"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#679"
 msgid "Verbose logging for CEC library"
-msgstr ""
+msgstr "CEC könyvtár bőbeszédű naplózása"
 
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3181,6 +3181,12 @@ msgstr "A zenetárhoz szükséges a fájlokból újraolvasni a címkéket."
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "Most akarod az átvizsgálást indítani?"
+
+#. Label of progess bar which shows the available/total space of pvr backend
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#802"
+msgid "%s of %s available"
+msgstr "%s a %s-ból elérhető"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4697,19 +4703,19 @@ msgstr "Akkumlátor töltöttsége"
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#12396"
 msgid "Auto updates: On"
-msgstr ""
+msgstr "Auto-frissítés: Be"
 
 #. Used on the button to toggle add-on update mode in the Add-on Manager.
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#12397"
 msgid "Auto updates: Notify"
-msgstr ""
+msgstr "Auto-frissítés: Értesítés"
 
 #. Used on the button to toggle add-on update mode in the Add-on Manager.
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#12398"
 msgid "Auto updates: Never"
-msgstr ""
+msgstr "Auto-frissítés: Soha"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12600"
@@ -5811,7 +5817,7 @@ msgstr "Több-szálú dekódolás engedélyezése"
 #: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
-msgstr ""
+msgstr "MPEG-2 VDPAU használata"
 
 #. Description of setting "Videos -> Playback -> Use MPEG-2 VDPAU" with label
 #. #13441
@@ -5821,12 +5827,12 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1/2) codecs. If "
 "disabled the CPU will be used instead. Older Radeon Cards tend to segfault "
 "with this enabled."
-msgstr ""
+msgstr "Az MPEG-(1/2) kodekek hardveres gyorsításának bekapcsolása. Tiltott esetén a CPU dekódol. Régebbi Radeon kártyákon szegmenshiba fordulhat elő."
 
 #: system/settings/settings.xml
 msgctxt "#13443"
 msgid "Use MPEG-4 VDPAU"
-msgstr ""
+msgstr "MPEG-4 VDPAU használata"
 
 #. Description of setting "Videos -> Playback -> Use MPEG-4 VDPAU" with label
 #. #13443
@@ -5836,7 +5842,7 @@ msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead. Some ION Hardware has problems with "
 "this being enabled by default."
-msgstr ""
+msgstr "Az MPEG-4 kodek hardveres gyorsításának bekapcsolása. Tiltott esetén a CPU dekódol.  Néhány ION alapú rendszerrel probléma lehet engedélyezés esetén."
 
 #: system/settings/settings.xml
 msgctxt "#13445"
@@ -5856,7 +5862,7 @@ msgstr "A VC-1 kodek hardveres gyorsításának bekapcsolása. Tiltott esetén a
 #: system/settings/settings.xml
 msgctxt "#13447"
 msgid "Use MPEG-2 VAAPI"
-msgstr ""
+msgstr "MPEG-2 VAAPI használata"
 
 #. Description of setting "Videos -> Playback -> Use MPEG-2 VAAPI" with label
 #. #13447
@@ -5866,12 +5872,12 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1/2) codecs. If "
 "disabled the CPU will be used instead. Some MPEG-2 Videos might have green "
 "artifacts."
-msgstr ""
+msgstr "Az MPEG-(1/2) kodekek hardveres gyorsításának bekapcsolása. Tiltott esetén a CPU dekódol.  Néhány MPEG-2 videónak zöldes hibái lehetnek."
 
 #: system/settings/settings.xml
 msgctxt "#13449"
 msgid "Use MPEG-4 VAAPI"
-msgstr ""
+msgstr "MPEG-4 VAAPI használata"
 
 #. Description of setting "Videos -> Playback -> Use MPEG-4 VAAPI" with label
 #. #13449
@@ -5880,7 +5886,7 @@ msgctxt "#13450"
 msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Az MPEG-4 kodek hardveres gyorsításának bekapcsolása. Tiltott esetén a CPU dekódol. "
 
 #: system/settings/settings.xml
 msgctxt "#13451"
@@ -5919,19 +5925,19 @@ msgstr "Hardveres gyorsítás"
 #: system/settings/settings.xml
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
-msgstr ""
+msgstr "Előnyben részesített VAAPI mód"
 
 #: system/settings/settings.xml
 msgctxt "#13458"
 msgid "Allow hardware acceleration (OMXPlayer)"
-msgstr ""
+msgstr "Hardveres gyorsítás engedélyezése (OMXPlayer)"
 
 #. Description of setting "Videos -> Playback -> Allow hardware acceleration
 #. (OMXPlayer)" with label #13457
 #: system/settings/settings.xml
 msgctxt "#13459"
 msgid "Use OMXPlayer for decoding of video files."
-msgstr ""
+msgstr "OMXPlayer használata a videófájlok dekódoláshoz."
 
 #: system/settings/settings.xml
 msgctxt "#13500"
@@ -6304,7 +6310,7 @@ msgstr "GUI szűrők"
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#14054"
 msgid "%2.1f dB"
-msgstr ""
+msgstr "%2.1f dB"
 
 msgctxt "#14055"
 msgid "Use background scanning"
@@ -6590,7 +6596,7 @@ msgstr "Felszín alapértelmezése"
 
 msgctxt "#15110"
 msgid "Larger font size"
-msgstr ""
+msgstr "Nagyobb betűméret"
 
 #: system/settings/settings.xml
 msgctxt "#15111"
@@ -7031,17 +7037,17 @@ msgstr "DXVA-HD"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI Bob"
-msgstr ""
+msgstr "VAAPI Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16328"
 msgid "VAAPI Motion Adaptive"
-msgstr ""
+msgstr "VAAPI Mozgáshoz adaptált"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16329"
 msgid "VAAPI Motion Compensated"
-msgstr ""
+msgstr "VAAPI Mozgás kompenzált"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -7087,7 +7093,7 @@ msgstr "Vagy használj szókapcsolatot a pontos találathoz, pl. \"Óz, a csodá
 #: xbmc/pvr/windows/GUIWindowPVRTimers.cpp
 msgctxt "#19003"
 msgid "Find similar"
-msgstr ""
+msgstr "Hasonló keresése"
 
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
@@ -7510,7 +7516,7 @@ msgstr "Kérlek válts át egy másik csatornára."
 #: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
 msgctxt "#19103"
 msgid "Go to channel"
-msgstr ""
+msgstr "Csatornához ugrás"
 
 msgctxt "#19104"
 msgid "Enter the name of the folder for the recording"
@@ -7518,7 +7524,7 @@ msgstr "Add meg a felvételek mappájának nevét"
 
 msgctxt "#19105"
 msgid "Please select a channel"
-msgstr ""
+msgstr "Csatorna választása"
 
 msgctxt "#19106"
 msgid "Next timer on"
@@ -7543,11 +7549,11 @@ msgstr "PVR háttér-kiszolgáló hiba. Nézd meg a naplót a részletekért."
 
 msgctxt "#19112"
 msgid "Delete this recording?"
-msgstr ""
+msgstr "Felvétel törlése?"
 
 msgctxt "#19113"
 msgid "Delete all recordings in this folder?"
-msgstr ""
+msgstr "Minden felvétel törlésre kerüljön a mappában?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19114"
@@ -7662,7 +7668,7 @@ msgstr "Az új csoport neve"
 #: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19140"
 msgid "Search..."
-msgstr ""
+msgstr "Keresés..."
 
 msgctxt "#19141"
 msgid "Group"
@@ -8212,7 +8218,7 @@ msgstr "A 'kapcsolat megszakadt' figyelmeztetés elrejtése"
 #: skin.confluence
 msgctxt "#19270"
 msgid "Group Items"
-msgstr ""
+msgstr "Elemek csoportosítása"
 
 msgctxt "#19271"
 msgid "No PVR Add-ons could be found"
@@ -8299,18 +8305,18 @@ msgstr "Ikon keresése"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
-msgstr ""
+msgstr "Csatornaikonok keresése"
 
 #. Label for the default pvr channel group
 #: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
 msgctxt "#19287"
 msgid "All channels"
-msgstr ""
+msgstr "Minden csatorna"
 
 #: system/settings/settings.xml
 msgctxt "#19288"
 msgid "Foreground"
-msgstr ""
+msgstr "Előtér"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19499"
@@ -10910,7 +10916,7 @@ msgstr "ettől: %s eddig: %s"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#21470"
 msgid "%s [%d]"
-msgstr ""
+msgstr "%s [%d]"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -11741,7 +11747,7 @@ msgstr "Frissítések keresése"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24056"
 msgid "Last updated %s"
-msgstr ""
+msgstr "Utoljára frissítve %s"
 
 msgctxt "#24059"
 msgid "Would you like to enable this Add-on?"
@@ -11832,25 +11838,25 @@ msgstr "Próbáljon újra csatlakozni?"
 #: xbmc/addons/addon.cpp
 msgctxt "#24081"
 msgid "Helper Add-ons"
-msgstr ""
+msgstr "Súgó Kiekészítők"
 
 #. The label in the add-ons manager for add-on libraries
 #: xbmc/addons/addon.cpp
 msgctxt "#24082"
 msgid "Add-on libraries"
-msgstr ""
+msgstr "Kiegészítő könyvtárak"
 
 #. The label in the add-ons manager for information libraries
 #: xbmc/addons/addon.cpp
 msgctxt "#24083"
 msgid "Information libraries"
-msgstr ""
+msgstr "Információs könyvtárak"
 
 #. The label in the add-ons manager for visualisation libraries
 #: xbmc/addons/addon.cpp
 msgctxt "#24084"
 msgid "Visualisation libraries"
-msgstr ""
+msgstr "Vizualizációs könyvtárak"
 
 msgctxt "#24089"
 msgid "Add-on restarts"
@@ -12048,14 +12054,14 @@ msgstr "Egyedi hely"
 #: system/settings/settings.xml
 msgctxt "#24126"
 msgid "Auto download first subtitle"
-msgstr ""
+msgstr "Első felirat automatikus letöltése"
 
 #. Description of setting "Videos -> Subtitles -> Auto download first
 #. subtitle" with label #24126
 #: system/settings/settings.xml
 msgctxt "#24127"
 msgid "Automatically download first subtitle from the search result list"
-msgstr ""
+msgstr "Automatikusan letölti a feliratkeresés első találatát a listáról"
 
 msgctxt "#25000"
 msgid "Notifications"
@@ -14604,7 +14610,7 @@ msgctxt "#36330"
 msgid ""
 "Define the webserver username. This only takes effect when both the username"
 " and the password are set."
-msgstr ""
+msgstr "Webszerver felhasználónevének megadása. Ez csak akkor érvényesül ha a felhasználónév és a jelszó is megadásra kerül."
 
 #. Description of setting "Services -> Webserver -> Password" with label #1048
 #: system/settings/settings.xml
@@ -14612,7 +14618,7 @@ msgctxt "#36331"
 msgid ""
 "Define the webserver password. This only takes effect when both the username"
 " and the password are set."
-msgstr ""
+msgstr "Webszerverjelszavának megadása. Ez csak akkor érvényesül ha a felhasználónév és a jelszó is megadásra kerül."
 
 #. Description of setting "Services -> Webserver -> Web interface" with label
 #. #199
@@ -15105,7 +15111,7 @@ msgstr "Könyvtár megadása az Kodi képernyőmentéseihez."
 msgctxt "#36394"
 msgid ""
 "Enables log messages from additional libraries to be included in the log."
-msgstr ""
+msgstr "A debug naplóba bekerülendő egyéb könyvtárak megadása."
 
 #. Description of settings category "System -> Master lock" with label #12360
 #: system/settings/settings.xml
@@ -15355,7 +15361,7 @@ msgstr "Meghatározza, hogy a videó dekódolás szoftveresen történjen -e (t�
 #: system/settings/settings.xml
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
-msgstr ""
+msgstr "Válassza ki a virtuális billentyűzet kiosztását."
 
 #. Description for video related setting #13457: vaapi sw filter
 #: system/settings/settings.xml
@@ -15363,20 +15369,20 @@ msgctxt "#36433"
 msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
-msgstr ""
+msgstr "Ha engedélyezésre kerül a VAAPI lesz az előnyben részesített renderelő. Ez kevesebb terhelést ró a CPU-ra, de a meghajtóprogram lefagyhat!"
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
 #: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode (current)"
-msgstr ""
+msgstr "Sztereógráf 3D mód (aktuális)"
 
 #. headline of a dialog/info message showing the current stereoscopic 3D mode
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36501"
 msgid "Stereoscopic 3D mode"
-msgstr ""
+msgstr "Sztereógráf 3D mód"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
@@ -15424,14 +15430,14 @@ msgstr "Hardver Alapú"
 #: system/settings/settings.xml
 msgctxt "#36509"
 msgid "Monoscopic (2D)"
-msgstr ""
+msgstr "Monoszkópikus (2D)"
 
 #. Name of a setting, asking the user for the default playback mode (2D, 3D,
 #. ask) of stereoscopic videos
 #: system/settings/settings.xml
 msgctxt "#36520"
 msgid "Playback mode of stereoscopic 3D videos"
-msgstr ""
+msgstr "A sztereógráf 3D videók lejátszási módja"
 
 #. Option value of a desired playback mode setting. (f.e. "Settings -> Video
 #. -> Playback -> Playback mode of stereoscopic 3D videos" with label #36520)
@@ -15466,20 +15472,20 @@ msgstr "Az állomány szerinti (detektálás)"
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36526"
 msgid "Disable stereoscopic 3D mode when playback ended"
-msgstr ""
+msgstr "Sztereógráf 3D mód letiltása a lejátszás befejezésekor"
 
 #. Title of a dialog to choose the desired playback mode
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36527"
 msgid "Select playback mode"
-msgstr ""
+msgstr "Lejátszási mód kiválasztása"
 
 #. label of a dialog box promting the user to selected the desired playback
 #. mode of the detected stereoscopic video
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36528"
 msgid "Select stereoscopic 3D mode"
-msgstr ""
+msgstr "Sztereógráf 3D mód kiválasztása"
 
 #. option label of a setting/dialog asking for the desired stereoscopic
 #. playback mode
@@ -15515,28 +15521,33 @@ msgctxt "#36534"
 msgid ""
 "Specify additional libraries whose log messages are to be included in the "
 "log."
-msgstr ""
+msgstr "A debug naplóba bekerülendő egyéb komponensek megadása."
 
 #. label of a setting, allowing to specify the stereoscopic 3D mode of a video
 #: guilib/StereoscopicsManager.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic 3D mode of video"
-msgstr ""
+msgstr "A videó sztereógráf 3D módja"
 
 #. label of a toggle option that allows to invert the stereoscopic 3d mode
 #: guilib/StereoscopicsManager.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Invert Stereoscopic 3D mode (flip eyes)"
-msgstr ""
+msgstr "Sztereógráf 3D mód invertálása (szemek felcserélése)"
 
 #. Description of setting "Videos -> Playback -> Playback mode of stereoscopic
 #. videos" with label #36520
 #: system/settings/settings.xml
 msgctxt "#36537"
-msgid " "
-msgstr ""
+msgid ""
+"Select in which mode stereoscopic 3D videos will be played. [Ask me] will "
+"show a dialog to select the desired mode for each playback. [Preferred mode]"
+" will use of the preferred mode specified in the 'System -> Video Hardware' "
+"section of the settings. [Monoscopic (2D)] will play the video in mono/2D. "
+"[Ignore] disables any stereoscopic 3D processing and handling"
+msgstr "Sztereógráf 3D mód kiválasztása a lejátszáshoz. [Rákérdez] egy dialógusablakban kiválasztható minden lejátszáskor a kívánt mód. [Előnyben részesített mód] a 'Rendszer -> Video Hardver' szekcióban megadott mód használata. [Monoszkópikus (2D)] lejátsza a videót mono/2D módban. [Figyelmen kívül hagy] letilt minden Sztereógráf 3D kezelést."
 
 #. Description of setting "Videos -> Playback -> Disable stereoscopic mode
 #. when playback is stopped" with label #36526
@@ -15547,7 +15558,7 @@ msgid ""
 "[Disabled] GUI and TV will stay in stereoscopic 3D mode. For video playlists"
 " the stereoscopic 3D mode won't change between videos, not even for non "
 "stereoscopic ones."
-msgstr ""
+msgstr "[Engedélyez] GUI váltása (és néhány TV) vissza 2D módba ha a lejátszás véget ér. [Letiltva] GUI és a TV Sztereógráf 3D módban marad. Lejátszási listáknál a Sztereógráf 3D mód nem változik a videók között, még a nem Sztereógráf videóknál sem."
 
 #. Description of setting "System -> Video output -> Stereoscopic mode
 #. (current)" with label #36500
@@ -15563,7 +15574,7 @@ msgctxt "#36540"
 msgid ""
 "The preferred mode in which stereoscopic 3D media such as videos should be "
 "played."
-msgstr ""
+msgstr "Az előnyben részesített Sztereógráf 3D mód amiben a médiák mint pl. a videók lejátszásra kerülnek."
 
 #. Description of setting "Services -> AirPlay -> Allow volume control" with
 #. label #1269
@@ -15594,7 +15605,7 @@ msgstr "Videófájlok hardveres dekódolásának engedélyezése."
 #: system/settings/settings.xml
 msgctxt "#36545"
 msgid "Stereoscopic 3D depth of subtitles"
-msgstr ""
+msgstr "A feliratok sztereógráf 3D mélysége"
 
 #. Description of setting "Videos -> Subtitles -> Subtitle stereoscopic depth"
 #. with label #36545
@@ -15615,7 +15626,7 @@ msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
-msgstr ""
+msgstr "GUI felbontásának limitálása memória megtakarításhoz. Nem érvényes a videólejátszásra. Újraindítás szükséges."
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15644,12 +15655,12 @@ msgstr "Kategória a képkimenet beállításaival."
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
-msgstr ""
+msgstr "film"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36901"
 msgid "movies"
-msgstr ""
+msgstr "filmek"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36902"
@@ -15664,12 +15675,12 @@ msgstr "Sorozatok"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36904"
 msgid "season"
-msgstr ""
+msgstr "évad"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36905"
 msgid "seasons"
-msgstr ""
+msgstr "évadok"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36906"
@@ -15684,72 +15695,72 @@ msgstr "epizód"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36908"
 msgid "musicvideo"
-msgstr ""
+msgstr "klip"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36909"
 msgid "musicvideos"
-msgstr ""
+msgstr "klippek"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36910"
 msgid "set"
-msgstr ""
+msgstr "összeállítás"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36911"
 msgid "sets"
-msgstr ""
+msgstr "összeállítások"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36912"
 msgid "video"
-msgstr ""
+msgstr "videó"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36913"
 msgid "videos"
-msgstr ""
+msgstr "videók"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36914"
 msgid "music"
-msgstr ""
+msgstr "zene"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36915"
 msgid "music"
-msgstr ""
+msgstr "zenék"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36916"
 msgid "artist"
-msgstr ""
+msgstr "előadó"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36917"
 msgid "artists"
-msgstr ""
+msgstr "előadók"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36918"
 msgid "album"
-msgstr ""
+msgstr "album"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36919"
 msgid "albums"
-msgstr ""
+msgstr "albumok"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36920"
 msgid "song"
-msgstr ""
+msgstr "dal"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36921"
 msgid "songs"
-msgstr ""
+msgstr "dalok"
 
 #: xbmc/cores/dvdplayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37000"
@@ -15841,7 +15852,7 @@ msgstr "Ez a beállítás akkor szükséges ha a hangkimenet csak a Dolby Digita
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
-msgstr ""
+msgstr "Az audió kódoló beállítása úgymint minőség és tömörítés mértéke"
 
 #: system/settings/rbp.xml
 msgctxt "#37026"
@@ -15851,19 +15862,19 @@ msgstr "Auto"
 #: system/settings/rbp.xml
 msgctxt "#37027"
 msgid "540"
-msgstr ""
+msgstr "540"
 
 #: system/settings/rbp.xml
 msgctxt "#37028"
 msgid "720"
-msgstr ""
+msgstr "720"
 
 #: system/settings/rbp.xml
 msgctxt "#37029"
 msgid "900"
-msgstr ""
+msgstr "900"
 
 #: system/settings/rbp.xml
 msgctxt "#37030"
 msgid "Unlimited"
-msgstr ""
+msgstr "Végtelen"

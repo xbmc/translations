@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-24 20:35+0000\n"
+"PO-Revision-Date: 2014-10-16 15:40+0000\n"
 "Last-Translator: piodio <piodio@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-main/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -1808,7 +1808,7 @@ msgstr "광 디스크 드라이브 없음"
 
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
-msgstr "광 디스크 드라이브가 있어야 이 동영상을 재생할 수 있습니다"
+msgstr "이 비디오를 재생하려면 광 디스크 드라이브가 필요합니다."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -3181,6 +3181,12 @@ msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "지금 검색하겠습니까?"
 
+#. Label of progess bar which shows the available/total space of pvr backend
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#802"
+msgid "%s of %s available"
+msgstr ""
+
 msgctxt "#850"
 msgid "Invalid port number entered"
 msgstr "잘못된 포트 번호가 입력됨"
@@ -4122,7 +4128,7 @@ msgstr "도움말 없음"
 
 msgctxt "#10045"
 msgid "Resets all the visible settings to their default values."
-msgstr "현재 보이는 설정을 모두 기본값으로 초기화합니다"
+msgstr "현재 보이는 설정을 모두 기본값으로 초기화합니다."
 
 #: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10046"
@@ -5462,7 +5468,7 @@ msgstr "앨범 정보"
 
 msgctxt "#13352"
 msgid "Scan item to library"
-msgstr "라이브러리에 항목 검색"
+msgstr "검색하여 라이브러리에 추가"
 
 msgctxt "#13353"
 msgid "Stop scanning"
@@ -7374,7 +7380,7 @@ msgstr "재생 중인 위치로 이동"
 
 msgctxt "#19071"
 msgid "EPG update interval"
-msgstr "EPG 갱신 주기"
+msgstr "EPG 업데이트 간격"
 
 #: system/settings/settings.xml
 msgctxt "#19072"
@@ -9918,7 +9924,7 @@ msgstr "* 모든 시즌"
 
 msgctxt "#20367"
 msgid "Hide watched"
-msgstr "시청한것 숨기기"
+msgstr "시청한 항목 숨기기"
 
 msgctxt "#20368"
 msgid "Prod code"
@@ -10131,7 +10137,7 @@ msgstr "새 콘텐츠 검색"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20416"
 msgid "First aired"
-msgstr "초연"
+msgstr "첫 방송"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -11887,7 +11893,7 @@ msgstr "시스템에서 사용하지 않겠습니까?"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24098"
 msgid "Broken"
-msgstr "깨짐"
+msgstr "작동 안됨"
 
 #: xbmc/addons/addoninstaller.cpp
 msgctxt "#24099"
@@ -13839,7 +13845,7 @@ msgstr "백엔드에서 며칠 분의 EPG 데이터를 가져올 것인지를 �
 #: system/settings/settings.xml
 msgctxt "#36221"
 msgid "Time between EPG data imports from backends."
-msgstr "백엔드에서 EPG 데이터를 가져오는 시간 간격."
+msgstr "백엔드에서 EPG 데이터를 가져오는 시간 간격입니다."
 
 #: system/settings/settings.xml
 msgctxt "#36222"
@@ -13858,7 +13864,7 @@ msgctxt "#36224"
 msgid ""
 "Hide \"no information available\" labels when no EPG data can be retrieved "
 "for a channel."
-msgstr "채널의 EPG 데이터를 찾지 못하는 경우에 보여주는 \"정보 없음\" 표시를 숨김."
+msgstr "채널의 EPG 데이터를 찾지 못하는 경우에 보여주는 \"정보 없음\" 표시를 숨깁니다."
 
 #: system/settings/settings.xml
 msgctxt "#36225"
@@ -15437,7 +15443,7 @@ msgstr "3D 비디오 재생 모드"
 #: system/settings/settings.xml
 msgctxt "#36521"
 msgid "Ask me"
-msgstr "물어 보기"
+msgstr "물어보기"
 
 #. Description of setting "System -> Audio output -> Limit sampling rate
 #. (kHz)" with label #458
@@ -15465,7 +15471,7 @@ msgstr "영상과 동일 (자동 감지)"
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36526"
 msgid "Disable stereoscopic 3D mode when playback ended"
-msgstr "재생이 정지되면 3D 모드 종료"
+msgstr "재생이 끝나면 3D 모드 종료"
 
 #. Title of a dialog to choose the desired playback mode
 #: guilib/StereoscopicsManager.cpp
@@ -15534,8 +15540,13 @@ msgstr "3D 모드 반전 (좌우 변환)"
 #. videos" with label #36520
 #: system/settings/settings.xml
 msgctxt "#36537"
-msgid " "
-msgstr ""
+msgid ""
+"Select in which mode stereoscopic 3D videos will be played. [Ask me] will "
+"show a dialog to select the desired mode for each playback. [Preferred mode]"
+" will use of the preferred mode specified in the 'System -> Video Hardware' "
+"section of the settings. [Monoscopic (2D)] will play the video in mono/2D. "
+"[Ignore] disables any stereoscopic 3D processing and handling"
+msgstr "3D 비디오 재생 모드를 선택합니다. [물어보기] 재생할 때 마다 원하는 모드를 선택할 수 있는 대화창을 표시합니다. [우선 모드] '시스템 -> 비디오 출력' 영역에서 설정한 우선모드를 사용합니다. [모노(2D)] 비디오를 2D 방식으로 재생합니다. [무시] 3D 관련 작업과 처리를 사용하지 않습니다."
 
 #. Description of setting "Videos -> Playback -> Disable stereoscopic mode
 #. when playback is stopped" with label #36526

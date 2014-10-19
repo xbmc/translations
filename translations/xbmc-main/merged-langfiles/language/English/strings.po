@@ -1455,7 +1455,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
+msgid "Maintain original volume on downmix"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -3761,9 +3761,13 @@ msgctxt "#1260"
 msgid "Announce these services to other systems via Zeroconf"
 msgstr ""
 
-#empty strings from id 1261 to 1268
+#empty strings from id 1261 to 1267
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr ""
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr ""
@@ -6105,10 +6109,7 @@ msgctxt "#13439"
 msgid "Allow hardware acceleration (MediaCodec)"
 msgstr ""
 
-#: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr ""
+#empty string with id 13440
 
 #: system/settings/settings.xml
 msgctxt "#13441"
@@ -6749,7 +6750,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
+msgid "Discs"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -6821,7 +6822,25 @@ msgctxt "#14101"
 msgid "Acceleration"
 msgstr ""
 
-#empty strings from id 14102 to 15011
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr ""
+
+#empty strings from id 14105 to 15011
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -12167,7 +12186,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr ""
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr ""
@@ -12533,9 +12552,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr ""
 
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
 #: xbmc/filesystem/BlurayDirectory.cpp
+#: system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
+msgid "Show Blu-ray menu"
 msgstr ""
 
 #: xbmc/filesystem/BlurayDirectory.cpp
@@ -12746,7 +12767,19 @@ msgctxt "#33038"
 msgid "%s day"
 msgstr ""
 
-#empty strings from id 33039 to 33048
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr ""
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr ""
+
+#empty strings from id 33041 to 33048
 
 #: Unknown
 msgctxt "#33049"
@@ -15356,11 +15389,7 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr ""
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid "Enables frame-multi-threaded software decoding (less reliable than the default single threaded mode)."
-msgstr ""
+#empty string with id 36423
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -15417,7 +15446,19 @@ msgctxt "#36433"
 msgid "If enabled VAAPI render method is prefered. This puts less load on the CPU but driver may hang!"
 msgstr ""
 
-#empty strings from id 36434 to 36499
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr ""
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr ""
+
+#empty strings from id 36436 to 36499
 #end reservation
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should be applied
@@ -15555,7 +15596,7 @@ msgstr ""
 #. Description of setting "System -> Audio output -> Normalize levels on downmix" with label #346
 #: settings/DisplaySettings.cpp
 msgctxt "#36533"
-msgid "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] maintains the dynamic range of the original audio source when downmixed however volume will be lower [Disabled] maintains volume level of the original audio source however the dynamic range is compressed. Note - Dynamic range is the difference between the quietest and loudest sounds in a audio source."
+msgid "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] maintains volume level of the original audio source however the dynamic range is compressed. [Disabled] maintains the dynamic range of the original audio source when downmixed however volume will be lower. Note - Dynamic range is the difference between the quietest and loudest sounds in an audio source. Enable this setting if movie dialogues are barely audible."
 msgstr ""
 
 #. Description of setting "System -> Debugging -> Component-specific logging..." with label #668
@@ -15645,7 +15686,13 @@ msgctxt "#36548"
 msgid "Limits resolution of GUI to save memory. Does not affect video playback. Requires restart."
 msgstr ""
 
-#empty strings from id 36549 to 36599
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode" with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid "Use iOS8 compatible AirPlay support. If you have trouble with older iOS devices detecting Kodi as a valid target try switching this off. This option takes effect on the next restart of Kodi only!"
+msgstr ""
+
+#empty strings from id 36550 to 36599
 #reserved strings 365XX
 
 #. Description of settings category "Music -> Library" with label #14022
@@ -15899,4 +15946,17 @@ msgstr ""
 #: system/settings/rbp.xml
 msgctxt "#37030"
 msgid "Unlimited"
+msgstr ""
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid "Specifies how Blu-rays should be opened/played back. Disc menus are not fully supported yet and may cause problems."
+msgstr ""
+
+#empty strings from id 37032 to 38009
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
 msgstr ""

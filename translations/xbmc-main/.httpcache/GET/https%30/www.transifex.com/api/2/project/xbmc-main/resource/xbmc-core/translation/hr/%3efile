@@ -1,7 +1,9 @@
 # Kodi Media Center language file
 # Translators:
+# Antonio Nesic <mutantkeyboard@gmail.com>, 2013
 # gogo <trebelnik2@gmail.com>, 2013
 # Ljubo Šimić <aske777@gmail.com>, 2012
+# Luka Miletic <lepi.penzo@gmail.com>, 2013
 # Ronin <mirozagreb@gmail.com>, 2012-2013
 # Antonio Nesic <mutantkeyboard@gmail.com>, 2013
 # pyriel <ivan.p4vlovic@gmail.com>, 2012
@@ -15,7 +17,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-27 07:00+0000\n"
+"PO-Revision-Date: 2014-10-18 23:10+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xbmc-main/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -3183,6 +3185,12 @@ msgstr "Fonoteka zahtjeva ponovno pretraživanje oznaka iz datoteka."
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "Želite li odmah pretražiti?"
+
+#. Label of progess bar which shows the available/total space of pvr backend
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#802"
+msgid "%s of %s available"
+msgstr "%s od %s dostupno"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -7038,12 +7046,12 @@ msgstr "VAAPI Bob"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16328"
 msgid "VAAPI Motion Adaptive"
-msgstr ""
+msgstr "VAAPI gibanje prilagođemo"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16329"
 msgid "VAAPI Motion Compensated"
-msgstr ""
+msgstr "VAAPI gibanje prilagođeno"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -7089,7 +7097,7 @@ msgstr "Ili koristite fraze za  točno podudaranje, poput \"Čarobnjak iz Oza\".
 #: xbmc/pvr/windows/GUIWindowPVRTimers.cpp
 msgctxt "#19003"
 msgid "Find similar"
-msgstr ""
+msgstr "Potraži slično"
 
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
@@ -7869,7 +7877,7 @@ msgstr "Nastavi s posljednjim programom pri pokretanju"
 #: system/settings/settings.xml
 msgctxt "#19190"
 msgid "Background"
-msgstr "Pozadina"
+msgstr "U pozadini"
 
 msgctxt "#19191"
 msgid "PVR service"
@@ -8214,7 +8222,7 @@ msgstr "Ne prikazuj upozorenje 'Povezivanje prekinuto'"
 #: skin.confluence
 msgctxt "#19270"
 msgid "Group Items"
-msgstr ""
+msgstr "Razvrstaj stavke"
 
 msgctxt "#19271"
 msgid "No PVR Add-ons could be found"
@@ -8312,7 +8320,7 @@ msgstr "Svi programi"
 #: system/settings/settings.xml
 msgctxt "#19288"
 msgid "Foreground"
-msgstr ""
+msgstr "U prvom planu"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19499"
@@ -10912,7 +10920,7 @@ msgstr "%s u %s"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#21470"
 msgid "%s [%d]"
-msgstr ""
+msgstr "%s [%d]"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -11834,13 +11842,13 @@ msgstr "Pokušaj ponovno povezivanje?"
 #: xbmc/addons/addon.cpp
 msgctxt "#24081"
 msgid "Helper Add-ons"
-msgstr ""
+msgstr "Dodaci pomoći"
 
 #. The label in the add-ons manager for add-on libraries
 #: xbmc/addons/addon.cpp
 msgctxt "#24082"
 msgid "Add-on libraries"
-msgstr ""
+msgstr "Dodaci zbirke"
 
 #. The label in the add-ons manager for information libraries
 #: xbmc/addons/addon.cpp
@@ -15531,14 +15539,19 @@ msgstr "Stereoskopski 3D način videa"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Invert Stereoscopic 3D mode (flip eyes)"
-msgstr ""
+msgstr "Obrni Stereoskopski 3D način (obrnute oči)"
 
 #. Description of setting "Videos -> Playback -> Playback mode of stereoscopic
 #. videos" with label #36520
 #: system/settings/settings.xml
 msgctxt "#36537"
-msgid " "
-msgstr " "
+msgid ""
+"Select in which mode stereoscopic 3D videos will be played. [Ask me] will "
+"show a dialog to select the desired mode for each playback. [Preferred mode]"
+" will use of the preferred mode specified in the 'System -> Video Hardware' "
+"section of the settings. [Monoscopic (2D)] will play the video in mono/2D. "
+"[Ignore] disables any stereoscopic 3D processing and handling"
+msgstr "Odaberite u kojemu načinu stereoskopske 3D video snimke će biti reproducirane. [Pitaj me] će prikazati dijalog za odabir željenog načina za svaku reprodukciju. [Željeni način] će koristiti željeni način određen u 'Sustav -> Video hardver' odjeljku postavki. [Monoskopski (2D)] će reproducirati video snimke u mono/2D. [Zanemari] onemogućava bilo kakavu stereoskopsku 3D obradu i rukovanje"
 
 #. Description of setting "Videos -> Playback -> Disable stereoscopic mode
 #. when playback is stopped" with label #36526
@@ -15549,7 +15562,7 @@ msgid ""
 "[Disabled] GUI and TV will stay in stereoscopic 3D mode. For video playlists"
 " the stereoscopic 3D mode won't change between videos, not even for non "
 "stereoscopic ones."
-msgstr ""
+msgstr "[Omogućeno] Prebacuje GUI (i neke Televizore) natrag u 2D način kada reprodukcija završi. [Onemogućeno] GUI i Televizori će ostati u stereoskopskom 3D načinu. U video popisima izvođenja stereoskopski 3D način se neće promijeniti između video snimaka, čak i za nestereoskopske video snimke."
 
 #. Description of setting "System -> Video output -> Stereoscopic mode
 #. (current)" with label #36500
@@ -15565,7 +15578,7 @@ msgctxt "#36540"
 msgid ""
 "The preferred mode in which stereoscopic 3D media such as videos should be "
 "played."
-msgstr ""
+msgstr "Željeni način u kojemu bi stereoskopski 3D mediji poput video snimka trebali biti reproducirani."
 
 #. Description of setting "Services -> AirPlay -> Allow volume control" with
 #. label #1269
@@ -15596,7 +15609,7 @@ msgstr "Omogući hardversko dekôdiranje video datoteka."
 #: system/settings/settings.xml
 msgctxt "#36545"
 msgid "Stereoscopic 3D depth of subtitles"
-msgstr ""
+msgstr "Stereoskopska 3D dubina podnaslova"
 
 #. Description of setting "Videos -> Subtitles -> Subtitle stereoscopic depth"
 #. with label #36545

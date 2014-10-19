@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-23 14:51+0000\n"
-"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
+"PO-Revision-Date: 2014-10-04 18:40+0000\n"
+"Last-Translator: CutSickAss <cutsickass@yahoo.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/xbmc-main/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3175,6 +3175,12 @@ msgstr "Η μουσική συλλογή πρέπει να ξανασαρώσε�
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "Να γίνει σάρωση τώρα;"
+
+#. Label of progess bar which shows the available/total space of pvr backend
+#: xbmc/pvr/PVRGUIInfo.cpp
+msgctxt "#802"
+msgid "%s of %s available"
+msgstr "%s από %s διαθέσιμα"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -15364,13 +15370,13 @@ msgstr "Αν ενεργοποιηθεί, θα προτιμάται η μέθοδ
 #: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode (current)"
-msgstr ""
+msgstr "Μέθοδος Στερεοσκοπικού 3D (τρέχουσα)"
 
 #. headline of a dialog/info message showing the current stereoscopic 3D mode
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36501"
 msgid "Stereoscopic 3D mode"
-msgstr ""
+msgstr "Μέθοδος Στερεοσκοπικού 3D"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
@@ -15418,21 +15424,21 @@ msgstr "Βασισμένο στο Υλικό"
 #: system/settings/settings.xml
 msgctxt "#36509"
 msgid "Monoscopic (2D)"
-msgstr ""
+msgstr "Μονοσκοπικό (2D)"
 
 #. Name of a setting, asking the user for the default playback mode (2D, 3D,
 #. ask) of stereoscopic videos
 #: system/settings/settings.xml
 msgctxt "#36520"
 msgid "Playback mode of stereoscopic 3D videos"
-msgstr ""
+msgstr "Μέθοδος αναπαραγωγής βίντεο Στερεοσκοπικού 3D"
 
 #. Option value of a desired playback mode setting. (f.e. "Settings -> Video
 #. -> Playback -> Playback mode of stereoscopic 3D videos" with label #36520)
 #: system/settings/settings.xml
 msgctxt "#36521"
 msgid "Ask me"
-msgstr "Ρωτήστε με"
+msgstr "Ερώτηση"
 
 #. Description of setting "System -> Audio output -> Limit sampling rate
 #. (kHz)" with label #458
@@ -15448,7 +15454,7 @@ msgstr "Μέγιστος ρυθμός δειγματοληψίας για SPDIF 
 #: system/settings/settings.xml guilib/StereoscopicsManager.cpp
 msgctxt "#36524"
 msgid "Preferred mode"
-msgstr "Προτιμώμενη λειτουργία"
+msgstr "Προτιμώμενη μέθοδος"
 
 #. label for a preferred stereoscopic 3D playback mode
 #: settings/DisplaySettings.cpp
@@ -15460,20 +15466,20 @@ msgstr "Όπως η ταινία (αυτόματος εντοπισμός)"
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36526"
 msgid "Disable stereoscopic 3D mode when playback ended"
-msgstr ""
+msgstr "Απενεργοποίηση του Στερεοσκοπικού 3D με τη λήξη του βίντεο"
 
 #. Title of a dialog to choose the desired playback mode
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36527"
 msgid "Select playback mode"
-msgstr ""
+msgstr "Επιλογή μεθόδου αναπαραγωγής"
 
 #. label of a dialog box promting the user to selected the desired playback
 #. mode of the detected stereoscopic video
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36528"
 msgid "Select stereoscopic 3D mode"
-msgstr ""
+msgstr "Επιλογή μεθόδου Στερεοσκοπικού 3D"
 
 #. option label of a setting/dialog asking for the desired stereoscopic
 #. playback mode
@@ -15516,21 +15522,26 @@ msgstr "Ορίστε τις επιπλέον συλλογές τα μηνύμα�
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36535"
 msgid "Stereoscopic 3D mode of video"
-msgstr ""
+msgstr "Μέθοδος Στερεοσκοπικού 3D του βίντεο"
 
 #. label of a toggle option that allows to invert the stereoscopic 3d mode
 #: guilib/StereoscopicsManager.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Invert Stereoscopic 3D mode (flip eyes)"
-msgstr ""
+msgstr "Ανεστραμμένο Στερεοσκοπικό 3D (αντίθετα μάτια)"
 
 #. Description of setting "Videos -> Playback -> Playback mode of stereoscopic
 #. videos" with label #36520
 #: system/settings/settings.xml
 msgctxt "#36537"
-msgid " "
-msgstr ""
+msgid ""
+"Select in which mode stereoscopic 3D videos will be played. [Ask me] will "
+"show a dialog to select the desired mode for each playback. [Preferred mode]"
+" will use of the preferred mode specified in the 'System -> Video Hardware' "
+"section of the settings. [Monoscopic (2D)] will play the video in mono/2D. "
+"[Ignore] disables any stereoscopic 3D processing and handling"
+msgstr "Επιλογή της μεθόδου αναπαραγωγής των βίντεο Στερεοσκοπικού 3D. Επιλέγοντας την [Ερώτηση] θα εμφανίζεται ένα παράθυρο επιλογής της επιθυμητής μεθόδου πριν την αναπαραγωγή. Η [Προτιμώμενη μέθοδος] θα χρησιμοποιήσει την προτιμώμενη μέθοδο που έχει οριστεί στη ρύθμιση 'Σύστημα -> Έξοδος Βίντεο'. Το [Μονοσκοπικό (2D)] θα παίξει το βίντεο σε Μονοσκοπικό/2D. Η [Αγνόηση] απενεργοποιεί κάθε χειρισμό και επεξεργασία Στερεοσκοπικού 3D."
 
 #. Description of setting "Videos -> Playback -> Disable stereoscopic mode
 #. when playback is stopped" with label #36526
@@ -15541,14 +15552,14 @@ msgid ""
 "[Disabled] GUI and TV will stay in stereoscopic 3D mode. For video playlists"
 " the stereoscopic 3D mode won't change between videos, not even for non "
 "stereoscopic ones."
-msgstr ""
+msgstr "[Ενεργό] Επαναφέρει το Περιβάλλον Εργασίας (και ορισμένες τηλεοράσεις) σε προβολή 2D με τη λήξη της αναπαραγωγής. [Ανενεργό] Το Περιβάλλον Εργασίας και η τηλεόραση θα παραμείνουν σε προβολή στερεοσκοπικού 3D. Για λίστες αναπ/γής βίντεο η μέθοδος στερεοσκοπικού 3D δε θα αλλάζει μεταξύ των βίντεο, ούτε για μη στερεοσκοπικά."
 
 #. Description of setting "System -> Video output -> Stereoscopic mode
 #. (current)" with label #36500
 #: system/settings/settings.xml
 msgctxt "#36539"
 msgid "Changes the stereoscopic 3D mode of the user interface."
-msgstr "Αλλάζει τη στερεοσκοπική 3D προβολή του περιβάλλοντος εργασίας."
+msgstr "Αλλάζει τη μέθοδο Στερεοσκοπικού 3D του περιβάλλοντος εργασίας."
 
 #. Description of setting "System -> Video output -> Preferred mode" with
 #. label #36524
@@ -15557,7 +15568,7 @@ msgctxt "#36540"
 msgid ""
 "The preferred mode in which stereoscopic 3D media such as videos should be "
 "played."
-msgstr ""
+msgstr "Η προτιμώμενη μέθοδος με την οποία θα αναπαράγονται βίντεο Στερεοσκοπικού 3D."
 
 #. Description of setting "Services -> AirPlay -> Allow volume control" with
 #. label #1269
@@ -15588,7 +15599,7 @@ msgstr "Αποκωδικοποίηση υλικού των αρχείων βίν
 #: system/settings/settings.xml
 msgctxt "#36545"
 msgid "Stereoscopic 3D depth of subtitles"
-msgstr ""
+msgstr "Βάθος υποτίτλων Στερεοσκοπικού 3D"
 
 #. Description of setting "Videos -> Subtitles -> Subtitle stereoscopic depth"
 #. with label #36545
@@ -15597,7 +15608,7 @@ msgctxt "#36546"
 msgid ""
 "Sets the visual depth of subtitles for stereoscopic 3D videos. The higher "
 "the value, the closer the subtitles will appear to the viewer."
-msgstr "Ορισμός του οπτικού βάθους υποτίτλων σε στερεοσκοπικά 3D βίντεο. Όσο υψηλότερη είναι η τιμή, τόσο πιο κοντά στο θεατή θα φαίνονται οι υπότιτλοι."
+msgstr "Ορισμός του οπτικού βάθους υποτίτλων σε Στερεοσκοπικά 3D βίντεο. Όσο υψηλότερη είναι η τιμή, τόσο πιο κοντά στο θεατή θα φαίνονται οι υπότιτλοι."
 
 #: system/settings/rbp.xml
 msgctxt "#36547"
