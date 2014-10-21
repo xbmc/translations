@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-10-17 15:31+0000\n"
+"PO-Revision-Date: 2014-10-21 12:21+0000\n"
 "Last-Translator: Marcin W. <etharr@hacjenda.info>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/xbmc-main/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -1411,8 +1411,8 @@ msgstr "Rok"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
-msgstr "Normalizuj poziomy przy miksowaniu w dół"
+msgid "Maintain original volume on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -3628,6 +3628,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Rozgłaszaj usługi do innych systemów przez Zeroconf"
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr ""
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "Zezwalaj na sterowanie głośnością"
@@ -5819,11 +5823,6 @@ msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Dopuszczaj sprzętową akcelerację (MediaCodec)"
 
 #: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr "Dopuszczaj wielowątkowe dekodowanie programowe"
-
-#: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "Używaj VDPAU dla MPEG-2"
@@ -6452,8 +6451,8 @@ msgstr "Odtwarzanie"
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
-msgstr "DVD"
+msgid "Discs"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14088"
@@ -6523,6 +6522,24 @@ msgstr "Zatrzymaj zgrywanie CD-Audio"
 msgctxt "#14101"
 msgid "Acceleration"
 msgstr "Akceleracja"
+
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr ""
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -10225,7 +10242,7 @@ msgstr "Pomijaj ścieżkę podczas aktualizacji biblioteki"
 #: system/settings/settings.xml
 msgctxt "#20433"
 msgid "Extract thumbnails and video information"
-msgstr "Ekstrahuj miniatury i pobieraj informacje o pliku wideo"
+msgstr "Ekstrahuj miniatury i informacje o wideo"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
@@ -11716,7 +11733,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr "Przywróć"
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "Niekompatybilna"
@@ -12085,10 +12102,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr "Wybierz ze wszystkich tytułów..."
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
+#: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
-msgstr "Pokazuj menu dysku Blu-ray"
+msgid "Show Blu-ray menu"
+msgstr ""
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -12287,6 +12305,19 @@ msgstr "Na weekend"
 msgctxt "#33038"
 msgid "%s day"
 msgstr "%s dzień"
+
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr ""
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and
+#. "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr ""
 
 #: Unknown
 msgctxt "#33049"
@@ -13596,7 +13627,7 @@ msgctxt "#36178"
 msgid ""
 "Extract thumbnails and metadata information such as codec and aspect ratio "
 "from videos."
-msgstr "Ekstrahuje miniatury i metadane, takie jak kodek i proporcje, z materiału wideo."
+msgstr "Aktywuje ekstrakcję miniatur i informacji, takich jak kodeki i proporcje obrazu, wyświetlanych w trybie biblioteki."
 
 #. Description of setting "Videos -> File lists -> Replace file names with
 #. library titles" with label #20419
@@ -13614,7 +13645,7 @@ msgctxt "#36180"
 msgid ""
 "Extract thumbnails and information, such as codecs and aspect ratio, to "
 "display in Library Mode."
-msgstr "Ekstrakcja miniatur i informacji takich, jak kodeki i proporcje obrazu, wyświetlanych w trybie biblioteki."
+msgstr "Aktywuje ekstrakcję miniatur i informacji, takich jak kodeki i proporcje obrazu, wyświetlanych w trybie biblioteki."
 
 #: system/settings/settings.xml
 msgctxt "#36181"
@@ -15301,15 +15332,6 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr "Aktywuje sprzętowe dekodowanie wideo przy pomocy dekodera AMLogic."
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded
-#. decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid ""
-"Enables frame-multi-threaded software decoding (less reliable than the "
-"default single threaded mode)."
-msgstr "Aktywuje wielowątkowe dekodowanie programowe (mniej stabilne niż domyślny tryb jednowątkowy)."
-
 #: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
@@ -15379,6 +15401,20 @@ msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
 msgstr "Zaznacz tę opcję, aby używać metodę renderowania VAAPI. Metoda ta odciąża procesor, ale może powodować zawieszenie sterownika."
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr ""
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr ""
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
@@ -15516,12 +15552,12 @@ msgstr "Jak w materiale wideo"
 msgctxt "#36533"
 msgid ""
 "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
-"maintains the dynamic range of the original audio source when downmixed "
-"however volume will be lower [Disabled] maintains volume level of the "
-"original audio source however the dynamic range is compressed. Note - "
-"Dynamic range is the difference between the quietest and loudest sounds in a"
-" audio source."
-msgstr "Określa sposób miksowania dźwięku, na przykład z 5.1 do 2.0: [Aktywne] utrzymuje podczas miksowania rozpiętość tonalną pierwotnego źródła dźwięku, ale obniża poziom głośności; [Nieaktywne] utrzymuje poziom głośności oryginalnego źródła dźwięku, ale rozpiętość tonalna będzie mniejsza. Uwaga - rozpiętość tonalna jest różnicą pomiędzy najcichszym i najgłośniejszym tonem w źródle dźwięku."
+"maintains volume level of the original audio source however the dynamic "
+"range is compressed. [Disabled] maintains the dynamic range of the original "
+"audio source when downmixed however volume will be lower. Note - Dynamic "
+"range is the difference between the quietest and loudest sounds in an audio "
+"source. Enable this setting if movie dialogues are barely audible."
+msgstr ""
 
 #. Description of setting "System -> Debugging -> Component-specific
 #. logging..." with label #668
@@ -15636,6 +15672,16 @@ msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
 msgstr "Ogranicza rozdzielczość interfejsu użytkownika w celu oszczędzenia pamięci. Nie ma wpływu na odtwarzanie wideo. Wymaga ponownego uruchomienia."
+
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode"
+#. with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid ""
+"Use iOS8 compatible AirPlay support. If you have trouble with older iOS "
+"devices detecting Kodi as a valid target try switching this off. This option"
+" takes effect on the next restart of Kodi only!"
+msgstr ""
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15887,3 +15933,17 @@ msgstr "900"
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Nieograniczony"
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray
+#. playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid ""
+"Specifies how Blu-rays should be opened/played back. Disc menus are not "
+"fully supported yet and may cause problems."
+msgstr ""
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
+msgstr ""

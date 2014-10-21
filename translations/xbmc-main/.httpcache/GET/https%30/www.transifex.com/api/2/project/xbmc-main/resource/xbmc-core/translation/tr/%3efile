@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-10-19 11:36+0000\n"
+"PO-Revision-Date: 2014-10-20 19:31+0000\n"
 "Last-Translator: Özgür BASKIN <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xbmc-main/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -1406,8 +1406,8 @@ msgstr "Yıl"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
-msgstr "Downmix'te düzeyleri normalleştir"
+msgid "Maintain original volume on downmix"
+msgstr "Downmix yaparken özgün ses düzeyini koru"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -2737,7 +2737,7 @@ msgstr "Dolby Digital kod çevrimini etkinleştir."
 #: system/settings/settings.xml
 msgctxt "#668"
 msgid "Specify component-specific logging..."
-msgstr "Spesifik komponent-spesifik giriş..."
+msgstr "Bileşene özel kayıt tutmayı belirt..."
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#669"
@@ -3179,7 +3179,7 @@ msgstr "Kitaplık Güncellemesi"
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
 msgid "Music library needs to rescan tags from files."
-msgstr "Müzik kitaplığı etiketler için dosyadan tekrar taramaya ihtiyacı var."
+msgstr "Müzik kitaplığı etiketler için dosyalardan tekrar taramaya ihtiyacı var."
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#801"
@@ -3623,6 +3623,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Bu hizmetleri Zeroconf üzerinden diğer sistemlere bildir"
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr "iOS 8 uyumluluk modu"
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "Ses kontrolünü aç"
@@ -4713,7 +4717,7 @@ msgstr "Otomatik güncellemeler: Etkin"
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#12397"
 msgid "Auto updates: Notify"
-msgstr "Otomatik güncellemeler: Bildirmek"
+msgstr "Otomatik güncellemeler: Bildir"
 
 #. Used on the button to toggle add-on update mode in the Add-on Manager.
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
@@ -5814,11 +5818,6 @@ msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Donanım hızlandırmasına izin ver (MediaCodec)"
 
 #: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr "Çok iş parçacıklı yazılım kod çözmesine izin ver."
-
-#: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "MPEG-2 VDPAU kullan"
@@ -5929,7 +5928,7 @@ msgstr "Donanım hızlandırmalı"
 #: system/settings/settings.xml
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
-msgstr "VAAPI render yöntemini tercih et"
+msgstr "VAAPI işleyici yöntemini tercih et"
 
 #: system/settings/settings.xml
 msgctxt "#13458"
@@ -6447,8 +6446,8 @@ msgstr "Kayıttan yürüt"
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
-msgstr "DVD'ler"
+msgid "Discs"
+msgstr "Diskler"
 
 #: system/settings/settings.xml
 msgctxt "#14088"
@@ -6518,6 +6517,24 @@ msgstr "CD kopyalamayı durdur"
 msgctxt "#14101"
 msgid "Acceleration"
 msgstr "Video Hızlandırma"
+
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr "Blu-ray oynatma modu"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr "Ana film'i oynat"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr "Basitleştirilmiş menüyü göster"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -11711,7 +11728,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr "Geri alma"
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "Uyumsuz"
@@ -12058,7 +12075,7 @@ msgstr "Özel konum"
 #: system/settings/settings.xml
 msgctxt "#24126"
 msgid "Auto download first subtitle"
-msgstr "ilk altyazıyı otomatik indir"
+msgstr "İlk altyazıyı otomatik indir"
 
 #. Description of setting "Videos -> Subtitles -> Auto download first
 #. subtitle" with label #24126
@@ -12080,10 +12097,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr "Bütün başlıklardan seç ..."
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
+#: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
-msgstr "Blu-ray menülerini göster"
+msgid "Show Blu-ray menu"
+msgstr "Blu-ray menüsünü göster"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -12282,6 +12300,19 @@ msgstr "Hafta Sonu"
 msgctxt "#33038"
 msgid "%s day"
 msgstr "%s günlük"
+
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr "%s Akışları"
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and
+#. "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr "%s Aygıtları"
 
 #: Unknown
 msgctxt "#33049"
@@ -12591,7 +12622,7 @@ msgid ""
 " that after the selected period of time audio enters a suspended state [Off]"
 " - audio output enters a suspended state. Note - sounds can be missed if "
 "audio enters suspended state."
-msgstr "Oynatma veya GUI sesleri için herhangi bir ses gerekli olmadığındaki davranışı seçin. [Her zaman] - sürekli duyulamaz sinyal çıkışı, bu yeni sesler için çıktı aygıtını canlı tutar ancak bu da diğer uygulamaların seslerini engelleyebilir. [1- 10 Dakika] - Her zaman ile aynı olmasının dışında seçilen süreden sonra askıda bekleme durumuna girer [Kapalı] - ses çıkışı askıda bekleme durumuna girer. Not - ses askıda bekleme durumuna girerse sesler çalmayabilir."
+msgstr "Oynatma veya Grafik Kullanıcı Arabirimi sesleri için herhangi bir ses gerekli olmadığındaki davranışı seçin. [Her zaman] - sürekli duyulamaz sinyal çıkışı, bu yeni sesler için çıktı aygıtını canlı tutar ancak bu da diğer uygulamaların seslerini engelleyebilir. [1- 10 Dakika] - Her zaman ile aynı olmasının dışında seçilen süreden sonra askıda bekleme durumuna girer [Kapalı] - ses çıkışı askıda bekleme durumuna girer. Not - ses askıda bekleme durumuna girerse sesler çalmayabilir."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -12848,12 +12879,12 @@ msgstr "Bağdaştırıcı açılamıyor"
 #: system/peripherals.xml
 msgctxt "#36007"
 msgid "Devices to power on when starting Kodi"
-msgstr "Kodi başlatılınca aygıtları aç"
+msgstr "Kodi başlatılırken açılacak aygıtlar"
 
 #: system/peripherals.xml
 msgctxt "#36008"
 msgid "Devices to power off when stopping Kodi"
-msgstr "Kodi durdurulunca aygıtları kapat"
+msgstr "Kodi durdurulunca kapatılacak aygıtlar"
 
 #: system/peripherals.xml
 msgctxt "#36009"
@@ -13078,7 +13109,7 @@ msgstr "Kullanıcı arabirimi görünümünü yeniden boyutlandır."
 #: system/settings/settings.xml
 msgctxt "#36109"
 msgid "Select the media window that Kodi displays on startup."
-msgstr "Kodi nin başlangıç ekranında görüntüleyeceği medya penceresini seçiniz."
+msgstr "Kodi'nin başlangıç ekranında görüntüleyeceği medya penceresini seçiniz."
 
 #. Description of setting "Appearance -> Skin -> Navigation sounds" with label
 #. #15108
@@ -13600,7 +13631,7 @@ msgctxt "#36179"
 msgid ""
 "When a file is scanned into the library it will display the metadata title "
 "instead of the file name."
-msgstr "Bir dosya kitaplık için tarandığında başlık olarak dosya adı yerine metadata başlığı görüntülenir."
+msgstr "Bir dosya kitaplık için tarandığında başlık olarak dosya adı yerine meta veri başlığı görüntülenir."
 
 #. Description of setting "Videos -> File lists -> Extract thumbnails and
 #. video information" with label #20433
@@ -14673,7 +14704,7 @@ msgstr "Bağlanabilecek en çok istemciyi tanımla."
 #: system/settings/settings.xml
 msgctxt "#36338"
 msgid "Allow programs on the network to control Kodi."
-msgstr "Ağ üzerindeki programların Kodi yi kontrol etmesine izin ver."
+msgstr "Ağ üzerindeki programların Kodi'yi kontrol etmesine izin ver."
 
 #. Description of setting "Services -> Remote Control -> Initial repeat delay
 #. (ms)" with label #795
@@ -14830,7 +14861,7 @@ msgstr "Kullanıcı arabirimi taramasını ayarlar. Görüntülenen resimin ekra
 #: system/settings/settings.xml
 msgctxt "#36358"
 msgid "Test patterns for display hardware calibration."
-msgstr "Ekran donanım kalibrasyonu için test kalıpları."
+msgstr "Ekran donanımını ayarlamak için test kalıpları."
 
 #. Description of setting "System -> Video output -> Use limited colour range
 #. (16-235)" with label #36042
@@ -14974,7 +15005,7 @@ msgstr "Giriş aygıtları ile ilgili ayarları içeren kategori."
 #: system/settings/settings.xml
 msgctxt "#36375"
 msgid "Configure any attached peripheral devices."
-msgstr "Takılı çevre aygıtlarını yapılandır."
+msgstr "Takılı çevre aygıtlarını yapılandırın."
 
 #. Description of setting "System -> Input devices -> Remote control sends
 #. keyboard presses" with label #21449
@@ -14999,7 +15030,7 @@ msgstr "Kodi'yi kontrol etmek için bir fare veya dokunmatik ekran aygıtı kull
 #: system/settings/settings.xml
 msgctxt "#36378"
 msgid "Use a joystick to control Kodi."
-msgstr "Kodi yi kontrol etmek için joystick kullan."
+msgstr "Kodi'yi kontrol etmek için joystick kullan."
 
 #. Description of settings category "System -> Internet access" with label
 #. #798
@@ -15013,41 +15044,41 @@ msgstr "İnternet erişimi ile ilgili ayarları içeren kategori."
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your internet connection uses a proxy, configure it here."
-msgstr "İnternet bağlantınız bir vekil sunucu kullanıyor ise, burada ayarlayınız."
+msgstr "İnternet bağlantınız bir vekil sunucu kullanıyor ise, burada yapılandırın."
 
 #. Description of setting "System -> Internet access -> Proxy type" with label
 #. #1180
 #: system/settings/settings.xml
 msgctxt "#36381"
 msgid "Configure which proxy type is used."
-msgstr "Ne tip bir vekil sunucu kullanıldığını ayarlayınız."
+msgstr "Ne tip bir vekil sunucu kullanıldığını yapılandırın."
 
 #. Description of setting "System -> Internet access -> Server" with label
 #. #706
 #: system/settings/settings.xml
 msgctxt "#36382"
 msgid "Configure the proxy server address."
-msgstr "Vekil sunucu adresini ayarlayınız."
+msgstr "Vekil sunucu adresini yapılandırın."
 
 #. Description of setting "System -> Internet access -> Port" with label #730
 #: system/settings/settings.xml
 msgctxt "#36383"
 msgid "Configure the proxy server port."
-msgstr "Vekil sunucu bağlantı noktasını yapılandır."
+msgstr "Vekil sunucu bağlantı noktasını yapılandırın."
 
 #. Description of setting "System -> Internet access -> Username" with label
 #. #1048
 #: system/settings/settings.xml
 msgctxt "#36384"
 msgid "Configure the proxy server username."
-msgstr "Vekil sunucu kullanıcı adını ayarlayınız."
+msgstr "Vekil sunucu kullanıcı adını yapılandırın."
 
 #. Description of setting "System -> Internet access -> Password" with label
 #. #733
 #: system/settings/settings.xml
 msgctxt "#36385"
 msgid "Configure the proxy server password."
-msgstr "Vekil sunucu şifresini ayarlayınız."
+msgstr "Vekil sunucu şifresini yapılandırın."
 
 #. Description of setting "System -> Internet access -> Internet connection
 #. bandwidth limitation" with label #14041
@@ -15107,7 +15138,7 @@ msgstr "Hata ayıklama günlüğünü aç veya kapat. Sorun giderme için kullan
 #: system/settings/settings.xml
 msgctxt "#36393"
 msgid "Folder used to save screenshots taken within Kodi."
-msgstr "Kodi'nin içide alınan ekran görüntülerinin kaydedileceği klasör."
+msgstr "Kodi'nin içinde alınan ekran görüntülerinin kaydedileceği klasör."
 
 #. Description of setting "System -> Debugging -> Enable component-specific
 #. logging" with label #666
@@ -15296,15 +15327,6 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr "AMLogic kod çözücü kullanarak donanımsal video kod çözmesini etkinleştir"
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded
-#. decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid ""
-"Enables frame-multi-threaded software decoding (less reliable than the "
-"default single threaded mode)."
-msgstr "Kare çok iş parçacıklı yazılım kod çözmeyi etkinleştirir (varsayılan tek iş parçacıklı moda göre daha az güvenilir)."
-
 #: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
@@ -15351,7 +15373,7 @@ msgctxt "#36430"
 msgid ""
 "Configure how video processing will be accelerated. This includes things "
 "like decoding and scaling."
-msgstr "Görüntü İşleme hızlandırmasının nasıl olacağını yapılandırın. Bu, kod çözme ve ölçeklendirme gibi şeyleri içerir."
+msgstr "Görüntü işleme hızlandırmasının nasıl olacağını yapılandırın. Bu, kod çözme ve ölçeklendirme gibi şeyleri içerir."
 
 #. Description for video related setting #13454: Decoding mode
 #: system/settings/settings.xml
@@ -15373,7 +15395,21 @@ msgctxt "#36433"
 msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
-msgstr "Etkinleştirilirse VAAPI render yöntemi tercih edilir. Bu işlemciye daha az yük bindirir fakat sürücü kilitlenebilir!"
+msgstr "Etkinleştirilirse VAAPI işleyici yöntemi tercih edilir. Bu CPU'ya daha az yük bindirir fakat sürücü kilitlenebilir!"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr "Donanım hızlandırmasına izin ver (MMAL)"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr "Video dosyalarının kod çözmesi için MMAL hızlandırmalı DVDPlayer'ı kullan."
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
@@ -15511,12 +15547,12 @@ msgstr "Film ile aynı"
 msgctxt "#36533"
 msgid ""
 "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
-"maintains the dynamic range of the original audio source when downmixed "
-"however volume will be lower [Disabled] maintains volume level of the "
-"original audio source however the dynamic range is compressed. Note - "
-"Dynamic range is the difference between the quietest and loudest sounds in a"
-" audio source."
-msgstr "Sesin nasıl downmix yapılacağını seçin, mesela 5.1'den 2.0'a: [Etkin] downmix yaparken orijinal ses kaynağının dinamik aralığını korur ancak ses şiddeti düşük olacaktır [Devre dışı] dinamik aralık sıkıştırılır ancak orijinal ses kaynağının ses seviyesini korur. Not - Dinamik aralık bir ses kaynağının en sessiz ve en gürültülü sesleri arasındaki farktır."
+"maintains volume level of the original audio source however the dynamic "
+"range is compressed. [Disabled] maintains the dynamic range of the original "
+"audio source when downmixed however volume will be lower. Note - Dynamic "
+"range is the difference between the quietest and loudest sounds in an audio "
+"source. Enable this setting if movie dialogues are barely audible."
+msgstr "Sesin nasıl downmix yapılacağını seçin, mesela 5.1'den 2.0'a: [Etkin] downmix yaparken özgün ses kaynağının ses seviyesini korur ancak dinamik aralık sıkıştırılır. [Devre dışı] downmix yaparken özgün ses kaynağının dinamik aralığını korur ancak ses şiddeti düşük olacaktır. Not - Dinamik aralık bir ses kaynağının en sessiz ve en gürültülü sesleri arasındaki farktır. Film diyalogları zorlukla duyulabiliyor ise bu ayarı etkinleştirin."
 
 #. Description of setting "System -> Debugging -> Component-specific
 #. logging..." with label #668
@@ -15551,7 +15587,7 @@ msgid ""
 " will use of the preferred mode specified in the 'System -> Video Hardware' "
 "section of the settings. [Monoscopic (2D)] will play the video in mono/2D. "
 "[Ignore] disables any stereoscopic 3D processing and handling"
-msgstr "Stereoskopik 3B videoların hangi modda oynatılacağını seçin. [Bana sor]  her oynatım için istenen modu seçmek için bir iletişim kutusu gösterilir. [Tercih edilen mod] 'Sistemi -> Video donanım' ayarları bölümündeki belirtilen tercih modunu kullanır."
+msgstr "Stereoskopik 3B videoların hangi modda oynatılacağını seçin. [Bana sor]  her oynatım için istenen modu seçmek için bir iletişim kutusu gösterilir. [Tercih edilen mod] 'Sistemi -> Video donanım' ayarları bölümündeki belirtilen tercih modunu kullanır. [Monoscopic (2D)] videoyu mono/2D oynatır. [Yoksay] herhangi bir stereoskopik 3B işlemesini devre dışı bırakır"
 
 #. Description of setting "Videos -> Playback -> Disable stereoscopic mode
 #. when playback is stopped" with label #36526
@@ -15562,7 +15598,7 @@ msgid ""
 "[Disabled] GUI and TV will stay in stereoscopic 3D mode. For video playlists"
 " the stereoscopic 3D mode won't change between videos, not even for non "
 "stereoscopic ones."
-msgstr ""
+msgstr "[Etkin] Oynatım sona erdiğinde Grafik Kullanıcı Arabirimini (ve bazı televizyonlar) 2B moduna geri döndür. [Devre dışı] Grafik Kullanıcı Arabirimi ve TV stereoskopik 3B modunda kalır. Video çalma listeleri için stereoskopik 3B modu, stereoskopik olmayan videolar için bile değişmez."
 
 #. Description of setting "System -> Video output -> Stereoscopic mode
 #. (current)" with label #36500
@@ -15578,7 +15614,7 @@ msgctxt "#36540"
 msgid ""
 "The preferred mode in which stereoscopic 3D media such as videos should be "
 "played."
-msgstr ""
+msgstr "Stereoskopik 3B medya ve böyle videoların oynatılması için tercih edilen mod."
 
 #. Description of setting "Services -> AirPlay -> Allow volume control" with
 #. label #1269
@@ -15630,7 +15666,17 @@ msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
-msgstr "Bellek tasarrufu için arayüz çözünürlüğünü sınırlar. Video oynatımını etkilemez. Yeniden başlatma gerektirir."
+msgstr "Bellek tasarrufu için Grafik Kullanıcı Arabirimi çözünürlüğünü sınırlar. Video oynatımını etkilemez. Yeniden başlatma gerektirir."
+
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode"
+#. with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid ""
+"Use iOS8 compatible AirPlay support. If you have trouble with older iOS "
+"devices detecting Kodi as a valid target try switching this off. This option"
+" takes effect on the next restart of Kodi only!"
+msgstr "iOS 8 uyumlu AirPlay desteği kullan. Eğer eski iOS cihazları ile Kodi'yi geçerli bir hedef olarak algılamada sorun yaşıyorsanız bunu kapatmayı deneyin. Bu seçenek yalnızca Kodi yeniden başlatılınca etkili olur!"
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15882,3 +15928,17 @@ msgstr "900"
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Limitsiz"
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray
+#. playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid ""
+"Specifies how Blu-rays should be opened/played back. Disc menus are not "
+"fully supported yet and may cause problems."
+msgstr "Blu-ray'lerin nasıl oynatılacağını/açılacağını belirtir. Disk menüleri henüz tam olarak desteklenmemektedir ve sorunlara neden olabilir."
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
+msgstr "GPU hızlandırmalı"

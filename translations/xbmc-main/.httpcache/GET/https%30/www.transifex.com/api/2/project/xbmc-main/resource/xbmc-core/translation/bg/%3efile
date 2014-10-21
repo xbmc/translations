@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-29 18:10+0000\n"
+"PO-Revision-Date: 2014-10-19 18:40+0000\n"
 "Last-Translator: Kiril <neohidra@gmail.com>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xbmc-main/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -1401,8 +1401,8 @@ msgstr "Година"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
-msgstr "Нормализирай нивата при смесване"
+msgid "Maintain original volume on downmix"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -3618,6 +3618,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Обяви тези услуги към други системи чрез Zeroconf"
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr ""
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "Включи регулатора на звука"
@@ -5809,11 +5813,6 @@ msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Разреши хардуерното ускорение (MediaCodec)"
 
 #: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr "Включи многопоточното софтуерно декодиране"
-
-#: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "Ползвай Mpeg-2 VDPAU"
@@ -6442,8 +6441,8 @@ msgstr "Възпроизвеждане"
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
-msgstr "DVD-та"
+msgid "Discs"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14088"
@@ -6513,6 +6512,24 @@ msgstr "Спиране извличането на диска"
 msgctxt "#14101"
 msgid "Acceleration"
 msgstr "Ускорение"
+
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr ""
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr ""
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -11706,7 +11723,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr "Върни стара версия"
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "Несъвместима"
@@ -12075,10 +12092,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr "Избор измежду всички заглавия..."
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
+#: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
-msgstr "Покажи Blu-ray менюто"
+msgid "Show Blu-ray menu"
+msgstr "Показвай Blu-ray менюта"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -12277,6 +12295,19 @@ msgstr "Уикенд"
 msgctxt "#33038"
 msgid "%s day"
 msgstr "%s ден"
+
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr "%s потоци"
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and
+#. "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr "%s потоци"
 
 #: Unknown
 msgctxt "#33049"
@@ -15291,15 +15322,6 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr "Включете хардуерното декодиране на видео файлове от AMLogic декодер."
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded
-#. decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid ""
-"Enables frame-multi-threaded software decoding (less reliable than the "
-"default single threaded mode)."
-msgstr "Включете многопоточното софтуерно декодиране (по-малко надеждно, отколкото стандартния еднопоточен режим)."
-
 #: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
@@ -15369,6 +15391,20 @@ msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
 msgstr "Определя VAAPI рендъра като стандартен. Резултат от включването на опцията е по-малко натоварване на централния процесор, но има вероятност от проблеми с драйвърите."
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr "Разреши хардуерното ускорение (MMAL)"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr "Активира ползването на DVDPlayer за декодиране на видео файлове с MMAL ускорение."
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
@@ -15506,12 +15542,12 @@ msgstr "Според филма"
 msgctxt "#36533"
 msgid ""
 "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
-"maintains the dynamic range of the original audio source when downmixed "
-"however volume will be lower [Disabled] maintains volume level of the "
-"original audio source however the dynamic range is compressed. Note - "
-"Dynamic range is the difference between the quietest and loudest sounds in a"
-" audio source."
-msgstr "Изберете как да се смесва аудиото, например от 5.1 до 2.0: [Вкл.] поддържа изходния динамичен диапазон на оригиналния аудио източник при смесване, но при това ниво на звука ще бъде по-ниско [Изкл.] поддържа ниво на звука на оригиналния аудио източник обаче динамичния диапазон се компресира. Забележка: динамичния диапазон е разликата между най-тихите и най-силните звуци в аудио източника."
+"maintains volume level of the original audio source however the dynamic "
+"range is compressed. [Disabled] maintains the dynamic range of the original "
+"audio source when downmixed however volume will be lower. Note - Dynamic "
+"range is the difference between the quietest and loudest sounds in an audio "
+"source. Enable this setting if movie dialogues are barely audible."
+msgstr "Изберете как да се смесва аудиото, например от 5.1 до 2.0: [Вкл.] поддържа нивото на звука на аудио източника, но динамичния диапазон се компресира. [Изкл.] поддържа изходния динамичен диапазон на аудио източникс при смесване, но при това ниво на звука ще бъде по-ниско. Забележка: динамичния диапазон е разликата между най-тихите и най-силните звуци в аудио източника. Включете опцията ако едва чувате диалога във филмите."
 
 #. Description of setting "System -> Debugging -> Component-specific
 #. logging..." with label #668
@@ -15626,6 +15662,16 @@ msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
 msgstr "Ограничава резолюцията на интерфейса, с цел пестене на памет. Не засяга възпроизвеждането на видео. Изисква се рестарт."
+
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode"
+#. with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid ""
+"Use iOS8 compatible AirPlay support. If you have trouble with older iOS "
+"devices detecting Kodi as a valid target try switching this off. This option"
+" takes effect on the next restart of Kodi only!"
+msgstr ""
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15877,3 +15923,17 @@ msgstr "900"
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Неограничен"
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray
+#. playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid ""
+"Specifies how Blu-rays should be opened/played back. Disc menus are not "
+"fully supported yet and may cause problems."
+msgstr "Определя как Blu-ray дисковете да се отварят/възпроизвеждат. Менютата не се поддържат напълно, все още, поради което могат да са проблемни."
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
+msgstr "Хардуерно ускорен"

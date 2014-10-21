@@ -3,7 +3,7 @@
 # epoke, 2013-2014
 # Gabjoo Lim, 2014
 # Martijn Kaijser <machine.sanctum@gmail.com>, 2014
-# ocnblu <ocnblu@gmail.com>, 2014
+# Changkyoon Kim <ocnblu@gmail.com>, 2014
 # piodio <piodio@gmail.com>, 2013-2014
 # Sungjin Kang <potopro@gmail.com>, 2013
 # Sungjin Kang <potopro@gmail.com>, 2013
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-10-16 15:40+0000\n"
+"PO-Revision-Date: 2014-10-19 21:31+0000\n"
 "Last-Translator: piodio <piodio@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-main/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -1401,8 +1401,8 @@ msgstr "연도"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
-msgstr "다운믹스 노멀라이즈"
+msgid "Maintain original volume on downmix"
+msgstr "다운믹스할 때 원래 음량 유지"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -3185,7 +3185,7 @@ msgstr "지금 검색하겠습니까?"
 #: xbmc/pvr/PVRGUIInfo.cpp
 msgctxt "#802"
 msgid "%s of %s available"
-msgstr ""
+msgstr "%s개 (총 %s개 중) 사용 가능"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -3618,6 +3618,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Zeroconf를 통해 서비스를 다른 시스템에 알림"
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr "iOS 8 호환 모드"
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "음량 제어 허용"
@@ -5809,11 +5813,6 @@ msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "하드웨어 가속 허용 (MediaCodec)"
 
 #: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr "다중 스레드 소프트웨어 디코딩 허용"
-
-#: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "MPEG-2 VDPAU 사용"
@@ -6442,8 +6441,8 @@ msgstr "재생"
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
-msgstr "DVD"
+msgid "Discs"
+msgstr "디스크"
 
 #: system/settings/settings.xml
 msgctxt "#14088"
@@ -6513,6 +6512,24 @@ msgstr "CD 리핑 중지"
 msgctxt "#14101"
 msgid "Acceleration"
 msgstr "가속"
+
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr "블루레이 재생 모드"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr "본 영화 재생"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr "간단한 메뉴"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -11706,7 +11723,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr "되돌리기"
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "호환 안됨"
@@ -12075,10 +12092,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr "타이틀 선택 ..."
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
+#: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
-msgstr "블루레이 메뉴 보기"
+msgid "Show Blu-ray menu"
+msgstr "블루레이 메뉴"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -12277,6 +12295,19 @@ msgstr "주말"
 msgctxt "#33038"
 msgid "%s day"
 msgstr "%s 일"
+
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr "%s 스트림"
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and
+#. "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr "%s 장치"
 
 #: Unknown
 msgctxt "#33049"
@@ -15291,15 +15322,6 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr "AMLogic 디코더를 사용하여 비디오를 하드웨어 디코드합니다."
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded
-#. decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid ""
-"Enables frame-multi-threaded software decoding (less reliable than the "
-"default single threaded mode)."
-msgstr "프레임-멀티-스레드 디코딩을 사용합니다 (기본 단일 스레드 모드에 비해 신뢰도가 떨어집니다)."
-
 #: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
@@ -15369,6 +15391,20 @@ msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
 msgstr "VAAPI 렌더링 방식을 우선적으로 사용하면 CPU 부하를 줄일 수 있지만 드라이버가 멈출 수 있습니다."
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr "하드웨어 가속 허용 (MMAL)"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr "동영상 재생에 MMAL 가속 DVDPlayer 디코딩을 사용합니다."
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
@@ -15506,12 +15542,12 @@ msgstr "영상과 동일"
 msgctxt "#36533"
 msgid ""
 "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
-"maintains the dynamic range of the original audio source when downmixed "
-"however volume will be lower [Disabled] maintains volume level of the "
-"original audio source however the dynamic range is compressed. Note - "
-"Dynamic range is the difference between the quietest and loudest sounds in a"
-" audio source."
-msgstr "다운믹스(Ex. 5.1 채널을 2.0 채널로 출력) 방식을 선택합니다: [사용함] 원 소스의 다이내믹 레인지를 유지하지만 음량은 낮아집니다. [사용 안 함] 원 소스의 음량 수준을 유지하지만 다이내믹 레인지는 좁아집니다. 참고 - 다이내믹 레인지는 특정 오디오 소스에서 가장 큰 소리와 가장 작은 소리 사이의 범위입니다."
+"maintains volume level of the original audio source however the dynamic "
+"range is compressed. [Disabled] maintains the dynamic range of the original "
+"audio source when downmixed however volume will be lower. Note - Dynamic "
+"range is the difference between the quietest and loudest sounds in an audio "
+"source. Enable this setting if movie dialogues are barely audible."
+msgstr "다운믹스 방식을 선택합니다. (예: 5.1 채널을 2.0 채널로): [사용함] 소스의 음량 수준을 유지하지만 다이내믹 레인지가 좁아집니다. [사용 안 함] 소스의 다이내믹 레인지를 유지하지만 음량이 낮아집니다. 참고 - 다이내믹 레인지는 특정 오디오 소스에서 가장 시끄러운 소리와 가장 조용한 소리의 범위입니다. 영화의 대사가 잘 들리지 않으면 이 옵션을 켜세요."
 
 #. Description of setting "System -> Debugging -> Component-specific
 #. logging..." with label #668
@@ -15626,6 +15662,16 @@ msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
 msgstr "메모리 절약을 위하여 GUI 해상도를 제한합니다. 비디오 재생에는 영향을 주지 않습니다. 설정 후 다시 시작하여야 합니다."
+
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode"
+#. with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid ""
+"Use iOS8 compatible AirPlay support. If you have trouble with older iOS "
+"devices detecting Kodi as a valid target try switching this off. This option"
+" takes effect on the next restart of Kodi only!"
+msgstr "iOS 8 호환 모드로 AirPlay를 사용합니다. 이전 iOS 기기에서 Kodi를 인식하는데 문제가 있다면 이 옵션을 끄세요. 이 옵션을 변경하면 Kodi를 다시 시작하여야 적용됩니다!"
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15877,3 +15923,17 @@ msgstr "900"
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "제한 없음"
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray
+#. playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid ""
+"Specifies how Blu-rays should be opened/played back. Disc menus are not "
+"fully supported yet and may cause problems."
+msgstr "블루레이를 열고 재생하는 방법을 선택합니다. 디스크 메뉴는 아직 완전히 지원하지 않으며 문제를 일으킬 수 있습니다."
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
+msgstr "GPU 가속"

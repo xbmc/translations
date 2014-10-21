@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-28 22:01+0000\n"
+"PO-Revision-Date: 2014-10-19 17:50+0000\n"
 "Last-Translator: M. de Boer <de.boer.melle@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/xbmc-main/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -1408,8 +1408,8 @@ msgstr "Jaar"
 
 #: system/settings/settings.xml
 msgctxt "#346"
-msgid "Normalize levels on downmix"
-msgstr "Normaliseer niveaus bij downmixen"
+msgid "Maintain original volume on downmix"
+msgstr "behoudt oorspronkelijke volume bij downmix"
 
 #: system/settings/settings.xml
 msgctxt "#347"
@@ -3625,6 +3625,10 @@ msgid "Announce these services to other systems via Zeroconf"
 msgstr "Zeroconf publishing"
 
 #: system/settings/settings.xml
+msgctxt "#1268"
+msgid "iOS 8 compatibility mode"
+msgstr "iOS8 compabiliteitsmodus"
+
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "Laat toe om het volume aan te passen"
@@ -5816,11 +5820,6 @@ msgid "Allow hardware acceleration (MediaCodec)"
 msgstr "Hardwareversnelling toestaan (mediacodec)"
 
 #: system/settings/settings.xml
-msgctxt "#13440"
-msgid "Allow multi threaded software decoding"
-msgstr "Toestaan van multi-threaded softwaredecodering"
-
-#: system/settings/settings.xml
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "Gebruik MPEG-2 VDPAU"
@@ -6449,8 +6448,8 @@ msgstr "Afspelen"
 
 #: system/settings/settings.xml
 msgctxt "#14087"
-msgid "DVDs"
-msgstr "DVD's"
+msgid "Discs"
+msgstr "Schijven"
 
 #: system/settings/settings.xml
 msgctxt "#14088"
@@ -6520,6 +6519,24 @@ msgstr "CD rippen stoppen"
 msgctxt "#14101"
 msgid "Acceleration"
 msgstr "Versnelling"
+
+#. Name of a setting for Blu-ray playback mode
+#: system/settings/settings.xml
+msgctxt "#14102"
+msgid "Blu-ray playback mode"
+msgstr "Blu-ray afspeelmodus"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14103"
+msgid "Play main movie"
+msgstr "Speel hoofdfilm"
+
+#. Playback mode option for Blu-ray
+#: system/settings/settings.xml
+msgctxt "#14104"
+msgid "Show simplified menu"
+msgstr "Toon gesimplificeerd menu"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -11713,7 +11730,7 @@ msgctxt "#24048"
 msgid "Rollback"
 msgstr "Ongedaan maken"
 
-#: xbmc/addons/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "Niet compatibel"
@@ -12082,10 +12099,11 @@ msgctxt "#25002"
 msgid "Select from all titles ..."
 msgstr "Selecteer uit alle titels..."
 
-#: xbmc/filesystem/BlurayDirectory.cpp
+#. A Blu-ray playback mode and a option in the simplified Blu-ray menu
+#: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
-msgid "Show Blu-ray menus"
-msgstr "Toon Blu-ray menu`s"
+msgid "Show Blu-ray menu"
+msgstr "Toon Blu-ray menu"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -12284,6 +12302,19 @@ msgstr "Weekend"
 msgctxt "#33038"
 msgid "%s day"
 msgstr "%s dag"
+
+#. Used in the media source dialog. Will result in "SAP Streams"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33039"
+msgid "%s Streams"
+msgstr "%s Streams"
+
+#. Used in the media source dialog. Will result in "ReplayTV Devices" and
+#. "HDHomerun Devices"
+#: dialogs/GUIDialogMediaSource.cpp
+msgctxt "#33040"
+msgid "%s Devices"
+msgstr "%s apparaten"
 
 #: Unknown
 msgctxt "#33049"
@@ -15298,15 +15329,6 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr "Schakel Hardware-video-decodering in met gebruik van AMLogic decoder."
 
-#. Description of setting "Videos -> Playback -> Allow frame-multi-threaded
-#. decoding" with label #13440
-#: system/settings/settings.xml
-msgctxt "#36423"
-msgid ""
-"Enables frame-multi-threaded software decoding (less reliable than the "
-"default single threaded mode)."
-msgstr "Activeer frame-multi-threaded software decodering (minder betrouwbaar dan de standaard single thread modus)."
-
 #: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
@@ -15376,6 +15398,20 @@ msgid ""
 "If enabled VAAPI render method is prefered. This puts less load on the CPU "
 "but driver may hang!"
 msgstr "Wanneer ingeschakeld is de VAAP rendermethode gewenst. Dit verminderd minder gebruik van de CPU maar de driver kan blijven  hangen!"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36434"
+msgid "Allow hardware acceleration (MMAL)"
+msgstr "Hardwareversnelling inschakelen (MMAL)"
+
+#. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
+#. of video files"
+#: system/settings/settings.xml
+msgctxt "#36435"
+msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
+msgstr "Gebruik DVDPlayer voor decoderen van videobestanden met MMAL acceleratie"
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
@@ -15513,12 +15549,12 @@ msgstr "Zelfde als film"
 msgctxt "#36533"
 msgid ""
 "Select how audio is downmixed, for example from 5.1 to 2.0: [Enabled] "
-"maintains the dynamic range of the original audio source when downmixed "
-"however volume will be lower [Disabled] maintains volume level of the "
-"original audio source however the dynamic range is compressed. Note - "
-"Dynamic range is the difference between the quietest and loudest sounds in a"
-" audio source."
-msgstr "Selecteer hoe geluid wordt gedownmixed. als voorbeeld van 5.1 naar 2.0: [Geactiveerd] behoudt het dynamische bereik van de originele geluidsbron wanneer er wordt gedownmixed, echter volume zal lager zijn [Gedeactiveerd] behoudt het volumeniveau van de originele geluidsbron echter het dynamische bereik is gecomprimeerd. Opmerking - dynamisch bereik is het verschil tussen de zachtste en hardste geluiden in een geluidsbron."
+"maintains volume level of the original audio source however the dynamic "
+"range is compressed. [Disabled] maintains the dynamic range of the original "
+"audio source when downmixed however volume will be lower. Note - Dynamic "
+"range is the difference between the quietest and loudest sounds in an audio "
+"source. Enable this setting if movie dialogues are barely audible."
+msgstr "Selecteer hoe geluid wordt gedownmixed. als voorbeeld van 5.1 naar 2.0: [Geactiveerd] behoudt het volumeniveau van de originele geluidsbron echter het dynamische bereik is gecomprimeerd[Gedeactiveerd] behoudt het dynamische bereik van de originele geluidsbron wanneer er wordt gedownmixed, echter volume zal lager zijn. Opmerking - dynamisch bereik is het verschil tussen de zachtste en hardste geluiden in een geluidsbron. Activeer deze instelling als gesprekken in een film nauwelijks hoorbaar zijn."
 
 #. Description of setting "System -> Debugging -> Component-specific
 #. logging..." with label #668
@@ -15633,6 +15669,16 @@ msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
 msgstr "Limiteert de resolutie van de GUI om geheugen te besparen. dit beïnvloed niet het afspelen van video`s."
+
+#. Description of setting "Services -> AirPlay -> iOS 8 compatibility mode"
+#. with label #1268
+#: system/settings/settings.xml
+msgctxt "#36549"
+msgid ""
+"Use iOS8 compatible AirPlay support. If you have trouble with older iOS "
+"devices detecting Kodi as a valid target try switching this off. This option"
+" takes effect on the next restart of Kodi only!"
+msgstr "Gebruik iOS8 compatibele AirPlay ondersteuning. Als je problemen hebt met oudere iOS apparaten voor het herken van Kodi als een geldig doel probeer dit dan uit te zetten. Deze optie heeft pas effect bij de volgende herstart van alleen Kodi!"
 
 #. Description of settings category "Music -> Library" with label #14022
 #: system/settings/settings.xml
@@ -15884,3 +15930,17 @@ msgstr "900"
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Onbeperkt"
+
+#. Description of setting #14102 Settings -> Video -> Discs -> Blu-ray
+#. playback mode
+#: system/settings/settings.xml
+msgctxt "#37031"
+msgid ""
+"Specifies how Blu-rays should be opened/played back. Disc menus are not "
+"fully supported yet and may cause problems."
+msgstr "Specificeer hoe Blu-rays moeten worden geopend/afgespeeld. Disk menu`s worden nog niet volledig ondersteunt en kunnen mogelijk problemen veroorzaken."
+
+#: system/settings/rbp.xml
+msgctxt "#38010"
+msgid "GPU accelerated"
+msgstr "GPU versneld"
