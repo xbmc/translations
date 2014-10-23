@@ -275,18 +275,15 @@ void CCharsetUtils::replaceAllStrParts(std::string * pstr, const std::string& fr
   size_t start_pos = 0;
   while((start_pos = pstr->find(from, start_pos)) != std::string::npos)
   {
-    if (pstr->find(".org", start_pos + from.length()) != start_pos +from.length())
-    {
       pstr->replace(start_pos, from.length(), to);
       start_pos += to.length();
-    }
-    else
-      start_pos += from.length() + 4; // xbmc.org has not been changed
   }
 };
 
 void CCharsetUtils::reBrandXBMCToKodi(std::string * pstrtorebrand)
 {
+  replaceAllStrParts(pstrtorebrand, "xbmc.org", "kodi.tv");
+  replaceAllStrParts(pstrtorebrand, "Xbmc.org", "kodi.tv");
   replaceAllStrParts(pstrtorebrand, "XBMC", "Kodi");
   replaceAllStrParts(pstrtorebrand, "XMBC", "Kodi");
   replaceAllStrParts(pstrtorebrand, "xbmc", "Kodi");
