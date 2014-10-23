@@ -283,7 +283,9 @@ void CCharsetUtils::replaceAllStrParts(std::string * pstr, const std::string& fr
 void CCharsetUtils::reBrandXBMCToKodi(std::string * pstrtorebrand)
 {
   replaceAllStrParts(pstrtorebrand, "xbmc.org", "kodi.tv");
-  replaceAllStrParts(pstrtorebrand, "Xbmc.org", "kodi.tv");
+  replaceAllStrParts(pstrtorebrand, "XBMC.org", "Kodi.tv");
+  replaceAllStrParts(pstrtorebrand, "XBMC.ORG", "Kodi.tv");
+  replaceAllStrParts(pstrtorebrand, "Xbmc.org", "Kodi.tv");
   replaceAllStrParts(pstrtorebrand, "XBMC", "Kodi");
   replaceAllStrParts(pstrtorebrand, "XMBC", "Kodi");
   replaceAllStrParts(pstrtorebrand, "xbmc", "Kodi");
