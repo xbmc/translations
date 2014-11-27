@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-11-16 09:51+0000\n"
+"PO-Revision-Date: 2014-11-27 14:55+0000\n"
 "Last-Translator: dhead666 <myfoolishgames@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/xbmc-main/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -2797,6 +2797,11 @@ msgstr "פירוט אירועי רכיבי UPnP"
 msgctxt "#679"
 msgid "Verbose logging for CEC library"
 msgstr "פירוט אירועי ספריית CEC"
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#680"
+msgid "Verbose logging for VIDEO component"
+msgstr "פירוט אירועי רכיב וידאו"
 
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -7179,6 +7184,30 @@ msgctxt "#16329"
 msgid "VAAPI Motion Compensated"
 msgstr "VAAPI Motion Compensated"
 
+#. Description of OSD video settings for deinterlace method with label #16330
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16330"
+msgid "MMAL - Advanced"
+msgstr "MMAL - מתקדם"
+
+#. Description of OSD video settings for deinterlace method with label #16331
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16331"
+msgid "MMAL - Advanced (Half)"
+msgstr "MMAL - מתקדם (חצי)"
+
+#. Description of OSD video settings for deinterlace method with label #16332
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16332"
+msgid "MMAL - Bob"
+msgstr "MMAL - Bob"
+
+#. Description of OSD video settings for deinterlace method with label #16333
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16333"
+msgid "MMAL - Bob (Half)"
+msgstr "MMAL - Bob (חצי)"
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
 msgid "Post-processing"
@@ -7569,7 +7598,7 @@ msgstr "יום התחלה:"
 
 msgctxt "#19085"
 msgid "Unknown channel %u"
-msgstr "ערוץ לא ידוע %u"
+msgstr "ערוץ לא מוכר %u"
 
 msgctxt "#19086"
 msgid "Mo-__-__-__-__-__-__"
@@ -7915,7 +7944,7 @@ msgstr "הסתר תיבת מידע וידאו"
 #: system/settings/settings.xml
 msgctxt "#19170"
 msgid "Timeout when starting playback"
-msgstr "גבול המתנה לתחילת ניגון"
+msgstr "זמן המתנה מירבי לתחילת ניגון"
 
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -7940,12 +7969,12 @@ msgstr "ברירת מחדל לאורך חיי הקלטה"
 #: system/settings/settings.xml
 msgctxt "#19175"
 msgid "Margin at the start of a recording"
-msgstr "הקדמה בתזמון תחילת הקלטה"
+msgstr "הקדמת תזמון תחילת הקלטה"
 
 #: system/settings/settings.xml
 msgctxt "#19176"
 msgid "Margin at the end of a recording"
-msgstr "איחור בתזמון סיום הקלטה"
+msgstr "איחור תזמון סיום הקלטה"
 
 #: system/settings/settings.xml
 msgctxt "#19177"
@@ -8451,27 +8480,27 @@ msgstr "חזית"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19499"
 msgid "Other/Unknown"
-msgstr "אחר\\לא ידוע"
+msgstr "אחר / לא ידוע"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19500"
 msgid "Movie/Drama"
-msgstr "סרט\\דרמה"
+msgstr "סרט / דרמה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective/Thriller"
-msgstr "מותחן\\בלשי"
+msgstr "בלשי / מותחן"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure/Western/War"
-msgstr "הרפתקאות\\מערבון\\מלחמה"
+msgstr "הרפתקאות / מערבון / מלחמתי"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science Fiction/Fantasy/Horror"
-msgstr "מדע בדיוני\\פנטזיה\\אימה"
+msgstr "מדע בדיוני / פנטזיה / אימה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19504"
@@ -8481,7 +8510,7 @@ msgstr "קומדיה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap/Melodrama/Folkloric"
-msgstr "סבון\\מלודרמה\\פולקלור"
+msgstr "סבון / מלודרמה / פולקלור"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19506"
@@ -8491,22 +8520,22 @@ msgstr "רומנטי"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious/Classical/Religious/Historical Movie/Drama"
-msgstr "קלסי\\דתי\\סרט היסטורי\\דרמה"
+msgstr "קלסי / דתי / סרט היסטורי / דרמה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult Movie/Drama"
-msgstr "סרט למבוגרים\\דרמה"
+msgstr "סרט למבוגרים / דרמה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19516"
 msgid "News/Current Affairs"
-msgstr "חדשות\\אקטואליה"
+msgstr "חדשות / אקטואליה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News/Weather Report"
-msgstr "חדשות\\מזג אוויר"
+msgstr "חדשות / מזג אוויר"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19518"
@@ -8521,7 +8550,7 @@ msgstr "תעודה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion/Interview/Debate"
-msgstr "דיון\\ראיון\\עימות"
+msgstr "דיון / ראיון / עימות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19532"
@@ -8531,7 +8560,7 @@ msgstr "הצגה "
 #: xbmc/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game Show/Quiz/Contest"
-msgstr "הצעה/חידון/תחרות"
+msgstr "הצעה / חידון / תחרות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19534"
@@ -8566,7 +8595,7 @@ msgstr "כדורגל"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis/Squash"
-msgstr "טניס\\סקווש"
+msgstr "טניס / סקווש"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19553"
@@ -8606,7 +8635,7 @@ msgstr "אמנויות לחימה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19564"
 msgid "Children's/Youth Programmes"
-msgstr "ילדים\\נוער"
+msgstr "ילדים / נוער"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19565"
@@ -8626,12 +8655,12 @@ msgstr "בידור לגילאים 10-16"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational/Educational/School Programme"
-msgstr "תכניות הסברה\\חינוכיות\\לבית הספר"
+msgstr "תוכניות סברה / חינוכיות / לבית הספר"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons/Puppets"
-msgstr "מצויר\\הנפשה"
+msgstr "מצויר / הנפשה"
 
 msgctxt "#19580"
 msgid "Music/Ballet/Dance"
@@ -8640,7 +8669,7 @@ msgstr "מוזיקה / בלט / ריקוד"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock/Pop"
-msgstr "רוק\\פופ"
+msgstr "רוק / פופ"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19582"
@@ -8650,12 +8679,12 @@ msgstr "מוזיקה  קלאסית"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk/Traditional Music"
-msgstr "שירי עם\\מוזיקה מסורתית"
+msgstr "שירי עם / מוסיקה מסורתית"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical/Opera"
-msgstr "מוזיקה\\אופרה"
+msgstr "מוסיקה / אופרה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19585"
@@ -8665,7 +8694,7 @@ msgstr "בלט"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19596"
 msgid "Arts/Culture"
-msgstr "אמנויות\\תרבות"
+msgstr "אומנויות / תרבות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19597"
@@ -8685,7 +8714,7 @@ msgstr "דת"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular Culture/Traditional Arts"
-msgstr "תרבות פופולרית\\אמנויות מסורתיות"
+msgstr "תרבות פופולרית / אמנויות מסורתיות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19601"
@@ -8695,7 +8724,7 @@ msgstr "ספרות"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film/Cinema"
-msgstr "סרטים\\קולנוע"
+msgstr "סרטים / קולנוע"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19603"
@@ -8705,7 +8734,7 @@ msgstr "שידורי נסיון"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting/Press"
-msgstr "תשדיר\\עיתונות"
+msgstr "שידור / עיתונות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19605"
@@ -8715,7 +8744,7 @@ msgstr "מדיה חדשה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts/Culture Magazines"
-msgstr "אמנויות\\מגזיני תרבות"
+msgstr "אמנויות / מגזיני תרבות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19607"
@@ -8725,17 +8754,17 @@ msgstr "אופנה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19612"
 msgid "Social/Political/Economics"
-msgstr "חברתי\\פוליטי\\כלכלה"
+msgstr "חברתי / פוליטי / כלכלה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines/Reports/Documentary"
-msgstr "מגזינים\\דווחית\\תעודה"
+msgstr "מגזינים / דיווחים / תעודה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics/Social Advisory"
-msgstr "כלכלה\\יעוץ כלכלי"
+msgstr "כלכלה / יעוץ כלכלי"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19615"
@@ -8745,32 +8774,32 @@ msgstr "אנשים יוצאי דופן"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19628"
 msgid "Education/Science/Factual"
-msgstr "חינוך\\מדע\\עובדתי"
+msgstr "חינוך / מדע / עובדתי"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature/Animals/Environment"
-msgstr "טבע\\בעלי חיים\\סביבה"
+msgstr "טבע / בעלי חיים / סביבה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology/Natural Sciences"
-msgstr "טכנולוגי\\מדעי הטבע"
+msgstr "טכנולוגי / מדעי הטבע"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine/Physiology/Psychology"
-msgstr "רפואה\\פיזיולוגיה\\פסיכולוגיה"
+msgstr "רפואה / פיזיולוגיה / פסיכולוגיה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign Countries/Expeditions"
-msgstr "מדינות זרות\\משלחות"
+msgstr "מדינות זרות / משלחות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social/Spiritual Sciences"
-msgstr "חברתי\\מדעי הרוח"
+msgstr "חברתי / מדעי הרוח"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19634"
@@ -8785,12 +8814,12 @@ msgstr "שפות"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19644"
 msgid "Leisure/Hobbies"
-msgstr "פנאי\\תחביבים"
+msgstr "פנאי / תחביבים"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism/Travel"
-msgstr "תיירות\\טיולים"
+msgstr "תיירות / טיולים"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19646"
@@ -8815,7 +8844,7 @@ msgstr "בישול"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement/Shopping"
-msgstr "פרסום\\קניות"
+msgstr "פרסום / קניות"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19651"
@@ -8855,17 +8884,17 @@ msgstr "דרמה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective/Thriller"
-msgstr "בלשי\\מותחן"
+msgstr "בלשי / מותחן"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure/Western/War"
-msgstr "הרפתקאות\\מערבון\\מלחמתי"
+msgstr "הרפתקאות / מערבון / מלחמתי"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science Fiction/Fantasy/Horror"
-msgstr "מדע בדיוני\\פנטזיה\\אימה"
+msgstr "מדע בדיוני / פנטזיה / אימה"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19680"
@@ -8875,7 +8904,7 @@ msgstr "קומדיה"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap/Melodrama/Folkloric"
-msgstr "סבון\\מלודרמה\\פולקלור"
+msgstr "סבון / מלודרמה / פולקלור"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19682"
@@ -8885,7 +8914,7 @@ msgstr "רומנטי"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious/ClassicalReligion/Historical"
-msgstr "דתי\\היסטורי"
+msgstr "דתי / היסטורי"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19684"
@@ -11845,7 +11874,7 @@ msgstr "חזרה לאחור"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
 msgid "Incompatible"
-msgstr "אי תאימות"
+msgstr "לא תואם"
 
 #: unknown
 msgctxt "#24050"
