@@ -24,8 +24,8 @@ while true; do
     esac
 done
 
-echo "Starting phase II."
-echo "Now we upload the new strings to transifex which are coming from upstream locations.\n"
+echo -e "\nStarting phase II."
+echo -e "Now we upload the new strings to transifex which are coming from upstream locations.\n"
 sleep 3
 
 xbmc-txupdate translations/$PROJECT/ -u
@@ -39,8 +39,8 @@ while true; do
     esac
 done
 
-echo "Starting phase III."
-echo "Now we commit changes to the Kodi-Translations github project and push them."
+echo -e "\nStarting phase III."
+echo -e "Now we commit changes to the Kodi-Translations github project and push them."
 sleep 3
 
 echo -e "git add -A\n"
@@ -49,6 +49,8 @@ echo -e "git commit -am [$PROJECT] sync\n"
 git commit -am "[$PROJECT] sync"
 echo -e "\ngit push \"origin master\"\n"
 git push origin master
+
+echo -e "\nFinished succesfully!"
 
 cd tool/sync-scripts
 
