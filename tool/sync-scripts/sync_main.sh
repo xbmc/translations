@@ -15,6 +15,12 @@ echo -e "We merge them and check if there is something we should upload to Trans
 sleep 3
 
 xbmc-txupdate translations/$PROJECT/
+
+if (($? != 0)); then
+    echo "An error occured in xbmc-txupdate process. Please check the output, or the logfile!"
+    exit
+fi
+
 while true; do
     read -p "Please in another terminal check if all went fine to start upload to TX! Can we continue? (y/n)" yn
     case $yn in
@@ -30,6 +36,11 @@ sleep 3
 
 xbmc-txupdate translations/$PROJECT/ -u
 
+if (($? != 0)); then
+    echo "An error occured in xbmc-txupdate process. Please check the output, or the logfile!"
+    exit
+fi
+
 while true; do
     read -p "Please check again if all went fine and we can commit changes! Can we continue? (y/n)" yn
     case $yn in
@@ -43,10 +54,10 @@ echo -e "\nStarting phase III."
 echo -e "Now we commit changes to the Kodi-Translations github project and push them."
 sleep 3
 
-echo -e "git add -A\n"
-git add -A
-echo -e "git commit -am [$PROJECT] sync\n"
-git commit -am "[$PROJECT] sync"
+echo -e "git add -A translations/$PROJECT\n"
+git add -A translations/$PROJECT
+echo -e "git commit -m [$PROJECT] sync\n"
+git commit -m "[$PROJECT] sync"
 echo -e "\ngit push \"origin master\"\n"
 git push origin master
 
