@@ -9,9 +9,9 @@ select yn in "xbmc-main" "xbmc-skins" "xbmc-addons"; do
     esac
 done
 
-echo "Starting phase I."
-echo "Now we download the language files from upstream loacations and Transifex."
-echo "We merge them and check if there is something we should upload to Transifex later.\n"
+echo -e "\nStarting phase I."
+echo -e "Now we download the language files from upstream loacations and Transifex."
+echo -e "We merge them and check if there is something we should upload to Transifex later.\n"
 sleep 3
 
 xbmc-txupdate translations/$PROJECT/
@@ -50,7 +50,7 @@ git commit -am "[$PROJECT] sync"
 echo -e "\ngit push \"origin master\"\n"
 git push origin master
 
-echo -e "\nFinished succesfully!"
+echo -e "\nFinished succesfully!\n"
 
 cd tool/sync-scripts
 
