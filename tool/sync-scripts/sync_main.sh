@@ -1,11 +1,17 @@
-cd ../..
+DIRGITHUB=/home/translator/transifex/xbmc-translations
+WORKINGDIR=$(pwd)
+MAINPROJECT=xbmc-main
+SKINSPROJECT=xbmc-skins
+ADDONSPROJECT=xbmc-addons
+
+cd $DIRGITHUB
 
 echo -e "\nPlease choose which project to sync:"
-select yn in "xbmc-main" "xbmc-skins" "xbmc-addons"; do
+select yn in "main" "skins" "addons"; do
     case $yn in
-        xbmc-main )   PROJECT=xbmc-main;    break;;
-        xbmc-skins )  PROJECT=xbmc-skins;   break;;
-        xbmc-addons ) PROJECT=xbmc-addons;  break;;
+        main )   PROJECT=$MAINPROJECT;    break;;
+        skins )  PROJECT=$SKINSPROJECT;   break;;
+        addons ) PROJECT=$ADDONSPROJECT;  break;;
     esac
 done
 
@@ -63,5 +69,5 @@ git push origin master
 
 echo -e "\nFinished succesfully!\n"
 
-cd tool/sync-scripts
+cd $WORKINGDIR
 
