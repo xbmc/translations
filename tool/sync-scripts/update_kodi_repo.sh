@@ -48,14 +48,14 @@ echo -e "First we check if download and git commits resulted the expected change
 
 cd $DIRKODIGITREPO 
 echo -e "\nPlease choose between some debug options or continue to push changes."
-select yn in "changed-files" "changed-in-english" "changed-in-addons" "changed-in-confl-english" "git-log" "git-push"; do
+select yn in "git-push" "changed-files" "changed-in-english" "changed-in-addons" "changed-in-confl-english" "git-log" ; do
     case $yn in
+        git-push )        break;;
         changed-files )       echo -e "git diff --name-status HEAD^^^\n" ;  git diff --name-status HEAD^^^ ;;
         changed-in-english )  echo -e "git diff HEAD^^^ language/English/\n" ; git diff HEAD^^^ language/English/ ;;
         changed-in-addons )   echo -e "git diff HEAD^^^ addons/\n" ; git diff HEAD^^^ addons/ ;;
         changed-in-confl-english ) echo -e "git diff HEAD^^^ addons/skin.confluence/language/English/\n" ; git diff HEAD^^^ addons/skin.confluence/language/English/ ;;
         git-log ) echo -e "git log -n 4" ; git log -n 4 ;;
-        git-push )        break;;
     esac
 done
 
