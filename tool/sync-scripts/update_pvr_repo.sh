@@ -36,7 +36,7 @@ echo -e "\nPlease choose between some debug options or continue to push changes.
 select yn in "git-push" "changed-files" "git-log" ; do
     case $yn in
         git-push )        break;;
-        changed-files )       echo -e "git diff --name-status HEAD^^^\n" ;  git diff --name-status HEAD^^^ ;;
+        changed-files )       echo -e "git diff --name-status HEAD^\n" ;  git diff --name-status HEAD^ ;;
         git-log ) echo -e "git log -n 4" ; git log -n 4 ;;
     esac
 done
