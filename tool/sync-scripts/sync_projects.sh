@@ -47,15 +47,6 @@ if (($? != 0)); then
     exit
 fi
 
-while true; do
-    read -p "Please check again if all went fine and we can commit changes! Can we continue? (y/n)" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
 echo -e "\nStarting phase III."
 echo -e "Now we commit changes to the Kodi-Translations github project and push them."
 sleep 3
@@ -64,6 +55,18 @@ echo -e "git add -A translations/$PROJECT\n"
 git add -A translations/$PROJECT
 echo -e "git commit -m [$PROJECT] sync\n"
 git commit -m "[$PROJECT] sync"
+
+echo -e "\n\nBefore push, we check if download and git commits resulted the expected changes.\n"
+echo -e "\nPlease choose between some debug options or continue to push changes."
+select yn in "git-push" "changed-files" "changed-in-merged" "changed-in-temp" ; do
+    case $yn in
+        git-push )        break;;
+        changed-files )       echo -e "git diff --name-status HEAD^\n" ;  git diff --name-status HEAD^ ;;
+        changed-in-merged )   echo -e "git diff --name-status HEAD^ translations/$PROJECT/merged-langfiles\n" ; git diff --name-status HEAD^ translations/$PROJECT/merged-langfiles ;;
+        changed-in-temp )     echo -e "git diff --name-status HEAD^ translations/$PROJECT/tempfiles_txupdate\n" ; git diff --name-status HEAD^ translations/$PROJECT/tempfiles_txupdate ;;
+    esac
+done
+
 echo -e "\ngit push \"origin master\"\n"
 git push origin master
 
