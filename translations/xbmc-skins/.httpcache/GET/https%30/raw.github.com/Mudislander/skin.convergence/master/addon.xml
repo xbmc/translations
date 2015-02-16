@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.convergence"
-  version="3.0.0"
-  name="Convergence - Initial Alpha Vesion"
+  version="3.0.1"
+  name="Convergence"
   provider-name="Mudislander">
   <requires>
     <import addon="xbmc.gui" version="5.3.0"/>
-	<import addon="script.favourites" version="5.0.2"/>
-	<import addon="service.skin.widgets" version="0.0.27"/>
+	<import addon="script.favourites" version="6.0.1"/>
+	<import addon="service.skin.widgets" version="0.0.29"/>
+	<import addon="script.simpleplaylists" version="1.1.1"/>
+	<import addon="script.grab.fanart" version="0.13.2"/>
 	<import addon="script.randomandlastitems" version="2.2.0"/>
   </requires>
   <extension
@@ -17,28 +19,44 @@
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
   </extension>
   <extension point="xbmc.addon.metadata">
+    <summary lang="de">Convergence, ein anpassbarer vertikaler Skin</summary>
     <summary lang="el">Convergence, ένα προσαρμόσιμο κάθετο κέλυφος</summary>
     <summary lang="en">Convergence a customizable vertical skin</summary>
+    <summary lang="en_NZ">Convergence a customisable vertical skin</summary>
     <summary lang="en_US">Convergence a customizable vertical skin</summary>
+    <summary lang="es">Convergence es un skin vertical personalizable</summary>
+    <summary lang="fr">Convergence un skin verticale personnalisable</summary>
     <summary lang="fr_CA">Convergence est un habillage vertical personnalisable</summary>
+    <summary lang="he">המעטפת Convergence, בעלת ממשק אנכי ויכולת התאמה אישית</summary>
     <summary lang="hu">A Convergence egy testreszabható vertikális felszín</summary>
     <summary lang="is">Convergence sérsníðanlegt lóðrétt viðmót</summary>
+    <summary lang="ko">Convergence, 사용자 설정이 가능한 수직 스킨</summary>
     <summary lang="lt">Convergence yra priderinama vertikali teminė išvaizda</summary>
+    <summary lang="ms">Convergence adalah kulit menegak boleh disuai</summary>
     <summary lang="nl">Convergence een aanpasbare verticale skin</summary>
-    <summary lang="pl">Skóra z konfigurowalnym pionowym menu z bardziej przejrzystym wyglądem.</summary>
+    <summary lang="pl">Convergence to skóra o pionowym układzie, którą łatwo dostosować</summary>
     <summary lang="pt_BR">Convergence - uma skin vertical personlizável</summary>
+    <summary lang="ru">Convergence - настраиваемая вертикальная обложка</summary>
+    <summary lang="sl">Convergence je prilagodljiva navpična preobleka</summary>
     <summary lang="sv">Convergence - ett anpassningsbart vertikalt skal</summary>
     <summary lang="zh">Convergence 一套可定制的垂直显示皮肤</summary>
+    <description lang="de">Convergence ist ein anpassbarer Skin der die beliebten Optimierungen, Addons und Scripte umfasst.</description>
     <description lang="el">Το Convergence είναι ένα προσαρμόσιμο κέλυφος που περιλαμβάνει πολλά από τα πλέον δημοφιλή tweaks, πρόσθετα και scripts.</description>
     <description lang="en">Convergence is a customizable skin incorporating many of the now popular tweaks, addons and scripts.</description>
+    <description lang="en_NZ">Convergence is a customisable skin incorporating many of the now popular tweaks, addons and scripts.</description>
     <description lang="en_US">Convergence is a customizable skin incorporating many of the now popular tweaks, addons and scripts.</description>
+    <description lang="es">Convergence es un skin vertical personalizable que incorpora muchos de las mejoras, addons y scripts mas populares.</description>
+    <description lang="fr">Convergence est un skin  personnalisable intégrant la plupart des tweaks populaires actuels , extension et son.</description>
     <description lang="fr_CA">Convergence est un habillage personnalisable incorporant plusieurs peaufinages, addiciels et scripts.</description>
+    <description lang="he">המעטפת Convergence ניתנת להתאמה אישית וכוללת התאמות, הרחבות וסקריפטים פופולריים.</description>
     <description lang="hu">A Convergence testreszabható felszín, sok népszerű finomhangolást és módosítást tartalmaz, kiegészítőket  és szkripteket.</description>
     <description lang="is">Convergence er sérsníðanlegt viðmót sem inniheldur mörg af vinsælum smábreytingum, viðbótum og skriftum.</description>
     <description lang="lt">Convergence yra priderinama vertikali teminė išvaizda, apjungianti daugelį dabar populiarių patobulinimų, priedų ir skriptų.</description>
+    <description lang="ms">Convergence adalah kulit boleh disuai yang menggabungkan banyak tweak, tambahan dan skrip yang kini popular.</description>
     <description lang="nl">Convergence is een aanpasbare skin waarin veel van de populaire tweaks, add-ons en scripts zijn verwerkt</description>
-    <description lang="pl">Konfigurowalna skóra zawierająca wiele popularnych usprawnień, dodatków i skryptów. </description>
+    <description lang="pl">Convergence to skóra, którą łatwo dostosować, zawierająca wiele popularnych usprawnień, dodatków i skryptów. </description>
     <description lang="pt_BR">Convergende é uam skin personalizável que incorpora muitos dos add-ons, scripts e configurações mais populares</description>
+    <description lang="sl">Convergence je prilagodljiva preobleka, ki vsebuje številne zdaj že priljubljene prilagoditve, dodatke in skripte.</description>
     <description lang="sv">Convergence är ett anpassningsbart skal med flera av de populäraste justeringarna, tilläggen och skripten.</description>
     <description lang="zh">Hybrid是一套可定制的皮肤，包括许多当前流行的改进，插件和脚本。</description>
     <disclaimer lang="be">You break it - You get to keep the pieces</disclaimer>
@@ -52,6 +70,7 @@
     <disclaimer lang="fr">Vous le cassez, vous assumez!</disclaimer>
     <disclaimer lang="fr_CA">Vous le brisez - Vous garder les morceaux</disclaimer>
     <disclaimer lang="gl">Rompeuno - Terá que gardar as pezas</disclaimer>
+    <disclaimer lang="he">אם הרסתם זאת - הפרס שלכם הוא להשאר עם התקלות</disclaimer>
     <disclaimer lang="hr">Razbite ga - I možete zadržati komadiće</disclaimer>
     <disclaimer lang="hu">Állj meg - nyisd ki a gyöngyök ládáját. </disclaimer>
     <disclaimer lang="is">Ef þú brýtur það, þá máttu halda brotunum</disclaimer>
