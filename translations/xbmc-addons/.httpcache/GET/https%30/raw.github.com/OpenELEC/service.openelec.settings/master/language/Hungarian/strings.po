@@ -16,6 +16,10 @@ msgstr ""
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#600"
+msgid "@DISTRONAME@ Settings"
+msgstr "@DISTRONAME@ Beállítások"
+
 msgctxt "#601"
 msgid "Interface"
 msgstr "Kezelőfelület"
@@ -84,21 +88,9 @@ msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
 msgstr "Hasznos információk úgymint verzióinformációk és a rendszer részletei, támogatás és közösségi oldalak elérhetőségei, és a projekt támogatása"
 
-msgctxt "#706"
-msgid "706"
-msgstr "706"
-
-msgctxt "#707"
-msgid "707"
-msgstr "707"
-
-msgctxt "#708"
-msgid "708"
-msgstr "708"
-
-msgctxt "#709"
-msgid "709"
-msgstr "709"
+msgctxt "#710"
+msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
+msgstr "A @DISTRONAME@ nevű OpenELEC rendszer hosztneve. Ez használatos mint a HTPC \\\\számítógépnév Windowsban és az SMB szerver név a Mac OS Keresőben"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
@@ -112,25 +104,41 @@ msgctxt "#713"
 msgid "Configure the physical keyboard type"
 msgstr "Billentyűzet fizikai típus beállítása"
 
+msgctxt "#714"
+msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgstr "A @DISTRONAME@ nevű OpenELEC beállítható automatikus vagy kézi frissítésre. Az automatikus frissítés a végleges változatok esetén elérhető. Az automatikus frissítés lehetősége a a béta és a fejlesztői változatokban letiltásra kerül."
+
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "ON állásban a képernyőn megjelenik egy figyelmeztetés ha újabb változat érhető el"
 
-msgctxt "#719"
-msgid "Configure the number of minutes before hard-drive spin down occurs"
-msgstr "A lemezek leállításig hány perc teljen el"
+msgctxt "#716"
+msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
+msgstr "Kattintásra frissebb  @DISTRONAME@ változat keresése az OpenELEC szervereken."
+
+msgctxt "#717"
+msgid "If you have an small LCD or VFD attached to your @DISTRONAME@ system you must configure the correct display driver"
+msgstr "Ha Önnek kisméretű LCD vagy VFD kijelző van csatlakoztatva az  @DISTRONAME@ rendszerhez akkor be kell állítsa megfelelő kijelző meghajtóprogramot."
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
 msgstr "ON beállítással a Bluetooth eszközök letiltásra kerülnek energiatakarékos módokban"
 
-msgctxt "#721"
-msgid "721"
-msgstr "721"
+msgctxt "#722"
+msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
+msgstr "Generál egy tar állományt minden  @DISTRONAME@ és Kodi konfigurációs beállításokkal, adatbázisokkal és bélyegképekkel. a mentés fájljai a /storage/backups mappába kerülnek."
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
 msgstr "Tar állomány visszaállítása ami az előző opció használatával készült."
+
+msgctxt "#724"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nAz  @DISTRONAME@ konfigurációjának alapra állítása (szintén alaphelyzetbe állítja az Kodi-t a médiatárral együtt. A médiafájlok - zene/videók/stb érintetlen marad)"
+
+msgctxt "#725"
+msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nAz  @DISTRONAME@ OS és Kodi konfigurációjának alaphelyzetbe állítása (a rendszerpartíción minden adat törlésre kerül)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
@@ -151,10 +159,6 @@ msgstr "Hozzáférési Mód jelszavának megdása"
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
 msgstr "Vezetékes (Ethernet) hálózatok engedélyezése vagy letiltása"
-
-msgctxt "#731"
-msgid "Configure OpenVPN and PPTP VPN connections"
-msgstr "OpenVPN és PPTP VPN kapcsolatok beállítása"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
@@ -192,6 +196,10 @@ msgctxt "#741"
 msgid "Set the password for Samba sharing"
 msgstr "A Samba megosztás jelszava"
 
+msgctxt "#742"
+msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
+msgstr "ON állásban a a beépített SSH szerver elérhetővé válik. Az SSH konzol elérhető a 'root' felhasználói névvel és '@ROOT_PASSWORD@' jelszóval."
+
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
 msgstr "Állítsa ON állsába ha privát SSH kulcsot másolt a HTPC-re és ezzel fokozza a biztonságot SSH felhasználói név és jelszó megadása helyett."
@@ -204,25 +212,13 @@ msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
 msgstr "ON állásban engedélyezi a cron szolgáltatást"
 
-msgctxt "#746"
-msgid "Set to ON to send system event logs (/var/log/messages) to a remote Syslog server"
-msgstr "ON állásban a rendszernaplókat (/var/log/messages) egy távoli Syslog szerverre küldi."
-
-msgctxt "#747"
-msgid "Configure the IP address of the remote Syslog server"
-msgstr "Távoli Syslog szerver IP címének megadása"
-
-msgctxt "#748"
-msgid "748"
-msgstr "748"
-
-msgctxt "#749"
-msgid "749"
-msgstr "749"
-
 msgctxt "#750"
 msgid "750"
 msgstr "750"
+
+msgctxt "#751"
+msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
+msgstr "Az OBEX fájlátvitellel küldhet fájlokat, például filmeket vagy képeket Bluetooth-on keresztül az@DISTRONAME@-re."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
@@ -240,10 +236,6 @@ msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "Külső meghajtók/partíciók automatikus megosztása"
 
-msgctxt "#32000"
-msgid "Network"
-msgstr "Hálózat"
-
 msgctxt "#32001"
 msgid "Services"
 msgstr "Szolgáltatások"
@@ -255,18 +247,6 @@ msgstr "Rendszer"
 msgctxt "#32003"
 msgid "Interface"
 msgstr "Interfész"
-
-msgctxt "#32004"
-msgid "IP Address"
-msgstr "IP Cím"
-
-msgctxt "#32005"
-msgid "Type"
-msgstr "Típus"
-
-msgctxt "#32006"
-msgid "State"
-msgstr "Állam"
 
 msgctxt "#32007"
 msgid "Driver"
@@ -284,9 +264,13 @@ msgctxt "#32010"
 msgid "Keyboard Layout"
 msgstr "Billentyűzetkiosztás"
 
+msgctxt "#32011"
+msgid "Language"
+msgstr "Nyelv"
+
 msgctxt "#32012"
-msgid "Sleep hard drive after (minutes)"
-msgstr "Merevlemezek leállítása (perc)"
+msgid "Select Action"
+msgstr "Művelet kiválasztása"
 
 msgctxt "#32013"
 msgid "Updates"
@@ -311,10 +295,6 @@ msgstr "Vezetéknélküli hálózatok"
 msgctxt "#32103"
 msgid "Wired Networks"
 msgstr "Vezetékes Hálózatok"
-
-msgctxt "#32104"
-msgid "VPN"
-msgstr "VPN"
 
 msgctxt "#32105"
 msgid "Active"
@@ -420,42 +400,6 @@ msgctxt "#32130"
 msgid "Domain #3"
 msgstr "Domain #3"
 
-msgctxt "#32131"
-msgid "VPN Type"
-msgstr "VPN Típus"
-
-msgctxt "#32132"
-msgid "Network Name"
-msgstr "Hálózat Név"
-
-msgctxt "#32133"
-msgid "VPN Server"
-msgstr "VPN Szerver"
-
-msgctxt "#32134"
-msgid "VPN DNS Domain"
-msgstr "VPN DNS Domain"
-
-msgctxt "#32135"
-msgid "VPN Cookie"
-msgstr "VPN Süti"
-
-msgctxt "#32136"
-msgid "Server Certificate"
-msgstr "Szerver Tanusítvány"
-
-msgctxt "#32137"
-msgid "Certificate Autority Certificate"
-msgstr "Tanúsítvány Hitelesítése"
-
-msgctxt "#32138"
-msgid "Certificate"
-msgstr "Tanúsítvány"
-
-msgctxt "#32139"
-msgid "Key"
-msgstr "Kulcs"
-
 msgctxt "#32140"
 msgid "Save"
 msgstr "Mentés"
@@ -476,10 +420,6 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Kapcsolódás"
 
-msgctxt "#32145"
-msgid "Unable to connect"
-msgstr "Kapcsolódás sikertelen"
-
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Rejtett Hálózati Név"
@@ -492,129 +432,13 @@ msgctxt "#32148"
 msgid "Wireless Network Username"
 msgstr "Vezetéknélküli Hálózat Felhasználói Név"
 
-msgctxt "#32149"
-msgid "Add VPN"
-msgstr "VPN hozzáadása"
-
 msgctxt "#32150"
 msgid "Edit"
 msgstr "Szerkeszt"
 
-msgctxt "#32151"
-msgid "Refuse EAP"
-msgstr "EAP visszautasítása"
-
-msgctxt "#32152"
-msgid "Refuse PAP"
-msgstr "PAP visszautasítása"
-
-msgctxt "#32153"
-msgid "Refuse CHAP"
-msgstr "CHAP visszautasítása"
-
-msgctxt "#32154"
-msgid "Refuse MS-CHAP"
-msgstr "MS-CHAP visszautasítása"
-
-msgctxt "#32155"
-msgid "Refuse MS-CHAP v2"
-msgstr "MS-CHAP v2 visszautasítása"
-
-msgctxt "#32156"
-msgid "Require MPPE"
-msgstr "MPPE megadása szükséges"
-
-msgctxt "#32157"
-msgid "Require MPPE (40 bit)"
-msgstr "MPPE (40 bit) megadása szükséges"
-
-msgctxt "#32158"
-msgid "Require MPPE (128 bit)"
-msgstr "MPPE (128 bit) megadása szükséges"
-
-msgctxt "#32159"
-msgid "Require Stateful MPPE"
-msgstr "Stateful MPPE megadása szükséges"
-
-msgctxt "#32160"
-msgid "Disable BSD Compression"
-msgstr "BSD tömörítés letiltása"
-
-msgctxt "#32161"
-msgid "Disable VJ Compression"
-msgstr "VJ tömörítés letiltása"
-
-msgctxt "#32162"
-msgid "LCP Echo Failure"
-msgstr "LCP Echo Hiba"
-
-msgctxt "#32163"
-msgid "LCP Echo Interval"
-msgstr "LCP Echo Intervallum"
-
-msgctxt "#32164"
-msgid "Disable Deflate Compression"
-msgstr "Deflate tömörítés letiltása"
-
-msgctxt "#32165"
-msgid "MTU"
-msgstr "MTU"
-
-msgctxt "#32166"
-msgid "NSCertType"
-msgstr "NSCertType"
-
-msgctxt "#32167"
-msgid "Proto"
-msgstr "Proto"
-
-msgctxt "#32168"
-msgid "Port"
-msgstr "Port"
-
-msgctxt "#32169"
-msgid "AuthUserPass"
-msgstr "AuthUserPass"
-
-msgctxt "#32170"
-msgid "AskPass"
-msgstr "AskPass"
-
-msgctxt "#32171"
-msgid "AuthNoCache"
-msgstr "AuthNoCache"
-
-msgctxt "#32172"
-msgid "TLSRemote"
-msgstr "TLSRemote"
-
-msgctxt "#32173"
-msgid "TLSAuth"
-msgstr "TLSAuth"
-
-msgctxt "#32174"
-msgid "TLSAuthDir"
-msgstr "TLSAuthDir"
-
-msgctxt "#32175"
-msgid "Auth"
-msgstr "Auth"
-
-msgctxt "#32176"
-msgid "CompLZO"
-msgstr "CompLZO"
-
-msgctxt "#32177"
-msgid "RemoteCertTls"
-msgstr "RemoteCertTls"
-
-msgctxt "#32178"
-msgid "ConfigFile"
-msgstr "ConfigFile"
-
-msgctxt "#32179"
-msgid "Update Available"
-msgstr "Frissítés elérhető"
+msgctxt "#32180"
+msgid "Would you like to update @DISTRONAME@ now?"
+msgstr "Akarod frissíteni az @DISTRONAME@-t?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -656,41 +480,13 @@ msgctxt "#32190"
 msgid "System Name"
 msgstr "Rendszer Név"
 
-msgctxt "#32191"
-msgid "Error"
-msgstr "Hiba"
-
-msgctxt "#32192"
-msgid "Unable to connect to Network"
-msgstr "Hálózat nem elérhető"
-
-msgctxt "#32193"
-msgid "Service"
-msgstr "Szolgáltatás"
-
-msgctxt "#32194"
-msgid "Restart Networking"
-msgstr "Hálózatkezelés újraindítása"
-
-msgctxt "#32195"
-msgid "Support"
-msgstr "Támogatás"
-
 msgctxt "#32196"
 msgid "About"
 msgstr "Névjegy"
 
-msgctxt "#32197"
-msgid "Update now"
-msgstr "Frissítés most"
-
 msgctxt "#32198"
 msgid "SSID"
 msgstr "SSID"
-
-msgctxt "#32199"
-msgid "If you would like to contribute to the OpenELEC project you can make a donation using [CR]PayPal, Flattr or Bitcoin. Donating is easy and takes only a few minutes."
-msgstr "Ha szeretne hozzájárulni a projekthez, ezt megteheti az alábbi formákba: [CR]PayPal, Flattr or Bitcoin. Az adakozás egyszerű és néhány perc alatt elvégezhető."
 
 msgctxt "#32200"
 msgid "Samba"
@@ -728,49 +524,41 @@ msgctxt "#32208"
 msgid "Hidden Wlan"
 msgstr "Rejtett Wlan"
 
-msgctxt "#32209"
-msgid "Proxy Server"
-msgstr "Proxy Szerver"
-
-msgctxt "#32210"
-msgid "Auto Proxy URL"
-msgstr "Auto Proxy URL"
-
-msgctxt "#32211"
-msgid "Proxy Servers"
-msgstr "Proxy Szerverek"
-
 msgctxt "#32212"
 msgid "Cancel"
 msgstr "Mégsem"
-
-msgctxt "#32213"
-msgid "Exit"
-msgstr "Kilépés"
-
-msgctxt "#32214"
-msgid "Upload Logfiles"
-msgstr "Logfájlok feltöltése"
-
-msgctxt "#32215"
-msgid "Invalid Email Address"
-msgstr "Érvénytelen Email cím"
 
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
 msgstr "Külső Megható automatikus megosztása"
 
+msgctxt "#32300"
+msgid "Welcome to @DISTRONAME@"
+msgstr "Üdvözli önt az @DISTRONAME@!"
+
 msgctxt "#32301"
 msgid "Welcome"
 msgstr "Üdvözlet"
+
+msgctxt "#32302"
+msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings.[CR][CR]To begin your @DISTRONAME@ experience, select your regional settings and your keyboard layout, then click Next."
+msgstr "Ez a varázsló végigvezet az @DISTRONAME@ telepítésén - beállítva a helyet, időzónát, és az internet csatlakozást.[CR][CR]Ezek a beállítások később meváltoztathatóak a Programok > @DISTRONAME@ Beállításoknál.[CR][CR]Az @DISTRONAME@ kezdéséhez adja meg a régió beállításokat, aztán kattintson a 'Következő' gombra."
 
 msgctxt "#32303"
 msgid "Next"
 msgstr "Következő"
 
+msgctxt "#32304"
+msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgstr "A hálózaton való könnyű azonosíthatósághoz az @DISTRONAME@ gépnek név megadása szükséges.[CR][CR]Érdemes valami jellemező nevet választani - pl. melyik szobában található - amiből látható hoy melyik gépről van szó.[CR][CR]Ez a név kerül használatra a hálózati szolgáltatásokban is, mint a Samba."
+
 msgctxt "#32305"
 msgid "Networking"
 msgstr "Hálózatkezelés"
+
+msgctxt "#32306"
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
+msgstr "Ahhoz hogy háttér-információk, bannerek, bélyegképek legyenek letöltve a filmekez és sorozatokhoz, és olyan online szolgáltatásokat használhass mint pl. a YouTube, az @DISTRONAME@ internethez való kapcsolódása szükséges. [CR][CR]Szintén internet kapcsolat szükséges az @DISTRONAME@ automatikus frissítéséhez."
 
 msgctxt "#32307"
 msgid "Select your Regional Settings:"
@@ -792,13 +580,13 @@ msgctxt "#32311"
 msgid "Sharing and Remote Access"
 msgstr "Megosztás és Távoli Elérés"
 
-msgctxt "#32314"
-msgid "enabled"
-msgstr "engedélyezve"
+msgctxt "#32312"
+msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr "Az @DISTRONAME@ támogatja az SSH távoli elérést. Ez azon haladó felhasználók számára hasznos akik az @DISTRONAME@ alatt futó operációs rendszer közvetlen elérését igénylik. Az alapértelmezett felhasználónév [COLOR blue]root[/COLOR] és az alapértelmezett jelszó [COLOR blue]@ROOT_PASSWORD@[/COLOR]"
 
-msgctxt "#32315"
-msgid "disabled"
-msgstr "letiltva"
+msgctxt "#32313"
+msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgstr "A fájlok számítógépek közötti megosztásához az  @DISTRONAME@ beépített samba szervert tartalmaz. Ez a samba szerver a helyi hálózatba integrálódik és kényelmesen elérhető akár a Windows Intézővel is."
 
 msgctxt "#32316"
 msgid "Configure Services:"
@@ -808,6 +596,10 @@ msgctxt "#32317"
 msgid "Thank you"
 msgstr "Köszönöm"
 
+msgctxt "#32318"
+msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
+msgstr "Az @DISTRONAME@ telepítése befejeződött és most elindul az Kodi ahol beállíthatja a médiatárát. Ehhez segítséget talál a wiki.kodi.tv címen.[CR][CR]Az @DISTRONAME@ fejlesztését egy dedikált csapat végzi akik a szabad idejüket áldozzák erre a feladatra. Mégha ez egy önkéntes projekt is, az internetes sávszélesség használat és a fejlesztői eszközök költséget generálnak ezért ha az @DISTRONAME@ hasznos az Ön számára, bármekkora adományért hálásak vagyunk.[CR][CR]Végül, reméljük annyira élvezi az @DISTRONAME@ használatát, mint amennyire mi élvezzük a készítését. Ha további segítségre van szüksége, hasznos linkeket találhat az weboldalunkon."
+
 msgctxt "#32319"
 msgid "Cron"
 msgstr "Cron"
@@ -816,14 +608,6 @@ msgctxt "#32320"
 msgid "Enable Cron"
 msgstr "Cron engedélyezése"
 
-msgctxt "#32321"
-msgid "Virtual Private Networks"
-msgstr "Virtuális Magánhálózatok"
-
-msgctxt "#32322"
-msgid "Add new VPN configuration"
-msgstr "ÚJ VPN hozzáadása"
-
 msgctxt "#32323"
 msgid "Reset to Defaults"
 msgstr "Alapértelmezett állapot visszaállítása"
@@ -831,6 +615,10 @@ msgstr "Alapértelmezett állapot visszaállítása"
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
 msgstr "Rendszerbeállítások visszaállítása"
+
+msgctxt "#32325"
+msgid "Reset @DISTRONAME@ to defaults"
+msgstr "Az @DISTRONAME@ beállításaink visszaállítása"
 
 msgctxt "#32326"
 msgid "Are you sure?"
@@ -852,10 +640,6 @@ msgctxt "#32331"
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-msgctxt "#32332"
-msgid "Address"
-msgstr "Cím"
-
 msgctxt "#32333"
 msgid "Connected: "
 msgstr "Csatlakoztatva:"
@@ -868,14 +652,6 @@ msgctxt "#32335"
 msgid "No"
 msgstr "Nem"
 
-msgctxt "#32336"
-msgid "Start Discovery"
-msgstr "Felfedezés kezdése"
-
-msgctxt "#32337"
-msgid "Stop Discovery"
-msgstr "Felfedezés befejezése"
-
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
 msgstr "Bluetooth adapter nem található"
@@ -883,18 +659,6 @@ msgstr "Bluetooth adapter nem található"
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
 msgstr "Bluetooth eszköz nem található. Kérjük állítsa a Bluetooth eszközt felfedezés módba[CR]és kezdje a keresést"
-
-msgctxt "#32340"
-msgid "Syslog"
-msgstr "Syslog"
-
-msgctxt "#32341"
-msgid "Enable Remote Syslog Server"
-msgstr "Távoli Syslog Szerver engedélyezése"
-
-msgctxt "#32342"
-msgid "Syslog Server IP Address"
-msgstr "Syslog Szerver IP Címe"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
@@ -904,10 +668,6 @@ msgctxt "#32344"
 msgid "Enable Bluetooth"
 msgstr "Bluetooth engedélyezése"
 
-msgctxt "#32345"
-msgid "Bluetooth daemon is not running!"
-msgstr "A Bluetooth szolgáltatás nem fut!"
-
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth letiltva."
@@ -916,21 +676,13 @@ msgctxt "#32358"
 msgid "Trust and Connect"
 msgstr "Párosít és Kapcsolódik"
 
-msgctxt "#32359"
-msgid "Support"
-msgstr "Támogatás"
-
-msgctxt "#32360"
-msgid "Please enter your email address"
-msgstr "Kérjük, adja meg az email címét"
-
-msgctxt "#32361"
-msgid "The following Informations are Invalid:"
-msgstr "A következő Információk Érvénytelenek:"
-
 msgctxt "#32362"
 msgid "Check for updates now:"
 msgstr "Frissítések azonnali keresése:"
+
+msgctxt "#32363"
+msgid "@DISTRONAME@"
+msgstr "@DISTRONAME@"
 
 msgctxt "#32364"
 msgid "Update available"
@@ -975,18 +727,6 @@ msgstr "Mentés Visszaállítása"
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Mentési Folyamat"
-
-msgctxt "#32376"
-msgid "Select a backup destination directory"
-msgstr "Válassza ki a mentés könyvárát"
-
-msgctxt "#32377"
-msgid "Select the backup file to restore"
-msgstr "Válassza ki a visszaállítandó mentés fájlt"
-
-msgctxt "#32378"
-msgid "The information you entered is incomplete"
-msgstr "A beadott információ nem teljes"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
