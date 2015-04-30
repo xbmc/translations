@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.xbmcbackup"
-    name="Backup" version="1.0.5" provider-name="robweber">
+    name="Backup" version="1.0.6" provider-name="robweber">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.httplib2" version="0.8.0" />
+    <import addon="script.module.oauth2client" version="1.4.7" />
+    <import addon="script.module.uritemplate" version="0.6" />
+    <import addon="script.module.yaml" version="3.11"/>
+    <import addon="script.module.googleapi" version="1.4.0" />
   </requires>
   <extension point="xbmc.python.script" library="default.py"> 
      <provides>executable</provides> 
@@ -15,7 +20,7 @@
     <summary lang="ca">Feu còpies de seguretat i restaureu la vostra base de dades de l'Kodi i dels fitxers de configuració en el cas de fallada o corrupció dels fitxers.</summary>
     <summary lang="cs">Zálohování a obnovení Kodi databáze a konfiguračních souborů v případě chyby nebo poškození souborů.</summary>
     <summary lang="da">Sikkerhedskopiér og genskab din Kodi database og konfigurationsfiler i tilfælde af et nedbrud eller en ødelagt fil.</summary>
-    <summary lang="de">Die Kodi Datenbank sichern und bei Dateiverlust oder Beschädigung wiederherstellen.</summary>
+    <summary lang="de">Die Kodi-Datenbank sichern und bei Dateiverlust oder Beschädigung wiederherstellen.</summary>
     <summary lang="el">Δημιουργήστε αντίγραφα ασφαλείας της βάσης δεδομένων και των ρυθμίσεων του Kodi για την πιθανότητα σφαλμάτων ή καταστροφής αρχείων.</summary>
     <summary lang="en">Backup and restore your Kodi database and configuration files in the event of a crash or file corruption.</summary>
     <summary lang="en_NZ">Backup and restore your Kodi database and configuration files in the event of a crash or file corruption.</summary>
