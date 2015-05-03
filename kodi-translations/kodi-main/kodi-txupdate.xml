@@ -3,13 +3,14 @@
   <projectdata>
     <projectname>xbmc-main</projectname>
     <longprojectname>Kodi Main</longprojectname>
-    <targetprojectname>update-test</targetprojectname>
+    <targetprojectname>kodi-main</targetprojectname>
     <support_email>http://trac.xbmc.org/</support_email>
     <http_cache_expire>60</http_cache_expire>
     <langdatabaseurl>https://raw.github.com/xbmc/translations/master/tool/lang-database/kodi-languages.json</langdatabaseurl>
     <min_completion>1%</min_completion>
     <rebrand>false</rebrand>
     <txlcode>$(OLDLCODE)</txlcode>
+    <targettxlcode>$(LCODE)</targettxlcode>
     <langteamformat>$(GUILNAME)</langteamformat>
     <baselcode>$(LCODE)</baselcode>
     <sourcelcode>en_GB</sourcelcode>
@@ -17,15 +18,15 @@
     <ForceTXUpd>false</ForceTXUpd>
   </projectdata>
   <resources>
-    <resource name="xbmc.core">
+    <resource name="kodi.core">
       <TXname>xbmc-core</TXname>
       <TargetTXname>kodi-core</TargetTXname>
       <upstreamLangURL>https://raw.githubusercontent.com/xbmc/repo-resources/isengard/resource.language.$(LOWLCODE)/resources/strings.po</upstreamLangURL>
       <upstreamAddonURL>https://raw.githubusercontent.com/xbmc/repo-resources/isengard/resource.language.$(LOWLCODE)/addon.xml</upstreamAddonURL>
       <upstreamLangSRCURL>https://raw.githubusercontent.com/xbmc/xbmc/master/addons/resource.language.$(LOWLCODE)/resources/strings.po</upstreamLangSRCURL>
       <upstreamAddonSRCURL>https://raw.githubusercontent.com/xbmc/xbmc/master/addons/resource.language.$(LOWLCODE)/addon.xml</upstreamAddonSRCURL>
-      <localLangPath>xbmc-main/resource.language.$(LOWLCODE)/resources/strings.po</localLangPath>
-      <localAddonPath>xbmc-main/resource.language.$(LOWLCODE)/addon.xml</localAddonPath>
+      <localLangPath>kodi.core/resource.language.$(LOWLCODE)/resources/strings.po</localLangPath>
+      <localAddonPath>kodi.core/resource.language.$(LOWLCODE)/addon.xml</localAddonPath>
     </resource>
     <resource name="repository.xbmc.org">
       <TXname>repository-xbmc-org</TXname>

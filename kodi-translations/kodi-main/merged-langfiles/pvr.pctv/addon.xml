@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="pvr.pctv"
+  version="0.1.7"
+  name="PCTV Systems Client"
+  provider-name="PCTV Systems">
+  <requires>
+    <c-pluff version="0.1"/>
+    <import addon="xbmc.pvr" version="1.9.6"/>
+  </requires>
+  <extension
+    point="xbmc.pvrclient"
+    library_linux="pvr.pctv.so"
+    library_osx="pvr.pctv.dylib"
+    library_freebsd="pvr.pctv.so"
+    library_windx="pvr.pctv.dll"
+    library_android="libpvr.pctv.so" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">PVR Client to connect PCTV Systems Broadway to Kodi</summary>
+    <description lang="en">PCTV Systems frontend. Supporting streaming of Live TV &amp; Recordings, EPG View, Timers.</description>
+    <disclaimer lang="en">This is unstable software! The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>

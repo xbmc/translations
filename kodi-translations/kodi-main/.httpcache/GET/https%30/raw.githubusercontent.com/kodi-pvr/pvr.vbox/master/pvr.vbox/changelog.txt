@@ -1,0 +1,55 @@
+1.0.0
+	- fixed some potential crashes when shutting down Kodi or restarting the addon
+	- speed up shutdown when a guide retrieval is in process
+
+0.9.9
+	- added a small compatibility layer to enable building on Android which lacks some C++11 features
+
+0.9.8
+	- fixed GCC and Clang builds
+
+0.9.7
+	- fixed some more signal status values between channel switches
+	- adjusted the signal strength algorithm
+	- fixed a crash when loading certain recordings
+	- linked recordings with their respective EPG events so the "currently recording" icon is properly displayed in the EPG grid
+	- properly ignore recordings that are in an error state
+	- refactored the port settings to take advantage of the new API
+	- added ability to watch and actually delete certain external recordings
+
+0.9.6
+	- fixed building on Mac OS X
+
+0.9.5
+	- fixed some issues with the timeshift buffer
+	- fixed Linux build (thanks dhead666)
+	- changed so that recordings without an ID (mostly external ones) are not visible since they can't be deleted
+	- 
+0.9.4
+	- fixed compatibility with older tinyxml2 libraries
+	- fixed Debian packaging
+	- reshuffled some code
+	- fixed bogus signal status values between channel switches
+	- fixed a bug which caused the addon to require a restart everytime the addon settings dialog was opened and closed
+
+0.9.3
+	- greatly improve Linux compatibility
+	- fixed a bunch of issues found by static analysis
+	- actually use the "Port" setting
+	- fixed a crash when the VBox has external recordings
+	- fixed a bug in the timeshift buffer which could lead to infinite buffering
+
+0.9.2
+	- changed the update loop to only trigger updates when something has actually changed
+	- changed the minimum VBox software version to 2.47.105
+	- show modulation in the signal status
+
+0.9.1
+	- fixed initial stuttering when timeshift is enabled
+	- fixed signal status being broken after a few seconds
+	- fixed recordings being accidentally removed when cancelled
+	- fixed scheduling recordings for channels without EPG data or with only external EPG data
+	- added proper way to notify Kodi of any changes retrieved during the update loop
+
+0.9.0
+	- initial release
