@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-17 18:42+0000\n"
+"PO-Revision-Date: 2015-05-18 20:25+0000\n"
 "Last-Translator: Kiril <neohidra@gmail.com>\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/projects/p/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,10 @@ msgctxt "#5"
 msgid "Settings"
 msgstr "Настройки"
 
-#: Unknown xbmc/windows/GUIWindowFileManager.cpp
+#: Unknown xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
 msgid "Kodi SVN"
 msgstr "Kodi SVN"
@@ -449,19 +452,19 @@ msgstr "Потвърдете изтриването"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#123"
 msgid "Would you like to copy the selected file(s)?"
-msgstr ""
+msgstr "Да бъде ли копиран избрания файл(ове)?"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#124"
 msgid "Would you like to move the selected file(s)?"
-msgstr ""
+msgstr "Да бъде ли преместен избрания файл(ове)?"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#125"
 msgid ""
 "Would you like to delete the selected file(s)?[CR]Warning - this action "
 "can't be undone!"
-msgstr ""
+msgstr "Да бъде ли изтрит избрания файл(ове)??[CR]Внимание - необратимо е!"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
@@ -747,6 +750,7 @@ msgctxt "#188"
 msgid "Select all"
 msgstr "Избери всички"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#189"
 msgid "Scanning media information"
 msgstr "Сканиране за информация"
@@ -767,11 +771,15 @@ msgctxt "#193"
 msgid "Scan"
 msgstr "Сканирай"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#194"
 msgid "Searching..."
 msgstr "Търсене..."
 
 #: xbmc/addons/guidialogaddoninfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#195"
 msgid "No information found!"
 msgstr "Не е открита информация!"
@@ -975,7 +983,7 @@ msgstr "Изчисти плейлиста след приключване"
 #: system/settings/settings.xml
 msgctxt "#240"
 msgid "Display mode"
-msgstr ""
+msgstr "Режим за изобразяване"
 
 msgctxt "#241"
 msgid "Full screen #%d"
@@ -1050,6 +1058,8 @@ msgid "Fetching CD information"
 msgstr "Изтегляне на информация за диска"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#257"
 msgid "Error"
@@ -1163,6 +1173,9 @@ msgctxt "#283"
 msgid "Search results"
 msgstr "Резултат от търсенето"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#284"
 msgid "No results found"
 msgstr "Не са открити елементи"
@@ -1282,6 +1295,7 @@ msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=авто)"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#313"
 msgid "Cleaning database"
 msgstr "Почистване на базата данни"
@@ -1362,6 +1376,7 @@ msgctxt "#332"
 msgid "Error compressing database"
 msgstr "Възникна грешка при компресирането на базата данни"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#333"
 msgid "Do you want to clean the library?"
 msgstr "Желаете ли библиотеката да бъде почистена?"
@@ -1792,6 +1807,7 @@ msgctxt "#425"
 msgid "No album information found"
 msgstr "Не е открита информация за албума"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#426"
 msgid "No CD information found"
 msgstr "Не е открита информация за диска"
@@ -1823,17 +1839,19 @@ msgstr "Премахване на филм от библиотеката"
 
 msgctxt "#433"
 msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr ""
+msgstr "Желаете ли премахването от библиотеката на[CR]\"%s\"?"
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
 msgid "From %s at %i %s"
 msgstr "от \"%s\" (%i%s)"
 
+#: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Няма оптично устройство"
 
+#: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
 msgstr "Имате нужда от оптично устройство за това видео"
@@ -1993,6 +2011,9 @@ msgctxt "#476"
 msgid "Music & video"
 msgstr "Музика и видео"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#477"
 msgid "Unable to load playlist"
@@ -2077,9 +2098,10 @@ msgctxt "#499"
 msgid "Unable to connect to online lookup service"
 msgstr "Свързването с интернет услугата за търсене не е възможно"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#500"
 msgid "Downloading album information failed"
-msgstr "Свалянето на информация за албума се провали"
+msgstr "Свалянето на информация за албум се провали"
 
 msgctxt "#501"
 msgid "Looking for album names..."
@@ -2663,7 +2685,7 @@ msgctxt "#646"
 msgid "Remove from library"
 msgstr "Премахни от библиотеката"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/VideoDatabase.cpp
 msgctxt "#647"
 msgid "Export video library"
 msgstr "Изнасяне на видео библиотека"
@@ -2769,8 +2791,8 @@ msgstr "Подробно описване на [B]SMB[/B] библиотекат
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#670"
-msgid "Verbose logging for the [B[libcURL[/B] library (HTTP(S), DAV)"
-msgstr "Подробно описване на [B]CURL[/B] библиотеката (HTTP(S), DAV)"
+msgid "Verbose logging for the [B]libcURL[/B] library (HTTP(S), DAV)"
+msgstr "Подробно описване на [B]libcURL[/B] библиотеката (HTTP(S), DAV)"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#672"
@@ -2814,8 +2836,8 @@ msgstr "Подробно описване на [B]libCEC[/B] библиотек�
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#680"
-msgid "Verbose logging for the [B]Video[B] component"
-msgstr "Подробно описване на [B]Video[B] компонента"
+msgid "Verbose logging for the [B]Video[/B] component"
+msgstr "Подробно описване на [B]Video[/B] компонента"
 
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3197,7 +3219,7 @@ msgstr "Достъп до интернет"
 
 msgctxt "#799"
 msgid "Library update"
-msgstr ""
+msgstr "Обновяване на библиотека"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
@@ -3668,11 +3690,12 @@ msgctxt "#1272"
 msgid "Use password protection"
 msgstr "Защити с парола"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/network/NetworkServices.cpp
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "AirPlay"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#1274"
 msgid "AirTunes"
 msgstr "AirTunes"
@@ -4099,6 +4122,7 @@ msgstr ""
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#2103"
 msgid "Add-on error"
 msgstr ""
@@ -4669,7 +4693,7 @@ msgctxt "#12340"
 msgid "Enter new password"
 msgstr "Въведете нова парола"
 
-#: xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
 msgstr "Въведете отново паролата"
@@ -4685,6 +4709,7 @@ msgid "retries left "
 msgstr "оставащи опита"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Въведените пароли не съвпадат."
@@ -4958,7 +4983,7 @@ msgstr "Активна ли е друга сесия? Вероятно чрез 
 #: xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable hard drive"
-msgstr ""
+msgstr "Монтиран сменяем твърд диск"
 
 #: xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
@@ -5076,7 +5101,7 @@ msgstr ""
 #: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save this resolution?"
-msgstr ""
+msgstr "Запазване на резолюцията?"
 
 #: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
@@ -5566,6 +5591,7 @@ msgctxt "#13345"
 msgid "Switch LED off on playback"
 msgstr "Изключи LED при възпроизвеждане"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13346"
 msgid "Movie information"
 msgstr "Информация за филма"
@@ -6169,10 +6195,12 @@ msgctxt "#13613"
 msgid "Harmony remote"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13620"
 msgid "Apple Remote error"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13621"
 msgid "Apple Remote support couldn't be enabled."
 msgstr ""
@@ -6408,6 +6436,9 @@ msgctxt "#14056"
 msgid "Stop scan"
 msgstr "Спри сканирането"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
 msgstr "Невъзможно, докато тече сканиране за информация"
@@ -6590,7 +6621,7 @@ msgstr "Възпроизвеждане"
 #: system/settings/settings.xml
 msgctxt "#14099"
 msgid "Eject disc when the CD ripping is complete"
-msgstr ""
+msgstr "тваряне на дисковото устройство след завършване"
 
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#14100"
@@ -6639,7 +6670,7 @@ msgstr "Формат на часа"
 #: system/settings/settings.xml
 msgctxt "#14108"
 msgid "Use 12 / 24-hour format"
-msgstr ""
+msgstr "Ползвай 12 / 24-часов формат"
 
 #: system/settings/settings.xml
 msgctxt "#14109"
@@ -6651,7 +6682,7 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr "Дълъг формат на датата"
 
-#: xbmc/video/VideoDatabase.cpp
+#: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr "Изнасянето на %i елемента се провали"
@@ -6827,7 +6858,7 @@ msgstr "Възпроизведи медия от диск"
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 msgctxt "#16008"
 msgid "Enter new title"
-msgstr "Въведете ново заглавие"
+msgstr "Въведете нов етикет"
 
 msgctxt "#16009"
 msgid "Enter the movie name"
@@ -6915,6 +6946,7 @@ msgctxt "#16028"
 msgid "Enter value"
 msgstr "Въведете стойност"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
 msgstr ""
@@ -6929,11 +6961,11 @@ msgstr "Няма съвпадаща песен в библиотеката."
 
 msgctxt "#16032"
 msgid "Couldn't initialise database."
-msgstr ""
+msgstr "Базата данни не може да бъде инициализира."
 
 msgctxt "#16033"
 msgid "Couldn't open database."
-msgstr ""
+msgstr "Базата данни не може да бъде отворена."
 
 msgctxt "#16034"
 msgid "Couldn't get songs from database."
@@ -7020,7 +7052,7 @@ msgctxt "#16202"
 msgid ""
 "Failed to copy at least one file.[CR]Check the log for more information "
 "about this message."
-msgstr ""
+msgstr "Копирането на поне един файл се провали.[CR]Проверете журнала за повече информация."
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16203"
@@ -7032,7 +7064,7 @@ msgctxt "#16204"
 msgid ""
 "Failed to move at least one file.[CR]Check the log for more information "
 "about this message."
-msgstr ""
+msgstr "Преместването на поне един файл се провали.[CR]Проверете журнала за повече информация."
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16205"
@@ -7044,7 +7076,7 @@ msgctxt "#16206"
 msgid ""
 "Failed to delete at least one file.[CR]Check the log for more information "
 "about this message."
-msgstr ""
+msgstr "Изтриването на поне един файл се провали.[CR]Проверете журнала за повече информация."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -7405,10 +7437,16 @@ msgctxt "#19032"
 msgid "Timeline"
 msgstr "Времева линия"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/PVRManager.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19033"
 msgid "Information"
 msgstr "Информация"
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Каналът вече се записва"
@@ -7419,6 +7457,8 @@ msgid ""
 "message."
 msgstr ""
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
 "This recording can't be played.[CR]Check the log for more information about "
@@ -7430,6 +7470,7 @@ msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "Показвай качеството на сигнала"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
 msgstr "Не се поддържа от ПВР сървъра."
@@ -7503,7 +7544,7 @@ msgctxt "#19054"
 msgid "Hide channel"
 msgstr "Скрий канала"
 
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/epg/EpgInfoTag.cpp xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19055"
 msgid "No information available"
 msgstr "Няма налична информация"
@@ -7555,6 +7596,7 @@ msgctxt "#19066"
 msgid "Channel icons"
 msgstr "Икони на канала"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Събитието вече се записва"
@@ -7730,6 +7772,7 @@ msgctxt "#19108"
 msgid "Framerate {fallback}"
 msgstr ""
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
 "Couldn't save timer.[CR]Check the log for more information about this "
@@ -7742,6 +7785,7 @@ msgid ""
 "information."
 msgstr ""
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error.[CR]Check the log for more information about this message."
@@ -7961,6 +8005,7 @@ msgctxt "#19163"
 msgid "Recordings"
 msgstr "Записи"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
 "Can't start recording.[CR]Check the log for more information about this "
@@ -8100,10 +8145,12 @@ msgctxt "#19191"
 msgid "PVR service"
 msgstr "ПВР услуга"
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "Свързаните ПВР сървъри не поддържат сканиране на канали."
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
 "The channel scan can't be started.[CR]Check the log for more information "
@@ -8197,6 +8244,7 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "Въведете валиден адрес на новия канал"
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
 msgstr "ПВР сървъра не поддържа броячи."
@@ -8410,10 +8458,12 @@ msgctxt "#19263"
 msgid "Locked channel. Enter PIN:"
 msgstr "Каналът е заключен. Въведете код:"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19264"
 msgid "Incorrect PIN"
 msgstr "Неправилен код"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19265"
 msgid "The entered PIN number was incorrect."
 msgstr "Въведеният код е неправилен."
@@ -9393,15 +9443,15 @@ msgstr "Показвай програмите в главното меню"
 
 msgctxt "#20083"
 msgid "Show music information"
-msgstr ""
+msgstr "Показвай инф. за текущия музикален файл"
 
 msgctxt "#20084"
 msgid "Show weather information"
-msgstr ""
+msgstr "Показвай текущите метеорологични условия"
 
 msgctxt "#20085"
 msgid "Show system information"
-msgstr ""
+msgstr "Показвай информация за системата"
 
 msgctxt "#20086"
 msgid "Show available disk space C: E: F:"
@@ -9413,7 +9463,7 @@ msgstr "Показвай наличното място на дисковете E
 
 msgctxt "#20088"
 msgid "Weather information"
-msgstr ""
+msgstr "Информация за времето"
 
 msgctxt "#20089"
 msgid "Drive space free"
@@ -9449,12 +9499,13 @@ msgstr "Екран за влизане"
 
 msgctxt "#20097"
 msgid "Fetching album information"
-msgstr ""
+msgstr "Изтегляне на информация за албум"
 
 msgctxt "#20098"
 msgid "Fetching information for album"
-msgstr ""
+msgstr "Изтегляне на инф. за албум"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
 msgstr ""
@@ -9867,7 +9918,7 @@ msgctxt "#20195"
 msgid "Change information provider"
 msgstr "Промени източника на информация"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#20196"
 msgid "Export music library"
 msgstr "Изнасяне на музикалната библиотека"
@@ -9881,9 +9932,10 @@ msgctxt "#20198"
 msgid "No artist found!"
 msgstr "Не е намерен артист!"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
-msgstr ""
+msgstr "Свалянеto на информация за артист се провали"
 
 #: system/settings/settings.xml
 msgctxt "#20220"
@@ -9928,7 +9980,7 @@ msgstr "Снимки от Android"
 
 msgctxt "#20244"
 msgid "Android apps"
-msgstr ""
+msgstr "Приложения от Android"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -10157,6 +10209,7 @@ msgctxt "#20348"
 msgid "Directors"
 msgstr "Режисьори"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20349"
 msgid "No video files found in this path!"
 msgstr "Не са намерени видео файлове в този път!"
@@ -10599,10 +10652,12 @@ msgctxt "#20447"
 msgid "Ignore and refresh from Internet?"
 msgstr "Игнориране и обновяване от интернет?"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
 msgid "Couldn't download information"
 msgstr ""
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "Няма връзка с отдалечения сървър"
@@ -10967,7 +11022,7 @@ msgstr "Станд. източник на информация за музика
 #: system/settings/settings.xml
 msgctxt "#21416"
 msgid "Select first unwatched TV show season / episode"
-msgstr ""
+msgstr "Маркирай първия неизгледан сезон / епизод"
 
 #: system/settings/settings.xml
 msgctxt "#21417"
@@ -11546,6 +11601,7 @@ msgid "Discography"
 msgstr "Дискография"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#21889"
 msgid "Searching artist"
 msgstr "Търсене на артист"
@@ -11843,6 +11899,7 @@ msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
 msgstr "Натиснете \"Добре\", когато възпроизвеждането свърши"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24000"
 msgid "Add-on"
@@ -11987,6 +12044,7 @@ msgctxt "#24029"
 msgid "Service for weather information"
 msgstr "Услуга за метеорологична информация"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 msgctxt "#24030"
 msgid "This add-on can't be configured"
 msgstr "Добавка не може да бъде конфигурирана"
@@ -12006,6 +12064,7 @@ msgctxt "#24033"
 msgid "Install from repository"
 msgstr "Инсталиране от хранилище"
 
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "Провери за обновявания"
@@ -12213,19 +12272,19 @@ msgstr ""
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24077"
 msgid "Verifying downloaded add-on..."
-msgstr ""
+msgstr "Потвърждаване на свалената добавка..."
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24078"
 msgid "Downloading add-on..."
-msgstr ""
+msgstr "Сваляне на добавката..."
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24079"
 msgid "Installing add-on dependencies..."
-msgstr "Инсталиране на изсквани добавки..."
+msgstr "Инсталиране на изисквани добавки..."
 
 msgctxt "#24080"
 msgid "Try to reconnect?"
@@ -12284,6 +12343,20 @@ msgstr "Заключи диспечера на добавки"
 #: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
+msgstr "Добавката не може да бъде изключена"
+
+#. Used as title of the progress dialog when checking for add-on updates in
+#. add-on browser
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24092"
+msgid "Checking for add-on updates"
+msgstr ""
+
+#. Used as a text in the progress dialog when checking for add-on updates. %s
+#. contains repository name
+#: xbmc/addons/Repository.cpp
+msgctxt "#24093"
+msgid "Checking %s..."
 msgstr ""
 
 #: xbmc/addons/guidialogaddoninfo.cpp
@@ -12545,7 +12618,7 @@ msgstr "Работещи"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24995"
 msgid "Orphaned dependencies"
-msgstr ""
+msgstr "Ненужни изисквания"
 
 #: xbmc/addons/CGUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -12770,7 +12843,7 @@ msgstr "Списък карта %s категория"
 
 msgctxt "#33034"
 msgid "36-hour"
-msgstr ""
+msgstr "36 Часа"
 
 msgctxt "#33035"
 msgid "Maps"
@@ -12792,13 +12865,13 @@ msgstr "%s ден"
 #: dialogs/GUIDialogMediaSource.cpp
 msgctxt "#33039"
 msgid "%s streams"
-msgstr ""
+msgstr "%s потока"
 
 #. Used in the media source dialog. Will result in "HDHomerun Devices"
 #: dialogs/GUIDialogMediaSource.cpp
 msgctxt "#33040"
 msgid "%s devices"
-msgstr ""
+msgstr "%s устройства"
 
 #: Unknown
 msgctxt "#33049"
@@ -12976,22 +13049,23 @@ msgctxt "#33084"
 msgid "Auto login"
 msgstr "Автоматично влизане"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33100"
 msgid "Failed to start"
 msgstr "Стартирането се провали"
 
-#: xbmc/network/network.cpp system/settings/settings.xml
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
+#: system/settings/settings.xml
 msgctxt "#33101"
 msgid "Web server"
 msgstr "Уеб сървър"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33102"
 msgid "Event server"
 msgstr ""
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Комуникация с отдалечен сървър"

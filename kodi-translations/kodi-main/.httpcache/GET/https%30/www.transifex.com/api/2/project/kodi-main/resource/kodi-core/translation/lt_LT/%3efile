@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-18 14:59+0000\n"
+"PO-Revision-Date: 2015-05-19 07:08+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,10 @@ msgctxt "#5"
 msgid "Settings"
 msgstr "Nustatymai"
 
-#: Unknown xbmc/windows/GUIWindowFileManager.cpp
+#: Unknown xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
 msgid "Kodi SVN"
 msgstr "Kodi SVN"
@@ -748,6 +751,7 @@ msgctxt "#188"
 msgid "Select all"
 msgstr "Pasirinkti viską"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#189"
 msgid "Scanning media information"
 msgstr "Nuskaitoma media informacija"
@@ -768,11 +772,15 @@ msgctxt "#193"
 msgid "Scan"
 msgstr "Nuskaityti"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#194"
 msgid "Searching..."
 msgstr "Ieškoma..."
 
 #: xbmc/addons/guidialogaddoninfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#195"
 msgid "No information found!"
 msgstr "Informacijos nerasta!"
@@ -1051,6 +1059,8 @@ msgid "Fetching CD information"
 msgstr "Parsiunčiama CD informacija"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#257"
 msgid "Error"
@@ -1164,6 +1174,9 @@ msgctxt "#283"
 msgid "Search results"
 msgstr "Paieškos rezultatai"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#284"
 msgid "No results found"
 msgstr "Rezultatų nerasta"
@@ -1283,6 +1296,7 @@ msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=auto)"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#313"
 msgid "Cleaning database"
 msgstr "Duomenų bazės valymas"
@@ -1363,6 +1377,7 @@ msgctxt "#332"
 msgid "Error compressing database"
 msgstr "Duomenų bazės glaudinimo klaida"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#333"
 msgid "Do you want to clean the library?"
 msgstr "Ar norite išvalyti biblioteką?"
@@ -1793,6 +1808,7 @@ msgctxt "#425"
 msgid "No album information found"
 msgstr "Nerasta albumo duomenų"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#426"
 msgid "No CD information found"
 msgstr "Nerasta CD duomenų"
@@ -1831,10 +1847,12 @@ msgctxt "#434"
 msgid "From %s at %i %s"
 msgstr "Iš %s - %i %s"
 
+#: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Neaptiktas joks optinių diskų įrenginys"
 
+#: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
 msgstr "Reikalingas optinių diskų įrenginys, norint atkurti šį vaizdo įrašą"
@@ -1994,6 +2012,9 @@ msgctxt "#476"
 msgid "Music & video"
 msgstr "Muzika ir vaizdas"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#477"
 msgid "Unable to load playlist"
@@ -2078,6 +2099,7 @@ msgctxt "#499"
 msgid "Unable to connect to online lookup service"
 msgstr "Nepavyko prisijungti prie paieškos serverio"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#500"
 msgid "Downloading album information failed"
 msgstr "Nepavyko atsiųsti albumo duomenų"
@@ -2664,7 +2686,7 @@ msgctxt "#646"
 msgid "Remove from library"
 msgstr "Pašalinti iš bibliotekos"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/VideoDatabase.cpp
 msgctxt "#647"
 msgid "Export video library"
 msgstr "Eksportuoti vaizdo biblioteką"
@@ -2770,8 +2792,8 @@ msgstr "Išsamus [B]SMB[/B] bibliotekos žurnalo rašymas"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#670"
-msgid "Verbose logging for the [B[libcURL[/B] library (HTTP(S), DAV)"
-msgstr "Išsamus [B[libcURL[/B] bibliotekos (HTTP(S), DAV) žurnalo rašymas"
+msgid "Verbose logging for the [B]libcURL[/B] library (HTTP(S), DAV)"
+msgstr "Išsamus [B]libcURL[/B] bibliotekos (HTTP(S), DAV) žurnalo rašymas"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#672"
@@ -2815,7 +2837,7 @@ msgstr "Išsamus [B]libCEC[/B] bibliotekos žurnalo rašymas"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#680"
-msgid "Verbose logging for the [B]Video[B] component"
+msgid "Verbose logging for the [B]Video[/B] component"
 msgstr "Išsamus [B]vaizdo[/B] komponento žurnalo rašymas"
 
 msgctxt "#700"
@@ -3669,11 +3691,12 @@ msgctxt "#1272"
 msgid "Use password protection"
 msgstr "Naudoti apsaugą slaptažodžiu"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/network/NetworkServices.cpp
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "AirPlay"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#1274"
 msgid "AirTunes"
 msgstr "AirTunes"
@@ -4100,6 +4123,7 @@ msgstr "%s klaida"
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#2103"
 msgid "Add-on error"
 msgstr "Priedo klaida"
@@ -4670,7 +4694,7 @@ msgctxt "#12340"
 msgid "Enter new password"
 msgstr "Įveskite naują slaptažodį"
 
-#: xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
 msgstr "Pakartokite naują slaptažodį"
@@ -4686,6 +4710,7 @@ msgid "retries left "
 msgstr "likę bandymai"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Įvesti slaptažodžiai nesutampa."
@@ -5567,6 +5592,7 @@ msgctxt "#13345"
 msgid "Switch LED off on playback"
 msgstr "Išjungti LED atkūrimo metu"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13346"
 msgid "Movie information"
 msgstr "Filmo informacija"
@@ -5908,7 +5934,7 @@ msgstr "Atkurti tik šį"
 #: system/settings/settings.xml
 msgctxt "#13435"
 msgid "Enable HQ scalers for scaling above"
-msgstr ""
+msgstr "Įjungti HQ keitiklius raiškos keitimui virš"
 
 #: xbmc/settings/GUISettings.cpp
 msgctxt "#13436"
@@ -5943,7 +5969,7 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If "
 "disabled the CPU will be used instead. Older Radeon Cards tend to segfault "
 "with this enabled."
-msgstr ""
+msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spartinimą MPEG-(1 / 2) kodekams. Kai išjungta, bus naudojamas CPU. Senesnės Radeon grafinės plokštės gali veikti netinkamai, kai įjungta ši parinktis."
 
 #: system/settings/settings.xml
 msgctxt "#13443"
@@ -5958,7 +5984,7 @@ msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead. Some ION hardware has problems with "
 "this being enabled by default."
-msgstr ""
+msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spartinimą MPEG-4 kodekui. Kaii išjungta, bus naudojamas procesorius. Kai kuri ION aparatinė įranga susiduria su problemomis, kai ši parinktis įjungta."
 
 #: system/settings/settings.xml
 msgctxt "#13445"
@@ -5973,7 +5999,7 @@ msgid ""
 "Enable this option to use hardware acceleration for VC-1 based codecs. If "
 "disabled the CPU will be used instead. AMD hardware with VDPAU can't decode "
 "VC-1 Simple."
-msgstr ""
+msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spartinimą VC-1 paremtiems kodekams. Kai išjungta, bus naudojamas procesorius. AMD aparatinė įranga su VDPAU negali iškoduoti VC-1 Simple."
 
 #: system/settings/settings.xml
 msgctxt "#13447"
@@ -5988,7 +6014,7 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If "
 "disabled the CPU will be used instead. Some MPEG-2 videos might have green "
 "artifacts."
-msgstr ""
+msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spartinimą MPEG-(1 / 2) kodekams. Kai išjungta, bus naudojamas CPU. Kai kurie MPEG-2 vaizdo įrašai gali turėti žalių artefaktų."
 
 #: system/settings/settings.xml
 msgctxt "#13449"
@@ -6017,7 +6043,7 @@ msgid ""
 "Enable this option to use hardware acceleration for VC-1 based codecs. If "
 "disabled the CPU will be used instead. Especially VC-1 interlaced fails hard"
 " on Intel hardware."
-msgstr ""
+msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spartinimą VC-1 paremtiems kodekams. Kai išjungta, bus naudojamas CPU. Labai dažnai su VC-1 Interlaced kyla problemų Intel aparatinei įrangai."
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6170,10 +6196,12 @@ msgctxt "#13613"
 msgid "Harmony remote"
 msgstr "Harmony nuotolinio valdymo pultelis"
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13620"
 msgid "Apple Remote error"
 msgstr "Apple nuotolinio valdymo pultelio klaida"
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13621"
 msgid "Apple Remote support couldn't be enabled."
 msgstr "Apple nuotolinio valdymo pultelio palaikymas negali būti įjungtas."
@@ -6409,6 +6437,9 @@ msgctxt "#14056"
 msgid "Stop scan"
 msgstr "Sustabdyti nuskaitymą"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
 msgstr "Neįmanoma, kai nuskaitoma media informacija"
@@ -6652,7 +6683,7 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr "Ilgas datos formatas"
 
-#: xbmc/video/VideoDatabase.cpp
+#: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr "Nepavyko išeksportuoti elementų: %i"
@@ -6916,6 +6947,7 @@ msgctxt "#16028"
 msgid "Enter value"
 msgstr "Įveskite reikšmę"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
 msgstr "Daugiau informacijos apie šį pranešimą galite rasti žurnale."
@@ -7406,10 +7438,16 @@ msgctxt "#19032"
 msgid "Timeline"
 msgstr "Chronologija"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/PVRManager.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19033"
 msgid "Information"
 msgstr "Informacija"
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Šio kanalo įrašymas jau pradėtas"
@@ -7420,6 +7458,8 @@ msgid ""
 "message."
 msgstr "Neįmanoma atkurti %s.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
 "This recording can't be played.[CR]Check the log for more information about "
@@ -7431,6 +7471,7 @@ msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "Rodyti signalo kokybę"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
 msgstr "Nepalaiko PVR posistemė."
@@ -7504,7 +7545,7 @@ msgctxt "#19054"
 msgid "Hide channel"
 msgstr "Nerodyti kanalo"
 
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/epg/EpgInfoTag.cpp xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19055"
 msgid "No information available"
 msgstr "Nėra informacijos"
@@ -7556,6 +7597,7 @@ msgctxt "#19066"
 msgid "Channel icons"
 msgstr "Kanalų piktogramos"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Šis įvykis jau įrašytas."
@@ -7731,6 +7773,7 @@ msgctxt "#19108"
 msgid "Framerate {fallback}"
 msgstr "Kadrų dažnis {atsarginis}"
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
 "Couldn't save timer.[CR]Check the log for more information about this "
@@ -7741,12 +7784,13 @@ msgctxt "#19110"
 msgid ""
 "An unexpected error occurred.[CR]Try again later or check the log for more "
 "information."
-msgstr ""
+msgstr "Įvyko netikėta klaida.[CR]Bandykite vėliau arba patikrinkite žurnalą, norėdami gauti daugiau informacijos."
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error.[CR]Check the log for more information about this message."
-msgstr ""
+msgstr "PVR posistemės klaida.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -7899,7 +7943,7 @@ msgctxt "#19147"
 msgid ""
 "The PVR backend does not support this action.[CR]Check the log for more "
 "information about this message."
-msgstr ""
+msgstr "PVR posistemė nepalaiko šio veiksmo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#19148"
 msgid "Channel"
@@ -7962,11 +8006,12 @@ msgctxt "#19163"
 msgid "Recordings"
 msgstr "Įrašymai"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
 "Can't start recording.[CR]Check the log for more information about this "
 "message."
-msgstr ""
+msgstr "Neįmanoma pradėti įrašymo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#19165"
 msgid "Switch"
@@ -8101,15 +8146,17 @@ msgctxt "#19191"
 msgid "PVR service"
 msgstr "PVR paslauga"
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "Nei viena iš prijungtų PVR posistemių nepalaiko kanalų nuskaitymo."
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
 "The channel scan can't be started.[CR]Check the log for more information "
 "about this message."
-msgstr ""
+msgstr "Neįmanoma pradėti kanalų paieškos.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -8198,6 +8245,7 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "Įvesti galiojantį naujo kanalo URL"
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
 msgstr "PVR posistemė nepalaiko laikmačių."
@@ -8235,7 +8283,7 @@ msgctxt "#19223"
 msgid ""
 "No PVR add-on could be enabled.[CR]Check your settings or the log for more "
 "information."
-msgstr ""
+msgstr "Neįmanoma įjungti jokio PVR priedo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -8411,10 +8459,12 @@ msgctxt "#19263"
 msgid "Locked channel. Enter PIN:"
 msgstr "Užrakintas kanalas. Įveskite PIN:"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19264"
 msgid "Incorrect PIN"
 msgstr "Klaidingas PIN"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19265"
 msgid "The entered PIN number was incorrect."
 msgstr "Įvestas PIN kodas neteisingas."
@@ -8455,7 +8505,7 @@ msgstr "Jums reikia imtuvo, posistemės programinės įrangos ir"
 
 msgctxt "#19273"
 msgid "add-on for the backend to be able to use PVR."
-msgstr ""
+msgstr "priedo posistemei, kad galėtumėte naudoti PVR."
 
 msgctxt "#19274"
 msgid "Please visit http://kodi.wiki/view/PVR to learn more."
@@ -9346,7 +9396,7 @@ msgstr "Pradėti su naujais media šaltiniais"
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20072"
 msgid "Make sure the selected folder is writeable"
-msgstr ""
+msgstr "Įsitikinkite, kad leidžiama rašyti į pasirinktą aplanką"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20073"
@@ -9456,6 +9506,7 @@ msgctxt "#20098"
 msgid "Fetching information for album"
 msgstr "Atsiunčiama informacija apie albumą"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
 msgstr ""
@@ -9868,7 +9919,7 @@ msgctxt "#20195"
 msgid "Change information provider"
 msgstr "Pakeisti informacijos tiekėją"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#20196"
 msgid "Export music library"
 msgstr "Eksportuoti muzikos biblioteką"
@@ -9882,6 +9933,7 @@ msgctxt "#20198"
 msgid "No artist found!"
 msgstr "Atlikėjas nerastas!"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
 msgstr "Atlikėjo informacijos atsiuntimas nepavyko"
@@ -10158,6 +10210,7 @@ msgctxt "#20348"
 msgid "Directors"
 msgstr "Režisieriai"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20349"
 msgid "No video files found in this path!"
 msgstr "Vaizdo failų šioje vietoje nerasta!"
@@ -10600,10 +10653,12 @@ msgctxt "#20447"
 msgid "Ignore and refresh from Internet?"
 msgstr "Ignoruoti ir atnaujinti iš interneto?"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
 msgid "Couldn't download information"
 msgstr "Neįmanoma atsisiųsti informacijos"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "Nepavyko prsiijungti prie nuotolinio serverio"
@@ -11547,6 +11602,7 @@ msgid "Discography"
 msgstr "Diskografija"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#21889"
 msgid "Searching artist"
 msgstr "Ieškoma atlikėjo"
@@ -11844,6 +11900,7 @@ msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
 msgstr "Paspauskite \"OK\", kai atkūrimas pasibaigs"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24000"
 msgid "Add-on"
@@ -11988,6 +12045,7 @@ msgctxt "#24029"
 msgid "Service for weather information"
 msgstr "Orų informacijos paslauga"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 msgctxt "#24030"
 msgid "This add-on can't be configured"
 msgstr "Šio priedo negalima konfigūruoti"
@@ -12007,6 +12065,7 @@ msgctxt "#24033"
 msgid "Install from repository"
 msgstr "Įdiegti iš saugyklos"
 
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "Ieškoti atnaujinimų"
@@ -12286,6 +12345,20 @@ msgstr "Užrakinti priedų tvarkyklę"
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
 msgstr "Šio priedo negalima išjungti"
+
+#. Used as title of the progress dialog when checking for add-on updates in
+#. add-on browser
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24092"
+msgid "Checking for add-on updates"
+msgstr "Ieškoma priedų atnaujinimų"
+
+#. Used as a text in the progress dialog when checking for add-on updates. %s
+#. contains repository name
+#: xbmc/addons/Repository.cpp
+msgctxt "#24093"
+msgid "Checking %s..."
+msgstr "Tikrinama %s..."
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#24094"
@@ -12977,22 +13050,23 @@ msgctxt "#33084"
 msgid "Auto login"
 msgstr "Automatinis prisijungimas"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33100"
 msgid "Failed to start"
 msgstr "Nepavyko paleisti"
 
-#: xbmc/network/network.cpp system/settings/settings.xml
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
+#: system/settings/settings.xml
 msgctxt "#33101"
 msgid "Web server"
 msgstr "Žiniatinklio serveris"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33102"
 msgid "Event server"
 msgstr "Įvykių serveris"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Nuotolinis komunikacijos serveris"
@@ -14171,7 +14245,7 @@ msgctxt "#36183"
 msgid ""
 "Removes the title, genre, etc. nodes from the library view. Selecting a "
 "category takes you straight to the title view."
-msgstr ""
+msgstr "Pašalina pavadinimo, žanro ir kt. mazgus iš bibliotekos rodinio. Pasirinkus kategoriją, pateksite tiesiai į pavadinimų rodinį."
 
 #. Description of settings category "Videos -> Subtitles" with label #287
 #: system/settings/settings.xml
@@ -14258,7 +14332,7 @@ msgstr "Forsuoti regioną atkuriant DVD diską."
 #: system/settings/settings.xml
 msgctxt "#36196"
 msgid "Attempt to skip \"unskippable\" introductions before DVD menu."
-msgstr ""
+msgstr "Bandyti praleisti \"nepraleidžiamas\" įžangas prieš DVD meniu."
 
 #: system/settings/settings.xml
 msgctxt "#36197"
@@ -14284,7 +14358,7 @@ msgctxt "#36200"
 msgid ""
 "Select the default music videos information source. See the add-ons manager "
 "for options."
-msgstr ""
+msgstr "Pasirinkite numatytąjį muzikinių vaizdo klipų informacijos šaltinį. Galimas parinktis galite peržiūrėti priedų tvarkyklėje."
 
 #: system/settings/settings.xml
 msgctxt "#36201"
@@ -14301,7 +14375,7 @@ msgctxt "#36203"
 msgid ""
 "Enables the \"Personal Video Recorder\" (PVR) features. This requires that "
 "at least one PVR add-on is installed."
-msgstr ""
+msgstr "Įjungia \"Asmeninio vaizdo įrašymo\" (PVR) funkciją. Tam reikia, kad būtų įdiegtas bent vienas PVR priedas."
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -14322,7 +14396,7 @@ msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend, instead of configuring them "
 "manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr ""
+msgstr "Naudoti kanalų numeraciją iš posistemės, užuot nustatant ją rankiniu būdu kanalų tvarkyklėje. Veikia tik su vienu įjungtu PVR priedu!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -14348,7 +14422,7 @@ msgctxt "#36210"
 msgid ""
 "Prevent the \"Connection lost\" notification window from displaying when the"
 " PVR backend server is not available."
-msgstr ""
+msgstr "Nerodyti \"Ryšys nutrūko\" pranešimo lango, kai PVR posistemės serveris nepasiekiamas."
 
 #: system/settings/settings.xml
 msgctxt "#36211"
@@ -14414,7 +14488,7 @@ msgstr "Laikas tarp TV gido duomenų importavimų iš posistemės."
 #: system/settings/settings.xml
 msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
-msgstr ""
+msgstr "Neimportuoti TV gido duomenų atkuriant TV tam, kad sumažinti CPU naudojimą."
 
 #: system/settings/settings.xml
 msgctxt "#36223"
@@ -14932,7 +15006,7 @@ msgctxt "#36294"
 msgid ""
 "Show song selection dialogue once the last song in the queue has been "
 "played."
-msgstr ""
+msgstr "Rodyti dainos pasirinkimo dialogą, kai baigiamas paskutinės dainos eilėje atkūrimas."
 
 #. Description of setting "Music -> Karaoke -> Font" with label #22030
 #: system/settings/settings.xml
@@ -15345,7 +15419,7 @@ msgctxt "#36350"
 msgid ""
 "Automatically send Wake-on-LAN to server(s) right before trying to access "
 "shared files or services."
-msgstr ""
+msgstr "Automatiškai siųsti \"Wake-On-Lan\" serveriui(iams) prieš mėginant pasiekti bendrinamus failus ar paslaugas."
 
 #. Description of setting "System -> Video output -> Display Mode" with label
 #. #21373
@@ -15475,7 +15549,7 @@ msgctxt "#36365"
 msgid ""
 "Select this option if your receiver is capable of decoding Dolby Digital "
 "(AC3) streams."
-msgstr ""
+msgstr "Pasirinkite šią parinktį, jei jūsų imtuvas gali dekoduoti Dolby Digital (AC3) srautus."
 
 #. Description of setting "System -> Audio output -> DTS capable receiver"
 #. with label #254
@@ -15490,7 +15564,7 @@ msgctxt "#36367"
 msgid ""
 "Select the maximum number of audio channels / speakers available for decoded"
 " audio. If optical / coax digital outputs are used, this must be set to 2.0"
-msgstr ""
+msgstr "Pasirinkite maksimalų galimų garso kanalų / garsiakalbių skaičių dekoduotam garsui. Jei naudojami optiniai / koaksaliniai skaitmeniniai išėjimai, tai reikia pasirinkti 2.0"
 
 #. Description of setting "System -> Audio output -> Enable passthrough" with
 #. label #348
@@ -15499,7 +15573,7 @@ msgctxt "#36368"
 msgid ""
 "Select to enable the passthrough audio options for playback of encoded audio"
 " such as Dolby Digital (AC3), DTS, etc."
-msgstr ""
+msgstr "Pasirinkite, norėdami įjungti tranzitinio garso ryšio parinktis koduoto garso atkūrimui, tokio kaip Dolby Digital (AC3), DTS ir kt."
 
 #. Description of setting "System -> Audio output -> TrueHD capable receiver"
 #. with label #349
@@ -15533,7 +15607,7 @@ msgctxt "#36372"
 msgid ""
 "Select the device to be used for playback of encoded formats, these are any "
 "of the formats below in the capable receiver options."
-msgstr ""
+msgstr "Pasirinkite įrenginį, kuris bus naudojamas atkuriant koduotą formatą, tai yra bet kokį formatą iš paminėtų žemiau esančiuose palaikomų imtuvų pasirinkimuose."
 
 #. Description of setting "System -> Audio output -> Play GUI sounds" with
 #. label #34120
@@ -15702,7 +15776,7 @@ msgctxt "#36394"
 msgid ""
 "Enables verbose messages from additional libraries to be included in the "
 "debug log."
-msgstr ""
+msgstr "Įjungia išsamių pranešimų iš papildomų bibliotekų rašymą į derinimo žurnalą."
 
 #. Description of settings category "System -> Master lock" with label #12360
 #: system/settings/settings.xml
@@ -15897,7 +15971,7 @@ msgstr "Aplenkiant VDPAU mikšerį taupomi ištekliai mažos galios sistemose, t
 #: system/settings/settings.xml
 msgctxt "#36422"
 msgid "Enable hardware video decode using Amlogic decoder."
-msgstr ""
+msgstr "Įjungti aparatinė įrangos vaizdo dekodavimą naudojant AMLogic dekoderį."
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -15980,7 +16054,7 @@ msgstr "Naudoti DVDPlayer vaizdo failų dekodavimui su MMAL spartinimu."
 #: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode / Current"
-msgstr ""
+msgstr "Stereoskopinis 3D režimas / Dabartinis"
 
 #. headline of a dialog/info message showing the current stereoscopic 3D mode
 #: guilib/StereoscopicsManager.cpp
@@ -16131,7 +16205,7 @@ msgctxt "#36534"
 msgid ""
 "Specify additional libraries whose verbose messages are to be included in "
 "the debug log."
-msgstr ""
+msgstr "Nurodykite papildomas bibliotekos, kurių išsamius pranešimus įrašyti į derinimo žurnalą."
 
 #. label of a setting, allowing to specify the stereoscopic 3D mode of a video
 #: guilib/StereoscopicsManager.cpp
@@ -16434,7 +16508,7 @@ msgctxt "#37016"
 msgid ""
 "Select this option if your receiver is capable of decoding Dolby Digital "
 "Plus (E-AC3) streams."
-msgstr ""
+msgstr "Pasirinkite šią parinktį, jei jūsų imtuvas gali dekoduoti Dolby Digital Plus (E-AC3) srautus."
 
 #: system/settings/rbp.xml
 msgctxt "#37017"
@@ -16512,7 +16586,7 @@ msgctxt "#37031"
 msgid ""
 "Specifies how Blu-rays should be opened / played back. Note: Some disc menus"
 " are not fully supported and may cause problems."
-msgstr ""
+msgstr "Nurodo kaip turėtų būti atidaromi / atkuriami Blu-ray diskai. Pastaba: disko meniu kol kas nėra pilnai nepalaikomi ir gali sukelti problemų."
 
 #. Title of category #37032 Settings -> Video -> Accessibility
 #: system/settings/settings.xml
@@ -16526,7 +16600,7 @@ msgctxt "#37033"
 msgid ""
 "Video playback related accessibility settings, e.g. \"Prefer subtitles for "
 "the hearing impaired\"."
-msgstr ""
+msgstr "Su vaizdo atkūrimu susiję prieinamumo nustatymai, pvz., \"Pirmenybė subtitrams, kurie skirti turintiems klausos sutrikimų\"."
 
 #. Setting #37034 Settings -> Video -> Accessibility
 #: system/settings/settings.xml
@@ -16618,7 +16692,7 @@ msgctxt "#37045"
 msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
-msgstr ""
+msgstr "Sugeneruoti skyrių miniatiūras tam, kad atvaizduoti jas skyrių / žymių dialoge. Tai gali padidinti CPU apkrovimą."
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -16635,7 +16709,7 @@ msgstr "Rodyti \"Visų elementų\" įrašą"
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr ""
+msgstr "Rodyti \"Visų elementų\" įrašą kataloge, pvz., \"Visi albumai\" ar \"Visi sezonai\"."
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems

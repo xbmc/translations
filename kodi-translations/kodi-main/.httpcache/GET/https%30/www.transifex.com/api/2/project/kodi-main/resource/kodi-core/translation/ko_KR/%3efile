@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-17 07:42+0000\n"
+"PO-Revision-Date: 2015-05-18 16:09+0000\n"
 "Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,10 @@ msgctxt "#5"
 msgid "Settings"
 msgstr "설정"
 
-#: Unknown xbmc/windows/GUIWindowFileManager.cpp
+#: Unknown xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
 msgid "Kodi SVN"
 msgstr "Kodi SVN"
@@ -746,6 +749,7 @@ msgctxt "#188"
 msgid "Select all"
 msgstr "모두 선택"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#189"
 msgid "Scanning media information"
 msgstr ""
@@ -766,11 +770,15 @@ msgctxt "#193"
 msgid "Scan"
 msgstr "검색"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#194"
 msgid "Searching..."
 msgstr "찾는 중..."
 
 #: xbmc/addons/guidialogaddoninfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#195"
 msgid "No information found!"
 msgstr ""
@@ -1049,6 +1057,8 @@ msgid "Fetching CD information"
 msgstr "CD 정보 가져오기"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#257"
 msgid "Error"
@@ -1162,6 +1172,9 @@ msgctxt "#283"
 msgid "Search results"
 msgstr "검색 결과"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#284"
 msgid "No results found"
 msgstr "결과 없음"
@@ -1281,6 +1294,7 @@ msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=자동)"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#313"
 msgid "Cleaning database"
 msgstr "데이터베이스 정리"
@@ -1361,6 +1375,7 @@ msgctxt "#332"
 msgid "Error compressing database"
 msgstr "데이터베이스 압축 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#333"
 msgid "Do you want to clean the library?"
 msgstr "라이브러리를 정리하겠습니까?"
@@ -1791,6 +1806,7 @@ msgctxt "#425"
 msgid "No album information found"
 msgstr "앨범 정보 찾지 못함"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#426"
 msgid "No CD information found"
 msgstr "CD 정보 찾지 못함"
@@ -1829,10 +1845,12 @@ msgctxt "#434"
 msgid "From %s at %i %s"
 msgstr "풍향 %s 풍속 %i %s"
 
+#: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "광 디스크 드라이브 없음"
 
+#: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
 msgstr "이 비디오를 재생하려면 광 디스크 드라이브가 필요합니다."
@@ -1992,6 +2010,9 @@ msgctxt "#476"
 msgid "Music & video"
 msgstr "음악 & 비디오"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#477"
 msgid "Unable to load playlist"
@@ -2076,6 +2097,7 @@ msgctxt "#499"
 msgid "Unable to connect to online lookup service"
 msgstr "온라인 검색 서비스에 연결할 수 없음"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#500"
 msgid "Downloading album information failed"
 msgstr "앨범 정보 다운로드 실패"
@@ -2662,7 +2684,7 @@ msgctxt "#646"
 msgid "Remove from library"
 msgstr "라이브러리에서 제거"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/VideoDatabase.cpp
 msgctxt "#647"
 msgid "Export video library"
 msgstr "비디오 라이브러리 내보내기"
@@ -2768,7 +2790,7 @@ msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#670"
-msgid "Verbose logging for the [B[libcURL[/B] library (HTTP(S), DAV)"
+msgid "Verbose logging for the [B]libcURL[/B] library (HTTP(S), DAV)"
 msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
@@ -2813,7 +2835,7 @@ msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#680"
-msgid "Verbose logging for the [B]Video[B] component"
+msgid "Verbose logging for the [B]Video[/B] component"
 msgstr ""
 
 msgctxt "#700"
@@ -3667,11 +3689,12 @@ msgctxt "#1272"
 msgid "Use password protection"
 msgstr "비밀번호 보호 사용"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/network/NetworkServices.cpp
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "AirPlay"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#1274"
 msgid "AirTunes"
 msgstr "AirTunes"
@@ -4098,6 +4121,7 @@ msgstr "%s 오류"
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#2103"
 msgid "Add-on error"
 msgstr "애드온 오류"
@@ -4668,7 +4692,7 @@ msgctxt "#12340"
 msgid "Enter new password"
 msgstr "새 비밀번호 입력"
 
-#: xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
 msgstr ""
@@ -4684,6 +4708,7 @@ msgid "retries left "
 msgstr "남은 재시도"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "입력된 비밀번호가 일치하지 않습니다."
@@ -5565,6 +5590,7 @@ msgctxt "#13345"
 msgid "Switch LED off on playback"
 msgstr "재생때 LED 끄기"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13346"
 msgid "Movie information"
 msgstr "영화 정보"
@@ -6168,10 +6194,12 @@ msgctxt "#13613"
 msgid "Harmony remote"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13620"
 msgid "Apple Remote error"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13621"
 msgid "Apple Remote support couldn't be enabled."
 msgstr ""
@@ -6407,6 +6435,9 @@ msgctxt "#14056"
 msgid "Stop scan"
 msgstr "검색 중지"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
 msgstr ""
@@ -6650,7 +6681,7 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr "긴 날짜 형식"
 
-#: xbmc/video/VideoDatabase.cpp
+#: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr "%i 항목 내보내기 실패"
@@ -6914,6 +6945,7 @@ msgctxt "#16028"
 msgid "Enter value"
 msgstr "값 입력"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
 msgstr ""
@@ -7404,10 +7436,16 @@ msgctxt "#19032"
 msgid "Timeline"
 msgstr "편성표"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/PVRManager.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19033"
 msgid "Information"
 msgstr "정보"
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "이미 이 채널의 녹화가 시작됨"
@@ -7418,6 +7456,8 @@ msgid ""
 "message."
 msgstr ""
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
 "This recording can't be played.[CR]Check the log for more information about "
@@ -7429,6 +7469,7 @@ msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "신호 품질 보기"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
 msgstr "PVR 백엔드가 지원하지 않음."
@@ -7502,7 +7543,7 @@ msgctxt "#19054"
 msgid "Hide channel"
 msgstr "채널 숨김"
 
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/epg/EpgInfoTag.cpp xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19055"
 msgid "No information available"
 msgstr "정보 없음"
@@ -7554,6 +7595,7 @@ msgctxt "#19066"
 msgid "Channel icons"
 msgstr "채널 아이콘"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "이 이벤트는 이미 녹화중입니다."
@@ -7729,6 +7771,7 @@ msgctxt "#19108"
 msgid "Framerate {fallback}"
 msgstr ""
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
 "Couldn't save timer.[CR]Check the log for more information about this "
@@ -7741,6 +7784,7 @@ msgid ""
 "information."
 msgstr ""
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error.[CR]Check the log for more information about this message."
@@ -7960,6 +8004,7 @@ msgctxt "#19163"
 msgid "Recordings"
 msgstr "녹화"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
 "Can't start recording.[CR]Check the log for more information about this "
@@ -8099,10 +8144,12 @@ msgctxt "#19191"
 msgid "PVR service"
 msgstr "PVR 서비스"
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "연결된 PVR 백엔드가 채널 검색을 지원하지 않습니다."
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
 "The channel scan can't be started.[CR]Check the log for more information "
@@ -8196,6 +8243,7 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "새 채널의 올바른 URL을 입력하세요"
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
 msgstr "PVR 백엔드가 녹화 예약을 지원하지 않습니다."
@@ -8409,10 +8457,12 @@ msgctxt "#19263"
 msgid "Locked channel. Enter PIN:"
 msgstr "채널 잠김. PIN 번호 입력:"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19264"
 msgid "Incorrect PIN"
 msgstr "PIN 번호 틀림"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19265"
 msgid "The entered PIN number was incorrect."
 msgstr "입력한 PIN 번호가 정확하지 않습니다."
@@ -9454,6 +9504,7 @@ msgctxt "#20098"
 msgid "Fetching information for album"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
 msgstr ""
@@ -9866,7 +9917,7 @@ msgctxt "#20195"
 msgid "Change information provider"
 msgstr "정보 제공자 변경"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#20196"
 msgid "Export music library"
 msgstr "음악 라이브러리 내보내기"
@@ -9880,6 +9931,7 @@ msgctxt "#20198"
 msgid "No artist found!"
 msgstr "아티스트 찾지 못함!"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
 msgstr ""
@@ -10156,6 +10208,7 @@ msgctxt "#20348"
 msgid "Directors"
 msgstr "감독"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20349"
 msgid "No video files found in this path!"
 msgstr "이 경로에서 비디오 파일을 찾지 못함!"
@@ -10598,10 +10651,12 @@ msgctxt "#20447"
 msgid "Ignore and refresh from Internet?"
 msgstr "무시하고 인터넷에서 새로고침 할까요?"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
 msgid "Couldn't download information"
 msgstr ""
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "원격 서버에 연결할 수 없음"
@@ -11545,6 +11600,7 @@ msgid "Discography"
 msgstr "디스코그래피"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#21889"
 msgid "Searching artist"
 msgstr "아티스트 찾기"
@@ -11842,6 +11898,7 @@ msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
 msgstr ""
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24000"
 msgid "Add-on"
@@ -11986,6 +12043,7 @@ msgctxt "#24029"
 msgid "Service for weather information"
 msgstr "날씨 정보 서비스"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 msgctxt "#24030"
 msgid "This add-on can't be configured"
 msgstr ""
@@ -12005,6 +12063,7 @@ msgctxt "#24033"
 msgid "Install from repository"
 msgstr "저장소에서 설치"
 
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "업데이트 확인"
@@ -12283,6 +12342,20 @@ msgstr "애드온 관리자 잠금"
 #: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
+msgstr ""
+
+#. Used as title of the progress dialog when checking for add-on updates in
+#. add-on browser
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24092"
+msgid "Checking for add-on updates"
+msgstr ""
+
+#. Used as a text in the progress dialog when checking for add-on updates. %s
+#. contains repository name
+#: xbmc/addons/Repository.cpp
+msgctxt "#24093"
+msgid "Checking %s..."
 msgstr ""
 
 #: xbmc/addons/guidialogaddoninfo.cpp
@@ -12975,22 +13048,23 @@ msgctxt "#33084"
 msgid "Auto login"
 msgstr "자동 로그인"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33100"
 msgid "Failed to start"
 msgstr "시작할 수 없음"
 
-#: xbmc/network/network.cpp system/settings/settings.xml
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
+#: system/settings/settings.xml
 msgctxt "#33101"
 msgid "Web server"
 msgstr "웹 서버"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33102"
 msgid "Event server"
 msgstr "이벤트 서버"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "원격 커뮤니케이션 서버"

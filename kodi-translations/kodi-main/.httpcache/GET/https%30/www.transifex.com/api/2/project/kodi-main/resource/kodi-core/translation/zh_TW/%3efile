@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-17 07:42+0000\n"
+"PO-Revision-Date: 2015-05-18 16:09+0000\n"
 "Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,10 @@ msgctxt "#5"
 msgid "Settings"
 msgstr "系統設定"
 
-#: Unknown xbmc/windows/GUIWindowFileManager.cpp
+#: Unknown xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
 msgid "Kodi SVN"
 msgstr "Kodi SVN"
@@ -746,6 +749,7 @@ msgctxt "#188"
 msgid "Select all"
 msgstr "全選"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#189"
 msgid "Scanning media information"
 msgstr ""
@@ -766,11 +770,15 @@ msgctxt "#193"
 msgid "Scan"
 msgstr "掃描"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#194"
 msgid "Searching..."
 msgstr "搜尋中…"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#195"
 msgid "No information found!"
 msgstr ""
@@ -1049,6 +1057,8 @@ msgid "Fetching CD information"
 msgstr "獲取 CD 資訊"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#257"
 msgid "Error"
@@ -1162,6 +1172,9 @@ msgctxt "#283"
 msgid "Search results"
 msgstr "搜尋結果"
 
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#284"
 msgid "No results found"
 msgstr "無結果"
@@ -1281,6 +1294,7 @@ msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=自動)"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#313"
 msgid "Cleaning database"
 msgstr "正在清除資料庫"
@@ -1361,6 +1375,7 @@ msgctxt "#332"
 msgid "Error compressing database"
 msgstr "壓縮資料庫錯誤！"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#333"
 msgid "Do you want to clean the library?"
 msgstr "你確定要清除資料庫嗎？"
@@ -1791,6 +1806,7 @@ msgctxt "#425"
 msgid "No album information found"
 msgstr "找不到專輯資訊"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#426"
 msgid "No CD information found"
 msgstr "找不到 CD 資訊"
@@ -1829,10 +1845,12 @@ msgctxt "#434"
 msgid "From %s at %i %s"
 msgstr "方向方位%s、風速%i %s"
 
+#: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "偵測不到光碟機"
 
+#: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
 msgstr "你需要一台光碟機來播放這個視訊"
@@ -1992,6 +2010,9 @@ msgctxt "#476"
 msgid "Music & video"
 msgstr "音樂 & 視訊"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#477"
 msgid "Unable to load playlist"
@@ -2076,6 +2097,7 @@ msgctxt "#499"
 msgid "Unable to connect to online lookup service"
 msgstr "無法連線到線上搜尋伺服器"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#500"
 msgid "Downloading album information failed"
 msgstr "下載專輯資訊失敗"
@@ -2662,7 +2684,7 @@ msgctxt "#646"
 msgid "Remove from library"
 msgstr "從資料庫中移除"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/VideoDatabase.cpp
 msgctxt "#647"
 msgid "Export video library"
 msgstr "匯出視訊資料庫"
@@ -2768,7 +2790,7 @@ msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#670"
-msgid "Verbose logging for the [B[libcURL[/B] library (HTTP(S), DAV)"
+msgid "Verbose logging for the [B]libcURL[/B] library (HTTP(S), DAV)"
 msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
@@ -2813,7 +2835,7 @@ msgstr ""
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#680"
-msgid "Verbose logging for the [B]Video[B] component"
+msgid "Verbose logging for the [B]Video[/B] component"
 msgstr ""
 
 msgctxt "#700"
@@ -3667,11 +3689,12 @@ msgctxt "#1272"
 msgid "Use password protection"
 msgstr "使用密碼保護"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/network/NetworkServices.cpp
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "AirPlay"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#1274"
 msgid "AirTunes"
 msgstr "AirTunes"
@@ -4098,6 +4121,7 @@ msgstr ""
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#2103"
 msgid "Add-on error"
 msgstr ""
@@ -4668,7 +4692,7 @@ msgctxt "#12340"
 msgid "Enter new password"
 msgstr "輸入新密碼"
 
-#: xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
 msgstr ""
@@ -4684,6 +4708,7 @@ msgid "retries left "
 msgstr "重試次數 "
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
+#: xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "輸入的密碼不正確。"
@@ -5565,6 +5590,7 @@ msgctxt "#13345"
 msgid "Switch LED off on playback"
 msgstr "當播放時關閉顯示燈"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13346"
 msgid "Movie information"
 msgstr "電影資訊"
@@ -6168,10 +6194,12 @@ msgctxt "#13613"
 msgid "Harmony remote"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13620"
 msgid "Apple Remote error"
 msgstr ""
 
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13621"
 msgid "Apple Remote support couldn't be enabled."
 msgstr ""
@@ -6407,6 +6435,9 @@ msgctxt "#14056"
 msgid "Stop scan"
 msgstr "停止搜尋"
 
+#: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
 msgstr ""
@@ -6650,7 +6681,7 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr ""
 
-#: xbmc/video/VideoDatabase.cpp
+#: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr ""
@@ -6914,6 +6945,7 @@ msgctxt "#16028"
 msgid "Enter value"
 msgstr "輸入資料"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
 msgstr ""
@@ -7404,10 +7436,16 @@ msgctxt "#19032"
 msgid "Timeline"
 msgstr "時間軸"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/PVRManager.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19033"
 msgid "Information"
 msgstr "資訊"
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "已經開始對這個頻道錄影"
@@ -7418,6 +7456,8 @@ msgid ""
 "message."
 msgstr ""
 
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
 "This recording can't be played.[CR]Check the log for more information about "
@@ -7429,6 +7469,7 @@ msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "顯示訊號強度"
 
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
 msgstr "PVR 後端不支援。"
@@ -7502,7 +7543,7 @@ msgctxt "#19054"
 msgid "Hide channel"
 msgstr "隱藏頻道"
 
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/epg/EpgInfoTag.cpp xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19055"
 msgid "No information available"
 msgstr "找不到資訊"
@@ -7554,6 +7595,7 @@ msgctxt "#19066"
 msgid "Channel icons"
 msgstr "頻道圖示"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "這個事件已經錄製"
@@ -7729,6 +7771,7 @@ msgctxt "#19108"
 msgid "Framerate {fallback}"
 msgstr ""
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
 "Couldn't save timer.[CR]Check the log for more information about this "
@@ -7741,6 +7784,7 @@ msgid ""
 "information."
 msgstr ""
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error.[CR]Check the log for more information about this message."
@@ -7960,6 +8004,7 @@ msgctxt "#19163"
 msgid "Recordings"
 msgstr "錄影"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
 "Can't start recording.[CR]Check the log for more information about this "
@@ -8099,10 +8144,12 @@ msgctxt "#19191"
 msgid "PVR service"
 msgstr "PVR 服務"
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "連接的 PVR 後端不支援顪道掃描。"
 
+#: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
 "The channel scan can't be started.[CR]Check the log for more information "
@@ -8196,6 +8243,7 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "輸入新頻道的有效 URL"
 
+#: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
 msgstr "PVR 後端不支援定時器。"
@@ -8409,10 +8457,12 @@ msgctxt "#19263"
 msgid "Locked channel. Enter PIN:"
 msgstr "已鎖定頻道，輸入 PIN："
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19264"
 msgid "Incorrect PIN"
 msgstr "錯誤的 PIN"
 
+#: xbmc/pvr/PVRManager.cpp
 msgctxt "#19265"
 msgid "The entered PIN number was incorrect."
 msgstr "輸入的 PIN 碼不正確。"
@@ -9454,6 +9504,7 @@ msgctxt "#20098"
 msgid "Fetching information for album"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
 msgstr ""
@@ -9866,7 +9917,7 @@ msgctxt "#20195"
 msgid "Change information provider"
 msgstr ""
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#20196"
 msgid "Export music library"
 msgstr "匯出音樂資料庫"
@@ -9880,6 +9931,7 @@ msgctxt "#20198"
 msgid "No artist found!"
 msgstr "找不到演出者！"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
 msgstr ""
@@ -10156,6 +10208,7 @@ msgctxt "#20348"
 msgid "Directors"
 msgstr "導演"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20349"
 msgid "No video files found in this path!"
 msgstr "此路徑無視訊檔！"
@@ -10598,10 +10651,12 @@ msgctxt "#20447"
 msgid "Ignore and refresh from Internet?"
 msgstr ""
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
 msgid "Couldn't download information"
 msgstr ""
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "無法連接到遠端伺服器"
@@ -11545,6 +11600,7 @@ msgid "Discography"
 msgstr "作品"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#21889"
 msgid "Searching artist"
 msgstr "搜尋演出者"
@@ -11842,6 +11898,7 @@ msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
 msgstr ""
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24000"
 msgid "Add-on"
@@ -11986,6 +12043,7 @@ msgctxt "#24029"
 msgid "Service for weather information"
 msgstr "天氣資訊所使用的服務"
 
+#: xbmc/addons/GUIDialogAddonSettings.cpp
 msgctxt "#24030"
 msgid "This add-on can't be configured"
 msgstr ""
@@ -12005,6 +12063,7 @@ msgctxt "#24033"
 msgid "Install from repository"
 msgstr ""
 
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "檢查更新"
@@ -12283,6 +12342,20 @@ msgstr ""
 #: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
+msgstr ""
+
+#. Used as title of the progress dialog when checking for add-on updates in
+#. add-on browser
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24092"
+msgid "Checking for add-on updates"
+msgstr ""
+
+#. Used as a text in the progress dialog when checking for add-on updates. %s
+#. contains repository name
+#: xbmc/addons/Repository.cpp
+msgctxt "#24093"
+msgid "Checking %s..."
 msgstr ""
 
 #: xbmc/addons/guidialogaddoninfo.cpp
@@ -12975,22 +13048,23 @@ msgctxt "#33084"
 msgid "Auto login"
 msgstr "自動登入"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33100"
 msgid "Failed to start"
 msgstr "起始失敗"
 
-#: xbmc/network/network.cpp system/settings/settings.xml
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
+#: system/settings/settings.xml
 msgctxt "#33101"
 msgid "Web server"
 msgstr "Web 伺服器"
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33102"
 msgid "Event server"
 msgstr ""
 
-#: xbmc/network/network.cpp
+#: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "遠端通訊伺服器"
