@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-23 17:19+0000\n"
-"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
+"PO-Revision-Date: 2015-05-25 20:36+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/kodi-main/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2542,12 +2542,8 @@ msgid "To:"
 msgstr "Kellele:"
 
 msgctxt "#608"
-msgid "Couldn't rip CD or track"
+msgid "Couldn't rip CD or track because CDDARipPath is not set."
 msgstr ""
-
-msgctxt "#609"
-msgid "CDDARipPath is not set."
-msgstr "Salvestuskaust on määramata."
 
 msgctxt "#610"
 msgid "Rip audio track"
@@ -3221,13 +3217,9 @@ msgstr ""
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
-msgid "Music library needs to rescan tags from files."
-msgstr "Muusikateegi märgendid vajavad failidest ülelugemist"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#801"
-msgid "Would you like to scan now?"
-msgstr "Soovite kohe skaneerida?"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr ""
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5173,12 +5165,9 @@ msgstr "Tuvastati aktiivseid ühendusi!"
 
 #: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
-msgid "If you proceed, you might not be able to control this application"
-msgstr ""
-
-#: xbmc\network\NetworkServices.cpp
-msgctxt "#13142"
-msgid "any longer. Are you sure you want to stop the event server?"
+msgid ""
+"If you proceed, you might not be able to control this application any "
+"longer. Are you sure you want to stop the event server?"
 msgstr ""
 
 #: xbmc\osx\XBMCHelper.cpp
@@ -5188,18 +5177,11 @@ msgstr "Vaheta Apple'i puldi režiimi?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
-msgid "If you are currently using the Apple Remote to control"
-msgstr "Kui sa hetkel kasutad Apple'i pulti, et juhtida"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13146"
-msgid "this application, changing this setting might affect your ability"
+msgid ""
+"If you are currently using the Apple Remote to control this application, "
+"changing this setting might affect your ability to continue controlling it. "
+"Do you want to proceed?"
 msgstr ""
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13147"
-msgid "to continue controlling it. Do you want to proceed?"
-msgstr "puldi töötamist. Kas soovid jätkata?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5442,12 +5424,9 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "Loonimede mall"
 
+#: unused
 msgctxt "#13308"
-msgid "Do you wish to reboot your system?"
-msgstr ""
-
-msgctxt "#13309"
-msgid "instead of just this application?"
+msgid "Do you wish to reboot your system instead of just this application?"
 msgstr ""
 
 msgctxt "#13310"
@@ -6353,17 +6332,17 @@ msgctxt "#14037"
 msgid "DVD cache - Local network"
 msgstr ""
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14038"
 msgid "Network settings changed"
 msgstr "Võrguseaded muudetud"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14039"
-msgid "A restart is required to change your"
+msgid ""
+"A restart is required to change your network setup. Would you like to "
+"restart now?"
 msgstr ""
-
-msgctxt "#14040"
-msgid "network setup.  Would you like to restart now?"
-msgstr "taaskäivitust. Kas soovid teha restardi?"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -7008,6 +6987,7 @@ msgctxt "#16041"
 msgid "On"
 msgstr "Sees"
 
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr ""
@@ -7020,22 +7000,35 @@ msgctxt "#16102"
 msgid "Watched"
 msgstr "vaadatud"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16103"
 msgid "Mark as watched"
 msgstr "Märgi vaadatuks"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16104"
 msgid "Mark as unwatched"
 msgstr "Märgi mitte vaadatuks"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "Muuda pealkirja"
 
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16106"
 msgid "Manage..."
 msgstr "Halda…"
 
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16107"
 msgid "Edit sort title"
 msgstr ""
@@ -7295,10 +7288,12 @@ msgctxt "#19000"
 msgid "Switch to channel"
 msgstr "Vali kanal"
 
+#: skin.confluence
 msgctxt "#19001"
 msgid "Separate the search words by using AND, OR and / or NOT."
 msgstr ""
 
+#: skin.confluence
 msgctxt "#19002"
 msgid "or use phrases to find an exact match, like \"The wizard of Oz\"."
 msgstr "või kasuta täpsemaks otsinguks väljendeid, näiteks \"The wizard of Oz\"."
@@ -7318,30 +7313,37 @@ msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr ""
 
+#: skin.confluence
 msgctxt "#19005"
 msgid "PVR stream information"
 msgstr "PVR streami informatsioon"
 
+#: skin.confluence
 msgctxt "#19006"
 msgid "Receiving device"
 msgstr "Vastuvõttev seade"
 
+#: skin.confluence
 msgctxt "#19007"
 msgid "Device status"
 msgstr "Seadme seisund"
 
+#: skin.confluence
 msgctxt "#19008"
 msgid "Signal quality"
 msgstr "Signaali kvaliteet"
 
+#: skin.confluence
 msgctxt "#19009"
 msgid "SNR"
 msgstr "SNR"
 
+#: skin.confluence
 msgctxt "#19010"
 msgid "BER"
 msgstr "BER"
 
+#: skin.confluence
 msgctxt "#19011"
 msgid "UNC"
 msgstr "UNC"
@@ -7351,18 +7353,22 @@ msgctxt "#19012"
 msgid "PVR backend"
 msgstr ""
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
 msgid "Free to air"
 msgstr "Vabalevi"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19014"
 msgid "Fixed"
 msgstr "Fikseeritud"
 
+#: skin.confluence
 msgctxt "#19015"
 msgid "Encryption"
 msgstr "Kodeering"
 
+#: unused
 msgctxt "#19016"
 msgid "PVR backend %i - %s"
 msgstr ""
@@ -7384,22 +7390,30 @@ msgctxt "#19019"
 msgid "Channels"
 msgstr "Kanalid"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19020"
 msgid "TV"
 msgstr "TV"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19021"
 msgid "Radio"
 msgstr "Raadio"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19022"
 msgid "Hidden"
 msgstr "Peidetud"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19023"
 msgid "TV channels"
 msgstr "Telekanalid"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19024"
 msgid "Radio channels"
 msgstr "Raadiojaamad"
@@ -7900,13 +7914,10 @@ msgctxt "#19136"
 msgid "Channel unavailable"
 msgstr "Kanal pole saadaval"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
-msgid "No groups defined"
-msgstr "Gruppe pole määratletud"
-
-msgctxt "#19138"
-msgid "Please create a group first"
-msgstr "Palun tee grupi nimekiri"
+msgid "No groups defined. Please create a group first"
+msgstr ""
 
 msgctxt "#19139"
 msgid "Name of the new group"
@@ -8356,21 +8367,17 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Taustaprotsesside käivitus"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19240"
 msgid "No PVR add-on enabled"
 msgstr ""
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19241"
-msgid "The PVR manager has been enabled without any"
-msgstr "PVR haldur lubati ilma ühegi"
-
-msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
+msgid ""
+"The PVR manager has been enabled without any enabled PVR add-on. Enable at "
+"least one add-on in order to use the PVR functionality."
 msgstr ""
-
-msgctxt "#19243"
-msgid "in order to use the PVR functionality."
-msgstr "PVR funktsionaalsuse kasutamiseks."
 
 #: system/settings/settings.xml
 msgctxt "#19244"
@@ -8502,15 +8509,9 @@ msgid "No PVR add-ons could be found"
 msgstr ""
 
 msgctxt "#19272"
-msgid "You need a tuner, backend software, and an"
-msgstr "Sa vajad tuunerit, põhja tarkvara, ja"
-
-msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr ""
-
-msgctxt "#19274"
-msgid "Please visit http://kodi.wiki/view/PVR to learn more."
+msgid ""
+"You need a tuner, backend software, and an add-on for the backend to be able"
+" to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr ""
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -9298,9 +9299,10 @@ msgctxt "#20047"
 msgid "Create profile '%s'?"
 msgstr "Loo profiil '%s'?"
 
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
-msgid "Start with fresh settings"
-msgstr "Alusta värske seadistusega"
+msgid "Start with fresh settings or copy from default?"
+msgstr ""
 
 msgctxt "#20049"
 msgid "Best available"
@@ -9391,19 +9393,17 @@ msgctxt "#20070"
 msgid "Profile directory"
 msgstr "Profiili kataloog"
 
-msgctxt "#20071"
-msgid "Start with fresh media sources"
-msgstr "Alusta värskete meedia allikatega"
-
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-msgctxt "#20072"
-msgid "Make sure the selected folder is writeable"
+msgctxt "#20071"
+msgid "Start with fresh media sources or copy from default?"
 msgstr ""
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-msgctxt "#20073"
-msgid "and that the new folder name is valid"
-msgstr "ja et kausta nimi on korrektne"
+msgctxt "#20072"
+msgid ""
+"Make sure the selected folder is writable and that the new folder name is "
+"valid"
+msgstr ""
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -9522,25 +9522,17 @@ msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
 msgstr "Peakoodi sisestades aktiveeritakse alati peakasutaja režiim"
 
-msgctxt "#20102"
-msgid "or copy from default?"
-msgstr "või kopeeri vaikeväärtustest?"
-
 msgctxt "#20103"
 msgid "Save changes to profile?"
 msgstr "Salvesta muudatused profiili?"
 
 msgctxt "#20104"
-msgid "Old settings found."
-msgstr "Leiti vanad seaded."
-
-msgctxt "#20105"
-msgid "Do you want to use them?"
-msgstr "Kas soovite neid kasutada?"
+msgid "Old settings found. Do you want to use them?"
+msgstr ""
 
 msgctxt "#20106"
-msgid "Old media sources found."
-msgstr "Leiti vanad meedia allikad."
+msgid "Old media sources found. Do you want to use them?"
+msgstr ""
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -9594,12 +9586,8 @@ msgid "Invalid lock code."
 msgstr "Lukukood on vale."
 
 msgctxt "#20118"
-msgid "This requires the master lock to be set."
-msgstr "See nõuab pealuku määramist."
-
-msgctxt "#20119"
-msgid "Would you like to set it now?"
-msgstr "Kas soovid seda määrata kohe?"
+msgid "This requires the master lock to be set. Would you like to set it now?"
+msgstr ""
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -10167,12 +10155,9 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Režissöör"
 
+#: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
-msgid "Do you want to remove all items within"
-msgstr "Kas soovid Kodi failikogust eemaldada"
-
-msgctxt "#20341"
-msgid "this path from your library?"
+msgid "Do you want to remove all items within this path from your library?"
 msgstr ""
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
@@ -10557,12 +10542,8 @@ msgid "Fanart slideshow"
 msgstr "Fännipiltide slaidiesitlus"
 
 msgctxt "#20426"
-msgid "Export to a single file or separate"
-msgstr "Ekspordi ühe failina või eraldi"
-
-msgctxt "#20427"
-msgid "files per entry?"
-msgstr "failidena iga sissekande kohta?"
+msgid "Export to a single file or separate files per entry?"
+msgstr ""
 
 msgctxt "#20428"
 msgid "Single file"
@@ -10635,12 +10616,8 @@ msgid "Change content"
 msgstr "Muuda sisu"
 
 msgctxt "#20443"
-msgid "Do you want to refresh information for all"
+msgid "Do you want to refresh information for all items within this path?"
 msgstr ""
-
-msgctxt "#20444"
-msgid "items within this path?"
-msgstr "antud rajal olevate nimetuste kohta?"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20445"
@@ -10648,11 +10625,7 @@ msgid "Fanart"
 msgstr "Fännipildid"
 
 msgctxt "#20446"
-msgid "Locally stored information found."
-msgstr "Leiti kohalikke talletatud andmeid."
-
-msgctxt "#20447"
-msgid "Ignore and refresh from Internet?"
+msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr ""
 
 #: xbmc/video/VideoInfoScanner.cpp
@@ -10665,9 +10638,11 @@ msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "Kaugserverisse ühendamine ei õnnestu"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20450"
-msgid "Would you like to continue scanning?"
-msgstr "Kas soovid jätkata skaneerimist?"
+msgid ""
+"Unable to connect to remote server. Would you like to continue scanning?"
+msgstr ""
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -12998,21 +12973,6 @@ msgid "View changelog"
 msgstr ""
 
 #: Unknown
-msgctxt "#33074"
-msgid "This version of %s requires an"
-msgstr "%s versioon vajab töötamiseks"
-
-#: Unknown
-msgctxt "#33075"
-msgid "Kodi revision of %s or greater to run."
-msgstr "Kodi versiooni %s või suuremat."
-
-#: Unknown
-msgctxt "#33076"
-msgid "Please update Kodi."
-msgstr "Palun uuenda Kodi-d."
-
-#: Unknown
 msgctxt "#33077"
 msgid "No data found!"
 msgstr "Andmeid ei leitud!"
@@ -13073,7 +13033,7 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Kaugsuhtluse server"
 
-#: xbmc\network\eventclient.cpp
+#: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
 msgstr ""
@@ -13123,51 +13083,61 @@ msgctxt "#34100"
 msgid "Number of channels"
 msgstr "Kanalite arv"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34101"
 msgid "2.0"
 msgstr "2.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34102"
 msgid "2.1"
 msgstr "2.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34103"
 msgid "3.0"
 msgstr "3.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34104"
 msgid "3.1"
 msgstr "3.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34105"
 msgid "4.0"
 msgstr "4.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34106"
 msgid "4.1"
 msgstr "4.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34107"
 msgid "5.0"
 msgstr "5.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34108"
 msgid "5.1"
 msgstr "5.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34109"
 msgid "7.0"
 msgstr "7.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34110"
 msgid "7.1"
@@ -13262,17 +13232,16 @@ msgid ""
 "about this message."
 msgstr ""
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
 msgid "AirPlay requires Zeroconf to be enabled."
 msgstr "AirPlay jaoks peab Zeroconf lubatud olema."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
-msgid "Unable to stop Zeroconf"
-msgstr "Zeroconfi peatamine nurjus"
-
-msgctxt "#34304"
-msgid "AirPlay and AirTunes depend on Zeroconf running."
-msgstr "AirPlay ja AirTunes vajavad töötavat Zeroconfi."
+msgid ""
+"Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
+msgstr ""
 
 #: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -13619,12 +13588,7 @@ msgstr ""
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36043"
-msgid "No CEC capable TV detected."
-msgstr ""
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36044"
-msgid "Disable polling for CEC capable devices?"
+msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
 msgstr ""
 
 #. Description of settings section "Appearance"

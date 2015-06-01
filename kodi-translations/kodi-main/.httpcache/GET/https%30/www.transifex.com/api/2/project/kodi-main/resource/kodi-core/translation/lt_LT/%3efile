@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-25 06:24+0000\n"
+"PO-Revision-Date: 2015-05-26 06:46+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -2545,12 +2545,8 @@ msgid "To:"
 msgstr "Į:"
 
 msgctxt "#608"
-msgid "Couldn't rip CD or track"
-msgstr "Neįmanoma perrašyti CD ar takelio"
-
-msgctxt "#609"
-msgid "CDDARipPath is not set."
-msgstr "Nenurodyta CDDARipPath reikšmė."
+msgid "Couldn't rip CD or track because CDDARipPath is not set."
+msgstr "Neįmanoma perrašyti CD ar takelio, nes nenustatytas CDDARipPath."
 
 msgctxt "#610"
 msgid "Rip audio track"
@@ -3224,13 +3220,9 @@ msgstr "Bibliotekos atnaujinimas"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
-msgid "Music library needs to rescan tags from files."
-msgstr "Muzikos biblioteka turi iš naujo nuskaityti žymes iš failų."
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#801"
-msgid "Would you like to scan now?"
-msgstr "Norėtumėte nuskaityti dabar?"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Muzikos biblioteka turi iš naujo nuskaityti žymes iš failų. Ar norite nuskaityti dabar?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5176,13 +5168,10 @@ msgstr "Aptikti aktyvūs ryšiai!"
 
 #: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
-msgid "If you proceed, you might not be able to control this application"
-msgstr "Jei tęsite, galite netekti galimybės valdyti šią programą."
-
-#: xbmc\network\NetworkServices.cpp
-msgctxt "#13142"
-msgid "any longer. Are you sure you want to stop the event server?"
-msgstr "Ar tikrai norite sustabdyti įvykių serverį?"
+msgid ""
+"If you proceed, you might not be able to control this application any "
+"longer. Are you sure you want to stop the event server?"
+msgstr "Jei tęsite, galite prarasti galimybę toliau valdyti šią programą. Ar tikrai norite sustabdyti įvykių serverį?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
@@ -5191,18 +5180,11 @@ msgstr "Keisti Apple nuotolinio valdymo pultelio režimą?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
-msgid "If you are currently using the Apple Remote to control"
-msgstr "Jei šiuo metu naudojate Apple nuotolinio valdymo pultelį"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13146"
-msgid "this application, changing this setting might affect your ability"
-msgstr "šios programos valdymui, šio nustatymo pakeitimas gali įtakoti jūsų"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13147"
-msgid "to continue controlling it. Do you want to proceed?"
-msgstr "galimybę ją toliau valdyti. Ar norite tęsti?"
+msgid ""
+"If you are currently using the Apple Remote to control this application, "
+"changing this setting might affect your ability to continue controlling it. "
+"Do you want to proceed?"
+msgstr "Jei šiuo metu naudojate Apple nuotolinio valdymo pultelį šios programos valdymui, šio nustatymo pakeitimas gali įtakoti jūsų galimybę toliau ją valdyti. Ar norite tęsti?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5445,13 +5427,10 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "Takelio pavadinimo šablonas"
 
+#: unused
 msgctxt "#13308"
-msgid "Do you wish to reboot your system?"
-msgstr "Ar norite iš naujo paleisti sistemą?"
-
-msgctxt "#13309"
-msgid "instead of just this application?"
-msgstr "o ne tik šią programą?"
+msgid "Do you wish to reboot your system instead of just this application?"
+msgstr "Ar norite iš naujo paleisti sistemą, o ne tik programą?"
 
 msgctxt "#13310"
 msgid "Zoom effect"
@@ -6356,17 +6335,17 @@ msgctxt "#14037"
 msgid "DVD cache - Local network"
 msgstr "DVD podėlis - Vietinis tinklas"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14038"
 msgid "Network settings changed"
 msgstr "Tinklo parametrai pasikeitė"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14039"
-msgid "A restart is required to change your"
-msgstr "Reikia paleisti iš naujo, norint pakeisti"
-
-msgctxt "#14040"
-msgid "network setup.  Would you like to restart now?"
-msgstr " tinklo sąranką. Ar norite paleisti iš naujo dabar?"
+msgid ""
+"A restart is required to change your network setup. Would you like to "
+"restart now?"
+msgstr " Norint pakeisti tinklo sąranką, reikia iš naujo paleisti sistemą. Ar norite paleisti iš naujo dabar?"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -7011,6 +6990,7 @@ msgctxt "#16041"
 msgid "On"
 msgstr "Įjungta"
 
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Visi vaizdo įrašai"
@@ -7023,22 +7003,35 @@ msgctxt "#16102"
 msgid "Watched"
 msgstr "Peržiūrėti"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16103"
 msgid "Mark as watched"
 msgstr "Žymėti kaip peržiūrėtą"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16104"
 msgid "Mark as unwatched"
 msgstr "Žymėti kaip neperžiūrėtą"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "Keisti pavadinimą"
 
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16106"
 msgid "Manage..."
 msgstr "Tvarkyti..."
 
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16107"
 msgid "Edit sort title"
 msgstr "Keisti rūšiavimo pavadinimą"
@@ -7298,10 +7291,12 @@ msgctxt "#19000"
 msgid "Switch to channel"
 msgstr "Įjungti šį kanalą"
 
+#: skin.confluence
 msgctxt "#19001"
 msgid "Separate the search words by using AND, OR and / or NOT."
 msgstr "Atskirti paieškos žodžius naudojant AND, OR ir/arba NOT."
 
+#: skin.confluence
 msgctxt "#19002"
 msgid "or use phrases to find an exact match, like \"The wizard of Oz\"."
 msgstr "arba naudoti frazes ieškant tikslaus atitikmens, pvz., \"Penktas elementas\"."
@@ -7321,30 +7316,37 @@ msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "Importuojamas TV gidas iš klientų"
 
+#: skin.confluence
 msgctxt "#19005"
 msgid "PVR stream information"
 msgstr "PVR srauto informacija"
 
+#: skin.confluence
 msgctxt "#19006"
 msgid "Receiving device"
 msgstr "Priėmimo įrenginys"
 
+#: skin.confluence
 msgctxt "#19007"
 msgid "Device status"
 msgstr "Įrenginio būsena"
 
+#: skin.confluence
 msgctxt "#19008"
 msgid "Signal quality"
 msgstr "Signalo kokybė"
 
+#: skin.confluence
 msgctxt "#19009"
 msgid "SNR"
 msgstr "SNR"
 
+#: skin.confluence
 msgctxt "#19010"
 msgid "BER"
 msgstr "BER"
 
+#: skin.confluence
 msgctxt "#19011"
 msgid "UNC"
 msgstr "UNC"
@@ -7354,18 +7356,22 @@ msgctxt "#19012"
 msgid "PVR backend"
 msgstr "PVR posistemė"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
 msgid "Free to air"
 msgstr "Laisvai transliuojama"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19014"
 msgid "Fixed"
 msgstr "Fiksuotas"
 
+#: skin.confluence
 msgctxt "#19015"
 msgid "Encryption"
 msgstr "Šifravimas"
 
+#: unused
 msgctxt "#19016"
 msgid "PVR backend %i - %s"
 msgstr "PVR posistemė %i - %s"
@@ -7387,22 +7393,30 @@ msgctxt "#19019"
 msgid "Channels"
 msgstr "Kanalai"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19020"
 msgid "TV"
 msgstr "TV"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19021"
 msgid "Radio"
 msgstr "Radijas"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19022"
 msgid "Hidden"
 msgstr "Paslėpta"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19023"
 msgid "TV channels"
 msgstr "TV kanalai"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19024"
 msgid "Radio channels"
 msgstr "Radijo kanalai"
@@ -7903,13 +7917,10 @@ msgctxt "#19136"
 msgid "Channel unavailable"
 msgstr "Kanalas nepasiekiamas"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
-msgid "No groups defined"
-msgstr "Nėra apibrėžtų grupių"
-
-msgctxt "#19138"
-msgid "Please create a group first"
-msgstr "Pirmiau sukurkite grupę"
+msgid "No groups defined. Please create a group first"
+msgstr "Nėra sukurtų grupių. Pirma sukurkite grupę"
 
 msgctxt "#19139"
 msgid "Name of the new group"
@@ -8359,21 +8370,17 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Paleidžiamos foninės gijos"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19240"
 msgid "No PVR add-on enabled"
 msgstr "Neįjungtas joks PVR priedas"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19241"
-msgid "The PVR manager has been enabled without any"
-msgstr "PVR tvarkyklė buvo įjungta nenaudojant"
-
-msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "jokio PVR priedo. Įjunkite bent vieną priedą, "
-
-msgctxt "#19243"
-msgid "in order to use the PVR functionality."
-msgstr "kad galėtumėte naudoti PVR funkcionalumą."
+msgid ""
+"The PVR manager has been enabled without any enabled PVR add-on. Enable at "
+"least one add-on in order to use the PVR functionality."
+msgstr "PVR tvarkyklė buvo įjungta, neįjungus jokio PVR priedo. Įjunkite bent vieną priedą, jei norite naudoti PVR funkcionalumą."
 
 #: system/settings/settings.xml
 msgctxt "#19244"
@@ -8505,16 +8512,10 @@ msgid "No PVR add-ons could be found"
 msgstr "Nerasta jokių PVR priedų"
 
 msgctxt "#19272"
-msgid "You need a tuner, backend software, and an"
-msgstr "Jums reikia imtuvo, posistemės programinės įrangos ir"
-
-msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "priedo posistemei, kad galėtumėte naudoti PVR."
-
-msgctxt "#19274"
-msgid "Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Apsilankykite http://kodi.wiki/view/PVR, norėdami sužinoti daugiau."
+msgid ""
+"You need a tuner, backend software, and an add-on for the backend to be able"
+" to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Jums reikia imtuvo, posistemės programinės įrangos ir priedo, kad posistemė galėtų naudoti PVR funkciją. Apsilankykite http://kodi.wiki/view/PVR, norėdami sužinoti daugiau."
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -9301,9 +9302,10 @@ msgctxt "#20047"
 msgid "Create profile '%s'?"
 msgstr "Sukurti profilį  '%s'?"
 
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
-msgid "Start with fresh settings"
-msgstr "Pradėti su naujais nustatymais"
+msgid "Start with fresh settings or copy from default?"
+msgstr "Pradėti su naujais nustatymais ar nukopijuoti numatytuosius?"
 
 msgctxt "#20049"
 msgid "Best available"
@@ -9394,19 +9396,17 @@ msgctxt "#20070"
 msgid "Profile directory"
 msgstr "Profilio katalogas"
 
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20071"
-msgid "Start with fresh media sources"
-msgstr "Pradėti su naujais media šaltiniais"
+msgid "Start with fresh media sources or copy from default?"
+msgstr "Pradėti su naujais media šaltiniais ar nukopijuoti numatytuosius?"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20072"
-msgid "Make sure the selected folder is writeable"
-msgstr "Įsitikinkite, kad leidžiama rašyti į pasirinktą aplanką"
-
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp
-msgctxt "#20073"
-msgid "and that the new folder name is valid"
-msgstr "ir kad naujo aplanko vardas yra teisingas"
+msgid ""
+"Make sure the selected folder is writable and that the new folder name is "
+"valid"
+msgstr "Įsitikinkite, kad leidžiama rašyti į pasirinktą aplanką ir kad naujo aplanko vardas yra taisyklingas"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -9525,25 +9525,17 @@ msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
 msgstr "Įvedus valdytojo užrakto kodą, visada įjungiamas valdytojo režimas."
 
-msgctxt "#20102"
-msgid "or copy from default?"
-msgstr "ar nukopijuoti numatytuosius?"
-
 msgctxt "#20103"
 msgid "Save changes to profile?"
 msgstr "Išsaugoti profilio pakeitimus?"
 
 msgctxt "#20104"
-msgid "Old settings found."
-msgstr "Rasti seni nustatymai."
-
-msgctxt "#20105"
-msgid "Do you want to use them?"
-msgstr "Ar norite juos panaudoti?"
+msgid "Old settings found. Do you want to use them?"
+msgstr "Rasti seni nustatymai. Ar norite juos panaudoti?"
 
 msgctxt "#20106"
-msgid "Old media sources found."
-msgstr "Rasti seni media šaltiniai."
+msgid "Old media sources found. Do you want to use them?"
+msgstr "Rasti seni media šaltiniai. Ar norite juos panaudoti?"
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -9597,12 +9589,8 @@ msgid "Invalid lock code."
 msgstr "Neteisingas užrakto kodas."
 
 msgctxt "#20118"
-msgid "This requires the master lock to be set."
-msgstr "Tam reikia nustatyti valdytojo užraktą."
-
-msgctxt "#20119"
-msgid "Would you like to set it now?"
-msgstr "Norėtumėte nustatyti jį dabar?"
+msgid "This requires the master lock to be set. Would you like to set it now?"
+msgstr "Tam reikia nustatyti valdytojo užraktą. Ar norite jį nustatyti dabar?"
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -10170,13 +10158,10 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Režisierius"
 
+#: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
-msgid "Do you want to remove all items within"
-msgstr "Ar norite pašalinti visus elementus, esančius"
-
-msgctxt "#20341"
-msgid "this path from your library?"
-msgstr "šį kelią iš bibliotekos?"
+msgid "Do you want to remove all items within this path from your library?"
+msgstr "Ar norite pašalinti iš bibliotekos visus elementus, esančius šiame kelyje?"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -10560,12 +10545,8 @@ msgid "Fanart slideshow"
 msgstr "FanArt skaidrių peržiūra"
 
 msgctxt "#20426"
-msgid "Export to a single file or separate"
-msgstr "Eksportuoti į vieną failą ar į atskirus"
-
-msgctxt "#20427"
-msgid "files per entry?"
-msgstr "failus kiekvienam įrašui?"
+msgid "Export to a single file or separate files per entry?"
+msgstr "Eksportuoti į vieną failą ar į atskirą failą kiekvienam įrašui?"
 
 msgctxt "#20428"
 msgid "Single file"
@@ -10638,12 +10619,8 @@ msgid "Change content"
 msgstr "Pakeisti turinį"
 
 msgctxt "#20443"
-msgid "Do you want to refresh information for all"
-msgstr "Ar norite atnaujinti informaciją visiems"
-
-msgctxt "#20444"
-msgid "items within this path?"
-msgstr "šio kelio elementams?"
+msgid "Do you want to refresh information for all items within this path?"
+msgstr "Ar norite atnaujinti informaciją visiems elementams, esantiems šiame kelyje?"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20445"
@@ -10651,12 +10628,8 @@ msgid "Fanart"
 msgstr "FanArt"
 
 msgctxt "#20446"
-msgid "Locally stored information found."
-msgstr "Rasta lokaliai saugoma informacija."
-
-msgctxt "#20447"
-msgid "Ignore and refresh from Internet?"
-msgstr "Ignoruoti ir atnaujinti iš interneto?"
+msgid "Locally stored information found. Ignore and refresh from Internet?"
+msgstr "Rasta lokaliai saugoma informacija. Ignoruoti ir atnaujinti iš interneto?"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
@@ -10668,9 +10641,11 @@ msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "Nepavyko prsiijungti prie nuotolinio serverio"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20450"
-msgid "Would you like to continue scanning?"
-msgstr "Norite tęsti nuskaitymą?"
+msgid ""
+"Unable to connect to remote server. Would you like to continue scanning?"
+msgstr "Neįmanoma prisijungti prie nuotolinio serverio. Ar norite tęsti nuskaitymą?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -13001,21 +12976,6 @@ msgid "View changelog"
 msgstr "Peržiūrėti pakeitimų žurnalą"
 
 #: Unknown
-msgctxt "#33074"
-msgid "This version of %s requires an"
-msgstr "Šiai %s versijai reikalinga"
-
-#: Unknown
-msgctxt "#33075"
-msgid "Kodi revision of %s or greater to run."
-msgstr "Kodi %s ar aukštesnė versija."
-
-#: Unknown
-msgctxt "#33076"
-msgid "Please update Kodi."
-msgstr "Prašome atnaujinti Kodi."
-
-#: Unknown
 msgctxt "#33077"
 msgid "No data found!"
 msgstr "Nerasta jokių duomenų!"
@@ -13076,7 +13036,7 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Nuotolinis komunikacijos serveris"
 
-#: xbmc\network\eventclient.cpp
+#: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
 msgstr "Aptiktas naujas prisijungimas"
@@ -13126,51 +13086,61 @@ msgctxt "#34100"
 msgid "Number of channels"
 msgstr "Kanalų skaičius"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34101"
 msgid "2.0"
 msgstr "2.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34102"
 msgid "2.1"
 msgstr "2.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34103"
 msgid "3.0"
 msgstr "3.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34104"
 msgid "3.1"
 msgstr "3.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34105"
 msgid "4.0"
 msgstr "4.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34106"
 msgid "4.1"
 msgstr "4.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34107"
 msgid "5.0"
 msgstr "5.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34108"
 msgid "5.1"
 msgstr "5.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34109"
 msgid "7.0"
 msgstr "7.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34110"
 msgid "7.1"
@@ -13265,17 +13235,16 @@ msgid ""
 "about this message."
 msgstr "Ar įdiegta Apple Bonjour paslauga?[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
 msgid "AirPlay requires Zeroconf to be enabled."
 msgstr "AirPlay paleidimui reikia įjungti Zeroconf."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
-msgid "Unable to stop Zeroconf"
-msgstr "Nepavyko sustabdyti Zeroconf"
-
-msgctxt "#34304"
-msgid "AirPlay and AirTunes depend on Zeroconf running."
-msgstr "AirPlay ir AirTunes reikia, kad būtų įjungta Zeroconf."
+msgid ""
+"Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
+msgstr "Neįmanoma sustabdyti Zeroconf paslaugos. AirPlay ir AirTunes reikia, kad ji būtų įjungta."
 
 #: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -13622,13 +13591,8 @@ msgstr "Naudoti ribotą spalvų gamą (16-235)"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36043"
-msgid "No CEC capable TV detected."
-msgstr "Neaptiktas joks CEC palaikantis televizorius."
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36044"
-msgid "Disable polling for CEC capable devices?"
-msgstr "Išjungti CEC palaikančių įrenginių paiešką?"
+msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
+msgstr "Nerastas CEC palaikantis televizorius. Išjungti CEC palaikančių įrenginių aptikimą?"
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml

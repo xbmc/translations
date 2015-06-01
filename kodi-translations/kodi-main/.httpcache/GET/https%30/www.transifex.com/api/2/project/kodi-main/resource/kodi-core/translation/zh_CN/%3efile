@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-25 08:02+0000\n"
+"PO-Revision-Date: 2015-05-26 09:58+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -2544,12 +2544,8 @@ msgid "To:"
 msgstr "储存到："
 
 msgctxt "#608"
-msgid "Couldn't rip CD or track"
-msgstr "无法抓取 CD 或音轨"
-
-msgctxt "#609"
-msgid "CDDARipPath is not set."
-msgstr "CD 抓取路径未设置。"
+msgid "Couldn't rip CD or track because CDDARipPath is not set."
+msgstr "无法抓取 CD 或音轨，因 CDDA 抓取目录未设置。"
 
 msgctxt "#610"
 msgid "Rip audio track"
@@ -3223,13 +3219,9 @@ msgstr "资料库更新"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
-msgid "Music library needs to rescan tags from files."
-msgstr "音乐资料库需要重新扫描文件标签。"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#801"
-msgid "Would you like to scan now?"
-msgstr "现在扫描吗？"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "音乐资料库需要重新从文件扫描标签。现在扫描吗？"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5175,13 +5167,10 @@ msgstr "检测到活动连接！"
 
 #: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
-msgid "If you proceed, you might not be able to control this application"
-msgstr "如果继续，你可能将无法控制此应用"
-
-#: xbmc\network\NetworkServices.cpp
-msgctxt "#13142"
-msgid "any longer. Are you sure you want to stop the event server?"
-msgstr "你是否确认要停止事件服务器？"
+msgid ""
+"If you proceed, you might not be able to control this application any "
+"longer. Are you sure you want to stop the event server?"
+msgstr "如果继续，你可能将无法控制此应用。确认要停止事件服务器吗？"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
@@ -5190,18 +5179,11 @@ msgstr "改变苹果遥控器的模式？"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
-msgid "If you are currently using the Apple Remote to control"
-msgstr "如果你现在正在使用苹果遥控器"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13146"
-msgid "this application, changing this setting might affect your ability"
-msgstr "控制此应用，改变此设置会影响你"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13147"
-msgid "to continue controlling it. Do you want to proceed?"
-msgstr "对它的持续控制。你确认要继续吗？"
+msgid ""
+"If you are currently using the Apple Remote to control this application, "
+"changing this setting might affect your ability to continue controlling it. "
+"Do you want to proceed?"
+msgstr "如果你正使用苹果遥控器控制此应用，改变此设置会影响你对它的持续控制。确认要继续吗？"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5444,13 +5426,10 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "歌曲名称模板"
 
+#: unused
 msgctxt "#13308"
-msgid "Do you wish to reboot your system?"
-msgstr "要重启系统吗？"
-
-msgctxt "#13309"
-msgid "instead of just this application?"
-msgstr "而不仅是此应用吗？"
+msgid "Do you wish to reboot your system instead of just this application?"
+msgstr "你想重新启动系统而不仅是此应用吗？"
 
 msgctxt "#13310"
 msgid "Zoom effect"
@@ -6355,17 +6334,17 @@ msgctxt "#14037"
 msgid "DVD cache - Local network"
 msgstr "DVD 缓存 - 局域网"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14038"
 msgid "Network settings changed"
 msgstr "网络设置已改变"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14039"
-msgid "A restart is required to change your"
-msgstr "需要重启以改变你的网络设置"
-
-msgctxt "#14040"
-msgid "network setup.  Would you like to restart now?"
-msgstr "你想现在就重启吗？"
+msgid ""
+"A restart is required to change your network setup. Would you like to "
+"restart now?"
+msgstr "需要重启以改变你的网络设置。现在就重启吗？"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -7010,6 +6989,7 @@ msgctxt "#16041"
 msgid "On"
 msgstr "开"
 
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "所有视频"
@@ -7022,22 +7002,35 @@ msgctxt "#16102"
 msgid "Watched"
 msgstr "已观看"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16103"
 msgid "Mark as watched"
 msgstr "标记为已观看"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16104"
 msgid "Mark as unwatched"
 msgstr "标记为未观看"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "编辑标题"
 
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16106"
 msgid "Manage..."
 msgstr "管理..."
 
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16107"
 msgid "Edit sort title"
 msgstr "编辑排序标题"
@@ -7297,10 +7290,12 @@ msgctxt "#19000"
 msgid "Switch to channel"
 msgstr "切换到频道"
 
+#: skin.confluence
 msgctxt "#19001"
 msgid "Separate the search words by using AND, OR and / or NOT."
 msgstr "用 AND、OR 和/或 NOT 分隔查询关键字。"
 
+#: skin.confluence
 msgctxt "#19002"
 msgid "or use phrases to find an exact match, like \"The wizard of Oz\"."
 msgstr "或使用短语来查找完全匹配，如“绿野仙踪”。"
@@ -7320,30 +7315,37 @@ msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "从客户端导入指南"
 
+#: skin.confluence
 msgctxt "#19005"
 msgid "PVR stream information"
 msgstr "PVR 流信息"
 
+#: skin.confluence
 msgctxt "#19006"
 msgid "Receiving device"
 msgstr "接收设备"
 
+#: skin.confluence
 msgctxt "#19007"
 msgid "Device status"
 msgstr "设备状态"
 
+#: skin.confluence
 msgctxt "#19008"
 msgid "Signal quality"
 msgstr "信号质量"
 
+#: skin.confluence
 msgctxt "#19009"
 msgid "SNR"
 msgstr "信噪比"
 
+#: skin.confluence
 msgctxt "#19010"
 msgid "BER"
 msgstr "误码率"
 
+#: skin.confluence
 msgctxt "#19011"
 msgid "UNC"
 msgstr "错误块"
@@ -7353,18 +7355,22 @@ msgctxt "#19012"
 msgid "PVR backend"
 msgstr "PVR 后端"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
 msgid "Free to air"
 msgstr "不加密传输"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19014"
 msgid "Fixed"
 msgstr "固定"
 
+#: skin.confluence
 msgctxt "#19015"
 msgid "Encryption"
 msgstr "加密"
 
+#: unused
 msgctxt "#19016"
 msgid "PVR backend %i - %s"
 msgstr "PVR 后端%i - %s"
@@ -7386,22 +7392,30 @@ msgctxt "#19019"
 msgid "Channels"
 msgstr "频道"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19020"
 msgid "TV"
 msgstr "电视"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19021"
 msgid "Radio"
 msgstr "电台"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19022"
 msgid "Hidden"
 msgstr "隐藏"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19023"
 msgid "TV channels"
 msgstr "电视频道"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19024"
 msgid "Radio channels"
 msgstr "电台频道"
@@ -7902,13 +7916,10 @@ msgctxt "#19136"
 msgid "Channel unavailable"
 msgstr "频道不可用"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
-msgid "No groups defined"
-msgstr "未定义组"
-
-msgctxt "#19138"
-msgid "Please create a group first"
-msgstr "请先定义组"
+msgid "No groups defined. Please create a group first"
+msgstr "未定义组。请先定义组。"
 
 msgctxt "#19139"
 msgid "Name of the new group"
@@ -8358,21 +8369,17 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "启动后台线程"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19240"
 msgid "No PVR add-on enabled"
 msgstr "无启用的 PVR 插件"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19241"
-msgid "The PVR manager has been enabled without any"
-msgstr "PVR 管理已启用，但无任何已启用"
-
-msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "的 PVR 插件。使用 PVR 功能前"
-
-msgctxt "#19243"
-msgid "in order to use the PVR functionality."
-msgstr "至少要启用一个插件。"
+msgid ""
+"The PVR manager has been enabled without any enabled PVR add-on. Enable at "
+"least one add-on in order to use the PVR functionality."
+msgstr "PVR 管理已启用，但无任何已启用的 PVR 插件。使用 PVR 功能前至少要启用一个插件。"
 
 #: system/settings/settings.xml
 msgctxt "#19244"
@@ -8504,16 +8511,10 @@ msgid "No PVR add-ons could be found"
 msgstr "未找到 PVR 插件"
 
 msgctxt "#19272"
-msgid "You need a tuner, backend software, and an"
-msgstr "你需要一个电视卡、后端软件，和"
-
-msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "一个用于后端的插件才能使用 PVR。"
-
-msgctxt "#19274"
-msgid "Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "要了解更多内容请访问 http://kodi.wiki/view/PVR。"
+msgid ""
+"You need a tuner, backend software, and an add-on for the backend to be able"
+" to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "你需要一个电视卡、后端软件，和一个与后端相应的插件才能使用 PVR。详情请访问 http://kodi.wiki/view/PVR。"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -9300,9 +9301,10 @@ msgctxt "#20047"
 msgid "Create profile '%s'?"
 msgstr "创建用户配置“%s”？"
 
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
-msgid "Start with fresh settings"
-msgstr "启动时刷新设置"
+msgid "Start with fresh settings or copy from default?"
+msgstr "启动时刷新设置或复制默认？"
 
 msgctxt "#20049"
 msgid "Best available"
@@ -9393,19 +9395,17 @@ msgctxt "#20070"
 msgid "Profile directory"
 msgstr "用户配置目录"
 
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20071"
-msgid "Start with fresh media sources"
-msgstr "启动时刷新媒体源"
+msgid "Start with fresh media sources or copy from default?"
+msgstr "启动时刷新媒体源或复制默认？"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20072"
-msgid "Make sure the selected folder is writeable"
-msgstr "请确定选择的文件夹是可写入的"
-
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp
-msgctxt "#20073"
-msgid "and that the new folder name is valid"
-msgstr "且新文件夹名是有效的"
+msgid ""
+"Make sure the selected folder is writable and that the new folder name is "
+"valid"
+msgstr "请确定选择的文件夹是可写入的且新文件夹名是有效的"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -9524,25 +9524,17 @@ msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
 msgstr "输入管理员锁定码后，始终启用管理员模式"
 
-msgctxt "#20102"
-msgid "or copy from default?"
-msgstr "或从默认值中复制？"
-
 msgctxt "#20103"
 msgid "Save changes to profile?"
 msgstr "保存变更到用户配置文件？"
 
 msgctxt "#20104"
-msgid "Old settings found."
-msgstr "发现旧设置。"
-
-msgctxt "#20105"
-msgid "Do you want to use them?"
-msgstr "你要使用吗？"
+msgid "Old settings found. Do you want to use them?"
+msgstr "发现旧设置。你要使用吗？"
 
 msgctxt "#20106"
-msgid "Old media sources found."
-msgstr "发现旧媒体源。"
+msgid "Old media sources found. Do you want to use them?"
+msgstr "发现旧媒体源。你要使用吗？"
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -9596,12 +9588,8 @@ msgid "Invalid lock code."
 msgstr "锁定码错误。"
 
 msgctxt "#20118"
-msgid "This requires the master lock to be set."
-msgstr "需先设置管理员锁定。"
-
-msgctxt "#20119"
-msgid "Would you like to set it now?"
-msgstr "你现在要设置吗？"
+msgid "This requires the master lock to be set. Would you like to set it now?"
+msgstr "需先设置管理员锁定。现在设置吗？"
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -10169,13 +10157,10 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "导演"
 
+#: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
-msgid "Do you want to remove all items within"
-msgstr "是否从资料库中移除"
-
-msgctxt "#20341"
-msgid "this path from your library?"
-msgstr "此目录的所有项目？"
+msgid "Do you want to remove all items within this path from your library?"
+msgstr "是否从资料库中移除此目录的所有项目？"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -10559,12 +10544,8 @@ msgid "Fanart slideshow"
 msgstr "幻灯播放同人画"
 
 msgctxt "#20426"
-msgid "Export to a single file or separate"
-msgstr "全部导出到同一个文件或每个项目"
-
-msgctxt "#20427"
-msgid "files per entry?"
-msgstr "分别导出到单独的文件？"
+msgid "Export to a single file or separate files per entry?"
+msgstr "导出到单一文件或按条目导出到不同的文件？"
 
 msgctxt "#20428"
 msgid "Single file"
@@ -10637,12 +10618,8 @@ msgid "Change content"
 msgstr "更改内容"
 
 msgctxt "#20443"
-msgid "Do you want to refresh information for all"
-msgstr "要刷新此目录下所有"
-
-msgctxt "#20444"
-msgid "items within this path?"
-msgstr "项目的信息吗？"
+msgid "Do you want to refresh information for all items within this path?"
+msgstr "要刷新此目录下所有项目的信息吗？"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20445"
@@ -10650,12 +10627,8 @@ msgid "Fanart"
 msgstr "同人画"
 
 msgctxt "#20446"
-msgid "Locally stored information found."
-msgstr "发现本地存储的信息。"
-
-msgctxt "#20447"
-msgid "Ignore and refresh from Internet?"
-msgstr "忽略并从互联网刷新吗？"
+msgid "Locally stored information found. Ignore and refresh from Internet?"
+msgstr "发现本地存储的信息。忽略并从互联网刷新吗？"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
@@ -10667,9 +10640,11 @@ msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "无法连接远程服务器"
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20450"
-msgid "Would you like to continue scanning?"
-msgstr "要继续扫描吗？"
+msgid ""
+"Unable to connect to remote server. Would you like to continue scanning?"
+msgstr "无法连接远程服务器。要继续扫描吗？"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -13000,21 +12975,6 @@ msgid "View changelog"
 msgstr "浏览更新日志"
 
 #: Unknown
-msgctxt "#33074"
-msgid "This version of %s requires an"
-msgstr "运行此版本的 %s 需要"
-
-#: Unknown
-msgctxt "#33075"
-msgid "Kodi revision of %s or greater to run."
-msgstr "Kodi 为 %s 或更高版本。"
-
-#: Unknown
-msgctxt "#33076"
-msgid "Please update Kodi."
-msgstr "请升级 Kodi。"
-
-#: Unknown
 msgctxt "#33077"
 msgid "No data found!"
 msgstr "未找到数据！"
@@ -13075,7 +13035,7 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "远程通信服务器"
 
-#: xbmc\network\eventclient.cpp
+#: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
 msgstr "检测到新的连接"
@@ -13125,51 +13085,61 @@ msgctxt "#34100"
 msgid "Number of channels"
 msgstr "声道数"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34101"
 msgid "2.0"
 msgstr "2.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34102"
 msgid "2.1"
 msgstr "2.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34103"
 msgid "3.0"
 msgstr "3.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34104"
 msgid "3.1"
 msgstr "3.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34105"
 msgid "4.0"
 msgstr "4.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34106"
 msgid "4.1"
 msgstr "4.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34107"
 msgid "5.0"
 msgstr "5.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34108"
 msgid "5.1"
 msgstr "5.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34109"
 msgid "7.0"
 msgstr "7.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34110"
 msgid "7.1"
@@ -13264,17 +13234,16 @@ msgid ""
 "about this message."
 msgstr "Apple 的 Bonjour 服务是否已安装？[CR]更多相关信息见日志。"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
 msgid "AirPlay requires Zeroconf to be enabled."
 msgstr "使用 AirPlay 需要启用 Zeroconf 。"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
-msgid "Unable to stop Zeroconf"
-msgstr "无法停止 Zeroconf"
-
-msgctxt "#34304"
-msgid "AirPlay and AirTunes depend on Zeroconf running."
-msgstr "AirPlay 和 Airtunes 依赖于 Zeroconf 的运行。"
+msgid ""
+"Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
+msgstr "无法停止 Zeroconf。AirPlay 和 Airtunes 依赖于 Zeroconf 的运行。"
 
 #: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -13621,13 +13590,8 @@ msgstr "使用有限的色彩范围（16-235）"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36043"
-msgid "No CEC capable TV detected."
-msgstr "未检测到支持 CEC 的电视。"
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36044"
-msgid "Disable polling for CEC capable devices?"
-msgstr "禁用对支持 CEC 功能的设备轮询？"
+msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
+msgstr "未检测到支持 CEC 的电视。禁用对支持 CEC 功能的设备轮询？"
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml

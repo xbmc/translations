@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-05-23 17:19+0000\n"
-"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
+"PO-Revision-Date: 2015-05-28 15:15+0000\n"
+"Last-Translator: Anton Fedchin\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/kodi-main/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2546,12 +2546,8 @@ msgid "To:"
 msgstr "В:"
 
 msgctxt "#608"
-msgid "Couldn't rip CD or track"
-msgstr "Не удалось оцифровать CD или трек"
-
-msgctxt "#609"
-msgid "CDDARipPath is not set."
-msgstr "Путь для оцифровки CD не задан"
+msgid "Couldn't rip CD or track because CDDARipPath is not set."
+msgstr "Не удалось оцифровать CD или трек потому, что не установлен CDDARipPath"
 
 msgctxt "#610"
 msgid "Rip audio track"
@@ -3225,13 +3221,9 @@ msgstr "Обновление медиатеки"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#800"
-msgid "Music library needs to rescan tags from files."
-msgstr "Необходимо повторно считать тэги аудиофайлов в медиатеку."
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#801"
-msgid "Would you like to scan now?"
-msgstr "Сканировать сейчас?"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Необходимо повторно считать тэги аудиофайлов в медиатеку. Считать прямо сейчас?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5177,13 +5169,10 @@ msgstr "Обнаружены активные соединения."
 
 #: xbmc\network\NetworkServices.cpp
 msgctxt "#13141"
-msgid "If you proceed, you might not be able to control this application"
-msgstr "В случае продолжения возможна потеря управления приложением"
-
-#: xbmc\network\NetworkServices.cpp
-msgctxt "#13142"
-msgid "any longer. Are you sure you want to stop the event server?"
-msgstr ". Вы уверены, что желаете остановить сервер событий?"
+msgid ""
+"If you proceed, you might not be able to control this application any "
+"longer. Are you sure you want to stop the event server?"
+msgstr "В случае продолжения возможна потеря управления приложением. Вы уверены, что желаете остановить сервер событий?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
@@ -5192,18 +5181,11 @@ msgstr "Изменить режим пульта Apple?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13145"
-msgid "If you are currently using the Apple Remote to control"
-msgstr "Если вы используете пульт Apple для управления"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13146"
-msgid "this application, changing this setting might affect your ability"
-msgstr "приложение, изменение этих настроек может отключить"
-
-#: xbmc\osx\XBMCHelper.cpp
-msgctxt "#13147"
-msgid "to continue controlling it. Do you want to proceed?"
-msgstr "возможность управления. Продолжить?"
+msgid ""
+"If you are currently using the Apple Remote to control this application, "
+"changing this setting might affect your ability to continue controlling it. "
+"Do you want to proceed?"
+msgstr "Если вы используете пульт Apple для управления, изменение этого параметра может повлиять на возможность управления приложением. Вы хотите продолжить?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5446,13 +5428,10 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "Шаблон именования треков"
 
+#: unused
 msgctxt "#13308"
-msgid "Do you wish to reboot your system?"
-msgstr ""
-
-msgctxt "#13309"
-msgid "instead of just this application?"
-msgstr "вместо перезапуска приложения?"
+msgid "Do you wish to reboot your system instead of just this application?"
+msgstr "Перезагрузить систему, а не только приложение?"
 
 msgctxt "#13310"
 msgid "Zoom effect"
@@ -6357,17 +6336,17 @@ msgctxt "#14037"
 msgid "DVD cache - Local network"
 msgstr "Кэш DVD — локальная сеть"
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14038"
 msgid "Network settings changed"
 msgstr "Настройки локальной сети изменены."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#14039"
-msgid "A restart is required to change your"
-msgstr "Для изменения настроек сети требуется"
-
-msgctxt "#14040"
-msgid "network setup.  Would you like to restart now?"
-msgstr "перезапуск приложения. Перезапустить сейчас?"
+msgid ""
+"A restart is required to change your network setup. Would you like to "
+"restart now?"
+msgstr "Для изменения настроек сети требуется перезапуск. Перезапустить сейчас?"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -6758,7 +6737,7 @@ msgstr "* Все жанры"
 #: xbmc/addons/Skin.cpp
 msgctxt "#15106"
 msgid "Skin built-in"
-msgstr ""
+msgstr "Из обложки"
 
 msgctxt "#15107"
 msgid "Buffering..."
@@ -7012,6 +6991,7 @@ msgctxt "#16041"
 msgid "On"
 msgstr "Вкл."
 
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Всё видео"
@@ -7024,22 +7004,35 @@ msgctxt "#16102"
 msgid "Watched"
 msgstr "Просмотрено"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16103"
 msgid "Mark as watched"
 msgstr "Отмет. как просмотренное"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16104"
 msgid "Mark as unwatched"
 msgstr "Отмет. как непросмотренное"
 
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16105"
 msgid "Edit title"
 msgstr "Изменить название"
 
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16106"
 msgid "Manage..."
 msgstr "Управление…"
 
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16107"
 msgid "Edit sort title"
 msgstr "Изм. название для сортировки"
@@ -7299,10 +7292,12 @@ msgctxt "#19000"
 msgid "Switch to channel"
 msgstr "Переключиться на канал"
 
+#: skin.confluence
 msgctxt "#19001"
 msgid "Separate the search words by using AND, OR and / or NOT."
 msgstr "Разделяйте слова в поисковом запросе с помощью AND, OR и/или NOT."
 
+#: skin.confluence
 msgctxt "#19002"
 msgid "or use phrases to find an exact match, like \"The wizard of Oz\"."
 msgstr "или используйте словосочетания, чтобы найти точное совпадение, например \"Волшебник из страны Оз\"."
@@ -7322,30 +7317,37 @@ msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "Импорт телепрограммы от клиентов"
 
+#: skin.confluence
 msgctxt "#19005"
 msgid "PVR stream information"
 msgstr "Информация о PVR-потоке"
 
+#: skin.confluence
 msgctxt "#19006"
 msgid "Receiving device"
 msgstr "Приемное устройство"
 
+#: skin.confluence
 msgctxt "#19007"
 msgid "Device status"
 msgstr "Состояние устройства"
 
+#: skin.confluence
 msgctxt "#19008"
 msgid "Signal quality"
 msgstr "Качество сигнала"
 
+#: skin.confluence
 msgctxt "#19009"
 msgid "SNR"
 msgstr "SNR"
 
+#: skin.confluence
 msgctxt "#19010"
 msgid "BER"
 msgstr "BER"
 
+#: skin.confluence
 msgctxt "#19011"
 msgid "UNC"
 msgstr "UNC"
@@ -7355,18 +7357,22 @@ msgctxt "#19012"
 msgid "PVR backend"
 msgstr "Сервер PVR"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
 msgid "Free to air"
 msgstr "Без шифрования"
 
+#: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19014"
 msgid "Fixed"
 msgstr "Фиксированн."
 
+#: skin.confluence
 msgctxt "#19015"
 msgid "Encryption"
 msgstr "Шифрование"
 
+#: unused
 msgctxt "#19016"
 msgid "PVR backend %i - %s"
 msgstr "Сервер PVR %i - %s"
@@ -7388,22 +7394,30 @@ msgctxt "#19019"
 msgid "Channels"
 msgstr "Каналы"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19020"
 msgid "TV"
 msgstr "ТВ"
 
+#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRManager.cpp
+#: skin.confluence
 msgctxt "#19021"
 msgid "Radio"
 msgstr "Радио"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
+#: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19022"
 msgid "Hidden"
 msgstr "Скрытые"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19023"
 msgid "TV channels"
 msgstr "Телеканалы"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp skin.confluence
 msgctxt "#19024"
 msgid "Radio channels"
 msgstr "Радиостанции"
@@ -7777,7 +7791,7 @@ msgstr "в"
 #: system/settings/settings.xml
 msgctxt "#19108"
 msgid "Fallback framerate"
-msgstr ""
+msgstr "Резервная частота кадров"
 
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
@@ -7904,13 +7918,10 @@ msgctxt "#19136"
 msgid "Channel unavailable"
 msgstr "Канал недоступен"
 
+#: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
-msgid "No groups defined"
-msgstr "Группы не заданы"
-
-msgctxt "#19138"
-msgid "Please create a group first"
-msgstr "Сначала создайте группу"
+msgid "No groups defined. Please create a group first"
+msgstr "Группы не заданы. Сначала создайте группу."
 
 msgctxt "#19139"
 msgid "Name of the new group"
@@ -8360,21 +8371,17 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Запуск фоновых процессов"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19240"
 msgid "No PVR add-on enabled"
 msgstr "Нет активных дополнений PVR"
 
+#: xbmc/pvr/windows/PVRClients.cpp
 msgctxt "#19241"
-msgid "The PVR manager has been enabled without any"
-msgstr "Менеджер PVR включен без"
-
-msgctxt "#19242"
-msgid "enabled PVR add-on. Enable at least one add-on"
-msgstr "активных дополнений PVR. Включите по крайней мере одно дополнение"
-
-msgctxt "#19243"
-msgid "in order to use the PVR functionality."
-msgstr "для использования функций PVR"
+msgid ""
+"The PVR manager has been enabled without any enabled PVR add-on. Enable at "
+"least one add-on in order to use the PVR functionality."
+msgstr "Менеджер PVR включен без активных дополнений PVR. Включите по крайней мере одно дополнение для использования функций PVR."
 
 #: system/settings/settings.xml
 msgctxt "#19244"
@@ -8506,16 +8513,10 @@ msgid "No PVR add-ons could be found"
 msgstr "Дополнения PVR не найдены"
 
 msgctxt "#19272"
-msgid "You need a tuner, backend software, and an"
-msgstr "Для использования функций PVR необходим тюнер,"
-
-msgctxt "#19273"
-msgid "add-on for the backend to be able to use PVR."
-msgstr "серверное ПО и соответствующее дополнение."
-
-msgctxt "#19274"
-msgid "Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Посетите http://kodi.wiki/view/PVR для получения дополнительной информации."
+msgid ""
+"You need a tuner, backend software, and an add-on for the backend to be able"
+" to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Для использования функций PVR необходим тюнер, серверное ПО и соответствующее дополнение. Посетите http://kodi.wiki/view/PVR для получения дополнительной информации."
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -9302,9 +9303,10 @@ msgctxt "#20047"
 msgid "Create profile '%s'?"
 msgstr "Создать профиль \"%s\"?"
 
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
-msgid "Start with fresh settings"
-msgstr "Запустить с чистыми параметрами"
+msgid "Start with fresh settings or copy from default?"
+msgstr "Запустить с чистыми параметрами или скопировать из профиля по-умолчанию?"
 
 msgctxt "#20049"
 msgid "Best available"
@@ -9395,19 +9397,17 @@ msgctxt "#20070"
 msgid "Profile directory"
 msgstr "Папка профиля"
 
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20071"
-msgid "Start with fresh media sources"
-msgstr "Стартовать с новыми источниками"
+msgid "Start with fresh media sources or copy from default?"
+msgstr "Запустить с новыми источниками или скопировать настройки по-умолчанию?"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20072"
-msgid "Make sure the selected folder is writeable"
-msgstr "Убедитесь, что выбранная папка доступна для записи"
-
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp
-msgctxt "#20073"
-msgid "and that the new folder name is valid"
-msgstr "и указано правильное имя новой папки"
+msgid ""
+"Make sure the selected folder is writable and that the new folder name is "
+"valid"
+msgstr "Убедитесь, что выбранная папка доступна для записи и указано правильное имя новой папки"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -9526,25 +9526,17 @@ msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
 msgstr "Ввод кода защиты всегда переключает в режим полного доступа"
 
-msgctxt "#20102"
-msgid "or copy from default?"
-msgstr "или копировать из стандартного?"
-
 msgctxt "#20103"
 msgid "Save changes to profile?"
 msgstr "Сохранить изменения профиля?"
 
 msgctxt "#20104"
-msgid "Old settings found."
-msgstr "Найдены старые настройки"
-
-msgctxt "#20105"
-msgid "Do you want to use them?"
-msgstr "Использовать их?"
+msgid "Old settings found. Do you want to use them?"
+msgstr "Найдены старые настройки. Использовать их?"
 
 msgctxt "#20106"
-msgid "Old media sources found."
-msgstr "Найдены старые ресурсы"
+msgid "Old media sources found. Do you want to use them?"
+msgstr "Найдены старые медиа-ресурсы. Использовать их?"
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -9598,12 +9590,8 @@ msgid "Invalid lock code."
 msgstr "Неверный код защиты."
 
 msgctxt "#20118"
-msgid "This requires the master lock to be set."
-msgstr "Необходимо установить код защиты."
-
-msgctxt "#20119"
-msgid "Would you like to set it now?"
-msgstr "Установить его сейчас?"
+msgid "This requires the master lock to be set. Would you like to set it now?"
+msgstr "Необходимо установить код защиты. Установить сейчас?"
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -10171,13 +10159,10 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Режиссер"
 
+#: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
-msgid "Do you want to remove all items within"
-msgstr "Удалить все объекты внутри"
-
-msgctxt "#20341"
-msgid "this path from your library?"
-msgstr "этот путь из вашей медиатеки?"
+msgid "Do you want to remove all items within this path from your library?"
+msgstr "Удалить все объекты внутри этого пути из медиатеки?"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -10561,12 +10546,8 @@ msgid "Fanart slideshow"
 msgstr "Слайд-шоу фанартов"
 
 msgctxt "#20426"
-msgid "Export to a single file or separate"
-msgstr "Экспортировать в одну папку или разделять?"
-
-msgctxt "#20427"
-msgid "files per entry?"
-msgstr "на отдельные файлы для каждой записи?"
+msgid "Export to a single file or separate files per entry?"
+msgstr "Экспортировать в один файл или в разные файлы для каждого элемента?"
 
 msgctxt "#20428"
 msgid "Single file"
@@ -10639,12 +10620,8 @@ msgid "Change content"
 msgstr "Изменить тип содержимого"
 
 msgctxt "#20443"
-msgid "Do you want to refresh information for all"
-msgstr "Обновить сведения для всех"
-
-msgctxt "#20444"
-msgid "items within this path?"
-msgstr "объектов в данной папке?"
+msgid "Do you want to refresh information for all items within this path?"
+msgstr "Обновить сведения для всех объектов по этому пути?"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20445"
@@ -10652,12 +10629,8 @@ msgid "Fanart"
 msgstr "Фанарт"
 
 msgctxt "#20446"
-msgid "Locally stored information found."
-msgstr "Найдены локальные сведения."
-
-msgctxt "#20447"
-msgid "Ignore and refresh from Internet?"
-msgstr "Игнорировать и обновить из Интернета?"
+msgid "Locally stored information found. Ignore and refresh from Internet?"
+msgstr "Найдены локальные сведения. Игнорировать и обновить из Интернет?"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
@@ -10669,9 +10642,11 @@ msgctxt "#20449"
 msgid "Unable to connect to remote server"
 msgstr "Сервер недоступен."
 
+#: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20450"
-msgid "Would you like to continue scanning?"
-msgstr "Продолжить сканирование?"
+msgid ""
+"Unable to connect to remote server. Would you like to continue scanning?"
+msgstr "Не возможно подключиться к удалённому серверу. Продолжить сканирование?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -13002,21 +12977,6 @@ msgid "View changelog"
 msgstr "Просмотреть список изменений"
 
 #: Unknown
-msgctxt "#33074"
-msgid "This version of %s requires an"
-msgstr "Для данной версии %s требуется"
-
-#: Unknown
-msgctxt "#33075"
-msgid "Kodi revision of %s or greater to run."
-msgstr "версия Kodi %s или новее."
-
-#: Unknown
-msgctxt "#33076"
-msgid "Please update Kodi."
-msgstr "Обновите Kodi."
-
-#: Unknown
 msgctxt "#33077"
 msgid "No data found!"
 msgstr "Данных не найдено."
@@ -13077,7 +13037,7 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Сервер удаленного доступа"
 
-#: xbmc\network\eventclient.cpp
+#: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
 msgstr "Обнаружено новое подключение"
@@ -13127,51 +13087,61 @@ msgctxt "#34100"
 msgid "Number of channels"
 msgstr "Количество каналов"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34101"
 msgid "2.0"
 msgstr "2.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34102"
 msgid "2.1"
 msgstr "2.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34103"
 msgid "3.0"
 msgstr "3.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34104"
 msgid "3.1"
 msgstr "3.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34105"
 msgid "4.0"
 msgstr "4.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34106"
 msgid "4.1"
 msgstr "4.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34107"
 msgid "5.0"
 msgstr "5.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34108"
 msgid "5.1"
 msgstr "5.1"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34109"
 msgid "7.0"
 msgstr "7.0"
 
+#. Indicates the number of audio channels in settings
 #: system/settings/settings.xml
 msgctxt "#34110"
 msgid "7.1"
@@ -13266,17 +13236,16 @@ msgid ""
 "about this message."
 msgstr "Проверьте, установлена ли служба Apple Bonjour.[CR]См. журнал чтобы получить больше информации об этом сообщении."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
 msgid "AirPlay requires Zeroconf to be enabled."
 msgstr "AirPlay требует включения Zeroconf."
 
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
-msgid "Unable to stop Zeroconf"
-msgstr "Не удалось остановить Zeroconf"
-
-msgctxt "#34304"
-msgid "AirPlay and AirTunes depend on Zeroconf running."
-msgstr "AirPlay и AirTunes зависят от запущенного Zeroconf."
+msgid ""
+"Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
+msgstr "Не удалось остановить Zeroconf. AirPlay и AirTunes зависят от запущенного Zeroconf."
 
 #: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -13623,13 +13592,8 @@ msgstr "Использовать ограниченный цветовой ди�
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36043"
-msgid "No CEC capable TV detected."
-msgstr " CEC совместимого ТВ не обнаружено."
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36044"
-msgid "Disable polling for CEC capable devices?"
-msgstr "Отключить опрос CEC совместимых устройств?"
+msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
+msgstr "CEC-совместимого ТВ не обнаружено. Отключить обнаружение CEC-совместимых устройств?"
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml
@@ -13796,7 +13760,7 @@ msgctxt "#36123"
 msgid ""
 "Show file extensions on media files, for example \"You Enjoy Myself\" would "
 "be shown as \"You Enjoy Myself.mp3\"."
-msgstr ""
+msgstr "Показывать расширения файлов. Например, файл \"You Enjoy Myself\" будет показан как \"You Enjoy Myself.mp3\"."
 
 #. Description of setting "Appearance -> File lists -> Ignore articles when
 #. sorting with label #13399
@@ -15521,7 +15485,7 @@ msgid ""
 "match to the source properties as possible; [Optimized] Output properties "
 "are set at the start of playback and will not change if the properties of "
 "the source change."
-msgstr ""
+msgstr "Настройка выбора параметров аудиовыхода: [Фиксир.]: всегда использовать указанную частоту сэмплирования и конфигурацию колонок; [Наилучш.] Параметры аудиовыхода выбираются, чтобы наилучшим образом соответствовать источнику; [Оптимизир.]  Параметры аудиовыхода задаются в начале воспроизведения и не меняются при изменение параметров источника."
 
 #. Description of setting "System -> Audio output -> Number of channels" with
 #. label #34100
@@ -15800,7 +15764,7 @@ msgid ""
 "Here you can enable or disable master lock and define the PIN code used to "
 "unlock it. You can also specify which areas of the application would need a "
 "PIN to access them."
-msgstr ""
+msgstr "Здесь можно включить или выключить общую защиту, а также задать пин-код для разблокировки. Так же вы можете определить к каким разделам приложения необходим пин-код для доступа к ним."
 
 #. Description of setting "System -> Master lock -> Ask for master lock code
 #. on startup" with label #20076
