@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-08 00:34+0000\n"
-"Last-Translator: devilshura <devilshura@gmail.com>\n"
+"PO-Revision-Date: 2015-06-27 04:45+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Thai (Thailand) (http://www.transifex.com/projects/p/kodi-main/language/th_TH/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1837,8 +1837,8 @@ msgid "Remove movie from library"
 msgstr "ลบภาพยนตร์ จาก คลังข้อมูล"
 
 msgctxt "#433"
-msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr "คุณต้องการที่จะเอา[CR]'%s' ออกจากคลังข้อมูล?"
+msgid "Would you really like to remove '%s' from library?"
+msgstr ""
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -3018,7 +3018,6 @@ msgid "Mirror image"
 msgstr "สำเนาภาพ"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "คุณแน่ใจหรือไม่?"
@@ -3265,19 +3264,12 @@ msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "ไม่สามารถเชื่อมต่อได้"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1002"
-msgid "The connection to the network location couldn't be established."
-msgstr "การเชื่อมต่อไปยังที่ตั้งเครือข่าย ไม่สามารถสร้างได้."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1003"
-msgid "This could be due to the network not being connected."
-msgstr "ไม่สามารถทำงานได้เนื่องจากยังไม่ได้เชื่อมต่อเครือข่าย."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1004"
-msgid "Would you like to add it anyway?"
-msgstr "คุณต้องการเพิ่มจริงหรือไม่?"
+msgid ""
+"The connection to the network location couldn't be established. This could "
+"be due to the network not being connected. Would you like to add it anyway?"
+msgstr "การเชื่อมต่อไปยังตำแหน่งบนเครือข่าย ไม่สามารถทำได้ ซึ่งอาจจะเป็นเพราะเครือข่ายไม่ถูกเชื่อมต่อ คุณยังต้องการเพิ่มมันหรือไม่?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3370,8 +3362,10 @@ msgstr "เรียกดู"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1025"
-msgid "Couldn't retrieve directory information."
-msgstr "ไม่สามารถดึงข้อมูลของไดเรกทอรี"
+msgid ""
+"Couldn't retrieve directory information. This could be due to the network "
+"not being connected. Would you like to add it anyway?"
+msgstr "ไม่สามารถรับข้อมูลไดเรคทอรี ซึ่งอาจจะเป็นเพราะเครือข่ายไม่ถูกเชื่อมต่อ คุณยังต้องการเพิ่มมันหรือไม่?"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4101,28 +4095,27 @@ msgstr "กลับไปที่รายการหลัก เพรา�
 
 msgctxt "#2101"
 msgid ""
-"Newer version needed.[CR]Check the log for more information about this "
-"message."
+"Newer version needed. Check the log for more information about this message."
 msgstr ""
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 #: xbmc/interfaces/python/PythonInvoker.cpp
 msgctxt "#2102"
 msgid "%s error"
-msgstr ""
+msgstr "%s ผิดพลาด"
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#2103"
 msgid "Add-on error"
-msgstr ""
+msgstr "ส่วนเสริม ผิดพลาด"
 
 #. Used for add-on error kaitoast.
 #: xbmc/interfaces/python/PythonInvoker.cpp
 msgctxt "#2104"
 msgid "Check the log for more information."
-msgstr ""
+msgstr "ตรวจสอบบันทึกระบบ สำหรับรายละเอียดของข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10000"
@@ -4175,12 +4168,12 @@ msgstr "การตั้งค่า - หน้าจอ"
 
 msgctxt "#10010"
 msgid "Settings - Appearance - GUI calibration"
-msgstr ""
+msgstr "การตั้งค่า - การแสดงผล - การปรับเทียบ GUI"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
-msgstr ""
+msgstr "การตั้งค่า - วิดีโอ - การปรับเทียบหน้าจอ"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10012"
@@ -4229,7 +4222,7 @@ msgstr "สคริปต์"
 
 msgctxt "#10021"
 msgid "Settings - TV"
-msgstr ""
+msgstr "การตั้งค่า - ทีวี"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10025"
@@ -4239,7 +4232,7 @@ msgstr "วิดีโอ"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10028"
 msgid "Videos / Playlist"
-msgstr ""
+msgstr "วิดีโอ / รายการเล่น"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10029"
@@ -4312,7 +4305,7 @@ msgstr "ลองเปลี่ยนระดับการตั้งค่
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
 msgid "Yes / No dialogue"
-msgstr ""
+msgstr "การโต้ตอบ ใช่ / ไม่"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
@@ -4357,7 +4350,7 @@ msgstr "ที่ชื่นชอบ"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
 msgid "Songs / Info"
-msgstr ""
+msgstr "เพลง / ข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4372,7 +4365,7 @@ msgstr "ตัวแก้ไข ข้อบังคับ รายการ�
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
 msgid "Pictures / Info"
-msgstr ""
+msgstr "รูปภาพ / ข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4382,7 +4375,7 @@ msgstr "การตั้งค่าส่วนเสริม"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
 msgid "Add-ons / Info"
-msgstr ""
+msgstr "ส่วนเสริม / ข้อมูล"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4407,17 +4400,17 @@ msgstr "เปิดกระแสข้อมูล"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
 msgid "Music / Playlist"
-msgstr ""
+msgstr "เพลง / รายการเล่น"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10501"
 msgid "Music / Files"
-msgstr ""
+msgstr "เพลง / แฟ้ม"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
 msgid "Music / Library"
-msgstr ""
+msgstr "เพลง / คลังข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
@@ -4464,11 +4457,11 @@ msgstr "เพลง - คลังข้อมูล"
 
 msgctxt "#10517"
 msgid "Now playing - Music"
-msgstr ""
+msgstr "ขณะนี้กำลังเล่น - เพลง"
 
 msgctxt "#10522"
 msgid "Now playing - Videos"
-msgstr ""
+msgstr "ขณะนี้กำลังเล่น - วิดีโอ"
 
 msgctxt "#10523"
 msgid "Album information"
@@ -4486,7 +4479,7 @@ msgstr "กล่องโต้ตอบ การเลือก"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
 msgid "Music / Info"
-msgstr ""
+msgstr "เพลง / ข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
@@ -4496,11 +4489,11 @@ msgstr "กล่องโต้ตอบ ตกลง"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
 msgid "Videos / Info"
-msgstr ""
+msgstr "วิดีโอ / ข้อมูล"
 
 msgctxt "#12004"
 msgid "Scripts / Info"
-msgstr ""
+msgstr "สคริปท์ / ข้อมูล"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4633,7 +4626,7 @@ msgstr "ป้อนรหัสเพื่อปลดล๊อค"
 #: unknown
 msgctxt "#12329"
 msgid "or press \"C\" to cancel"
-msgstr ""
+msgstr "หรือ กด \"C\" เพื่อยกเลิก"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp
 msgctxt "#12330"
@@ -4643,7 +4636,7 @@ msgstr "ป้อนปุ่มคำสั่งผสม(Combo)บนจอ�
 #: xbmc/dialogs/GUIDialogGamepad.cpp
 msgctxt "#12331"
 msgid "press \"OK\", or \"Back\" to cancel"
-msgstr ""
+msgstr "กด \"OK\", หรือ \"Back\" เพื่อยกเลิก"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#12332"
@@ -4687,7 +4680,7 @@ msgstr "ป้อนรหัสใหม่"
 #: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
-msgstr ""
+msgstr "ป้อนรหัสผ่านใหม่อีกครั้ง"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
 msgctxt "#12342"
@@ -4753,17 +4746,12 @@ msgstr "ผู้ดูแล"
 #: unknown
 msgctxt "#12362"
 msgid "Shutdown system if number of master lock retries is exceeded"
-msgstr ""
+msgstr "ปิดระบบ ถ้าจำนวนการพยายามเข้าใช้แบบมาสเตอร์เกินกำหนด"
 
 #: xbmc\GUIPassword.cpp
 msgctxt "#12367"
-msgid "Master code is not valid"
-msgstr "โค้ดหลักไม่ถูกต้อง"
-
-#: xbmc\GUIPassword.cpp
-msgctxt "#12368"
-msgid "Please enter a valid master code"
-msgstr "กรุณาป้อนโค้ดที่ถูกต้อง"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "รหัสมาสเตอร์ไม่ถูกต้อง โปรดป้อนรหัสมาสเตอร์ที่ถูกต้อง"
 
 #: unknown
 msgctxt "#12373"
@@ -4779,8 +4767,8 @@ msgstr "ตั้งเป็นค่าเริ่มต้น สำหร�
 #: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
-msgid "This will reset any previously saved values"
-msgstr "การกระทำนี้จะแก้ไขค่าทั้งหมดก่อนหน้านี้"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "การกระทำนี้จะล้างค่าที่บันทึกไว้ก่อนหน้า คุณแน่ใจหรือ?"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -4796,27 +4784,27 @@ msgstr "ใช้เอฟเฟ็คการกวาดและซูม"
 #: xbmc/LangInfo.cpp
 msgctxt "#12382"
 msgid "%s xx"
-msgstr ""
+msgstr "%s xx"
 
 #: system/settings/settings.xml
 msgctxt "#12383"
 msgid "12-hour clock"
-msgstr ""
+msgstr "นาฬิกา 12-ชั่วโมง"
 
 #: system/settings/settings.xml
 msgctxt "#12384"
 msgid "24-hour clock"
-msgstr ""
+msgstr "นาฬิกา 24-ชั่วโมง"
 
 #: unknown
 msgctxt "#12385"
 msgid "Day / Month"
-msgstr ""
+msgstr "วัน / เดือน"
 
 #: unknown
 msgctxt "#12386"
 msgid "Month / Day"
-msgstr ""
+msgstr "เดือน / วัน"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
@@ -4889,7 +4877,7 @@ msgstr "ระบบ"
 #: unknown
 msgctxt "#13001"
 msgid "Immediate HDD spindown"
-msgstr ""
+msgstr "ลดการหมุน HDD โดยทันที"
 
 #: unknown
 msgctxt "#13002"
@@ -4954,7 +4942,7 @@ msgstr "การกระทำของปุ่มปิด"
 #: skin.confluence skin.retouched
 msgctxt "#13016"
 msgid "Power off system"
-msgstr ""
+msgstr "ปิดระบบ"
 
 #: skin.confluence
 msgctxt "#13017"
@@ -4974,7 +4962,7 @@ msgstr "ส่วนอื่นทำงานอยู่หรือไม่
 #: xbmc\storage\MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable hard drive"
-msgstr ""
+msgstr "เมานท์ฮาร์ดดิสก์แบบถอดได้"
 
 #: xbmc\storage\MediaManager.cpp
 msgctxt "#13022"
@@ -4997,12 +4985,12 @@ msgstr "ถอดจอยสติ๊ก"
 #: system/settings/settings.xml
 msgctxt "#13026"
 msgid "Try to wakeup remote servers on access"
-msgstr ""
+msgstr "พยายามปลุกแม่ข่ายระยะไกลในการเข้าถึง"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13027"
 msgid "Wake-on-LAN (%s)"
-msgstr ""
+msgstr "ปลุก-ด้วย-LAN (%s)"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13028"
@@ -5012,7 +5000,7 @@ msgstr "กำลังรอ เครือข่ายที่จะเช�
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13029"
 msgid "Failed to execute Wake-on-LAN!"
-msgstr ""
+msgstr "ล้มเหลวในการดำเนินการ ปลุก-ด้วย-LAN!"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13030"
@@ -5032,7 +5020,7 @@ msgstr "กำลังรอ เพื่อให้บริการเร�
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13033"
 msgid "MAC discovery"
-msgstr ""
+msgstr "การค้นหา MAC"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13034"
@@ -5087,12 +5075,12 @@ msgstr "เปิดใช้งานเสมอ"
 #: unknown
 msgctxt "#13109"
 msgid "Test & apply the resolution"
-msgstr ""
+msgstr "ทดสอบ & นำไปใช้ ความละเอียดหน้าจอ"
 
 #: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save this resolution?"
-msgstr ""
+msgstr "จัดเก็บความละเอียดหน้าจอนี้?"
 
 #: xbmc\settings\DisplaySettings.cpp
 msgctxt "#13111"
@@ -5169,7 +5157,7 @@ msgctxt "#13141"
 msgid ""
 "If you proceed, you might not be able to control this application any "
 "longer. Are you sure you want to stop the event server?"
-msgstr ""
+msgstr "หากคุณดำเนินการต่อ, คุณอาจจะไม่สามารถควบคุมโปรแกรมนี้ได้อีกต่อไป. คุณแน่ใจว่าคุณต้องการ หยุดแม่ข่ายกิจกรรม?"
 
 #: xbmc\osx\XBMCHelper.cpp
 msgctxt "#13144"
@@ -5182,7 +5170,7 @@ msgid ""
 "If you are currently using the Apple Remote to control this application, "
 "changing this setting might affect your ability to continue controlling it. "
 "Do you want to proceed?"
-msgstr ""
+msgstr "ถ้าในตอนนี้คุณกำลังใช้ รีโมตแอปเปิ้ล ในการควบคุมโปรแกรมนี้, การเปลี่ยนการตั้งค่านี้ อาจส่งผลต่อความสามารถในการควบคุมมันต่อไป คุณต้องการดำเนินการหรือไม่?"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5311,7 +5299,7 @@ msgstr "ฮาร์ดแวร์:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13271"
 msgid "CPU usage:"
-msgstr ""
+msgstr "การใช้งาน CPU:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -5428,7 +5416,7 @@ msgstr "แม่แบบชื่อเพลง"
 #: unused
 msgctxt "#13308"
 msgid "Do you wish to reboot your system instead of just this application?"
-msgstr ""
+msgstr "คุณประสงค์ที่จะเริ่มระบบของคุณใหม่ แทนที่จะเป็นแค่โปรแกรมนี้?"
 
 msgctxt "#13310"
 msgid "Zoom effect"
@@ -5707,7 +5695,7 @@ msgstr "ไม่มีชุดรูปแบบที่กำหนดไว
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
-msgstr ""
+msgstr "เอาออก / บรรจุ"
 
 #: system/settings/settings.xml
 msgctxt "#13392"
@@ -5745,7 +5733,7 @@ msgstr "ปุ่มลัด"
 #: system/settings/settings.xml
 msgctxt "#13399"
 msgid "Ignore articles when sorting"
-msgstr ""
+msgstr "ไม่สนใจคำนำหน้า เมื่อเรียงลำดับ"
 
 #: system/settings/settings.xml
 msgctxt "#13400"
@@ -5860,47 +5848,47 @@ msgstr "จดจำเส้นทางนี้"
 #: system/settings/settings.xml
 msgctxt "#13425"
 msgid "Allow hardware acceleration - VDPAU"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - VDPAU"
 
 #: system/settings/settings.xml
 msgctxt "#13426"
 msgid "Allow hardware acceleration - VAAPI"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - VAAPI"
 
 #: system/settings/settings.xml
 msgctxt "#13427"
 msgid "Allow hardware acceleration - DXVA2"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - DXVA2"
 
 #: system/settings/settings.xml
 msgctxt "#13428"
 msgid "Allow hardware acceleration - CrystalHD"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - CrystalHD"
 
 #: system/settings/settings.xml
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VDADecoder"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - VDADecoder"
 
 #: system/settings/settings.xml
 msgctxt "#13430"
 msgid "Allow hardware acceleration - OpenMax"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - OpenMax"
 
 #: system/settings/settings.xml xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel shaders"
-msgstr ""
+msgstr "พิกเซลเฉดเดอร์"
 
 #: system/settings/settings.xml
 msgctxt "#13432"
 msgid "Allow hardware acceleration - VideoToolbox"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - VideoToolbox"
 
 #: system/settings/settings.xml
 msgctxt "#13433"
 msgid "Play next video automatically"
-msgstr ""
+msgstr "เล่นวิดีโอถัดไป โดยอัตโนมัติ"
 
 #. If autoplay next video is set true
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
@@ -5911,27 +5899,27 @@ msgstr "เล่นเพียงแค่นี้"
 #: system/settings/settings.xml
 msgctxt "#13435"
 msgid "Enable HQ scalers for scaling above"
-msgstr ""
+msgstr "เปิดใช้ HQ scalers เมื่อปรับขนาดมากกว่า"
 
 #: xbmc/settings/GUISettings.cpp
 msgctxt "#13436"
 msgid "Allow hardware acceleration - libstagefright"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - libstagefright"
 
 #: system/settings/settings.xml
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
-msgstr ""
+msgstr "เลือกใช้ ตัวผสมวิดีโอ VDPAU"
 
 #: system/settings/settings.xml
 msgctxt "#13438"
 msgid "Allow hardware acceleration - amcodec"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - amcodec"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
 msgid "Allow hardware acceleration - MediaCodec"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - MediaCodec"
 
 #: system/settings/settings.xml
 msgctxt "#13441"
@@ -5946,7 +5934,7 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If "
 "disabled the CPU will be used instead. Older Radeon Cards tend to segfault "
 "with this enabled."
-msgstr ""
+msgstr "เปิดใช้ตัวเลือกนี้ เพื่อใข้การเร่งฮาร์ดแวร์ สำหรับการเข้ารหัส Mpeg-(1/2) ถ้าปิดใช้งานซีพียูจะถูกใช้แทน การ์ด Radeon รุ่นเก่า มีแนวโน้มแสดงบางส่วนผิดพลาด ถ้าเปิดใช้ตัวเลือกนี้"
 
 #: system/settings/settings.xml
 msgctxt "#13443"
@@ -5961,7 +5949,7 @@ msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead. Some ION hardware has problems with "
 "this being enabled by default."
-msgstr ""
+msgstr "เปิดใช้ตัวเลือกนี้ เพื่อใข้การเร่งฮาร์ดแวร์ สำหรับการเข้ารหัส Mpeg-4 ถ้าปิดใช้งาน ซีพียูจะถูกใช้แทน ฮาร์ดแวร์ ION บางรุ่น มีปัญหากับการเปิดใช้ตัวเลือกนี้โดยค่าเริ่มต้น"
 
 #: system/settings/settings.xml
 msgctxt "#13445"
@@ -5976,7 +5964,7 @@ msgid ""
 "Enable this option to use hardware acceleration for VC-1 based codecs. If "
 "disabled the CPU will be used instead. AMD hardware with VDPAU can't decode "
 "VC-1 Simple."
-msgstr ""
+msgstr "เปิดใช้ตัวเลือกนี้ เพื่อใข้การเร่งฮาร์ดแวร์ สำหรับการเข้ารหัสพื้นฐาน VC-1 ถ้าปิดใช้งาน ซีพียูจะถูกใช้แทน ฮาร์ดแวร์ AMD ที่ใช้ VDPAU ไม่สามารถถอดรหัส VC-1 พื้นๆได้"
 
 #: system/settings/settings.xml
 msgctxt "#13447"
@@ -5991,7 +5979,7 @@ msgid ""
 "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If "
 "disabled the CPU will be used instead. Some MPEG-2 videos might have green "
 "artifacts."
-msgstr ""
+msgstr "เปิดใช้ตัวเลือกนี้ เพื่อใข้การเร่งฮาร์ดแวร์ สำหรับการเข้ารหัส Mpeg-(1/2) ถ้าปิดใช้งาน ซีพียูจะถูกใช้แทน วิดีโอ Mpeg-2 บางแฟ้ม อาจมีรอยสีเขียวแทรก"
 
 #: system/settings/settings.xml
 msgctxt "#13449"
@@ -6020,7 +6008,7 @@ msgid ""
 "Enable this option to use hardware acceleration for VC-1 based codecs. If "
 "disabled the CPU will be used instead. Especially VC-1 interlaced fails hard"
 " on Intel hardware."
-msgstr ""
+msgstr "เปิดใช้ตัวเลือกนี้ เพื่อใข้การเร่งฮาร์ดแวร์ สำหรับการเข้ารหัสพื้นฐาน VC-1 ถ้าปิดใช้งาน ซีพียูถูกใช้แทน โดยเฉพาะการลบเส้นทางขวาง VC-1 ล้มเหลวมากบนฮาร์ดแวร์อินเทล"
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6031,7 +6019,7 @@ msgstr "กำหนดไห้ใช้ กระบวนการแสด�
 #: system/settings/settings.xml
 msgctxt "#13458"
 msgid "Allow hardware acceleration - OMXPlayer"
-msgstr ""
+msgstr "อนุญาตให้เร่งฮาร์ดแวร์ - OMXPlayer"
 
 #. Description of setting "Videos -> Playback -> Allow hardware acceleration
 #. (OMXPlayer)" with label #13457
@@ -6048,7 +6036,7 @@ msgstr "คุณภาพ อัตราสุ่ม"
 #: system/settings/settings.xml
 msgctxt "#13506"
 msgid "Low (fast)"
-msgstr ""
+msgstr "ต่ำ (เร็ว)"
 
 #: system/settings/settings.xml
 msgctxt "#13507"
@@ -6063,7 +6051,7 @@ msgstr "สูง"
 #: system/settings/settings.xml
 msgctxt "#13509"
 msgid "Really high (slow)"
-msgstr ""
+msgstr "สูงมาก (ช้า)"
 
 msgctxt "#13510"
 msgid "Sync playback to display"
@@ -6110,11 +6098,11 @@ msgstr "ปิด"
 
 msgctxt "#13552"
 msgid "%.1f second"
-msgstr ""
+msgstr "%.1f วินาที"
 
 msgctxt "#13553"
 msgid "%.1f seconds"
-msgstr ""
+msgstr "%.1f วินาที"
 
 msgctxt "#13554"
 msgid "%d Minute"
@@ -6129,19 +6117,19 @@ msgstr "%d นาที"
 #: system/settings/settings.xml
 msgctxt "#13556"
 msgid "Skip steps"
-msgstr ""
+msgstr "ระดับการข้าม"
 
 #. Name of a setting to configure the time to wait for subsequent keypresses
 #. in order to apply additive skipping
 #: system/settings/settings.xml
 msgctxt "#13557"
 msgid "Skip delay"
-msgstr ""
+msgstr "หน่วงการข้าม"
 
 #: system/settings/darwin.xml
 msgctxt "#13600"
 msgid "Apple Remote"
-msgstr ""
+msgstr "รีโมท แอปเปิ้ล"
 
 #: system/settings/darwin.xml
 msgctxt "#13602"
@@ -6166,22 +6154,22 @@ msgstr "มาตรฐาน"
 #: system/settings/darwin.xml
 msgctxt "#13612"
 msgid "Universal remote"
-msgstr ""
+msgstr "รีโมท ทั่วไป"
 
 #: system/settings/darwin.xml
 msgctxt "#13613"
 msgid "Harmony remote"
-msgstr ""
+msgstr "รีโมท ฮาร์โมนี่"
 
 #: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13620"
 msgid "Apple Remote error"
-msgstr ""
+msgstr "ข้อผิดพลาด รีโมทแอปเปิ้ล"
 
 #: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13621"
 msgid "Apple Remote support couldn't be enabled."
-msgstr ""
+msgstr "การรองรับรีโมทแอปเปิ้ล ไม่สามารถเปิดใช้ได้"
 
 msgctxt "#14000"
 msgid "Stack"
@@ -6291,7 +6279,7 @@ msgstr "วิดีโอ แคช - ดีวีดี รอม"
 #: system/settings/settings.xml
 msgctxt "#14027"
 msgid "Video cache - Local network"
-msgstr ""
+msgstr "แคชวิดีโอ - เครือข่ายท้องถิ่น"
 
 #: system/settings/settings.xml
 msgctxt "#14028"
@@ -6306,7 +6294,7 @@ msgstr "แคชเสียง - ดีวีดี รอม"
 #: system/settings/settings.xml
 msgctxt "#14031"
 msgid "Audio cache - Local network"
-msgstr ""
+msgstr "แคชเสียง - เครือข่ายท้องถิ่น"
 
 #: system/settings/settings.xml
 msgctxt "#14032"
@@ -6331,7 +6319,7 @@ msgstr "บริการ"
 #: system/settings/settings.xml
 msgctxt "#14037"
 msgid "DVD cache - Local network"
-msgstr ""
+msgstr "แคชดีวีดี - เครือข่ายท้องถิ่น"
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#14038"
@@ -6343,7 +6331,7 @@ msgctxt "#14039"
 msgid ""
 "A restart is required to change your network setup. Would you like to "
 "restart now?"
-msgstr ""
+msgstr "การเริ่มระบบใหม่จำเป็นในการเปลี่ยนการตั้งค่าเครือข่ายของคุณ คุณอยากจะเริ่มใหม่ตอนนี้หรือไม่?"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -6419,7 +6407,7 @@ msgstr "หยุดการสำรวจ"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
-msgstr ""
+msgstr "ไม่สามารถทำได้ขณะกำลังสำรวจข้อมูลสื่อ"
 
 msgctxt "#14058"
 msgid "Film grain effect"
@@ -6457,7 +6445,7 @@ msgstr "ตั้งเวลา"
 
 msgctxt "#14066"
 msgid "Enter the time in 24-hour HH:MM format"
-msgstr ""
+msgstr "ป้อนเวลาใน 24-ชั่วโมง รูปแบบ HH:MM"
 
 msgctxt "#14067"
 msgid "Enter the date in DD/MM/YYYY format"
@@ -6526,7 +6514,7 @@ msgstr "แสดงข้อมูลภาพ EXIF"
 #: system/settings/settings.xml
 msgctxt "#14083"
 msgid "Use fullscreen window"
-msgstr ""
+msgstr "ใช้หน้าต่างแบบเต็มจอ"
 
 #: system/settings/settings.xml
 msgctxt "#14084"
@@ -6589,7 +6577,7 @@ msgstr "ริป"
 #: system/settings/settings.xml
 msgctxt "#14097"
 msgid "Audio CD insert action"
-msgstr ""
+msgstr "การทำงานเมื่อป้อนซีดีเพลง"
 
 #: system/settings/settings.xml
 msgctxt "#14098"
@@ -6599,7 +6587,7 @@ msgstr "เล่น"
 #: system/settings/settings.xml
 msgctxt "#14099"
 msgid "Eject disc when the CD ripping is complete"
-msgstr ""
+msgstr "ดันแผ่นออกเมื่อการริปแผ่นซีดีเสร็จสมบูรณ์"
 
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#14100"
@@ -6633,12 +6621,12 @@ msgstr "แสดงเมนูแบบง่าย"
 #: system/settings/settings.xml
 msgctxt "#14105"
 msgid "Temperature unit"
-msgstr ""
+msgstr "หน่วยอุณหภูมิ"
 
 #: system/settings/settings.xml
 msgctxt "#14106"
 msgid "Speed unit"
-msgstr ""
+msgstr "หน่วยความเร็ว"
 
 #: system/settings/settings.xml
 msgctxt "#14107"
@@ -6648,22 +6636,22 @@ msgstr "รูปแบบเวลา"
 #: system/settings/settings.xml
 msgctxt "#14108"
 msgid "Use 12 / 24-hour format"
-msgstr ""
+msgstr "ใช้รูปแบบ 12 / 24-ชั่วโมง"
 
 #: system/settings/settings.xml
 msgctxt "#14109"
 msgid "Short date format"
-msgstr ""
+msgstr "รูปแบบวันที่ย่อ"
 
 #: system/settings/settings.xml
 msgctxt "#14110"
 msgid "Long date format"
-msgstr ""
+msgstr "รูปแบบวันที่ยาว"
 
 #: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "%i Items failed to export"
-msgstr ""
+msgstr "%i รายการ ล้มเหลวในการส่งออก"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -6734,7 +6722,7 @@ msgstr "* ประเภททั้งหมด"
 #: xbmc/addons/Skin.cpp
 msgctxt "#15106"
 msgid "Skin built-in"
-msgstr ""
+msgstr "รวมมากับหน้าตา"
 
 msgctxt "#15107"
 msgid "Buffering..."
@@ -6743,7 +6731,7 @@ msgstr "กำลังบัฟเฟอร์"
 #: system/settings/settings.xml
 msgctxt "#15108"
 msgid "GUI sounds"
-msgstr ""
+msgstr "เสียง GUI"
 
 msgctxt "#15109"
 msgid "Skin default"
@@ -6802,7 +6790,7 @@ msgstr "ไม่พบเส้นทางหรือไม่ถูกต้
 #: xbmc/windows/GUIMediaWindow.cpp xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#15301"
 msgid "Couldn't connect to network server"
-msgstr ""
+msgstr "ไม่สามารถเชื่อมต่อไปยังเซิฟเวอร์เครือข่าย"
 
 msgctxt "#15302"
 msgid "No servers found"
@@ -6896,7 +6884,7 @@ msgstr "เลือกอัตโนมัติ"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "Deinterlace"
-msgstr ""
+msgstr "ลดเส้นทางขวาง"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
@@ -6906,7 +6894,7 @@ msgstr "Bob"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16022"
 msgid "Bob - Inverted"
-msgstr ""
+msgstr "Bob - กลับค่า"
 
 #: xbmc/dialogs/GUIDialogProgress.cpp
 msgctxt "#16024"
@@ -6921,9 +6909,12 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "เล่นเพลงผิดพลาด"
 
+#: xbmc/PlaylistPlayer.cpp
 msgctxt "#16027"
-msgid "One or more items failed to play."
-msgstr "หนึ่งหรือมากกว่ารายการเล่นไม่ได้"
+msgid ""
+"One or more items failed to play. Check the log for more information about "
+"this message."
+msgstr "หนึ่งรายการหรือมากกว่าล้มเหลวในการเล่น ตรวจสอบบันทึกระบบ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการแจ้งเตือนนี้"
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -6932,7 +6923,7 @@ msgstr "ป้อนค่า"
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#16029"
 msgid "Check the log for more information about this message."
-msgstr ""
+msgstr "ตรวจสอบบันทึกระบบ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการแจ้งเตือนนี้"
 
 msgctxt "#16030"
 msgid "Party mode aborted."
@@ -6944,15 +6935,15 @@ msgstr "ไม่พบเพลงที่ตรงกันในคลัง
 
 msgctxt "#16032"
 msgid "Couldn't initialise database."
-msgstr ""
+msgstr "ไม่สามารถเริ่มใช้ฐานข้อมูล"
 
 msgctxt "#16033"
 msgid "Couldn't open database."
-msgstr ""
+msgstr "ไม่สามารถเปิดฐานข้อมูล"
 
 msgctxt "#16034"
 msgid "Couldn't get songs from database."
-msgstr ""
+msgstr "ไม่สามารถดึงเพลงจากฐานข้อมูล"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#16035"
@@ -6962,7 +6953,7 @@ msgstr "รายการเล่น โหมดปาร์ตี้"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16036"
 msgid "Deinterlace (half)"
-msgstr ""
+msgstr "ลดเส้นทางขวาง (ครึ่ง)"
 
 msgctxt "#16037"
 msgid "Deinterlace video"
@@ -6991,7 +6982,7 @@ msgstr "เปิด"
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
-msgstr ""
+msgstr "วิดีโอทั้งหมด"
 
 msgctxt "#16101"
 msgid "Unwatched"
@@ -7047,8 +7038,8 @@ msgstr "คัดลอกผิดพลาด"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16202"
 msgid ""
-"Failed to copy at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to copy at least one file. Check the log for more information about "
+"this message."
 msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -7059,8 +7050,8 @@ msgstr "ย้ายผิดพลาด"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16204"
 msgid ""
-"Failed to move at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to move at least one file. Check the log for more information about "
+"this message."
 msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -7071,8 +7062,8 @@ msgstr "ลบผิดพลาด"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16206"
 msgid ""
-"Failed to delete at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to delete at least one file. Check the log for more information about"
+" this message."
 msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -7133,27 +7124,27 @@ msgstr "(VDPAU)Temporal"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal / Spatial"
-msgstr ""
+msgstr "ชั่วขณะ / เชิงพื้นที่"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
 msgid "VDPAU - Noise reduction"
-msgstr ""
+msgstr "VDPAU - ลดจุดรบกวน"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16313"
 msgid "VDPAU - Sharpness"
-msgstr ""
+msgstr "VDPAU - ความคมชัด"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Inverse telecine"
-msgstr ""
+msgstr "เทเลซีน ย้อนกลับ"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
-msgstr ""
+msgstr "Lanczos3 - อย่างเหมาะสม"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
@@ -7163,12 +7154,12 @@ msgstr "อัตโนมัติ"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (half)"
-msgstr ""
+msgstr "ชั่วขณะ (ครึ่ง)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal / Spatial (half)"
-msgstr ""
+msgstr "ชั่วขณะ / เชิงพื้นที่ (ครึ่ง)"
 
 #: xbmc/cores/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
@@ -7178,12 +7169,12 @@ msgstr "DXVA"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
 msgid "DXVA - Bob"
-msgstr ""
+msgstr "DXVA - Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA - Best"
-msgstr ""
+msgstr "DXVA - ดีที่สุด"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
@@ -7193,12 +7184,12 @@ msgstr "Spline36"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 - Optimised"
-msgstr ""
+msgstr "Spline36 - อย่างเหมาะสม"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software - Blend"
-msgstr ""
+msgstr "ซอฟแวร์ - ผสม"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
@@ -7213,17 +7204,17 @@ msgstr "DXVA-HD"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI - Bob"
-msgstr ""
+msgstr "VAAPI - Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16328"
 msgid "VAAPI - Motion adaptive"
-msgstr ""
+msgstr "VAAPI - ปรับการเคลื่อนไหว"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16329"
 msgid "VAAPI - Motion compensated"
-msgstr ""
+msgstr "VAAPI - ชดเชยการเคลื่อนไหว"
 
 #. Description of OSD video settings for deinterlace method with label #16330
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -7235,7 +7226,7 @@ msgstr "MMAL - ขั้นสูง"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16331"
 msgid "MMAL - Advanced (half)"
-msgstr ""
+msgstr "MMAL - ขั้นสูง (ครึ่ง)"
 
 #. Description of OSD video settings for deinterlace method with label #16332
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -7247,19 +7238,19 @@ msgstr "MMAL - Bob"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16333"
 msgid "MMAL - Bob (half)"
-msgstr ""
+msgstr "MMAL - Bob (ครึ่ง)"
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
 msgid "IMX - Fast motion"
-msgstr ""
+msgstr "IMX - เคลื่อนไหวเร็ว"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
 msgid "IMX - Fast motion (double)"
-msgstr ""
+msgstr "IMX - เคลื่อนไหวเร็ว (สองเท่า)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -7292,7 +7283,7 @@ msgstr "เปลี่ยนช่อง"
 #: skin.confluence
 msgctxt "#19001"
 msgid "Separate the search words by using AND, OR and / or NOT."
-msgstr ""
+msgstr "แยกคำค้นหาโดยการใช้ AND, OR and / or NOT."
 
 #: skin.confluence
 msgctxt "#19002"
@@ -7312,7 +7303,7 @@ msgstr "พบวิดีโอที่คล้ายกัน"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
-msgstr ""
+msgstr "นำเข้าผังรายการจากลูกข่าย"
 
 #: skin.confluence
 msgctxt "#19005"
@@ -7352,7 +7343,7 @@ msgstr "UNC"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19012"
 msgid "PVR backend"
-msgstr ""
+msgstr "ส่วนหลัง PVR"
 
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
@@ -7372,7 +7363,7 @@ msgstr "การเข้ารหัส"
 #: unused
 msgctxt "#19016"
 msgid "PVR backend %i - %s"
-msgstr ""
+msgstr "ส่วนหลัง PVR %i - %s"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#19017"
@@ -7434,7 +7425,7 @@ msgstr "ไม่มีผลการค้นหา"
 
 msgctxt "#19028"
 msgid "No guide entries"
-msgstr ""
+msgstr "ไม่มีข้อมูลผังรายการ"
 
 msgctxt "#19029"
 msgid "Channel"
@@ -7471,7 +7462,7 @@ msgstr "การบันทึกในช่องนี้เริ่มต
 
 msgctxt "#19035"
 msgid ""
-"%s couldn't be played.[CR]Check the log for more information about this "
+"%s couldn't be played. Check the log for more information about this "
 "message."
 msgstr ""
 
@@ -7479,7 +7470,7 @@ msgstr ""
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
-"This recording can't be played.[CR]Check the log for more information about "
+"This recording can't be played. Check the log for more information about "
 "this message."
 msgstr ""
 
@@ -7516,14 +7507,14 @@ msgstr "การบันทึก"
 
 msgctxt "#19044"
 msgid ""
-"Please check your configuration.[CR]Check the log for more information about"
-" this message."
+"Please check your configuration. Check the log for more information about "
+"this message."
 msgstr ""
 
 msgctxt "#19045"
 msgid ""
-"No PVR clients have been started yet.[CR]Wait for the PVR clients to start "
-"up.[CR]Check the log for more information about this message."
+"No PVR clients have been started yet. Wait for the PVR clients to start up. "
+"Check the log for more information about this message."
 msgstr ""
 
 msgctxt "#19046"
@@ -7532,11 +7523,11 @@ msgstr "ช่องใหม่"
 
 msgctxt "#19047"
 msgid "Programme information"
-msgstr ""
+msgstr "ข้อมูลรายการ"
 
 msgctxt "#19048"
 msgid "Group manager"
-msgstr ""
+msgstr "ตัวจัดการกลุ่ม"
 
 msgctxt "#19049"
 msgid "Show channel"
@@ -7597,7 +7588,7 @@ msgstr "เรียงโดย: ช่อง"
 
 msgctxt "#19063"
 msgid "Go to beginning"
-msgstr ""
+msgstr "ไปยังจุดเริ่มต้น"
 
 msgctxt "#19064"
 msgid "Go to end"
@@ -7605,7 +7596,7 @@ msgstr "ไปยัง จุดสิ้นสุด"
 
 msgctxt "#19065"
 msgid "Timer settings"
-msgstr ""
+msgstr "การตั้งค่าตัวจับเวลา"
 
 #. Name of a shortcut to a custom folder for channel icons
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
@@ -7615,14 +7606,16 @@ msgid "Channel icons"
 msgstr "ไอคอน ช่องรายการ"
 
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "เหตุการณ์นี้ได้ถูกบันทึกไว้แล้ว"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19068"
 msgid ""
-"This recording couldn't be deleted.[CR]Check the log for more information "
-"about this message."
+"This recording couldn't be deleted. Check the log for more information about"
+" this message."
 msgstr ""
 
 #. Electronic program guide. used by ?
@@ -7636,12 +7629,12 @@ msgstr "ไปยัง ขณะนี้"
 
 msgctxt "#19071"
 msgid "Update interval"
-msgstr ""
+msgstr "ช่วงเวลาการปรับปรุง"
 
 #: system/settings/settings.xml
 msgctxt "#19072"
 msgid "Don't cache in local database"
-msgstr ""
+msgstr "ไม่ทำแคชในฐานข้อมูลท้องถิ่น"
 
 #: system/settings/settings.xml
 msgctxt "#19073"
@@ -7759,6 +7752,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "ผู้ให้บริการ"
 
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
 msgstr "โปรดเปลี่ยนไปยังช่องอื่น"
@@ -7788,25 +7782,26 @@ msgstr "ที่"
 #: system/settings/settings.xml
 msgctxt "#19108"
 msgid "Fallback framerate"
-msgstr ""
+msgstr "อัตราเฟรม สำรอง"
 
-#: xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer.[CR]Check the log for more information about this "
-"message."
+"Couldn't save timer. Check the log for more information about this message."
 msgstr ""
 
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred.[CR]Try again later or check the log for more "
+"An unexpected error occurred. Try again later or check the log for more "
 "information."
 msgstr ""
 
-#: xbmc/pvr/addons/PVRClients.cpp
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/recording/PVRRecording.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid ""
-"PVR backend error.[CR]Check the log for more information about this message."
+"PVR backend error. Check the log for more information about this message."
 msgstr ""
 
 msgctxt "#19112"
@@ -7839,7 +7834,7 @@ msgstr "ค้นหาช่องสัญญาณ"
 
 msgctxt "#19118"
 msgid "Can't use PVR functions while searching."
-msgstr ""
+msgstr "ไม่สามารถใช้การทำงาน PVR ขณะทำการค้นหา"
 
 msgctxt "#19119"
 msgid "On which server do you want to search?"
@@ -7918,7 +7913,7 @@ msgstr "ช่อง ไม่พร้อมใช้งาน"
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
 msgid "No groups defined. Please create a group first"
-msgstr ""
+msgstr "ไม่มีการกำหนดกลุ่ม โปรดสร้างกลุ่มก่อน"
 
 msgctxt "#19139"
 msgid "Name of the new group"
@@ -7953,9 +7948,10 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "กลุ่ม"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19147"
 msgid ""
-"The PVR backend does not support this action.[CR]Check the log for more "
+"The PVR backend does not support this action. Check the log for more "
 "information about this message."
 msgstr ""
 
@@ -8023,7 +8019,7 @@ msgstr "กำลังบันทึก"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording.[CR]Check the log for more information about this "
+"Can't start recording. Check the log for more information about this "
 "message."
 msgstr ""
 
@@ -8045,7 +8041,7 @@ msgstr "สแกนหาไอคอนที่ไม่มี"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19168"
 msgid "Deleted and recoverable recordings"
-msgstr ""
+msgstr "การบันทึกที่ลบไปและสามารถกู้คืนได้"
 
 msgctxt "#19169"
 msgid "Hide video information box"
@@ -8079,12 +8075,12 @@ msgstr "ค่าเริ่มต้นของ ช่วงเวลาก�
 #: system/settings/settings.xml
 msgctxt "#19175"
 msgid "Start padding time"
-msgstr ""
+msgstr "ขยายเวลาเริ่ม"
 
 #: system/settings/settings.xml
 msgctxt "#19176"
 msgid "End padding time"
-msgstr ""
+msgstr "ขยายเวลาจบ"
 
 #: system/settings/settings.xml
 msgctxt "#19177"
@@ -8100,7 +8096,7 @@ msgstr "แสดงข้อมูลช่องสัญญาณ เมื�
 #: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
 msgctxt "#19179"
 msgid "Deleted"
-msgstr ""
+msgstr "ลบแล้ว"
 
 #: system/settings/settings.xml
 msgctxt "#19180"
@@ -8110,12 +8106,12 @@ msgstr "ทีวี"
 #: system/settings/settings.xml
 msgctxt "#19181"
 msgid "Menu / OSD"
-msgstr ""
+msgstr "เมนู / OSD"
 
 #: system/settings/settings.xml
 msgctxt "#19182"
 msgid "Days to display"
-msgstr ""
+msgstr "วันที่จะแสดง"
 
 #: system/settings/settings.xml
 msgctxt "#19183"
@@ -8126,24 +8122,21 @@ msgstr "วิทยุ"
 #: skin.confluence
 msgctxt "#19184"
 msgid "Deleted recordings"
-msgstr ""
+msgstr "การบันทึกถูกลบแล้ว"
 
 #: system/settings/settings.xml
 msgctxt "#19185"
-msgid "Reset PVR database"
+msgid "Clear data"
 msgstr ""
 
 msgctxt "#19186"
-msgid "All data in the PVR database is being erased"
-msgstr "ข้อมูลทั้งหมดในฐานข้อมูล PVR จะถูกลบ"
-
-#: system/settings/settings.xml
-msgctxt "#19187"
-msgid "Reset guide database"
+msgid ""
+"All your TV related data (channels, groups, guide) will be cleared. Are you "
+"sure?"
 msgstr ""
 
 msgctxt "#19188"
-msgid "Guide is being reset"
+msgid "All your guide data will be cleared. Are you sure?"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -8168,8 +8161,8 @@ msgstr "ไม่มีการเชื่อมต่อ PVR backends ที�
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
-"The channel scan can't be started.[CR]Check the log for more information "
-"about this message."
+"The channel scan can't be started. Check the log for more information about "
+"this message."
 msgstr ""
 
 msgctxt "#19194"
@@ -8201,7 +8194,7 @@ msgstr "ตัวจัดการช่อง"
 
 msgctxt "#19200"
 msgid "Guide source:"
-msgstr ""
+msgstr "แหล่งผังรายการ:"
 
 msgctxt "#19201"
 msgid "Channel name:"
@@ -8225,7 +8218,7 @@ msgstr "การจัดการกลุ่ม"
 
 msgctxt "#19206"
 msgid "Activate guide:"
-msgstr ""
+msgstr "เปิดใช้ ผังรายการ:"
 
 msgctxt "#19207"
 msgid "Group:"
@@ -8295,7 +8288,7 @@ msgstr "ไกด์"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled.[CR]Check your settings or the log for more "
+"No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
 msgstr ""
 
@@ -10156,6 +10149,8 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "ผู้กำกับ"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
@@ -10314,6 +10309,8 @@ msgctxt "#20374"
 msgid "Downloading movie information"
 msgstr "กำลังดาวน์โหลดข้อมูลภาพยนต์"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20375"
 msgid "Unassign content"
 msgstr "ยกเลิกกำหนดเนื้อหา"
@@ -10612,10 +10609,12 @@ msgctxt "#20441"
 msgid "Remote fanart"
 msgstr "แฟนอาร์ต รีโมท"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20442"
 msgid "Change content"
 msgstr "เปลี่ยนเนื้อหา"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr ""
@@ -11906,7 +11905,7 @@ msgstr "แหล่งข้อมูลสื่อ"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24006"
 msgid "GUI sounds"
-msgstr ""
+msgstr "เสียง GUI"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24007"
@@ -13229,14 +13228,14 @@ msgstr "ล้มเหลวในการเริ่ม Zeroconf"
 #: xbmc\network\windows\ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
-"Is Apple's Bonjour service installed?[CR]Check the log for more information "
+"Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
 msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
-msgid "AirPlay requires Zeroconf to be enabled."
-msgstr "AirPlay จะต้องใช้ การเปิดทำงานของ Zeroconf."
+msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
+msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
@@ -13586,11 +13585,6 @@ msgstr "* โฟลเดอร์ รายการ"
 msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "ใช้เฉดสีแบบจำกัด (16-235)"
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36043"
-msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
-msgstr ""
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml

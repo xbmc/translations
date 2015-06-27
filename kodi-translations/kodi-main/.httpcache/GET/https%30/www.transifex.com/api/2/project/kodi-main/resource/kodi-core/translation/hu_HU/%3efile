@@ -1,15 +1,18 @@
 # Kodi Media Center language file
 # Translators:
+# Adrian Fülöp <soulmode32@gmail.com>, 2015
+# alanwww1 <attila.jakosa@gmail.com>, 2015
 # Daniel Uhrinyi <daniel.uhrinyi@gmail.com>, 2015
 # Gábor Véninger <veninger.gabor@gmail.com>, 2015
+# Mátyás Demeter <mathias.demeter@gmail.com>, 2015
 # vargaviktor <viktor.varga@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-04 13:50+0000\n"
-"Last-Translator: Gábor Véninger <veninger.gabor@gmail.com>\n"
+"PO-Revision-Date: 2015-06-27 04:45+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/kodi-main/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -465,7 +468,7 @@ msgctxt "#125"
 msgid ""
 "Would you like to delete the selected file(s)?[CR]Warning - this action "
 "can't be undone!"
-msgstr ""
+msgstr "Szeretnéd törölni a kiválasztott fájlt (fájlokat) ?[CR]Figyelem, ez a művelet nem visszavonható!"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#126"
@@ -1839,8 +1842,8 @@ msgid "Remove movie from library"
 msgstr "Film eltávolítása a médiatárból"
 
 msgctxt "#433"
-msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr "Szeretné eltávolítani a[CR]'%s -t a könyvtárból? "
+msgid "Would you really like to remove '%s' from library?"
+msgstr ""
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -2662,12 +2665,12 @@ msgstr "Album szintekhez"
 #: system/settings/settings.xml
 msgctxt "#641"
 msgid "Files with ReplayGain information"
-msgstr ""
+msgstr "Fájlok lejátszásszint információval"
 
 #: system/settings/settings.xml
 msgctxt "#642"
 msgid "Files without ReplayGain information"
-msgstr ""
+msgstr "Fájlok lejátszásszint információ nélkül"
 
 #: system/settings/settings.xml
 msgctxt "#643"
@@ -3020,7 +3023,6 @@ msgid "Mirror image"
 msgstr "Kép tükrözése"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Megerősítés?"
@@ -3267,19 +3269,12 @@ msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "Kapcsolódás sikertelen"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1002"
-msgid "The connection to the network location couldn't be established."
-msgstr "Nem lehet a hálózati helyhez csatlakozni."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1003"
-msgid "This could be due to the network not being connected."
-msgstr "Ez a hálózati kapcsolat hiánya miatt lehet."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1004"
-msgid "Would you like to add it anyway?"
-msgstr "Hozzáadás ettől függetlenül?"
+msgid ""
+"The connection to the network location couldn't be established. This could "
+"be due to the network not being connected. Would you like to add it anyway?"
+msgstr "A kapcsolatot a hálózati helyhez nem lehetett létrehozni. Ezt okozhatja az is, hogy a hálózat nincs csatlakoztatva. Így is hozzá akarod adni ?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3372,8 +3367,10 @@ msgstr "Tallózás"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1025"
-msgid "Couldn't retrieve directory information."
-msgstr "Mappainformáció nem elérhető"
+msgid ""
+"Couldn't retrieve directory information. This could be due to the network "
+"not being connected. Would you like to add it anyway?"
+msgstr "Nem lehetett olvasni a könyvtár-információkat. Ezt okozhatja az is, hogy a hálózat nincs csatlakoztatva. Így is hozzá akarod adni ?"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4103,9 +4100,8 @@ msgstr "Visszaléptünk a szülő listához, mert az aktív lista kiürült"
 
 msgctxt "#2101"
 msgid ""
-"Newer version needed.[CR]Check the log for more information about this "
-"message."
-msgstr "Újabb verzió szükséges.[CR]Kérem ellenőrizze a hibanaplót bővebb információért."
+"Newer version needed. Check the log for more information about this message."
+msgstr ""
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4759,13 +4755,8 @@ msgstr "Leállítás, ha a mesterkód próbálkozások száma eléri a"
 
 #: xbmc\GUIPassword.cpp
 msgctxt "#12367"
-msgid "Master code is not valid"
-msgstr "Érvénytelen mesterkód"
-
-#: xbmc\GUIPassword.cpp
-msgctxt "#12368"
-msgid "Please enter a valid master code"
-msgstr "Adj meg érvényes mesterkódot"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "A mesterkód érvénytelen. Kérlek adj meg egy érvényes mesterkódot"
 
 #: unknown
 msgctxt "#12373"
@@ -4781,8 +4772,8 @@ msgstr "Beállítás alapértelmezettként"
 #: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
-msgid "This will reset any previously saved values"
-msgstr "Minden eddigi beállítás törlése?"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "Ez töröl minden eddigi mentett értéket. Biztos vagy benne?"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -6923,9 +6914,12 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "Lejátszás sikertelen"
 
+#: xbmc/PlaylistPlayer.cpp
 msgctxt "#16027"
-msgid "One or more items failed to play."
-msgstr "Egy vagy több elem lejátszása sikertelen."
+msgid ""
+"One or more items failed to play. Check the log for more information about "
+"this message."
+msgstr "Egy vagy több elem lejátszása sikertelen volt. További információk erről az üzenetről a hibanaplóban."
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -7049,8 +7043,8 @@ msgstr "Másolási hiba"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16202"
 msgid ""
-"Failed to copy at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to copy at least one file. Check the log for more information about "
+"this message."
 msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -7061,8 +7055,8 @@ msgstr "Átmozgatás nem sikerült"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16204"
 msgid ""
-"Failed to move at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to move at least one file. Check the log for more information about "
+"this message."
 msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -7073,8 +7067,8 @@ msgstr "Törlés nem sikerült"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16206"
 msgid ""
-"Failed to delete at least one file.[CR]Check the log for more information "
-"about this message."
+"Failed to delete at least one file. Check the log for more information about"
+" this message."
 msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -7473,7 +7467,7 @@ msgstr "Felvétel elkezdődött a csatornáról"
 
 msgctxt "#19035"
 msgid ""
-"%s couldn't be played.[CR]Check the log for more information about this "
+"%s couldn't be played. Check the log for more information about this "
 "message."
 msgstr ""
 
@@ -7481,7 +7475,7 @@ msgstr ""
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
-"This recording can't be played.[CR]Check the log for more information about "
+"This recording can't be played. Check the log for more information about "
 "this message."
 msgstr ""
 
@@ -7518,14 +7512,14 @@ msgstr "Felvétel"
 
 msgctxt "#19044"
 msgid ""
-"Please check your configuration.[CR]Check the log for more information about"
-" this message."
+"Please check your configuration. Check the log for more information about "
+"this message."
 msgstr ""
 
 msgctxt "#19045"
 msgid ""
-"No PVR clients have been started yet.[CR]Wait for the PVR clients to start "
-"up.[CR]Check the log for more information about this message."
+"No PVR clients have been started yet. Wait for the PVR clients to start up. "
+"Check the log for more information about this message."
 msgstr ""
 
 msgctxt "#19046"
@@ -7617,15 +7611,17 @@ msgid "Channel icons"
 msgstr "Csatornaikonok"
 
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Ez az esemény már felvétel alatt van."
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19068"
 msgid ""
-"This recording couldn't be deleted.[CR]Check the log for more information "
-"about this message."
-msgstr "Ezt a felvételt nem lehet törölni.[CR]Kérem ellenőrizze a naplófájlokban az üzenet részleteit."
+"This recording couldn't be deleted. Check the log for more information about"
+" this message."
+msgstr ""
 
 #. Electronic program guide. used by ?
 msgctxt "#19069"
@@ -7761,6 +7757,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Szolgáltató"
 
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
 msgstr "Kérlek válts át egy másik csatornára."
@@ -7792,24 +7789,25 @@ msgctxt "#19108"
 msgid "Fallback framerate"
 msgstr "Visszacsökkentett képsebesség"
 
-#: xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer.[CR]Check the log for more information about this "
-"message."
+"Couldn't save timer. Check the log for more information about this message."
 msgstr ""
 
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred.[CR]Try again later or check the log for more "
+"An unexpected error occurred. Try again later or check the log for more "
 "information."
-msgstr "Egy váratlan hiba történt.[CR]Kérem ellenőrizze a naplófájlokban az üzenet részleteit."
+msgstr ""
 
-#: xbmc/pvr/addons/PVRClients.cpp
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/recording/PVRRecording.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid ""
-"PVR backend error.[CR]Check the log for more information about this message."
-msgstr "PVR háttérkiszolgáló hiba.[CR]Kérem ellenőrizze a naplófájlokban az üzenet részleteit."
+"PVR backend error. Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -7955,9 +7953,10 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Csoportok"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19147"
 msgid ""
-"The PVR backend does not support this action.[CR]Check the log for more "
+"The PVR backend does not support this action. Check the log for more "
 "information about this message."
 msgstr ""
 
@@ -8025,9 +8024,9 @@ msgstr "Felvételek"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording.[CR]Check the log for more information about this "
+"Can't start recording. Check the log for more information about this "
 "message."
-msgstr "A felvétel nem indítható.[CR]Kérem ellenőrizze a hibanaplót bővebb információért."
+msgstr ""
 
 msgctxt "#19165"
 msgid "Switch"
@@ -8132,21 +8131,18 @@ msgstr "Törölt felvételek"
 
 #: system/settings/settings.xml
 msgctxt "#19185"
-msgid "Reset PVR database"
-msgstr "PVR adatbázis alaphelyzetbe állítása"
+msgid "Clear data"
+msgstr ""
 
 msgctxt "#19186"
-msgid "All data in the PVR database is being erased"
-msgstr "A PVR adatbázisban minden adat törlésre kerül."
-
-#: system/settings/settings.xml
-msgctxt "#19187"
-msgid "Reset guide database"
-msgstr "Műsorújság adatbázis alaphelyzetbe állítása"
+msgid ""
+"All your TV related data (channels, groups, guide) will be cleared. Are you "
+"sure?"
+msgstr ""
 
 msgctxt "#19188"
-msgid "Guide is being reset"
-msgstr "Műsorújság alaphelyzetbe lesz állítva"
+msgid "All your guide data will be cleared. Are you sure?"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19189"
@@ -8170,9 +8166,9 @@ msgstr "Egyik csatlakoztatott PVR háttér-kiszolgáló sem támogatja a csatorn
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
-"The channel scan can't be started.[CR]Check the log for more information "
-"about this message."
-msgstr "A csatorna keresést nem lehet elindítani.[CR]Kérem ellenőrizze a naplófájlokban az üzenet részleteit."
+"The channel scan can't be started. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -8297,9 +8293,9 @@ msgstr "Műsorkalauz"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled.[CR]Check your settings or the log for more "
+"No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "Nem lehetett egy PVR kiegészítőt sem engedélyezni.[CR]Ellenőrizd a beállításokat, vagy a naplót a részletekért."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -9072,7 +9068,7 @@ msgstr "Romantikus"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
-msgstr ""
+msgstr "Sorozat / Klasszikus / Vallási / Történelmi"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19684"
@@ -9109,19 +9105,19 @@ msgstr "Szeretné ezt a szolgáltatást használni?"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19691"
 msgid "PVR is currently recording '%s' on channel '%s'."
-msgstr ""
+msgstr "A PVR jelenleg felvétel módban van és veszi '%s' műsort a '%s' csatornán."
 
 #. Text for shutdown confirmation dialog
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19692"
 msgid "PVR will start recording '%s' on channel '%s' in %s."
-msgstr ""
+msgstr "A PVR fel fogja venni a  '%s' műsort a '%s' csatornán ebben: %s."
 
 #. Text for shutdown confirmation dialog
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19693"
 msgid "Daily wakeup is due in %s."
-msgstr ""
+msgstr "Napi ébresztés ennyi idő múlva:  %s."
 
 #. Text for shutdown confirmation dialog
 #: xbmc/pvr/PVRManager.cpp
@@ -9250,13 +9246,13 @@ msgstr "Régió"
 #: xbmc/LangInfo.cpp
 msgctxt "#20035"
 msgid "Regional (%s)"
-msgstr ""
+msgstr "Régió (%s)"
 
 #. Used for date/time format settings like "10:00:00 (HH:mm:ss)"
 #: xbmc/LangInfo.cpp
 msgctxt "#20036"
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 msgctxt "#20037"
 msgid "Summary"
@@ -9305,7 +9301,7 @@ msgstr "A(z) '%s' profil létrehozása?"
 #: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
 msgid "Start with fresh settings or copy from default?"
-msgstr ""
+msgstr "Kezdés friss beállításokkal, vagy alapértékek másolásával?"
 
 msgctxt "#20049"
 msgid "Best available"
@@ -9389,7 +9385,7 @@ msgstr "Profil zárolás"
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20069"
 msgid "Couldn't create folder"
-msgstr ""
+msgstr "Mappa nem volt létrehozható"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#20070"
@@ -9399,14 +9395,14 @@ msgstr "Profilmappa"
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20071"
 msgid "Start with fresh media sources or copy from default?"
-msgstr ""
+msgstr "Kezdés friss média forrásokkal, vagy alapértékek másolásával?"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#20072"
 msgid ""
 "Make sure the selected folder is writable and that the new folder name is "
 "valid"
-msgstr ""
+msgstr "Győződjön meg, hogy a kiválasztott mappa írható és az új neve megfelelő"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -9449,15 +9445,15 @@ msgstr "\"Programok\" megjelenítése a főmenüben"
 
 msgctxt "#20083"
 msgid "Show music information"
-msgstr ""
+msgstr "Zeneinformáció megjelenítése"
 
 msgctxt "#20084"
 msgid "Show weather information"
-msgstr ""
+msgstr "Időjárás információ megjelenítése"
 
 msgctxt "#20085"
 msgid "Show system information"
-msgstr ""
+msgstr "Rendszerinformáció megjelenítése"
 
 msgctxt "#20086"
 msgid "Show available disk space C: E: F:"
@@ -9469,7 +9465,7 @@ msgstr "E, F, G lemezek szabad területének megjelenítése"
 
 msgctxt "#20088"
 msgid "Weather information"
-msgstr ""
+msgstr "Időjárás információ"
 
 msgctxt "#20089"
 msgid "Drive space free"
@@ -9505,16 +9501,16 @@ msgstr "Belépőablak"
 
 msgctxt "#20097"
 msgid "Fetching album information"
-msgstr ""
+msgstr "Albuminformáció lekérése"
 
 msgctxt "#20098"
 msgid "Fetching information for album"
-msgstr ""
+msgstr "Információlekérés az albumról"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
-msgstr ""
+msgstr "A CD vagy szám nem bemásolható, miközben lejátszás alatt van"
 
 #: system/settings/settings.xml
 msgctxt "#20100"
@@ -9531,11 +9527,11 @@ msgstr "Profil változások mentése?"
 
 msgctxt "#20104"
 msgid "Old settings found. Do you want to use them?"
-msgstr ""
+msgstr "Korábbi beállítások találhatók. Használni kívánja ezeket?"
 
 msgctxt "#20106"
 msgid "Old media sources found. Do you want to use them?"
-msgstr ""
+msgstr "Korábbi médiaforrások találhatók. Használjuk ezeket?"
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -9590,7 +9586,7 @@ msgstr "Érvénytelen zárolási kód."
 
 msgctxt "#20118"
 msgid "This requires the master lock to be set. Would you like to set it now?"
-msgstr ""
+msgstr "Ehhez a mesterkód beállítása szükséges. Megadod most ?"
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -9634,7 +9630,7 @@ msgstr "Összefonás"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave - Inverted"
-msgstr ""
+msgstr "Összefonás - Inverz"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
@@ -9827,7 +9823,7 @@ msgstr "UPnP kiszolgáló"
 
 msgctxt "#20176"
 msgid "Show video information"
-msgstr ""
+msgstr "Videóinformáció megjelenítése"
 
 msgctxt "#20177"
 msgid "Done"
@@ -9873,12 +9869,12 @@ msgstr "Kérem várjon"
 #: system/settings/settings.xml
 msgctxt "#20187"
 msgid "UPnP / DLNA"
-msgstr ""
+msgstr "UPnP/DLNA"
 
 #: xbmc/network/upnp/UPnPServer.cpp system/settings/settings.xml
 msgctxt "#20188"
 msgid "Announce library updates"
-msgstr ""
+msgstr "Mediatár frissítések bejelentése"
 
 msgctxt "#20189"
 msgid "Enable auto scrolling for plot & review"
@@ -9896,17 +9892,17 @@ msgstr "Naplózás engedélyezése"
 #: system/settings/settings.xml
 msgctxt "#20192"
 msgid "Fetch additional information during updates"
-msgstr ""
+msgstr "További információ lekérése frissítések során"
 
 #: system/settings/settings.xml
 msgctxt "#20193"
 msgid "Default provider for album information"
-msgstr ""
+msgstr "Alapértelmezett album információ kiszolgáló"
 
 #: system/settings/settings.xml
 msgctxt "#20194"
 msgid "Default provider for artist information"
-msgstr ""
+msgstr "Alapértelmezett előadó információ kiszolgáló"
 
 msgctxt "#20195"
 msgid "Change information provider"
@@ -9929,12 +9925,12 @@ msgstr "Előadó nem található!"
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
-msgstr ""
+msgstr "Előadó információ letöltése sikertelen"
 
 #: system/settings/settings.xml
 msgctxt "#20220"
 msgid "Prefer online information"
-msgstr ""
+msgstr "Online információk előnyben részesítése"
 
 #. Description of setting "Music -> Library -> Prefer online information" with
 #. label #20220
@@ -9950,7 +9946,7 @@ msgstr "Ezt engedélyezve, bármely adat ami letöltésre kerül az albumokhoz �
 #: system/settings/settings.xml
 msgctxt "#20222"
 msgid "Look for external subtitles"
-msgstr ""
+msgstr "Külső feliratok keresése"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -9974,7 +9970,7 @@ msgstr "Android fotók"
 
 msgctxt "#20244"
 msgid "Android apps"
-msgstr ""
+msgstr "Adnroid alkalmazások"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -10005,17 +10001,17 @@ msgstr "Első bejelentkezés, profilod szerkesztése"
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20259"
 msgid "Network File System (NFS)"
-msgstr ""
+msgstr "Hálózati fájlrendszer (NFS)"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20260"
 msgid "Secure Shell (SSH / SFTP)"
-msgstr ""
+msgstr "Biztonsági héj (SSH/SFTP)"
 
 #: xbmc/storage/MediaManager.cpp
 msgctxt "#20262"
 msgid "Zeroconf browser"
-msgstr ""
+msgstr "Zeroconf Böngésző"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20300"
@@ -10072,7 +10068,7 @@ msgstr "Zenevideók keresése a %s használatával"
 
 msgctxt "#20319"
 msgid "Scanning TV shows using %s"
-msgstr ""
+msgstr "Sorozatok keresése a %s használatával"
 
 msgctxt "#20320"
 msgid "Scanning artists using %s"
@@ -10158,10 +10154,12 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Rendező"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
-msgstr ""
+msgstr "A megadott elérési út összes elemének eltávolítását szeretnéd?"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -10316,6 +10314,8 @@ msgctxt "#20374"
 msgid "Downloading movie information"
 msgstr "Film információ letöltése"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20375"
 msgid "Unassign content"
 msgstr "Tartalom hozzárendelés megszüntetése"
@@ -10459,7 +10459,7 @@ msgstr "Epizód-könyvjelző"
 
 msgctxt "#20407"
 msgid "Information provider settings"
-msgstr ""
+msgstr "Információkiszolgáló beállításai"
 
 msgctxt "#20408"
 msgid "Downloading music video information"
@@ -10614,10 +10614,12 @@ msgctxt "#20441"
 msgid "Remote fanart"
 msgstr "Távoli fanartkép"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20442"
 msgid "Change content"
 msgstr "Tartalom változtatása"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr ""
@@ -10634,7 +10636,7 @@ msgstr ""
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
 msgid "Couldn't download information"
-msgstr ""
+msgstr "Információ letöltése sikertelen"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
@@ -10645,7 +10647,7 @@ msgstr "Nem lehet kapcsolódni a távoli kiszolgálóhoz"
 msgctxt "#20450"
 msgid ""
 "Unable to connect to remote server. Would you like to continue scanning?"
-msgstr ""
+msgstr "Nem lehet kapcsolódni a távoli kiszolgálóhoz. Szeretnéd folytatni a keresést?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -10753,7 +10755,7 @@ msgstr "Médiamegosztás hozzáadása..."
 #: system/settings/settings.xml
 msgctxt "#21360"
 msgid "Share my libraries"
-msgstr ""
+msgstr "Könyvtáraim megosztása"
 
 msgctxt "#21361"
 msgid "Look for remote UPnP players"
@@ -10767,7 +10769,7 @@ msgstr "Könyvjelző létrehozva"
 #: xbmc/video/dialogs/GUIDialogVideoBookmarks.cpp
 msgctxt "#21363"
 msgid "Episode bookmark created"
-msgstr ""
+msgstr "Epizód-könyvjelző létrehozva"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21364"
@@ -10988,22 +10990,22 @@ msgstr "Információs szolgáltatók"
 #: system/settings/settings.xml
 msgctxt "#21413"
 msgid "Default provider for movie information"
-msgstr ""
+msgstr "Alapértelmezett film információ kiszolgáló"
 
 #: system/settings/settings.xml
 msgctxt "#21414"
 msgid "Default provider for TV show information"
-msgstr ""
+msgstr "Alapértelmezett sorozat információ kiszolgáló"
 
 #: system/settings/settings.xml
 msgctxt "#21415"
 msgid "Default provider for music video information"
-msgstr ""
+msgstr "Alapértelmezett videoklip információ kiszolgáló"
 
 #: system/settings/settings.xml
 msgctxt "#21416"
 msgid "Select first unwatched TV show season / episode"
-msgstr ""
+msgstr "Az első meg nem nézett sorozatévad / -rész kijelölése"
 
 #: system/settings/settings.xml
 msgctxt "#21417"
@@ -11016,7 +11018,7 @@ msgstr "Többnyelvű"
 
 msgctxt "#21419"
 msgid "No information providers present"
-msgstr ""
+msgstr "Nincs elérhető információkiszolgáló"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 msgctxt "#21420"
@@ -11164,7 +11166,7 @@ msgstr "Internet kapcsolat szükséges."
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#21452"
 msgid "Get more..."
-msgstr ""
+msgstr "Több beszerzése..."
 
 msgctxt "#21453"
 msgid "Root filesystem"
@@ -11288,14 +11290,14 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#21474"
 msgid "Neither"
-msgstr ""
+msgstr "Egyik sem"
 
 #. One of the values valid for "Videos -> Library -> Include All Seasons and
 #. Specials" with label #21472
 #: system/settings/settings.xml
 msgctxt "#21475"
 msgid "Both"
-msgstr ""
+msgstr "Mindkettő"
 
 #. One of the values valid for "Videos -> Library -> Include All Seasons and
 #. Specials" with label #21472
@@ -11354,7 +11356,7 @@ msgstr "JPEG típus"
 
 msgctxt "#21820"
 msgid "Date / Time"
-msgstr ""
+msgstr "Dátum / idő"
 
 msgctxt "#21821"
 msgid "Description"
@@ -11801,19 +11803,19 @@ msgstr "Dal számának megadása"
 #: system/settings/settings.xml
 msgctxt "#22040"
 msgid "white / green"
-msgstr ""
+msgstr "fehér / zöld"
 
 msgctxt "#22041"
 msgid "white / red"
-msgstr ""
+msgstr "fehér / vörös"
 
 msgctxt "#22042"
 msgid "white / blue"
-msgstr ""
+msgstr "fehér / kék"
 
 msgctxt "#22043"
 msgid "black / white"
-msgstr ""
+msgstr "fekete / fehér"
 
 #: system/settings/settings.xml
 msgctxt "#22079"
@@ -11845,7 +11847,7 @@ msgstr "Teletext nem elérhető"
 #: system/settings/settings.xml
 msgctxt "#23050"
 msgid "Activate teletext"
-msgstr ""
+msgstr "Teletext aktiválása"
 
 msgctxt "#23051"
 msgid "Part %i"
@@ -11870,15 +11872,15 @@ msgstr ""
 
 msgctxt "#23100"
 msgid "External player active"
-msgstr ""
+msgstr "Külső lejátszó aktív"
 
 msgctxt "#23101"
 msgid "Click \"OK\" to terminate the player"
-msgstr ""
+msgstr "Nyomj \"OK\"-t a lejátszó bezárásához"
 
 msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
-msgstr ""
+msgstr "Nyomj \"OK\"-t a lejátszás végén"
 
 #: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -11897,7 +11899,7 @@ msgstr "Kiegészítő lehetőségei"
 
 msgctxt "#24003"
 msgid "Add-on information"
-msgstr ""
+msgstr "Kiegészítő információ"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24005"
@@ -12028,7 +12030,7 @@ msgstr "Időjárásadatok szolgáltatója"
 #: xbmc/addons/GUIDialogAddonSettings.cpp
 msgctxt "#24030"
 msgid "This add-on can't be configured"
-msgstr ""
+msgstr "Ez a kiegészítő nem konfigurálható"
 
 msgctxt "#24031"
 msgid "Error loading settings"
@@ -12037,7 +12039,7 @@ msgstr "Hiba a beállítások betöltésekor"
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#24032"
 msgid "All add-ons"
-msgstr ""
+msgstr "Minden kiegészítő"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -12066,7 +12068,7 @@ msgstr "Telepítés"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24039"
 msgid "Disabled add-ons"
-msgstr ""
+msgstr "Kikapcsolt kiegészítők"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24040"
@@ -12087,7 +12089,7 @@ msgstr "Letöltve %i%%"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24043"
 msgid "Available updates"
-msgstr ""
+msgstr "Elérhető frissítések"
 
 #: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
 msgctxt "#24044"
@@ -12122,7 +12124,7 @@ msgstr "Nem kompatibilis"
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
-msgstr ""
+msgstr "Elérhető kiegészítők"
 
 #: xbmc/addons/AddonVersion.cpp
 msgctxt "#24051"
@@ -12160,7 +12162,7 @@ msgstr "Utoljára frissítve %s"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24057"
 msgid "Installing %s..."
-msgstr ""
+msgstr "%s telepítése..."
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
@@ -12170,11 +12172,11 @@ msgstr ""
 
 msgctxt "#24059"
 msgid "Would you like to enable this add-on?"
-msgstr ""
+msgstr "Akarod engedélyezni ezt a kiegészítőt?"
 
 msgctxt "#24060"
 msgid "Would you like to disable this add-on?"
-msgstr ""
+msgstr "Ki akarod kapcsolni ezt a kiegészítőt?"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24061"
@@ -12185,7 +12187,7 @@ msgstr "Kiegészítő frissítése elérhető!"
 #: xbmc/filesystem/AddonsDirectory.cpp xbmc/filesystem/AndroidAppDirectory.cpp
 msgctxt "#24062"
 msgid "Enabled add-ons"
-msgstr ""
+msgstr "Engedélyezett kiegészítők"
 
 msgctxt "#24063"
 msgid "Auto update"
@@ -12204,12 +12206,12 @@ msgstr "Kiegészítő frissítve"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24066"
 msgid "Cancel add-on download?"
-msgstr ""
+msgstr "Kiegészítő letöltés megszakítása?"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24067"
 msgid "Currently downloading add-ons"
-msgstr ""
+msgstr "Kiegészítők letöltése folyamatban"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24068"
@@ -12222,7 +12224,7 @@ msgstr "Frissítés"
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
-msgstr ""
+msgstr "Kiegészítő betöltése sikertelen."
 
 msgctxt "#24071"
 msgid "An unknown error has occurred."
@@ -12234,7 +12236,7 @@ msgstr "Beállítás szükséges"
 
 msgctxt "#24073"
 msgid "Couldn't connect"
-msgstr ""
+msgstr "Csatlakozás sikertelen"
 
 msgctxt "#24074"
 msgid "Needs to restart"
@@ -12247,19 +12249,19 @@ msgstr "Kikapcsolás"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24076"
 msgid "Add-on required"
-msgstr ""
+msgstr "Kiegészítő szükséges"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24077"
 msgid "Verifying downloaded add-on..."
-msgstr ""
+msgstr "Letöltött kiegészítő ellenőrzése..."
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24078"
 msgid "Downloading add-on..."
-msgstr ""
+msgstr "Kiegészítő letöltése folyamatban..."
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
@@ -12305,7 +12307,7 @@ msgstr ""
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
-msgstr ""
+msgstr "Kiegészítő telepítése folyamatban..."
 
 #. Used in add-on browser
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -12319,19 +12321,19 @@ msgstr "Kiegészítő újraindul"
 
 msgctxt "#24090"
 msgid "Lock add-on manager"
-msgstr ""
+msgstr "Kiegészítő-kezelő zárolása"
 
 #: xbmc\addons\GUIDialogAddonInfo.cpp
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
-msgstr ""
+msgstr "Ez a kiegészítő nem kapcsolható ki"
 
 #. Used as title of the progress dialog when checking for add-on updates in
 #. add-on browser
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24092"
 msgid "Checking for add-on updates"
-msgstr ""
+msgstr "Kiegészítőfrissítések keresése"
 
 #. Used as a text in the progress dialog when checking for add-on updates. %s
 #. contains repository name
@@ -12373,12 +12375,12 @@ msgstr "Átváltasz erre a felszínre ?"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24100"
 msgid "To use this feature you must download an add-on:"
-msgstr ""
+msgstr "A funkció használatához le kell töltened egy kiegészítőt:"
 
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24101"
 msgid "Would you like to download this add-on?"
-msgstr ""
+msgstr "Szeretnéd letölteni ezt a kiegészítőt?"
 
 #: xbmc/Application.cpp
 msgctxt "#24102"
@@ -13231,14 +13233,14 @@ msgstr "Zeroconf indítása meghiúsult"
 #: xbmc\network\windows\ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
-"Is Apple's Bonjour service installed?[CR]Check the log for more information "
+"Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
 msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
-msgid "AirPlay requires Zeroconf to be enabled."
-msgstr "Az AirPlay-hez engedélyezve kell lennie a Zeroconfnak."
+msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
+msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
@@ -13588,11 +13590,6 @@ msgstr "* Elem mappa"
 msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Korlátozott színtér használata (16-235)"
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36043"
-msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
-msgstr ""
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml

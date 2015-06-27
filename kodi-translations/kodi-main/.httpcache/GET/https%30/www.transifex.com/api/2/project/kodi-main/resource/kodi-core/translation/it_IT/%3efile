@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-05 20:20+0000\n"
-"Last-Translator: Simone <gresy88@gmail.com>\n"
+"PO-Revision-Date: 2015-06-27 04:45+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/projects/p/kodi-main/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1841,8 +1841,8 @@ msgid "Remove movie from library"
 msgstr "Elimina Film dalla Libreria"
 
 msgctxt "#433"
-msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr "Vuoi davvero rimuovere[CR]'%s' dalla Libreria?"
+msgid "Would you really like to remove '%s' from library?"
+msgstr ""
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -3022,7 +3022,6 @@ msgid "Mirror image"
 msgstr "Specchia Immagine"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Sei sicuro?"
@@ -3269,19 +3268,12 @@ msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "Impossibile connettersi"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1002"
-msgid "The connection to the network location couldn't be established."
-msgstr "La connessione al percorso di rete non può essere stabilita."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1003"
-msgid "This could be due to the network not being connected."
-msgstr "La possibile causa potrebbe essere la rete scollegata."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1004"
-msgid "Would you like to add it anyway?"
-msgstr "Vuoi aggiungerlo comunque?"
+msgid ""
+"The connection to the network location couldn't be established. This could "
+"be due to the network not being connected. Would you like to add it anyway?"
+msgstr "Impossibile connettersi al percorso di rete. Potrebbe essere dovuto alla rete non connessa. Vuoi aggiungerlo comunque?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3374,8 +3366,10 @@ msgstr "Esplora"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1025"
-msgid "Couldn't retrieve directory information."
-msgstr "Impossibile ottenere informazioni percorso."
+msgid ""
+"Couldn't retrieve directory information. This could be due to the network "
+"not being connected. Would you like to add it anyway?"
+msgstr "Impossibile recuperare informazioni percorso. Potrebbe essere dovuto alla rete non connessa. Vuoi aggiungerlo comunque?"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4105,9 +4099,8 @@ msgstr "Si è tornati alla lista padre perché la lista attiva è stata svuotata
 
 msgctxt "#2101"
 msgid ""
-"Newer version needed.[CR]Check the log for more information about this "
-"message."
-msgstr "Necessaria nuova versione.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Newer version needed. Check the log for more information about this message."
+msgstr ""
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4761,13 +4754,8 @@ msgstr "Spegni sistema ad esaurimento tentativi Master Lock"
 
 #: xbmc\GUIPassword.cpp
 msgctxt "#12367"
-msgid "Master code is not valid"
-msgstr "Il Master Code non è valido"
-
-#: xbmc\GUIPassword.cpp
-msgctxt "#12368"
-msgid "Please enter a valid master code"
-msgstr "Inserire un Master Code valido"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "Il Master Code non è valido. Inserisci un Master Code valido."
 
 #: unknown
 msgctxt "#12373"
@@ -4783,8 +4771,8 @@ msgstr "Imposta come predefinito per tutti i video"
 #: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
-msgid "This will reset any previously saved values"
-msgstr "Questo resetterà i valori salvati in precedenza"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "Questo resetterà i valori salvati in precedenza. Sei sicuro?"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -6925,9 +6913,12 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "Riproduzione fallita"
 
+#: xbmc/PlaylistPlayer.cpp
 msgctxt "#16027"
-msgid "One or more items failed to play."
-msgstr "Troppi elementi consecutivi falliti"
+msgid ""
+"One or more items failed to play. Check the log for more information about "
+"this message."
+msgstr "Riproduzione fallita di uno o più elementi. Controlla il log per ulteriori informazioni su questo messaggio."
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -7051,9 +7042,9 @@ msgstr "Copia non riuscita"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16202"
 msgid ""
-"Failed to copy at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Copia fallita di almeno un file.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Failed to copy at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16203"
@@ -7063,9 +7054,9 @@ msgstr "Spostamento non riuscito"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16204"
 msgid ""
-"Failed to move at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Spostamento fallito di almeno un file.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Failed to move at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16205"
@@ -7075,9 +7066,9 @@ msgstr "Cancellazione non riuscita"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16206"
 msgid ""
-"Failed to delete at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Cancellazione fallita di almeno un file.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Failed to delete at least one file. Check the log for more information about"
+" this message."
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -7475,17 +7466,17 @@ msgstr "Hai già cominciato a registrare su questo Canale"
 
 msgctxt "#19035"
 msgid ""
-"%s couldn't be played.[CR]Check the log for more information about this "
+"%s couldn't be played. Check the log for more information about this "
 "message."
-msgstr "%s non può essere riprodotto.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+msgstr ""
 
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
-"This recording can't be played.[CR]Check the log for more information about "
+"This recording can't be played. Check the log for more information about "
 "this message."
-msgstr "Questa Registrazione non può essere riprodotta.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19037"
@@ -7520,15 +7511,15 @@ msgstr "Registrazione"
 
 msgctxt "#19044"
 msgid ""
-"Please check your configuration.[CR]Check the log for more information about"
-" this message."
-msgstr "Per favore controlla la tua configurazione.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Please check your configuration. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19045"
 msgid ""
-"No PVR clients have been started yet.[CR]Wait for the PVR clients to start "
-"up.[CR]Check the log for more information about this message."
-msgstr "Nessun client PVR è stato avviato.[CR]Attendi l'avvio dei client PVR.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"No PVR clients have been started yet. Wait for the PVR clients to start up. "
+"Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19046"
 msgid "New channel"
@@ -7619,15 +7610,17 @@ msgid "Channel icons"
 msgstr "Icone Canale"
 
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Questo evento è già in registrazione."
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19068"
 msgid ""
-"This recording couldn't be deleted.[CR]Check the log for more information "
-"about this message."
-msgstr "Questa Registrazione non può essere cancellata.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"This recording couldn't be deleted. Check the log for more information about"
+" this message."
+msgstr ""
 
 #. Electronic program guide. used by ?
 msgctxt "#19069"
@@ -7763,6 +7756,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Provider"
 
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
 msgstr "Per favore cambia su un altro Canale"
@@ -7794,24 +7788,25 @@ msgctxt "#19108"
 msgid "Fallback framerate"
 msgstr "Framerate fallback"
 
-#: xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer.[CR]Check the log for more information about this "
-"message."
-msgstr "Impossibile salvare il Timer.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"Couldn't save timer. Check the log for more information about this message."
+msgstr ""
 
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred.[CR]Try again later or check the log for more "
+"An unexpected error occurred. Try again later or check the log for more "
 "information."
-msgstr "Si è verificato un errore inaspettato.[CR]Riprova più tardi o controlla il log per ulteriori informazioni."
+msgstr ""
 
-#: xbmc/pvr/addons/PVRClients.cpp
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/recording/PVRRecording.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid ""
-"PVR backend error.[CR]Check the log for more information about this message."
-msgstr "Errore backend PVR.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"PVR backend error. Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -7957,11 +7952,12 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Gruppi"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19147"
 msgid ""
-"The PVR backend does not support this action.[CR]Check the log for more "
+"The PVR backend does not support this action. Check the log for more "
 "information about this message."
-msgstr "Il backend PVR non supporta questa azione.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+msgstr ""
 
 msgctxt "#19148"
 msgid "Channel"
@@ -8027,9 +8023,9 @@ msgstr "Registrazioni"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording.[CR]Check the log for more information about this "
+"Can't start recording. Check the log for more information about this "
 "message."
-msgstr "Impossibile avviare la Registrazione.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+msgstr ""
 
 msgctxt "#19165"
 msgid "Switch"
@@ -8134,21 +8130,18 @@ msgstr "Registrazioni cancellate"
 
 #: system/settings/settings.xml
 msgctxt "#19185"
-msgid "Reset PVR database"
-msgstr "Ripristina Database PVR"
+msgid "Clear data"
+msgstr ""
 
 msgctxt "#19186"
-msgid "All data in the PVR database is being erased"
-msgstr "Tutti i dati nel Database PVR saranno cancellati"
-
-#: system/settings/settings.xml
-msgctxt "#19187"
-msgid "Reset guide database"
-msgstr "Ripristina Database Guide"
+msgid ""
+"All your TV related data (channels, groups, guide) will be cleared. Are you "
+"sure?"
+msgstr ""
 
 msgctxt "#19188"
-msgid "Guide is being reset"
-msgstr "Ripristino Guide in corso"
+msgid "All your guide data will be cleared. Are you sure?"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19189"
@@ -8172,9 +8165,9 @@ msgstr "Nessuno dei backend PVR supporta la scansione dei Canali."
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
-"The channel scan can't be started.[CR]Check the log for more information "
-"about this message."
-msgstr "Impossibile avviare la Scansione Canali.[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+"The channel scan can't be started. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -8299,9 +8292,9 @@ msgstr "Guida"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled.[CR]Check your settings or the log for more "
+"No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "Nessun Add-on PVR può essere abilitato.[CR]Controlla le impostazioni o il log per ulteriori dettagli."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -10160,6 +10153,8 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Regista"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
@@ -10318,6 +10313,8 @@ msgctxt "#20374"
 msgid "Downloading movie information"
 msgstr "Scaricamento informazioni Film"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20375"
 msgid "Unassign content"
 msgstr "Contenuto non assegnato"
@@ -10616,10 +10613,12 @@ msgctxt "#20441"
 msgid "Remote fanart"
 msgstr "Fanart remota"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20442"
 msgid "Change content"
 msgstr "Cambia contenuto"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr "Vuoi aggiornare le informazioni per tutti gli elementi di questo percorso?"
@@ -13233,14 +13232,14 @@ msgstr "Avvio di Zeroconf fallito"
 #: xbmc\network\windows\ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
-"Is Apple's Bonjour service installed?[CR]Check the log for more information "
+"Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
-msgstr "Il servizio Apple Bonjour è installato?[CR]Controlla il log per ulteriori informazioni su questo messaggio."
+msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
-msgid "AirPlay requires Zeroconf to be enabled."
-msgstr "AirPlay richiede Zeroconf per essere abilitato."
+msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
+msgstr "Impossibile avviare AirPlay poiché richiede che Zeroconf sia abilitato."
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
@@ -13591,11 +13590,6 @@ msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Usa intervallo di colori limitato (16-235)"
 
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36043"
-msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
-msgstr "Nessuna TV compatibile CEC trovata. Disabilita la ricerca dei dispositivi compatibili CEC?"
-
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml
 msgctxt "#36101"
@@ -13933,7 +13927,7 @@ msgstr "Seleziona in quali casi vuoi nascondere i separatori per Stagione delle 
 #: system/settings/settings.xml
 msgctxt "#36145"
 msgid "Group movies into \"Movie sets\" when browsing the movie library."
-msgstr "Raggruppa i Film in \"Set di film\" mentre sfogli la Libreria Film."
+msgstr "Raggruppa i Film in \"Raccolte di film\" mentre sfogli la Libreria Film."
 
 #. Description of setting "Videos -> Library -> Update library on startup"
 #. with label #22000

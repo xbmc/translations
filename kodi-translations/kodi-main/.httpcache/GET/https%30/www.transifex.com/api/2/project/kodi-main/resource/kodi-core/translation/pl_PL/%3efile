@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-03 14:00+0000\n"
-"Last-Translator: Marcin W.\n"
+"PO-Revision-Date: 2015-06-27 04:45+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1392,7 +1392,7 @@ msgstr "Rozpocznij"
 
 msgctxt "#336"
 msgid "Framerate conversion"
-msgstr "Konwersja liczby klatek"
+msgstr "Konwersja częstotliwości klatek"
 
 #: system/settings/settings.xml
 msgctxt "#337"
@@ -1425,7 +1425,7 @@ msgstr "Filmy"
 
 msgctxt "#343"
 msgid "Adjust framerate"
-msgstr "Dostosuj liczbę klatek"
+msgstr "Dostosuj częstotliwość klatek"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
@@ -1451,7 +1451,7 @@ msgstr "Obsługuje format DTS-HD"
 #: system/settings/settings.xml
 msgctxt "#348"
 msgid "Enable passthrough"
-msgstr "Dekoduj na zewnętrznym urządzeniu"
+msgstr "Przekazuj do urządzenia odbiorczego"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -1495,7 +1495,7 @@ msgstr "Tryb wygaszacza"
 #: system/settings/settings.xml
 msgctxt "#357"
 msgid "Shutdown function timer"
-msgstr "Tryb zamykania wg harmonogramu"
+msgstr "Opóźnienie zaplanowanego zamknięcia"
 
 msgctxt "#358"
 msgid "All albums"
@@ -1838,8 +1838,8 @@ msgid "Remove movie from library"
 msgstr "Usuń film z biblioteki"
 
 msgctxt "#433"
-msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr "Czy naprawdę chcesz usunąć[CR]'%s' z biblioteki?"
+msgid "Would you really like to remove '%s' from library?"
+msgstr ""
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -2494,7 +2494,7 @@ msgstr "Jeden"
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#593"
 msgid "All"
-msgstr "Wszystko"
+msgstr "Wszystkie"
 
 msgctxt "#594"
 msgid "Off"
@@ -2510,7 +2510,7 @@ msgstr "Powtórz: Raz"
 
 msgctxt "#597"
 msgid "Repeat: All"
-msgstr "Powtórz: Wszystko"
+msgstr "Powtórz: Wszystkie"
 
 msgctxt "#600"
 msgid "Rip audio CD"
@@ -2773,7 +2773,7 @@ msgstr "Rejestruj komunikaty modułów"
 #: system/settings/settings.xml
 msgctxt "#667"
 msgid "Enable Dolby Digital (AC3) transcoding"
-msgstr "Aktywuj transkodowanie do formatu Dolby Digital (AC3)"
+msgstr "Transkoduj do formatu Dolby Digital (AC3)"
 
 #: system/settings/settings.xml
 msgctxt "#668"
@@ -3019,7 +3019,6 @@ msgid "Mirror image"
 msgstr "Lustrzane odbicie obrazu"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Czy jesteś pewny?"
@@ -3266,19 +3265,12 @@ msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "Nieudane połączenie"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1002"
-msgid "The connection to the network location couldn't be established."
-msgstr "Nieudane połączenie z lokalizacją sieciową."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1003"
-msgid "This could be due to the network not being connected."
-msgstr "Może to być spowodowane brakiem dostępu do sieci."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1004"
-msgid "Would you like to add it anyway?"
-msgstr "Czy chcesz mimo to kontynuować?"
+msgid ""
+"The connection to the network location couldn't be established. This could "
+"be due to the network not being connected. Would you like to add it anyway?"
+msgstr ""
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3371,8 +3363,10 @@ msgstr "Przeglądaj"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1025"
-msgid "Couldn't retrieve directory information."
-msgstr "Nie można uzyskać informacji o folderze."
+msgid ""
+"Couldn't retrieve directory information. This could be due to the network "
+"not being connected. Would you like to add it anyway?"
+msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4102,9 +4096,8 @@ msgstr "Wrócono do nadrzędnej listy, gdyż aktywna lista została opróżniona
 
 msgctxt "#2101"
 msgid ""
-"Newer version needed.[CR]Check the log for more information about this "
-"message."
-msgstr "Wymagana nowsza wersja.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"Newer version needed. Check the log for more information about this message."
+msgstr ""
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4758,13 +4751,8 @@ msgstr "Zamknij system po przekroczeniu limitu prób logowania"
 
 #: xbmc\GUIPassword.cpp
 msgctxt "#12367"
-msgid "Master code is not valid"
-msgstr "Nieprawidłowe hasło główne"
-
-#: xbmc\GUIPassword.cpp
-msgctxt "#12368"
-msgid "Please enter a valid master code"
-msgstr "Wprowadź poprawne hasło główne"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr ""
 
 #: unknown
 msgctxt "#12373"
@@ -4780,8 +4768,8 @@ msgstr "Ustaw jako domyślne dla wszystkich wideo"
 #: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
-msgid "This will reset any previously saved values"
-msgstr "Wszystkie wcześniejsze ustawienia zostaną wyczyszczone"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "Spowoduje to wyczyszczenie wcześniej zapisanych warttości. Jesteś pewien?"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -5713,7 +5701,7 @@ msgstr "Wysuń / Wsuń"
 #: system/settings/settings.xml
 msgctxt "#13392"
 msgid "Use visualisation if playing audio"
-msgstr "Wizualizacja podczas odtwarzania muzyki"
+msgstr "Pokazuj wizualizację podczas odtwarzania muzyki"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#13393"
@@ -6922,9 +6910,12 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "Nieudane odtwarzanie"
 
+#: xbmc/PlaylistPlayer.cpp
 msgctxt "#16027"
-msgid "One or more items failed to play."
-msgstr "Nie udało się odtworzyć jednego lub więcej plików."
+msgid ""
+"One or more items failed to play. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -7048,9 +7039,9 @@ msgstr "Nieudane kopiowanie"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16202"
 msgid ""
-"Failed to copy at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nieudane kopiowanie co najmniej jednego pliku.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"Failed to copy at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16203"
@@ -7060,9 +7051,9 @@ msgstr "Nieudane przeniesienie"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16204"
 msgid ""
-"Failed to move at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nieudane przenoszenie co najmniej jednego pliku.[CR]Sprawdź szczegóły w pliku dziennika."
+"Failed to move at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16205"
@@ -7072,9 +7063,9 @@ msgstr "Nieudane usuwanie"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16206"
 msgid ""
-"Failed to delete at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nieudane usuwanie co najmniej jednego pliku.[CR]Sprawdź szczegóły w pliku dziennika."
+"Failed to delete at least one file. Check the log for more information about"
+" this message."
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -7472,17 +7463,17 @@ msgstr "Uruchomiono już nagrywanie na tym kanale"
 
 msgctxt "#19035"
 msgid ""
-"%s couldn't be played.[CR]Check the log for more information about this "
+"%s couldn't be played. Check the log for more information about this "
 "message."
-msgstr "%s nie można odtworzyć.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
-"This recording can't be played.[CR]Check the log for more information about "
+"This recording can't be played. Check the log for more information about "
 "this message."
-msgstr "Tego nagrania nie można odtworzyć.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19037"
@@ -7517,15 +7508,15 @@ msgstr "Nagrywanie"
 
 msgctxt "#19044"
 msgid ""
-"Please check your configuration.[CR]Check the log for more information about"
-" this message."
-msgstr "Sprawdź ustawioną konfigurację.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"Please check your configuration. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19045"
 msgid ""
-"No PVR clients have been started yet.[CR]Wait for the PVR clients to start "
-"up.[CR]Check the log for more information about this message."
-msgstr "Brak uruchomionych klientów telewizji.[CR]Poczekaj na uruchomienie klientów telewizji.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"No PVR clients have been started yet. Wait for the PVR clients to start up. "
+"Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19046"
 msgid "New channel"
@@ -7590,7 +7581,7 @@ msgstr "Usuń zadanie"
 
 msgctxt "#19061"
 msgid "Add timer"
-msgstr "Dodaj zadanie"
+msgstr "Nagrywaj"
 
 msgctxt "#19062"
 msgid "Sort by: Channel"
@@ -7606,7 +7597,7 @@ msgstr "Przejdź na koniec"
 
 msgctxt "#19065"
 msgid "Timer settings"
-msgstr "Zamknięcie wg harmonogramu"
+msgstr "Ustawienia zadania"
 
 #. Name of a shortcut to a custom folder for channel icons
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
@@ -7616,15 +7607,17 @@ msgid "Channel icons"
 msgstr "Ikony kanałów"
 
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "To zdarzenie jest już nagrywane."
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19068"
 msgid ""
-"This recording couldn't be deleted.[CR]Check the log for more information "
-"about this message."
-msgstr "Tego nagrania nie można usunąć.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"This recording couldn't be deleted. Check the log for more information about"
+" this message."
+msgstr ""
 
 #. Electronic program guide. used by ?
 msgctxt "#19069"
@@ -7760,6 +7753,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Dostawca"
 
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
 msgstr "Proszę przełącz na inny kanał."
@@ -7789,26 +7783,27 @@ msgstr "o"
 #: system/settings/settings.xml
 msgctxt "#19108"
 msgid "Fallback framerate"
-msgstr "Zapasowa liczba klatek"
+msgstr "Awaryjna częstoliwość klatek"
 
-#: xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer.[CR]Check the log for more information about this "
-"message."
-msgstr "Nie można zapisać zadania nagrywania.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"Couldn't save timer. Check the log for more information about this message."
+msgstr ""
 
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred.[CR]Try again later or check the log for more "
+"An unexpected error occurred. Try again later or check the log for more "
 "information."
-msgstr "Wystąpił nieoczekiwany błąd.[CR]Spróbuj ponownie później lub sprawdź szczegóły w pliku dziennika."
+msgstr ""
 
-#: xbmc/pvr/addons/PVRClients.cpp
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/recording/PVRRecording.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid ""
-"PVR backend error.[CR]Check the log for more information about this message."
-msgstr "Błąd serwera telewizji.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"PVR backend error. Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -7954,11 +7949,12 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Grupy"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19147"
 msgid ""
-"The PVR backend does not support this action.[CR]Check the log for more "
+"The PVR backend does not support this action. Check the log for more "
 "information about this message."
-msgstr "Serwer telewizji nie obsługuje tej operacji.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 msgctxt "#19148"
 msgid "Channel"
@@ -8024,9 +8020,9 @@ msgstr "Nagrania"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording.[CR]Check the log for more information about this "
+"Can't start recording. Check the log for more information about this "
 "message."
-msgstr "Nie można rozpocząć nagrywania.[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 msgctxt "#19165"
 msgid "Switch"
@@ -8131,21 +8127,18 @@ msgstr "Usunięte nagrania"
 
 #: system/settings/settings.xml
 msgctxt "#19185"
-msgid "Reset PVR database"
-msgstr "Wyczyść bazę funkcji telewizyjnych"
+msgid "Clear data"
+msgstr ""
 
 msgctxt "#19186"
-msgid "All data in the PVR database is being erased"
-msgstr "Wszystkie dane bazy TV są usuwane"
-
-#: system/settings/settings.xml
-msgctxt "#19187"
-msgid "Reset guide database"
-msgstr "Wyczyść bazę przewodnika"
+msgid ""
+"All your TV related data (channels, groups, guide) will be cleared. Are you "
+"sure?"
+msgstr ""
 
 msgctxt "#19188"
-msgid "Guide is being reset"
-msgstr "Czyszczenie bazy przewodnika"
+msgid "All your guide data will be cleared. Are you sure?"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19189"
@@ -8169,9 +8162,9 @@ msgstr "Żaden z podłączonych serwerów telewizji nie obsługuje wyszukiwania 
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
-"The channel scan can't be started.[CR]Check the log for more information "
-"about this message."
-msgstr "Nieudane uruchomienie skanowania kanałów[.CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+"The channel scan can't be started. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -8263,7 +8256,7 @@ msgstr "Wprowadź poprawny adres URL dla nowego kanału"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
-msgstr "Serwer TV nie obsługuje nagrywania wg harmonogramu."
+msgstr "Serwer TV nie obsługuje harmonogramu nagrań."
 
 msgctxt "#19216"
 msgid "All radio channels"
@@ -8296,9 +8289,9 @@ msgstr "Przewodnik"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled.[CR]Check your settings or the log for more "
+"No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "Nie można aktywować żadnego klienta TV.[CR]Sprawdź ustawienia lub sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -8319,7 +8312,7 @@ msgstr "Nagrywanie ukończone"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp, displayed when a timer is deleted
 msgctxt "#19228"
 msgid "Timer deleted"
-msgstr "Usunięto zadanie nagrywania"
+msgstr "Usunięto zadanie"
 
 msgctxt "#19229"
 msgid "Close channel OSD after switching channels"
@@ -8342,7 +8335,7 @@ msgstr "Wyczyść wyniki wyszukiwania"
 #: system/settings/settings.xml
 msgctxt "#19233"
 msgid "Display a notification on timer updates"
-msgstr "Wyświetlaj powiadomienie o aktualizacji zadania"
+msgstr "Wyświetlaj powiadomienie o aktualizacjach zadania"
 
 #: system/settings/settings.xml
 msgctxt "#19234"
@@ -8514,7 +8507,7 @@ msgctxt "#19272"
 msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr ""
+msgstr "Korzystanie z funkcji telewizyjnych wymaga tunera, oprogramowania serwerowe oraz odpowiedniego dodatku.Odwiedź strony Wiki na http://kodi.wiki/view/PVR, aby dowiedzieć się więcej."
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -8620,7 +8613,7 @@ msgstr "Usuń permanentnie"
 #: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
 msgctxt "#19292"
 msgid "Delete all permanently"
-msgstr "Usuń wszystko permanentnie"
+msgstr "Usuń wszystkie permanentnie"
 
 #. Used on yes no dialog
 #: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
@@ -8966,7 +8959,7 @@ msgstr "Doskonalenie zawodowe"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
-msgstr "Lingwistyka"
+msgstr "Języki"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19644"
@@ -10157,6 +10150,8 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Reżyser"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
@@ -10315,6 +10310,8 @@ msgctxt "#20374"
 msgid "Downloading movie information"
 msgstr "Pobieranie informacji o filmie"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20375"
 msgid "Unassign content"
 msgstr "Nieokreślona zawartość"
@@ -10613,10 +10610,12 @@ msgctxt "#20441"
 msgid "Remote fanart"
 msgstr "Fototapeta zdalna"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20442"
 msgid "Change content"
 msgstr "Zmień typ zawartości"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr "Czy chcesz odświeżyć informacje dla wszystkich pozycji powiązanych z tą ścieżką?"
@@ -11525,7 +11524,7 @@ msgstr "Kraj"
 
 msgctxt "#21876"
 msgid "Original TX reference"
-msgstr ""
+msgstr "Wybór odwołania do źródła"
 
 msgctxt "#21877"
 msgid "Date created"
@@ -11835,7 +11834,7 @@ msgstr "Więcej..."
 
 msgctxt "#22083"
 msgid "Play all"
-msgstr "Odtwórz wszystko"
+msgstr "Odtwórz wszystkie"
 
 msgctxt "#23049"
 msgid "Teletext not available"
@@ -12008,7 +12007,7 @@ msgstr "Pozycje kontekstowe"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24026"
 msgid "Languages"
-msgstr "Lingwistyka"
+msgstr "Języki"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24027"
@@ -12208,7 +12207,7 @@ msgstr "Anulować pobieranie dodatku?"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#24067"
 msgid "Currently downloading add-ons"
-msgstr "Dodatki aktualnie pobierane"
+msgstr "Pobierane dodatki"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24068"
@@ -12580,7 +12579,7 @@ msgstr ""
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24992"
 msgid "System"
-msgstr "System"
+msgstr "Systemowe"
 
 #: xbmc/addons/CGUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -12686,7 +12685,7 @@ msgstr "Klawiatura QWERTY"
 #: skin.confluence
 msgctxt "#29802"
 msgid "Passthrough audio in use"
-msgstr "Używasz zewnętrznego dekodowania dźwięku"
+msgstr "Korzystasz z przekazywania dźwięku do urządzenia odbiorczego"
 
 #: unknown
 msgctxt "#33001"
@@ -13230,20 +13229,20 @@ msgstr "Nieudane uruchomienie Zeroconf"
 #: xbmc\network\windows\ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
-"Is Apple's Bonjour service installed?[CR]Check the log for more information "
+"Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
-msgstr "Czy usługa Bonjour firmy Apple została zainstalowana?[CR]Sprawdź szczegóły w pliku dziennika po więcej informacji."
+msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
-msgid "AirPlay requires Zeroconf to be enabled."
-msgstr "AirPlay wymaga aktywnej usługi Zeroconf."
+msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
+msgstr "Nieudane uruchomienie AirPlay z powodu braku aktywacji usługi Zeroconf."
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
 msgid ""
 "Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
-msgstr ""
+msgstr "Nieudane zatrzymanie usługi Zeroconf. Usługi AirPlay i AirTunes wymagają uruchomionej usługi Zeroconf."
 
 #: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -13588,11 +13587,6 @@ msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Używaj ograniczonego zakresu kolorów (16-235)"
 
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36043"
-msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
-msgstr "Brak telewizora z obsługą CEC. Wyłączyć wyszukiwanie urzadzeń z obsługą CEC?"
-
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml
 msgctxt "#36101"
@@ -13619,7 +13613,7 @@ msgctxt "#36104"
 msgid ""
 "Select to change the skin specific settings. Which options are available for"
 " configuration depends on the features provided by the skin."
-msgstr ""
+msgstr "Umożliwia zmianę specyficznych ustawień skóry. Dostępne opcje są zależne od funkcji udostępnionych przez skórę."
 
 #. Description of setting "Appearance -> Skin -> Theme" with label #15111
 #: system/settings/settings.xml
@@ -13678,7 +13672,7 @@ msgstr "Edycja strumienia nagłówków RSS."
 #: system/settings/settings.xml
 msgctxt "#36113"
 msgid "This category contains all locale / regional settings."
-msgstr "Kategoria zawierająca ustawienia regionalne."
+msgstr "Kategoria zawierająca wszyskie ustawienia regionalne i językowe."
 
 #. Description of setting "Appearance -> International -> Language" with label
 #. #248
@@ -13799,7 +13793,7 @@ msgctxt "#36128"
 msgid ""
 "This category contains the settings for how the screensaver add-ons are "
 "handled."
-msgstr "Kategoria zawierająca ustawienia związane z obsługą dodatków wygaszania ekranu."
+msgstr "Kategoria zawierająca ustawienia związane z obsługą wygaszaczy ekranu."
 
 #. Description of setting "Appearance -> Screensaver -> Wait time" with label
 #. #355
@@ -13808,7 +13802,7 @@ msgctxt "#36129"
 msgid ""
 "Set the time to wait for any activity to occur before displaying the "
 "screensaver."
-msgstr ""
+msgstr "Określa wymagany czas bezczynnosci przed uruchomieniem wygaszacza ekranu."
 
 #. Description of setting "Appearance -> Screensaver -> Screensaver mode" with
 #. label #356
@@ -13827,7 +13821,7 @@ msgid ""
 "Select to change the screensaver specific settings. Which options are "
 "available for configuration depends on the features provided by the "
 "screensaver add-on."
-msgstr ""
+msgstr "Umożliwia zmianę specyficznych ustawień wygaszacza ekranu. Dostępne opcje są zależne od funkcji udostępnionych przez wygaszacz ekranu."
 
 #. Description of setting "Appearance -> Screensaver -> Preview" with label
 #. #1000
@@ -13843,7 +13837,7 @@ msgctxt "#36133"
 msgid ""
 "If music is being played, the selected visualisation will be started instead"
 " of displaying the screensaver."
-msgstr ""
+msgstr "Wybrana wizualizacja będzie wyświetlana podczas odtwarzania muzyki zamiast wygaszacza ekranu."
 
 #. Description of setting "Appearance -> Screensaver -> Use dim if paused
 #. during video playback" with label #22014
@@ -13881,7 +13875,7 @@ msgstr "Kategoria zawierająca ustawienia związane z plikami wideo i ich obsłu
 msgctxt "#36139"
 msgid ""
 "This category contains the settings for how the video library is handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą biblioteki wideo."
 
 #. Description of setting "Appearance -> International -> Temperature unit"
 #. with label #14105
@@ -13890,14 +13884,14 @@ msgctxt "#36140"
 msgid ""
 "Choose which temperature unit is used for displaying temperatures in the "
 "user interface."
-msgstr ""
+msgstr "Określa jednostkę temperatury używaną do wyświetania temperatury w interfejsie użytkownika."
 
 #. Description of setting "Videos -> Library -> Show plot for unwatched items"
 #. with label #20369
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid "Show plot information for unwatched media in the video library."
-msgstr ""
+msgstr "Umożliwia wyśwetlanie fabuły dla nieobejrzanych pozycji w bibliotece wideo."
 
 #. Description of setting "Appearance -> International -> Speed unit" with
 #. label #14106
@@ -13905,7 +13899,7 @@ msgstr ""
 msgctxt "#36142"
 msgid ""
 "Choose which speed unit is used for displaying speeds in the user interface."
-msgstr ""
+msgstr "Określa jednostkę prędkości używaną do wyświetania prędkości w interfejsie użytkownika."
 
 #. Description of setting "Videos -> Library -> Download actor thumbnails"
 #. with label #20402
@@ -13930,14 +13924,14 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36145"
 msgid "Group movies into \"Movie sets\" when browsing the movie library."
-msgstr ""
+msgstr "Umożlwia grupowanie filmów w \"Serie filmowe\" podczas przeglądania biblioteki."
 
 #. Description of setting "Videos -> Library -> Update library on startup"
 #. with label #22000
 #: system/settings/settings.xml
 msgctxt "#36146"
 msgid "Check for new media files on startup."
-msgstr ""
+msgstr "Umożlwia wyszukiwania nowych plików mediów zaraz po uruchomieniu."
 
 #. Description of setting "Videos -> Library -> Hide progress of library
 #. updates" with label #22001
@@ -13966,7 +13960,7 @@ msgctxt "#36149"
 msgid ""
 "Export the video library database to XML files. This will optionally "
 "overwrite your current XML files."
-msgstr ""
+msgstr "Umożlwiai eksport bazy danych biblioteki wideo do plików XML. Opcjonalnie nadpisuje aktualne pliki XML."
 
 #. Description of setting "Videos -> Library -> Import video library" with
 #. label #648
@@ -13979,7 +13973,7 @@ msgstr "Importuje dane z pliku XML do bazy danych biblioteki wideo."
 #: system/settings/settings.xml
 msgctxt "#36151"
 msgid "This category contains the settings for how video playback is handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą odtwarzania wideo."
 
 #. Description of setting "Videos -> Playback -> Play next video
 #. automatically" with label #13433
@@ -14063,7 +14057,7 @@ msgctxt "#36164"
 msgid ""
 "Allow the refresh rate of the display to be changed so that it best matches "
 "the video frame rate. This may yield smoother video playback."
-msgstr "Zezwala na zmianę częstotliwości odświeżania wyświetlacza tak, aby najlepiej pasowała do częstotliwości klatek w strumieniu wideo. Aktywowanie tej funkcji może poprawić płynność odtwarzania."
+msgstr "Zezwala na zmianę częstotliwości odświeżania ekranu tak, aby najlepiej pasowała do częstotliwości klatek strumienia wideo. Aktywowanie tej funkcji może poprawić płynność odtwarzania."
 
 #. Description of setting "Videos -> Playback -> Pause during refresh rate
 #. change" with label #13550
@@ -14086,7 +14080,7 @@ msgctxt "#36167"
 msgid ""
 "Choose which time format is used for displaying the time in the user "
 "interface."
-msgstr ""
+msgstr "Określa format czasu używany do wyświetania czasu w interfejsie użytkownika."
 
 #. Description of setting "Appearance -> International -> Use 12/24-hour
 #. format" with label #14108
@@ -14095,7 +14089,7 @@ msgctxt "#36168"
 msgid ""
 "Choose whether to use 12 or 24-hour format for displaying the time in the "
 "user interface."
-msgstr ""
+msgstr "Określa czy używać 12 lub 24 godzinnego formatu do wyświetlania czasu w interfejsie użytkownika."
 
 #. Description of setting "System -> Audio output -> Resample quality" with
 #. label #13505
@@ -14131,7 +14125,7 @@ msgctxt "#36173"
 msgid ""
 "Choose which short date format is used for displaying the date in the user "
 "interface."
-msgstr ""
+msgstr "Określa skrócony format daty używany do wyświetania daty w interfejsie użytkownika."
 
 #. Description of setting "Videos -> Playback -> Activate Teletext" with label
 #. #23050
@@ -14152,7 +14146,7 @@ msgstr "Umożliwia skalowanie telegazety do proporcji 4:3."
 msgctxt "#36176"
 msgid ""
 "This category contains the settings for how video file lists are handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą list wideo."
 
 #. Description of setting "Videos -> File lists -> Default select action" with
 #. label #22079
@@ -14219,7 +14213,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36184"
 msgid "This category contains the settings for how subtitles are handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą napisów."
 
 #. Description of setting "Videos -> Subtitles -> Font to use for text
 #. subtitles" with label #14089
@@ -14397,7 +14391,7 @@ msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
 "(OSD), as well as channel information windows."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia menu ekranowego oraz okien informacyjnych kanału."
 
 #: system/settings/settings.xml
 msgctxt "#36212"
@@ -14425,7 +14419,7 @@ msgctxt "#36215"
 msgid ""
 "Choose which long date format is used for displaying the date in the user "
 "interface."
-msgstr ""
+msgstr "Określa pełny format daty używany do wyświetania daty w interfejsie użytkownika."
 
 #: system/settings/settings.xml
 msgctxt "#36216"
@@ -14441,7 +14435,7 @@ msgstr "Umożliwia wyszukiwanie brakujących ikony kanałów."
 msgctxt "#36218"
 msgid ""
 "This category contains the electronic programming guide (EPG) settings."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia przewodnika programów."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
@@ -14481,7 +14475,7 @@ msgstr ""
 msgctxt "#36226"
 msgid ""
 "This category contains the PVR playback and channel switching settings."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia odtwarzania programów telewizyjnych i przełączania kanałów."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
@@ -14526,7 +14520,7 @@ msgstr "Określa zachowanie po zmianie kanału przy pomocy klawiszy, dodając op
 #: system/settings/settings.xml
 msgctxt "#36233"
 msgid "This category contains the default recording duration settings."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia domyślnych czasów trwania nagrywania."
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -14565,14 +14559,14 @@ msgctxt "#36239"
 msgid ""
 "Display a notification when timers are added, finished or removed by the "
 "backend."
-msgstr "Wyświetla powiadomienie, gdy zadania są dodawane, zakończane lub usuwane z harmonogramu nagrań."
+msgstr "Wyświetla powiadomienie, gdy zadania są dodawane, zakończone lub usuwane z harmonogramu nagrań."
 
 #: system/settings/settings.xml
 msgctxt "#36240"
 msgid ""
 "This category contains the PVR power management settings, such as when to "
 "wakeup the PVR backend server."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia funkcji oszczędzania energii np. czas wybudzanie serwera telewizyjnego."
 
 #: system/settings/settings.xml
 msgctxt "#36241"
@@ -14614,7 +14608,7 @@ msgctxt "#36247"
 msgid ""
 "This category contains the parental control settings, if the PVR backend "
 "server supports parental controls."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia kontroli rodzicielskiej, jeśli używany serwer TV obsługuje kontrolę rodzicielską."
 
 #: system/settings/settings.xml
 msgctxt "#36248"
@@ -14642,7 +14636,7 @@ msgctxt "#36251"
 msgid ""
 "This category contains the settings for your PVR backend specifically, if "
 "supported by the PVR add-on and backend."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia specjalnych funkcji serwera telewizyjnego, jeśli są przez niego wspierane."
 
 #: system/settings/settings.xml
 msgctxt "#36252"
@@ -14710,7 +14704,7 @@ msgctxt "#36261"
 msgid ""
 "If enabled, this framerate is used for streams we were not able to detect "
 "fps."
-msgstr "Określa liczbę klatek używanych dla strumieni, dla których nie można wykryć częstotliwości klatek."
+msgstr "Określa domyślną częstotliwość odświeżania ekranu używanych dla strumienia wideo, dla którego niemożliwe jest wykrycie częstotliwości klatek."
 
 #. Description of setting "Music -> Library -> Export music library" with
 #. label #20196
@@ -14732,7 +14726,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36264"
 msgid "This category contains the settings for how music playback is handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą odtwarzania muzyki."
 
 #. Description of setting "Music -> Playback -> Play next song automatically"
 #. with label #489
@@ -14827,7 +14821,7 @@ msgctxt "#36275"
 msgid ""
 "Control the way that the names of songs are displayed in the user interface."
 " In order to function properly, tag reading needs to be enabled."
-msgstr "Określa sposób w jaki nazwy utworów są wyświetlane w interfejsie użytkownika. Do poprawnego działania wymaga aktywnej funkcji wczytywania znaczników."
+msgstr "Określa sposób w jaki nazwy utworów są wyświetlane w interfejsie użytkownika. Do poprawnego działania wymagana jest aktywna funkcja wczytywania znaczników."
 
 #. Description of setting "Music -> File lists -> Track naming template -
 #. right" with label #13387
@@ -14880,7 +14874,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36282"
 msgid "This category contains the settings for how CDs are handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą dysków CD-Audio."
 
 #. Description of setting "Music -> Audio CDs -> Audio CD Insert Action" with
 #. label #14097
@@ -15041,7 +15035,7 @@ msgstr "Kategoria zawierająca ustawienia związane z obrazami i ich obsługą."
 msgctxt "#36305"
 msgid ""
 "This category contains the settings for how picture file lists are handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą list obrazów."
 
 #. Description of setting "Pictures -> Show EXIF picture information" with
 #. label #14082
@@ -15166,7 +15160,7 @@ msgctxt "#36322"
 msgid ""
 "This category contains the settings for how the UPnP service is handled. "
 "UPnP is also called DLNA on most consumer electronics."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z usługą UPnP. Na większości urządzeń elektronicznych UPnP jest określane nazwą DLNA."
 
 #. Description of setting "Services -> UPnP -> Share my libraries" with label
 #. #21360
@@ -15208,7 +15202,7 @@ msgctxt "#36327"
 msgid ""
 "This category contains the settings for how the web server service is "
 "handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z usługą serwera webowego."
 
 #. Description of setting "Services -> Webserver -> Allow remote control via
 #. HTTP" with label #263
@@ -15313,7 +15307,7 @@ msgctxt "#36341"
 msgid ""
 "This category contains the settings for how the Zeroconf network discovery "
 "service is handled, required for AirPlay."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z usługą wykrywania sieci ZeroConf, wymaganą przez AirPlay."
 
 #. Description of setting "Services -> Zeroconf -> Announce services to other
 #. systems"  with label #1260
@@ -15352,7 +15346,7 @@ msgctxt "#36346"
 msgid ""
 "This category contains the settings for how the SMB client (Samba) service "
 "is handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą klienta SMB (Samba)."
 
 #. Description of setting "Services -> SMB Client -> WINS server" with label
 #. #1207
@@ -15470,7 +15464,7 @@ msgstr "Wykorzystuje ograniczony zakres kolorów (16-235) zamiast pełnego zakre
 #: system/settings/settings.xml
 msgctxt "#36360"
 msgid "This category contains the settings for how audio output is handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą odtwarzania dźwięku."
 
 #. Description of setting "System -> Audio output -> Output configuration"
 #. with label #337
@@ -15494,7 +15488,7 @@ msgid ""
 "number of speakers if connected by analogue connections. This setting does "
 "not apply to passthrough audio. Note: S/PDIF supports 2.0 channels only but "
 "can still output multichannel audio using a format supported by passthrough."
-msgstr ""
+msgstr "Określa liczbę kanałów obsługiwanych przez złącze dźwiękowe lub liczbę głośników podłączonych do złącz analogowych. To ustawienie nie ma wpływu na ustawienie przekazywania dźwięku. Uwaga: złącze SPDIF obsługuje tylko kanały 2.0, ale umożliwia przekazywania obsługiwanych formatów wielokanałowych do urządzeń odbiorczych."
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -15541,7 +15535,7 @@ msgctxt "#36368"
 msgid ""
 "Select to enable the passthrough audio options for playback of encoded audio"
 " such as Dolby Digital (AC3), DTS, etc."
-msgstr ""
+msgstr "Umożliwia przekazywanie i dekodowanie ścieżek dźwiękowych w formatach takich, jak: Dolby Digital (AC3), DTS, itp. na zewnętrznych urządzeniach odbiorczych."
 
 #. Description of setting "System -> Audio output -> TrueHD capable receiver"
 #. with label #349
@@ -15624,7 +15618,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36378"
 msgid "Use a joystick to control the interface."
-msgstr ""
+msgstr "Umożliwia wykorzystywanie dżojstika do nawigacji w interfejsie użytkownika."
 
 #. Description of settings category "System -> Internet access" with label
 #. #798
@@ -15633,14 +15627,14 @@ msgctxt "#36379"
 msgid ""
 "This category contains the settings for how Internet access is handled. The "
 "default web interface can also be selected here."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą dostępu do Internetu. Dodatkowo umożliwia wybór domyślnego interfejsu webowego."
 
 #. Description of setting "System -> Internet access -> Use proxy server" with
 #. label #708
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your Internet connection uses a proxy server, configure it here."
-msgstr ""
+msgstr "Jeśli łączysz się z Internetem za pośrednictwem serwera proxy, możesz tutaj skonfigurować jego parametry."
 
 #. Description of setting "System -> Internet access -> Proxy type" with label
 #. #1180
@@ -15705,14 +15699,14 @@ msgstr "Wyłącza wyświetlacz w trybie bezczynności. Użyteczne dla telewizor�
 #: system/settings/settings.xml
 msgctxt "#36389"
 msgid "Set the time to wait for any activity to occur before shutting down."
-msgstr ""
+msgstr "Określa wymagany czas bezczynnosci przed wykonaniem operacji zamykania."
 
 #. Description of setting "System -> Power saving -> Shutdown function" with
 #. label #13008
 #: system/settings/settings.xml
 msgctxt "#36390"
 msgid "Define what action to perform when the shutdown function timer lapsed."
-msgstr ""
+msgstr "Określa operację wykonywaną po upłynięciu czasu zaplanowanego zamykania."
 
 #. Description of settings category "System -> Debugging" with label #14092
 #: system/settings/settings.xml
@@ -15721,7 +15715,7 @@ msgid ""
 "This category contains the settings for enabling debug functions. You can "
 "also enable component-specific debug logging in order to help troubleshoot "
 "related issues in more detail."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą funkcji diagnostycznych. Umożliwa także aktywowanie rejestrowania komunikatów wybranych komponentów, ułatwiającące rozwiązywanie powiązanych z nimi problemów."
 
 #. Description of setting "System -> Debugging -> Enable debug logging" with
 #. label #20191
@@ -15744,7 +15738,7 @@ msgctxt "#36394"
 msgid ""
 "Enables verbose messages from additional libraries to be included in the "
 "debug log."
-msgstr "Umożliwia rejestrowanie komunikatów diagnostycznych dodatkowych bibliotek w pliku dziennika."
+msgstr "Umożliwia rejestrowanie komunikatów diagnostycznych dodatkowych bibliotek i modułów w pliku dziennika."
 
 #. Description of settings category "System -> Master lock" with label #12360
 #: system/settings/settings.xml
@@ -15752,7 +15746,7 @@ msgctxt "#36395"
 msgid ""
 "This category contains the settings for how the master lock function is "
 "handled."
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z obsługą funkcji kontroli dostępu."
 
 #. Description of setting "System -> Master lock -> Master lock code and
 #. settings" with label #20100
@@ -15779,7 +15773,7 @@ msgstr "Jeśli aktywne, wymagane będzie wprowdzenie hasła głównego, aby odbl
 msgctxt "#36398"
 msgid ""
 "Define the maximum number of retries before this application is closed down."
-msgstr ""
+msgstr "Określa maksymalną listę prób przed zamknięciem tej aplikacji."
 
 #. Description of settings category "System -> Cache" with label #439
 #: system/settings/settings.xml
@@ -15932,7 +15926,7 @@ msgctxt "#36421"
 msgid ""
 "Bypassing VDPAU mixer saves resources on low power systems but slightly "
 "reduces picture quality."
-msgstr "Pomijanie miksera VDPAU oszczędza zasoby na mało wydajnych systemach, ale zmniejsza nieco jakość obrazu."
+msgstr "Pomijanie miksera VDPAU oszczędza zasoby na mało wydajnych systemach, ale obniża nieco jakość obrazu."
 
 #. Description of setting "Videos -> Playback -> Allow hardware acceleration
 #. (amcodec)" with label #13438
@@ -15979,7 +15973,7 @@ msgid ""
 "Select this if the audio out connection only supports multichannel audio as "
 "Dolby Digital 5.1 (AC-3), such as a S/PDIF connection. If your system "
 "supports PCM multichannel audio via HDMI, leave this disabled."
-msgstr ""
+msgstr "Zaznacz tę opcję, gdy złącze dźwiękowe obsługuje wielokanałowe ścieżki dźwiękowe tylko w formacie Dolby Digital 5.1(AC-3), np. złącze SPDIF. Jeśli Twój system obsługuje wielokanałowy dźwięk w formacie LPCM przez HDMI, pozostaw tę opcję nieaktywną."
 
 #. Description for setting category #14101: Video Acceleration
 #: system/settings/settings.xml
@@ -16001,7 +15995,7 @@ msgctxt "#36433"
 msgid ""
 "When enabled, VAAPI render method is preferred and the CPU has less load. If"
 " you experience hangs, disable this option."
-msgstr ""
+msgstr "Zaznacz tę opcję, aby używać metodę renderowania VAAPI. Metoda ta odciąża procesor, ale może powodować zawieszenie sterownika."
 
 #. Description of setting "Videos -> Playback -> Enable MMAL hardware decoding
 #. of video files"
@@ -16173,7 +16167,7 @@ msgctxt "#36534"
 msgid ""
 "Specify additional libraries whose verbose messages are to be included in "
 "the debug log."
-msgstr ""
+msgstr "Określa dodatkowe biblioteki i moduły, których komunikaty diagnostyczne będą rejestrowane w pliku dziennika."
 
 #. label of a setting, allowing to specify the stereoscopic 3D mode of a video
 #: guilib/StereoscopicsManager.cpp
@@ -16304,7 +16298,7 @@ msgstr "Kategoria zawierająca ustawienia związane z obsługą biblioteki muzyk
 msgctxt "#36601"
 msgid ""
 "This category contains the settings for how music file lists are handled."
-msgstr "Kategoria zawierająca ustawienia związane z obsługą list plików muzyki."
+msgstr "Kategoria zawierająca ustawienia związane z obsługą list muzyki."
 
 #. Description of settings category "Services -> AirPlay" with label #1273
 #: system/settings/settings.xml
@@ -16677,7 +16671,7 @@ msgstr "Pokazuj pozycję \"Wszystkie pozycje\""
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr ""
+msgstr "Pokazuj element \"Wszystkie pozycje\" na listach, n.p. \"Wszystkie albumy\""
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems

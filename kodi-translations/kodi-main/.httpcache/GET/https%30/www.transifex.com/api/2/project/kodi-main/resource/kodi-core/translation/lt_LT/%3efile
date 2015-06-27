@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-07 14:01+0000\n"
-"Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
+"PO-Revision-Date: 2015-06-27 04:45+0000\n"
+"Last-Translator: TeamXBMC <xbmctranslations@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -620,7 +620,7 @@ msgstr "Laisva"
 
 msgctxt "#157"
 msgid "Video"
-msgstr "Video"
+msgstr "Vaizdo įrašai"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#158"
@@ -1839,8 +1839,8 @@ msgid "Remove movie from library"
 msgstr "Pašalinti filmą iš bibliotekos"
 
 msgctxt "#433"
-msgid "Would you really like to remove[CR]'%s' from library?"
-msgstr "Ar tikrai norite pašalinti[CR]'%s' iš biliotekos?"
+msgid "Would you really like to remove '%s' from library?"
+msgstr ""
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -2769,7 +2769,7 @@ msgstr "Glaudinimo lygis"
 #: system/settings/settings.xml
 msgctxt "#666"
 msgid "Enable component-specific logging"
-msgstr "Įgalinti komponentą ruošai"
+msgstr "Įgalinti specifinių komponentų žurnalo rašymą"
 
 #: system/settings/settings.xml
 msgctxt "#667"
@@ -2779,7 +2779,7 @@ msgstr "Įjungti Dolby Digital (AC3) perkodavimą"
 #: system/settings/settings.xml
 msgctxt "#668"
 msgid "Specify component-specific logging..."
-msgstr "Nurodyti komponentų konkrečią ruošą ..."
+msgstr "Pasirinkti konkrečių komponentų žurnalo rašymą..."
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#669"
@@ -2814,7 +2814,7 @@ msgstr "Išsamus [B]JSON-RPC[/B] bibliotekos žurnalo rašymas"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#676"
 msgid "Verbose logging for the [B]Audio[/B] component"
-msgstr "Išsamus [B]Audio[/B] komponento žurnalo rašymas"
+msgstr "Išsamus [B]garso[/B] komponento žurnalo rašymas"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#677"
@@ -3020,7 +3020,6 @@ msgid "Mirror image"
 msgstr "Veidrodinis atvaizdas"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#750"
 msgid "Are you sure?"
 msgstr "Ar isitikinęs?"
@@ -3267,19 +3266,12 @@ msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "Neįmanoma prisijungti"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1002"
-msgid "The connection to the network location couldn't be established."
-msgstr "Neįmanoma nustatyti prisijungimo prie tinklo vietos."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1003"
-msgid "This could be due to the network not being connected."
-msgstr "Tai gali būti dėl to, kad neprisijungta prie tinklo."
-
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
-msgctxt "#1004"
-msgid "Would you like to add it anyway?"
-msgstr "Ar vistiek norėtumėte jį pridėti?"
+msgid ""
+"The connection to the network location couldn't be established. This could "
+"be due to the network not being connected. Would you like to add it anyway?"
+msgstr "Nepavyko nustatyti ryšio su tinklo vieta. Tai galėjo nutikti dėl neprijungto tinklo. Ar vis tiek norite jį pridėti?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3372,8 +3364,10 @@ msgstr "Naršyti"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#1025"
-msgid "Couldn't retrieve directory information."
-msgstr "Nepavyko gauti katalogo informacijos."
+msgid ""
+"Couldn't retrieve directory information. This could be due to the network "
+"not being connected. Would you like to add it anyway?"
+msgstr "Nepavyko nuskaityti katalogo informacijos. Tai galėjo nutikti dėl neprijungto tinklo. Ar vis tiek norite jį pridėti?"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4103,9 +4097,8 @@ msgstr "Grįžo atgal į pagrindinį sąrašą, nes aktyvus sąrašas buvo išva
 
 msgctxt "#2101"
 msgid ""
-"Newer version needed.[CR]Check the log for more information about this "
-"message."
-msgstr "Reikalinga naujesnė versija.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Newer version needed. Check the log for more information about this message."
+msgstr ""
 
 #. Notification message indicating an add-on error. "<Add-on name> error".
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4159,7 +4152,7 @@ msgstr "Muzika"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10006"
 msgid "Videos"
-msgstr "Video"
+msgstr "Vaizdo įrašai"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4212,7 +4205,7 @@ msgstr "Nustatymai - Sistema"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10017"
 msgid "Settings - Videos"
-msgstr "Nustatymai - Video"
+msgstr "Nustatymai - Vaizdo įrašai"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
@@ -4236,7 +4229,7 @@ msgstr "Nustatymai - TV"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10025"
 msgid "Videos"
-msgstr "Video"
+msgstr "Vaizdo įrašai"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10028"
@@ -4759,13 +4752,8 @@ msgstr "Išjungti sistemą, jei viršytas bandymų atrakinti valdytojo užraktą
 
 #: xbmc\GUIPassword.cpp
 msgctxt "#12367"
-msgid "Master code is not valid"
-msgstr "Valdytojo kodas neteisingas!"
-
-#: xbmc\GUIPassword.cpp
-msgctxt "#12368"
-msgid "Please enter a valid master code"
-msgstr "Įveskite teisingą valdytojo kodą!"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "Valdytojo kodas neteisingas. Įveskite teisingą valdytojo kodą."
 
 #: unknown
 msgctxt "#12373"
@@ -4781,8 +4769,8 @@ msgstr "Nustatyti kaip numatytuosius visiems vaizdo įrašams"
 #: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#12377"
-msgid "This will reset any previously saved values"
-msgstr "Tai iš naujo nustatys bet kokias anksčiau išsaugotas reikšmes"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "Tai iš naujo nustatys bet kokias anksčiau išsaugotas reikšmes. Ar tikrai norite tęsti?"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -6923,9 +6911,12 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "Atkūrimas nepavyko"
 
+#: xbmc/PlaylistPlayer.cpp
 msgctxt "#16027"
-msgid "One or more items failed to play."
-msgstr "Nepavyko atkurti vieno ar daugiau elementų."
+msgid ""
+"One or more items failed to play. Check the log for more information about "
+"this message."
+msgstr "Nepavyko atkurti vieno ar daugiau elementų. Daugiau informacijos apie šį pranešimą galite rasti žurnale."
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -7049,9 +7040,9 @@ msgstr "Nepavyko nukopijuoti"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16202"
 msgid ""
-"Failed to copy at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nepavyko nukopijuoti bent vieno failo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Failed to copy at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16203"
@@ -7061,9 +7052,9 @@ msgstr "Nepavyko perkelti"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16204"
 msgid ""
-"Failed to move at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nepavyko perkelti bent vieno failo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Failed to move at least one file. Check the log for more information about "
+"this message."
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16205"
@@ -7073,9 +7064,9 @@ msgstr "Nepavyko pašalinti"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16206"
 msgid ""
-"Failed to delete at least one file.[CR]Check the log for more information "
-"about this message."
-msgstr "Nepavyko pašalinti bent vieno failo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Failed to delete at least one file. Check the log for more information about"
+" this message."
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -7473,17 +7464,17 @@ msgstr "Šio kanalo įrašymas jau pradėtas"
 
 msgctxt "#19035"
 msgid ""
-"%s couldn't be played.[CR]Check the log for more information about this "
+"%s couldn't be played. Check the log for more information about this "
 "message."
-msgstr "Neįmanoma atkurti %s.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#19036"
 msgid ""
-"This recording can't be played.[CR]Check the log for more information about "
+"This recording can't be played. Check the log for more information about "
 "this message."
-msgstr "Neįmanoma atkurti šio įrašo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19037"
@@ -7518,15 +7509,15 @@ msgstr "Įrašymas"
 
 msgctxt "#19044"
 msgid ""
-"Please check your configuration.[CR]Check the log for more information about"
-" this message."
-msgstr "patikrinkite konfigūraciją.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Please check your configuration. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19045"
 msgid ""
-"No PVR clients have been started yet.[CR]Wait for the PVR clients to start "
-"up.[CR]Check the log for more information about this message."
-msgstr "Kol kas dar nebuvo paleistas joks PVR klientas.[CR]Palaukite kol PVR klientas įsijungs.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"No PVR clients have been started yet. Wait for the PVR clients to start up. "
+"Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19046"
 msgid "New channel"
@@ -7617,15 +7608,17 @@ msgid "Channel icons"
 msgstr "Kanalų piktogramos"
 
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Šis įvykis jau įrašytas."
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19068"
 msgid ""
-"This recording couldn't be deleted.[CR]Check the log for more information "
-"about this message."
-msgstr "Neįmanoma pašalinti šio įrašo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"This recording couldn't be deleted. Check the log for more information about"
+" this message."
+msgstr ""
 
 #. Electronic program guide. used by ?
 msgctxt "#19069"
@@ -7761,6 +7754,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Tiekėjas"
 
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
 msgstr "Perjunkite kitą kanalą"
@@ -7792,24 +7786,25 @@ msgctxt "#19108"
 msgid "Fallback framerate"
 msgstr "Atsarginis kadrų dažnis"
 
-#: xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer.[CR]Check the log for more information about this "
-"message."
-msgstr "Neįmanoma išsaugoti laikmačio.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"Couldn't save timer. Check the log for more information about this message."
+msgstr ""
 
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred.[CR]Try again later or check the log for more "
+"An unexpected error occurred. Try again later or check the log for more "
 "information."
-msgstr "Įvyko netikėta klaida.[CR]Bandykite vėliau arba patikrinkite žurnalą, norėdami gauti daugiau informacijos."
+msgstr ""
 
-#: xbmc/pvr/addons/PVRClients.cpp
+#: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/recording/PVRRecording.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid ""
-"PVR backend error.[CR]Check the log for more information about this message."
-msgstr "PVR posistemės klaida.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"PVR backend error. Check the log for more information about this message."
+msgstr ""
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -7955,11 +7950,12 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Grupės"
 
+#: xbmc/pvr/recording/PVRRecording.cpp
 msgctxt "#19147"
 msgid ""
-"The PVR backend does not support this action.[CR]Check the log for more "
+"The PVR backend does not support this action. Check the log for more "
 "information about this message."
-msgstr "PVR posistemė nepalaiko šio veiksmo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 msgctxt "#19148"
 msgid "Channel"
@@ -8025,9 +8021,9 @@ msgstr "Įrašymai"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording.[CR]Check the log for more information about this "
+"Can't start recording. Check the log for more information about this "
 "message."
-msgstr "Neįmanoma pradėti įrašymo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 msgctxt "#19165"
 msgid "Switch"
@@ -8132,21 +8128,18 @@ msgstr "Pašalinti įrašymai"
 
 #: system/settings/settings.xml
 msgctxt "#19185"
-msgid "Reset PVR database"
-msgstr "Atstatyti PVR duomenų bazę"
+msgid "Clear data"
+msgstr ""
 
 msgctxt "#19186"
-msgid "All data in the PVR database is being erased"
-msgstr "Visi PVR duomenų bazės duomenys bus ištrinti"
-
-#: system/settings/settings.xml
-msgctxt "#19187"
-msgid "Reset guide database"
-msgstr "Atstatyti TV gido duomenų bazę"
+msgid ""
+"All your TV related data (channels, groups, guide) will be cleared. Are you "
+"sure?"
+msgstr ""
 
 msgctxt "#19188"
-msgid "Guide is being reset"
-msgstr "TV gidas atstatomas"
+msgid "All your guide data will be cleared. Are you sure?"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#19189"
@@ -8170,9 +8163,9 @@ msgstr "Nei viena iš prijungtų PVR posistemių nepalaiko kanalų nuskaitymo."
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#19193"
 msgid ""
-"The channel scan can't be started.[CR]Check the log for more information "
-"about this message."
-msgstr "Neįmanoma pradėti kanalų paieškos.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+"The channel scan can't be started. Check the log for more information about "
+"this message."
+msgstr ""
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -8297,9 +8290,9 @@ msgstr "TV gidas"
 
 msgctxt "#19223"
 msgid ""
-"No PVR add-on could be enabled.[CR]Check your settings or the log for more "
+"No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "Neįmanoma įjungti jokio PVR priedo.[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -10056,7 +10049,7 @@ msgstr "Nežinomas arba integruotas (apsaugotas)"
 
 msgctxt "#20314"
 msgid "Videos - Library"
-msgstr "Video - Biblioteka"
+msgstr "Vaizdo įrašai - Biblioteka"
 
 msgctxt "#20316"
 msgid "Sort by: ID"
@@ -10158,6 +10151,8 @@ msgctxt "#20339"
 msgid "Director"
 msgstr "Režisierius"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
@@ -10316,6 +10311,8 @@ msgctxt "#20374"
 msgid "Downloading movie information"
 msgstr "Atsiunčiama filmo informacija"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20375"
 msgid "Unassign content"
 msgstr "Pašalinti turinį"
@@ -10614,10 +10611,12 @@ msgctxt "#20441"
 msgid "Remote fanart"
 msgstr "Nuotolinis FanArt"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20442"
 msgid "Change content"
 msgstr "Pakeisti turinį"
 
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr "Ar norite atnaujinti informaciją visiems elementams, esantiems šiame kelyje?"
@@ -11918,7 +11917,7 @@ msgstr "Filmo informacija"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24008"
 msgid "Screensaver"
-msgstr "Ekrano užsklanda"
+msgstr "Ekrano užsklandos"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24009"
@@ -13231,14 +13230,14 @@ msgstr "Nepavyko paleisti Zeroconf"
 #: xbmc\network\windows\ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
-"Is Apple's Bonjour service installed?[CR]Check the log for more information "
+"Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
-msgstr "Ar įdiegta Apple Bonjour paslauga?[CR]Daugiau informacijos apie šį pranešimą galite rasti žurnale."
+msgstr ""
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
-msgid "AirPlay requires Zeroconf to be enabled."
-msgstr "AirPlay paleidimui reikia įjungti Zeroconf."
+msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
+msgstr "Nepavyko paleisti AirPlay paslaugos, nes jei reikia, kad būtų įjungtas Zeroconf."
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
@@ -13588,11 +13587,6 @@ msgstr "* Elemento aplankas"
 msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Naudoti ribotą spalvų gamą (16-235)"
-
-#: xbmc/peripherals/devices/peripheralcecadapter.cpp
-msgctxt "#36043"
-msgid "No CEC capable TV detected. Disable polling for CEC capable devices?"
-msgstr "Nerastas CEC palaikantis televizorius. Išjungti CEC palaikančių įrenginių aptikimą?"
 
 #. Description of settings section "Appearance"
 #: system/settings/settings.xml
