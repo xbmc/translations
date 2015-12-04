@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.dvbviewer"
-  version="1.10.35"
+  version="1.11.7"
   name="DVBViewer Client"
   provider-name="A600, Manuel Mausz">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.9.6"/>
+    <import addon="xbmc.pvr" version="4.1.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="pvr.dvbviewer.so"
-    library_osx="pvr.dvbviewer.dylib"
-    library_freebsd="pvr.dvbviewer.so"
-    library_windx="pvr.dvbviewer.dll"
-    library_android="libpvr.dvbviewer.so"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi se voorprogram vir DVBViewer</summary>
     <summary lang="be_BY">Kodi's frontend for DVBViewer</summary>
@@ -169,6 +165,6 @@
     <disclaimer lang="vi_VN">Đây là phần mềm không ổn định! Các tác giả sẽ không chịu trách nhiệm nào với các bản ghi thất bại, bị đặt giờ sai, giờ lãng phí, hoặc các tác dụng không mong muốn khác..</disclaimer>
     <disclaimer lang="zh_CN">这是不稳定版的软件！作者不对录像失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
     <disclaimer lang="zh_TW">這是測試版軟體！其原創作者並無法對於以下情況負責，包含：錄影失敗，不正確的定時設定，多餘時數，或任何產生的其它不良影響...</disclaimer>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>

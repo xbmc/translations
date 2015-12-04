@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.pctv"
-  version="0.1.11"
+  version="0.2.6"
   name="PCTV Systems Client"
   provider-name="PCTV Systems">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.9.6"/>
+    <import addon="xbmc.pvr" version="4.1.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="pvr.pctv.so"
-    library_osx="pvr.pctv.dylib"
-    library_freebsd="pvr.pctv.so"
-    library_windx="pvr.pctv.dll"
-    library_android="libpvr.pctv.so" />
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="cs_CZ">PVR klient pro připojení PCTV Systems Broadway ke Kodi</summary>
     <summary lang="de_DE">PVR Client um Kodi mit PCTV Systems Broadway zu verbinden</summary>
@@ -97,6 +93,6 @@
     <disclaimer lang="szl">To je niystabilny softwer! Autōry niy sōm ôdpedzialne za niypodarzōne graniy, niynŏleżne godziny EPG, stracōne godziny i inksze niychciane efekty.</disclaimer>
     <disclaimer lang="tr_TR">Bu kararsız bir yazılımdır! Yazanlar oynatma hatası, yanlış EPG zamanları, harcanmış saatler ya da diğer etkilerden sorumlu değiller.</disclaimer>
     <disclaimer lang="zh_CN">这是不稳定版的软件！作者不对录像失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.filmon"
-  version="0.5.9"
+  version="0.7.0"
   name="PVR Filmon Client"
   provider-name="Stephen Denham">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.9.6"/>
+    <import addon="xbmc.pvr" version="4.1.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="pvr.filmon.so"
-    library_osx="pvr.filmon.dylib"
-    library_freebsd="pvr.filmon.so"
-    library_windx="pvr.filmon.dll"
-    library_android="libpvr.filmon.so" />
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="bg_BG">Filmon ПВР клиент</summary>
     <summary lang="ca_ES">Client PVR Filmon</summary>
@@ -97,6 +93,6 @@
     <description lang="te_IN">Filmon ఫ్రంటెండ్. లైవ్ TV, రికార్డింగులు, EPG మద్దతు కలదు. Filmon చందా అవసరం.  ఎనేబుల్ ముందు: (ఎ) ఇష్టమైన ఛానెల్లను కోడి లో చూడటానికి  Filmon లో సెట్ చేసుకోండి (బి) ఈ యాడ్ఆన్ యొక్క సెట్టింగ్లలో మీ యూజర్ పేరు మరియు పాస్వర్డ్ను నమోదు చేయండి. గమనిక: టైమర్ పూర్తయిన తర్వాత రికార్డింగ్ కనిపించడానికి అనేక నిమిషాలు పట్టవచ్చు.</description>
     <description lang="tr_TR">Filmon ön ucu. Canlı TV'leri, kayıtları, EPG'leri destekler. Bir Filmon aboneliği gerektirir. Etkinleştirmeden önce: (a) Kodi içerisinde görmek için Filmon içerisinde kanalları favori olarak ayarlayın (b) bu eklentinin ayarlarında kullanıcı adı ve parolanızı girin. Not: Kayıtların görünmesi için zamanlayıcı tamamlandıktan sonra birkaç dakika gerekebilir.</description>
     <description lang="zh_CN">Filmon 前端。支持直播电视、录像、电子节目单。需要有 Filmon 订阅。激活前：(a) 在 Filmon 中设置喜爱的频道以便在 Kodi 中看到 (b) 在本插件的设置中输入你的用户名和密码。注意：录像要在完成后几分钟后才能看到。</description>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>

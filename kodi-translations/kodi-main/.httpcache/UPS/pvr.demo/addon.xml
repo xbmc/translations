@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.demo"
-  version="1.10.7"
+  version="1.11.6"
   name="PVR Demo Client"
   provider-name="Pulse-Eight Ltd.">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.9.6"/>
+    <import addon="xbmc.pvr" version="4.1.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="pvr.demo.so"
-    library_osx="pvr.demo.dylib"
-    library_freebsd="pvr.demo.so"
-    library_windx="pvr.demo.dll"
-    library_android="libpvr.demo.so" />
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="am_ET">የ PVR ደንበኛ ናሙና </summary>
     <summary lang="bg_BG">Демонстрация на ПВР клиента</summary>
@@ -185,6 +181,6 @@
     <disclaimer lang="vi_VN">Chỉ chứa phần tử sơ khai</disclaimer>
     <disclaimer lang="zh_CN">只包含存根</disclaimer>
     <disclaimer lang="zh_TW">只包含 Stubs</disclaimer>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>

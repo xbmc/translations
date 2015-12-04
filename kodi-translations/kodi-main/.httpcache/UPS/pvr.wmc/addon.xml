@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.wmc"
-  version="0.5.8"
+  version="0.6.9"
   name="PVR WMC Client"
   provider-name="KrustyReturns and scarecrow420">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="1.9.6"/>
+    <import addon="xbmc.pvr" version="4.1.0"/>
     <import addon="xbmc.gui" version="5.8.0"/>
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="pvr.wmc.so"
-    library_osx="pvr.wmc.dylib"
-    library_freebsd="pvr.wmc.so"
-    library_windx="pvr.wmc.dll"
-    library_android="libpvr.wmc.so"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="bg_BG">WMC ПВР клиент</summary>
     <summary lang="ca_ES">Client PVR WMC</summary>
@@ -136,6 +132,6 @@
     <disclaimer lang="uk_UA">Це експериментальне програмне забезпечення. Використовуйте на свій страх і ризик.</disclaimer>
     <disclaimer lang="zh_CN">试验性软件，使用风险自担。</disclaimer>
     <disclaimer lang="zh_TW">這是開發中的工作。使用上您須自行考慮到可能有的風險。</disclaimer>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>

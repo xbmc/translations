@@ -1,25 +1,57 @@
-2.1.19
+2.2.10
 - updated language files from Transifex
 
-2.1.18
-- added: include satpos in mux description
-- improved: Do not try to reconnect to tvh while suspending or not fully awake again.
+2.2.9
+- refactored the code by factoring out lots of things into separate files
+- refactored the Settings class into a singleton to avoid having to include client.h everywhere
+- added: support for specifying which streaming profile to use
+- added: support for enabling/disabling oneshot timers (HTSP v23 and above)
+- added: support for timer removal (HTSP v24 and above)
+
+2.2.8
+- Updated to PVR API v4.1.0
 - simplified recording playback handling, fixes random skipping to the beginning of recordings
 - fixed: recordings from channels that have been deleted since were not available in Kodi
+- added: setting for start time window calculation (autorec)
+- simplified addon settings
+- added: support for episode name (subtitle) for recordings
 
-2.1.17
-- fixed: provide a transitional package to fix upgrade path
+2.2.7
+- Updated to PVR API v4.0.0
 
-2.1.16
-- fixed: Debian packaging: fix library install path
-- fixed: Miscellaneous backend fixes
+2.2.6
+- Minimal support for PVR API v3.0.0 incl. Repeating EPG Timer AnyTime Bool Change
 
-2.1.15
-- fixed: recordings from older tvheadend versions weren't displayed
+2.2.5
+- dropped CStdString usage
+- added: Implementation of GetBufferTimeStart and GetBufferTimeEnd (timeshifting).
+- fixed: Coverity warnings introduced by predictive tuning feature.
+- fixed: Autorec: Start and stop time handling.
+- fixed: LocaltimeToUTC conversion (timer settings clock display incorrect).
+- fixed: Several issues with predictive tuning.
+- added: build: Automatically fill in platform and library name.
+- fixed: Use epg data only for creation of epg-based timers.
+- improved: Do not try to reconnect to tvh while suspending or not fully awake again.
 
-2.1.14
-- libplatform dependency update
-- Fix CMakeLists.txt language resource folder
+2.2.4
+- added: Predictive tuning (thanks @martinwilli)
+- added: Include satpos in mux description (thanks @Glenn-1990)
+- fixed: Crashes due to memory corruption (stack overflow)
+
+2.2.3
+- Updated to PVR API v2.1.0
+
+2.2.2
+- Debian packaging: fix library install path
+- Miscellaneous backend fixes
+
+2.2.1
+- updated to PVR API v2.0.0
+- fixed: a Coverity warning
+
+2.2.0
+- updated to PVR API v1.9.7
+- added: support for series recordings (autorec, timerec)
 
 2.1.13
 - updated language files from Transifex

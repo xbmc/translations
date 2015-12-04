@@ -1,9 +1,36 @@
-0.5.8
+v0.6.9
+- fix for manual timers created from EPG showing as guide based timers
+
+v0.6.8
+- Updated to PVR API v4.1.0
+- Populate IsSeries field on EPG Items
+- Flag Repeating Guide Based TimerType as requiring a Series EPG item
+
+v0.6.7
+- Updated to PVR API v4.0.0
+
+v0.6.6
+- Fix deletion of Series Timers
+
+v0.6.5
+- Implement first cut of Series Timer support for Kodi 16
+
+v0.6.4
+- Updated to PVR API v3.0.0
+
+v0.6.3
+- Updated to PVR API v2.1.0
+- Automatically fill in platform and library name
+
+v0.6.2
 - Debian packaging: fix library install path
 - Miscellaneous backend fixes
 
-0.5.7
-- libplatform dependency update
+v0.6.1
+- Updated to PVR API v2.0.0
+
+v0.6.0
+- Updated to PVR API v1.9.7
 
 0.5.6
 - Updated Language files from Transifex
@@ -101,7 +128,7 @@
 - better updating of ‘Recordings’ list for all client platforms
 - can receive gui update triggers from server when checking server status
 - AddTimer notifications are now info/warning rather than errors
-- Add workaround to get XBMC skip/seek to behave nicely for Active and Remuxed recordings 
+- Add workaround to get XBMC skip/seek to behave nicely for Active and Remuxed recordings
 
 0.2.93
 - Implements channel groups
@@ -112,11 +139,11 @@
 - Supports resume across multiple clients (gotham only)
 - Receives and parses server version
 - Signal status can be scanned (note requires enabling in pvr.wmc addon configuration – gotham clients only
- 
+
 0.2.91
 - Changed some message strings, added message for instant record
 - Gotham only: updated pvr interface to xbmc 1.9.0, to work with newest gotham builds
- 
+
 0.2.9
 - Fixed skin folder name so xml files no longer need to be placed in xbmc install folder (confluence only)
 - Gotham only: fixed custom dialogs
@@ -127,13 +154,13 @@
 - Client now posts stream open errors to server
 - Increase wait interval for streamfile size check
 - Credential password hidden from log
- 
-0.1.8 
+
+0.1.8
 - Fixed bug that could make client give up on live streams intermittently
 - Stopped freezing/crashing when live-tv tuner is stolen for a recording
 - Now knows whether a stream is actively growing
 - Build number reported to server app
- 
+
 0.1.7
  - made StreamSize server queries happen less often
  - fixed ‘vector’ class connection crashes when socket is not available
