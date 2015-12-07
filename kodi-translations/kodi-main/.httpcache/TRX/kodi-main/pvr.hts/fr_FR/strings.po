@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-11-06 09:07+0000\n"
+"PO-Revision-Date: 2015-12-04 21:03+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgctxt "Addon Description"
 msgid ""
 "Tvheadend frontend; supporting streaming of Live TV & Recordings, EPG, "
 "Timers"
-msgstr "Interface logicielle pour Tvheadend gérant la lecture en continu du direct télévision et des enregistrements, le guide de programme, les programmations."
+msgstr "Interface logicielle pour Tvheadend gérant la lecture en continu du direct télévision et des enregistrements, le guide électronique des programmes TV et les programmations."
 
 msgctxt "Addon Disclaimer"
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 msgstr "Logiciel en cours d'élaboration ! Les auteurs ne sont en aucun cas responsables de l'échec des enregistrements, programmations défectueuses, temps perdu ou autres effets indésirables."
 
 msgctxt "#30000"
-msgid "Connection Settings"
+msgid "Connection settings"
 msgstr "Paramètres de connexion"
 
 msgctxt "#30001"
@@ -61,15 +61,39 @@ msgid "Password"
 msgstr "Mot de passe"
 
 msgctxt "#30006"
-msgid "Connection timeout in seconds"
-msgstr "Temporisation de connexion en secondes"
+msgid "Connection timeout (seconds)"
+msgstr "Temporisation de connexion (secondes)"
 
 msgctxt "#30007"
-msgid "Response timeout in seconds"
-msgstr "Temporisation de réponse en secondes"
+msgid "Response timeout (seconds)"
+msgstr "Temporisation de réponse (sec.)"
+
+msgctxt "#30008"
+msgid "Advanced settings"
+msgstr "Paramètres avancés"
+
+msgctxt "#30050"
+msgid "Auto recordings"
+msgstr "Enregistrements auto."
+
+msgctxt "#30051"
+msgid "Start time window calculation"
+msgstr "Calcul de la fenêtre du temps de début"
+
+msgctxt "#30052"
+msgid "Strict (start time + end time)"
+msgstr "Stricte (temps de début + temps de fin)"
+
+msgctxt "#30053"
+msgid "Relaxed (start time +/- margin)"
+msgstr "Approximative (temps de début +/- marge)"
+
+msgctxt "#30054"
+msgid "Maximum start time margin (minutes)"
+msgstr "Marge max. de temps de début (min.)"
 
 msgctxt "#30100"
-msgid "Data Transfer"
+msgid "Data transfer"
 msgstr "Transfert de données"
 
 msgctxt "#30101"
@@ -89,3 +113,133 @@ msgid ""
 "HTSP version mismatch (supported: v%d, required: v%d). Please update "
 "tvheadend."
 msgstr "Version HTSP différente (reconnue : v%d, requise : v%d). Merci de mettre à jour tvheadend."
+
+#. Timer type representation
+#: src/Tvheadend.cpp
+msgctxt "#30350"
+msgid "One Time (Scheduled by repeating timer)"
+msgstr "Unique (prévue par programmation répétée)"
+
+#. Recording priority representation
+#: src/Tvheadend.cpp
+msgctxt "#30351"
+msgid "Important (Highest)"
+msgstr "Important (le plus élevé)"
+
+#. Recording priority representation
+#: src/Tvheadend.cpp
+msgctxt "#30352"
+msgid "High"
+msgstr "Haute"
+
+#. Recording priority representation
+#: src/Tvheadend.cpp
+msgctxt "#30353"
+msgid "Normal"
+msgstr "Normal"
+
+#. Recording priority representation
+#: src/Tvheadend.cpp
+msgctxt "#30354"
+msgid "Low"
+msgstr "Basse"
+
+#. Recording priority representation
+#: src/Tvheadend.cpp
+msgctxt "#30355"
+msgid "Unimportant (Lowest)"
+msgstr "Important (le moins élevé)"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30356"
+msgid "Record all episodes"
+msgstr "Enregistrer tous les épisodes"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30357"
+msgid "Record if episode number differs"
+msgstr "Enregistrer si le nombre d'épisodes est différent"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30358"
+msgid "Record if episode name differs"
+msgstr "Enregistrer si le nom de l'épisode est différent"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30359"
+msgid "Record if description differs"
+msgstr "Enregistrer si la description est différente"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30360"
+msgid "Record max once per week"
+msgstr "Enregistrer max. une fois pas semaine"
+
+#. Prevent duplicate episodes representation
+#: src/Tvheadend.cpp
+msgctxt "#30361"
+msgid "Record max once per day"
+msgstr "Enregistrer max. une fois pas jour"
+
+msgctxt "#30400"
+msgid "Predictive tuning"
+msgstr "Syntonisation prédictive"
+
+msgctxt "#30401"
+msgid "Number of subscriptions to use"
+msgstr "Nombre de souscriptions à utiliser"
+
+msgctxt "#30402"
+msgid "Unused subscription close delay (seconds)"
+msgstr "Délai avant péremption de la souscription inutilisée (sec.)"
+
+msgctxt "#30403"
+msgid "Use predictive tuning to speedup channel switches"
+msgstr "Utiliser la syntonisation prédictive pour accélérer les changements de chaînes"
+
+msgctxt "#30450"
+msgid "No free adapter available"
+msgstr "Aucun adaptateur libre"
+
+msgctxt "#30451"
+msgid "Scrambled channel"
+msgstr "Chaîne cryptée"
+
+msgctxt "#30452"
+msgid "No signal"
+msgstr "Aucun signal"
+
+msgctxt "#30453"
+msgid "Tuning failed"
+msgstr "Échec de la syntonisation"
+
+msgctxt "#30454"
+msgid "User limit reached"
+msgstr "Limite utilisateur atteinte"
+
+msgctxt "#30455"
+msgid "No access"
+msgstr "Aucun accès"
+
+msgctxt "#30456"
+msgid "Subscription error"
+msgstr "Erreur à la souscription"
+
+msgctxt "#30500"
+msgid "Streaming"
+msgstr "Diffusion par flux"
+
+msgctxt "#30501"
+msgid "Streaming profile to use"
+msgstr "Profil de diffusion par flux"
+
+#. Check streaming profile validity during startup
+#: src/client.cpp
+msgctxt "#30502"
+msgid "Streaming profile %s is not available"
+msgstr "Le profil %s de diffusion par flux n'est pas disponible."
