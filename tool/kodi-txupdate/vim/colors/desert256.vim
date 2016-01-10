@@ -1,18 +1,13 @@
 " Vim color file
-" Original Author: Henry So, Jr. <henryso@panix.com>
-" Maintainer: Rainux Luo <rainux@gmail.com>
-" URL: https://github.com/rainux/vim-desert-warm-256
+" Maintainer: Henry So, Jr. <henryso@panix.com>
 
-" It's a color scheme for Vim, based on the "desert" color scheme by Hans
-" Fugal with a few small tweaks. The tweaks are try to make it looks a bit
-" warm and be more friendly for my eyes. Using the code from "desert256" to
-" make the gui highlight definitions also work with 88 and 256-color xterms.
+" These are the colors of the "desert" theme by Hans Fugal with a few small
+" modifications (namely that I lowered the intensity of the normal white and
+" made the normal and nontext backgrounds black), modified to work with 88-
+" and 256-color xterms.
 "
 " The original "desert" theme is available as part of the vim distribution or
 " at http://hans.fugal.net/vim/colors/.
-"
-" The "desert256" theme is available at
-" http://www.vim.org/scripts/script.php?script_id=1243.
 "
 " The real feature of this color scheme, with a wink to the "inkpot" theme, is
 " the programmatic approximation of the gui colors to the palettes of 88- and
@@ -20,28 +15,22 @@
 " readability) are calibrated to the colors used for Thomas E. Dickey's xterm
 " (version 200), which is available at http://dickey.his.com/xterm/xterm.html.
 "
-" Support rgb color names from rgb.txt file. Use a Ruby script to pre-parse
-" rgb.txt then convert color names mapping to a Vim dictionary, store it in
-" colors/rgb_colors file.
-"
-" Consider use this color scheme as infrastructure to create new color
-" schemes. The benefit is your color schemes will looks nearly the same both
-" in gVim and Vim running in 256- color xterms, without any additional effort.
+" I struggled with trying to parse the rgb.txt file to avoid the necessity of
+" converting color names to #rrggbb form, but decided it was just not worth
+" the effort.  Maybe someone seeing this may decide otherwise...
 
 set background=dark
 if version > 580
     " no guarantees for version 5.8 and below, but this makes it stop
     " complaining
     hi clear
-    if exists('syntax_on')
+    if exists("syntax_on")
         syntax reset
     endif
 endif
-let g:colors_name='desert-warm-256'
+let g:colors_name="desert256"
 
-exec 'source ' . expand('<sfile>:p:h') . '/rgb_colors'
-
-if has('gui_running') || &t_Co == 88 || &t_Co == 256
+if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " functions {{{
     " returns an approximate grey index for the given grey level
     fun <SID>grey_number(x)
@@ -230,37 +219,31 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
     " returns the palette index to approximate the 'rrggbb' hex string
     fun <SID>rgb(rgb)
-        let l:r = ('0x' . strpart(a:rgb, 0, 2)) + 0
-        let l:g = ('0x' . strpart(a:rgb, 2, 2)) + 0
-        let l:b = ('0x' . strpart(a:rgb, 4, 2)) + 0
+        let l:r = ("0x" . strpart(a:rgb, 0, 2)) + 0
+        let l:g = ("0x" . strpart(a:rgb, 2, 2)) + 0
+        let l:b = ("0x" . strpart(a:rgb, 4, 2)) + 0
 
         return <SID>color(l:r, l:g, l:b)
     endfun
 
     " sets the highlighting for the given group
-    " call <SID>X(group, fg, bg, attr), bg and attr are optional
-    fun <SID>X(group, fg, ...)
-        if a:fg != ''
-            let fg = tolower(a:fg)
-            let fg_hex = has_key(g:rgb_colors, fg) ? g:rgb_colors[fg] : a:fg
-            exec 'hi ' . a:group . ' guifg=#' . fg_hex . ' ctermfg=' . <SID>rgb(fg_hex)
+    fun <SID>X(group, fg, bg, attr)
+        if a:fg != ""
+            exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
         endif
-        if a:0 > 0 && a:1 != ''
-            let bg = tolower(a:1)
-            let bg_hex = has_key(g:rgb_colors, bg) ? g:rgb_colors[bg] : bg
-            exec 'hi ' . a:group . ' guibg=#' . bg_hex . ' ctermbg=' . <SID>rgb(bg_hex)
+        if a:bg != ""
+            exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
         endif
-        if a:0 > 1 && a:2 != ''
-            let attr = a:2
-            exec 'hi ' . a:group . ' gui=' . attr . ' cterm=' . attr
+        if a:attr != ""
+            exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
         endif
     endfun
     " }}}
 
-    call <SID>X('Normal', 'white', 'grey20')
+    call <SID>X("Normal", "cccccc", "000000", "")
 
     " highlight groups
-    call <SID>X('Cursor', 'khaki', 'indianred')
+    call <SID>X("Cursor", "708090", "f0e68c", "")
     "CursorIM
     "Directory
     "DiffAdd
@@ -268,44 +251,40 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     "DiffDelete
     "DiffText
     "ErrorMsg
-    call <SID>X('VertSplit', 'grey50', 'c2bfa5', 'none')
-    call <SID>X('Folded', 'orange', 'grey30')
-    call <SID>X('FoldColumn', 'tan', 'grey14')
-    call <SID>X('IncSearch', 'slategrey', 'khaki')
-    call <SID>X('LineNr', 'grey70', 'grey17')
-    call <SID>X('ModeMsg', 'goldenrod')
-    call <SID>X('MoreMsg', 'seagreen')
-    call <SID>X('NonText', 'lightblue', 'grey14', 'bold')
-    call <SID>X('Question', 'springgreen')
-    call <SID>X('Search', 'dfffdf', 'grey30')
-    call <SID>X('SpecialKey', 'yellowgreen')
-    call <SID>X('StatusLine', 'grey90', 'grey17', 'none')
-    call <SID>X('StatusLineNC', 'grey40', 'grey17', 'none')
-    call <SID>X('Title', 'indianred')
-    call <SID>X('Visual', 'khaki', 'olivedrab', 'none')
+    call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
+    call <SID>X("Folded", "ffd700", "4d4d4d", "")
+    call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
+    call <SID>X("IncSearch", "708090", "f0e68c", "")
+    "LineNr
+    call <SID>X("ModeMsg", "daa520", "", "")
+    call <SID>X("MoreMsg", "2e8b57", "", "")
+    call <SID>X("NonText", "addbe7", "000000", "bold")
+    call <SID>X("Question", "00ff7f", "", "")
+    call <SID>X("Search", "f5deb3", "cd853f", "")
+    call <SID>X("SpecialKey", "9acd32", "", "")
+    call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
+    call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
+    call <SID>X("Title", "cd5c5c", "", "")
+    call <SID>X("Visual", "6b8e23", "f0e68c", "reverse")
     "VisualNOS
-    call <SID>X('WarningMsg', 'salmon', '', '')
+    call <SID>X("WarningMsg", "fa8072", "", "")
     "WildMenu
     "Menu
-    call <SID>X('Pmenu', 'grey80', 'grey10')
-    call <SID>X('PmenuSel', 'grey80', 'grey25')
     "Scrollbar
     "Tooltip
-    call <SID>X('MatchParen', 'dfffdf', 'grey30')
 
     " syntax highlighting groups
-    call <SID>X('Comment', 'skyblue')
-    call <SID>X('Constant', 'ffa0a0')
-    call <SID>X('String', 'e0a5da')
-    call <SID>X('Identifier', 'palegreen', '', 'none')
-    call <SID>X('Statement', 'ffd797', '', 'bold')
-    call <SID>X('PreProc', 'indianred')
-    call <SID>X('Type', 'e9b96e', '', 'bold')
-    call <SID>X('Special', 'navajowhite')
+    call <SID>X("Comment", "87ceeb", "", "")
+    call <SID>X("Constant", "ffa0a0", "", "")
+    call <SID>X("Identifier", "98fb98", "", "none")
+    call <SID>X("Statement", "f0e68c", "", "bold")
+    call <SID>X("PreProc", "cd5c5c", "", "")
+    call <SID>X("Type", "bdb76b", "", "bold")
+    call <SID>X("Special", "ffdead", "", "")
     "Underlined
-    call <SID>X('Ignore', 'grey40')
+    call <SID>X("Ignore", "666666", "", "")
     "Error
-    call <SID>X('Todo', 'orangered', 'yellow2')
+    call <SID>X("Todo", "ff4500", "eeee00", "")
 
     " delete functions {{{
     delf <SID>X
@@ -356,4 +335,4 @@ else
     hi Error         cterm=bold ctermfg=7 ctermbg=1
 endif
 
-" vim: set fdl=0 fdm=marker sts=4 sw=4:
+" vim: set fdl=0 fdm=marker:

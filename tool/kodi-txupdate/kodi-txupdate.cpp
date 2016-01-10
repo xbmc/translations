@@ -158,6 +158,25 @@ int main(int argc, char* argv[])
       g_File.SytemCommand(sCommand);
     }
 
+    //check if all vim related files are in place. If not create them
+    if (!g_File.FileExist(sHomePath + "/.vimrc"))
+      g_File.CopyFile(sDefaultDir + "translations/tool/kodi-txupdate/vim/vimrc", sHomePath + "/.vimrc");
+    if (!g_File.FileExist(sHomePath + "/.vim/colors/desert256.vim"))
+    {
+      g_File.MakeDir(sHomePath + "/.vim/colors");
+      g_File.CopyFile(sDefaultDir + "translations/tool/kodi-txupdate/vim/colors/desert256.vim", sHomePath + "/.vim/colors/desert256.vim");
+    }
+    if (!g_File.FileExist(sHomePath + "/.vim/syntax/ktx.vim"))
+    {
+      g_File.MakeDir(sHomePath + "/.vim/syntax");
+      g_File.CopyFile(sDefaultDir + "translations/tool/kodi-txupdate/vim/syntax/ktx.vim", sHomePath + "/.vim/syntax/ktx.vim");
+    }
+    if (!g_File.FileExist(sHomePath + "/.vim/ftdetect/ktx.vim"))
+    {
+      g_File.MakeDir(sHomePath + "/.vim/ftdetect");
+      g_File.CopyFile(sDefaultDir + "translations/tool/kodi-txupdate/vim/ftdetect/ktx.vim", sHomePath + "/.vim/ftdetect/ktx.vim");
+    }
+
     CLog::Log(logPRINT, "\n%sPlease choose project:%s\n", KMAG, RESET);
     std::map<int, std::string> listOfDirs;
     g_File.ReadDirStructure(sDefaultDir + "translations/kodi-translations/", listOfDirs);
