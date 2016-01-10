@@ -1,0 +1,22 @@
+set t_Co=256
+filetype on
+syntax on
+set nowrap
+set enc=utf8
+noremap <F11> :set list!<CR>
+colorscheme desert256
+highlight DiffAdd term=reverse cterm=bold ctermbg=22 ctermfg=254       
+highlight DiffChange term=reverse cterm=bold ctermbg=17 ctermfg=black
+highlight DiffText term=reverse cterm=bold ctermbg=24 ctermfg=254
+highlight DiffDelete term=reverse cterm=bold ctermbg=52 ctermfg=black
+
+highlight Identifier ctermfg=71
+
+set laststatus=2
+if has("statusline")
+ set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
+
+:set hlsearch
+
+
