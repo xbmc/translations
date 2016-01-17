@@ -250,7 +250,7 @@ std::map<std::string, CLangcodes> CLCodeHandler::ParseTransifexLanguageDatabase(
 
   const Json::Value JRoot = root;
   const Json::Value JLangs =  JRoot["fixtures"];
-  
+
   for (Json::ValueIterator itrlangs = JLangs.begin() ; itrlangs !=JLangs.end() ; itrlangs++)
   {
     Json::Value JValu = *itrlangs;

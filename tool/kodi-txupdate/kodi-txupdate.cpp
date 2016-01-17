@@ -177,6 +177,22 @@ int main(int argc, char* argv[])
       g_File.CopyFile(sDefaultDir + "translations/tool/kodi-txupdate/vim/ftdetect/ktx.vim", sHomePath + "/.vim/ftdetect/ktx.vim");
     }
 
+    CLog::Log(logPRINT, "\n");
+
+    if (g_File.FileExist(sHomePath + "/.config/kodi-txupdate/passwords.xml"))
+      CLog::Log(logPRINT, "~/.config/kodi-txupdate/passwords.xml file found: %ssuccess%s.\n", KGRN, RESET);
+    if (g_File.FileExist(sHomePath + "/.config/kodi-txupdate/default-dir.conf"))
+      CLog::Log(logPRINT, "~/.config/kodi-txupdate/default-dir.conf file found: %ssuccess%s. Default dir specified: %s\n", KGRN, RESET, sDefaultDir.c_str());
+    if (g_File.FileExist(sHomePath + "/.vimrc"))
+      CLog::Log(logPRINT, "~/.vimrc file found: %ssuccess%s.\n", KGRN, RESET);
+    if (g_File.FileExist(sHomePath + "/.vim/colors/desert256.vim"))
+      CLog::Log(logPRINT, "~/.vim/colors/desert256.vim file found: %ssuccess%s.\n", KGRN, RESET);
+    if (g_File.FileExist(sHomePath + "/.vim/syntax/ktx.vim"))
+      CLog::Log(logPRINT, "~/.vim/syntax/ktx.vim file found: %ssuccess%s.\n", KGRN, RESET);
+    if (g_File.FileExist(sHomePath + "/.vim/ftdetect/ktx.vim"))
+      CLog::Log(logPRINT, "~/.vim/ftdetect/ktx.vim file found: %ssuccess%s.\n", KGRN, RESET);
+
+
     CLog::Log(logPRINT, "\n%sPlease choose project:%s\n", KMAG, RESET);
     std::map<int, std::string> listOfDirs;
     g_File.ReadDirStructure(sDefaultDir + "translations/kodi-translations/", listOfDirs);
@@ -206,6 +222,9 @@ int main(int argc, char* argv[])
       WorkingDir.append(&DirSepChar);
 
     CLog::Log(logDEBUG, "Root Directory: %s", WorkingDir.c_str());
+    CLog::Log(logPRINT, "\nChoosen config file to use: %skodi-txupdate.conf\n", WorkingDir.c_str());
+    CLog::Log(logPRINT, "Cache files for this project: %s.httpcache/\n", WorkingDir.c_str());
+
 
     CProjectHandler TXProject;
     TXProject.SetProjectDir(WorkingDir);

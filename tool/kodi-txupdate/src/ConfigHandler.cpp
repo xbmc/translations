@@ -250,8 +250,6 @@ void CConfigHandler::SetInternalVariable(const std::string& sVar, const std::str
 
   else if (sVar == "LOCSRCLPath")           ResData.LOCSRC.LPath = sVal;
   else if (sVar == "LOCSRCAXMLPath")        ResData.LOCSRC.AXMLPath = sVal;
-  else if (sVar == "LOCSRCLFormInAXML")     ResData.LOCSRC.LFormInAXML = sVal;
-  else if (sVar == "LOCSRCChLogPath")       ResData.LOCSRC.ChLogPath = sVal;
 
   else if (sVar == "TRXProjectName")        ResData.TRX.ProjectName = sVal;
   else if (sVar == "TRXLongProjectName")    ResData.TRX.LongProjectName = sVal;

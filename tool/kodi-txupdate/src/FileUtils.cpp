@@ -447,6 +447,7 @@ void CFile::ReadDirStructure(string baseDir, std::map<int, std::string>& listOfD
     CLog::Log(logERROR, "Could not read directory: %s", baseDir.c_str());
 
   int iCounter = 1;
+  std::set<std::string> setProjectNames;
   while ((dirp = readdir(dp)) != NULL)
   {
     if (dirp->d_name != string(".") && dirp->d_name != string(".."))
@@ -454,13 +455,18 @@ void CFile::ReadDirStructure(string baseDir, std::map<int, std::string>& listOfD
       if (isDir(baseDir + dirp->d_name) == true)
       {
         std::string sDir = baseDir + dirp->d_name + "/";
-        listOfDirs[iCounter] = sDir;
-        iCounter++;
+        setProjectNames.insert(sDir);
       }
     }
   }
 
     closedir(dp);
+
+  for (std::set<std::string>::iterator it = setProjectNames.begin(); it != setProjectNames.end(); it++)
+  {
+    listOfDirs[iCounter] = *it;
+    iCounter++;
+  }
 }
 
 void CFile::CleanGitRepoDir(string baseDir, bool recursive, const std::set<std::string>& listValidGitRepoPaths)
