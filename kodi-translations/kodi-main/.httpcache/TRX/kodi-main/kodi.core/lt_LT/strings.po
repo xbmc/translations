@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-05-26 10:45+0000\n"
+"PO-Revision-Date: 2016-05-29 08:17+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -7467,6 +7467,7 @@ msgid "Add"
 msgstr "Pridėti"
 
 #: addons/skin.estuary/1080i/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/1080i/Custom_1105_MusicOSDSettings.xml
 msgctxt "#15020"
 msgid "Audio DSP manager"
 msgstr "Audio DSP tvarkyklė"
@@ -7577,6 +7578,7 @@ msgstr "Turinys:"
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 #: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: addons/skin.estuary/1080i/Custom_1105_MusicOSDSettings.xml
 msgctxt "#15047"
 msgid "Audio DSP settings"
 msgstr "Audio DSP nustatymai"
@@ -7643,6 +7645,12 @@ msgstr "Aprašymo nėra"
 msgctxt "#15064"
 msgid "Apply changes directly"
 msgstr "Taikyti pakeitimus tiesiogiai"
+
+#. Warning if no dsp modes are present
+#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
+msgctxt "#15065"
+msgid "No audio DSP modes available"
+msgstr "Nėra galimų audio DSP režimų"
 
 #. Button to disable all enabled modes on current selected type
 msgctxt "#15066"
@@ -11161,7 +11169,7 @@ msgid ""
 " will override anything you have set in your song tags, such as genres, "
 "year, song artists etc. Useful if you have MusicBrainz identifiers in your "
 "song tags."
-msgstr "Kai įjungta, bet kokia atsisiųsta atlikėjų ir albumų informacija perrašys tai, ką patys nustatėte dainų žymose, pvz.: žanrus, metus, dainos atlikėjus ir t.t. Naudinga, jei turite MusicBrainz identifikatorius dainų žymose."
+msgstr "Kai įjungta, bet kokia atsisiųsta atlikėjų ir albumų informacija perrašys tai, ką patys nustatėte dainų žymose, pvz.: žanrus, metus, dainos atlikėjus ir t.t. Pravers, jei turite MusicBrainz identifikatorius dainų žymose."
 
 #: system/settings/settings.xml
 msgctxt "#20222"
@@ -12059,7 +12067,7 @@ msgstr "Niekada"
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21338"
 msgid "Select version"
-msgstr "Pasirinkti versiją"
+msgstr "Pasirinkite versiją"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21339"
@@ -16622,7 +16630,7 @@ msgctxt "#36230"
 msgid ""
 "Time to wait for a channel to be received after a channel change. Useful for"
 " over-the-air channels that occasionally lose signal strength."
-msgstr "Signalo gavimo laukimo laikas po kanalo perjungimo. Naudinga oru transliuojamiems kanalams, kurie retkarčiais praranda signalo stiprumą."
+msgstr "Laukimo laikas signalo gavimui po kanalo perjungimo. Pravers žiūrint oru transliuojamus kanalus, kurie retkarčiais praranda signalo stiprumą."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -17663,7 +17671,7 @@ msgctxt "#36388"
 msgid ""
 "Turn off display when idle. Useful for TVs that turn off when there is no "
 "display signal detected."
-msgstr "Išjungti ekraną, kai nenaudojamas. Naudinga televizoriams, kurie išsijungia, jei neaptinka vaizdo signalo."
+msgstr "Išjungti ekraną, kai nenaudojamas. Pravers su televizoriais, kurie išsijungia, jei neaptinka vaizdo signalo."
 
 #. Description of setting with label #357 "Shutdown function timer"
 #: system/settings/settings.xml
@@ -17690,7 +17698,7 @@ msgstr "Šioje kategorijoje yra įvykių ir derinimo žurnalų rašymo funkcijos
 #: system/settings/settings.xml
 msgctxt "#36392"
 msgid "Turn debug logging on or off. Useful for troubleshooting."
-msgstr "Įjunkite arba išjunkite derinimo žurnalą. Naudinga trikčių šalinimui."
+msgstr "Įjunkite arba išjunkite derinimo žurnalą. Pravers trikčių šalinimui."
 
 #. Description of setting with label #20004 "Screenshot folder"
 #: system/settings/settings.xml
@@ -19089,3 +19097,23 @@ msgstr "Šioje kategorijoje yra bibliotekos duomenų bazių nustatymai"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Šioje kategorijoje yra kiti vartotojo sąsajos nustatymai"
+
+#: system/settings/settings.xml
+msgctxt "#39000"
+msgid "HD and up"
+msgstr "HD ir aukščiau"
+
+#: system/settings/settings.xml
+msgctxt "#39001"
+msgid "Accelerate MPEG2"
+msgstr "Spartinti MPEG2"
+
+#: system/settings/settings.xml
+msgctxt "#39002"
+msgid "Accelerate MPEG4"
+msgstr "Spartinti MPEG4"
+
+#: system/settings/settings.xml
+msgctxt "#39003"
+msgid "Accelerate h264"
+msgstr "Spartinti h264"
