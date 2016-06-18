@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-14 09:39+0000\n"
-"Last-Translator: Vladimír Záhradník <vladimir.zahradnik@gmail.com>\n"
+"PO-Revision-Date: 2016-06-15 21:22+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/teamxbmc/kodi-main/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2922,11 +2922,6 @@ msgstr "Podrobné záznamy pre knižnicu [B]libcURL[/B] (HTTP(S), DAV)"
 msgctxt "#672"
 msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
 msgstr "Podrobné záznamy pre knižnice [B]FFmpeg[/B]"
-
-#: xbmc/settings/AdvancedSettings.cpp
-msgctxt "#673"
-msgid "Verbose logging for the [B]RTMP[/B] library"
-msgstr "Podrobné záznamy pre knižnicu [B]RTMP[/B]"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#674"
@@ -8862,6 +8857,56 @@ msgctxt "#19085"
 msgid "Unknown channel %u"
 msgstr "Neznámy kanál: %u"
 
+#. Label for "Instant recording action" setting
+#: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
+msgctxt "#19086"
+msgid "Instant recording action"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19087"
+msgid "Record current show (if guide data available)"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19088"
+msgid "Record for a fixed period of time (Instant recording duration)"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19089"
+msgid "Ask what to do"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19090"
+msgid "Record the next %d minutes"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19091"
+msgid "Record current show (%s)"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19092"
+msgid "Record next show (%s)"
+msgstr ""
+
+#. Instant recording summary. Expands to "Instant recording: <recording start
+#. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
+#. 11:00"
+#: xbmc/pvr/PVRTimerInfoTag.cpp
+msgctxt "#19093"
+msgid "Instant recording: %s"
+msgstr ""
+
 msgctxt "#19097"
 msgid "Enter the name for the recording"
 msgstr "Zadajte názov nahrávky"
@@ -13503,10 +13548,10 @@ msgctxt "#24053"
 msgid "License:"
 msgstr "Licencia:"
 
-#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
-msgid "Changelog"
-msgstr "Zmeny"
+msgid "What's new"
+msgstr ""
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15341,11 +15386,10 @@ msgstr "Profily ovládačov"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
 msgid ""
-"Use the keyboard or remote to select a controller profile. Move to the "
-"buttons and select the first one. When prompted, press the button on your "
-"game controller that best matches what you see on the screen. If you make a "
-"mistake you can repeat the process."
-msgstr "Na vybratie profilu ovládača použite klávesnicu alebo diaľkový ovládač. Presuňte sa k tlačidlám a vyberte prvé. Keď budete vyzvaní, stlačte tlačidlo na vašom hernom ovládači, ktoré najlepšie zodpovedá tomu, čo vidíte na obrazovke. Pokiaľ sa pomýlite, tento proces môžete zopakovať."
+"Use the keyboard or remote to select a controller profile. When prompted, "
+"press the button on your game controller that best matches what you see on "
+"the screen. If you make a mistake you can repeat the process."
+msgstr ""
 
 #. Title of error dialog shown when no joystick add-ons provide button mapping
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16129,7 +16173,9 @@ msgstr "Upraviť metódu používanú na spracovanie a zobrazenie videa."
 msgctxt "#36154"
 msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
-msgstr "Použivať vysoko kvalitné scalers pri upscalingu videa minimálne o túto hodnotu percent"
+" A value below 5% makes little sense as video is processed with high GPU "
+"load without any visible picture quality improvements."
+msgstr ""
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16658,8 +16704,11 @@ msgstr "Táto kategória obsahuje nastavenia predvolenej doby nahrávania."
 
 #: system/settings/settings.xml
 msgctxt "#36234"
-msgid "Duration of instant recordings when pressing the record button."
-msgstr "Doba trvania okamžitého nahrávania po stlačení tlačidla Nahrávať."
+msgid ""
+"Duration of instant recordings when pressing the record button. This value "
+"will be taken into account if \"Instant recording action\" is set to "
+"\"Record for a fixed period of time\""
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16786,6 +16835,20 @@ msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
 msgstr "Sekcia, ktorá obsahuje nastavenia týkajúce sa hudby a toho, ako sa s nimi má zaobchádzať."
+
+#: system/settings/settings.xml
+msgctxt "#36254"
+msgid ""
+"Action to perform when pressing the record button. [Record current show] "
+"will record the current show from \"now\" to the end of the show. If no TV "
+"guide data is currently available a fixed length recording starting \"now\","
+" with the value set for \"Instant recording duration\" will be scheduled. "
+"[Record for a fixed period of time] will schedule a fixed length recording "
+"starting \"now\", with the value set for \"Instant recording duration\". "
+"[Ask what to do] will open a dialogue containing different recording actions"
+" to choose from, like \"Record current show\", \"Record next show\" and some"
+" fixed duration recordings."
+msgstr ""
 
 #. Description of setting with label #13414 "Include artists who appear only
 #. on compilations"

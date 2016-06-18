@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-06 07:52+0000\n"
-"Last-Translator: Kiril <neohidra@gmail.com>\n"
+"PO-Revision-Date: 2016-06-15 21:22+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2920,11 +2920,6 @@ msgstr "[B]libcURL[/B] библиотеката (HTTP(S), DAV)"
 msgctxt "#672"
 msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
 msgstr "[B]FFMPEG[/B] библиотеките"
-
-#: xbmc/settings/AdvancedSettings.cpp
-msgctxt "#673"
-msgid "Verbose logging for the [B]RTMP[/B] library"
-msgstr "[B]RTMP[/B] библиотеката"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#674"
@@ -8860,6 +8855,56 @@ msgctxt "#19085"
 msgid "Unknown channel %u"
 msgstr "Неизвестен канал %u"
 
+#. Label for "Instant recording action" setting
+#: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
+msgctxt "#19086"
+msgid "Instant recording action"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19087"
+msgid "Record current show (if guide data available)"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19088"
+msgid "Record for a fixed period of time (Instant recording duration)"
+msgstr ""
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19089"
+msgid "Ask what to do"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19090"
+msgid "Record the next %d minutes"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19091"
+msgid "Record current show (%s)"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19092"
+msgid "Record next show (%s)"
+msgstr ""
+
+#. Instant recording summary. Expands to "Instant recording: <recording start
+#. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
+#. 11:00"
+#: xbmc/pvr/PVRTimerInfoTag.cpp
+msgctxt "#19093"
+msgid "Instant recording: %s"
+msgstr ""
+
 msgctxt "#19097"
 msgid "Enter the name for the recording"
 msgstr "Въведете име за записа"
@@ -13501,10 +13546,10 @@ msgctxt "#24053"
 msgid "License:"
 msgstr "Лиценз:"
 
-#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
-msgid "Changelog"
-msgstr "Списък с промени"
+msgid "What's new"
+msgstr ""
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15339,10 +15384,9 @@ msgstr "Профили за контролери"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
 msgid ""
-"Use the keyboard or remote to select a controller profile. Move to the "
-"buttons and select the first one. When prompted, press the button on your "
-"game controller that best matches what you see on the screen. If you make a "
-"mistake you can repeat the process."
+"Use the keyboard or remote to select a controller profile. When prompted, "
+"press the button on your game controller that best matches what you see on "
+"the screen. If you make a mistake you can repeat the process."
 msgstr ""
 
 #. Title of error dialog shown when no joystick add-ons provide button mapping
@@ -16127,7 +16171,9 @@ msgstr "Изберете метода за обработка и изобраз�
 msgctxt "#36154"
 msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
-msgstr "Включва висококачествени скалери при повишаване разделителната способност, най-малко с този процент, на видеото."
+" A value below 5% makes little sense as video is processed with high GPU "
+"load without any visible picture quality improvements."
+msgstr ""
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16656,8 +16702,11 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36234"
-msgid "Duration of instant recordings when pressing the record button."
-msgstr "Времетраене на моменталните записи при натискане на бутона за запис."
+msgid ""
+"Duration of instant recordings when pressing the record button. This value "
+"will be taken into account if \"Instant recording action\" is set to "
+"\"Record for a fixed period of time\""
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16784,6 +16833,20 @@ msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
 msgstr "Раздел съдържащ настройки за музикалните файлове и тяхното обработване."
+
+#: system/settings/settings.xml
+msgctxt "#36254"
+msgid ""
+"Action to perform when pressing the record button. [Record current show] "
+"will record the current show from \"now\" to the end of the show. If no TV "
+"guide data is currently available a fixed length recording starting \"now\","
+" with the value set for \"Instant recording duration\" will be scheduled. "
+"[Record for a fixed period of time] will schedule a fixed length recording "
+"starting \"now\", with the value set for \"Instant recording duration\". "
+"[Ask what to do] will open a dialogue containing different recording actions"
+" to choose from, like \"Record current show\", \"Record next show\" and some"
+" fixed duration recordings."
+msgstr ""
 
 #. Description of setting with label #13414 "Include artists who appear only
 #. on compilations"

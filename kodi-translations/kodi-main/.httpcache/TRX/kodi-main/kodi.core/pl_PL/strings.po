@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-06 09:50+0000\n"
+"PO-Revision-Date: 2016-06-17 11:11+0000\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -2919,11 +2919,6 @@ msgstr "Rejestruj zdarzenia biblioteki [B]libcURL[/B] (HTTP(S), DAV)"
 msgctxt "#672"
 msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
 msgstr "Rejestruj zdarzenia bibliotek [B]FFmpeg[/B]"
-
-#: xbmc/settings/AdvancedSettings.cpp
-msgctxt "#673"
-msgid "Verbose logging for the [B]RTMP[/B] library"
-msgstr "Rejestruj zdarzenia biblioteki [B]RTMP[/B]"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#674"
@@ -8859,6 +8854,56 @@ msgctxt "#19085"
 msgid "Unknown channel %u"
 msgstr "Nieznany kanał %u"
 
+#. Label for "Instant recording action" setting
+#: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
+msgctxt "#19086"
+msgid "Instant recording action"
+msgstr "Działanie natychmiastowego nagrywania"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19087"
+msgid "Record current show (if guide data available)"
+msgstr "Nagraj aktualną audycję (jeśli dostępne dane w przewodniku)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19088"
+msgid "Record for a fixed period of time (Instant recording duration)"
+msgstr "Nagrywaj przez określony okres czasu (zdefiniowany poniżej)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19089"
+msgid "Ask what to do"
+msgstr "Pytaj co zrobić"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19090"
+msgid "Record the next %d minutes"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19091"
+msgid "Record current show (%s)"
+msgstr ""
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19092"
+msgid "Record next show (%s)"
+msgstr ""
+
+#. Instant recording summary. Expands to "Instant recording: <recording start
+#. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
+#. 11:00"
+#: xbmc/pvr/PVRTimerInfoTag.cpp
+msgctxt "#19093"
+msgid "Instant recording: %s"
+msgstr ""
+
 msgctxt "#19097"
 msgid "Enter the name for the recording"
 msgstr "Wprowadź nazwę dla tego nagrania"
@@ -9911,7 +9956,7 @@ msgstr "Dyskusja / Wywiad / Debata"
 #: xbmc/epg/Epg.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
-msgstr "Audycja / Teleturniej"
+msgstr "Widowisko / Teleturniej"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19533"
@@ -13500,10 +13545,10 @@ msgctxt "#24053"
 msgid "License:"
 msgstr "Licencja:"
 
-#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
-msgid "Changelog"
-msgstr "Dziennik zmian"
+msgid "What's new"
+msgstr "Nowości"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15338,11 +15383,10 @@ msgstr "Profile kontrolera"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
 msgid ""
-"Use the keyboard or remote to select a controller profile. Move to the "
-"buttons and select the first one. When prompted, press the button on your "
-"game controller that best matches what you see on the screen. If you make a "
-"mistake you can repeat the process."
-msgstr "Użyj klawiatury lub pilota, aby wybrać profil kontrolera. Przejdź do przycisków i wybierz pierwszy. Gdy pojawi się komunikat, naciśnij przycisk na kontrolerze gier najlepiej pasujący do tego, co widzisz na ekranie. W przypadku pomyłki możesz powtórzyć cały proces."
+"Use the keyboard or remote to select a controller profile. When prompted, "
+"press the button on your game controller that best matches what you see on "
+"the screen. If you make a mistake you can repeat the process."
+msgstr ""
 
 #. Title of error dialog shown when no joystick add-ons provide button mapping
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16126,7 +16170,9 @@ msgstr "Określa metodę przetwarzania i wyświetlania wideo."
 msgctxt "#36154"
 msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
-msgstr "Używa skalerów wysokiej jakości, kiedy wielkość skalowania przekracza określony procent."
+" A value below 5% makes little sense as video is processed with high GPU "
+"load without any visible picture quality improvements."
+msgstr ""
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16655,8 +16701,11 @@ msgstr "Kategoria zawierająca ustawienia domyślnych czasów trwania nagrywania
 
 #: system/settings/settings.xml
 msgctxt "#36234"
-msgid "Duration of instant recordings when pressing the record button."
-msgstr "Określa czas trwania nagrania po naciśnięciu przycisku nagrywania."
+msgid ""
+"Duration of instant recordings when pressing the record button. This value "
+"will be taken into account if \"Instant recording action\" is set to "
+"\"Record for a fixed period of time\""
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16783,6 +16832,20 @@ msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
 msgstr "Sekcja zawierająca ustawienia związane z plikami muzyki i ich obsługą."
+
+#: system/settings/settings.xml
+msgctxt "#36254"
+msgid ""
+"Action to perform when pressing the record button. [Record current show] "
+"will record the current show from \"now\" to the end of the show. If no TV "
+"guide data is currently available a fixed length recording starting \"now\","
+" with the value set for \"Instant recording duration\" will be scheduled. "
+"[Record for a fixed period of time] will schedule a fixed length recording "
+"starting \"now\", with the value set for \"Instant recording duration\". "
+"[Ask what to do] will open a dialogue containing different recording actions"
+" to choose from, like \"Record current show\", \"Record next show\" and some"
+" fixed duration recordings."
+msgstr ""
 
 #. Description of setting with label #13414 "Include artists who appear only
 #. on compilations"

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-05-29 07:42+0000\n"
+"PO-Revision-Date: 2016-06-16 13:00+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -2927,11 +2927,6 @@ msgstr "Journalisation détaillée pour la bibliothèque (HTTP(S), DAV) [B]SMB[/
 msgctxt "#672"
 msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
 msgstr "Journalisation détaillée pour les bibliothèques [B]FFmpeg[/B]"
-
-#: xbmc/settings/AdvancedSettings.cpp
-msgctxt "#673"
-msgid "Verbose logging for the [B]RTMP[/B] library"
-msgstr "Journalisation détaillée pour la bibliothèque [B]RTMP[/B]"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#674"
@@ -8867,6 +8862,56 @@ msgctxt "#19085"
 msgid "Unknown channel %u"
 msgstr "Chaîne inconnue %u"
 
+#. Label for "Instant recording action" setting
+#: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
+msgctxt "#19086"
+msgid "Instant recording action"
+msgstr "Action d'enregistrement immédiat"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19087"
+msgid "Record current show (if guide data available)"
+msgstr "Enregistrer le programme actuel (si données du guide disponibles)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19088"
+msgid "Record for a fixed period of time (Instant recording duration)"
+msgstr "Enregistrer pendant une période de temps fixe (durée d'enregistrement instantané)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19089"
+msgid "Ask what to do"
+msgstr "Demander que faire"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19090"
+msgid "Record the next %d minutes"
+msgstr "Enregistrer les %s prochaines minutes"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19091"
+msgid "Record current show (%s)"
+msgstr "Enregistrer le programme actuel (%s)"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19092"
+msgid "Record next show (%s)"
+msgstr "Enregistrer le programme suivant (%s)"
+
+#. Instant recording summary. Expands to "Instant recording: <recording start
+#. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
+#. 11:00"
+#: xbmc/pvr/PVRTimerInfoTag.cpp
+msgctxt "#19093"
+msgid "Instant recording: %s"
+msgstr "Enregistrement immédiat : %s"
+
 msgctxt "#19097"
 msgid "Enter the name for the recording"
 msgstr "Saisir le nom de l'enregistrement"
@@ -13508,10 +13553,10 @@ msgctxt "#24053"
 msgid "License:"
 msgstr "Licence :"
 
-#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
-msgid "Changelog"
-msgstr "Journal des modifications"
+msgid "What's new"
+msgstr "Nouveautés"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15346,11 +15391,10 @@ msgstr "Profils de manette"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
 msgid ""
-"Use the keyboard or remote to select a controller profile. Move to the "
-"buttons and select the first one. When prompted, press the button on your "
-"game controller that best matches what you see on the screen. If you make a "
-"mistake you can repeat the process."
-msgstr "Utiliser le clavier ou la télécommande pour sélectionner un profil de manette. Accéder aux boutons et sélectionner le premier. À la demande, appuyer sur le bouton qui correspond le mieux à ce qui est affiché à l'écran. En cas d'erreur, recommencer l'opération."
+"Use the keyboard or remote to select a controller profile. When prompted, "
+"press the button on your game controller that best matches what you see on "
+"the screen. If you make a mistake you can repeat the process."
+msgstr "Utilise le clavier ou la télécommande pour sélectionner un profil de manette. À la demande, appuyer sur le bouton qui correspond le mieux à ce qui est affiché à l'écran. En cas d'erreur, recommencer l'opération."
 
 #. Title of error dialog shown when no joystick add-ons provide button mapping
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16134,7 +16178,9 @@ msgstr "Ajuste la méthode utilisée pour afficher et effectuer le rendu de la v
 msgctxt "#36154"
 msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
-msgstr "Utilise une mise à l'échelle Haute Qualité quand la mise à l'échelle de la vidéo est au moins supérieure à ce pourcentage."
+" A value below 5% makes little sense as video is processed with high GPU "
+"load without any visible picture quality improvements."
+msgstr "Utilise des redimensionnements de haute qualité avec ce % minimum lors de la mise à l'échelle d'une vidéo. Une valeur inférieure à 5% n'a pas beaucoup d'intérêt car la vidéo sera traitée avec une charge GPU importante sans augmentation visible de la qualité d'image."
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16663,8 +16709,11 @@ msgstr "Cette catégorie contient les paramètres de durée d'enregistrement pr�
 
 #: system/settings/settings.xml
 msgctxt "#36234"
-msgid "Duration of instant recordings when pressing the record button."
-msgstr "Durée des enregistrements instantanés lors de l'utilisation du bouton d'enregistrement."
+msgid ""
+"Duration of instant recordings when pressing the record button. This value "
+"will be taken into account if \"Instant recording action\" is set to "
+"\"Record for a fixed period of time\""
+msgstr "Durée de l'enregistrement immédiat quand le bouton d'enregistrement est pressé. Cette valeur sera prise en compte si l'« Action d'enregistrement immédiat » est défini à « Enregistrer pendant une période de temps fixe »."
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16791,6 +16840,20 @@ msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
 msgstr "Section contenant les paramètres relatifs aux fichiers vidéo et à la façon dont ils sont traités."
+
+#: system/settings/settings.xml
+msgctxt "#36254"
+msgid ""
+"Action to perform when pressing the record button. [Record current show] "
+"will record the current show from \"now\" to the end of the show. If no TV "
+"guide data is currently available a fixed length recording starting \"now\","
+" with the value set for \"Instant recording duration\" will be scheduled. "
+"[Record for a fixed period of time] will schedule a fixed length recording "
+"starting \"now\", with the value set for \"Instant recording duration\". "
+"[Ask what to do] will open a dialogue containing different recording actions"
+" to choose from, like \"Record current show\", \"Record next show\" and some"
+" fixed duration recordings."
+msgstr "Action à exécuter quand le bouton d'enregistrement est pressé. [Enregistrer le programme actuel] enregistrera le programme en cours à partir de « maintenant » jusqu'à sa fin. S'il n'y a pas de données disponibles dans le guide des programmes TV, une durée fixe sera appliquée à partir de « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Enregistrer pendant une période de temps fixe] utilisera une valeur de temps fixe depuis « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Demander que faire] ouvrira une boîte de dialoque pour choisir parmi « Enregistrer le programme actuel », « Enregistrer le programme suivant » et quelques durées d'enregistrement préétablies."
 
 #. Description of setting with label #13414 "Include artists who appear only
 #. on compilations"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-05-30 07:08+0000\n"
+"PO-Revision-Date: 2016-06-17 08:56+0000\n"
 "Last-Translator: Jeremy Chen <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -2923,11 +2923,6 @@ msgstr "[B]libcURL[/B]函式庫(HTTP(S), DAV)的詳細紀錄"
 msgctxt "#672"
 msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
 msgstr "[B]FFmpeg[/B]函式庫的詳細紀錄"
-
-#: xbmc/settings/AdvancedSettings.cpp
-msgctxt "#673"
-msgid "Verbose logging for the [B]RTMP[/B] library"
-msgstr "[B]RTMP[/B]函式庫的詳細紀錄"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#674"
@@ -8863,6 +8858,56 @@ msgctxt "#19085"
 msgid "Unknown channel %u"
 msgstr "未知的頻道 %u"
 
+#. Label for "Instant recording action" setting
+#: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
+msgctxt "#19086"
+msgid "Instant recording action"
+msgstr "即時錄影動作"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19087"
+msgid "Record current show (if guide data available)"
+msgstr "錄下播映中的節目(若有節目表資料時)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19088"
+msgid "Record for a fixed period of time (Instant recording duration)"
+msgstr "錄製固定一段時間的影像(即時錄影長度)"
+
+#. Label for "Instant recording action" settings value
+#: system/settings/settings.xml
+msgctxt "#19089"
+msgid "Ask what to do"
+msgstr "詢問該怎麼做"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19090"
+msgid "Record the next %d minutes"
+msgstr "將接下來 %d分鐘節目錄下來"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19091"
+msgid "Record current show (%s)"
+msgstr "錄下播映中的節目(%s)"
+
+#. Label for "Instant recording action" dialog settings value
+#: xbmc/pvr/PVRMananger.cpp
+msgctxt "#19092"
+msgid "Record next show (%s)"
+msgstr "錄製下一個節目(%s)"
+
+#. Instant recording summary. Expands to "Instant recording: <recording start
+#. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
+#. 11:00"
+#: xbmc/pvr/PVRTimerInfoTag.cpp
+msgctxt "#19093"
+msgid "Instant recording: %s"
+msgstr "即時錄影: %s"
+
 msgctxt "#19097"
 msgid "Enter the name for the recording"
 msgstr "輸入這個錄影的名稱"
@@ -13504,10 +13549,10 @@ msgctxt "#24053"
 msgid "License:"
 msgstr "許可："
 
-#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
-msgid "Changelog"
-msgstr "更新日誌"
+msgid "What's new"
+msgstr "新玩意兒"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15342,11 +15387,10 @@ msgstr "控制器設定檔"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
 msgid ""
-"Use the keyboard or remote to select a controller profile. Move to the "
-"buttons and select the first one. When prompted, press the button on your "
-"game controller that best matches what you see on the screen. If you make a "
-"mistake you can repeat the process."
-msgstr "使用鍵盤或遙控器來選擇控制器設定檔。移到按鍵區並選擇第一個，依螢幕提示按下最適合該功能的按鍵，如果不小心弄錯的話，重新設定即可。"
+"Use the keyboard or remote to select a controller profile. When prompted, "
+"press the button on your game controller that best matches what you see on "
+"the screen. If you make a mistake you can repeat the process."
+msgstr "使用鍵盤或遙控器來選擇控制器設定檔。請依螢幕提示按下最適合該功能的按鍵，如果不小心弄錯的話，重新設定即可。"
 
 #. Title of error dialog shown when no joystick add-ons provide button mapping
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16130,7 +16174,9 @@ msgstr "調整處理和播放影片的方法。"
 msgctxt "#36154"
 msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
-msgstr "當視訊放大比例高於此數值時，啟用高品質視訊放大器。"
+" A value below 5% makes little sense as video is processed with high GPU "
+"load without any visible picture quality improvements."
+msgstr "請使用品質較好的升頻器來將影片升至高於此比例的頻率，低於5%的升頻率是沒有意義的，因為畫面看起來沒差，但卻會耗費許多CPU的效能。"
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16659,8 +16705,11 @@ msgstr "此分類包和預設錄影長度的設定。"
 
 #: system/settings/settings.xml
 msgctxt "#36234"
-msgid "Duration of instant recordings when pressing the record button."
-msgstr "按下即時錄影按鈕時的錄影時間長度。"
+msgid ""
+"Duration of instant recordings when pressing the record button. This value "
+"will be taken into account if \"Instant recording action\" is set to "
+"\"Record for a fixed period of time\""
+msgstr "按下錄影鍵後的即時錄影長度。這個值在\"即時錄影動作\"選項被設定為\"錄製固定一段時間的影像\"時將會被採用。"
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16787,6 +16836,20 @@ msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
 msgstr "本區包含音樂相關的設定及檔案處理方式。"
+
+#: system/settings/settings.xml
+msgctxt "#36254"
+msgid ""
+"Action to perform when pressing the record button. [Record current show] "
+"will record the current show from \"now\" to the end of the show. If no TV "
+"guide data is currently available a fixed length recording starting \"now\","
+" with the value set for \"Instant recording duration\" will be scheduled. "
+"[Record for a fixed period of time] will schedule a fixed length recording "
+"starting \"now\", with the value set for \"Instant recording duration\". "
+"[Ask what to do] will open a dialogue containing different recording actions"
+" to choose from, like \"Record current show\", \"Record next show\" and some"
+" fixed duration recordings."
+msgstr "按下錄影鍵時要執行的動作。[錄下播映中的節目] 將會從當下開始錄到節目結束。如果沒有節目表資料時，在\"即時錄影長度\"選項中所設定的值將會被用來作為從\"現在\"開始錄影的長度。[錄製固定一段時間的影像] 會以在\"即時錄影長度\"選項中設定的時間長度進行錄製。[詢問該怎麼做] 會開啟一個包含若干不同的錄影選項的對話框，像是\"錄下播映中的節目\"、\"錄製下一個節目\"及一些固定長度的錄影動作。"
 
 #. Description of setting with label #13414 "Include artists who appear only
 #. on compilations"
