@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-29 01:51+0000\n"
+"PO-Revision-Date: 2016-07-05 06:00+0000\n"
 "Last-Translator: Jeremy Chen <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -3465,14 +3465,14 @@ msgstr "單次播放(以指南內容為基準)"
 #. Representation of a timer rule
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#822"
-msgid "Repeating"
-msgstr "重播"
+msgid "Timer rule"
+msgstr "定時器規則"
 
 #. Representation of an epg-based timer rule.
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#823"
-msgid "Repeating (guide-based)"
-msgstr "重播(以指南內容為基準)"
+msgid "Timer rule (guide-based)"
+msgstr "定時器規則(以指南內容為基準)"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimers.cpp
@@ -6667,7 +6667,7 @@ msgctxt "#14021"
 msgid "Change area code 3"
 msgstr "改變區碼 3"
 
-#: system/settings/settings.xml xbmc/music/windows/GUIWindowMusicBase.cpp
+#: system/settings/settings.xml
 #: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 #: xbmc/vide/windows/GUIWindowVideoBase.cpp
 msgctxt "#14022"
@@ -7798,7 +7798,7 @@ msgstr "緩衝中…"
 
 #: system/settings/settings.xml
 msgctxt "#15108"
-msgid "GUI sounds"
+msgid "GUI Sounds"
 msgstr "使用者介面音效"
 
 msgctxt "#15109"
@@ -12008,8 +12008,8 @@ msgstr "電影集"
 
 #: system/settings/settings.xml
 msgctxt "#20458"
-msgid "Group movies in sets"
-msgstr "按同系列電影分組"
+msgid "Show movie sets"
+msgstr "顯示電影集"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -12063,8 +12063,8 @@ msgstr "保留目前的電影集 (%s)"
 
 #: system/settings/settings.xml
 msgctxt "#20470"
-msgid "Use movie sets for single movies"
-msgstr "將系列合輯套用在單集電影中"
+msgid "Include sets containing a single movie"
+msgstr "包括僅有一部電影的電影集"
 
 #: system/settings/settings.xml
 msgctxt "#20471"
@@ -13308,7 +13308,7 @@ msgid "Media sources"
 msgstr "媒體來源"
 
 #. Name of an add-on type
-#: xbmc/addons/Addon.cpp
+#: system/settings/settings.xml xbmc/addons/Addon.cpp
 msgctxt "#24006"
 msgid "GUI sounds"
 msgstr "使用者介面音效"
@@ -17127,11 +17127,6 @@ msgid "Auto eject disc after rip is complete."
 msgstr "擷取完成後自動退出光碟。"
 
 #: system/settings/settings.xml
-msgctxt "#36301"
-msgid "No info available yet."
-msgstr "無可用資訊。"
-
-#: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
 msgstr "無可用資訊。"
@@ -18416,6 +18411,204 @@ msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr "設定繪圖驅動程式所使用的緩存通道數。若驅動使用二重緩存則選2，三重緩存則選3。"
+
+#: system/settings/settings.xml
+msgctxt "#36560"
+msgid "Colour management"
+msgstr "色彩管理"
+
+#. Description of setting "System -> Video output -> Colour management" with
+#. label #36560
+#: system/settings/settings.xml
+msgctxt "#36561"
+msgid ""
+"Reproduce video colours accurately using a display profile or a 3D lookup "
+"table."
+msgstr "使用顯示器設定檔或3D LUT來精確重現影像色彩"
+
+#: system/settings/settings.xml
+msgctxt "#36562"
+msgid "Colour management mode"
+msgstr "色彩管理模式"
+
+#. Description of setting "System -> Video output -> Colour management mode"
+#. with label #36562
+#: system/settings/settings.xml
+msgctxt "#36563"
+msgid ""
+"Use a precalculated 3D lookup table for video colour correction, or "
+"calculate the transformation for each video from a profile of your display. "
+"A precalculated 3D lookup table is preferred as it allows you to take "
+"advantage of the advanced features and high precision in ArgyllCMS. Display "
+"profile based correction is useful for testing different parameters, or "
+"emulating display settings that you don't have a 3D LUT prepared for."
+msgstr "使用預先計算好的3D LUT來進行校色，或是使用你的顯示器所提供的設定檔來計算每個影片的變化。推薦使用前者，因其可受惠於ArgyllCMS的進階功能及高精確度。使用顯示器設定檔的校色方式適用在測試各種數值，或在沒有3D LUT可用時模擬其設定。"
+
+#: system/settings/settings.xml
+msgctxt "#36564"
+msgid "3D LUT"
+msgstr "3D LUT"
+
+#. Description of setting "System -> Video output -> 3D LUT" with label #36564
+#: system/settings/settings.xml
+msgctxt "#36565"
+msgid "TODO: 3D LUT filename description"
+msgstr "待辦事項：3D LUT 檔名描述"
+
+#: system/settings/settings.xml
+msgctxt "#36566"
+msgid "ICC display profile"
+msgstr "ICC 顯示器設定檔"
+
+#. Description of setting "System -> Video output -> ICC display profile" with
+#. label #36566
+#: system/settings/settings.xml
+msgctxt "#36567"
+msgid "TODO: ICC display profile filename description"
+msgstr "待辦事項：ICC 顯示器設定檔名描述"
+
+#: system/settings/settings.xml
+msgctxt "#36568"
+msgid "Whitepoint"
+msgstr "純白點校正"
+
+#. Description of setting "System -> Video output -> Whitepoint" with label
+#. #36568
+#: system/settings/settings.xml
+msgctxt "#36569"
+msgid "TODO: Whitepoint selection description"
+msgstr "待辦事項：純白點選擇描述"
+
+#: system/settings/settings.xml
+msgctxt "#36570"
+msgid "Primaries"
+msgstr "原色"
+
+#. Description of setting "System -> Video output -> Primaries" with label
+#. #36570
+#: system/settings/settings.xml
+msgctxt "#36571"
+msgid "TODO: Primary coordinates description"
+msgstr "待辦事項：三原色混色描述"
+
+#: system/settings/settings.xml
+msgctxt "#36572"
+msgid "Gamma mode"
+msgstr "Gamma模式"
+
+#. Description of setting "System -> Video output -> Gamma mode" with label
+#. #36572
+#: system/settings/settings.xml
+msgctxt "#36573"
+msgid "TODO: Gamma mode description"
+msgstr "待辦事項：Gamma模式描述"
+
+#: system/settings/settings.xml
+msgctxt "#36574"
+msgid "Gamma"
+msgstr "伽瑪值"
+
+#. Description of setting "System -> Video output -> Gamma" with label #36574
+#: system/settings/settings.xml
+msgctxt "#36575"
+msgid "TODO: Gamma description"
+msgstr "待辦事項：Gamma描述"
+
+#: system/settings/settings.xml
+msgctxt "#36576"
+msgid "Lookup table size"
+msgstr "演色表大小"
+
+#. Description of setting "System -> Video output -> Lookup table size" with
+#. label #36576
+#: system/settings/settings.xml
+msgctxt "#36577"
+msgid "TODO: Lookup table size description"
+msgstr "待辦事項：演色表描述"
+
+# Dialog title for 3D LUT file picker
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36580"
+msgid "3D LUT file"
+msgstr "3D LUT檔案"
+
+# Dialog title for ICC display profile file picker
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36581"
+msgid "ICC Profile"
+msgstr "ICC設定檔"
+
+#. gamma type labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36582"
+msgid "BT.1886"
+msgstr "BT.1886"
+
+msgctxt "#36583"
+msgid "Input offset"
+msgstr "輸入位移"
+
+msgctxt "#36584"
+msgid "Output offset"
+msgstr "輸出位移"
+
+msgctxt "#36585"
+msgid "Absolute"
+msgstr "絕對值"
+
+#. whitepoint labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36586"
+msgid "D65 (standard)"
+msgstr "D65 (標準)"
+
+msgctxt "#36587"
+msgid "D93 (Japanese NTSC)"
+msgstr "D93 (日本NTSC)"
+
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36588"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "#36589"
+msgid "HDTV (BT.709)"
+msgstr "HDTV (BT.709)"
+
+msgctxt "#36590"
+msgid "SDTV (SMPTE C)"
+msgstr "SDTV (SMPTE C)"
+
+msgctxt "#36591"
+msgid "NTSC 1953 (BT.470 M)"
+msgstr "NTSC 1953 (BT.470 M)"
+
+msgctxt "#36592"
+msgid "PAL/SECAM 1975 (BT.470 B/G)"
+msgstr "PAL/SECAM 1975 (BT.470 B/G)"
+
+msgctxt "#36593"
+msgid "HDTV 1988 (SMPTE 240M)"
+msgstr "HDTV 1988 (SMPTE 240M)"
+
+#. 3D LUT size labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36594"
+msgid "16x16x16"
+msgstr "16x16x16"
+
+msgctxt "#36595"
+msgid "64x64x64"
+msgstr "64x64x64"
+
+msgctxt "#36596"
+msgid "256x256x256"
+msgstr "256x256x256"
+
+msgctxt "#36597"
+msgid "%1.2f"
+msgstr "%1.2f"
 
 #. Description of setting with label #36099 "Dither"
 #: system/settings/settings.xml

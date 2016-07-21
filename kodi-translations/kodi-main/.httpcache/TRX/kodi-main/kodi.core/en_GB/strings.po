@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-06-18 21:09+0000\n"
+"PO-Revision-Date: 2016-07-04 07:10+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/teamxbmc/kodi-main/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -3458,14 +3458,14 @@ msgstr "One time (guide-based)"
 #. Representation of a timer rule
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#822"
-msgid "Repeating"
-msgstr "Repeating"
+msgid "Timer rule"
+msgstr "Timer rule"
 
 #. Representation of an epg-based timer rule.
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#823"
-msgid "Repeating (guide-based)"
-msgstr "Repeating (guide-based)"
+msgid "Timer rule (guide-based)"
+msgstr "Timer rule (guide-based)"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimers.cpp
@@ -6660,7 +6660,7 @@ msgctxt "#14021"
 msgid "Change area code 3"
 msgstr "Change area code 3"
 
-#: system/settings/settings.xml xbmc/music/windows/GUIWindowMusicBase.cpp
+#: system/settings/settings.xml
 #: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 #: xbmc/vide/windows/GUIWindowVideoBase.cpp
 msgctxt "#14022"
@@ -7791,8 +7791,8 @@ msgstr "Buffering..."
 
 #: system/settings/settings.xml
 msgctxt "#15108"
-msgid "GUI sounds"
-msgstr "GUI sounds"
+msgid "GUI Sounds"
+msgstr "GUI Sounds"
 
 msgctxt "#15109"
 msgid "Skin default"
@@ -12001,8 +12001,8 @@ msgstr "Movie set"
 
 #: system/settings/settings.xml
 msgctxt "#20458"
-msgid "Group movies in sets"
-msgstr "Group movies in sets"
+msgid "Show movie sets"
+msgstr "Show movie sets"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -12056,8 +12056,8 @@ msgstr "Keep current set (%s)"
 
 #: system/settings/settings.xml
 msgctxt "#20470"
-msgid "Use movie sets for single movies"
-msgstr "Use movie sets for single movies"
+msgid "Include sets containing a single movie"
+msgstr "Include sets containing a single movie"
 
 #: system/settings/settings.xml
 msgctxt "#20471"
@@ -13301,7 +13301,7 @@ msgid "Media sources"
 msgstr "Media sources"
 
 #. Name of an add-on type
-#: xbmc/addons/Addon.cpp
+#: system/settings/settings.xml xbmc/addons/Addon.cpp
 msgctxt "#24006"
 msgid "GUI sounds"
 msgstr "GUI sounds"
@@ -17120,11 +17120,6 @@ msgid "Auto eject disc after rip is complete."
 msgstr "Auto eject disc after rip is complete."
 
 #: system/settings/settings.xml
-msgctxt "#36301"
-msgid "No info available yet."
-msgstr "No info available yet."
-
-#: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
 msgstr "No info available yet."
@@ -18409,6 +18404,204 @@ msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr "Defines the number of presentation buffers used by the graphics driver. Select 2 if the driver uses double buffering or 3 for triple buffering."
+
+#: system/settings/settings.xml
+msgctxt "#36560"
+msgid "Colour management"
+msgstr "Colour management"
+
+#. Description of setting "System -> Video output -> Colour management" with
+#. label #36560
+#: system/settings/settings.xml
+msgctxt "#36561"
+msgid ""
+"Reproduce video colours accurately using a display profile or a 3D lookup "
+"table."
+msgstr "Reproduce video colours accurately using a display profile or a 3D lookup table."
+
+#: system/settings/settings.xml
+msgctxt "#36562"
+msgid "Colour management mode"
+msgstr "Colour management mode"
+
+#. Description of setting "System -> Video output -> Colour management mode"
+#. with label #36562
+#: system/settings/settings.xml
+msgctxt "#36563"
+msgid ""
+"Use a precalculated 3D lookup table for video colour correction, or "
+"calculate the transformation for each video from a profile of your display. "
+"A precalculated 3D lookup table is preferred as it allows you to take "
+"advantage of the advanced features and high precision in ArgyllCMS. Display "
+"profile based correction is useful for testing different parameters, or "
+"emulating display settings that you don't have a 3D LUT prepared for."
+msgstr "Use a precalculated 3D lookup table for video colour correction, or calculate the transformation for each video from a profile of your display. A precalculated 3D lookup table is preferred as it allows you to take advantage of the advanced features and high precision in ArgyllCMS. Display profile based correction is useful for testing different parameters, or emulating display settings that you don't have a 3D LUT prepared for."
+
+#: system/settings/settings.xml
+msgctxt "#36564"
+msgid "3D LUT"
+msgstr "3D LUT"
+
+#. Description of setting "System -> Video output -> 3D LUT" with label #36564
+#: system/settings/settings.xml
+msgctxt "#36565"
+msgid "TODO: 3D LUT filename description"
+msgstr "TODO: 3D LUT filename description"
+
+#: system/settings/settings.xml
+msgctxt "#36566"
+msgid "ICC display profile"
+msgstr "ICC display profile"
+
+#. Description of setting "System -> Video output -> ICC display profile" with
+#. label #36566
+#: system/settings/settings.xml
+msgctxt "#36567"
+msgid "TODO: ICC display profile filename description"
+msgstr "TODO: ICC display profile filename description"
+
+#: system/settings/settings.xml
+msgctxt "#36568"
+msgid "Whitepoint"
+msgstr "Whitepoint"
+
+#. Description of setting "System -> Video output -> Whitepoint" with label
+#. #36568
+#: system/settings/settings.xml
+msgctxt "#36569"
+msgid "TODO: Whitepoint selection description"
+msgstr "TODO: Whitepoint selection description"
+
+#: system/settings/settings.xml
+msgctxt "#36570"
+msgid "Primaries"
+msgstr "Primaries"
+
+#. Description of setting "System -> Video output -> Primaries" with label
+#. #36570
+#: system/settings/settings.xml
+msgctxt "#36571"
+msgid "TODO: Primary coordinates description"
+msgstr "TODO: Primary coordinates description"
+
+#: system/settings/settings.xml
+msgctxt "#36572"
+msgid "Gamma mode"
+msgstr "Gamma mode"
+
+#. Description of setting "System -> Video output -> Gamma mode" with label
+#. #36572
+#: system/settings/settings.xml
+msgctxt "#36573"
+msgid "TODO: Gamma mode description"
+msgstr "TODO: Gamma mode description"
+
+#: system/settings/settings.xml
+msgctxt "#36574"
+msgid "Gamma"
+msgstr "Gamma"
+
+#. Description of setting "System -> Video output -> Gamma" with label #36574
+#: system/settings/settings.xml
+msgctxt "#36575"
+msgid "TODO: Gamma description"
+msgstr "TODO: Gamma description"
+
+#: system/settings/settings.xml
+msgctxt "#36576"
+msgid "Lookup table size"
+msgstr "Lookup table size"
+
+#. Description of setting "System -> Video output -> Lookup table size" with
+#. label #36576
+#: system/settings/settings.xml
+msgctxt "#36577"
+msgid "TODO: Lookup table size description"
+msgstr "TODO: Lookup table size description"
+
+# Dialog title for 3D LUT file picker
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36580"
+msgid "3D LUT file"
+msgstr "3D LUT file"
+
+# Dialog title for ICC display profile file picker
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36581"
+msgid "ICC Profile"
+msgstr "ICC Profile"
+
+#. gamma type labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36582"
+msgid "BT.1886"
+msgstr "BT.1886"
+
+msgctxt "#36583"
+msgid "Input offset"
+msgstr "Input offset"
+
+msgctxt "#36584"
+msgid "Output offset"
+msgstr "Output offset"
+
+msgctxt "#36585"
+msgid "Absolute"
+msgstr "Absolute"
+
+#. whitepoint labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36586"
+msgid "D65 (standard)"
+msgstr "D65 (standard)"
+
+msgctxt "#36587"
+msgid "D93 (Japanese NTSC)"
+msgstr "D93 (Japanese NTSC)"
+
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36588"
+msgid "Automatic"
+msgstr "Automatic"
+
+msgctxt "#36589"
+msgid "HDTV (BT.709)"
+msgstr "HDTV (BT.709)"
+
+msgctxt "#36590"
+msgid "SDTV (SMPTE C)"
+msgstr "SDTV (SMPTE C)"
+
+msgctxt "#36591"
+msgid "NTSC 1953 (BT.470 M)"
+msgstr "NTSC 1953 (BT.470 M)"
+
+msgctxt "#36592"
+msgid "PAL/SECAM 1975 (BT.470 B/G)"
+msgstr "PAL/SECAM 1975 (BT.470 B/G)"
+
+msgctxt "#36593"
+msgid "HDTV 1988 (SMPTE 240M)"
+msgstr "HDTV 1988 (SMPTE 240M)"
+
+#. 3D LUT size labels
+#: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
+msgctxt "#36594"
+msgid "16x16x16"
+msgstr "16x16x16"
+
+msgctxt "#36595"
+msgid "64x64x64"
+msgstr "64x64x64"
+
+msgctxt "#36596"
+msgid "256x256x256"
+msgstr "256x256x256"
+
+msgctxt "#36597"
+msgid "%1.2f"
+msgstr "%1.2f"
 
 #. Description of setting with label #36099 "Dither"
 #: system/settings/settings.xml
