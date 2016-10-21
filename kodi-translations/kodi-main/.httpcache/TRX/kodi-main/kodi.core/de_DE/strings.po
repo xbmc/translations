@@ -3,19 +3,23 @@
 # Alexander Scholz <alexander.scholz@fau.de>, 2015
 # cgtobi <cgtobi@gmail.com>, 2015
 # Christian Spaan <gyges@gmx.net>, 2016
+# daAnda, 2016
 # daAnda, 2015
 # Dejan Dinic, 2016
 # eidermar, 2016
 # Frei Geist, 2016
 # Florian Hensel <hef.f.hensel@gmail.com>, 2015
+# Hubert Baumann <baumann.hubert.jun@gmail.com>, 2016
 # ksooo <kai.sommerfeld@gmx.com>, 2015-2016
 # Alexander Scholz <alexander.scholz@fau.de>, 2015
 # Luca_Brasi <lucesi@gmx.de>, 2016
 # Matthias <becker.matthias@gmail.com>, 2015
 # Matthias W. <abudunx@gmail.com>, 2015
+# Memphiz <memphis@machzwo.de>, 2016
 # Memphiz <memphis@machzwo.de>, 2015
 # Mika Beckerich <beckerichmika@gmail.com>, 2016
 # r3stless <musiclover@the-fastest.net>, 2015
+# Philipp Temminghoff <phil65@kodi.tv>, 2016
 # S J <locutus@icqmail.com>, 2016
 # thechosen2k <spreisinger@googlemail.com>, 2016
 # Stefan Grossmann <stefangrossmann@freenet.de>, 2016
@@ -27,8 +31,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-03 15:10+0000\n"
-"Last-Translator: ksooo <kai.sommerfeld@gmx.com>\n"
+"PO-Revision-Date: 2016-09-29 02:13+0000\n"
+"Last-Translator: Philipp Temminghoff <phil65@kodi.tv>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -906,6 +910,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Handlung"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4972,7 +4977,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Bei %s fortsetzen"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Von Anfang abspielen"
@@ -5422,7 +5428,7 @@ msgstr "Warte auf Netzwerkverbindung..."
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13029"
 msgid "Failed to execute Wake-on-LAN!"
-msgstr "Fehler beim Ausführen von Wake on LAN!"
+msgstr "Fehler beim Ausführen von Wake-on-LAN!"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13030"
@@ -6518,6 +6524,19 @@ msgid "Add art"
 msgstr "Grafik hinzufügen"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Schwellenwert für Tonhöhen-Korrektur"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "Wenn die Wiedergabe-Geschwindigkeit diesen Schwellenwert überschreitet, wird ein Korrektur-Filter auf die Tonhöhe angewandt. Dieser verhindert die sonst üblichen \"quietschenden Stimmen\", die normalerweise beim Beschleunigen von Videos entstehen"
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Verzögerung nach Änderung der Wiederholrate"
@@ -6996,8 +7015,8 @@ msgid "Security"
 msgstr "Sicherheit"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Eingabegeräte"
+msgid "Devices"
+msgstr "Geräte"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7167,6 +7186,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Region C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Eingabe"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7175,7 +7200,7 @@ msgstr "Wiedergabe"
 #: system/settings/settings.xml
 msgctxt "#14201"
 msgid "Player settings"
-msgstr "Widergabe-Einstellungen"
+msgstr "Wiedergabe"
 
 #: system/settings/settings.xml
 msgctxt "#14202"
@@ -7195,7 +7220,7 @@ msgstr "TV"
 #: system/settings/settings.xml
 msgctxt "#14205"
 msgid "TV settings"
-msgstr "TV-Einstellungen"
+msgstr "TV"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -7205,22 +7230,32 @@ msgstr "Benutzeroberfläche"
 #: system/settings/settings.xml
 msgctxt "#14207"
 msgid "Interface settings"
-msgstr "Benutzeroberflächen-Einstellungen"
+msgstr "Benutzeroberfläche"
 
 #: system/settings/settings.xml
 msgctxt "#14208"
 msgid "Service settings"
-msgstr "Dienste-Einstellungen"
+msgstr "Dienste"
 
 #: system/settings/settings.xml
 msgctxt "#14209"
 msgid "System settings"
-msgstr "Systemeinstellungen"
+msgstr "System"
 
 #: system/settings/settings.xml
 msgctxt "#14210"
 msgid "Profile settings"
-msgstr "Profileinstellungen"
+msgstr "Benutzerprofile"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Medien"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Medien"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7278,6 +7313,11 @@ msgid "Network Control"
 msgstr "Netzwerksteuerung"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Quellen verwalten"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Aktionen"
@@ -7308,6 +7348,16 @@ msgid "Download Services"
 msgstr "Download-Dienste"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Video-Bibliothek"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Musik-Bibliothek"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Listen & Ansichten"
@@ -7316,6 +7366,21 @@ msgstr "Listen & Ansichten"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metadaten"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Videos..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Musik..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Bilder..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7732,8 +7797,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Nachbearbeitung"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Eingang"
@@ -8002,7 +8068,7 @@ msgstr "Auto"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16020"
 msgid "Deinterlace"
-msgstr "Zeilenentflechtung (Deinterlacing)"
+msgstr "Deinterlace"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16021"
@@ -8087,12 +8153,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Inaktiv"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Automatisch"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Aktiv"
@@ -8366,14 +8427,20 @@ msgstr "MMAL - Bob (halb)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr "Bob (halb)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Fast motion (doppelt)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Erweitert (halb)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Erweitert"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9334,10 +9401,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Gelöscht"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "TV-Kanäle"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9349,10 +9417,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Anzuzeigende Tage"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Radio-Sender"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9614,8 +9683,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Hintergrundthreads werden gestartet"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Timer-Informationen anzeigen"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Timer bearbeiten"
@@ -9769,6 +9848,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Es werden wenigstens ein Tuner, Backend-Software und ein Addon benötigt, um den PVR benutzen zu können. Mehr Informationen unter http://kodi.wiki/view/PVR"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV-Guide"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radio-Guide"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -10709,7 +10800,7 @@ msgstr "Master-Passwort beim Start abfragen"
 
 msgctxt "#20077"
 msgid "Skin settings"
-msgstr "Skin-Einstellungen"
+msgstr "Skin"
 
 msgctxt "#20078"
 msgid "- no link set -"
@@ -11361,7 +11452,7 @@ msgstr "Durchsuche Musikvideos mit %s"
 
 msgctxt "#20319"
 msgid "Scanning TV shows using %s"
-msgstr "Durchsuche TV-Serien mit %s"
+msgstr "Serien mit %s durchsuchen"
 
 msgctxt "#20320"
 msgid "Scanning artists using %s"
@@ -12399,7 +12490,7 @@ msgstr "Standardanbieter für Filminformationen"
 #: system/settings/settings.xml
 msgctxt "#21414"
 msgid "Default provider for TV show information"
-msgstr "Standardanbieter für TV-Serien-Informationen"
+msgstr "Standardanbieter für Serien-Informationen"
 
 #: system/settings/settings.xml
 msgctxt "#21415"
@@ -12409,7 +12500,7 @@ msgstr "Standard-Anbieter für Musikvideo-Informationen"
 #: system/settings/settings.xml
 msgctxt "#21416"
 msgid "Select first unwatched TV show season / episode"
-msgstr "Erste ungesehene Staffel/Episode von TV-Serien auswählen"
+msgstr "Erste ungesehene Staffel/Episode von Serien auswählen"
 
 #: system/settings/settings.xml
 msgctxt "#21417"
@@ -12660,7 +12751,7 @@ msgid ""
 "item will be selected only when a view is entered for the first "
 "time.[CR][Always] The first unwatched item will be selected every time a "
 "view is entered."
-msgstr "In TV-Serien Staffel- oder Episoden-Ansichten, automatisch die erste ungesehene Staffel oder Episode auswählen.[CR][Beim ersten Öffnen] Das erste ungesehene Serien-Element wird nur beim ersten Öffnen der Ansicht selektiert[CR][Immer] Das erste ungesehene Serien-Element wird bei jedem Öffnen der Ansicht selektiert."
+msgstr "In Serien Staffel- oder Episoden-Ansichten, automatisch die erste ungesehene Staffel oder Episode auswählen.[CR][Beim ersten Öffnen] Das erste ungesehene Serien-Element wird nur beim ersten Öffnen der Ansicht selektiert[CR][Immer] Das erste ungesehene Serien-Element wird bei jedem Öffnen der Ansicht selektiert."
 
 #. Filter (media data) from float value to float value
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
@@ -13891,7 +13982,7 @@ msgctxt "#24117"
 msgid ""
 "Select the service that will be used as default to search for TV show "
 "subtitles."
-msgstr "Standard-Dienst zur Untertitelsuche für TV-Serien auswählen."
+msgstr "Standard-Dienst zur Untertitelsuche für Serien auswählen."
 
 #: system/settings/settings.xml
 msgctxt "#24118"
@@ -14384,7 +14475,7 @@ msgstr "Verkehrsmeldung"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29931"
 msgid "Radio message"
-msgstr "Radio Nachricht"
+msgstr "Radio-Nachricht"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15398,6 +15489,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Steuergeräte-Profile"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Vibration testen"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Vibrationsmotoren aller angeschlossener Controller aktivieren."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15465,6 +15568,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Controller mit den verschiedenen Eingabgeräten für verschiedene Gaming Systeme verbinden."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Obere Buttons"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Seitliche Buttons"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Triggers"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Analog-Sticks"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Controller beim Beenden ausschalten"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Schaltet beim Beenden alle Controller aus, die diese Funktion unterstützen."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -16119,7 +16259,7 @@ msgctxt "#36144"
 msgid ""
 "Select in which cases you want to hide the season nodes of TV shows. If "
 "hidden, selecting a TV show will directly jump into the episodes view."
-msgstr "Auswahl, wann die Staffel-Einträge von TV-Serien versteckt werden sollen. Wenn ein Staffel-Eintrag versteckt ist, wird bei Auswahl einer TV-Serie direkt in die Episoden-Ansicht gewechselt."
+msgstr "Auswahl, wann die Staffel-Einträge von Serien versteckt werden sollen. Wenn ein Staffel-Eintrag versteckt ist, wird bei Auswahl einer Serie direkt in die Episoden-Ansicht gewechselt."
 
 #. Description of setting with label #20458 "Group movies in sets"
 #: system/settings/settings.xml
@@ -16337,7 +16477,7 @@ msgstr "Auswahl des Kurzformats, das für Datumsanzeigen in der Benutzeroberflä
 #: system/settings/settings.xml
 msgctxt "#36174"
 msgid "Enable teletext when watching a live TV stream."
-msgstr "Aktivierung von Videotext für TV-Sendungen."
+msgstr "Aktivierung von Videotext für TV."
 
 #. Description of setting with label #23055 "Scale Teletext to 4:3"
 #: system/settings/settings.xml
@@ -17296,13 +17436,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Aktiviert den UPnP Control Point. Dies erlaubt, Medien zu beliebigen UPnP-Clients zu schicken und deren Wiedergabe zu steueren."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Kategorie mit Einstellungen für den Webserver-Dienst."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Diese Kategorie enthält die Einstellungen, wie der Web-Server-Dienst und der Application Control-Dienst behandelt."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17645,7 +17785,7 @@ msgid ""
 "important notifications."
 msgstr "Konfiguriert, wie Töne der Benutzeroberfläche behandelt werden, z.B. die Navigation im Menü oder wichtige Benachrichtigungen."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18058,7 +18198,7 @@ msgstr "Hardware-Beschleunigung erlauben - MMAL"
 #: system/settings/settings.xml
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Benutze VideoPlayer zum Dekodieren von Video Dateien mit MMAL Beschleunigung."
+msgstr "VideoPlayer zum Dekodieren von Video-Dateien mit MMAL-Beschleunigung benutzen."
 
 #. Button on settings to opend DSP manager dialog
 #: system/settings/settings.xml
@@ -18115,7 +18255,7 @@ msgstr "Anzahl der Lautstärkeschritte einstellen."
 #: system/settings/settings.xml
 msgctxt "#36460"
 msgid "Event logging allows to keep track of what has happened."
-msgstr "Ereignis-Logging ermöglicht, im Auge zu behalten, was passiert ist."
+msgstr "Ereignis-Logging dient dem Aufzeichnen verschiedener Systemaktivitäten."
 
 #. Description of settings with label #14113 "Enable notification event
 #. logging"
@@ -18149,7 +18289,7 @@ msgstr "Deaktiviert"
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over / Under"
-msgstr "Über/Unter"
+msgstr "Über / Unter"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -18161,13 +18301,13 @@ msgstr "Nebeneinander"
 #: system/settings/settings.xml
 msgctxt "#36505"
 msgid "Anaglyph red / cyan"
-msgstr "Anaglyph Rot/Cyan"
+msgstr "Anaglyph Rot / Cyan"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
 msgctxt "#36506"
 msgid "Anaglyph green / magenta"
-msgstr "Anaglyph Grün/Magenta"
+msgstr "Anaglyph Grün / Magenta"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
@@ -18185,13 +18325,13 @@ msgstr "Hardware-basiert"
 #: system/settings/settings.xml
 msgctxt "#36509"
 msgid "Monoscopic / 2D"
-msgstr "Monoskopisch/2D"
+msgstr "Monoskopisch / 2D"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
 msgctxt "#36510"
 msgid "Anaglyph yellow / blue"
-msgstr "Anaglyph Gelb/Blau"
+msgstr "Anaglyph Gelb / Blau"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
@@ -18457,7 +18597,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr "Benutze ein vorberechnetes 3D lookup table für die Farbkorrektur oder berechne die Korrektur für jedes Video mit einem Profil deiner Anzeige. Ein vorberechnetes 3D lookup table wird empfohlen, weil es die erweiterten Funktionen und die hohe Präzision von ArgyllCMS unterstützt. Die auf einem Anzeigeprofil basierende Korrektur ist hilfreich um verschiedene Einstellungen zu testen und um Anzeigeeinstellungen zu emulieren, für die kein 3D LUT vorliegt."
+msgstr "Benutzen einer vorberechneten 3D lookup table für die Farbkorrektur oder Berechnen der Korrektur für jedes Video mit einem Anzeigeprofil. Eine vorberechnete 3D lookup table wird empfohlen, weil es die erweiterten Funktionen und die hohe Präzision von ArgyllCMS unterstützt. Die auf einem Anzeigeprofil basierende Korrektur ist hilfreich um verschiedene Einstellungen zu testen und um Anzeigeeinstellungen zu emulieren, für die kein 3D LUT vorliegt."
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -18492,7 +18632,7 @@ msgstr "Weißpunkt"
 #: system/settings/settings.xml
 msgctxt "#36569"
 msgid "TODO: Whitepoint selection description"
-msgstr ""
+msgstr "TODO: Beschreibung Weißpunkt-Auswahl"
 
 #: system/settings/settings.xml
 msgctxt "#36570"
@@ -18504,19 +18644,19 @@ msgstr "Grundfarben"
 #: system/settings/settings.xml
 msgctxt "#36571"
 msgid "TODO: Primary coordinates description"
-msgstr ""
+msgstr "TODO: Beschreibung Primärkoordinaten"
 
 #: system/settings/settings.xml
 msgctxt "#36572"
 msgid "Gamma mode"
-msgstr "Gammamodus"
+msgstr "Gamma-Modus"
 
 #. Description of setting "System -> Video output -> Gamma mode" with label
 #. #36572
 #: system/settings/settings.xml
 msgctxt "#36573"
 msgid "TODO: Gamma mode description"
-msgstr ""
+msgstr "TODO: Beschreibung Gamma-Modus"
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -18527,19 +18667,19 @@ msgstr "Gamma"
 #: system/settings/settings.xml
 msgctxt "#36575"
 msgid "TODO: Gamma description"
-msgstr ""
+msgstr "TODO: Beschreibung Gamma"
 
 #: system/settings/settings.xml
 msgctxt "#36576"
 msgid "Lookup table size"
-msgstr "Größe des Lookup tables"
+msgstr "Größe der Lookup Table"
 
 #. Description of setting "System -> Video output -> Lookup table size" with
 #. label #36576
 #: system/settings/settings.xml
 msgctxt "#36577"
 msgid "TODO: Lookup table size description"
-msgstr ""
+msgstr "TODO: Beschreibung Größe Lookup Table"
 
 # Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -18557,7 +18697,7 @@ msgstr "ICC-Profil"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36582"
 msgid "BT.1886"
-msgstr ""
+msgstr "BT.1886"
 
 msgctxt "#36583"
 msgid "Input offset"
@@ -18589,41 +18729,41 @@ msgstr "Automatisch"
 
 msgctxt "#36589"
 msgid "HDTV (BT.709)"
-msgstr ""
+msgstr "HDTV (BT.709)"
 
 msgctxt "#36590"
 msgid "SDTV (SMPTE C)"
-msgstr ""
+msgstr "SDTV (SMPTE C)"
 
 msgctxt "#36591"
 msgid "NTSC 1953 (BT.470 M)"
-msgstr ""
+msgstr "NTSC 1953 (BT.470 M)"
 
 msgctxt "#36592"
 msgid "PAL/SECAM 1975 (BT.470 B/G)"
-msgstr ""
+msgstr "PAL/SECAM 1975 (BT.470 B/G)"
 
 msgctxt "#36593"
 msgid "HDTV 1988 (SMPTE 240M)"
-msgstr ""
+msgstr "HDTV 1988 (SMPTE 240M)"
 
 #. 3D LUT size labels
 #: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
 msgctxt "#36594"
 msgid "16x16x16"
-msgstr ""
+msgstr "16x16x16"
 
 msgctxt "#36595"
 msgid "64x64x64"
-msgstr ""
+msgstr "64x64x64"
 
 msgctxt "#36596"
 msgid "256x256x256"
-msgstr ""
+msgstr "256x256x256"
 
 msgctxt "#36597"
 msgid "%1.2f"
-msgstr ""
+msgstr "%1.2f"
 
 #. Description of setting with label #36099 "Dither"
 #: system/settings/settings.xml
@@ -18763,6 +18903,22 @@ msgid ""
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Addons aus unbekannten Quellen wird Zugriff auf alle Dateien des Gerätes ermöglicht. Wenn  Du dies erlaubst, bist Du damit einverstanden, dass Du selber verantwortlich für den etwaigen Verlust von Daten, Beschädigungen am Gerät, sowie ungewolltem Verhalten bist. Wirklich weitermachen?"
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Herunterskalierung mit hoher Qualität"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Aktiviert die Herunterskalierung von Bildern in hoher Qualität (benötigt mehr Arbeitsspeicher und hat mäßige Auswirkungen auf die Leistung)."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -19296,13 +19452,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Kategorie mit Einstellungen für die Medienwiedergabe"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Kategorie mit Einstellungen für das Sammeln, Speichern, Anzeigen und Navigieren von Medieninformationen"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Kategorie mit Einstellungen für Medien-Quellen, für die Medien-Navigation und Einstellungen zum Sammeln, Speichern und Anzeigen von Medieninformationen"
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19392,3 +19548,35 @@ msgstr "MPEG4-Wiedergabe beschleunigen"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "h264-Wiedergabe beschleunigen"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Hier können Medien-Quellen sowie die Einstellungen der Bibliotheken verwaltet werden"
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Hier können Video-Quellen hinzugefügt und verwaltet verwalten."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Hier können Musik-Quellen hinzugefügt und verwaltet verwalten."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Hier können Bild-Quellen hinzugefügt und verwaltet verwalten."

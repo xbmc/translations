@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-22 01:07+0000\n"
-"Last-Translator: Jin Yang <redus891@gmail.com>\n"
+"PO-Revision-Date: 2016-10-11 10:36+0000\n"
+"Last-Translator: piodio <piodio@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/teamxbmc/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -887,6 +887,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "줄거리"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4953,7 +4954,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "%s 부터 되시작"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "처음부터 재생"
@@ -6499,6 +6501,19 @@ msgid "Add art"
 msgstr "아트 추가"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "화면 새로고침 빈도 변경 후 지연"
@@ -6977,8 +6992,8 @@ msgid "Security"
 msgstr "보안"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "입력 장치"
+msgid "Devices"
+msgstr "장치"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7148,6 +7163,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "지역 C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "입력"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7202,6 +7223,16 @@ msgstr "시스템 설정"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "프로파일 설정"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "미디어"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "미디어 설정"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7259,6 +7290,11 @@ msgid "Network Control"
 msgstr "네트워크 제어"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "소스 관리"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "동작"
@@ -7289,6 +7325,16 @@ msgid "Download Services"
 msgstr "다운로드 서비스"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "비디오 라이브러리"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "음악 라이브러리"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "목록 & 보기"
@@ -7297,6 +7343,21 @@ msgstr "목록 & 보기"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "메타데이터"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "비디오..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "음악..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "사진..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7713,8 +7774,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Post-process"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "입력"
@@ -8068,12 +8130,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "끔"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "자동"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "켬"
@@ -8347,14 +8404,20 @@ msgstr "MMAL - Bob (half)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr "Bob (half)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Fast motion (double)"
+msgid "IMX - Advanced (half)"
+msgstr ""
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -8876,7 +8939,7 @@ msgstr "정해진 시간 녹화 (즉시 녹화 분량)"
 #: system/settings/settings.xml
 msgctxt "#19089"
 msgid "Ask what to do"
-msgstr "할 일 물어보기"
+msgstr "물어보기"
 
 #. Label for "Instant recording action" dialog settings value
 #: xbmc/pvr/PVRMananger.cpp
@@ -9315,10 +9378,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "삭제됨"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "TV 채널"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9330,10 +9394,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "표시할 기간"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "라디오"
+msgid "Radio channels"
+msgstr "라디오 채널"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9595,8 +9660,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "백그라운드 스레드 시작중"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "예약 정보 보기"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "예약 편집"
@@ -9750,6 +9825,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "튜너, 백엔드 소프트웨어와, PVR 사용을 위한 백엔드 애드온이 필요합니다. 자세한 내용은 http://kodi.wiki/view/PVR 을 참고하세요."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV 가이드"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "라디오 가이드"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -13548,7 +13635,7 @@ msgstr "라이센스:"
 #: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
 msgid "What's new"
-msgstr "최신"
+msgstr "업데이트 내역"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -15379,6 +15466,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "컨트롤러 프로파일"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr ""
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr ""
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15446,6 +15545,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "컨트롤러를 여러 게임 시스템들의 입력 장치들과 페어링하세요."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr ""
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr ""
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "트리거"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "아나로그 스틱"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr ""
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr ""
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -17277,13 +17413,13 @@ msgid ""
 "client and control it's playback."
 msgstr "UPnP 컨트롤 포인트를 사용합니다. UPnP 클라이언트로 미디어를 스트리밍하고 재생을 제어하게 허용합니다."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "웹 서버 서비스 관련 설정 그룹입니다."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr ""
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17626,7 +17762,7 @@ msgid ""
 "important notifications."
 msgstr "메뉴 탐색 효과음과 중요 알림같은 인터페이스 사운드의 동작 방식을 설정합니다."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18745,6 +18881,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "애드온들은 이 장치의 개인 데이터에 접근할 권한을 가지게 될 것입니다. 허용할 시, 데이터 손실, 원치 않은 행동이나 장치 이상의 책임이 귀하에게만 있음을 동의하십니다. 계속하시겠습니까?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr ""
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr ""
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19277,13 +19429,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "미디어 재생 관련 설정 섹션입니다."
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "미디어 정보 수집, 저장, 보여주기, 탐색과 관련된 설정 섹션입니다."
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr ""
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19373,3 +19525,35 @@ msgstr "MPEG4 가속"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "h264 가속"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr ""

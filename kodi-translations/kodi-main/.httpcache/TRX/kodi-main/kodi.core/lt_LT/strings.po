@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-31 07:55+0000\n"
+"PO-Revision-Date: 2016-10-11 08:48+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -887,6 +887,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Siužetas"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -1934,7 +1935,7 @@ msgstr "Reikalingas optinių diskų įrenginys, norint atkurti šį vaizdo įra�
 
 msgctxt "#437"
 msgid "Removable disk"
-msgstr "Keičiamasis diskas"
+msgstr "Išorinis diskas"
 
 msgctxt "#438"
 msgid "Opening file"
@@ -4953,7 +4954,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Tęsti nuo %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Atkurti nuo pradžių"
@@ -5489,7 +5491,7 @@ msgstr "Ar norite išlaikyti šį pakeitimą?"
 #: unknown
 msgctxt "#13112"
 msgid "High quality upscaling"
-msgstr "Aukštos kokybės raiškos keitimas"
+msgstr "Aukštos kokybės raiškos didinimas"
 
 #: unknown
 msgctxt "#13113"
@@ -6499,6 +6501,19 @@ msgid "Add art"
 msgstr "Pridėti iliustraciją"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Garsų aukščio korekcijos riba"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "Kai greičio pokytis viršys šią ribą, bus pritaikytas garsų aukščio korekcijos filtras. Tai leis išvengti \"burundukų balsų\" efekto, kuris paprastai atsiranda pagreitinus atkūrimą."
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Uždelsimas po skleistinės dažnio keitimo"
@@ -6977,8 +6992,8 @@ msgid "Security"
 msgstr "Apsauga"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Įvesties įrenginiai"
+msgid "Devices"
+msgstr "Įrenginiai"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7148,6 +7163,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Regionas C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Įvestis"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7202,6 +7223,16 @@ msgstr "Sistemos nustatymai"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profilio nustatymai"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Medija"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Medijos nustatymai"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7259,6 +7290,11 @@ msgid "Network Control"
 msgstr "Tinklo valdymas"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Tvarkyti šaltinius"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Veiksmai"
@@ -7289,6 +7325,16 @@ msgid "Download Services"
 msgstr "Atsisiuntimo paslaugos"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Vaizdo biblioteka"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Muzikos biblioteka"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Sąrašai ir rodiniai"
@@ -7297,6 +7343,21 @@ msgstr "Sąrašai ir rodiniai"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metaduomenys"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Vaizdo įrašai..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Muzika..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Nuotraukos..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7713,8 +7774,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Baigiamasis apdorojimas"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Įvestis"
@@ -8068,12 +8130,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Išjungta"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Automatiškai"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Įjungta"
@@ -8347,14 +8404,20 @@ msgstr "MMAL - Bob (pusė)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - greitas judesys"
+msgid "Bob (half)"
+msgstr "Bob (pusė)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Greitas judesys (dvigubas)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Išplėstinis (pusė)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Išplėstinis"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9315,10 +9378,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Pašalintas"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "Televizija"
+msgid "TV channels"
+msgstr "TV kanalai"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9330,10 +9394,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Rodyti dienų"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radijas"
+msgid "Radio channels"
+msgstr "Radijo kanalai"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9595,8 +9660,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Paleidžiamos foninės gijos"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Peržiūrėti laikmačio imformaciją"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Redaguoti laikmatį"
@@ -9750,6 +9825,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Jums reikia imtuvo, posistemės programinės įrangos ir priedo, kad posistemė galėtų naudoti PVR funkciją. Apsilankykite http://kodi.wiki/view/PVR, norėdami sužinoti daugiau."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV gidas"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radijo gidas"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -12427,17 +12514,17 @@ msgstr "Nauja taisyklė..."
 #: addons/skin.estuary/1080i/SmartPlaylistEditor.xml
 msgctxt "#21424"
 msgid "Items must match"
-msgstr "Elementai turi sutapti pagal"
+msgstr "Turi atitikti"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#21425"
 msgid "all of the rules"
-msgstr "visas taisykles"
+msgstr "visos taisyklės"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#21426"
 msgid "one or more of the rules"
-msgstr "vieną ar daugiau taisyklių"
+msgstr "viena ar daugiau taisyklių"
 
 #: addons/skin.estuary/1080i/SmartPlaylistEditor.xml
 msgctxt "#21427"
@@ -12488,7 +12575,7 @@ msgstr "%i elementų"
 
 msgctxt "#21437"
 msgid "New smart playlist..."
-msgstr "Naujas išmanusis grojaraštis..."
+msgstr "Naujas išmanusis grojaraštis"
 
 msgctxt "#21438"
 msgid "%c Drive"
@@ -15379,6 +15466,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Valdiklių profiliai"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Išbandyti vibraciją"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Aktyvuoti visų valdiklių vibracijos varikliukus."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15446,6 +15545,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Suporuokite savo valdiklius su įvairiais skirtingų žaidimų sistemų įvesties įrenginiais."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Priekiniai mygtukai"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Šoniniai mygtukai"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Gaidukai"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Analoginės svirtys"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Išjungti valdiklius išeinant"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Išeinant išjungia visus valdiklius, kurie tai palaiko."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -17277,13 +17413,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Įjungti UPnP valdymo tašką. Tai leis perduoti media srautą į bet kurį UPnP klientą ir valdyti jo atkūrimą."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Šioje kategorijoje yra žiniatinklio serverio paslaugos nustatymai."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Šioje kategorijoje yra nustatymai, skirti žiniatinklio serverio ir programos valdymo paslaugų tvarkymui."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17626,7 +17762,7 @@ msgid ""
 "important notifications."
 msgstr "Konfigūruoti vartotojo sąsajos garsų, tokių kaip meniu navigacija ar svarbūs pranešimai, atkūrimą."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18745,6 +18881,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Priedams bus suteikta prieiga prie asmeninių duomenų saugomų šiame įrenginyje. Leisdami diegimą, jūs sutinkate, kad esate pats atsakingas dėl bet kokio duomenų praradimo, nepageidautinos elgsenos ar įrenginiui padarytos žalos. Tęsti?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Aukštos kokybės raiškos mažinimas"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Įjungti aukštos kokybės paveikslėlių raiškos mažinimą (naudoja daugiau atminties ir nestipriai įtakoja našumą)."
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19277,13 +19429,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Skyrius, kuriame yra media įrašų atkūrimo nustatymai"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Skyrius, kuriame yra nustatymai, skirti media įrašų informacijos surinkimui, saugojimui, atvaizdavimui ir naršymui"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Skyrius, kuriame yra nustatymai, skirti šaltinių tvarkymui bei media įrašų informacijos surinkimui, saugojimui, atvaizdavimui ir naršymui"
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19373,3 +19525,35 @@ msgstr "Spartinti MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Spartinti h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Ši kategorija suteikia prieigą prie šaltinių valdymo lango ir bibliotekos duomenų bazių nustatymų."
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti vaizdo įrašų šaltinius."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti muzikos šaltinius."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti nuotraukų šaltinius."

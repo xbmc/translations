@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Translators:
 # Anton Fedchin, 2015
-# Anton Fedchin, 2015
+# Anton Fedchin, 2015-2016
 # Dmitry Vilesov <vilesovds@gmail.com>, 2015
 # Fedor Odintsov <fadmin@list.ru>, 2016
 # feruk <witu.900@mail.ru>, 2015
@@ -9,17 +9,19 @@
 # RabinoVich, 2015
 # Roman Miroshnychenko <romanvm@yandex.ru>, 2015
 # Romans Pokrovskis <motivated.it@gmail.com>, 2016
+# Serge Kukharski, 2016
 # Serge Rodionov <buzzzzer@gmail.com>, 2016
 # Vasiliy Gurev, 2016
 # Vasiliy Gurev, 2016
 # feruk <witu.900@mail.ru>, 2015
+# Антоха Чудаков <xsandercage2@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-01 14:11+0000\n"
-"Last-Translator: Serge Rodionov <buzzzzer@gmail.com>\n"
+"PO-Revision-Date: 2016-10-12 12:12+0000\n"
+"Last-Translator: Anton Fedchin\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/teamxbmc/kodi-main/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -732,7 +734,7 @@ msgstr "Режим показа видео формата 4:3"
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#174"
 msgid "Compiled:"
-msgstr "Сборник:"
+msgstr "Сборка:"
 
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/1080i/Variables.xml
 msgctxt "#175"
@@ -754,7 +756,7 @@ msgstr "Успешно запущен %s"
 #: xbmc/Application.cpp
 msgctxt "#178"
 msgid "%s has been successfully started."
-msgstr "Успешно запущен %s."
+msgstr "Был успешно запущен %s."
 
 #: xbmc/media/MediaTypes.cpp
 msgctxt "#179"
@@ -897,6 +899,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Сюжет"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -2546,7 +2549,7 @@ msgstr "Дата создания"
 #: xbmc/utils/SortUtils.cpp
 msgctxt "#578"
 msgid "Artist / Year"
-msgstr "Исполнитель/год"
+msgstr "Исполнитель / год"
 
 msgctxt "#580"
 msgid "Sort direction"
@@ -2968,7 +2971,7 @@ msgstr "Подробный журнал подсистемы [B]Видео[/B]"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#681"
 msgid "Verbose logging for the [B]Webserver[/B] component"
-msgstr "Подробное ведение журнала для  компонента [B]Вебсервера[/ B] "
+msgstr "Подробное ведение журнала для  компонента [B]Веб-сервера[/ B] "
 
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3484,7 +3487,7 @@ msgstr "Правило таймера (по программе)"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#828"
 msgid "Timer rule deleted"
-msgstr "Условие таймера удалено"
+msgstr "Правило таймера удалено"
 
 #. Weekday representation
 #: xbmc/dialogs/GUIDialogPVRTimerWeekdaysSettings.cpp
@@ -4963,7 +4966,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Продолжить с %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Воспроизвести с начала"
@@ -6509,6 +6513,19 @@ msgid "Add art"
 msgstr "Добавить иллюстрации"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Задержка после изменения частоты обновления"
@@ -6987,13 +7004,13 @@ msgid "Security"
 msgstr "Безопасность"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Устройства ввода"
+msgid "Devices"
+msgstr "Устройства"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
 msgid "Power saving"
-msgstr "Экономия[CR]энергии"
+msgstr "Энергосбережение"
 
 #: system/settings/settings.xml
 msgctxt "#14096"
@@ -7158,6 +7175,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Регион C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Ввод"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7186,7 +7209,7 @@ msgstr "ТВ"
 #: system/settings/settings.xml
 msgctxt "#14205"
 msgid "TV settings"
-msgstr "Настройки TV"
+msgstr "Настройки ТВ"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -7212,6 +7235,16 @@ msgstr "Системные настройки"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Настройки профиля"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Медиа"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Настройки медиатеки"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7251,7 +7284,7 @@ msgstr "Аудио"
 #: system/settings/settings.xml
 msgctxt "#14222"
 msgid "Regional"
-msgstr "Региональный"
+msgstr "Региональные"
 
 #: system/settings/settings.xml
 msgctxt "#14223"
@@ -7269,6 +7302,11 @@ msgid "Network Control"
 msgstr "Управление сетью"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Управление источниками"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Действия"
@@ -7276,7 +7314,7 @@ msgstr "Действия"
 #: system/settings/settings.xml
 msgctxt "#14231"
 msgid "Processing"
-msgstr "Идет обработка"
+msgstr "Обработка"
 
 #: system/settings/settings.xml
 msgctxt "#14232"
@@ -7296,7 +7334,17 @@ msgstr "Blu-ray"
 #: system/settings/settings.xml
 msgctxt "#14235"
 msgid "Download Services"
-msgstr ""
+msgstr "Загрузить сервисы"
+
+#: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Медиатека видео"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Музыкальная библиотека"
 
 #: system/settings/settings.xml
 msgctxt "#14240"
@@ -7307,6 +7355,21 @@ msgstr "Списки и Виды"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Метаданные"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Видео..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Музыка..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Изображения..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7366,7 +7429,7 @@ msgstr "Отладка"
 #: system/settings/settings.xml
 msgctxt "#14270"
 msgid "Unit Formats"
-msgstr "Еденица измерения"
+msgstr "Форматы"
 
 #: system/settings/settings.xml
 msgctxt "#14271"
@@ -7723,8 +7786,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Постобработка"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Ввод"
@@ -8078,12 +8142,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Выкл."
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Авто"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Вкл."
@@ -8357,14 +8416,20 @@ msgstr "MMAL - Bob (1 поле)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Fast motion (double)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - расширен. (часть)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - расширен."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -8868,19 +8933,19 @@ msgstr "Неизвестный канал %u"
 #: system/settings/settings.xml xbmc/pvr/PVRMananger.cpp
 msgctxt "#19086"
 msgid "Instant recording action"
-msgstr ""
+msgstr "Быстрая запись"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
 msgctxt "#19087"
 msgid "Record current show (if guide data available)"
-msgstr ""
+msgstr "Записывать текущую передачу (если данные доступны)"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
 msgctxt "#19088"
 msgid "Record for a fixed period of time (Instant recording duration)"
-msgstr ""
+msgstr "Записывать фиксированный промежуток времени"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
@@ -8892,19 +8957,19 @@ msgstr "Спросить, что нужно сделать"
 #: xbmc/pvr/PVRMananger.cpp
 msgctxt "#19090"
 msgid "Record the next %d minutes"
-msgstr ""
+msgstr "Записывать следующие %d минут"
 
 #. Label for "Instant recording action" dialog settings value
 #: xbmc/pvr/PVRMananger.cpp
 msgctxt "#19091"
 msgid "Record current show (%s)"
-msgstr ""
+msgstr "Записывать текущую передачу (%s)"
 
 #. Label for "Instant recording action" dialog settings value
 #: xbmc/pvr/PVRMananger.cpp
 msgctxt "#19092"
 msgid "Record next show (%s)"
-msgstr ""
+msgstr "Записывать следующую передачу (%s)"
 
 #. Instant recording summary. Expands to "Instant recording: <recording start
 #. and end times>", for example "Instant recording: 31/05/2016 from 9:00 to
@@ -9325,10 +9390,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Удалено"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "ТВ"
+msgid "TV channels"
+msgstr "Телеканалы"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9340,10 +9406,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Количество дней"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Радио"
+msgid "Radio channels"
+msgstr "Радиостанции"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9605,8 +9672,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Запуск фоновых процессов"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Показать информацию таймера"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Изменить таймер"
@@ -9674,7 +9751,7 @@ msgstr "Не удалось обновить телепрограмму для �
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19255"
 msgid "%d scheduled"
-msgstr ""
+msgstr "%d запланировано"
 
 #. for a timer rule or timer to indicate this item has completed the intended
 #. recordings. For use in "status" fields.
@@ -9760,6 +9837,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Для использования функций PVR необходим тюнер, серверное ПО и соответствующее дополнение. Посетите http://kodi.wiki/view/PVR для получения дополнительной информации."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "Телепрограмма"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Программа радио"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -11507,7 +11596,7 @@ msgstr "Не найдено видеофайлов по этому пути."
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#20350"
 msgid "%s (%s votes)"
-msgstr ""
+msgstr "%s (%s голосов)"
 
 #: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp xbmc/video/ContextMenus.h
 msgctxt "#20351"
@@ -12015,7 +12104,7 @@ msgstr "Киноцикл"
 #: system/settings/settings.xml
 msgctxt "#20458"
 msgid "Show movie sets"
-msgstr ""
+msgstr "Показывать наборы фильмов"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -12070,7 +12159,7 @@ msgstr "Оставить текущий цикл (%s)"
 #: system/settings/settings.xml
 msgctxt "#20470"
 msgid "Include sets containing a single movie"
-msgstr ""
+msgstr "Включая циклы сожержащие единственный фильм"
 
 #: system/settings/settings.xml
 msgctxt "#20471"
@@ -14098,7 +14187,7 @@ msgstr "Запуск…"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24995"
 msgid "Orphaned"
-msgstr ""
+msgstr "Заброшено"
 
 #: system/settings/settings.xml
 msgctxt "#24996"
@@ -14182,7 +14271,7 @@ msgstr "Глава %u"
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25011"
 msgid "Commercial"
-msgstr ""
+msgstr "Реклама"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25012"
@@ -14719,13 +14808,13 @@ msgstr "Автор слов"
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
-msgstr ""
+msgstr "Оркестровые группы"
 
 #. Roles from music contributor
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
-msgstr ""
+msgstr "Роли"
 
 #: unknown
 msgctxt "#33001"
@@ -15374,13 +15463,13 @@ msgstr "Не использовать пользовательскую раск�
 #: xbmc/addons/Addon.cpp
 msgctxt "#35010"
 msgid "Peripheral libraries"
-msgstr ""
+msgstr "Библиотеки периферии"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
 msgid "Game add-ons"
-msgstr ""
+msgstr "Игровые дополнения"
 
 #. Name of controller add-ons
 #: addons/skin.confluence/720p/DialogGameControllers.xml xbmc/addons/Addon.cpp
@@ -15388,6 +15477,18 @@ msgstr ""
 msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Профили контроллера"
+
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Проверка вибро"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Активировать вибро на всех контроллерах"
 
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -15457,6 +15558,43 @@ msgid ""
 "systems."
 msgstr ""
 
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Лицевые кнопки"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Боковые кнопки"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Курки"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Аналоговые стики"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Отключать контроллеры при выходе"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Отключать любой контроллер при выходе, если он это поддерживает"
+
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
 msgctxt "#35090"
@@ -15473,53 +15611,53 @@ msgstr "Нажмите %s (%d)"
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35092"
 msgid "Move %s up"
-msgstr ""
+msgstr "Переместить %s вверх"
 
 #. Analog stick up prompt with timeout. %s - analog stick name, %d - seconds
 #. left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35093"
 msgid "Move %s up (%d)"
-msgstr ""
+msgstr "Переместить %s вверх (%d)"
 
 #. Analog stick down prompt without timeout. %s - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35094"
 msgid "Move %s down"
-msgstr ""
+msgstr "Переместить %s вниз"
 
 #. Analog stick down prompt with timeout. %s - analog stick name, %d - seconds
 #. left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35095"
 msgid "Move %s down (%d)"
-msgstr ""
+msgstr "Переместить %s вниз (%d)"
 
 #. Analog stick right prompt without timeout. %s - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35096"
 msgid "Move %s right"
-msgstr ""
+msgstr "Переместить %s вправо"
 
 #. Analog stick right prompt with timeout. %s - analog stick name, %d -
 #. seconds left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35097"
 msgid "Move %s right (%d)"
-msgstr ""
+msgstr "Переместить %s вправо (%d)"
 
 #. Analog stick left prompt without timeout. %s - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35098"
 msgid "Move %s left"
-msgstr ""
+msgstr "Переместить %s влево"
 
 #. Analog stick left prompt with timeout. %s - analog stick name, %d - seconds
 #. left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35099"
 msgid "Move %s left (%d)"
-msgstr ""
+msgstr "Переместить %s влево (%d)"
 
 #: system/settings/settings.xml
 msgctxt "#35100"
@@ -15943,7 +16081,7 @@ msgstr "Выбор языка субтитров по умолчанию при 
 #: system/settings/settings.xml
 msgctxt "#36121"
 msgid "This category contains the settings for how media lists are displayed."
-msgstr "Настройки отображения списков медиа."
+msgstr "Категория содержит настройки отображения списков медиатеки."
 
 #. Description of setting with label #13306 "Show parent folder items"
 #: system/settings/settings.xml
@@ -16266,7 +16404,7 @@ msgstr "Разрешить изменять частоту обновления 
 #: system/settings/settings.xml
 msgctxt "#36165"
 msgid "Delay of reset event after a change of refresh rate"
-msgstr ""
+msgstr "Задержка сброса событий после изменения частоты обновления"
 
 #. Description of setting with label #13510 "Sync playback to display"
 #: system/settings/settings.xml
@@ -17287,13 +17425,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Включение управления по UPnP. Позволяет передавать медиафайлы на любой клиент UPnP и управлять его воспроизведением."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Настройки службы веб-сервера."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr ""
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17636,7 +17774,7 @@ msgid ""
 "important notifications."
 msgstr "Выбрать, когда воспроизводить звуки интерфейса, такие как звуки навигации и важных сообщений."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18100,7 +18238,7 @@ msgstr "Включить обработку ЦОС аудио"
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
-msgstr ""
+msgstr "Установите количество шагов регулировки громкости"
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -18453,7 +18591,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36564"
 msgid "3D LUT"
-msgstr ""
+msgstr "3D LUT"
 
 #. Description of setting "System -> Video output -> 3D LUT" with label #36564
 #: system/settings/settings.xml
@@ -18476,7 +18614,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36568"
 msgid "Whitepoint"
-msgstr ""
+msgstr "Баланс белого"
 
 #. Description of setting "System -> Video output -> Whitepoint" with label
 #. #36568
@@ -18488,7 +18626,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36570"
 msgid "Primaries"
-msgstr ""
+msgstr "Первичные"
 
 #. Description of setting "System -> Video output -> Primaries" with label
 #. #36570
@@ -18500,7 +18638,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36572"
 msgid "Gamma mode"
-msgstr ""
+msgstr "Режим гамма"
 
 #. Description of setting "System -> Video output -> Gamma mode" with label
 #. #36572
@@ -18523,7 +18661,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36576"
 msgid "Lookup table size"
-msgstr ""
+msgstr "Размер таблицы просмотра"
 
 #. Description of setting "System -> Video output -> Lookup table size" with
 #. label #36576
@@ -18536,7 +18674,7 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
 msgid "3D LUT file"
-msgstr ""
+msgstr "Файл 3D LUT"
 
 # Dialog title for ICC display profile file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -18552,11 +18690,11 @@ msgstr "BT.1886"
 
 msgctxt "#36583"
 msgid "Input offset"
-msgstr ""
+msgstr "Смещение ввода"
 
 msgctxt "#36584"
 msgid "Output offset"
-msgstr ""
+msgstr "Смещение вывода"
 
 msgctxt "#36585"
 msgid "Absolute"
@@ -18566,7 +18704,7 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
 msgctxt "#36586"
 msgid "D65 (standard)"
-msgstr ""
+msgstr "D65 (standard)"
 
 msgctxt "#36587"
 msgid "D93 (Japanese NTSC)"
@@ -18576,7 +18714,7 @@ msgstr "D93 (NTSC-J)"
 #: xbmc/video/dialogs/GUIDialogCMSSettings.cpp
 msgctxt "#36588"
 msgid "Automatic"
-msgstr ""
+msgstr "Автоматически"
 
 msgctxt "#36589"
 msgid "HDTV (BT.709)"
@@ -18614,7 +18752,7 @@ msgstr "256x256x256"
 
 msgctxt "#36597"
 msgid "%1.2f"
-msgstr ""
+msgstr "%1.2f"
 
 #. Description of setting with label #36099 "Dither"
 #: system/settings/settings.xml
@@ -18754,6 +18892,22 @@ msgid ""
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Дополнениям будет предоставлен доступ к персональным данным, хранящимся на этом устройстве. Подтверждая, вы соглашаетесь, что вы несете полную ответственность за любую потерю данных, нежелательное поведение, или повреждение устройства. Продолжить?"
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Высококачественный даунскейлинг"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Включает высококачественное масштабирование изображения (требует больше памяти и влияет на производительность)."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -19172,12 +19326,12 @@ msgstr "Установить мой рейтинг"
 #: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
-msgstr ""
+msgstr "Выбор источника сведений"
 
 #: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
 msgctxt "#38025"
 msgid "Choose information provider"
-msgstr ""
+msgstr "Выбрать источник сведений"
 
 #: xbmc/view/GUIViewStateVideo.cpp
 msgctxt "#38026"
@@ -19203,7 +19357,7 @@ msgstr ""
 #: system/settings/rbp.xml
 msgctxt "#38029"
 msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr ""
+msgstr "Разрешить режимы HDMI в Full HD для стереоскопического 3D"
 
 #. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
 #. label #38029
@@ -19227,28 +19381,28 @@ msgstr "Видеопоток"
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#38032"
 msgid "Angle"
-msgstr ""
+msgstr "Угол обзора"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38033"
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 #. Orchestra playing on the recording (if present)
 msgctxt "#38034"
 msgid "Orchestra"
-msgstr ""
+msgstr "Оркестровая группа"
 
 #. Lyricist that wrote the lyrics of the song (if present)
 msgctxt "#38035"
 msgid "Lyricist"
-msgstr ""
+msgstr "Автор слов"
 
 #. Remixer of the song (if present)
 msgctxt "#38036"
 msgid "Remixer"
-msgstr ""
+msgstr "Автор ремикса"
 
 #. Arranger of the song (if present)
 msgctxt "#38037"
@@ -19258,7 +19412,7 @@ msgstr "Аранжировщик"
 #. Engineer of the song (if present)
 msgctxt "#38038"
 msgid "Engineer"
-msgstr ""
+msgstr "Звукорежиссер"
 
 #. Producer of the song (if present)
 msgctxt "#38039"
@@ -19268,12 +19422,12 @@ msgstr "Продюсер"
 #. DJMixer of the song (if present)
 msgctxt "#38040"
 msgid "DJMixer"
-msgstr ""
+msgstr "Диджей"
 
 #. Mixer of the song (if present)
 msgctxt "#38041"
 msgid "Mixer"
-msgstr ""
+msgstr "Автор сведения"
 
 #. Missing artist name
 #: music/MusicDatabase.cpp
@@ -19285,15 +19439,15 @@ msgstr "[Отсутствует]"
 #: system/settings/settings.xml
 msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
-msgstr "Настройки воспроизведения"
+msgstr "Раздел настройки воспроизведения"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr ""
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Раздел настроек источников; сбора, хранения, отображения и просмотра медиа информации."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19383,3 +19537,35 @@ msgstr "Ускорение MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Ускорение h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr ""

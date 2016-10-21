@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-01 05:07+0000\n"
+"PO-Revision-Date: 2016-09-15 05:38+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -892,6 +892,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "剧情"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4958,7 +4959,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "从 %s 处继续播放"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "从头播放"
@@ -6321,7 +6323,7 @@ msgstr "仅播放此项"
 #: system/settings/settings.xml
 msgctxt "#13435"
 msgid "Enable HQ scalers for scaling above"
-msgstr "启用高清倍线当缩放比大于"
+msgstr "启用高品质缩放器当缩放比大于"
 
 #: system/settings/settings.xml
 msgctxt "#13437"
@@ -6502,6 +6504,19 @@ msgstr "无艺术图片"
 msgctxt "#13516"
 msgid "Add art"
 msgstr "添加艺术图片"
+
+#: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "音高修正阈值"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "当速度变化超过该阈值，将使用音高修正滤波，以避免视频加速引起的噪音。"
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -6982,8 +6997,8 @@ msgid "Security"
 msgstr "安全"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "输入设备"
+msgid "Devices"
+msgstr "设备"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7153,6 +7168,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "C 区"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "输入"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7207,6 +7228,16 @@ msgstr "系统设置"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "用户配置设置"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "媒体"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "媒体设置"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7264,6 +7295,11 @@ msgid "Network Control"
 msgstr "网络控制"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "管理源"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "操作"
@@ -7294,6 +7330,16 @@ msgid "Download Services"
 msgstr "下载服务"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "视频资料库"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "音乐资料库"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "列表 & 视图"
@@ -7302,6 +7348,21 @@ msgstr "列表 & 视图"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "元数据"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "视频..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "音乐..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "图片..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7718,8 +7779,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "后处理"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "输入"
@@ -8073,12 +8135,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "关"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "自动"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "开"
@@ -8352,14 +8409,20 @@ msgstr "MMAL - 场内插值（半）"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - 快速运动"
+msgid "Bob (half)"
+msgstr "场内插值（半）"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - 快速运动（倍速）"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - 高级（半）"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - 高级"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9320,10 +9383,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "已删除"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "电视"
+msgid "TV channels"
+msgstr "电视频道"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9335,10 +9399,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "显示日"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "电台"
+msgid "Radio channels"
+msgstr "电台频道"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9600,8 +9665,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "启动后台线程"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "浏览定时器信息"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "编辑定时器"
@@ -9755,6 +9830,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "你需要一个电视卡、后端软件，和一个与后端相应的插件才能使用 PVR。详情请访问 http://kodi.wiki/view/PVR。"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "电视指南"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "电台指南"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -15384,6 +15471,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "控制器配置"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "测试振动"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "激活所有控制器的振动马达。"
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15451,6 +15550,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "为不同游戏系统的多项输入设备配对控制器"
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "正面按钮"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "侧面按钮"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "扳机键"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "模拟摇杆"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "退出时关闭控制器电源"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "退出时关闭所有支持的控制器电源"
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -16177,7 +16313,7 @@ msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
 " A value below 5% makes little sense as video is processed with high GPU "
 "load without any visible picture quality improvements."
-msgstr ""
+msgstr "当放大视频达到此比例时使用高品质缩放器。数值小于 5% 时意义不大，因为加大 GPU 负荷却无明显图像质量改善。"
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -17282,13 +17418,13 @@ msgid ""
 "client and control it's playback."
 msgstr "启用 UPnP 控制点。这将允许你发送流媒体到任何 UPnP 客户端并控制它的播放。"
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "此功能区包含 web 服务器服务处理相关设置。"
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "此功能区包含 web 服务器服务和应用控制处理相关设置。"
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17631,7 +17767,7 @@ msgid ""
 "important notifications."
 msgstr "设置用户界面声音效果处理，如菜单导航和重要通知。"
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18443,12 +18579,12 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr ""
+msgstr "使用一个预先计算好的 3D 查找表校正视频色彩，或通过显示器配置文件计算每一视频的转换。推荐使用 3D 查找表以利用 ArgyllCMS 的高级特性和高精确度。基于显示器配置文件的校正用于测试不同的参数，或仿真没有 3D 查找表时显示器设置。"
 
 #: system/settings/settings.xml
 msgctxt "#36564"
 msgid "3D LUT"
-msgstr "3D LUT"
+msgstr "3D 查找表"
 
 #. Description of setting "System -> Video output -> 3D LUT" with label #36564
 #: system/settings/settings.xml
@@ -18749,6 +18885,22 @@ msgid ""
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "插件将能访问此设备个人数据。允许即表示你同意自行承担数据丢失、未知问题或设备损坏的责任。继续吗？"
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "高品质降级"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "启用图片高品质降级（使用更多内存并有中度性能影响）"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -19282,13 +19434,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "媒体播放相关设置区"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "媒体信息获取、存储、显示和浏览相关设置区"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "源和媒体信息获取、存储、显示和浏览相关设置区"
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19378,3 +19530,35 @@ msgstr "MPEG4 加速"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "h264 加速"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "此功能区包含源管理访问窗口和资料库数据库相关设置"
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "提供视频源添加和管理功能。"
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "提供音乐源添加和管理功能。"
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "提供图片源添加和管理功能。"

@@ -4,16 +4,17 @@
 # yamanyandakure <hirosaki.no.nondakure@gmail.com>, 2015
 # Inoue DAISUKE, 2015-2016
 # Inoue DAISUKE, 2016
-# Kohji 'Shaolin' MATSUBAYASHI <shaolin@rhythmaning.org>, 2015
-# NekoGarfield, 2016
-# NekoGarfield, 2016
+# Kohji 'Shaolin' MATSUBAYASHI <shaolin@rhythmaning.org>, 2015-2016
+# garfield, 2016
+# garfield, 2016
+# garfield, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-29 13:43+0000\n"
-"Last-Translator: NekoGarfield\n"
+"PO-Revision-Date: 2016-08-31 03:53+0000\n"
+"Last-Translator: garfield\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/teamxbmc/kodi-main/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -891,6 +892,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "ストーリー"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4957,7 +4959,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "%s から再開"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "最初から再生"
@@ -6503,6 +6506,19 @@ msgid "Add art"
 msgstr "アートを追加"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "リフレッシュレート変更後に遅延させる"
@@ -6981,8 +6997,8 @@ msgid "Security"
 msgstr "セキュリティ"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "入力デバイス"
+msgid "Devices"
+msgstr "デバイス"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7152,6 +7168,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "リージョン C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "入力"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7206,6 +7228,16 @@ msgstr "システム設定"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "プロフィール設定"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "メディア"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "メディア設定"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7263,6 +7295,11 @@ msgid "Network Control"
 msgstr "ネットワークコントロール"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "ソースの管理"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "アクション"
@@ -7293,6 +7330,16 @@ msgid "Download Services"
 msgstr "ダウンロードサービス"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "ビデオライブラリ"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "ミュージックライブラリ"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "リスト&表示"
@@ -7301,6 +7348,21 @@ msgstr "リスト&表示"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "メタデータ"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "ビデオ..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "ミュージック..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "ピクチャー..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7717,8 +7779,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "ポストプロセス"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "入力"
@@ -8072,12 +8135,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "オフ"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "自動"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "オン"
@@ -8351,14 +8409,20 @@ msgstr "MMAL - Bob (half)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Fast motion (double)"
+msgid "IMX - Advanced (half)"
+msgstr ""
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9319,10 +9383,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "削除"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "テレビ"
+msgid "TV channels"
+msgstr "TVチャンネル"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9334,10 +9399,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "表示する日数"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "ラジオ"
+msgid "Radio channels"
+msgstr "ラジオチャンネル"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9599,8 +9665,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "バックグラウンドのスレッドを開始"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr ""
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "タイマーの編集"
@@ -9753,6 +9829,18 @@ msgctxt "#19272"
 msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr ""
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "番組表"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
 msgstr ""
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -14683,19 +14771,19 @@ msgstr "アドオンから周囲の交通情報メッセージを送信(kodiに�
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
-msgstr ""
+msgstr "編曲者"
 
 #. Music role category
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
-msgstr ""
+msgstr "作曲者"
 
 #. Music role category
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
-msgstr ""
+msgstr "指揮者"
 
 #. Music role category
 #: system/library/music/musicroles/DJ.xml
@@ -14707,13 +14795,13 @@ msgstr ""
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
-msgstr ""
+msgstr "作詞者"
 
 #. Music role category
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
-msgstr ""
+msgstr "オーケストラ"
 
 #. Roles from music contributor
 #: system/library/music/musicroles/index.xml
@@ -15383,6 +15471,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "コントローラープロファイル"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr ""
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr ""
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15449,6 +15549,43 @@ msgctxt "#35064"
 msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
+msgstr ""
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr ""
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr ""
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr ""
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr ""
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr ""
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
 msgstr ""
 
 #. Button prompt without timeout. %s - button name
@@ -15549,13 +15686,13 @@ msgstr ""
 #: xbmc/addons/AddonCallbacksPVR.cpp
 msgctxt "#35508"
 msgid "Access denied."
-msgstr ""
+msgstr "アクセスが拒否されました。"
 
 #. connection state "connecting" (asynchronous addon start)
 #: xbmc/addons/AddonCallbacksPVR.cpp
 msgctxt "#35509"
 msgid "Connecting to backend."
-msgstr ""
+msgstr "バックエンドに接続中です。"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
@@ -15593,12 +15730,12 @@ msgstr ""
 #: system/peripherals.xml
 msgctxt "#36007"
 msgid "Devices to power on during startup"
-msgstr ""
+msgstr "起動時に電源ONにするデバイス"
 
 #: system/peripherals.xml
 msgctxt "#36008"
 msgid "Devices to power off during shutdown"
-msgstr ""
+msgstr "終了時に電源OFFにするデバイス"
 
 #: system/peripherals.xml
 msgctxt "#36009"
@@ -15792,7 +15929,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36099"
 msgid "Dithering"
-msgstr ""
+msgstr "ディザ"
 
 #: system/settings/settings.xml
 msgctxt "#36100"
@@ -17281,13 +17418,13 @@ msgid ""
 "client and control it's playback."
 msgstr ""
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Web サーバーサービスに関する設定のカテゴリーです。"
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr ""
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17630,7 +17767,7 @@ msgid ""
 "important notifications."
 msgstr ""
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18049,7 +18186,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Audio DSP manager..."
-msgstr ""
+msgstr "オーディオ DSP マネージャー..."
 
 #. Description of setting with label 36436 "Audio DSP manager..."
 #: system/settings/settings.xml
@@ -18087,7 +18224,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36441"
 msgid "Enable audio DSP processing"
-msgstr ""
+msgstr "オーディオ DSP 処理を有効にする"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -18724,7 +18861,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36615"
 msgid "Unknown sources"
-msgstr ""
+msgstr "不明なソース"
 
 #. Description of setting with label #36615 "Unknown sources"
 #: system/settings/settings.xml
@@ -18747,6 +18884,22 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
+msgstr ""
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "高品質ダウンスケーリング"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
 msgstr ""
 
 #: xbmc/media/MediaType.cpp
@@ -18931,7 +19084,7 @@ msgstr ""
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37022"
 msgid "UPnP player"
-msgstr ""
+msgstr "UPnP プレーヤー"
 
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37023"
@@ -19214,7 +19367,7 @@ msgstr ""
 #: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
 msgctxt "#38031"
 msgid "Video stream"
-msgstr ""
+msgstr "ビデオストリーム"
 
 #. Label for an option to select the angle to play if current disc has more
 #. than one angle
@@ -19281,13 +19434,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "メディアの再生に関するセクション"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "メディア情報に関するセクション"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr ""
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19377,3 +19530,35 @@ msgstr "MPEG4 アクセレレート"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "h264 アクセレレート"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr ""

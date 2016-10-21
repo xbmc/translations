@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-16 23:09+0000\n"
+"PO-Revision-Date: 2016-09-17 17:48+0000\n"
 "Last-Translator: Gade <christian_gade@hotmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -893,6 +893,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Handling"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4959,7 +4960,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Fortsæt fra %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Afspil fra start"
@@ -6505,6 +6507,19 @@ msgid "Add art"
 msgstr "Tilføj kunst"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Forsinkelse efter ændring af opdateringsfrekvens"
@@ -6983,8 +6998,8 @@ msgid "Security"
 msgstr "Sikkerhed"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Inputenheder"
+msgid "Devices"
+msgstr "Enheder"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7154,6 +7169,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Region C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Inddata"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7208,6 +7229,16 @@ msgstr "System indstillinger"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profilindstillinger"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Medier"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Medieindstillinger"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7265,6 +7296,11 @@ msgid "Network Control"
 msgstr "Netværks kontrol"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Administrer kilder"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Handlinger"
@@ -7295,6 +7331,16 @@ msgid "Download Services"
 msgstr "Tjenester til download"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Videobibliotek"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Musikbibliotek"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Lister og visualiseringer"
@@ -7303,6 +7349,21 @@ msgstr "Lister og visualiseringer"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metadata"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Videoer..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Musik..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Billeder..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7521,12 +7582,12 @@ msgstr "Lyd DSP instillinger - Lytte modus"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15030"
 msgid "Audio DSP settings - Speaker / Output"
-msgstr ""
+msgstr "Lyd DSP indstillinger - Højtaler / Udgang"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15031"
 msgid "Audio DSP settings - Audio information"
-msgstr ""
+msgstr "Lyd DSP indstillinger - Lydinformation"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15033"
@@ -7546,17 +7607,17 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15037"
 msgid "Audio DSP settings - Pre-process"
-msgstr ""
+msgstr "Lyd DSP indstillinger - Forbehandling"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15038"
 msgid "Audio DSP settings - Miscellaneous"
-msgstr ""
+msgstr "Lyd DSP indstillinger - Diverse"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15039"
 msgid "Pre-processing setup..."
-msgstr ""
+msgstr "Opsætning af forbehandling..."
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#15040"
@@ -7582,7 +7643,7 @@ msgstr "Indhold:"
 #: addons/skin.estuary/1080i/Custom_1105_MusicOSDSettings.xml
 msgctxt "#15047"
 msgid "Audio DSP settings"
-msgstr ""
+msgstr "Lyd DSP indstillinger"
 
 #. Name of a list with amount of entries behind on GUI
 msgctxt "#15050"
@@ -7609,7 +7670,7 @@ msgstr ""
 #: addons/skin.estuary/1080i/DialogAudioDSPManager.xml
 msgctxt "#15058"
 msgid "Pre-processing"
-msgstr ""
+msgstr "Forbehandling"
 
 #. Chain select button name
 #: addons/skin.estuary/1080i/DialogAudioDSPManager.xml
@@ -7651,7 +7712,7 @@ msgstr "Anvend ændringer direkte"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#15065"
 msgid "No audio DSP modes available"
-msgstr ""
+msgstr "Ingen tilgængelige lyd DSP-tilstande"
 
 #. Button to disable all enabled modes on current selected type
 msgctxt "#15066"
@@ -7687,7 +7748,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15081"
 msgid "Process chain (with CPU usage)"
-msgstr ""
+msgstr "Behandlingskæde (med CPU-forbrug)"
 
 #. Audio DSP process chain indication
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -7719,8 +7780,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Efterbehandling"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Inddata"
@@ -7753,7 +7815,7 @@ msgstr "Placeringer"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15092"
 msgid "CPU usage for DSP"
-msgstr ""
+msgstr "CPU-forbrug for DSP"
 
 msgctxt "#15100"
 msgid "Library"
@@ -8074,12 +8136,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Fra"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Automatisk"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Til"
@@ -8353,14 +8410,20 @@ msgstr "MMAL - Bob (halv)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Hurtig bevægelse"
+msgid "Bob (half)"
+msgstr "Bob (halv)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Hurtig bevægelse (dobbelt)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Avanceret (halv)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Avanceret"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9228,7 +9291,7 @@ msgstr "til"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19161"
 msgid "any time"
-msgstr ""
+msgstr "enhver tid"
 
 msgctxt "#19162"
 msgid "Recording active"
@@ -9321,10 +9384,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Slettet"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "Tv-kanaler"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9336,10 +9400,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Dage at vise"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Radiokanaler"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9601,8 +9666,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Starter baggrundstråde"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Vis information om timer"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Rediger optagelse"
@@ -9756,6 +9831,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Det kræver en TV-tuner, backend soft og en Add-on for at backenden kan bruges til PVR. Se venligst http://kodi.wiki/view/PVR for mere info."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV guide"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radioguide"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -12739,12 +12826,12 @@ msgstr "Anvend"
 #: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21481"
 msgid "Audio track count"
-msgstr ""
+msgstr "Antal lydspor"
 
 #: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21482"
 msgid "Subtitle track count"
-msgstr ""
+msgstr "Antal undertekst-spor"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14183,12 +14270,12 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25012"
 msgid "Auto-skip off"
-msgstr ""
+msgstr "Auto-skip fra"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25013"
 msgid "Auto-skip on"
-msgstr ""
+msgstr "Auto-skip til"
 
 #: unused
 msgctxt "#29801"
@@ -14341,7 +14428,7 @@ msgstr "Horoskop"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29926"
 msgid "Adult hits"
-msgstr ""
+msgstr "Hits for voksne"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14371,7 +14458,7 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29931"
 msgid "Radio message"
-msgstr ""
+msgstr "Radiobesked"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14407,7 +14494,7 @@ msgstr "Blød musik"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29937"
 msgid "Adult hits"
-msgstr ""
+msgstr "Hits for voksne"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14419,7 +14506,7 @@ msgstr "Blød rock"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29939"
 msgid "Talk"
-msgstr ""
+msgstr "Snak"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15383,6 +15470,18 @@ msgstr "Add-ons til spil"
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
+msgstr "Profiler for controllere"
+
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Test rumlen"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
 msgstr ""
 
 #. Help text for controller window
@@ -15412,7 +15511,7 @@ msgstr ""
 #: addons/skin.confluence/720p/DialogGameControllers.xml
 msgctxt "#35058"
 msgid "Controller Configuration"
-msgstr ""
+msgstr "Konfiguration af controllere"
 
 #. Heading for controller buttons list in controller configuration window
 #: addons/skin.confluence/720p/DialogGameControllers.xml
@@ -15424,7 +15523,7 @@ msgstr "Knapper"
 #: xbmc/games/controllers/windows/GUIControllerList.cpp
 msgctxt "#35060"
 msgid "Reset controller profile"
-msgstr ""
+msgstr "Nulstil profil for controller"
 
 #. Prompt to reset a controller profile for all devices
 #: xbmc/games/controllers/windows/GUIControllerList.cpp
@@ -15437,13 +15536,13 @@ msgstr ""
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
-msgstr ""
+msgstr "Alle tilgængelige controller-profiler er installeret."
 
 #. Name of the setting that activates the controller configuration window
 #: system/settings/settings.xml
 msgctxt "#35063"
 msgid "Configure attached controllers"
-msgstr ""
+msgstr "Konfigurer tilsluttede controllere"
 
 #. Description for the controller window setting
 #: system/settings/settings.xml
@@ -15451,6 +15550,43 @@ msgctxt "#35064"
 msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
+msgstr ""
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr ""
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr ""
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr ""
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr ""
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr ""
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
 msgstr ""
 
 #. Button prompt without timeout. %s - button name
@@ -15827,7 +15963,7 @@ msgctxt "#36104"
 msgid ""
 "Select to change the skin specific settings. Which options are available for"
 " configuration depends on the features provided by the skin."
-msgstr ""
+msgstr "Vælg for at ændre skin-specifikke indstillinger. Hvilke muligheder der er mulige at konfigurere, afhænger af de funktioner, som skinnet tilbyder."
 
 #. Description of setting with label #15111 "Theme"
 #: system/settings/settings.xml
@@ -16247,7 +16383,7 @@ msgstr "Aktiver VideoToolbox hardware dekodning af videofiler."
 #: system/settings/settings.xml
 msgctxt "#36163"
 msgid "Show TV shows with no episodes when browsing the video library."
-msgstr ""
+msgstr "Vis tv-serier uden episoder når du browser videobiblioteket."
 
 #. Description of setting with label #170 "Adjust display refresh rate"
 #: system/settings/settings.xml
@@ -16922,7 +17058,7 @@ msgstr "Importer en XML fil ind i musik biblioteks databasen."
 #: system/settings/settings.xml
 msgctxt "#36264"
 msgid "This category contains the settings for how music playback is handled."
-msgstr ""
+msgstr "Kategori indeholdende indstillinger for håndtering af musikafspilning."
 
 #. Description of setting with label #489 "Play next song automatically"
 #: system/settings/settings.xml
@@ -17283,12 +17419,12 @@ msgid ""
 "client and control it's playback."
 msgstr ""
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
 msgstr ""
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
@@ -17632,7 +17768,7 @@ msgid ""
 "important notifications."
 msgstr "Vælg hvordan interfacelyde bliver håndteret, så som menunavigation og vigtige notifikationer."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18751,6 +18887,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr ""
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Højkvalitets nedskalering"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr ""
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19283,13 +19435,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Sektion indeholdende indstillinger for afspilning af medier"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Sektion indeholdende indstillinger for hvordan medie-information indsamles, lagres, vises og bliver navigeret"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr ""
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19378,4 +19530,36 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39003"
 msgid "Accelerate h264"
+msgstr ""
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
 msgstr ""

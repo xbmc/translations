@@ -6,12 +6,14 @@
 # Attila Zsigus <>, 2015
 # Balázs Meskó <meskobalazs@gmail.com>, 2015-2016
 # benewfy <benewfy@gmail.com>, 2015
+# frodo <bilbohu@gmail.com>, 2016
 # Daniel Uhrinyi <daniel.uhrinyi@gmail.com>, 2015
 # Dávid Eredics, 2015
 # Gábor Szurgent <szurgent@gmail.com>, 2016
 # Gábor Véninger <veninger.gabor@gmail.com>, 2015
 # lacko835 <szalai-laszlo@freemail.hu>, 2015
 # Lock Punk <lockpunk@gmail.com>, 2016
+# Márk Kökény <oregapamgroup@gmail.com>, 2016
 # Mátyás Demeter <mathias.demeter@gmail.com>, 2015
 # Varga József <vargajozsef71@gmail.com>, 2015
 # vargaviktor <viktor.varga@gmail.com>, 2015
@@ -21,8 +23,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-12 04:53+0000\n"
-"Last-Translator: Lock Punk <lockpunk@gmail.com>\n"
+"PO-Revision-Date: 2016-10-10 19:18+0000\n"
+"Last-Translator: frodo <bilbohu@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/teamxbmc/kodi-main/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -900,6 +902,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Tartalom"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4966,7 +4969,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Folytatás innen: %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Lejátszás az elejéről"
@@ -6512,6 +6516,19 @@ msgid "Add art"
 msgstr "Kép hozzáadása"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Hangmagasság korrekciós küszöb"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "A küszöb elérésekor a hangmagasság korrekciós szűrő bekapcsol. Ez megelőzi a felgyorsított videóknál a hangmagasság emelkedését."
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Késleltetés a képfrissítés cseréje után"
@@ -6990,8 +7007,8 @@ msgid "Security"
 msgstr "Biztonság"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Beviteli-eszközök"
+msgid "Devices"
+msgstr "Eszközök"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7161,6 +7178,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "C régió"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Bemenet"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7215,6 +7238,16 @@ msgstr "Rendszer beállítások"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profil beállításai"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Média"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Média beállítások"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7272,6 +7305,11 @@ msgid "Network Control"
 msgstr "Hálózati vezérlő"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Médiaforrások kezelése"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Műveletek"
@@ -7302,6 +7340,16 @@ msgid "Download Services"
 msgstr "Szolgáltatások letöltése"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Videótár"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Zenetár"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Listák és nézetek"
@@ -7310,6 +7358,21 @@ msgstr "Listák és nézetek"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metaadatok"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Videók..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Zenék..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Képek..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7726,8 +7789,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Utófeldolgozás"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Bemenet"
@@ -8081,12 +8145,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Ki"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Auto"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Be"
@@ -8360,14 +8419,20 @@ msgstr "MMAL - Bob (felezett)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - gyors mozgások"
+msgid "Bob (half)"
+msgstr "Bob (felezett)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - gyors mozágsok (dupla)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Haladó (felezett)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Haladó"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9328,10 +9393,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Törölve"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "TV csatornák"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9343,10 +9409,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Megjelenített napok"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Rádió"
+msgid "Radio channels"
+msgstr "Rádió csatornák"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9608,8 +9675,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "A háttér végrehajtási szálak elindítása"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Időzítiési információk"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Időzítés szerkesztése"
@@ -9763,6 +9840,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Szüksége van egy tunerre, háttérkiszolgáló programra, és egy kiegészítőre a háttérkiszolgálóhoz, hogy a PVR funkciót használni tudja. Kérem látogassa meg a http://kodi.wiki/view/PVR weboldalt további információért."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV műsorújság"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Rádió kalauz"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -15392,6 +15481,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Játékvezérlő profilok"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Teszt moraj"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Aktiválja a rezgő motorokat minden vezérlőnél."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15459,6 +15560,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Párosítsa a játékvezérlőit a különböző játékrendszerek bemeneti eszközeivel."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Arc gombok"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Váll gombok"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Indítójelek"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Analóg karok"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Kilépéskor kapcsolja ki a vezérlőket"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Kapcsoljon ki minden vezérlőt, amely támogatja ezt kilépéskor."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -17290,13 +17428,13 @@ msgid ""
 "client and control it's playback."
 msgstr "UPnP vezérlőpont engedélyezése. Ez lehetővé teszi a médiák lejátszását és vezérlését minden UPnP ügyfélnek."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Ez a kategória a webkiszolgáló szolgáltatás beállításait tartalmazza."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Ez a kategória a webszerver-szolgáltatás beállításait tartalmazza."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17639,7 +17777,7 @@ msgid ""
 "important notifications."
 msgstr "A kezelőfelület hangjainak kezelési módja, úgymint a navigáció és a fontosabb értesítések."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18758,6 +18896,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "A kiegészítők hozzáférést kapnak az eszközön található személyes adataihoz. Az engedélyezéssel beleegyezik, hogy egyedül Ön felelős bármilyen nemű adatvesztésért, nem kívánt működésért, vagy az eszközét érő károsodásért. Folytatja?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Magas minőségű szoftveres leskálázás"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Magas minőségű fotók szoftveres leskálázásának engedélyezése (több memóriát használ és közepesen erőforrás igényes)"
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19290,12 +19444,12 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Ez a csoport a médialejátszással kapcsolatos beállításokat tartalmazza"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
 msgstr "Ez a csoport tartalmazza azokat a beállításokat, melyek a médiainformációk beszerzését, tárolását és megjelenítését szabályozzák."
 
 #. Description of section #14203 "Customise"
@@ -19386,3 +19540,35 @@ msgstr "MPEG4 gyorsítás"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "h264 gyorsítás"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Ez a kategória az adatbázis kezelésével kapcsolatos beállításokat tartalmazza"
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Hozzáférést biztosít a filmek forrás beállításaihoz"
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Hozzáférést biztosít a zenék forrás beállításaihoz"
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Hozzáférést biztosít a képek forrás beállításaihoz"

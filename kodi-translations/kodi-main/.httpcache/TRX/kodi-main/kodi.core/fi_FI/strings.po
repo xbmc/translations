@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-20 10:19+0000\n"
+"PO-Revision-Date: 2016-09-29 10:07+0000\n"
 "Last-Translator: A B\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/teamxbmc/kodi-main/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
@@ -898,6 +898,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Juoni"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -1070,7 +1071,7 @@ msgstr "Päivitysnopeus"
 #: addons/skin.estuary/1080i/Home.xml
 msgctxt "#244"
 msgid "Full screen"
-msgstr "Kokoruutu"
+msgstr "Kokoruututila"
 
 msgctxt "#245"
 msgid ""
@@ -1590,7 +1591,7 @@ msgstr "Kaikki albumit"
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#359"
 msgid "Recently added albums"
-msgstr "Uusimmat albumit"
+msgstr "Viimeksi lisätyt albumit"
 
 #: system/settings/settings.xml
 msgctxt "#360"
@@ -3717,7 +3718,7 @@ msgstr "Medialähteen nimi"
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#1023"
 msgid "Browse for new share"
-msgstr "Valitse uusi sijainti"
+msgstr "Valitse sijainti"
 
 #: addons/skin.estuary/1080i/DialogNetworkSetup.xml
 #: addons/skin.estuary/1080i/SmartPlaylistRule.xml
@@ -4912,7 +4913,7 @@ msgstr "Kokoruudun video"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12006"
 msgid "Audio visualisation"
-msgstr "Audio visuaalisointi"
+msgstr "Äänen visualisointi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12008"
@@ -4964,7 +4965,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Jatka kohdasta %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Toista alusta"
@@ -5434,7 +5436,7 @@ msgstr "Odotetaan palvelujen käynnistymistä..."
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13033"
 msgid "MAC discovery"
-msgstr "MAC osoitteen löytäminen"
+msgstr "MAC-osoitteen löytäminen"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13034"
@@ -6510,6 +6512,19 @@ msgid "Add art"
 msgstr "Lisää kuva"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Äänen virekorjauksen kynnys"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "Virekorjausta käytetään, kun videon nopeusmuutos ylittää asetetun kynnysarvon. Virekorjauksella vältetään videon nopeuttamisesta aiheutuvat \"tikutaku\"-äänet."
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Viive virkistystaajuutta vaihdettaessa"
@@ -6692,7 +6707,7 @@ msgstr "Lähin suuri paikkakunta"
 #: system/settings/settings.xml
 msgctxt "#14025"
 msgid "Video/Audio/DVD cache - Hard disk"
-msgstr "Video/ääni/DVD välimuisti - Kovalevy"
+msgstr "Video/ääni/DVD-välimuisti - Kovalevy"
 
 #: system/settings/settings.xml
 msgctxt "#14026"
@@ -6788,7 +6803,7 @@ msgstr "%i %%"
 #: system/settings/settings.xml
 msgctxt "#14048"
 msgid "%i kbps"
-msgstr "%i kbps"
+msgstr "%i kbit/s"
 
 #: system/settings/settings.xml
 msgctxt "#14049"
@@ -6988,8 +7003,8 @@ msgid "Security"
 msgstr "Turvallisuus"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Syöttölaitteet"
+msgid "Devices"
+msgstr "Laitteet"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7159,6 +7174,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Alue C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Ohjaus"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7213,6 +7234,16 @@ msgstr "Järjestelmäasetukset"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profiiliasetukset"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Media"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Media-asetukset"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7270,6 +7301,11 @@ msgid "Network Control"
 msgstr "Verkonhallinta"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Medialähteet"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Toiminnot"
@@ -7300,6 +7336,16 @@ msgid "Download Services"
 msgstr "Latauspalvelut"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Videokirjasto"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Musiikkikirjasto"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Listat & näkymät"
@@ -7308,6 +7354,21 @@ msgstr "Listat & näkymät"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metatieto"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Videot..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Musiikki..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Kuvat..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7347,7 +7408,7 @@ msgstr "Äänen DSP"
 #: system/settings/settings.xml
 msgctxt "#14252"
 msgid "Audio Passthrough"
-msgstr "Ääni läpivienti"
+msgstr "Äänen läpivienti"
 
 #: system/settings/settings.xml
 msgctxt "#14255"
@@ -7724,8 +7785,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Jälkikäsittely"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Sisääntulo"
@@ -7801,7 +7863,7 @@ msgstr "Ulkoasun oletus"
 
 msgctxt "#15107"
 msgid "Buffering..."
-msgstr "Siirretään puskurimuistiin..."
+msgstr "Puskuroidaan..."
 
 #: system/settings/settings.xml
 msgctxt "#15108"
@@ -8079,12 +8141,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Pois päältä"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Automaattinen"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Päällä"
@@ -8358,14 +8415,20 @@ msgstr "MMAL - Bob (puoli)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Nopea liike"
+msgid "Bob (half)"
+msgstr "Bob (puoli)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Nopea liike (tuplattu)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Kehittynyt (puoli)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Kehittynyt"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -8417,7 +8480,7 @@ msgstr "Etsi samankaltaisia"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
-msgstr "Tuodaan opas asiakkailta"
+msgstr "Noudetaan ohjelmaopasta asiakasohjelmilta"
 
 #: addons/skin.estuary/1080i/VideoFullScreen.xml
 msgctxt "#19005"
@@ -8458,7 +8521,7 @@ msgstr "PVR-taustaosa"
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19013"
 msgid "Free to air"
-msgstr "Vapaa kanava"
+msgstr "Salaamaton kanava"
 
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19014"
@@ -8746,11 +8809,11 @@ msgstr "Lajittelu: Kanava"
 
 msgctxt "#19063"
 msgid "Go to beginning"
-msgstr "Mene alkuun"
+msgstr "Siirry alkuun"
 
 msgctxt "#19064"
 msgid "Go to end"
-msgstr "Mene loppuun"
+msgstr "Siirry loppuun"
 
 msgctxt "#19065"
 msgid "Timer settings"
@@ -8875,7 +8938,7 @@ msgstr "Pikatallennuksen toiminto"
 #: system/settings/settings.xml
 msgctxt "#19087"
 msgid "Record current show (if guide data available)"
-msgstr "Tallenna tämän hetkinen ohjelma (jos se on ohjelmaoppaassa)"
+msgstr "Tallenna tämänhetkinen ohjelma (jos se on ohjelmaoppaassa)"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
@@ -9048,7 +9111,7 @@ msgstr "Tallennus on vielä käynnissä. Haluatko varmasti poistaa tämän ajast
 #: addons/skin.estuary/1080i/DialogPVRGuideSearch.xml
 msgctxt "#19123"
 msgid "Free to air channels only"
-msgstr "Vain vapaat kanavat"
+msgstr "Vain salaamattomat kanavat"
 
 #: addons/skin.estuary/1080i/DialogPVRGuideSearch.xml
 msgctxt "#19124"
@@ -9326,10 +9389,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Poistettu"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "Tv"
+msgid "TV channels"
+msgstr "Tv-kanavat"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9341,10 +9405,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Näytettävät päivät"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Radiokanavat"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9372,7 +9437,7 @@ msgstr "Poistetaan tietoja."
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
-msgstr "Kaikki opastietosi poistetaan. Oletko varma?"
+msgstr "Kaikki ohjelmatiedot poistetaan. Oletko varma?"
 
 #: system/settings/settings.xml
 msgctxt "#19189"
@@ -9592,22 +9657,32 @@ msgstr "PVR-hallinta käynnistyy"
 
 msgctxt "#19236"
 msgid "Loading channels from clients"
-msgstr "Hakee kanavia asiakasohjelmilta"
+msgstr "Noudetaan kanavia asiakasohjelmilta"
 
 msgctxt "#19237"
 msgid "Loading timers from clients"
-msgstr "Hakee ajastuksia asiakasohjelmilta"
+msgstr "Noudetaan ajastuksia asiakasohjelmilta"
 
 msgctxt "#19238"
 msgid "Loading recordings from clients"
-msgstr "Hakee tallennuksia asiakasohjelmilta"
+msgstr "Noudetaan tallennuksia asiakasohjelmilta"
 
 msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Käynnistää taustasäikeitä"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Näytä ajastuksen tiedot"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Muokkaa ajastusta"
@@ -9652,7 +9727,7 @@ msgstr "Suodata kanavia"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
-msgstr "Ladataan opasta tietokannasta"
+msgstr "Noudetaan ohjelmaopasta tietokannasta"
 
 msgctxt "#19251"
 msgid "Update guide information"
@@ -9738,7 +9813,7 @@ msgstr "Lapsilukittu kanava"
 #: system/settings/settings.xml
 msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
-msgstr "Piilota \"Tietoja ei ole saatavilla\" ilmoitukset"
+msgstr "Piilota \"Tietoja ei ole saatavilla\"-merkinnät"
 
 #: system/settings/settings.xml
 msgctxt "#19269"
@@ -9761,6 +9836,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Tarvitset tv-virittimen, taustaohjelmiston ja PVR-lisäosan tv-ominaisuuden käyttämiseen. Osoitteessa http://kodi.wiki/view/PVR on lisätietoja asiasta."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "Tv:n ohjelmaopas"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radion ohjelmaopas"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -9785,7 +9872,7 @@ msgstr "Tallennusvirhe"
 #: system/settings/settings.xml
 msgctxt "#19279"
 msgid "Client specific"
-msgstr "Asiakasohjelmakohtainen"
+msgstr "Asiakasohjelma"
 
 #: system/settings/settings.xml
 msgctxt "#19280"
@@ -13383,7 +13470,7 @@ msgstr "Palvelut"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24019"
 msgid "PVR clients"
-msgstr "PVR-asiakkaat"
+msgstr "PVR-asiakasohjelmat"
 
 msgctxt "#24020"
 msgid "Configure"
@@ -13514,7 +13601,7 @@ msgstr "Riippuvuusongelma. Ota yhteyttä lisäosan tekijään."
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24045"
 msgid "Failed to install Add-on from zip file"
-msgstr "Lisäosan asennus zip-paketista epäonnistui"
+msgstr "Lisäosan asennus zip-tiedostosta epäonnistui"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24046"
@@ -13901,7 +13988,7 @@ msgstr "Valitse oletuspalvelu elokuvien tekstitysten hakuun."
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24120"
 msgid "Manual search string"
-msgstr "Manuaalinen hakusana"
+msgstr "Manuaalinen haku"
 
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24121"
@@ -14202,7 +14289,7 @@ msgstr "QWERTY-näppäimistö"
 
 msgctxt "#29802"
 msgid "Passthrough audio in use"
-msgstr "Läpisyötetty ääni käytössä"
+msgstr "Äänen läpivienti on käytössä"
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -15102,7 +15189,7 @@ msgstr "FLAC"
 #: system/settings/settings.xml
 msgctxt "#34006"
 msgid "MPEG-4 audio (FFmpeg M4A AAC)"
-msgstr "MPEG-4 ääni (FFmpeg M4A AAC)"
+msgstr "MPEG-4-ääni (FFmpeg M4A AAC)"
 
 #: system/settings/settings.xml
 msgctxt "#34007"
@@ -15390,6 +15477,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Ohjainprofiilit"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Testaa värinää"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Käynnistää ohjainten värinämoottorit."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15448,7 +15547,7 @@ msgstr "Kaikki tarjolla olevat ohjainprofiilit on asennettu."
 #: system/settings/settings.xml
 msgctxt "#35063"
 msgid "Configure attached controllers"
-msgstr "Muokkaa liitettyjä ohjaimia"
+msgstr "Muokkaa liitettyjen ohjainten asetuksia"
 
 #. Description for the controller window setting
 #: system/settings/settings.xml
@@ -15457,6 +15556,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Parita ohjaimesi minkä tahansa pelikoneen ohjainlaiteprofiilin kanssa."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Etupuolen napit"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Olkanapit"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Liipaisimet"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Ohjaintikut"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Sammuta ohjaimet suljettaessa"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Sammuttaa ohjaimet ohjelman sulkemisen yhteydessä, jos ohjain tukee toimintoa."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -15567,7 +15703,7 @@ msgstr "Yhdistetään taustaosaan."
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
 msgid "Pulse-Eight CEC adapter"
-msgstr "Pulse-Eight CEC adapteri"
+msgstr "Pulse-Eight CEC-adapteri"
 
 msgctxt "#36001"
 msgid "Pulse-Eight Nyxboard"
@@ -15591,7 +15727,7 @@ msgstr "Paina \"user\"-painikkeen komento"
 #: system/peripherals.xml
 msgctxt "#36005"
 msgid "Enable switch side commands"
-msgstr "Käytä puolen vaihtokomentoja"
+msgstr "Käytä puolenvaihtokomentoja"
 
 msgctxt "#36006"
 msgid "Couldn't open the adapter"
@@ -15600,12 +15736,12 @@ msgstr "Adapteria ei voitu avata"
 #: system/peripherals.xml
 msgctxt "#36007"
 msgid "Devices to power on during startup"
-msgstr "Käynnistettävät laitteet aloituksessa"
+msgstr "Ohjelman mukana käynnistettävät laitteet"
 
 #: system/peripherals.xml
 msgctxt "#36008"
 msgid "Devices to power off during shutdown"
-msgstr "Sammutettavat laitteet lopetettaessa"
+msgstr "Ohjelman mukana sammutettavat laitteet"
 
 #: system/peripherals.xml
 msgctxt "#36009"
@@ -15619,17 +15755,17 @@ msgstr "Herätä laitteet näytönsäästäjän kytkeytyessä pois"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36011"
 msgid "Couldn't detect the CEC com port. Please configure it manually."
-msgstr "CEC-porttia ei havaittu. Määritä se käsin."
+msgstr "CEC-porttia ei havaittu. Määritä portin asetukset."
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36012"
 msgid "Couldn't initialise the CEC adapter. Please check your settings."
-msgstr "CEC adapteria ei voitu alustaa. Tarkista asetukset."
+msgstr "CEC-adapteria ei voitu alustaa. Tarkista asetukset."
 
 #: system/peripherals.xml
 msgctxt "#36015"
 msgid "HDMI port number"
-msgstr "HDMI-liitin"
+msgstr "HDMI-portin numero"
 
 #. max. 13 characters
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
@@ -15641,7 +15777,7 @@ msgstr "Yhdistetty"
 msgctxt "#36017"
 msgid ""
 "Couldn't initialise the CEC adapter: libCEC was not found on your system."
-msgstr "CEC adapteria ei voitu alustaa: libCEC:tä ei löytynyt ."
+msgstr "CEC-adapteria ei voitu alustaa: libCEC:tä ei löytynyt järjestelmästäsi."
 
 #: system/peripherals.xml
 msgctxt "#36018"
@@ -15656,12 +15792,12 @@ msgstr "Yhdistetty HDMI-laitteeseen"
 #: system/peripherals.xml
 msgctxt "#36020"
 msgid "Switch source to this device on startup"
-msgstr "Vaihda lähtö tähän laitteeseen käynnistyksessä"
+msgstr "Vaihda lähtö tähän laitteeseen käynnistyksen yhteydessä"
 
 #: system/peripherals.xml
 msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
-msgstr "Fyysinen osoite (ohittaa HDMI portin)"
+msgstr "Fyysinen osoite (ohittaa HDMI-portin)"
 
 #: system/peripherals.xml
 msgctxt "#36022"
@@ -15676,17 +15812,17 @@ msgstr "Asetukset päivitetty"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36024"
 msgid "Failed to set the new configuration. Please check your settings."
-msgstr "Päivitys epäonnistui, tarkasta asetukset."
+msgstr "Asetusten päivittäminen epäonnistui, tarkista asetukset."
 
 #: system/peripherals.xml
 msgctxt "#36025"
 msgid "Send \"Inactive source\" command on shutdown"
-msgstr "Lähetä \"Ei aktiivinen lähtö\" komento sammutuksessa"
+msgstr "Lähetä \"Epäaktiivinen lähtö\"-komento sammutuksen yhteydessä"
 
 #: system/peripherals.xml
 msgctxt "#36026"
 msgid "Devices to also put in standby mode"
-msgstr "Laita nämä laitteet lepotilaan"
+msgstr "Aseta laitteet valmiustilaan"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36027"
@@ -15714,7 +15850,7 @@ msgstr "Yhteys katkennut"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36031"
 msgid "This user does not have permissions to open the CEC adapter"
-msgstr "Tällä käyttäjällä ei ole oikeuksia avata CEC adapteria"
+msgstr "Tällä käyttäjällä ei ole oikeuksia avata CEC-adapteria"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36032"
@@ -15724,7 +15860,7 @@ msgstr "Portti on käytössä. Vain yksi ohjelma voi käsitellä CEC-adapteria"
 #: system/peripherals.xml
 msgctxt "#36033"
 msgid "Action when switching to another source"
-msgstr "Lähdettä vaihdettaessa suoritettava toiminto"
+msgstr "Lähtöä vaihdettaessa suoritettava toiminto"
 
 #: xbmc/addons/AddonCallbacksPVR.cpp
 msgctxt "#36034"
@@ -15751,12 +15887,12 @@ msgstr "Tv"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36038"
 msgid "Amplifier / AVR device"
-msgstr "Vahvistin / Viritinvahvistin"
+msgstr "Vahvistin/viritinvahvistin"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36039"
 msgid "TV and AVR device (explicit)"
-msgstr "Televisio ja Viritinvahvistin (vain)"
+msgstr "Tv ja viritinvahvistin"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36040"
@@ -16036,7 +16172,7 @@ msgctxt "#36133"
 msgid ""
 "If music is being played, the selected visualisation will be started instead"
 " of displaying the screensaver."
-msgstr "Musiikkia soitettaessa, valittu visualisointi käynnistyy näytönsäästäjän sijaan."
+msgstr "Käynnistää musiikkia soitettaessa visualisoinnin näytönsäästäjän sijaan."
 
 #. Description of setting with label #22014 "Use dim if paused during video
 #. playback"
@@ -16651,7 +16787,7 @@ msgctxt "#36224"
 msgid ""
 "Hide \"No information available\" labels when no guide data is available for"
 " a channel."
-msgstr "Piilottaa \"Tietoja ei ole saatavilla\"-tekstit, kun kanavalle ei löydy ohjelmatietoja."
+msgstr "Piilottaa \"Tietoja ei ole saatavilla\"-merkinnät kanavilta, joiden ohjelmatietoja ei ole saatavilla."
 
 #: system/settings/settings.xml
 msgctxt "#36225"
@@ -16856,7 +16992,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Tallennus painikkeesta suoritettava toiminto. [Tallenna tämänhetkinen ohjelma] tallentaa tällä hetkellä lähetettävän ohjelman. Jos ohjelmatietoja ei ole saatavilla, tallennus kestää \"Pikatallennuksen keston\" verran. [Tallenna tietty aika] tallentaa tästä hetkestä \"Pikatallennuksen keston\" verran eteenpäin. [Kysy minulta] avaa ikkunan, josta voit valita suoritettavan toiminnon, kuten \"Tallenna tämänhetkinen ohjelma\", \"Tallenna seuraava ohjelma\" tai ennalta määritetyn tallennusajan."
+msgstr "Tallennuspainikkeesta suoritettava toiminto. [Tallenna tämänhetkinen ohjelma] tallentaa tällä hetkellä lähetettävän ohjelman. Jos ohjelmatietoja ei ole saatavilla, tallennus kestää \"Pikatallennuksen keston\" verran. [Tallenna tietty aika] tallentaa tästä hetkestä \"Pikatallennuksen keston\" verran eteenpäin. [Kysy mitä tehdä] avaa ikkunan, josta voit valita suoritettavan toiminnon, kuten \"Tallenna tämänhetkinen ohjelma\", \"Tallenna seuraava ohjelma\" tai ennalta määritetyn tallennusajan."
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -16998,7 +17134,7 @@ msgstr "Käytä ristihäivytystä saman albumin kappaleiden kanssa."
 msgctxt "#36273"
 msgid ""
 "Select the visualisation that will be displayed while listening to music."
-msgstr "Valitse musiikkitoiston aikana näytettävä visualisaatio."
+msgstr "Valitse musiikkitoiston aikana näytettävä visualisointi."
 
 #. Description of setting with label #258 "Enable tag reading"
 #: system/settings/settings.xml
@@ -17118,7 +17254,7 @@ msgctxt "#36289"
 msgid ""
 "Select which bitrate to use for the specified audio encoder for audio "
 "compression."
-msgstr "Valitse äänitiedostojen pakkaamisessa käytettävän bittivirran suuruus."
+msgstr "Valitse äänitiedostojen pakkaamisessa käytettävä bittinopeus."
 
 #. Description of setting with label #665 "Compression level"
 #: system/settings/settings.xml
@@ -17270,7 +17406,7 @@ msgstr "Kytkee UPnP-palvelimen päälle. UPnP-palvelin jakaa laitteen mediatiedo
 #: system/settings/settings.xml
 msgctxt "#36324"
 msgid "When a manual or automatic library update occurs, notify UPnP clients."
-msgstr "Kun manuaalinen tai automaattinen kirjasto päivitys suoritetaan, huomauta UPnP asiakkaita."
+msgstr "Kun manuaalinen tai automaattinen kirjastopäivitys suoritetaan, huomauta UPnP-asiakkaita."
 
 #. Description of setting with label #21881 "Allow playback control via UPnP"
 #: system/settings/settings.xml
@@ -17288,13 +17424,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Kytkee UPnP-ohjauspisteen päälle. UPnP-ohjauspiste voi lähettää mediatiedostoja UPnP-asiakkaille ja hallita asiakkaiden mediatoistoa."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Tämä kategoria sisältää web-palvelimeen liittyvät asetukset."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Tämä kategoria sisältää web-palvelimeen ja etähallintaan liittyvät asetukset."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17365,7 +17501,7 @@ msgstr "Määritä kauko-ohjaimen porttiväli."
 #: system/settings/settings.xml
 msgctxt "#36337"
 msgid "Define the maximum number of clients that can connect."
-msgstr "Määritä asiakkaiden enimmäismäärä jotka voivat yhdistyä."
+msgstr "Määritä yhdistettyjen asiakkaiden enimmäismäärä."
 
 #. Description of setting with label #794 "Allow remote control from programs
 #. on other systems"
@@ -17429,7 +17565,7 @@ msgctxt "#36346"
 msgid ""
 "This category contains the settings for how the SMB client (Samba) service "
 "is handled."
-msgstr "Tämä kategoria sisältää SMB (Samba) asiakkaaseen liittyvät asetukset."
+msgstr "Tämä kategoria sisältää SMB (Samba) -asiakkaaseen liittyvät asetukset."
 
 #. Description of setting with label #1207 "WINS server"
 #: system/settings/settings.xml
@@ -17637,7 +17773,7 @@ msgid ""
 "important notifications."
 msgstr "Valitse milloin käyttöliittymän äänet toistetaan."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18141,7 +18277,7 @@ msgstr "Ei käytössä"
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36503"
 msgid "Over / Under"
-msgstr "Yli / Ali"
+msgstr "Allekkain"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -18153,13 +18289,13 @@ msgstr "Vierekkäin"
 #: system/settings/settings.xml
 msgctxt "#36505"
 msgid "Anaglyph red / cyan"
-msgstr "Anaglyph punainen / syaani"
+msgstr "Anaglyfinen punainen / syaani"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
 msgctxt "#36506"
 msgid "Anaglyph green / magenta"
-msgstr "Anaglyph vihreä / magenta"
+msgstr "Anaglyfinen vihreä / magenta"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
@@ -18183,13 +18319,13 @@ msgstr "Monoskooppinen / 2D"
 #: system/settings/settings.xml
 msgctxt "#36510"
 msgid "Anaglyph yellow / blue"
-msgstr "Anaglyph keltainen / sininen"
+msgstr "Anaglyfinen keltainen / sininen"
 
 #. name of a stereoscopic mode
 #: system/settings/settings.xml
 msgctxt "#36511"
 msgid "Checkerboard"
-msgstr "Shakkiruutu"
+msgstr "Ruudukko"
 
 #. Name of a setting, asking the user for the default playback mode (2D, 3D,
 #. ask) of stereoscopic videos
@@ -18304,7 +18440,7 @@ msgid ""
 "hardware\" section of the settings.[CR][Monoscopic / 2D] Will play the video"
 " in mono / 2D.[CR][Ignore] Disables any stereoscopic 3D processing and "
 "handling."
-msgstr "Valitse stereoskooppisten 3D-videoiden toistotapa.[CR][Kysy minulta] Ohjelma kysyy toistotavan tarvittaessa.[CR][Ensisijainen tila] Käyttää \"Järjestelmä -> Videolähtö\"-osiossa määriteltyä asetusta.[CR][Monoskooppinen / 2D] Toistaa monona / 2D:nä.[CR][Jätä huomioimatta] Kytkee 3D-käsittelyn pois päältä."
+msgstr "Valitse stereoskooppisten 3D-videoiden toistotapa.[CR][Kysy minulta] Ohjelma kysyy toistotavan tarvittaessa.[CR][Ensisijainen tila] Käyttää \"Järjestelmä -> Näyttö\"-osiossa määriteltyä asetusta.[CR][Monoskooppinen / 2D] Toistaa monona / 2D:nä.[CR][Jätä huomioimatta] Kytkee 3D-käsittelyn pois päältä."
 
 #. Description of setting with label #36526 Disable stereoscopic mode when
 #. playback is stopped
@@ -18756,6 +18892,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Lisäosat voivat käyttää laitteelle tallennettuja henkilökohtaisia tietoja. Hyväksymällä tämän olet itse vastuussa kaikista tiedonmenetyksistä, epänormaalista toiminnasta tai laitteelle aiheutuvista vahingoista. Haluatko jatkaa?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Korkealaatuinen alasskaalaus"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Skaalaa kuvat alaspäin korkealla laadulla (lisää muistinkäyttöä ja vaikuttaa hieman suorituskykyyn)."
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19128,7 +19280,7 @@ msgctxt "#38014"
 msgid ""
 "Limits the speed (fps) used to update the GUI while playing videos. This can"
 " reduce CPU load and fix playback issues while the GUI is shown."
-msgstr "Rajoittaa käyttöliittymän päivityksen ruudunpäivitysnopeutta soittaessa videoita. Tämä saattaa vähentää suorittimen kuormitusta ja korjata toistamisen ongelmia kun käyttöliittymä on näkyvillä."
+msgstr "Rajoittaa käyttöliittymän ruudunpäivitysnopeutta videoita toistettaessa. Tämä vähentää suorittimen kuormitusta ja voi korjata käyttöliittymän näyttämisen aiheuttamia toisto-ongelmia."
 
 #. Label of a settings value to indicate the "disabled" state of an otherwise
 #. limiting setting (like fps limit, bandwidth limit, etc.)
@@ -19288,13 +19440,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Tämä kategoria sisältää mediatoiston asetukset"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Tämä kategoria sisältää mediatietojen keräämiseen, säilyttämiseen, näyttämiseen ja selaamiseen liittyvät asetukset."
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Tämä kategoria sisältää mediatietojen keräämiseen, tallentamiseen, esittämiseen ja selaamiseen liittyvät asetukset."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19384,3 +19536,35 @@ msgstr "Kiihdytä MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Kiihdytä h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Tämä kategoria sisältää medialähteiden ja mediakirjaston tietokantojen asetukset."
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Tästä voi lisätä uusia videolähteitä ja muokata olemassaolevien lähteiden asetuksia."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Tästä voi lisätä uusia musiikkilähteitä ja muokata olemassaolevien lähteiden asetuksia."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Tästä voi lisätä uusia kuvalähteitä ja muokata olemassaolevien lähteiden asetuksia."

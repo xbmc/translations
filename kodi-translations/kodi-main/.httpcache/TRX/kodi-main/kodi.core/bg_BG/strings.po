@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-04 08:18+0000\n"
+"PO-Revision-Date: 2016-09-05 18:14+0000\n"
 "Last-Translator: Kiril <neohidra@gmail.com>\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -888,6 +888,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Сюжет"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4703,7 +4704,7 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10057"
 msgid "Edit file source"
-msgstr ""
+msgstr "Редактиране на източник"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
@@ -4954,7 +4955,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Възобнови от %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr ""
@@ -6500,6 +6502,19 @@ msgid "Add art"
 msgstr "Добави картинка"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Закъснение при промяна честотата на обновяване"
@@ -6978,8 +6993,8 @@ msgid "Security"
 msgstr "Сигурност"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Входни устройства"
+msgid "Devices"
+msgstr "Устройства"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7149,6 +7164,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Район C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Вход"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7203,6 +7224,16 @@ msgstr "Система"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Профил"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Библиотеки"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7260,6 +7291,11 @@ msgid "Network Control"
 msgstr "Мрежов(и) Контрол"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Източници"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Действия"
@@ -7290,6 +7326,16 @@ msgid "Download Services"
 msgstr "Услуги за сваляне"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Видео библиотека"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Музикална библиотека"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Списъци и изгледи"
@@ -7298,6 +7344,21 @@ msgstr "Списъци и изгледи"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Метаданни"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Видео..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Музика..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Снимки..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7357,7 +7418,7 @@ msgstr "Дебъгване"
 #: system/settings/settings.xml
 msgctxt "#14270"
 msgid "Unit Formats"
-msgstr ""
+msgstr "Мерни единици"
 
 #: system/settings/settings.xml
 msgctxt "#14271"
@@ -7414,7 +7475,7 @@ msgstr "Основни"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15005"
 msgid "Application"
-msgstr ""
+msgstr "Приложение"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -7714,8 +7775,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Пост обработка"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Вход"
@@ -8069,12 +8131,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Изкл."
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Автоматично"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Вкл."
@@ -8348,14 +8405,20 @@ msgstr "MMAL - Bob (half)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Fast motion (double)"
+msgid "IMX - Advanced (half)"
+msgstr ""
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -8877,7 +8940,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#19089"
 msgid "Ask what to do"
-msgstr ""
+msgstr "Запитване за действие"
 
 #. Label for "Instant recording action" dialog settings value
 #: xbmc/pvr/PVRMananger.cpp
@@ -9316,10 +9379,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Изтрит"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "Телевизия"
+msgid "TV channels"
+msgstr "ТВ канали"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9331,10 +9395,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Дни за показване"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Радио"
+msgid "Radio channels"
+msgstr "Радио канали"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9596,8 +9661,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Стартиране на фонови процеси"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr ""
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Редактирай брояча"
@@ -9751,6 +9826,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "За ПВР функцията са необходими тунер, сървър (backend програма) и добавка, която да ползва сървъра. За повече информация посетете http://kodi.wiki/view/PVR."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "ТВ Справочник"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr ""
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -13504,7 +13591,7 @@ msgstr "Изискванията не са изпълнени. Свържете 
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24045"
 msgid "Failed to install Add-on from zip file"
-msgstr ""
+msgstr "Инсталиране на добавка от .zip файл се провали"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24046"
@@ -14348,13 +14435,13 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29928"
 msgid "Spanish music"
-msgstr ""
+msgstr "Испанска музика"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29929"
 msgid "Hip hop"
-msgstr ""
+msgstr "Хип-хоп"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14588,7 +14675,7 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29968"
 msgid "Folk Music"
-msgstr ""
+msgstr "Фолк музика"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14686,13 +14773,13 @@ msgstr ""
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
-msgstr ""
+msgstr "Композитори"
 
 #. Music role category
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
-msgstr ""
+msgstr "Диригенти"
 
 #. Music role category
 #: system/library/music/musicroles/DJ.xml
@@ -14710,7 +14797,7 @@ msgstr ""
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
-msgstr ""
+msgstr "Оркестри"
 
 #. Roles from music contributor
 #: system/library/music/musicroles/index.xml
@@ -14992,7 +15079,7 @@ msgstr "Персонални фонове"
 #: Unknown
 msgctxt "#33072"
 msgid "View readme"
-msgstr ""
+msgstr "Покажи Readme"
 
 #: Unknown
 msgctxt "#33073"
@@ -15380,6 +15467,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Профили за контролери"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr ""
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr ""
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15447,6 +15546,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Настройте контролерите за различните игрални системи."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr ""
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr ""
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr ""
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr ""
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Изключвай контролерите при излизане"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Изключва контролерите, които поддържат опцията, при излизане."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -17278,13 +17414,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Включва UPnP функционалността \"контролна точка\". Позволява поточно предаване на всеки мултимедиен файл към UPnP клиент, като същевременно контролирате възпроизвеждането."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Категорията съдържа всички настройки свързани с уеб сървъра."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Категорията съдържа всички настройки свързани с уеб сървъра и услугата за отдалечено управление."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17627,7 +17763,7 @@ msgid ""
 "important notifications."
 msgstr "Изберете, кога да се възпроизвеждат звуците от потребителския интерфейс, такива като звука издаван при навигиране из менютата и оповестяването за важни съобщения."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18605,7 +18741,7 @@ msgstr "256x256x256"
 
 msgctxt "#36597"
 msgid "%1.2f"
-msgstr ""
+msgstr "%1.2f"
 
 #. Description of setting with label #36099 "Dither"
 #: system/settings/settings.xml
@@ -18745,6 +18881,22 @@ msgid ""
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Добавките имат директен достъп до личните ви данни на устройството. Разрешавайки инсталирането им поемате отговорността за евентуална загуба на данни, нежелани действия и повреди на устройството, които могат да бъдат причинени от добавките. Разрешавате ли инсталирането им?"
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr ""
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr ""
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -19095,13 +19247,13 @@ msgstr "Хардуерно ускорен"
 #: system/settings/settings.xml
 msgctxt "#38011"
 msgid "Show \"All items\" entry"
-msgstr "Показвай елемент \"Всички артикули\""
+msgstr "Показвай елемент \"Всички...\""
 
 #. Description of setting "Show All Items entry"
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Показва елемент \"Всички артикули\" в списъците, пример: \"Всички албуми\" или \"Всички сезони\""
+msgstr "Показва елемент \"Всички\" в списъците, пример: \"Всички албуми\" или \"Всички сезони\""
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems
@@ -19276,15 +19428,15 @@ msgstr "[Липсва]"
 #: system/settings/settings.xml
 msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
-msgstr ""
+msgstr "Раздел съдържащ настройки за възпроизвеждането на медийни файлове."
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr ""
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Раздел съдържащ настройки за източниците на информация, начина на събиране, съхранение, изобразяване и навигиране."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19292,7 +19444,7 @@ msgctxt "#38102"
 msgid ""
 "Section that contains the settings influencing the GUI experience and for "
 "controlling the GUI/system"
-msgstr ""
+msgstr "Раздел съдържащ настройки за потребителския интерфейс и системата. "
 
 #. Description of category #14210 "Videos"
 #: system/settings/settings.xml
@@ -19374,3 +19526,35 @@ msgstr ""
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr ""
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Категорията осигурява достъп до прозореца за управление на медийни източници и всички настройки свързани с базите данни за библиотеките."
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Достъп до прозореца за управление на източниците на видео."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Достъп до прозореца за управление на източниците на музика."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Достъп до прозореца за управление на източниците на снимки."

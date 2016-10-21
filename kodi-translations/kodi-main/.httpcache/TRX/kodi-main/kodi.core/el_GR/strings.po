@@ -5,14 +5,15 @@
 # Dimitrios Matsaridis <dkmatsar@hotmail.com>, 2016
 # ioannis giakoumakis <igiakoumakis@gmail.com>, 2015
 # Konstantinos Koutsioulis <fix3r1993@gmail.com>, 2015
-# S A <spyrsa@yahoo.com>, 2016
+# spyrosag <spyrsa@yahoo.com>, 2016
+# spyrosag <spyrsa@yahoo.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-17 13:59+0000\n"
-"Last-Translator: CutSickAss <cutsickass@yahoo.com>\n"
+"PO-Revision-Date: 2016-08-27 10:09+0000\n"
+"Last-Translator: spyrosag <spyrsa@yahoo.com>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/teamxbmc/kodi-main/language/el_GR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -890,6 +891,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Πλοκή"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4956,7 +4958,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Συνέχιση από %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Αναπαραγωγή από την αρχή"
@@ -6502,6 +6505,19 @@ msgid "Add art"
 msgstr "Προσθήκη εικόνων"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr ""
@@ -6980,8 +6996,8 @@ msgid "Security"
 msgstr "Ασφάλεια"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Συσκευές εισόδου"
+msgid "Devices"
+msgstr "Συσκευές"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7151,6 +7167,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Περιοχή C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Είσοδος"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7205,6 +7227,16 @@ msgstr "Ρυθμίσεις Συστήματος"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Ρυθμίσεις Προφίλ"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Μέσα"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Ρυθμίσεις μέσων"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7262,6 +7294,11 @@ msgid "Network Control"
 msgstr "Έλεγχος Δικτύου"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Διαχείριση πηγών"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Ενέργειες"
@@ -7292,14 +7329,39 @@ msgid "Download Services"
 msgstr "Υπηρεσίες Λήψης"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Βιβλιοθήκη βίντεο"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Βιβλιοθήκη μουσικής"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
-msgstr ""
+msgstr "Κατάλογοι & Προβολές"
 
 #: system/settings/settings.xml
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "μεταδεδομένα"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Βίντεο..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Μουσική..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Εικόνες..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7584,12 +7646,12 @@ msgstr "Ρυθμίσεις ήχου DSP"
 #. Name of a list with amount of entries behind on GUI
 msgctxt "#15050"
 msgid "Available modes"
-msgstr ""
+msgstr "Διαθέσιμες λειτουργίες"
 
 #. Name of a list with amount of entries behind on GUI
 msgctxt "#15051"
 msgid "Active modes"
-msgstr ""
+msgstr "Ενεργές λειτουργίες"
 
 #: addons/skin.estuary/1080i/DialogNetworkSetup.xml
 msgctxt "#15052"
@@ -7716,8 +7778,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr ""
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Είσοδος"
@@ -8071,12 +8134,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Ανενεργή"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Αυτόματη"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Ενεργή"
@@ -8350,14 +8408,20 @@ msgstr "MMAL - Bob (κατά το ήμισυ)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Γρήγορη κίνηση"
+msgid "Bob (half)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Γρήγορη κίνηση (διπλό)"
+msgid "IMX - Advanced (half)"
+msgstr ""
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9318,10 +9382,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Διαγράφηκε"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "Τηλεόραση"
+msgid "TV channels"
+msgstr "Τηλεοπτικά κανάλια"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9333,10 +9398,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Ημέρες προς εμφάνιση"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Ραδιόφωνο"
+msgid "Radio channels"
+msgstr "Ραδιοφωνικοί σταθμοί"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9598,8 +9664,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Εκκίνηση νημάτων παρασκηνίου"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr ""
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Ρύθμιση χρονοδιακόπτη"
@@ -9674,7 +9750,7 @@ msgstr ""
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19256"
 msgid "Completed"
-msgstr ""
+msgstr "Ολοκληρώθηκε"
 
 msgctxt "#19257"
 msgid "Lock channel"
@@ -9753,6 +9829,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Χρειάζεστε ένα δέκτη, backend λογισμικό, και ένα πρόσθετο για το backend για να μπορέσετε να χρησιμοποιήσετε PVR. Παρακαλώ επισκεφθείτε http://kodi.wiki/view/PVR για να μάθετε περισσότερα."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "Οδηγός TV"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr ""
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -12726,12 +12814,12 @@ msgstr "Άνοιγμα"
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21479"
 msgid "Run"
-msgstr ""
+msgstr "Εκτέλεση"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21480"
 msgid "Use"
-msgstr ""
+msgstr "Χρήση"
 
 #: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21481"
@@ -13551,7 +13639,7 @@ msgstr "Άδεια χρήσης:"
 #: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
 msgid "What's new"
-msgstr ""
+msgstr "Τι νέο υπάρχει"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -13588,7 +13676,7 @@ msgstr "Να απενεργοποιηθεί αυτό το πρόσθετο;"
 #: xbmc/addons/RepositoryUpdater.cpp
 msgctxt "#24061"
 msgid "Add-on updates available"
-msgstr ""
+msgstr "Διαθέσιμες ενημερώσεις προσθέτων"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp xbmc/filesystem/AndroidAppDirectory.cpp
@@ -14007,7 +14095,7 @@ msgstr ""
 #: xbmc/events/AddonManagementEvent.cpp
 msgctxt "#24139"
 msgid "View Add-on"
-msgstr ""
+msgstr "Προβολή προσθέτου"
 
 #. Label for the action provided by media library events to jump to a specific
 #. path/file
@@ -14101,7 +14189,7 @@ msgstr "Διαχείριση εξαρτήσεων"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24997"
 msgid "Look and feel"
-msgstr ""
+msgstr "Όψη και αίσθηση"
 
 #: xbmc/addons/CGUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15382,6 +15470,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr ""
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr ""
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr ""
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15448,6 +15548,43 @@ msgctxt "#35064"
 msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
+msgstr ""
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr ""
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr ""
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr ""
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr ""
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr ""
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
 msgstr ""
 
 #. Button prompt without timeout. %s - button name
@@ -17280,13 +17417,13 @@ msgid ""
 "client and control it's playback."
 msgstr ""
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Κατηγορία με ρυθμίσεις σχετικά με το χειρισμό της υπηρεσίας διακομιστή ιστού."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr ""
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17629,7 +17766,7 @@ msgid ""
 "important notifications."
 msgstr "Διαμόρφωση του τρόπου χειρισμού των ήχων του περιβάλλοντος εργασίας, όπως των ήχων πλοήγησης και σημαντικών ειδοποιήσεων."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18748,6 +18885,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr ""
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr ""
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr ""
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19097,7 +19250,7 @@ msgstr "Επιτάχυνση GPU"
 #: system/settings/settings.xml
 msgctxt "#38011"
 msgid "Show \"All items\" entry"
-msgstr ""
+msgstr "Εμφάνιση πεδίου \"Όλα τα αντικείμενα\""
 
 #. Description of setting "Show All Items entry"
 #: system/settings/settings.xml
@@ -19280,12 +19433,12 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr ""
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
 msgstr ""
 
 #. Description of section #14203 "Customise"
@@ -19376,3 +19529,35 @@ msgstr "Επιτάχυνση MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Επιτάχυνση h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr ""
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr ""

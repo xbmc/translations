@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Translators:
 # Allan Nordhøy <epost@anotheragency.no>, 2015
-# andyman <anders@aasemartinsen.net>, 2015
+# Anders <anders@aasemartinsen.net>, 2015
 # Anders Sorensen <anders@zorensen.no>, 2016
 # Chris B, 2016
 # linorg <geirl@linnerud.org>, 2015
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-05 09:43+0000\n"
+"PO-Revision-Date: 2016-08-22 19:04+0000\n"
 "Last-Translator: Chris B\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/teamxbmc/kodi-main/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -899,6 +899,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Handling"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4965,7 +4966,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Fortsett fra %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Spill av fra starten"
@@ -6511,6 +6513,19 @@ msgid "Add art"
 msgstr "Legg til kunst"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Grense for top-korrigering"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "Når hastighetsendringene overgår denne grensen, et top-korreksjonsfilter vil bli lagt til. Dette forhindrer \"pipestemmen\" som normalt oppstår når man setter opp hastigheten på videoen."
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Forsink etter endring av oppdateringshastighet"
@@ -6989,8 +7004,8 @@ msgid "Security"
 msgstr "Sikkerhet"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Inn-enheter"
+msgid "Devices"
+msgstr "Enheter"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7160,6 +7175,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Region C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Inngang"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7214,6 +7235,16 @@ msgstr "Systeminnstillinger"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profilinnstillinger"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Medie"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Medieinnstillinger"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7271,6 +7302,11 @@ msgid "Network Control"
 msgstr "Nettverkskontroll"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Behandle kilder"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Handlinger"
@@ -7301,6 +7337,16 @@ msgid "Download Services"
 msgstr "Nedlastingstjenester"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Video bibliotek"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Musikk bibliotek"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Lister og visninger"
@@ -7309,6 +7355,21 @@ msgstr "Lister og visninger"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metadata"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Videoer..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Musikk..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Bilder..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7725,8 +7786,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Etterprosess"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Inngang"
@@ -8080,12 +8142,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Av"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Auto"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "På"
@@ -8359,14 +8416,20 @@ msgstr "MMAL - Bob (halv)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Rask bevegelse"
+msgid "Bob (half)"
+msgstr "Bob (halv)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Rask bevegelse (dobbel)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Avansert (halv)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Avansert"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9327,10 +9390,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Slettet"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "TV-kanaler"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9342,10 +9406,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Hvor mange dager skal vises?"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Radio-kanaler"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9607,8 +9672,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Starter bakgrunnstråder"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Se tids informasjon"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Endre tidsur"
@@ -9762,6 +9837,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Du trenger en tuner, tilhørende programvare og en utvidelse for KODI for å kunne bruke PVR. Vennligst besøk http://kodi.wiki/view/PVR for å lære mer."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV-guide"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radio guide"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -15391,6 +15478,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Kontrollerprofiler"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Test vibrering"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Aktiver vibrering på alle motorer i kontrolleren."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15458,6 +15557,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Par kontrolleren din med de forskjellige inngangsenhetene til forskjellige spillsystemer."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Ansiktsknapper"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Skulderknapper"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Triggere"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Analoge pinner"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Slå av kontroller ved avslutning"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Slå av kontroller ved avslutning dersom støttet."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -17289,13 +17425,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Aktiver UPnP-kontroll punk. Dette tillater deg å strømme innhold til enhver UPnP-klient å kontrollere avspillingen."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Denne kategorien inneholder innstillinger for hvordan nettjeneren håndteres."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Denne kategorien inneholder innstillinger for hvordan web tjener tjenesten og applikasjons kontroll tjenesten håndteres."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17638,7 +17774,7 @@ msgid ""
 "important notifications."
 msgstr "Konfigurer hvordan grensesnittlyder blir håndtert, slik som menynavigasjon og viktige varsler."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18757,6 +18893,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Tillegg vil bli gitt tilgang til personlig data lagret på denne enhenten. Dersom du tillater tilgang sier du deg enig i at du, og kun du, er ansvarlig for all tap av data, uønskede hendelser og skade på enheten. Fortsett?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Høy kvalitets nedskalering"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Slå på høy kvalitets nedskalering av bilder (bruker mer minne og har en moderat påvirkning av ytelsen)."
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19289,13 +19441,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Seksjon som inneholder innstillinger for avspilling av media"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Seksjon som inneholder innstillinger for hvordan mediainformasjon er samlet, lagret, vist og navigert"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Seksjonen inneholder innstillinger for kilder og hvordan medieinformasjon samles, lagres, vist og navigeres"
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19385,3 +19537,35 @@ msgstr "Aksellerasjon av MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Aksellerasjon av h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Denne kategorien inneholder og gir tilgang til vinduer for kildebehandling og Bibliotek innstillinger for databasen"
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Dette gir tilgang til hvor video kilder kan legges til og ellers behandles."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Dette gir tilgang til hvor musikk kilder kan legges til og ellers behandles."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Dette gir tilgang til hvor bilde kilder kan legges til og ellers behandles."

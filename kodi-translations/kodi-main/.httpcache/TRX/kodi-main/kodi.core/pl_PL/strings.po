@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-07-27 18:51+0000\n"
+"PO-Revision-Date: 2016-10-17 10:05+0000\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -888,6 +888,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Fabuła"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -968,7 +969,7 @@ msgstr "Anuluj"
 
 msgctxt "#224"
 msgid "Speed"
-msgstr "Szybkość"
+msgstr "Prędkość"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#225"
@@ -1773,7 +1774,7 @@ msgstr "Jednostka temperatury"
 
 msgctxt "#399"
 msgid "Speed units"
-msgstr "Jednostka prędkości"
+msgstr "Jednostki prędkości"
 
 #: xbmc/windows/GUIWindowWeather.cpp
 msgctxt "#400"
@@ -4954,7 +4955,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Wznów od %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Odtwarzaj od początku"
@@ -6500,6 +6502,19 @@ msgid "Add art"
 msgstr "Dodaj grafikę"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Opóźniaj odświeżenie po zmianie częstotliwości odświeżania"
@@ -6978,8 +6993,8 @@ msgid "Security"
 msgstr "Bezpieczeństwo"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Urządzenia wejściowe"
+msgid "Devices"
+msgstr "Urządzenia"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -6989,7 +7004,7 @@ msgstr "Oszczędzanie energii"
 #: system/settings/settings.xml
 msgctxt "#14096"
 msgid "Rip"
-msgstr "Zgraj"
+msgstr "Zgrywaj"
 
 #: system/settings/settings.xml
 msgctxt "#14097"
@@ -7033,7 +7048,7 @@ msgstr "Odtwarzaj główną ścieżkę"
 #: system/settings/settings.xml
 msgctxt "#14104"
 msgid "Show simplified menu"
-msgstr "Pokazuj uproszczone menu"
+msgstr "Pokaż menu uproszczone"
 
 #: system/settings/settings.xml
 msgctxt "#14105"
@@ -7149,6 +7164,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Region C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Wejście"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7203,6 +7224,16 @@ msgstr "Ustawienia systemu"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Ustawienia profilu"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Media"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Ustawienia mediów"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7260,6 +7291,11 @@ msgid "Network Control"
 msgstr "Zdalne sterowanie"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Zarządzaj Źródłami"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Operacje"
@@ -7290,6 +7326,16 @@ msgid "Download Services"
 msgstr "Pobierz usługi"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Biblioteka Wideo"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Biblioteka Muzyki"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Listy & Widoki"
@@ -7298,6 +7344,21 @@ msgstr "Listy & Widoki"
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metadane"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Wideo..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Muzyka..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Obrazy..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7714,8 +7775,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Przetwarzanie finalne"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Wejście"
@@ -8069,12 +8131,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Nieaktywne"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Automatycznie"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Aktywne"
@@ -8184,12 +8241,12 @@ msgstr "Najbliższe sąsiedztwo"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16302"
 msgid "Bilinear"
-msgstr "Bilinear"
+msgstr "Dwuliniowo"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic"
-msgstr "Bicubic"
+msgstr "Dwusześciennie"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8209,7 +8266,7 @@ msgstr "Sinc8"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16307"
 msgid "Bicubic (software)"
-msgstr "Bicubic (programowo)"
+msgstr "Dwusześciennie (programowo)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16308"
@@ -8224,12 +8281,12 @@ msgstr "Sinc (programowo)"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
 msgid "Temporal"
-msgstr "Temporal"
+msgstr "Czasowo"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16311"
 msgid "Temporal / Spatial"
-msgstr "Czasowy / Przestrzenny"
+msgstr "Czasowo / Przestrzennie"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16312"
@@ -8249,22 +8306,22 @@ msgstr "Odwrócone Telecine"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
-msgstr "Lanczos3 - Zoptymalizowany"
+msgstr "Lanczos3 - Zoptymalizowana"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
-msgstr "Automatycznie"
+msgstr "Automat"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (half)"
-msgstr "Czasowy (połówkowe)"
+msgstr "Czasowo (połówkowo)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
 msgid "Temporal / Spatial (half)"
-msgstr "Czasowy / Przestrzenny (połówkowe)"
+msgstr "Czasowo / Przestrzennie (półobrazy)"
 
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
 msgctxt "#16319"
@@ -8279,7 +8336,7 @@ msgstr "DXVA - Liniowo"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "DXVA - Best"
-msgstr "DXVA - Dokładne"
+msgstr "DXVA - Dokładnie"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
@@ -8289,12 +8346,12 @@ msgstr "Spline36"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16323"
 msgid "Spline36 - Optimised"
-msgstr "Spline36 - Zoptymalizowane"
+msgstr "Spline36 - Zoptymalizowana"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software - Blend"
-msgstr "Programowe - miskowanie"
+msgstr "Programowo - Miksowanie"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
@@ -8331,7 +8388,7 @@ msgstr "MMAL - Zaawansowane"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16331"
 msgid "MMAL - Advanced (half)"
-msgstr "MMAL - Zaawansowane (połówkowe)"
+msgstr "MMAL - Zaawansowane (półobrazy)"
 
 #. Description of OSD video settings for deinterlace method with label #16332
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -8348,14 +8405,20 @@ msgstr "MMAL - Liniowo (półobrazy)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Kompensacja ruchu"
+msgid "Bob (half)"
+msgstr "Liniowo (półobrazy)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX - Kompensacja ruchu (zdublowana)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Zaawansowane (półobrazy)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Zaawansowane"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -8521,7 +8584,7 @@ msgstr "Stacje radiowe"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19025"
 msgid "Upcoming recordings"
-msgstr "Zaplanowane nagrania"
+msgstr "Harmonogram nagrań"
 
 msgctxt "#19026"
 msgid "Add timer..."
@@ -9316,10 +9379,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Usunięte"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "Telewizja"
+msgid "TV channels"
+msgstr "Kanały telewizyjne"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9331,10 +9395,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Wyświetlane dni"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Kanały radiowe"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9401,7 +9466,7 @@ msgstr "Operacje klienta"
 
 msgctxt "#19196"
 msgid "PVR client specific actions"
-msgstr "Specjalne operacje klienta telewizyjnego"
+msgstr "Specjalne operacje klienta telewizji"
 
 #: xbmc/addons/addoncallbackspvr.cpp
 msgctxt "#19197"
@@ -9525,7 +9590,7 @@ msgctxt "#19223"
 msgid ""
 "No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "Nie można aktywować żadnego klienta telewizyjnego. Więcej informacji na ten temat znajdziesz w pliku dziennika diagnostycznego."
+msgstr "Nie można aktywować żadnego klienta telewizji. Więcej informacji na ten temat znajdziesz w pliku dziennika diagnostycznego."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -9596,8 +9661,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Uruchamianie wątków działających w tle"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "O zadaniu"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Edytuj zadanie"
@@ -9751,6 +9826,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Korzystanie z funkcji telewizyjnych wymaga tunera, oprogramowania serwerowego oraz odpowiedniego dodatku.Odwiedź strony Wiki na http://kodi.wiki/view/PVR, aby dowiedzieć się więcej."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "Przewodnik"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Przewodnik"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -14127,13 +14214,13 @@ msgstr "Ukrywaj zagraniczne"
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25002"
 msgid "Select from all titles ..."
-msgstr "Wybierz ze wszystkich tytułów..."
+msgstr "Wybierz spośród wszystkich tytułów..."
 
 #. A Blu-ray playback mode and a option in the simplified Blu-ray menu
 #: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
 msgid "Show Blu-ray menu"
-msgstr "Pokazuj menu dysku Blu-ray"
+msgstr "Pokaż menu dysku"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
@@ -15380,6 +15467,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Profile kontrolera"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Testuj wibracje"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Umożliwia aktywowanie silników wibracji we wszystkich kontrolerach."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15447,6 +15546,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Umożliwia parowania kontrolerów z różnymi urządzeniami wejściowymi dla różnych systemów gier."
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Przyciski przednie"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Przyciski boczne"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Spusty"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Drążki analogowe"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Wyłączaj zasilanie kontrolerów w trakcie zamykania"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Umożliwia wyłączania zasilania kontrolerów, które wspierają tę funkcję, w trakcie zamykania Kodi."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -16515,7 +16651,7 @@ msgctxt "#36203"
 msgid ""
 "Enables the \"Personal Video Recorder\" (PVR) features. This requires that "
 "at least one PVR add-on is installed."
-msgstr "Aktywuje funkcje odtwarzania i nagrywania telewizji (PVR). Opcja ta wymaga zainstalowania co najmniej jednego klienta telewizyjnego."
+msgstr "Aktywuje funkcje odtwarzania i nagrywania telewizji (PVR). Opcja ta wymaga zainstalowania co najmniej jednego klienta telewizji."
 
 #: system/settings/settings.xml
 msgctxt "#36204"
@@ -16536,7 +16672,7 @@ msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend, instead of configuring them "
 "manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr "Umożliwia używanie numerów kanałów z serwera, zamiast konfigurowania ich manualnie w menedżerze kanałów. Działa poprawnie tylko z jednym aktywnym klientem telewizyjnym!"
+msgstr "Umożliwia używanie numerów kanałów z serwera, zamiast konfigurowania ich manualnie w menedżerze kanałów. Działa poprawnie tylko z jednym aktywnym klientem telewizji!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -17278,13 +17414,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Aktywuje punkt sterowania UPnP. Umożliwia to strumieniowanie mediów do jakiegokolwiek klienta UPnP i sterowanie odtwarzaniem mediów przez niego odtwarzanych."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Kategoria zawierająca ustawienia związane z usługą serwera webowego."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Kategoria zawierająca ustawienia związane z obsługą serwera webowego i funkcji zdalnego sterowania."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17627,7 +17763,7 @@ msgid ""
 "important notifications."
 msgstr "Określa sposób obsługi dźwięków interfejsu użytkownika takich, jak nawigacja i powiadomienia."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
@@ -18746,6 +18882,22 @@ msgid ""
 "unwanted behaviour, or damage to your device. Proceed?"
 msgstr "Dodatki otrzymają dostęp do osobistych danych na urządzeniu. Zezwalając na to, zgadzasz się, że ponosisz wyłączną odpowiedzialność za jakąkolwiek utratę danych, niepożądane zachowanie lub uszkodzenie urządzenia. Kontynuować?"
 
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Skalowanie wysokiej jakości"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Umożliwia aktywowanie wysokiej jakość skalowania obrazów (używa więcej pamięci i ma średni wpływ na wydajność)"
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -19278,13 +19430,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Sekcja zawierająca ustawienia związane z odtwarzaniem mediów."
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Sekcja zawierająca ustawienia funkcji pobierania, składowania i przeglądania informacji o mediach."
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Sekcja zawierająca ustawienia źródeł mediów oraz funkcji pobierania, składowania i przeglądania informacji o mediach."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19374,3 +19526,35 @@ msgstr "Akceleracja MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Akceleracja h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr ""
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Umożliwia dostęp do konfiguracji źródeł wideo."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Umożliwia dostęp do konfiguracji źródeł muzyki."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Umożliwia dostęp do konfiguracji źródeł wideo."

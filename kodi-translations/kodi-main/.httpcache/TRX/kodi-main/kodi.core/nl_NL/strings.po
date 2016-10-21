@@ -2,11 +2,15 @@
 # Translators:
 # Alwin Hummels <alwin@fam-hummels.nl>, 2016
 # Kees Lijkendijk <clkndk@gmail.com>, 2016
+# Koos van Klojum <Klojum2001@hotmail.com>, 2016
 # Koos van Klojum <Klojum2001@hotmail.com>, 2015-2016
 # Maarten Peels <maartenpeels@gmail.com>, 2015
 # Martijn Kaijser <machine.sanctum@gmail.com>, 2015-2016
 # M. de Boer <de.boer.melle@gmail.com>, 2015-2016
+# NLVince, 2016
 # Pander <pander@users.sourceforge.net>, 2015
+# Pander <pander@users.sourceforge.net>, 2015
+# Peter, 2015
 # Peter, 2015
 # Peter van der Laan <vanderlaan.pm@gmail.com>, 2015
 # Roderick Smeets <r.v.smeets@gmail.com>, 2015
@@ -17,8 +21,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-08-07 07:41+0000\n"
-"Last-Translator: Martijn Kaijser <machine.sanctum@gmail.com>\n"
+"PO-Revision-Date: 2016-10-09 17:25+0000\n"
+"Last-Translator: Koos van Klojum <Klojum2001@hotmail.com>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +63,7 @@ msgstr "Video's"
 
 msgctxt "#4"
 msgid "TV guide"
-msgstr "TV gids"
+msgstr "TV-gids"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 #: addons/skin.estuary/1080i/Variables.xml
@@ -896,6 +900,7 @@ msgctxt "#207"
 msgid "Plot"
 msgstr "Plot"
 
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp system/settings/settings.xml
 msgctxt "#208"
 msgid "Play"
@@ -4962,7 +4967,8 @@ msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Hervatten vanaf %s"
 
-#: xbmc/video/ContextMenus.cpp
+#. Label of video/recordings context menu items
+#: xbmc/pvr/windows/PVRGUIWindowRecordings.cpp xbmc/video/ContextMenus.cpp
 msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Afspelen vanaf het begin"
@@ -6508,6 +6514,19 @@ msgid "Add art"
 msgstr "Voeg afbeeldingen toe"
 
 #: system/settings/settings.xml
+msgctxt "#13517"
+msgid "Threshold for pitch correction"
+msgstr "Drempelwaarde voor pitchcorrectie"
+
+#: system/settings/settings.xml
+msgctxt "#13518"
+msgid ""
+"When the speed change exceeds this threshold, a pitch-correction filter will"
+" be applied. This avoids the \"chipmonk voices\" that normally result from "
+"speeding up a video"
+msgstr "Wanneer de snelheidsverandering deze drempelwaarde overschrijdt, zal een pitchfilter toegepast worden. Dit voorkomt \"chipmonkstemmen\" die normaliter voortkomen uit het versnellen van een video."
+
+#: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
 msgstr "Vertragen na verandering van ververssnelheid"
@@ -6986,8 +7005,8 @@ msgid "Security"
 msgstr "Beveiliging"
 
 msgctxt "#14094"
-msgid "Input devices"
-msgstr "Invoerapparaten"
+msgid "Devices"
+msgstr "Apparaten"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7157,6 +7176,12 @@ msgctxt "#14124"
 msgid "Region C"
 msgstr "Regio C"
 
+#. This is in the context of input devices!
+#: system/settings/settings.xml
+msgctxt "#14125"
+msgid "Input"
+msgstr "Invoer"
+
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
@@ -7165,7 +7190,7 @@ msgstr "Speler"
 #: system/settings/settings.xml
 msgctxt "#14201"
 msgid "Player settings"
-msgstr "speler instellingen"
+msgstr "Spelerinstellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14202"
@@ -7175,7 +7200,7 @@ msgstr "Bibliotheek"
 #: system/settings/settings.xml
 msgctxt "#14203"
 msgid "Library settings"
-msgstr "bibliotheek instellingen"
+msgstr "Bibliotheekinstellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
@@ -7195,12 +7220,12 @@ msgstr "interface"
 #: system/settings/settings.xml
 msgctxt "#14207"
 msgid "Interface settings"
-msgstr "interface instellingen"
+msgstr "Interface-instellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14208"
 msgid "Service settings"
-msgstr "Diensten instellingen"
+msgstr "Service-instellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14209"
@@ -7211,6 +7236,16 @@ msgstr "Systeeminstellingen"
 msgctxt "#14210"
 msgid "Profile settings"
 msgstr "Profielinstellingen"
+
+#: system/settings/settings.xml
+msgctxt "#14211"
+msgid "Media"
+msgstr "Media"
+
+#: system/settings/settings.xml
+msgctxt "#14212"
+msgid "Media settings"
+msgstr "Media-instellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7268,6 +7303,11 @@ msgid "Network Control"
 msgstr "Netwerbeheer"
 
 #: system/settings/settings.xml
+msgctxt "#14226"
+msgid "Manage Sources"
+msgstr "Bronnen beheren"
+
+#: system/settings/settings.xml
 msgctxt "#14230"
 msgid "Actions"
 msgstr "Acties"
@@ -7298,6 +7338,16 @@ msgid "Download Services"
 msgstr "Download diensten"
 
 #: system/settings/settings.xml
+msgctxt "#14236"
+msgid "Video Library"
+msgstr "Videobibliotheek"
+
+#: system/settings/settings.xml
+msgctxt "#14237"
+msgid "Music Library"
+msgstr "Muziekbibliotheek"
+
+#: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
 msgstr "Lijsten en weergaven "
@@ -7306,6 +7356,21 @@ msgstr "Lijsten en weergaven "
 msgctxt "#14241"
 msgid "Metadata"
 msgstr "Metadata"
+
+#: system/settings/settings.xml
+msgctxt "#14242"
+msgid "Videos..."
+msgstr "Video's..."
+
+#: system/settings/settings.xml
+msgctxt "#14243"
+msgid "Music..."
+msgstr "Muziek..."
+
+#: system/settings/settings.xml
+msgctxt "#14244"
+msgid "Pictures..."
+msgstr "Afbeeldingen..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7670,7 +7735,7 @@ msgstr "Sluiten"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#15078"
 msgid "Mode settings"
-msgstr "Modus instellingen"
+msgstr "Modusinstellingen"
 
 #. DSP manager yes/no dialog text
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
@@ -7722,8 +7787,9 @@ msgctxt "#15086"
 msgid "Post-process"
 msgstr "Na-bewerking"
 
-#. Audio DSP process chain indication
+#. Audio DSP process chain indication - this is in the context of input signal
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
 msgstr "Invoer"
@@ -8077,12 +8143,7 @@ msgctxt "#16039"
 msgid "Off"
 msgstr "Uit"
 
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16040"
-msgid "Auto"
-msgstr "Auto"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/guilib/GUIRadioButtonControl.cpp"
 msgctxt "#16041"
 msgid "On"
 msgstr "Aan"
@@ -8356,14 +8417,20 @@ msgstr "MMAL - Bob (half)"
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16334"
-msgid "IMX - Fast motion"
-msgstr "IMX - Fast motion"
+msgid "Bob (half)"
+msgstr "Bob (half)"
 
 #. Description of OSD video settings for deinterlace method with label #16335
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16335"
-msgid "IMX - Fast motion (double)"
-msgstr "IMX -snelle beweging (Dubbel)"
+msgid "IMX - Advanced (half)"
+msgstr "IMX - Geavanceerd (half)"
+
+#. Description of OSD video settings for deinterlace method with label #16336
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16336"
+msgid "IMX - Advanced"
+msgstr "IMX - Geavanceerd"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16400"
@@ -9324,10 +9391,11 @@ msgctxt "#19179"
 msgid "Deleted"
 msgstr "Verwijderd"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19180"
-msgid "TV"
-msgstr "TV"
+msgid "TV channels"
+msgstr "TV-kanalen"
 
 #: system/settings/settings.xml
 msgctxt "#19181"
@@ -9339,10 +9407,11 @@ msgctxt "#19182"
 msgid "Days to display"
 msgstr "Dagen te tonen"
 
+#. Settings -> Interface -> Other -> Startup window
 #: system/settings/settings.xml
 msgctxt "#19183"
-msgid "Radio"
-msgstr "Radio"
+msgid "Radio channels"
+msgstr "Radiokanalen"
 
 #. Used on pvr recordings as button to show of them
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
@@ -9604,8 +9673,18 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Achtergrond processen worden gestart"
 
+#. Label for context menu entry to open settings dialog for a timer (read-
+#. only)
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp
+msgctxt "#19241"
+msgid "View timer information"
+msgstr "Bekijk timerinformatie"
+
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19242"
 msgid "Edit timer"
 msgstr "Pas geplande timer aan"
@@ -9759,6 +9838,18 @@ msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "U heeft een tuner, server software en add-on voor de server nodig om gebruik te maken van PVR. Bezoek http://kodi.wiki/view/PVR om hier meer te leren."
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19273"
+msgid "TV guide"
+msgstr "TV gids"
+
+#. Settings -> Interface -> Other -> Startup window
+#: system/settings/settings.xml
+msgctxt "#19274"
+msgid "Radio guide"
+msgstr "Radiogids"
 
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19275"
@@ -10795,7 +10886,7 @@ msgstr "Een CD of nummer kan niet worden geripped wanneer hij wordt afgespeeld."
 #: system/settings/settings.xml
 msgctxt "#20100"
 msgid "Master lock code and settings"
-msgstr "Vergrendelingcode en -instellingen"
+msgstr "Vergrendelingscode en -instellingen"
 
 msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
@@ -11771,7 +11862,7 @@ msgstr "Afl. aan favorieten toevoegen"
 
 msgctxt "#20407"
 msgid "Information provider settings"
-msgstr "informatie provider instellingen"
+msgstr "Informatieprovider instellingen"
 
 msgctxt "#20408"
 msgid "Downloading music video information"
@@ -13527,7 +13618,7 @@ msgstr "Deze add-on kan niet worden gedeinstalleerd "
 #: xbmc/addons/Addon.cpp
 msgctxt "#24048"
 msgid "VideoPlayer InputStream"
-msgstr "VideoSpeler InputStream"
+msgstr "Inkomende stream voor videospeler"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24049"
@@ -15388,6 +15479,18 @@ msgctxt "#35050"
 msgid "Controller profiles"
 msgstr "Controller profielen"
 
+#. Setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35051"
+msgid "Test rumble"
+msgstr "Testgeluid"
+
+#. Description of setting to test rumble
+#: system/settings/settings.xml
+msgctxt "#35052"
+msgid "Activate the rumble motors of all controllers."
+msgstr "Activeer de schokmotoren van alle controllers."
+
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35055"
@@ -15455,6 +15558,43 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Koppel uw controllers met de verschillende invoerapparaten van verschillende spelsystemen. "
+
+#. Label for buttons that appear on the face of the controller. Used in the
+#. controller mapping dialog.
+msgctxt "#35074"
+msgid "Face buttons"
+msgstr "Gezicht knoppen"
+
+#. Label for buttons that appear on the shoulders of the controller. Used in
+#. the controller mapping dialog.
+msgctxt "#35075"
+msgid "Shoulder buttons"
+msgstr "Schouder knoppen"
+
+#. Label for triggers on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35076"
+msgid "Triggers"
+msgstr "Triggers"
+
+#. Label for analog sticks on the controller. Used in the controller mapping
+#. dialog.
+msgctxt "#35077"
+msgid "Analog sticks"
+msgstr "Analoge sticks"
+
+#. Name of the setting that enables/disables powering off controllers on exit
+#: system/settings/settings.xml
+msgctxt "#35088"
+msgid "Power off controllers on exit"
+msgstr "Schakel controllers uit bij afsluiting"
+
+#. Description for the setting that enables/disables powering off controllers
+#. on exit
+#: system/settings/settings.xml
+msgctxt "#35089"
+msgid "Powers off any controller that supports it on exit."
+msgstr "Schakel elk ondersteunde controller uit bij de afsluiting."
 
 #. Button prompt without timeout. %s - button name
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
@@ -16010,7 +16150,7 @@ msgctxt "#36130"
 msgid ""
 "Select the screensaver. The \"Dim\" screensaver will be forced when "
 "fullscreen video playback is paused or a dialogue box is active."
-msgstr "Selecteer de schermbeveiliging. De \"dim\" schermbeveiliging wordt gestart wanneer volledig scherm video wordt gepauzeerd of wanneer een dialoogvenster actief is."
+msgstr "Selecteer de schermbeveiliging. De \"dim\" schermbeveiliging wordt gestart wanneer een volschermvideo wordt gepauzeerd of wanneer een dialoogvenster actief is."
 
 #. #. Description of setting with label #21417 "Settings"
 #: system/settings/settings.xml
@@ -16043,7 +16183,7 @@ msgctxt "#36134"
 msgid ""
 "Dim the display when media is paused. Not valid for the \"Dim\" screensaver "
 "mode."
-msgstr "Dim het scherm als de media wordt gepauzeerd. Niet beschikbaar voor de \"gedimd\" schermbeveiliging modus."
+msgstr "Dim het scherm als de media wordt gepauzeerd. Niet beschikbaar voor de \"gedimd\" schermbeveiligingmodus."
 
 #: system/settings/settings.xml
 msgctxt "#36135"
@@ -16080,7 +16220,7 @@ msgctxt "#36140"
 msgid ""
 "Choose which temperature unit is used for displaying temperatures in the "
 "user interface."
-msgstr "Kies welke temperatuur eenheid wordt gebruikt voor het tonen van temperaturen in de gebruikersomgeving."
+msgstr "Kies welke temperatuureenheid wordt gebruikt voor het tonen van temperaturen in de gebruikersomgeving."
 
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
@@ -16101,7 +16241,7 @@ msgctxt "#36143"
 msgid ""
 "Downloads thumbnails for actors from online databases when adding media to "
 "the library."
-msgstr "Download miniaturen voor acteurs van de online databases wanneer media wordt toegevoegd aan de bibliotheek."
+msgstr "Download miniaturen voor acteurs van online databases wanneer media wordt toegevoegd aan de bibliotheek."
 
 #. Description of setting with label #20412 "Flatten TV show seasons"
 #: system/settings/settings.xml
@@ -16119,7 +16259,7 @@ msgid ""
 " one entry for the set in the movie library, this entry can then be opened "
 "to display the individual movies. When disabled, each movie will have it's "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Wanneer geactiveerd, Films behorend tot een \"Film Set\" zijn zij gegroepeerd onder onder een naam voor de set in de filmbibliotheek, Deze groep kan worden geopend om de individuele films te tonen. Wanneer gedeactiveerd, zal elke film zijn eigen naam hebben in de filmbibliotheek zelf wanneer deze behoord tot een set."
+msgstr "Wanneer geactiveerd worden films behorend tot een \"Film Set\" gegroepeerd onder één naam in de filmbibliotheek. Deze groep kan worden geopend om de individuele films te tonen. Wanneer gedeactiveerd, zal elke film zijn eigen naam hebben in de filmbibliotheek zelfs wanneer deze behoort tot een set."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -16181,7 +16321,7 @@ msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
 " A value below 5% makes little sense as video is processed with high GPU "
 "load without any visible picture quality improvements."
-msgstr "Gebruik van hoge kwaliteit scalers wanneer opschaling van een video met ten minste dit percentage. Een waarde onder de 5% heeft weinig zin als video wordt verwerkt met hoge GPU belasting zonder enige zichtbare verbetering van de beeldkwaliteit."
+msgstr "Gebruik van hoge kwaliteitscalers bij opschaling van een video met ten minste dit percentage. Een waarde onder de 5% heeft weinig zin als de video wordt verwerkt met hoge GPU-belasting zonder enige zichtbare verbetering van de beeldkwaliteit."
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -16209,7 +16349,7 @@ msgid ""
 "contains only a single movie from that set. When disabled, a \"Movie set\" "
 "entry is used only if the movie library contains more than one movie from "
 "that set."
-msgstr "Wanneer geactiveerd, een \"Film set\" Naam is gebruikt zelfs wanneer de filmbibliotheek enkel één film heeft van die set. Wanneer gedeactiveerd, een \"Filmset\" naam is gebruikt enkel wanneer de filmbibliotheek meer dan een film bevat van die set."
+msgstr "Wanneer geactiveerd wordt een \"Film set\" naam gebruikt, zelfs wanneer de filmbibliotheek enkel één film heeft van die set. Wanneer gedeactiveerd wordt een \"Filmset\" naam gebruikt enkel wanneer de filmbibliotheek meer dan een film bevat van die set."
 
 #. Description of setting with label #13427 "Allow hardware acceleration
 #. (DXVA2)"
@@ -16230,7 +16370,7 @@ msgstr "Activeer CrystalHD decodering voor videobestanden."
 #: system/settings/settings.xml
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
-msgstr "Activeer VTB hardwaredecodering van videobestanden."
+msgstr "Activeer VTB-hardwaredecodering van videobestanden."
 
 #. Description of setting with label #13430 "Allow hardware acceleration
 #. (OpenMax)"
@@ -16250,7 +16390,7 @@ msgstr "Activeer VideoToolbox hardwaredecodering voor videobestanden."
 #: system/settings/settings.xml
 msgctxt "#36163"
 msgid "Show TV shows with no episodes when browsing the video library."
-msgstr "Toon TV series zonder afleveringen wanneer je zoek in de videobibliotheek."
+msgstr "Toon TV-series zonder afleveringen wanneer je zoekt in de videobibliotheek."
 
 #. Description of setting with label #170 "Adjust display refresh rate"
 #: system/settings/settings.xml
@@ -16265,7 +16405,7 @@ msgstr "Veranderen van de verversingsfrequentie van het scherm toestaan, zodat d
 #: system/settings/settings.xml
 msgctxt "#36165"
 msgid "Delay of reset event after a change of refresh rate"
-msgstr "Vertraging van de reset-evenement na een wijziging van de verssnelheid"
+msgstr "Vertraging van het reset-evenement na een wijziging van de vernieuwingsfrequentie"
 
 #. Description of setting with label #13510 "Sync playback to display"
 #: system/settings/settings.xml
@@ -16273,7 +16413,7 @@ msgctxt "#36166"
 msgid ""
 "Synchronise video and audio to the refresh rate of the monitor. VideoPlayer "
 "won't use passthrough audio in this case because resampling may be required."
-msgstr "Synchroniseren van video en audio naar de vernieuwingsfrequentie van de monitor. VideoPlayer gebruikt geen passthrough audio in dit geval omdat resampling verlangd kan worden."
+msgstr "Synchroniseren van video en audio naar de vernieuwingsfrequentie van de monitor. VideoPlayer gebruikt geen passthrough audio in dit geval, omdat resampling nodig kan worden."
 
 #. Description of setting with label #14107 "Time format"
 #: system/settings/settings.xml
@@ -16289,7 +16429,7 @@ msgctxt "#36168"
 msgid ""
 "Choose whether to use 12 or 24-hour format for displaying the time in the "
 "user interface."
-msgstr "Kies of u het 12-uurs of het 24-uursformaat wilt gebruiken voor het tonen van de tijd in de gebruikersomgeving."
+msgstr "Kies het 12-uurs of het 24-uursformaat voor het tonen van de tijd in de gebruikersomgeving."
 
 #. Description of setting with label #13505 "Resample quality"
 #: system/settings/settings.xml
@@ -16299,7 +16439,7 @@ msgid ""
 "be at a different sampling rate from that used by the source.[CR][Low] Is "
 "fast and will have minimal impact on system resources such as the use of the"
 " CPU.[CR][Medium] & [High] Will use progressively more system resources."
-msgstr "Selecteer de kwaliteit van resampling voor gevallen waarbij de audio-uitvoer op een andere sampling rate moet zijn dan die gebruikt door de bron.[CR][Laag] is snel en heeft weinig invloed op systeembronnen zoals het gebruik van de processor,[CR][Gemiddeld] & [Hoog] Zal geleidelijk meer systeembronnen gebruiken."
+msgstr "Selecteer de resamplingkwaliteit voor gevallen waarbij de audio-uitvoer op een andere sampling rate moet zijn dan die gebruikt door de bron.[CR][Laag] is snel en heeft weinig invloed op systeembronnen zoals processorgebruik,[CR][Gemiddeld] & [Hoog] gebruiken geleidelijk meer systeembronnen."
 
 #. Description of setting with label #22021 "Minimise black bars"
 #: system/settings/settings.xml
@@ -16350,7 +16490,7 @@ msgid ""
 "information].[CR][Choose] Will select an item, e.g. open a directory in "
 "files mode.[CR][Resume] Will automatically resume videos from the last "
 "position that you were viewing them, even after restarting the system."
-msgstr "Schakel tussen [Kiezen], [Afspelen](standaard), [Hervatten] en [toon informatie].[CR][Kiezen] zal een item selecteren, bv. een folder openen in bestandsbeheermodus.[CR][Hervatten] zal automatisch video's hervatten vanaf de laatst bekeken positie, zelfs na het herstarten van het systeem."
+msgstr "Schakel tussen [Kiezen], [Afspelen](standaard), [Hervatten] en [Toon informatie].[CR][Kiezen] zal een item selecteren, bv. een folder openen in bestandsbeheermodus.[CR][Hervatten] zal automatisch video's hervatten vanaf de laatst bekeken positie, zelfs na het herstarten van het systeem."
 
 #. Description of setting with label #20433 "Extract thumbnails and video
 #. information"
@@ -16390,7 +16530,7 @@ msgctxt "#36182"
 msgid ""
 "Combines multi-part video files, DVD folders or movie folders, down to a "
 "single item in non-library views."
-msgstr "Combineert opgesplitste videobestanden, DVD-mappen of film mappen, tot één enkel item in niet-bibliotheek weergaven."
+msgstr "Combineert opgesplitste videobestanden, DVD-mappen of filmmappen, tot één enkel item in niet-bibliotheek weergaven."
 
 #. Description of setting with label #20456 "Flatten hierarchy"
 #: system/settings/settings.xml
@@ -16398,7 +16538,7 @@ msgctxt "#36183"
 msgid ""
 "Removes the title, genre, etc. nodes from the library view. Selecting a "
 "category takes you straight to the title view."
-msgstr "Verwijder titel- en genreniveau's etc. uit de bibliotheekweergave. Het selecteren van een categorie brengt u meteen naar de titel weergave."
+msgstr "Verwijder titel- en genreniveau's etc. uit de bibliotheekweergave. Het selecteren van een categorie brengt u meteen naar de titelweergave."
 
 #. Description of settings category with label #287 "Subtitles"
 #: system/settings/settings.xml
@@ -16411,7 +16551,7 @@ msgstr "Deze categorie bevat de instellingen voor de manier waarop ondertitels w
 msgctxt "#36185"
 msgid ""
 "Set the font type to be used for text based (usually downloaded) subtitles."
-msgstr "Selecteer het lettertype type die wordt gebruikt voor tekstgebaseerde (meestal gedownloade) ondertitels."
+msgstr "Selecteer het lettertype dat gebruikt wordt voor tekstgebaseerde (meestal gedownloade) ondertitels."
 
 #. Description of setting with label #289 "Size"
 #: system/settings/settings.xml
@@ -16544,7 +16684,7 @@ msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend, instead of configuring them "
 "manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr "Gebruik de kanaalnummering van de server, in plaats van ze zelf manueel te configureren in beheerder. Werkt alleen met één geactiveerde PVR add-on!"
+msgstr "Gebruik de kanaalnummering van de server, in plaats van het manueel configureren in de kanaalbeheerder. Werkt alleen met één geactiveerde PVR add-on!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -16693,7 +16833,7 @@ msgid ""
 "When flipping through channels using channel up/down buttons or when "
 "pressing a number button in full screen mode, channel switches must be "
 "confirmed using the OK button."
-msgstr "Wanneer er gezapt wordt langs kanalen gebruikmakend van de kanaal Omhoog/omlaag knoppen of bij het drukken van een nummerknop in volledig scherm modus, moeten kanaalveranderingen worden bevestigt door gebruik te maken van de OK butten."
+msgstr "Wanneer er gezapt wordt langs kanalen gebruikmakend van de kanaal Omhoog/omlaag knoppen of bij het drukken van een nummerknop in volschermmodus, moeten kanaalveranderingen worden bevestigd door gebruik te maken van de OK-knop."
 
 #: system/settings/settings.xml
 msgctxt "#36232"
@@ -16714,7 +16854,7 @@ msgid ""
 "Duration of instant recordings when pressing the record button. This value "
 "will be taken into account if \"Instant recording action\" is set to "
 "\"Record for a fixed period of time\""
-msgstr "Duur van directe opnamen bij het indrukken van de opname-knop. Deze waarde zal worden genomen, als 'Instant opname actie' is ingesteld op 'Record voor een vaste periode van tijd'"
+msgstr "Duur van directe opnamen bij het indrukken van de opnameknop. Deze waarde zal worden genomen, indien 'Instant opname actie' is ingesteld op 'Record voor een vaste tijdsperiode'"
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -16741,7 +16881,7 @@ msgctxt "#36238"
 msgid ""
 "Additional time to record after the scheduled end time to allow for minor "
 "broadcasting changes. Not supported by all add-ons and backends."
-msgstr "Additionele tijd op te nemen na de geschematiseerde starttijd om kleine uitzendtijd veranderingen toe te laten. niet ondersteunt door alle add-ons en servers."
+msgstr "Extra tijd opnemen na de geschematiseerde starttijd om kleine uitzendtijdveranderingen toe te laten. Wordt niet ondersteund door alle add-ons en servers."
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -16755,7 +16895,7 @@ msgctxt "#36240"
 msgid ""
 "This category contains the PVR power management settings, such as when to "
 "wakeup the PVR backend server."
-msgstr "Deze categorie bevat de PVR energiebeheer instellingen, zoals wanneer de PVR backend server te ontwaken."
+msgstr "Deze categorie bevat de PVR energiebeheer-instellingen, zoals bij het ontwaken van de PVR backendserver."
 
 #: system/settings/settings.xml
 msgctxt "#36241"
@@ -16854,7 +16994,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Actie moet worden uitgevoerd wanneer op de opname-knop wordt gedrukt. [huidige show opnemen] zal de lopende show van 'nu' tot het einde van de show opnemen. Als er geen TV-gidsgegevens beschikbaar zijn zal een vaste lengte opname starten vanaf 'nu',  tot en met de waarde voor 'Instant opname duur' worden gepland. [Record voor een vaste periode van tijd] Een vaste lengte opname wordt gestart vanaf 'nu', tot en met de waarde voor 'Instant opname duur'. [Vragen wat te doen] zal een dialoog open met andere handelingen om uit te kiezen voor opnemen , zoals 'Record huidige show', 'Record volgende show' en enkele vaste duur opnames."
+msgstr "Actie die uitgevoerd moet worden wanneer op de opnameknop wordt gedrukt. [huidige show opnemen] zal de lopende show van 'nu' tot het einde van de show opnemen. Als er geen TV-gidsgegevens beschikbaar zijn zal een vaste lengte opname starten vanaf 'nu',  tot en met de waarde voor 'Instant opname duur' worden gepland. [Record voor een vaste periode van tijd] Een  opname van een vaste lengte wordt gestart vanaf 'nu', tot en met de waarde voor 'Instant opnameduur'. [Vragen wat te doen] zal een dialoog open met andere handelingen om uit te kiezen voor opnemen, zoals 'Record huidige show', 'Record volgende show' en enkele opnames van vaste duur."
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -16863,7 +17003,7 @@ msgid ""
 "When enabled, both song and album artists are shown. When disabled, only "
 "album artists are shown and artists that appear only on individual songs "
 "from an album are excluded."
-msgstr "Wanneer geactiveerd, worden zowel de song en album artiesten getoond. Wanneer uitgeschakeld, staan alleen album kunstenaars en artiesten die worden alleen op afzonderlijke nummers van een album weergegeven zijn uitgesloten."
+msgstr "Wanneer geactiveerd, worden zowel de song- en albumartiesten getoond. Wanneer uitgeschakeld, worden alleen albumartiesten getoond. Artiesten die op afzonderlijke nummers van een album voorkomen worden niet getoond."
 
 #. Description of setting with label #20192 "Fetch additional information
 #. during updates"
@@ -16919,7 +17059,7 @@ msgstr "Exporteer de muziek bibliotheekdatabase naar XML-bestanden. Dit zal moge
 #: system/settings/settings.xml
 msgctxt "#36263"
 msgid "Import a XML file into the music library database."
-msgstr "Importeer een XML-bestand in de muziekbibliotheek database"
+msgstr "Importeer een XML-bestand in de muziekbibliotheekdatabase"
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -16934,7 +17074,7 @@ msgid ""
 "Automatically plays the next item in the current folder, for example in "
 "\"Files\" view after a track has been played, the next track in the same "
 "folder will automatically play."
-msgstr "Automatisch afspelen van het volgende bestand in de huidige  map, bijvoorbeeld, in \"bestanden\" weergave: Nadat een nummer is afgespeeld; wordt het volgende nummer in de zelfde map automatisch afgespeeld."
+msgstr "Automatisch afspelen van het volgende bestand in de huidige map, bijvoorbeeld, in \"Bestanden\" weergave: Nadat een nummer is afgespeeld, wordt het volgende nummer in dezelfde map automatisch afgespeeld."
 
 #. Description of setting with label #14084 "Queue songs on selection"
 #: system/settings/settings.xml
@@ -17286,13 +17426,13 @@ msgid ""
 "client and control it's playback."
 msgstr "Activeer het UPnP-controlepunt. Dit staat uw toe uw media te streamen naar elke UPnP-cliënt en het afspelen van media ernaar te bepalen."
 
-#. Description of settings category with label #20187 "Webserver"
+#. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
 msgctxt "#36327"
 msgid ""
-"This category contains the settings for how the web server service is "
-"handled."
-msgstr "Deze categorie bevat de instellingen hoe de webserverdienst wordt aangestuurd."
+"This category contains the settings for how the web server service and the "
+"application control service is handled."
+msgstr "Deze categorie bevat de instellingen voor de manier hoe de webserverdienst en de applicatiebeheerservice wordt verwerkt."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -17300,7 +17440,7 @@ msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
 "server."
-msgstr "Activeer Gebruikers op afstand deze applicatie te controleren via de ingebouwde webserver."
+msgstr "Activeer het gebruik-op-afstand van deze applicatie via de ingebouwde webserver."
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -17314,7 +17454,7 @@ msgctxt "#36330"
 msgid ""
 "Define the web server username. This only takes effect when both the "
 "username and the password are set."
-msgstr "Definieer de webserver gebruikersnaam. dit heeft enkel effect  wanneer zowel de gebruikersnaam al het wachtwoord zijn ingesteld."
+msgstr "Definieer de gebruikersnaam van de webserver. Dit heeft enkel effect wanneer zowel de gebruikersnaam al het wachtwoord zijn ingesteld."
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
@@ -17345,7 +17485,7 @@ msgctxt "#36334"
 msgid ""
 "Allow programs on this computer to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr "Programma`s toestaan op deze computer deze applicatie te controleren via de web-omgeving of het JSON-RPC omgevingsprotocol."
+msgstr "Programma's toestaan op deze computer deze applicatie te controleren via de web-omgeving of het JSON-RPC omgevingsprotocol."
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -17541,7 +17681,7 @@ msgid ""
 "match to the source properties as possible; [Optimized] Output properties "
 "are set at the start of playback and will not change if the properties of "
 "the source change."
-msgstr "Selecteer hoe de eigenschappen van de audio-uitvoer zijn ingesteld: [Vast] uitvoer eigenschappen staan altijd ingesteld op de opgegeven sampling rate & luidsprekerconfiguratie; [Beste overeenkomst] uitvoer eigenschappen staan ingesteld om zo goed mogelijk overeen te komen met de bron eigenschappen; [Geoptimaliseerd] uitvoer eigenschappen worden ingesteld bij het begin van afspelen en zullen niet veranderen als de eigenschappen van de bron veranderen."
+msgstr "Selecteer hoe de eigenschappen van de audio-uitvoer zijn ingesteld: [Vast] Uitvoereigenschappen staan altijd ingesteld op de opgegeven sampling rate & luidsprekerconfiguratie; [Beste overeenkomst] uitvoer eigenschappen staan ingesteld om zo goed mogelijk overeen te komen met de bron eigenschappen; [Geoptimaliseerd] Uitvoereigenschappen worden ingesteld bij het begin van afspelen en zullen niet veranderen als de eigenschappen van de bron veranderen."
 
 #. Description of setting with label #34100 "Number of channels"
 #: system/settings/settings.xml
@@ -17573,7 +17713,7 @@ msgctxt "#36365"
 msgid ""
 "Select this option if your receiver is capable of decoding Dolby Digital "
 "(AC3) streams."
-msgstr "Kies deze optie als uw ontvanger Dolby Digital (AC3) geluid streams kan decoderen."
+msgstr "Kies deze optie als uw ontvanger Dolby Digital (AC3) geluidstreams kan decoderen."
 
 #. Description of setting with label #254 "DTS capable receiver"
 #: system/settings/settings.xml
@@ -17587,7 +17727,7 @@ msgctxt "#36367"
 msgid ""
 "Select the maximum number of audio channels / speakers available for decoded"
 " audio. If optical / coax digital outputs are used, this must be set to 2.0"
-msgstr "Selecteer het maximum aantal geluidskanalen / speakers beschikbaar voor gedecodeerde geluiden. Als optische / coax digitale uitgangen worden gebruikt moet dit worden ingesteld op 2.0"
+msgstr "Selecteer het maximum aantal geluidskanalen / speakers beschikbaar voor gedecodeerde audio. Als optische / coax-digitale uitgangen worden gebruikt moet dit worden ingesteld op 2.0."
 
 #. Description of setting with label #348 "Enable passthrough"
 #: system/settings/settings.xml
@@ -17595,7 +17735,7 @@ msgctxt "#36368"
 msgid ""
 "Select to enable the passthrough audio options for playback of encoded audio"
 " such as Dolby Digital (AC3), DTS, etc."
-msgstr "Selecteer om de doorvoer van geluidsopties voor afpelen van gecodeerde audio zoals Dolby Digital (AC3), DTS, etc. te activeren."
+msgstr "Selecteer om de doorvoer van geluidsopties voor afspelen van gecodeerde audio zoals Dolby Digital (AC3), DTS, etc. te activeren."
 
 #. Description of setting with label #349 "TrueHD capable receiver"
 #: system/settings/settings.xml
@@ -17609,7 +17749,7 @@ msgstr "Kies deze optie als uw ontvanger Dolby TrueHD digitaal geluid kan decode
 msgctxt "#36370"
 msgid ""
 "Select this option if your receiver is capable of decoding DTS-HD streams."
-msgstr "Kies deze optie als uw ontvanger DTS-HD digitaal geluid kan decoderen."
+msgstr "Kies deze optie als uw ontvanger DTS-HD digitale audio kan decoderen."
 
 #. Description of setting with label #545 "Audio output device"
 #: system/settings/settings.xml
@@ -17635,11 +17775,11 @@ msgid ""
 "important notifications."
 msgstr "Kies hoe interfacegeluiden moet afgespeeld worden, zoals navigatiegeluiden en belangrijke notificaties."
 
-#. Description of settings category with label #14219 "Control"
+#. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
-msgstr "Deze categorie bevat de instellingen voor de manier waarop invoer apparaten worden verwerkt."
+msgstr "Deze categorie bevat de instellingen voor de manier waarop invoerapparaten worden verwerkt."
 
 #. Description of setting with label #35000 "Peripherals"
 #: system/settings/settings.xml
@@ -17664,7 +17804,7 @@ msgid ""
 "Use a mouse or touch screen device to control the interface. Note: Disabling"
 " will cause you to lose control over this application when no keyboard or "
 "remote is present."
-msgstr "Gebruik een muis of aanraakscherm apparaat om de omgeving te beheren. Let op: De-activatie kan jou mogelijk het beheer verliezen van deze applicatie wanneer geen toetsenbord of afstandsbediening in de buurt is."
+msgstr "Gebruik een muis of aanraakscherm apparaat om de omgeving te beheren. Let op: De-activatie kan jou mogelijk het beheer verliezen van deze applicatie wanneer er geen toetsenbord of afstandsbediening in de buurt is."
 
 #. Description of setting with label #35100 "Enable joystick and gamepad
 #. support"
@@ -17679,13 +17819,13 @@ msgctxt "#36379"
 msgid ""
 "This category contains the settings for how Internet access is handled. The "
 "default web interface can also be selected here."
-msgstr "Deze categorie bevat de instellingen over hoe internet toegang wordt verwerkt. De standaard internet omgeving kan eveneens hier worden geselecteerd."
+msgstr "Deze categorie bevat de instellingen over hoe internet toegang wordt verwerkt. De standaard webinterface kan eveneens hier worden geselecteerd."
 
 #. Description of setting with label #708 "Use proxy server"
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your Internet connection uses a proxy server, configure it here."
-msgstr "Als je internetconnectie een proxy server gebruikt, configureer het hier."
+msgstr "Als je internetconnectie een proxy server gebruikt, configureer deze hier."
 
 #. Description of setting with label #1180 "Proxy type"
 #: system/settings/settings.xml
@@ -17724,7 +17864,7 @@ msgctxt "#36386"
 msgid ""
 "If your Internet connection has limited bandwidth available, use this "
 "setting to keep bandwidth usage by this application within defined limits."
-msgstr "Als jouw internetconnectie een gelimiteerde bandbreedte heeft, gebruik dan deze instelling om het bandbreedte gebruik van deze applicatie te beperken binnen kaders."
+msgstr "Als jouw internetconnectie een gelimiteerde bandbreedte heeft, gebruik dan deze instelling om het bandbreedtegebruik van deze applicatie te beperken binnen gekozen kaders."
 
 #. Description of settings category with label #14095 "Power saving"
 #: system/settings/settings.xml
@@ -17744,13 +17884,13 @@ msgstr "Zet het scherm uit bij inactiviteit. Dit is belangrijk bij TV-toestellen
 #: system/settings/settings.xml
 msgctxt "#36389"
 msgid "Set the time to wait for any activity to occur before shutting down."
-msgstr "Stel wachttijd in voor elke activiteit die voorkomt voordat hij afsluit."
+msgstr "Stel wachttijd in voor elke activiteit die gebeurt voordat de applicatie afsluit."
 
 #. Description of setting with label #13008 "Shutdown function"
 #: system/settings/settings.xml
 msgctxt "#36390"
 msgid "Define what action to perform when the shutdown function timer lapsed."
-msgstr "Definieer welke actie moet worden uitgevoerd wanneer de afsluit functie timer verstreken is."
+msgstr "Definieer welke actie moet worden uitgevoerd wanneer de afsluittimer verstreken is."
 
 #. Description of settings category with label #14092 "Logging"
 #: system/settings/settings.xml
@@ -17796,7 +17936,7 @@ msgid ""
 "Here you can enable or disable master lock and define the PIN code used to "
 "unlock it. You can also specify which areas of the application would need a "
 "PIN to access them."
-msgstr "Hier kunt u een Master Lock inschakelen of uitschakelen en een PIN-code definiëren die gebruikt wordt om deze te ontgrendelen. U kunt ook aangeven welke delen van de applicatie een PIN-code nodig hebben om te openen."
+msgstr "Hier kunt u een Master Lock in- of uitschakelen en een PIN-code definiëren om deze te ontgrendelen. U kunt ook aangeven welke delen van de applicatie een PIN-code nodig hebben voor toegang."
 
 #. Description of setting with label #20076 "Ask for master lock code on
 #. startup"
@@ -17805,21 +17945,21 @@ msgctxt "#36397"
 msgid ""
 "If enabled, the master lock code is required to unlock this application on "
 "startup."
-msgstr "Wanneer geactiveerd, is de hoofdgebruikers beveiligingscode vereist om deze applicatie te ontsluiten tijdens opstarten. "
+msgstr "Wanneer geactiveerd is de hoofdgebruikers beveiligingscode vereist om deze applicatie te ontsluiten tijdens het opstarten. "
 
 #. Description of setting with label #20076 "Max Retries"
 #: system/settings/settings.xml
 msgctxt "#36398"
 msgid ""
 "Define the maximum number of retries before this application is closed down."
-msgstr "Definieer het maximaal aantal keer opnieuw voordat deze applicatie wordt afgesloten."
+msgstr "Definieer het maximaal aantal pogingen voordat de applicatie wordt afgesloten."
 
 #. Description of settings category with label #439 "Cache"
 #: system/settings/settings.xml
 msgctxt "#36399"
 msgid ""
 "This category contains the settings for how the cache function is handled."
-msgstr "Deze categorie bevat de instellingen voor hoe de buffer functie wordt verwerkt."
+msgstr "Deze categorie bevat de instellingen voor hoe de bufferfunctie wordt verwerkt."
 
 #. Description of settings category with label #14025 "Video/Audio/DVD cache -
 #. Hard disk"
@@ -17924,7 +18064,7 @@ msgstr "Specificeer het type afstandsbediening dat wordt gebruikt."
 #: system/settings/settings.xml
 msgctxt "#36417"
 msgid "Always run a Kodi helper so that the remote can be used to start Kodi."
-msgstr "Start altijd een Kodi helper zodat de afstandbediening kan worden gebruikt om Kodi op te starten."
+msgstr "Start altijd een Kodi-helper zodat de afstandbediening kan worden gebruikt om Kodi op te starten."
 
 #. Description of setting with label #13603 "Sequence delay time"
 #: system/settings/settings.xml
@@ -17944,7 +18084,7 @@ msgctxt "#36420"
 msgid ""
 "Look for external subtitles for videos provided by the UPnP server. This can"
 " cause extensive CPU, filesystem and network load."
-msgstr "Zoek naar externe ondertitels voor video`s verkregen via de UPnP server. Dit kan Uitgebreid CPU, systeem en Netwerkgebruik veroorzaken"
+msgstr "Zoek naar externe ondertitels voor video`s verkregen via de UPnP-server. Dit kan flink CPU-, systeem- en netwerkverbruik veroorzaken."
 
 #. Description of setting with label #13437 "Prefer VDPAU Video Mixer"
 #: system/settings/settings.xml
@@ -17959,7 +18099,7 @@ msgstr "Het omzeilen van de VDPAU mixer beperkt de impact op minder krachtige sy
 #: system/settings/settings.xml
 msgctxt "#36422"
 msgid "Enable hardware video decode using Amlogic decoder."
-msgstr "Activeer hardware-videodecodering gebruikmakend van AMlogic decoder."
+msgstr "Activeer de hardware-videodecodering gebruikmakend van AMlogic decoder."
 
 #. Description of setting with label #812 "Prevent duplicate episodes"
 #: system/settings/settings.xml
@@ -17967,7 +18107,7 @@ msgctxt "#36423"
 msgid ""
 "Timer rules shall only record new episodes. Not supported by all add-ons and"
 " backends."
-msgstr "Timer regels zullen alleen nieuwe afleveringen opnemen. Niet ondersteund door alle add-ons en backends."
+msgstr "Timerregels zullen alleen nieuwe afleveringen opnemen. Wordt niet door alle add-ons en backends ondersteund."
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -17977,7 +18117,7 @@ msgid ""
 "actions; [Switch to channel] Will instantly tune to the related channel; "
 "[Show information] Will display a detailed information with plot and further"
 " options; [Record] Will create a recording timer for the selected item."
-msgstr "Selecteer wat er gebeuren gaat wanneer een item is geselecteerd in de gids: [Toon inhoudsmenu] Zal het inhoudsmenu starten van waaruit vervolgacties kunnen worden gekozen; [Verander naar kanaal] Zal gaan naar het gerelateerde kanaal; [Toon informatie] zal gedetailleerde informatie met plot en volgende opties tonen; [Opnemen] Zal een opname timer creëren voor het geselecteerde item."
+msgstr "Selecteer wat er gebeuren gaat wanneer een item is geselecteerd in de gids: [Toon inhoudsmenu] Zal het inhoudsmenu starten van waaruit vervolgacties kunnen worden gekozen; [Verander naar kanaal] Zal gaan naar het gerelateerde kanaal; [Toon informatie] Zal gedetailleerde informatie met plot en volgende opties tonen; [Opnemen] Zal een opname timer creëren voor het geselecteerde item."
 
 #: system/settings/settings.xml
 msgctxt "#36425"
@@ -18006,7 +18146,7 @@ msgid ""
 "Select this if the audio out connection only supports multichannel audio as "
 "Dolby Digital 5.1 (AC-3), such as a S/PDIF connection. If your system "
 "supports PCM multichannel audio via HDMI, leave this disabled."
-msgstr "Selecteer deze optie als de audio-out-aansluiting alleen multikanaalsaudio ondersteunt zoals Dolby Digital 5.1(AC-3), bijvoorbeeld een S/PDIF aansluiting. Als uw systeem PCM multikanaals-geluid via HDMI ondersteunt, laat deze dan gedeactiveerd."
+msgstr "Selecteer deze optie als de audio-out-aansluiting alleen multikanaalsaudio ondersteunt zoals Dolby Digital 5.1(AC-3), bijvoorbeeld een S/PDIF aansluiting. Als uw systeem PCM multikanaals-geluid via HDMI ondersteunt, houdt deze dan gedeactiveerd."
 
 #. Description for setting category #14101: "Video Acceleration"
 #: system/settings/settings.xml
@@ -18036,25 +18176,25 @@ msgctxt "#36433"
 msgid ""
 "When enabled, VAAPI render method is preferred and the CPU has less load. If"
 " you experience hangs, disable this option."
-msgstr "Wanneer geactiveerd, heeft VAAPO render methode de voorkeur en de CPU heeft minder verbruik, als stotteren ervaart, de-activeer deze optie dan."
+msgstr "Wanneer geactiveerd, heeft de VAAPO-rendermethode de voorkeur en heeft de CPU heeft minder verbruik. Indien het systeem vast loopt,  de-activeer dan deze optie."
 
 #. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36434"
 msgid "Allow hardware acceleration - MMAL"
-msgstr "Toestaan hardwareversnelling - MMAL"
+msgstr "Toestaan van hardwareversnelling - MMAL"
 
 #. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "VideoPlayer gebruiken voor het decoderen van video-bestanden met MMAL versnelling."
+msgstr "VideoPlayer gebruiken voor het decoderen van videobestanden met MMAL-versnelling."
 
 #. Button on settings to opend DSP manager dialog
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Audio DSP manager..."
-msgstr "Audio DSP beheerder..."
+msgstr "Audio DSP-beheerder..."
 
 #. Description of setting with label 36436 "Audio DSP manager..."
 #: system/settings/settings.xml
@@ -18062,7 +18202,7 @@ msgctxt "#36437"
 msgid ""
 "Allows to configure available modes for different stages in audio processing"
 " and to arrange the steps within the processing chain of each selected mode."
-msgstr "Toestaan om beschikbare modes te configureren voor verschillende stages in audioverwerking en om de stappen te organiseren binnen het verwerkingsproces van elke geselecteerde mode."
+msgstr "Toestaan om beschikbare modes te configureren voor verschillende stages in audioverwerking, en om de stappen te organiseren binnen het verwerkingsproces van elke geselecteerde mode."
 
 #. Description of setting with label 36441 "Enable Audio DSP processing"
 #: system/settings/settings.xml
@@ -18070,7 +18210,7 @@ msgctxt "#36438"
 msgid ""
 "Enables digital signal processing (DSP) of audio channels specified by the "
 "speaker configuration."
-msgstr "Activeer digitale signaal verwerking (DSP) van audio kanalen gespecificeerd door de luidsprekerconfiguratie."
+msgstr "Activeer digitale signaalverwerking (DSP) van audiokanalen, gespecificeerd door de luidsprekerconfiguratie."
 
 #. Description of setting with label 14082 "Reset the Audio DSP database..."
 #: system/settings/settings.xml
@@ -18078,7 +18218,7 @@ msgctxt "#36439"
 msgid ""
 "All data (add-on settings and audio DSP manager settings) in the audio DSP "
 "database will be erased."
-msgstr "Alle gegevens (add-on instellingen en audio DSP beheerder instellingen) in de audio DSP database zullen worden gewist."
+msgstr "Alle gegevens (add-on instellingen en audio DSP beheerderinstellingen) in de audio DSP-database zullen worden gewist."
 
 #. Used in confirm on dialog to erase database
 #: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
@@ -18086,20 +18226,20 @@ msgctxt "#36440"
 msgid ""
 "Erasing all DSP add-on and audio DSP manager settings in the audio DSP "
 "database."
-msgstr "Activeer alle DSV add-on en audio DSV beheerinstellingen in de audio DSV database."
+msgstr "Activeer alle DSV add-on en audio DSV-beheerinstellingen in de audio DSV-database."
 
 #. Settings boolean value name
 #: system/settings/settings.xml
 msgctxt "#36441"
 msgid "Enable audio DSP processing"
-msgstr "Activeer audio DSV verwerking"
+msgstr "Activeer audio DSP-verwerking"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
-msgstr "Het aantal volume controle stappen instellen."
+msgstr "Het aantal volumestappen instellen."
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -18114,14 +18254,14 @@ msgctxt "#36461"
 msgid ""
 "Notification event describe regular processes and actions performed by the "
 "system or the user."
-msgstr "Notificatie gebeurtenis beschrijft algemene processen en actie uitgevoerd door het systeem of de gebruiker."
+msgstr "Notificatiegebeurtenis beschrijft de algemene processen en actie(s) uitgevoerd door het systeem of de gebruiker."
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should
 #. be applied
 #: system/settings/settings.xml
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode / Current"
-msgstr "Stereoscopische 3D modus \\ Huidig"
+msgstr "Stereoscopische 3D modus / Huidig"
 
 #. headline of a dialog/info message showing the current stereoscopic 3D mode
 #: guilib/StereoscopicsManager.cpp
@@ -18209,7 +18349,7 @@ msgctxt "#36523"
 msgid ""
 "Maximum sampling rate for S/PDIF or sampling rate for fixed output "
 "configuration."
-msgstr "Maximum sampling rate voor S/PDIF of sampling rate voor vaste output configuratie."
+msgstr "Maximale sampling rate voor S/PDIF of sampling rate voor vaste uitvoerconfiguratie."
 
 #. label for a setting to choose the preferred (playback) mode and the name of
 #. a selectable playback option
@@ -18267,7 +18407,7 @@ msgid ""
 "source when downmixed however volume will be lower. Note: Dynamic range is "
 "the difference between the quietest and loudest sounds in an audio source. "
 "Enable this setting if movie dialogues are barely audible."
-msgstr "Selecteer hoe geluid wordt gereduceerd. als voorbeeld van 5.1 naar 2.0.[CR][Geactiveerd] behoudt het volumeniveau van de originele geluidsbron echter het dynamische bereik is gecomprimeerd[CR][Gedeactiveerd] Behoudt het dynamische bereik van de originele geluidsbron wanneer er wordt gereduceerd, echter het volume zal lager zijn. Opmerking: dynamisch bereik is het verschil tussen de zachtste en hardste geluiden in een geluidsbron. Activeer deze instelling als gesprekken in een film nauwelijks hoorbaar zijn."
+msgstr "Selecteer hoe geluid wordt gereduceerd, bijv. van 5.1 naar 2.0.[CR][Geactiveerd] Behoudt het volumeniveau van de originele geluidsbron hoewel het dynamische bereik gecomprimeerd is.[CR][Gedeactiveerd] Behoudt het dynamische bereik van de originele geluidsbron wanneer er wordt gereduceerd, echter het volume zal lager zijn. Opmerking: dynamisch bereik is het verschil tussen de zachtste en hardste geluiden in een geluidsbron. Activeer deze instelling als gesprekken in een film nauwelijks hoorbaar zijn."
 
 #. Description of setting with label #668 "Component-specific logging..."
 #: system/settings/settings.xml
@@ -18275,7 +18415,7 @@ msgctxt "#36534"
 msgid ""
 "Specify additional libraries whose verbose messages are to be included in "
 "the debug log."
-msgstr "Specificeer overige bibliotheken wiens uitgebreide berichten moeten worden opgenomen in het debug log."
+msgstr "Specificeer overige bibliotheken wiens uitvoermeldingen moeten worden opgenomen in het debug log."
 
 #. label of a setting, allowing to specify the stereoscopic 3D mode of a video
 #: guilib/StereoscopicsManager.cpp
@@ -18289,7 +18429,7 @@ msgstr "Stereoscopische 3D modus van video"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36536"
 msgid "Invert stereoscopic 3D mode (flip eyes)"
-msgstr "Omdraaien stereoscopische 3D modus (verwissel ogen)"
+msgstr "Omdraaien stereoscopische 3D modus (verwissel links/rechts)"
 
 #. Description of setting with label #36520 "Playback mode of stereoscopic
 #. videos"
@@ -18302,7 +18442,7 @@ msgid ""
 "hardware\" section of the settings.[CR][Monoscopic / 2D] Will play the video"
 " in mono / 2D.[CR][Ignore] Disables any stereoscopic 3D processing and "
 "handling."
-msgstr "Selecteer in welke modus stereoscopische 3D video`s worden afgespeeld.[CR][Vraag mij]Toont een venster om de gewenste modus te selecteren voor elke keer afspelen.[CR] [Voorkeursmodus] Gebruikt de voorkeursmodus gespecificeerd in de \"Systeem -> Video hardware\" sectie van de instellingen.[CR][Monoscopisch / 2D] Zal de video afspelen in mono / 2D.[CR][Negeren] Deactiveert elke stereoscopische 3D verwerking en behandeling."
+msgstr "Selecteer in welke modus stereoscopische 3D video`s worden afgespeeld.[CR][Vraag mij] Toont een venster om de gewenste modus te selecteren voor elke keer afspelen.[CR] [Voorkeursmodus] Gebruikt de voorkeursmodus gespecificeerd in de \"Systeem -> Video hardware\" sectie van de instellingen.[CR][Monoscopisch / 2D] Zal de video afspelen in mono / 2D.[CR][Negeren] Deactiveert elke stereoscopische 3D verwerking en behandeling."
 
 #. Description of setting with label #36526 Disable stereoscopic mode when
 #. playback is stopped
@@ -18314,7 +18454,7 @@ msgid ""
 "stereoscopic 3D mode. For video playlists with mixed stereoscopic 3D and 2D "
 "content, then the GUI will also stay in stereoscopic 3D mode even when a "
 "non-stereoscopic 2D video is playing."
-msgstr "[Geactiveerd] verander GUI (en sommige TV's) terug naar 2D modus, tussen video's in een afspeellijst of wanneer afspelen is beëindigd[CR][Gedeactiveerd] GUI en TV blijven in Stereoscopische 3D modus. Voor video afspeellijsten met zowel stereoscopische 3D en 2D inhoud, de GUI zal dan eveneens in stereoscopische 3D modus blijven zelfs wanneer niet-stereoscopische 2D video wordt afgespeeld."
+msgstr "[Geactiveerd] Schakel de GUI (en sommige TV's) terug naar 2D modus, tussen video's in een afspeellijst of wanneer afspelen is beëindigd[CR][Gedeactiveerd] GUI en TV blijven in stereoscopische 3D modus. Voor video afspeellijsten met zowel stereoscopische 3D en 2D inhoud zal de GUI eveneens in stereoscopische 3D modus blijven zelfs wanneer niet-stereoscopische 2D video wordt afgespeeld."
 
 #. Description of setting with label #36500 "Stereoscopic mode (current)"
 #: system/settings/settings.xml
@@ -18388,13 +18528,13 @@ msgid ""
 "needs to be disabled when using iOS 9 or later clients to restore music "
 "streaming via AirPlay. \"Videos\" and \"Pictures\" are only supported for "
 "iOS clients using iOS 8.x and older."
-msgstr "Activeert ondersteuning voor ontvangen van \"Video`s\" en \"Afbeeldingen\" via Airplay. dit moet worden gedeactiveerd wanneer gebruik gemaakt wordt van IOS 9 of latere uitvoeringen om muziek streaming te herstellen via Airplay. \"Video`s\" en \"Afbeeldingen\" zijn alleen ondersteund voor IOS uitvoeringen gebruikmakend van IOS 8.x en ouder."
+msgstr "Activeert de ondersteuning voor het ontvangen van \"Video's\" en \"Afbeeldingen\" via Airplay. Dit moet worden gedeactiveerd wanneer gebruik gemaakt wordt van IOS / MacOS 9 of later om muziekstreaming te herstellen via Airplay. \"Video's\" en \"Afbeeldingen\" zijn alleen ondersteund voor IOS uitvoeringen gebruikmakend van IOS 8.x en ouder."
 
 #. Name of a setting
 #: system/settings/settings.xml
 msgctxt "#36550"
 msgid "Stereoscopic 3D effect strength"
-msgstr "Sterkte stereoscopische 3D-effect"
+msgstr "Sterkte van stereoscopisch 3D-effect"
 
 #. Description of setting with label #36550 "Stereoscopic 3D effect strength"
 #: system/settings/settings.xml
@@ -18406,7 +18546,7 @@ msgid ""
 "stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the "
 "value should be higher for small screens and lower for large screens. Note: "
 "this is not supported by all skins."
-msgstr "Definieerd de sterkte van het stereoscopische 3d effect in de GUI. Dit wordt gedaan door het beheren van de diepte van perceptie binnenin de GUI. Dus hoe hoger de waarde, des te meer elementen zullen uit het scherm springen.  [Nul] deactiveert het 3D effect van de GUI.[CR] voor een goede visuele beleving, zou de waarde hoger moeten zijn voor kleine schermen en lager voor grote schermen. Let op:dit wordt niet ondersteund door alle skins."
+msgstr "Definiëert de sterkte van het stereoscopische 3D-effect in de GUI. Dit wordt gedaan door het beheren van de diepte van perceptie binnenin de GUI. Dus hoe hoger de waarde, des te meer elementen uit het scherm zullen springen.  [Nul] Deactiveert het 3D-effect van de GUI.[CR] Voor een goede visuele beleving zou de waarde hoger moeten zijn voor kleine schermen, en lager voor grote schermen. Let op: dit wordt niet door alle skins ondersteund."
 
 #. Description of setting "System -> Video output -> NoOfBuffers" with label
 #. #36043
@@ -18415,7 +18555,7 @@ msgctxt "#36552"
 msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
-msgstr "Hiermee definieert u het aantal buffers voor de presentatie gebruikt door het grafische stuurprogramma . Selecteer 2 als het stuurprogramma dubbele buffering gebruikt of 3 voor triple bufferen. "
+msgstr "Hiermee definieert u het aantal buffers te gebruiken door het grafische stuurprogramma. Selecteer 2 als het stuurprogramma dubbele buffering gebruikt, of 3 voor drievoudige buffering. "
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -18429,7 +18569,7 @@ msgctxt "#36561"
 msgid ""
 "Reproduce video colours accurately using a display profile or a 3D lookup "
 "table."
-msgstr "Reproduceer video kleuren accuraat door een weergaveprofiel of een 3D zoektabel te gebruiken."
+msgstr "Reproduceer videokleuren accuraat door een weergaveprofiel of een 3D-zoektabel te gebruiken."
 
 #: system/settings/settings.xml
 msgctxt "#36562"
@@ -18447,7 +18587,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr "Gebruik een voorberekende 3D lookup table voor video kleur correctie of bereken de transformatie voor elke video via een profiel van uw display. Een voorberekende 3D lookup table heeft de voorkeur, want daardoor kunt u gebruik maken van geavanceerde mogelijkheden en hoge precisie in ArgyllCMS. Weergave profiel gebaseerde correctie is nuttig om verschillende parameters te testen of weergave installingen te emuleren waarvoor u geen 3D LUT hebt voorbereid."
+msgstr "Gebruik een voorberekende 3D lookup-table voor videokleurcorrectie, of bereken de transformatie voor elke video via een profiel van uw display. Een voorberekende 3D-lookuptable heeft de voorkeur, want daardoor kunt u gebruik maken van geavanceerde mogelijkheden en hoge precisie in ArgyllCMS. Weergave profiel gebaseerde correctie is nuttig om verschillende parameters te testen of weergave-instellingen te emuleren waarvoor u geen 3D-LUT hebt voorbereid."
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -18458,7 +18598,7 @@ msgstr "3D LUT"
 #: system/settings/settings.xml
 msgctxt "#36565"
 msgid "TODO: 3D LUT filename description"
-msgstr "TODO: 3D LUT bestandsnaam omschrijving"
+msgstr "TODO: 3D-LUT-bestandsnaamomschrijving"
 
 #: system/settings/settings.xml
 msgctxt "#36566"
@@ -18470,7 +18610,7 @@ msgstr "ICC display profile"
 #: system/settings/settings.xml
 msgctxt "#36567"
 msgid "TODO: ICC display profile filename description"
-msgstr "TODO: ICC display profile bestandsnaam omschrijving"
+msgstr "TODO: ICC weergaveprofiel bestandsnaamomschrijving"
 
 #: system/settings/settings.xml
 msgctxt "#36568"
@@ -18482,7 +18622,7 @@ msgstr "Whitepoint"
 #: system/settings/settings.xml
 msgctxt "#36569"
 msgid "TODO: Whitepoint selection description"
-msgstr "TODO: Whitepoint selectie omschrijving"
+msgstr "TODO: Whitepointkeuzeomschrijving"
 
 #: system/settings/settings.xml
 msgctxt "#36570"
@@ -18494,7 +18634,7 @@ msgstr "Primaries"
 #: system/settings/settings.xml
 msgctxt "#36571"
 msgid "TODO: Primary coordinates description"
-msgstr "TODO: Primary coordinates beschrijving"
+msgstr "TODO: Primaire coördinatenbeschrijving"
 
 #: system/settings/settings.xml
 msgctxt "#36572"
@@ -18506,7 +18646,7 @@ msgstr "Gamma mode"
 #: system/settings/settings.xml
 msgctxt "#36573"
 msgid "TODO: Gamma mode description"
-msgstr "TODO: Gamma mode beschrijving"
+msgstr "TODO: Gammamode-beschrijving"
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -18623,7 +18763,7 @@ msgid ""
 "adding a small amount of noise to the picture. This can be disabled for "
 "slower systems, or when Kodi is set to limited range RGB output and no video"
 " processing is needed."
-msgstr "Elimineer inbranden veroorzaakt door RGB niveau conversie of andere verwerking door een kleine hoeveelheid ruis toe te voegen aan de afbeelding. Dit kan worden uitgeschakeld voor tragere systemen, of wanneer Kodi is ingesteld op beperkt assortiment RGB-uitgang en geen video-verwerking nodig is."
+msgstr "Elimineer kleurverzadiging dat veroorzaakt wordt door RGB- niveauconversie of andere verwerking, door een kleine hoeveelheid ruis toe te voegen aan de afbeelding. Dit kan worden uitgeschakeld voor tragere systemen, of wanneer Kodi is ingesteld op beperkte RGB-kleuren en geen videokleurverwerking nodig is."
 
 #. Description of setting with label #36100 "Dither depth"
 #: system/settings/settings.xml
@@ -18635,7 +18775,7 @@ msgid ""
 " 7 or 6 bit setting may eliminate more banding. Lower settings are available"
 " for testing purposes only to make it easy to see whether dithering is "
 "applied and that the dither noise pixel size matches the display resolution."
-msgstr "Video dithering uitgang precisie in stukjes. Gebruikt u de hoogste instelling dat geen inbranding laat zien. De standaardinstelling 8 wordt aanbevolen voor de meeste systemen. Als uw GPU is ingesteld op de schaal van de uitvoer RGB niveaus of u een laptop gebruikt scherm, een 7 of 6 bitinstelling kan elimineren meer \\\"banding\\\". Lagere instellingen zijn beschikbaar voor testdoeleinden alleen te maken het gemakkelijk om te zien of dithering wordt toegepast en dat de pixelgrootte van dithering lawaai overeenkomt met de schermresolutie."
+msgstr "Videodithering uitvoerprecisie in bits. Gebruik de hoogste instelling waarbij geen inbranding te zien is. De standaardinstelling 8 wordt aanbevolen voor de meeste systemen. Als uw GPU is ingesteld op de schaal van de uitvoer RGB-niveaus of u gebruikt een laptopscherm, kan een 7 of 6 bitinstelling meer \\\"banding\\\" elimineren. Lagere instellingen zijn beschikbaar voor testdoeleinden alleen om het makkelijk te zien of dithering wordt toegepast, en dat de pixelgrootte van ditheringnoise overeenkomt met de schermresolutie."
 
 #. Description of settings category with label #14022 "Library"
 #: system/settings/settings.xml
@@ -18716,7 +18856,7 @@ msgid ""
 "Manage modules and support libraries that have been automatically installed "
 "as a dependency to other add-ons. Items listed as \"Orphaned\" are no longer"
 " required by any add-ons and are safe to uninstall."
-msgstr "Beheer modules en ondersteun bibliotheken die automatisch zijn geïnstalleerd als een afhankelijkheid van andere add-ons . Items getoond als 'Verweesd' die niet langer door de invoegtoepassingen verplicht zijn en veilig zijn te verwijderen."
+msgstr "Beheer modules en ondersteun bibliotheken die automatisch zijn geïnstalleerd als een afhankelijkheid van andere add-ons. Items getoond als 'Verweesd' die niet langer door de invoegtoepassingen verplicht zijn en veilig zijn te verwijderen."
 
 #. Description of setting with label #24994 "Running"
 #: system/settings/settings.xml
@@ -18752,7 +18892,23 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
-msgstr "Add-ons krijgen toegang tot persoonsgegevens die zijn opgeslagen op dit apparaat. Door toe te staan, u gaat ermee akkoord dat u alleen verantwoordelijk bent voor enig verlies van gegevens, ongewenst gedrag, of schade aan uw apparaat. Wilt u doorgaan?"
+msgstr "Add-ons krijgen toegang tot persoonsgegevens die zijn opgeslagen op dit apparaat. Door dit toe te staan,  gaat u er mee akkoord dat alleen u verantwoordelijk bent voor enig verlies van gegevens, ongewenst gedrag, of schade aan uw apparaat. Wilt u verdergaan?"
+
+#. Label of a setting, allow the user to specifiy high quality downscaling of
+#. pictures
+#: system/settings/settings.xml
+msgctxt "#36619"
+msgid "High quality downscaling"
+msgstr "Terugschalen van hoge kwaliteit"
+
+#. Description of setting "Pictures -> Slideshow -> High Quality Downscaling"
+#. with label #36619
+#: system/settings/settings.xml
+msgctxt "#36620"
+msgid ""
+"Enable high quality downscaling of pictures (uses more memory and has "
+"moderate performance impact)."
+msgstr "Inschakelen van het omlaag schalen van de hogekwaliteit van afbeeldingen (vraagt meer geheugen en heeft enige impact op de algehele prestatie)."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -18950,7 +19106,7 @@ msgid ""
 "Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
 "FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
 "Pi as this requires a lot of CPU."
-msgstr "Selecteer deze optie als de audio-out-aansluiting alleen multikanaals audio ondersteunt zoals Dolby Digital 5.1 (AC3), dit maakt multikanaals audio zoals AAC 5.1 of FLAC 5.1 te beluisteren in 5.1 surround sound. Opmerking: Niet aanbevolen op de Raspberry-Pi omdat dit veel rekenkracht vergt van de CPU."
+msgstr "Selecteer deze optie als de audio-out-aansluiting alleen multikanaals audio ondersteunt, zoals Dolby Digital 5.1 (AC3), dit maakt multikanaals audio zoals AAC 5.1 of FLAC 5.1 te beluisteren in 5.1 surroundsound. Opmerking: Niet aanbevolen op de Raspberry-Pi, omdat dit veel rekenkracht vergt van de CPU."
 
 #: system/settings/settings.xml
 msgctxt "#37025"
@@ -19002,7 +19158,7 @@ msgctxt "#37033"
 msgid ""
 "Video playback related accessibility settings, e.g. \"Prefer subtitles for "
 "the hearing impaired\"."
-msgstr "Video afspeel gerelateerde toegankelijkheidsinstellingen, bv. \"voorkeur ondertitels voor de doven en slechthorenden\""
+msgstr "Video afspeel-toegankelijkheidsinstellingen, bv. \"Voorkeur ondertitels voor doven en slechthorenden\""
 
 #. Setting #37034 Accessibility
 #: system/settings/settings.xml
@@ -19044,13 +19200,13 @@ msgctxt "#37039"
 msgid ""
 "Prefer the subtitle stream for the hearing impaired to other subtitle "
 "streams of the same language"
-msgstr "Verkies de ondertitel stream voor de doven en slechthorenden boven de andere ondertitel streams van de zelfde taal"
+msgstr "Prefereer de ondertitel voor de doven en slechthorenden boven de andere ondertitel streams van de zelfde taal"
 
 #. Setting #37040 Playback
 #: system/settings/settings.xml
 msgctxt "#37040"
 msgid "Prefer default audio streams"
-msgstr "Verkies standaard audiostreams"
+msgstr "Prefereer standaard audiostreams"
 
 #. Description of setting #37040 Playback
 #: system/settings/settings.xml
@@ -19059,7 +19215,7 @@ msgid ""
 "If enabled, audio streams that are flagged as default (and match the "
 "preferred language) are preferred over audio streams with higher quality "
 "(number of channels, codec, ...)."
-msgstr "Wanneer geactiveerd, krijgen audio streams die gemarkeerd zijn als \"Standaard\" (en overeenkomend met de voorkeur taal) een voorkeur bovenop audio streams met een hogere kwaliteit (aantal kanalen, codec, ...)."
+msgstr "Wanneer geactiveerd, krijgen audiostreams die gemarkeerd zijn als \"Standaard\" (en overeenkomend met de voorkeurtaal) een voorkeur bovenop audiostreams met een hogere kwaliteit (aantal kanalen, codec, ...)."
 
 #. Description of setting Skip steps
 #: system/settings/settings.xml
@@ -19069,7 +19225,7 @@ msgid ""
 "steps are selected for a skip direction, these can be applied by subsequent "
 "presses on the skip button within the defined skip delay. Forward (positive)"
 " and backward (negative) steps can be defined independently."
-msgstr "Definieert welke stap grootte wordt gebruikt wanneer op skip knoppen wordt gedrukt., als meerdere stappen zijn geselecteerd voor een skip richting kunnen deze door opeenvolgende drukken op de gedefinieerde skip vertraging. Vooruit (positief) en achterwaarts (negatief) stappen kunnen onafhankelijk van elkaar worden."
+msgstr "Definieert welke stapgrootte wordt gebruikt wanneer op skipknoppen wordt gedrukt., als meerdere stappen zijn geselecteerd voor een skiprichting kunnen deze door opeenvolgende drukken op de gedefinieerde skipvertraging. Stappen vooruit (positief) en achterwaarts (negatief) kunnen onafhankelijk van elkaar worden."
 
 #. Description of setting Skip delay
 #: system/settings/settings.xml
@@ -19078,13 +19234,13 @@ msgid ""
 "Defines the time to wait for subsequent key presses before performing the "
 "skip. Only applies when using smart skipping (when using more than one skip "
 "step for a direction)."
-msgstr "Definieert de tijd te wachten voor de volgende toetsaanslagen voordat u de skip wordt uitgevoerd. Alleen van toepassing bij gebruik van smart skipping (bij gebruik van meer dan één skip stap voor een richting)."
+msgstr "Definieert de te wachten tijd voor de volgende toetsaanslagen voordat u de skip wordt uitgevoerd. Alleen van toepassing bij gebruik van smart skipping (bij gebruik van meer dan één skip stap voor een richting)."
 
 #. Setting #37044 Extract chapter thumbnails
 #: system/settings/settings.xml
 msgctxt "#37044"
 msgid "Extract chapter thumbnails"
-msgstr "Uitpakken hoofdstuk miniaturen"
+msgstr "Uitpakken hoofdstukminiaturen"
 
 #. Description of setting #37044 Extract chapter thumbnails"
 #: system/settings/settings.xml
@@ -19092,7 +19248,7 @@ msgctxt "#37045"
 msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
-msgstr "uitpakken hoofdstuk miniaturen voor presentatie in hoofdstukken  / bladwijzers scherm. dit kan het CPU verbruik verhogen."
+msgstr "Uitpakken hoofdstukminiaturen voor presentatie in hoofdstukken / bladwijzers scherm. Dit kan het CPU-verbruik verhogen."
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -19109,7 +19265,7 @@ msgstr "Toon \"Alle bestanden\" vermelding"
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Toon \"alle bestanden\" vermelding in locatie, bv \"Alle albums\" of \"alle seizoenen\"."
+msgstr "Toon \"Alle bestanden\" vermelding in locatie, bv \"Alle albums\" of \"Alle seizoenen\"."
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems
@@ -19126,7 +19282,7 @@ msgctxt "#38014"
 msgid ""
 "Limits the speed (fps) used to update the GUI while playing videos. This can"
 " reduce CPU load and fix playback issues while the GUI is shown."
-msgstr "Limiteert de snelheid (fps) gebruikt om de GUI te updaten tijdens afspelen video's dit kan het CPU verbruik verlagen en verbeteren van afspeelproblemen wanneer de GUI wordt getoond. "
+msgstr "Limiteert de snelheid (fps) gebruikt om de GUI te updaten tijdens afspelen van video's. Dit kan het CPU-verbruik verlagen en verbeteren van afspeelproblemen wanneer de GUI wordt getoond. "
 
 #. Label of a settings value to indicate the "disabled" state of an otherwise
 #. limiting setting (like fps limit, bandwidth limit, etc.)
@@ -19171,7 +19327,7 @@ msgstr "Zet mijn score"
 #: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
-msgstr "informatieleverancier selectie"
+msgstr "Informatieleverancier selectie"
 
 #: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
 msgctxt "#38025"
@@ -19186,7 +19342,7 @@ msgstr "Uiterlijkheden"
 #: system/settings/rbp.xml
 msgctxt "#38027"
 msgid "Decode the stereo stream from 3D files"
-msgstr "De stereo stream van 3D-bestanden decoderen"
+msgstr "De stereostream van 3D-bestanden decoderen"
 
 #. Description of setting with label #38027 "Decode the stereo stream from 3D
 #. files"
@@ -19197,12 +19353,12 @@ msgid ""
 "be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
 "rays.[CR]Note: Processing of this data may reduce playback performance, so "
 "only enable if you require stereoscopic 3D support."
-msgstr "Wanneer geactiveerd, kunnen video's gemaakt in Multiview-Video Coding (MVC) formaat ook in stereoscopisch 3D worden bekeken. MVC formaat is meestal te vinden op 3D Blu-rays. [CR] Opmerking: De verwerking van deze gegevens kan afspeelprestaties verminderen, dus alleen inschakelen als u stereoscopische 3D ondersteuning nodig heeft."
+msgstr "Wanneer geactiveerd, kunnen video's gemaakt in Multiview-Video Coding (MVC) formaat ook in stereoscopisch 3D worden bekeken. MVC-formaat is meestal te vinden op 3D-Blurays. [CR] Opmerking: De verwerking van deze gegevens kan afspeelprestaties verminderen, dus alleen inschakelen als u stereoscopische 3D-ondersteuning nodig heeft."
 
 #: system/settings/rbp.xml
 msgctxt "#38029"
 msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Activeer Full HD HDMI modus voor stereoscopisch 3D"
+msgstr "Activeer Full HD HDMI-modus voor stereoscopisch 3D"
 
 #. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
 #. label #38029
@@ -19286,13 +19442,13 @@ msgctxt "#38100"
 msgid "Section that contains the settings for the playback of media"
 msgstr "Sectie die de instellingen voor het afspelen van media bevat"
 
-#. Description of section #14201 "Library"
+#. Description of section #14201 "Media"
 #: system/settings/settings.xml
 msgctxt "#38101"
 msgid ""
-"Section that contains the settings for how media information is collected, "
-"stored, shown, and navigated"
-msgstr "Sectie die de instellingen voor de manier waarop media-informatie wordt verzameld, opgeslagen, getoond, en genavigeerd wordt bevat"
+"Section that contains the settings for sources and how media information is "
+"collected, stored, shown, and navigated"
+msgstr "Sectie die de instellingen bevat voor bronnen en hoe media-informatie wordt verzameld, opgeslagen, getoond en genavigeerd."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -19325,7 +19481,7 @@ msgstr "Deze categorie bevat de instellingen voor het afspelen van foto's via ee
 #: system/settings/settings.xml
 msgctxt "#38106"
 msgid "This category contains the settings for audio & subtitle language"
-msgstr "Deze categorie bevat de instellingen voor audio & ondertitelings taal"
+msgstr "Deze categorie bevat de instellingen voor audio & ondertitelingstaal"
 
 #. Description of category #14210 "Videos"
 #: system/settings/settings.xml
@@ -19355,7 +19511,7 @@ msgstr "Deze categorie bevat de instellingen voor de manier waarop informatie ov
 #: system/settings/settings.xml
 msgctxt "#38110"
 msgid "This category contains the settings for the library databases"
-msgstr "Deze categorie bevat de instellingen voor de bibliotheek databases"
+msgstr "Deze categorie bevat de instellingen voor de bibliotheekdatabases"
 
 #. Description of category #14224 "Other"
 #: system/settings/settings.xml
@@ -19382,3 +19538,35 @@ msgstr "Versnellen MPEG4"
 msgctxt "#39003"
 msgid "Accelerate h264"
 msgstr "Versnellen h264"
+
+#. Description of category "Library" with label #14202
+#: system/settings/settings.xml
+msgctxt "#39004"
+msgid ""
+"This category contains provides access to the windows for source management "
+"and the Library settings for the databases"
+msgstr "Deze categorie geeft toegang tot de secties voor bronbeheer en de bibliothekeninstellingen voor de databases."
+
+#. Description of setting "Videos... with label #14242
+#: system/settings/settings.xml
+msgctxt "#39005"
+msgid ""
+"This provides access to where video sources can be added and otherwise "
+"managed."
+msgstr "Dit geeft toegang aan waar videobronnen kunnen worden toegevoegd en anderszins beheerd."
+
+#. Description of setting "Music... with label #14243
+#: system/settings/settings.xml
+msgctxt "#39006"
+msgid ""
+"This provides access to where music sources can be added and otherwise "
+"managed."
+msgstr "Dit geeft toegang aan waar muziekbronnen kunnen worden toegevoegd en anderszins beheerd."
+
+#. Description of setting "Pictures... with label #14244
+#: system/settings/settings.xml
+msgctxt "#39007"
+msgid ""
+"This provides access to where picture sources can be added and otherwise "
+"managed."
+msgstr "Dit geeft toegang aan waar afbeeldingsbronnen kunnen worden toegevoegd en anderszins beheerd."
