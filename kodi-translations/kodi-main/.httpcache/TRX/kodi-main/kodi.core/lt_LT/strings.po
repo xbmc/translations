@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-11 08:48+0000\n"
+"PO-Revision-Date: 2016-10-24 06:56+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -63,8 +63,8 @@ msgstr "Nustatymai"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
-msgid "Kodi SVN"
-msgstr "Kodi SVN"
+msgid "Kodi GIT"
+msgstr "Kodi GIT"
 
 msgctxt "#7"
 msgid "File manager"
@@ -867,6 +867,11 @@ msgid "Plot outline"
 msgstr "Siužetas bendrais bruožais"
 
 #: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#204"
+msgid "Compilation"
+msgstr "Kompiliacija"
+
+#: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
 msgstr "Balsai"
@@ -1526,8 +1531,8 @@ msgstr "DTS-HD palaikantis imtuvas"
 
 #: system/settings/settings.xml
 msgctxt "#348"
-msgid "Enable passthrough"
-msgstr "Įjungti tranzitinį perdavimą"
+msgid "Allow passthrough"
+msgstr "Leisti tranzitinį perdavimą"
 
 #: system/settings/settings.xml
 msgctxt "#349"
@@ -2545,7 +2550,7 @@ msgstr "Rūšiavimo kryptis"
 
 msgctxt "#581"
 msgid "Sort method"
-msgstr "Rūšiavimo metodas"
+msgstr "Rūšiavimo būdas"
 
 msgctxt "#582"
 msgid "View mode"
@@ -4948,8 +4953,8 @@ msgctxt "#12021"
 msgid "Start from beginning"
 msgstr "Pradėti nuo pradžios"
 
-#: xbmc\pvr\windows\GUIWindowPVRRecordings.cpp
-#: xbmc\video\windows\GUIWindowVideoBase.cpp
+#: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from %s"
 msgstr "Tęsti nuo %s"
@@ -4960,52 +4965,62 @@ msgctxt "#12023"
 msgid "Play from beginning"
 msgstr "Atkurti nuo pradžių"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12310"
 msgid "0"
 msgstr "0"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12311"
 msgid "1"
 msgstr "1"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12312"
 msgid "2"
 msgstr "2"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12313"
 msgid "3"
 msgstr "3"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12314"
 msgid "4"
 msgstr "4"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12315"
 msgid "5"
 msgstr "5"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12316"
 msgid "6"
 msgstr "6"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12317"
 msgid "7"
 msgstr "7"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12318"
 msgid "8"
 msgstr "8"
 
-#: addons/skin.estuary/1080i/DialogNumeric.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogNumeric.xml
+#: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12319"
 msgid "9"
 msgstr "9"
@@ -5024,7 +5039,7 @@ msgctxt "#12322"
 msgid "*"
 msgstr "*"
 
-#: xbmc\GUIPassword.cpp
+#: xbmc/GUIPassword.cpp
 msgctxt "#12325"
 msgid "Locked! Enter code..."
 msgstr "Užblokuota! Įveskite kodą..."
@@ -5078,17 +5093,17 @@ msgctxt "#12335"
 msgid "Remove lock"
 msgstr "Pašalinti užraktą"
 
-#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
 msgctxt "#12337"
 msgid "Numeric password"
 msgstr "Skaitinis slaptažodis"
 
-#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
 msgctxt "#12338"
 msgid "Gamepad button combo"
 msgstr "Žaidimų pulto mygtukų kombinacija"
 
-#: xbmc\profiles\dialogs\GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
 msgctxt "#12339"
 msgid "Full-text password"
 msgstr "Tekstinis slaptažodis"
@@ -5119,12 +5134,12 @@ msgctxt "#12344"
 msgid "Passwords entered did not match."
 msgstr "Įvesti slaptažodžiai nesutampa."
 
-#: xbmc\GUIPassword.cpp
+#: xbmc/GUIPassword.cpp
 msgctxt "#12345"
 msgid "Access denied"
 msgstr "Prieiga draudžiama"
 
-#: xbmc\GUIPassword.cpp
+#: xbmc/GUIPassword.cpp
 msgctxt "#12346"
 msgid "Password retry limit exceeded."
 msgstr "Slaptažodžio bandymų skaičius išnaudotas."
@@ -5134,7 +5149,7 @@ msgctxt "#12347"
 msgid "The system will now power down."
 msgstr "Sistema dabar išsijungs."
 
-#: xbmc\GUIPassword.cpp
+#: xbmc/GUIPassword.cpp
 msgctxt "#12348"
 msgid "Item locked"
 msgstr "Užblokuota"
@@ -5159,7 +5174,7 @@ msgctxt "#12358"
 msgid "Password entry was blank. Try again."
 msgstr "Slaptažodžio laukas buvo tuščias. Bandykite dar kartą."
 
-#: xbmc\GUIPassword.cpp xbmc\profiles\dialogs\GUIDialogProfileSettings.cpp
+#: xbmc/GUIPassword.cpp xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#12360"
 msgid "Master lock"
 msgstr "Valdytojo užraktas"
@@ -5169,7 +5184,7 @@ msgctxt "#12362"
 msgid "Shutdown system if number of master lock retries is exceeded"
 msgstr "Išjungti sistemą, jei viršytas bandymų atrakinti valdytojo užraktą skaičius"
 
-#: xbmc\GUIPassword.cpp
+#: xbmc/GUIPassword.cpp
 msgctxt "#12367"
 msgid "Master code is not valid. Please enter a valid master code."
 msgstr "Valdytojo kodas neteisingas. Įveskite teisingą valdytojo kodą."
@@ -5179,15 +5194,15 @@ msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Nustatymai ir failų tvarkyklė"
 
-#: xbmc\settings\dialogs\GUIDialogAudioDSPSettings.cpp
-#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
-#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all media"
 msgstr "Nustatyti kaip numatytuosius visiems media įrašams"
 
-#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
-#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values. Are you sure?"
 msgstr "Tai iš naujo nustatys bet kokias anksčiau išsaugotas reikšmes. Ar tikrai norite tęsti?"
@@ -5233,17 +5248,17 @@ msgctxt "#12390"
 msgid "System uptime"
 msgstr "Sistemos veikimo laikas"
 
-#: xbmc\utils\SystemInfo.cpp addons/skin.estuary/1080i/Variables.xml
+#: xbmc/utils/SystemInfo.cpp addons/skin.estuary/1080i/Variables.xml
 msgctxt "#12391"
 msgid "Minutes"
 msgstr "Minutės"
 
-#: xbmc\utils\SystemInfo.cpp
+#: xbmc/utils/SystemInfo.cpp
 msgctxt "#12392"
 msgid "Hours"
 msgstr "Valandos"
 
-#: xbmc\utils\SystemInfo.cpp
+#: xbmc/utils/SystemInfo.cpp
 msgctxt "#12393"
 msgid "Days"
 msgstr "Dienos"
@@ -5324,12 +5339,13 @@ msgctxt "#13011"
 msgid "Suspend"
 msgstr "Pristabdyti"
 
-#: addons/skin.estuary/1080i/DialogButtonMenu.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogButtonMenu.xml
+#: addons/skin.estouchy/xml/Home.xml
 msgctxt "#13012"
 msgid "Exit"
 msgstr "Išeiti"
 
-#: addons/skin.estuary/1080i/DialogButtonMenu.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogButtonMenu.xml
 msgctxt "#13013"
 msgid "Reboot"
 msgstr "Paleisti sistemą iš naujo"
@@ -5344,7 +5360,7 @@ msgctxt "#13015"
 msgid "Power button action"
 msgstr "Išjungimo mygtuko veiksmas"
 
-#: addons/skin.estuary/1080i/DialogButtonMenu.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogButtonMenu.xml
 msgctxt "#13016"
 msgid "Power off system"
 msgstr "Išjungti sistemą"
@@ -5364,17 +5380,17 @@ msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "Ar yra aktyvi kita sesija, galbūt per SSH?"
 
-#: xbmc\storage\MediaManager.cpp
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable storage device"
 msgstr "Prijungtas nešiojamasis saugyklos įrenginys"
 
-#: xbmc\storage\MediaManager.cpp
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#13022"
 msgid "Unsafe storage device removal"
 msgstr "Nesaugus saugyklos įrenginio atjungimas"
 
-#: xbmc\storage\MediaManager.cpp
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#13023"
 msgid "Successfully removed storage device"
 msgstr "Saugyklos įrenginys sėkmingai atjungtas"
@@ -5442,12 +5458,12 @@ msgctxt "#13036"
 msgid "Failed for %s"
 msgstr "Nepavyko %s"
 
-#: xbmc\powermanagement\PowerManager.cpp
+#: xbmc/powermanagement/PowerManager.cpp
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Žemas baterijos lygis"
 
-#: xbmc\interfaces\legacy\Window.cpp
+#: xbmc/interfaces/legacy/Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
 msgstr "Mirgėjimo filtras"
@@ -5478,12 +5494,12 @@ msgctxt "#13109"
 msgid "Test & apply the resolution"
 msgstr "Išbandyti ir pritaikyti raišką"
 
-#: xbmc\settings\DisplaySettings.cpp
+#: xbmc/settings/DisplaySettings.cpp
 msgctxt "#13110"
 msgid "Save this resolution?"
 msgstr "Išsaugoti šią raišką?"
 
-#: xbmc\settings\DisplaySettings.cpp
+#: xbmc/settings/DisplaySettings.cpp
 msgctxt "#13111"
 msgid "Would you like to keep this change?"
 msgstr "Ar norite išlaikyti šį pakeitimą?"
@@ -5509,7 +5525,7 @@ msgstr "Visada įjungta"
 
 msgctxt "#13116"
 msgid "Upscaling method"
-msgstr "Raiškos keitimo metodas"
+msgstr "Raiškos keitimo būdas"
 
 msgctxt "#13117"
 msgid "Bicubic"
@@ -5524,7 +5540,7 @@ msgctxt "#13119"
 msgid "Sinc"
 msgstr "Sinc"
 
-#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#13120"
 msgid "VDPAU"
 msgstr "VDPAU"
@@ -5548,24 +5564,24 @@ msgctxt "#13132"
 msgid "Blank displays"
 msgstr "Tušti ekranai"
 
-#: xbmc\network\NetworkServices.cpp
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Aptikti aktyvūs ryšiai!"
 
-#: xbmc\network\NetworkServices.cpp
+#: xbmc/network/NetworkServices.cpp
 msgctxt "#13141"
 msgid ""
 "If you proceed, you might not be able to control this application any "
 "longer. Are you sure you want to stop the event server?"
 msgstr "Jei tęsite, galite prarasti galimybę toliau valdyti šią programą. Ar tikrai norite sustabdyti įvykių serverį?"
 
-#: xbmc\osx\XBMCHelper.cpp
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Keisti Apple nuotolinio valdymo pultelio režimą?"
 
-#: xbmc\osx\XBMCHelper.cpp
+#: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13145"
 msgid ""
 "If you are currently using the Apple Remote to control this application, "
@@ -5618,7 +5634,8 @@ msgctxt "#13174"
 msgid "HDD power cycle count:"
 msgstr "HDD įjungimo ciklų skaičius:"
 
-#: skin.estouchy xbmc\profiles\ProfilesManager.cpp
+#: addons/skin.estouchy/xml/SettingsProfile.xml
+#: xbmc/profiles/ProfilesManager.cpp
 #: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 #: addons/skin.estuary/1080i/SettingsProfile.xml
 #: addons/skin.estuary/1080i/Includes.xml
@@ -5626,7 +5643,7 @@ msgctxt "#13200"
 msgid "Profiles"
 msgstr "Profiliai"
 
-#: xbmc\profiles\ProfilesManager.cpp
+#: xbmc/profiles/ProfilesManager.cpp
 msgctxt "#13201"
 msgid "Delete profile '%s'?"
 msgstr "Pašalinti profilį '%s'?"
@@ -6003,7 +6020,7 @@ msgstr "Stabdyti nuskaitymą"
 
 msgctxt "#13354"
 msgid "Render method"
-msgstr "Atkūrimo metodas"
+msgstr "Atvaizdavimo būdas"
 
 msgctxt "#13355"
 msgid "Low quality pixel shader"
@@ -6427,7 +6444,7 @@ msgstr "Įjunkite šią parinktį, jei norite naudoti aparatinės įrangos spart
 #: system/settings/settings.xml
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
-msgstr "Pirmenybė VAAPI metodui"
+msgstr "Pirmenybė VAAPI atvaizdavimo būdui"
 
 #: system/settings/settings.xml
 msgctxt "#13458"
@@ -7415,6 +7432,11 @@ msgid "Debug"
 msgstr "Derinimas"
 
 #: system/settings/settings.xml
+msgctxt "#14261"
+msgid "Configure skin..."
+msgstr "Konfigūruoti teminę išvaizdą..."
+
+#: system/settings/settings.xml
 msgctxt "#14270"
 msgid "Unit Formats"
 msgstr "Matavimo vienetų formatas"
@@ -8057,6 +8079,11 @@ msgctxt "#16022"
 msgid "Bob - Inverted"
 msgstr "Bob - Apverstas"
 
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+msgctxt "#16023"
+msgid "Choose operator"
+msgstr "Pasirinkite operatorių"
+
 #: xbmc/dialogs/GUIDialogProgress.cpp
 msgctxt "#16024"
 msgid "Cancelling..."
@@ -8230,7 +8257,7 @@ msgstr "Nepavyko pašalinti bent vieno failo. Daugiau informacijos apie šį pra
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
-msgstr "Vaizdo mastelio keitimo metodas"
+msgstr "Vaizdo mastelio keitimo būdas"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
@@ -8298,11 +8325,6 @@ msgid "VDPAU - Sharpness"
 msgstr "VDPAU - Ryškumas"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16314"
-msgid "Inverse telecine"
-msgstr "Atvirkštinis Telecine"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Optimizuotas"
@@ -8329,13 +8351,8 @@ msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16320"
-msgid "DXVA - Bob"
-msgstr "DXVA - Bob"
-
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16321"
-msgid "DXVA - Best"
-msgstr "DXVA - Geriausias"
+msgid "DXVA"
+msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
@@ -8356,11 +8373,6 @@ msgstr "Programinė įranga - Sulieti"
 msgctxt "#16325"
 msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#16326"
-msgid "DXVA-HD"
-msgstr "DXVA-HD"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
@@ -8788,6 +8800,7 @@ msgstr "Pašalinti laikmatį"
 #. Label for a context menu entry to open the timer settings dialog
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 #: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
+#: addons/skin.estuary/1080i/DialogPVRInfo.xml
 msgctxt "#19061"
 msgid "Add timer"
 msgstr "Pridėti laikmatį"
@@ -8966,6 +8979,24 @@ msgstr "Įrašyti kitą laidą (%s)"
 msgctxt "#19093"
 msgid "Instant recording: %s"
 msgstr "Momentinis įrašymas: %s"
+
+#. error message displayed in case adding a timer failed because no suitable
+#. epg-based timer type could be found.
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+msgctxt "#19094"
+msgid ""
+"Timer creation failed. The PVR add-on does not support a suitable timer "
+"type."
+msgstr "Nepavyko sukurti laikmačio. PVR priedas nepalaiko tinkamo laikmačio tipo."
+
+#. error message displayed in case adding a timer rule failed because no
+#. suitable epg-based timer rule type could be found.
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+msgctxt "#19095"
+msgid ""
+"Timer rule creation failed. The PVR add-on does not support a suitable timer"
+" rule type."
+msgstr "Nepavyko sukurti laikmačio taisyklės. PVR priedas nepalaiko tinkamo laikmačio taisyklės tipo."
 
 msgctxt "#19097"
 msgid "Enter the name for the recording"
@@ -9964,6 +9995,12 @@ msgstr "Pašalinti šį įrašymą visam laikui?"
 msgctxt "#19295"
 msgid "Delete timer rule"
 msgstr "Ištrinti laikmačio taisyklę"
+
+#. Label if no pvr addons are enabled
+#: xbmc/pvr/windows/GUIWindowPVRBase.cpp
+msgctxt "#19296"
+msgid "No PVR add-on enabled"
+msgstr "Neįjungtas joks PVR priedas"
 
 #: xbmc/epg/Epg.cpp
 msgctxt "#19499"
@@ -11943,6 +11980,11 @@ msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Eksportuoti į vieną failą ar į atskirą failą kiekvienam įrašui?"
 
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+msgctxt "#20427"
+msgid "Choose rule type"
+msgstr "Pasirinkite taisyklės tipą"
+
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Vienas failas"
@@ -12557,8 +12599,8 @@ msgstr "Redaguoti išmanųjį grojaraštį"
 
 #: addons/skin.estuary/1080i/SmartPlaylistEditor.xml
 msgctxt "#21433"
-msgid "Name of the playlist"
-msgstr "Grojaraščio pavadinimas"
+msgid "Playlist name"
+msgstr "Grojaraščio vardas"
 
 msgctxt "#21434"
 msgid "Find items where"
@@ -12971,6 +13013,12 @@ msgstr "Orientacija"
 msgctxt "#21844"
 msgid "XP comment"
 msgstr "XP komentaras"
+
+#. Used in context menu
+#: xbmc/video/windows/GUIWindowVideoNav.cpp
+msgctxt "#21845"
+msgid "Scan to library"
+msgstr "Nuskaityti į biblioteką"
 
 msgctxt "#21857"
 msgid "Sub-location"
@@ -13581,11 +13629,6 @@ msgctxt "#24043"
 msgid "Available updates"
 msgstr "Galimi atnaujinimai"
 
-#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonsDatabase.cpp
-msgctxt "#24044"
-msgid "Dependencies not met. Please contact add-on author."
-msgstr "Priklausomybės netenkinamos. Susisiekite su priedo autoriumi."
-
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24045"
@@ -13607,11 +13650,6 @@ msgctxt "#24048"
 msgid "VideoPlayer InputStream"
 msgstr "VideoPlayer InputStream"
 
-#: xbmc/filesystem/AddonsDirectory.cpp
-msgctxt "#24049"
-msgid "Incompatible"
-msgstr "Nesuderinamas"
-
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
@@ -13622,7 +13660,8 @@ msgctxt "#24051"
 msgid "Version:"
 msgstr "Versija:"
 
-#: addons/skin.estuary/1080i/DialogAddonInfo.xml skin.estouchy
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
 msgctxt "#24052"
 msgid "Disclaimer"
 msgstr "Atsakomybės apribojimas"
@@ -13816,7 +13855,7 @@ msgctxt "#24090"
 msgid "Lock add-on manager"
 msgstr "Užrakinti priedų tvarkyklę"
 
-#: xbmc\addons\GUIDialogAddonInfo.cpp
+#: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24091"
 msgid "This add-on can't be disabled"
 msgstr "Šio priedo negalima išjungti"
@@ -14071,7 +14110,7 @@ msgid "Audio DSP"
 msgstr "Audio DSP"
 
 #. To open dsp submenu
-#: xbmc\video\dialogs\GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#24136"
 msgid "Audio DSP..."
 msgstr "Audio DSP..."
@@ -14148,6 +14187,28 @@ msgctxt "#24147"
 msgid "Failed to scan %s: %s"
 msgstr "Nepavyko nuskaityti %s: %s"
 
+msgctxt "#24148"
+msgid "Incompatible add-ons"
+msgstr "Nesuderinami priedai"
+
+msgctxt "#24149"
+msgid ""
+"The following add-ons are incompatible with this version of Kodi and have "
+"been automatically disabled: %s."
+msgstr "Išvardinti priedai yra nesuderinami su šia Kodi versija ir buvo automatiškai išjungti: %s."
+
+#. Progress text on splash screen
+#: xbmc/Application.cpp
+msgctxt "#24150"
+msgid "Database migration in progress - please wait..."
+msgstr "Vyksta duomenų bazės migracija - prašome palaukti..."
+
+#. Progress text on splash screen
+#: xbmc/Application.cpp
+msgctxt "#24151"
+msgid "Add-on migration in progress - please wait..."
+msgstr "Vyksta priedų migracija - prašome palaukti..."
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14182,7 +14243,7 @@ msgctxt "#24996"
 msgid "Manage dependencies"
 msgstr "Tvarkyti priklausomybes"
 
-#: xbmc/filesystem/AddonsDirectory.cpp
+#: xbmc/filesystem/AddonsDirectory.cpp system/settings/settings.xml
 msgctxt "#24997"
 msgid "Look and feel"
 msgstr "Išvaizda ir pojūtis"
@@ -14231,7 +14292,7 @@ msgctxt "#25005"
 msgid "Title: %d"
 msgstr "Pavadinimas: %d"
 
-#: xbmc\video\windows\GUIWindowVideoBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
 msgstr "Pasirinkti atkūrimo elementą"
@@ -14278,7 +14339,7 @@ msgstr "QWERTY klaviatūra"
 
 msgctxt "#29802"
 msgid "Passthrough audio in use"
-msgstr "Naudojamas tranzitinis garsas"
+msgstr "Naudojamas tranzitinis garso perdavimas"
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -14748,19 +14809,11 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Garsumas bus padidintas, kai RDS perduoda eismo patarimus"
 
-#. Boolean value on settings
-#: system/settings/settings.xml
-msgctxt "#29986"
-msgid "Publicate traffic messages"
-msgstr "Publikuoti eismo pranešimus"
-
-#. Help text of boolean on/off value
-#: system/settings/settings.xml
+#. Music role category
+#: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
-msgid ""
-"Send present traffic messages around and can be handled from add-ons "
-"(nothing inside Kodi)"
-msgstr "Siųsti esamo eismo žinutes, kurios gali būti apdorojamos iš priedų (ne Kodi viduje)"
+msgid "Remixers"
+msgstr "Remiksuotojai"
 
 #. Music role category
 #: system/library/music/musicroles/Arrangers.xml
@@ -14989,7 +15042,7 @@ msgctxt "#33053"
 msgid "Configure the"
 msgstr "Konfigūruoti"
 
-#: xbmc\filesystem\VideoDatabaseDirectory.cpp xbmc/media/MediaTypes.cpp
+#: xbmc/filesystem/VideoDatabaseDirectory.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/1080i/View_51_Poster.xml
 msgctxt "#33054"
 msgid "Seasons"
@@ -15035,7 +15088,7 @@ msgctxt "#33062"
 msgid "Play the"
 msgstr "Atkurti"
 
-#: addons/skin.estuary/1080i/Includes.xml skin.estouchy
+#: addons/skin.estuary/1080i/Includes.xml
 msgctxt "#33063"
 msgid "Options"
 msgstr "Parinktys"
@@ -15316,22 +15369,22 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
-#: xbmc\PlayListPlayer.cpp
+#: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
 msgstr "Nepavyksta rasti kito elemento atkūrimui"
 
-#: xbmc\PlayListPlayer.cpp
+#: xbmc/PlayListPlayer.cpp
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Nepavyksta rasti ankstesnio elemento atkūrimui"
 
-#: xbmc\network\windows\ZeroconfWIN.cpp
+#: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
 msgid "Failed to start Zeroconf"
 msgstr "Nepavyko paleisti Zeroconf"
 
-#: xbmc\network\windows\ZeroconfWIN.cpp
+#: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34301"
 msgid ""
 "Is Apple's Bonjour service installed? Check the log for more information "
@@ -15349,12 +15402,12 @@ msgid ""
 "Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
 msgstr "Neįmanoma sustabdyti Zeroconf paslaugos. AirPlay ir AirTunes reikia, kad ji būtų įjungta."
 
-#: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
+#: xbmc/cores/VideoRenderers/LinuxRendererGL.cpp
 msgctxt "#34400"
 msgid "Video rendering"
 msgstr "Vaizdo atvaizdavimas"
 
-#: xbmc\cores\VideoRenderers\LinuxRendererGL.cpp
+#: xbmc/cores/VideoRenderers/LinuxRendererGL.cpp
 msgctxt "#34401"
 msgid ""
 "Failed to initialize video filters / scalers, falling back to bilinear "
@@ -15460,7 +15513,7 @@ msgid "Game add-ons"
 msgstr "Žaidimų priedai"
 
 #. Name of controller add-ons
-#: addons/skin.confluence/720p/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: addons/skin.estuary/1080i/DialogGameControllers.xml xbmc/addons/Addon.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -15502,13 +15555,13 @@ msgid ""
 msgstr "Valdiklio konfigūracija išjungta. Įdiekite tinkamą vairalazdės palaikymo priedą."
 
 #. Title of controller configuration window
-#: addons/skin.confluence/720p/DialogGameControllers.xml
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
 msgctxt "#35058"
 msgid "Controller Configuration"
 msgstr "Valdiklio konfigūracija"
 
 #. Heading for controller buttons list in controller configuration window
-#: addons/skin.confluence/720p/DialogGameControllers.xml
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
 msgctxt "#35059"
 msgid "Buttons"
 msgstr "Mygtukai"
@@ -15569,6 +15622,18 @@ msgstr "Gaidukai"
 msgctxt "#35077"
 msgid "Analog sticks"
 msgstr "Analoginės svirtys"
+
+#. Setting title for left analog stick deadzone
+#: system/peripherals.xml
+msgctxt "#35078"
+msgid "Left stick deadzone"
+msgstr "Kairiosios svirties nejautrioji zona"
+
+#. Setting title for right analog stick deadzone
+#: system/peripherals.xml
+msgctxt "#35079"
+msgid "Right stick deadzone"
+msgstr "Dešiniosios svirties nejautrioji zona"
 
 #. Name of the setting that enables/disables powering off controllers on exit
 #: system/settings/settings.xml
@@ -17720,9 +17785,12 @@ msgstr "Pasirinkite maksimalų galimų garso kanalų / garsiakalbių skaičių d
 #: system/settings/settings.xml
 msgctxt "#36368"
 msgid ""
-"Select to enable the passthrough audio options for playback of encoded audio"
-" such as Dolby Digital (AC3), DTS, etc."
-msgstr "Pasirinkite norėdami įjungti tranzitinio garso perdavimo parinktis koduoto garso atkūrimui, tokio kaip Dolby Digital (AC3), DTS ir kt."
+"Select to allow passthrough audio for playback of compressed audio such as "
+"Dolby Digital (AC3), DTS, etc. The Client of the AudioEngine, for example "
+"Videoplayer, might decide to decode the audio stream under certain "
+"conditions. In Videoplayer case, passthrough won't be used for live streams "
+"and when you sync playback to display."
+msgstr "Pasirinkite norėdami leisti tranzitinį garso perdavimą suglaudinto garso, tokio kaip Dolby Digital (AC3), DTS ir kt., atkūrimui. AudioEngine klientas, pavyzdžiui, Videoplayer, esant tam tikroms sąlygoms gali nuspręsti dekoduoti garsą. Videoplayer atveju, tranzitinis perdavimas nebus naudojamas gyvoms transliacijoms ar kai atkūrimas sinchronizuojamas su ekranu."
 
 #. Description of setting with label #349 "TrueHD capable receiver"
 #: system/settings/settings.xml
@@ -18584,8 +18652,13 @@ msgstr "3D LUT"
 #. Description of setting "System -> Video output -> 3D LUT" with label #36564
 #: system/settings/settings.xml
 msgctxt "#36565"
-msgid "TODO: 3D LUT filename description"
-msgstr ""
+msgid ""
+"Select the 3DLUT file to be used by default. If you place multiple 3DLUT "
+"files in the same directory, then you can switch between them in the OSD "
+"menu during video playback. This allows for multiple display profiles to "
+"account for different viewing environments and source materials, for example"
+" gamma 2.2 for daytime viewing and 2.4 for nighttime."
+msgstr "Pasirinkite 3DLUT failą, kuris bus naudojamas kaip numatytasis. Jei pasirinksite kelis 3DLUT failus tame pačiame aplanke, galėsite persijungti tarp jų OSD meniu vaizdo įrašo atkūrimo metu. Tai leidžia turėti kelis ekrano profilius, kurie bus atsakingi už skirtingas peržiūros aplinkas ir šaltinio medžiagas, pavyzdžiui, gama 2.2 žiūrėjimui dienos metu ir 2.4 - nakties."
 
 #: system/settings/settings.xml
 msgctxt "#36566"
@@ -18596,8 +18669,15 @@ msgstr "ICC ekrano profilis"
 #. label #36566
 #: system/settings/settings.xml
 msgctxt "#36567"
-msgid "TODO: ICC display profile filename description"
-msgstr ""
+msgid ""
+"By providing a display profile, you can modify video parameters such as "
+"gamma, color primaries and whitepoint during playback. An ICC source profile"
+" is created based on the parameters and linked with the display ICC profile "
+"set here. This support is experimental and lacks near black adjustment "
+"towards display native black (causing raised black level) and white level "
+"scaling when a different whitepoint from display native is selected (as a "
+"workaround, adjust video brightness down to avoid clipping)."
+msgstr "Pateikę ekrano profilį, galėsite modifikuoti vaizdo parametrus, tokius kaip gama, pirmines koordinates ar baltą tašką atkūrimo metu. ICC šaltinio profilis sukuriamas remiantis parametrais ir susiejamas su čia nustatytu ekrano ICC profiliu. Šis palaikymas yra eksperimentinis ir jam trūksta beveik juodos spalvos koregavimo prieš tikrąją ekrano juodą spalvą (tai įtakoja aukštesnį juodos lygį)  ir baltos spalvos lygio koregavimo, kai pasirinktas kitoks, nei tikrasis ekrano, baltas taškas (norėdami tai išspręsti, sumažinkite vaizdo šviesumą, kad nebūtų iškraipymų)."
 
 #: system/settings/settings.xml
 msgctxt "#36568"
@@ -18608,8 +18688,11 @@ msgstr "Baltas taškas"
 #. #36568
 #: system/settings/settings.xml
 msgctxt "#36569"
-msgid "TODO: Whitepoint selection description"
-msgstr ""
+msgid ""
+"Changing video whitepoint to D93 is mainly useful for older Japanese NTSC "
+"material which looks too red when played back on a D65 display. Adjust video"
+" brightness setting down to avoid clipping to display native whitepoint."
+msgstr "Vaizdo balto taško pakeitimas į D93 daugiausiai naudingas senesnei japoniškai NTSC medžiagai, kuri atkūrimo D65 ekrane metu atrodo per raudona. Sumažinkite vaizdo šviesumą norėdami išvengti iškraipymų atvaizduojant tikrąjį baltą tašką."
 
 #: system/settings/settings.xml
 msgctxt "#36570"
@@ -18620,8 +18703,10 @@ msgstr "Pirminės koordinatės"
 #. #36570
 #: system/settings/settings.xml
 msgctxt "#36571"
-msgid "TODO: Primary coordinates description"
-msgstr ""
+msgid ""
+"Select the primary color coordinates according to source material. Older HD "
+"material may have been mastered on displays with BT.601 primaries."
+msgstr "Pasirinkite pirminės spalvos koordinates pagal šaltinio medžiagą. Senesnė HD medžiaga gali būti sumontuota ekranuose su BT.601 pirminėmis koordinatėmis."
 
 #: system/settings/settings.xml
 msgctxt "#36572"
@@ -18632,8 +18717,16 @@ msgstr "Gama režimas"
 #. #36572
 #: system/settings/settings.xml
 msgctxt "#36573"
-msgid "TODO: Gamma mode description"
-msgstr ""
+msgid ""
+"Select the gamma curve formula. Use BT.1886 for gamma curve that accounts "
+"for display black and white levels and avoids perceptual clipping. Use input"
+" offset for a similar curve with a manually specified effective gamma. "
+"Output offset allows for perceptual clipping, but can be used to compensate "
+"for incorrect mastering monitor settings that lead to too bright dark "
+"details. Absolute gamma does not account for display black at all and will "
+"clip the lowest levels to display black on any display with higher than zero"
+" black level."
+msgstr "Pasirinkite gama kreivės formulę. Naudokite BT.1886 gamos kreivei, kuri atsakinga už ekrano juodos ir baltos spalvų lygius ir leidžia išvengti suvokimo iškraipymų. Naudokite įvesties kompensaciją, norėdami gauti panašią kreivę su rankiniu būdu nustatyta faktine gama. Išvesties kompensacija gali sukelti suvokimo iškraipymus, tačiau gali kompensuoti klaidingus montavimo monitoriaus nustatymus, kurie sukuria per šviesias tamsias detales. Absoliuti gama visiškai neįtakoja ekrano juodos spalvos ir apkerpa žemiausius lygius, kad atvaizduotų juodą bet kuriame ekrane su aukštesniu už nulį juodos lygiu."
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -18643,8 +18736,10 @@ msgstr "Gama"
 #. Description of setting "System -> Video output -> Gamma" with label #36574
 #: system/settings/settings.xml
 msgctxt "#36575"
-msgid "TODO: Gamma description"
-msgstr ""
+msgid ""
+"Gamma for selected gamma curve type. For input and output offset, the result"
+" at 50% will match an absolute gamma curve with this gamma value."
+msgstr "Pasirinktos gama kreivės tipo gama. Įvesties ir išvesties kompensavimui,  50% rezultatas atitiks absoliučią gama kreivę su šia gama reikšme."
 
 #: system/settings/settings.xml
 msgctxt "#36576"
@@ -18655,8 +18750,12 @@ msgstr "Peržvalgos lentelės dydis"
 #. label #36576
 #: system/settings/settings.xml
 msgctxt "#36577"
-msgid "TODO: Lookup table size description"
-msgstr ""
+msgid ""
+"Specify the resolution for the 3D lookup table. Use a lower resolution for "
+"quick preview and higher resolution for more accurate picture. Using a high "
+"resolution may take seconds to prepare when parameters are changed or a new "
+"video is started."
+msgstr "Nurodykite 3D peržvalgos lentelės raišką. Naudokite žemesnę raišką greitai peržvalgai ir aukštesnę raišką labiau tiksliam vaizdui. Naudojant aukštesnę raišką gali prireikti sekundės vaizdo paruošimui, kai pasikeičia parametrai ar pradedamas naujo vaizdo įrašo atkūrimas."
 
 # Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -19311,12 +19410,12 @@ msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Nustatyti mano reiktingą"
 
-#: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
+#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
 msgstr "Informacijos tiekėjo pasirinkimas"
 
-#: \xbmc\settings\dialogs\GUIDialogContentSettings.cpp
+#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38025"
 msgid "Choose information provider"
 msgstr "Pasirinkite informacijos tiekėją"
@@ -19359,14 +19458,14 @@ msgstr "Ši parinktis naudoja kadrų pakavimą, kad išvestų pilnos raiškos 3D
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
-#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Vaizdo srautas"
 
 #. Label for an option to select the angle to play if current disc has more
 #. than one angle
-#: xbmc\video\dialogs\GUIDialogVideoSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#38032"
 msgid "Angle"
 msgstr "Kampas"
@@ -19422,6 +19521,30 @@ msgstr "Garso operatorius"
 msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[Trūksta]"
+
+#. Title album artists node
+#: system/library/music/musicroles/albumartists.xml
+msgctxt "#38043"
+msgid "Album artists"
+msgstr "Albumo atlikėjai"
+
+#. Title all artists node
+#: system/library/music/musicroles/allartists.xml
+msgctxt "#38044"
+msgid "Song & album artists"
+msgstr "Dainos ir albumo atlikėjai"
+
+#. Title all contributors node (any role)
+#: system/library/music/musicroles/allcontributors.xml
+msgctxt "#38045"
+msgid "All contributors"
+msgstr "Visi bendraautoriai"
+
+#. Title all roles node
+#: system/library/music/musicroles/allroles.xml
+msgctxt "#38046"
+msgid "All roles"
+msgstr "Visos rolės"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -19557,3 +19680,18 @@ msgid ""
 "This provides access to where picture sources can be added and otherwise "
 "managed."
 msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti nuotraukų šaltinius."
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39008"
+msgid "Zoom - 120% width"
+msgstr "Padidintas - 120% pločio"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39009"
+msgid "Zoom - 110% width"
+msgstr "Padidintas - 110% pločio"
+
+#: view/GUIViewState.cpp
+msgctxt "#39010"
+msgid "Select sort method"
+msgstr "Pasirinkite rūšiavimo būdą"
