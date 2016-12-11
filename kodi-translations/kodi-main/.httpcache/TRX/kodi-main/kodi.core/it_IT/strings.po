@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-24 21:18+0000\n"
+"PO-Revision-Date: 2016-11-30 18:55+0000\n"
 "Last-Translator: Simone Grandi <gresy88@gmail.com>\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/teamxbmc/kodi-main/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
@@ -872,11 +872,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "Sintesi"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "Compilation"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -2797,11 +2800,6 @@ msgid "Files without ReplayGain information"
 msgstr "Files senza informazioni ReplayGain"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "Evita clipping nei file con ReplayGain"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "Allunga 16:9 - Non lineare"
@@ -3345,12 +3343,6 @@ msgstr "Accesso a Internet"
 msgctxt "#799"
 msgid "Library update"
 msgstr "Aggiornamento Libreria"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "La Libreria Musicale deve effettuare nuovamente la scansione dai file. Vuoi avviare la scansione adesso?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5250,6 +5242,11 @@ msgid "Month / Day"
 msgstr "Mese / Giorno"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "Policy Privacy"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "Tempo di vita del sistema"
@@ -5732,8 +5729,8 @@ msgstr "Hardware:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "Utilizzo CPU:"
+msgid "System CPU usage:"
+msgstr "Utilizzo CPU Sistema:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -7214,13 +7211,13 @@ msgstr "Impostazioni Libreria"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "TV"
+msgid "PVR & Live TV"
+msgstr "PVR & TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "Impostazioni TV"
+msgid "PVR & Live TV settings"
+msgstr "Impostazioni PVR & TV"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -14206,14 +14203,14 @@ msgstr "I seguenti Add-on sono incompatibili con questa versione di Kodi e sono 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "Migrazione database in corso - attendere prego..."
+msgid "Database migration in progress - please wait"
+msgstr "Migrazione database in corso - attendere prego"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "Migrazione Add-on in corso - attendere prego..."
+msgid "Add-on migration in progress - please wait"
+msgstr "Migrazione Add-on in corso - attendere prego"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14365,6 +14362,7 @@ msgid "Style"
 msgstr "Stile"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14377,6 +14375,7 @@ msgid "Artist"
 msgstr "Artista"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14815,49 +14814,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Se viene mandato un avviso traffico dall'RDS, il volume sarà aumentato."
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "Remixer"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "Arrangiatori"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "Compositori"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "Direttori"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "Autori"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "Orchestre"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15322,6 +15321,20 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "Seleziona il comportamento quando non sono richiesti suoni né dalla riproduzione né dall'interfaccia.[CR][Sempre] Riproduce un suono inudibile continuo, questo mantiene attivo il dispositivo audio per eventuali nuovi suoni, ma questo potrebbe anche bloccare suoni di altre applicazioni.[CR][1-10 Minuti]Come [Sempre] tranne per il fatto che l'audio si disabilita dopo il periodo di tempo selezionato.[CR][Off]L'uscita audio entra in uno stato di sospensione. Nota: si possono perdere alcuni suoni se l'audio entra in stato di sospensione."
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "Invia rumore a basso volume"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "Per mantenere alcuni AVR alimentati inviamo un segnale di rumore casuale non udibile. Puoi disabilitare questa impostazione se stai usando una cuffia o un output analogico."
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
@@ -15512,6 +15525,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "Librerie periferiche"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "Rilevato nuovo controller"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "È stato rilevato un nuovo controller. La configurazione può essere fatta in qualunque momento da \"Impostazioni -> Impostazioni Sistema -> Input\". Vuoi configurarlo adesso?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr "Correggi salti"
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr "Alcuni controller hanno pulsanti e assi che interferiscono con la mappatura. Premili adesso per disabilitarli:[CR]%s"
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "Pulsante %d"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "Asse %d"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr "Impossibile configurare i controller"
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr "La configurazione del controller dipende da un Add-on disabilitato. Vuoi abilitarlo?"
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15545,20 +15616,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "Usa la tastiera o il telecomando per selezionare un profilo Controller. Quando richiesto, premi il tasto sul tuo Controller di gioco che corrisponde meglio a ciò che vedi sullo schermo. Se fai un errore puoi ripetere il processo."
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "Nessun supporto Joystick trovato"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "La configurazione del Controller è disabilitata. Installa l'Add-on supporto joystick corretto."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15859,11 +15916,6 @@ msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "Indirizzo fisico (predomina sulla porta HDMI)"
 
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "Porta COM (lascia vuoto finché non è necessaria)"
-
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
 msgid "Configuration updated"
@@ -15991,6 +16043,11 @@ msgstr "Ferma riproduzione"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "Metti in pausa riproduzione"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr "Forza risveglio AVR quando Kodi è attivato"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16708,13 +16765,13 @@ msgstr "Scegli la fonte predefinita per le informazioni dei Video Musicali. Cons
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "Impostazioni per le funzioni PVR / Live TV."
+msgid "Settings for PVR & Live TV."
+msgstr "Impostazioni per PVR e TV."
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "Categoria contenente le impostazioni generali delle funzioni PVR / Live TV."
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr "Questa categoria contiene le impostazioni generali per PVR e TV."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -17166,13 +17223,6 @@ msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "Volume di riferimento (livello PreAmp) da usare per i file senza informazioni ReplayGain codificate. Di default è 89dB come da standard. Modificalo con cautela."
-
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Riduce il volume del file se potrebbe verificarsi il clipping."
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -19483,46 +19533,54 @@ msgid "Role"
 msgstr "Ruolo"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "Orchestra"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "Autore"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "Remixer"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "Arrangiatore"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "Fonico"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "Produttore"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJ"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "Mixer"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19540,7 +19598,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "Artisti Brani e Album"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19551,6 +19610,22 @@ msgstr "Tutti i collaboratori"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "Tutti i ruoli"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "La Libreria Musicale deve effettuare nuovamente la scansione dai file. Vuoi avviare la scansione adesso?"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr "Cerco informazioni aggiuntive per album e artisti? Questo potrebbe richiedere tempo, quindi potresti preferire farlo dopo"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml

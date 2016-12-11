@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-30 22:31+0000\n"
+"PO-Revision-Date: 2016-12-05 10:57+0000\n"
 "Last-Translator: Özgür BASKIN\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/teamxbmc/kodi-main/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -868,11 +868,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "Kısa özet"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "Derleme"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -2793,11 +2796,6 @@ msgid "Files without ReplayGain information"
 msgstr "ReplayGain bilgisi olmayan dosyalar"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "ReplayGain olan dosyalarda ses kırpılmasından kaçın"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "16:9'a genişlet - Nonlinear"
@@ -3341,12 +3339,6 @@ msgstr "İnternet erişimi"
 msgctxt "#799"
 msgid "Library update"
 msgstr "Kitaplık güncellemesi"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "Müzik kitaplığının dosyalardan etiketleri yeniden taraması gerekiyor. Şimdi tarama yapmak ister misiniz?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5246,6 +5238,11 @@ msgid "Month / Day"
 msgstr "Ay / Gün"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "Gizlilik ilkesi"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "Sistemin çalışma süresi"
@@ -5728,8 +5725,8 @@ msgstr "Donanım:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "CPU kullanımı:"
+msgid "System CPU usage:"
+msgstr "Sistemin CPU kullanımı:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -7210,13 +7207,13 @@ msgstr "Kitaplık ayarları"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "TV"
+msgid "PVR & Live TV"
+msgstr "PVR ve Canlı TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "TV ayarları"
+msgid "PVR & Live TV settings"
+msgstr "PVR ve Canlı TV ayarları"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -14202,14 +14199,14 @@ msgstr "Aşağıdaki eklentiler KODI'nin bu sürümü ile uyumsuzdur ve otomatik
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "Veritabanı geçiş işlemi devam ediyor - lütfen bekleyin..."
+msgid "Database migration in progress - please wait"
+msgstr "Veritabanı geçiş işlemi devam ediyor - lütfen bekleyin"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "Eklenti geçiş işlemi devam ediyor - lütfen bekleyin..."
+msgid "Add-on migration in progress - please wait"
+msgstr "Eklenti geçiş işlemi devam ediyor - lütfen bekleyin"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14361,6 +14358,7 @@ msgid "Style"
 msgstr "Tür"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14373,6 +14371,7 @@ msgid "Artist"
 msgstr "Sanatçı"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14811,49 +14810,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Eğer RDS tarafından trafik önerisi yollanırsa ses düzeyi yükseltilir"
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "Remix yapanlar"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "Aranjörler"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "Besteciler"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "Orkestra Şefleri"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ Mixers"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "Söz Yazarları"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "Orkestralar"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15318,6 +15317,20 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "Oynatma veya GUI sesleri için herhangi bir ses gerekli olmadığındaki davranışı seçin.[CR][Her zaman] - sürekli duyulamaz sinyal çıkışı, bu yeni sesler için çıktı aygıtını canlı tutar ancak bu da diğer uygulamaların seslerini engelleyebilir.[CR][1-10 Dakika] - [Her zaman] ile aynı olmasının dışında seçilen süreden sonra askıda bekleme durumuna girer.[CR][Kapalı] - ses çıkışı askıda bekleme durumuna girer. Not - Sesler askıda bekleme durumuna girerse sesler çalmayabilir."
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "Düşük ses seviyeli gürültü gönder"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "Bazı AVR'leri çalışır durumda tutmak için duyulamayan rastgele bir ses sinyali gönderiyoruz. Kulaklık veya analog çıkış kullanıyorsanız, bu ayarı devre dışı bırakabilirsiniz."
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
@@ -15508,6 +15521,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "Çevre birimleri kitaplıkları"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "Yeni denetleyici algılandı"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "Yeni bir denetleyici tespit edildi. Bu denetleyiciyi \"Ayarlar -> Sistem Ayarları -> Giriş\" menüsünden istediğiniz zaman yapılnadırabilirsiniz. Şimdi yapılandırmak ister misiniz?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr "Atlamayı düzelt"
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr "Bazı denetleyiciler tuş eşleme işlemini etkileyen düğmeler ve eksenlere sahiptir. Bunları devre dışı bırakmak için şimdi bunlara basın:[CR]%s"
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "Düğme: %d"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "Eksen: %d"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr "Denetleyiciler yapılandırılamadı"
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr "Denetleyici yapılandırması devre dışı bırakılmış bir eklentiye bağımlıdır. Etkinleştirmek ister misiniz?"
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15541,20 +15612,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "Denetleyici profilini seçmek için bir klavye veya uzaktan kumanda kullanın. İstendiğinde, ekranda gördüğünüz ve oyun denetleyicisinde bu eylemi en iyi karşılayan düğmeye basın. Eğer bir hata yaparsanız işlemi tekrarlayabilirsiniz."
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "Oyun çubuğu desteği bulunamadı"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "Denetleyici yapılandırması devre dışı. Uygun olan bir oyun çubuğu desteği eklentisi yükleyin."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15855,11 +15912,6 @@ msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "Fiziksel adres (HDMI bağlantı noktasını geçersiz kıl)"
 
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "COM bağlantı noktası (gerekmedikçe boş bırakın)"
-
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
 msgid "Configuration updated"
@@ -15987,6 +16039,11 @@ msgstr "Oynatımı Durdur"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "Oynatımı Duraklat"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr "Kodi etkinleştirildiğinde AVR'yi uyandırmaya zorla"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16704,13 +16761,13 @@ msgstr "Varsayılan müzik videoları bilgisi kaynağını seçin. Seçenekler i
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "PVR / Canlı TV için ayarlar."
+msgid "Settings for PVR & Live TV."
+msgstr "PVR ve Canlı TV için ayarlar."
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "Bu kategori PVR / Canlı TV genel ayarlarını içerir."
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr "Bu kategori PVR ve Canlı TV için genel ayarları içerir."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -17162,13 +17219,6 @@ msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "Ses dosyalarına kodlanmış ReplayGain bilgisi olmayan dosyalar ile kullanılacak ses düzeyi başvurusu (PreAmp düzeyi). Standartlara göre 89dB ayarlıdır. Lütfen dikkatle değiştirin."
-
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Kırpma oluşursa dosyanın ses düzeyini azalt."
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -18626,7 +18676,7 @@ msgctxt "#36561"
 msgid ""
 "Reproduce video colours accurately using a display profile or a 3D lookup "
 "table."
-msgstr "Bir görüntü profili veya 3D arama tablosu kullanarak video renklerini doğru olarak yeniden oluştur."
+msgstr "Bir ekran profili veya 3D arama tablosu kullanarak video renklerini doğru olarak yeniden oluştur."
 
 #: system/settings/settings.xml
 msgctxt "#36562"
@@ -18644,7 +18694,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr "Video renk düzeltmesi için önceden hesaplanmış 3D arama tablosu kullanın veya ekranınızın profilinden her video için ayrı ayrı renk dönüşümünü hesaplayın. Önceden hesaplanmış 3D arama tablosunu tercih etmek, gelişmiş özelliklerden ve ArgyllCMS'de yüksek hassasiyetten yararlanmanızı sağlar. Görüntü profili tabanlı düzeltme, hazır bir 3D LUT olmadan görüntü ayarlarını taklit etmek veya farklı parametreleri sınamak için yararlıdır. "
+msgstr "Video renk düzeltmesi için önceden hesaplanmış 3D arama tablosu kullanın veya ekranınızın profilinden her video için ayrı ayrı renk dönüşümünü hesaplayın. Önceden hesaplanmış 3D arama tablosunu tercih etmek, gelişmiş özelliklerden ve ArgyllCMS'de yüksek hassasiyetten yararlanmanızı sağlar. Ekran profili tabanlı düzeltme, hazır bir 3D LUT olmadan görüntü ayarlarını taklit etmek veya farklı parametreleri sınamak için yararlıdır. "
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -18660,12 +18710,12 @@ msgid ""
 "menu during video playback. This allows for multiple display profiles to "
 "account for different viewing environments and source materials, for example"
 " gamma 2.2 for daytime viewing and 2.4 for nighttime."
-msgstr ""
+msgstr "Varsayılan olarak kullanılacak 3DLUT dosyasını seçin. Aynı dizine birden fazla 3DLUT dosyası yerleştirirseniz, video oynatılırken OSD menüsünde bunlar arasında geçiş yapabilirsiniz. Bu, farklı görüntüleme ortamları ve kaynak malzemeleri için çoklu ekran profillerinin kullanılmasını sağlar. Örneğin, gündüz görüş için gama 2.2 ve gece için 2.4."
 
 #: system/settings/settings.xml
 msgctxt "#36566"
 msgid "ICC display profile"
-msgstr "ICC görüntü profili"
+msgstr "ICC ekran profili"
 
 #. Description of setting "System -> Video output -> ICC display profile" with
 #. label #36566
@@ -18679,7 +18729,7 @@ msgid ""
 "towards display native black (causing raised black level) and white level "
 "scaling when a different whitepoint from display native is selected (as a "
 "workaround, adjust video brightness down to avoid clipping)."
-msgstr ""
+msgstr "Bir ekran profili sağlayarak, oynatma sırasında gama, renk birincilleri ve beyaz nokta gibi video parametrelerini değiştirebilirsiniz. Bir ICC kaynak profili, parametrelere dayanarak oluşturulur ve burada ayarlanan ekran ICC profiliyle bağlantılıdır. Bu destek deneyseldir. Doğal siyah görüntü ayarlanamadan (siyah seviyesinin yükselmesine) ve doğal görüntüden farklı bir beyaz nokta seçildiğinde beyaz seviye ölçeklendirmeden (geçici bir çözüm olarak, kırpmanın önlenmesi için video parlaklığını ayarlayın) yoksundur."
 
 #: system/settings/settings.xml
 msgctxt "#36568"
@@ -18728,7 +18778,7 @@ msgid ""
 "details. Absolute gamma does not account for display black at all and will "
 "clip the lowest levels to display black on any display with higher than zero"
 " black level."
-msgstr ""
+msgstr "Gama eğrisi formülünü seçin. Görüntünün siyah beyaz seviyelerini açıklayan ve algısal kırpmayı önleyen gama eğrisi için BT.1886 kullanın. Elle belirtilen etkin gama ile benzer bir eğri için giriş uzaklığı kullanın. Çıktı uzaklığı algısal kırpmaya izin verir, ancak çok parlak koyu ayrıntılara yol açan yanlış mastering monitör ayarlarını telafi etmek için kullanılabilir. Mutlak gama, ekranı siyah olarak hesaplamaz ve sıfırdan yüksek siyah seviyedeki herhangi bir ekranda siyah göstermek için en düşük seviyeleri küçültür."
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -19479,46 +19529,54 @@ msgid "Role"
 msgstr "Rol"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "Orkestra"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "Söz Yazarı"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "Remix yapan"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "Aranjör"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "Mühendis"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "Yapımcı"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJMixer"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "Mixer"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19536,7 +19594,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "Şarkı ve albümdeki sanatçılar"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19547,6 +19606,22 @@ msgstr "Tüm katılımcılar"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "Tüm roller"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Müzik kitaplığının dosyalardan etiketleri yeniden taraması gerekiyor. Şimdi tarama yapmak ister misiniz?"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr "Albümler ve sanatçılar için ek bilgi getirilsin mi? Bu biraz zaman alabilir, bu yüzden bunu daha sonra yapmayı tercih edebilirsiniz."
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -19665,7 +19740,7 @@ msgctxt "#39005"
 msgid ""
 "This provides access to where video sources can be added and otherwise "
 "managed."
-msgstr "Video kaynakları ekleyin ve yönetin."
+msgstr "Bu, video kaynaklarının eklenebileceği ve yönetilebileceği yerlere erişim sağlar."
 
 #. Description of setting "Music... with label #14243
 #: system/settings/settings.xml
@@ -19673,7 +19748,7 @@ msgctxt "#39006"
 msgid ""
 "This provides access to where music sources can be added and otherwise "
 "managed."
-msgstr "Müzik kaynakları ekleyin ve yönetin."
+msgstr "Bu, müzik kaynaklarının eklenebileceği ve yönetilebileceği yerlere erişim sağlar."
 
 #. Description of setting "Pictures... with label #14244
 #: system/settings/settings.xml
@@ -19681,7 +19756,7 @@ msgctxt "#39007"
 msgid ""
 "This provides access to where picture sources can be added and otherwise "
 "managed."
-msgstr "Resim kaynakları ekleyin ve yönetin."
+msgstr "Bu, resim kaynaklarının eklenebileceği ve yönetilebileceği yerlere erişim sağlar."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39008"

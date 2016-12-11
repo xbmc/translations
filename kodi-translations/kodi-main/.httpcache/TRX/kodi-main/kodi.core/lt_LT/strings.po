@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-24 06:56+0000\n"
+"PO-Revision-Date: 2016-11-30 07:23+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -866,11 +866,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "Siužetas bendrais bruožais"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "Kompiliacija"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -2118,7 +2121,7 @@ msgstr "Išvaizda"
 
 msgctxt "#481"
 msgid "Audio options"
-msgstr "Garso parinkys"
+msgstr "Garso parinktys"
 
 msgctxt "#482"
 msgid "About Kodi"
@@ -2791,11 +2794,6 @@ msgid "Files without ReplayGain information"
 msgstr "Failai be ReplayGain informacijos"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "Vengti failų su ReplayGain iškraipymo"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "Praplėstas 16:9 - nelinijinis"
@@ -3339,12 +3337,6 @@ msgstr "Interneto prieiga"
 msgctxt "#799"
 msgid "Library update"
 msgstr "Bibliotekos atnaujinimas"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "Muzikos biblioteka turi iš naujo nuskaityti žymes iš failų. Ar norite nuskaityti dabar?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5244,6 +5236,11 @@ msgid "Month / Day"
 msgstr "Mėnuo / Diena"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "Privatumo politika"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "Sistemos veikimo laikas"
@@ -5726,8 +5723,8 @@ msgstr "Aparatinė įranga:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "CPU naudojimas;"
+msgid "System CPU usage:"
+msgstr "Sistemos CPU naudojimas:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -6681,7 +6678,7 @@ msgstr "Miniatiūrų kiekis procentais"
 #: addons/skin.estuary/1080i/Includes_MediaMenu.xml
 msgctxt "#14018"
 msgid "View options"
-msgstr "Rodinio parinkys"
+msgstr "Rodinio parinktys"
 
 msgctxt "#14019"
 msgid "Change area code 1"
@@ -7208,13 +7205,13 @@ msgstr "Bibliotekos nustatymai"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "Televizija"
+msgid "PVR & Live TV"
+msgstr "PVR ir televizija"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "TV nustatymai"
+msgid "PVR & Live TV settings"
+msgstr "PVR ir televizijos nustatymai"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -14200,14 +14197,14 @@ msgstr "Išvardinti priedai yra nesuderinami su šia Kodi versija ir buvo automa
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "Vyksta duomenų bazės migracija - prašome palaukti..."
+msgid "Database migration in progress - please wait"
+msgstr "Vyksta duomenų bazės migracija - prašome palaukti"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "Vyksta priedų migracija - prašome palaukti..."
+msgid "Add-on migration in progress - please wait"
+msgstr "Vyksta priedų migracija - prašome palaukti"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14359,6 +14356,7 @@ msgid "Style"
 msgstr "Stilius"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14371,6 +14369,7 @@ msgid "Artist"
 msgstr "Atlikėjas"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14809,49 +14808,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Garsumas bus padidintas, kai RDS perduoda eismo patarimus"
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "Remiksuotojai"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "Aranžuotojai"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "Kompozitoriai"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "Dirigentai"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ miksuotojai"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "Žodžių autoriai"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "Orkestrai"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15316,6 +15315,20 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "Pasirinkite elgseną, kai garso išvestis nereikalinga nei media failų atkūrimui, nei GUI garsams.[CR][Visada] Siunčiamas nuolatinis negirdimas signalas, kuris palaiko garso įrenginį paruoštą bet kokiems naujiems garsams, tačiau tai taip pat gali blokuoti garsus iš kitų programų.[CR][1-10 minučių] Tas pats kaip pasirinkus [Visada], tik po pasirinkto laiko tarpo garso išvestis bus pristabdyta.[CR][Išjungta] Garso išvestis bus pristabdyta. Pastaba: garsai gali likti neatkurti, kai garso išvestis yra pristabdyta."
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "Siųsti mažo garsumo triukšmą"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "Tam kad palaikyti kai kuriuos AVR imtuvus įjungtus, mes siunčiame negirdimą atsitiktinio triukšmo signalą. Jūs galite išjungti šį nustatymą, jei naudojate ausinių arba analoginę išvestį."
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
@@ -15506,6 +15519,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "Išorinių įtaisų bibliotekos"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "Aptiktas naujas valdiklis"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "Buvo aptiktas naujas valdiklis. Jį sukonfigūruoti galite bet kuriuo meniu perėję į \"Nustatymai -> Sistemos nustatymai -> Įvestis\". Ar norite sukonfigūruoti jį dabar?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr "Pataisyti praleidimą"
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr "Kai kurie valdikliai turi mygtukus ir svirtis, kurie trugdo vienas kitam. Paspauskite nurodytus mygtukus, norėdami juos išjungti:[CR]%s"
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "Mygtukas %d"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "Svirtis %d"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr "Neįmanoma sukonfigūruoti valdiklių"
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr "Valdiklio konfigūravimui reikalingas išjungtas priedas. Ar norite jį įjungti?"
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15539,20 +15610,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "Naudokite klaviatūrą ar nuotolinio valdymo pultą norėdami pasirinkti valdiklio profilį. Kai būsite paprašyti, paspauskite mygtuką žaidimų valdiklyje, kuris geriausiai atitinka tai ką matote ekrane. Jei padarysite klaidą, galite pakartoti procesą."
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "Vairalazdės palaikymas nerastas"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "Valdiklio konfigūracija išjungta. Įdiekite tinkamą vairalazdės palaikymo priedą."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15853,11 +15910,6 @@ msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "Fizinis adresas (svarbesnis už HDMI prievadą)"
 
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "COM prievadas (palikite tuščią, nebent reikalingas)"
-
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
 msgid "Configuration updated"
@@ -15985,6 +16037,11 @@ msgstr "Stabdyti atkūrimą"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "Pristabdyti atkūrimą"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr "Priverstinai pažadinti AVR, kai aktyvuojamas Kodi"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16702,13 +16759,13 @@ msgstr "Pasirinkite numatytąjį muzikinių vaizdo klipų informacijos šaltinį
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "PVR / Televizijos nustatymai."
+msgid "Settings for PVR & Live TV."
+msgstr "PVR ir televizijos nustatymai."
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "Šioje kategorijoje yra pagrindiniai PVR / televizijos paslaugos nustatymai."
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr "Šioje kategorijoje yra pagrindiniai PVR ir televizijos nustatymai."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -17160,13 +17217,6 @@ msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "Bazinis garsumas (PreAmp lygis), kurį naudoti failams be įrašytos ReplayGain informacijos. Numatytasis yra 89dB pagal standartą. Keiskite atsargiai."
-
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Sumažinti failo garsumą, jei atsiranda iškraipymas."
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -19477,46 +19527,54 @@ msgid "Role"
 msgstr "Rolė"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "Orkestras"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "Žodžių autorius"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "Remiksuotojas"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "Aranžuotė"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "Inžinierius"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "Prodiuseris"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJ miksuotojas"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "Garso operatorius"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19534,7 +19592,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "Dainos ir albumo atlikėjai"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19545,6 +19604,22 @@ msgstr "Visi bendraautoriai"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "Visos rolės"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Muzikos biblioteka turi iš naujo nuskaityti žymes iš failų. Ar norite nuskaityti dabar?"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr "Atsiųsti papildomą albumų ir atlikėjų informaciją? Tai gali šiek tiek užtrukti, todėl jūs galbūt norėsite atlikti tai vėliau"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml

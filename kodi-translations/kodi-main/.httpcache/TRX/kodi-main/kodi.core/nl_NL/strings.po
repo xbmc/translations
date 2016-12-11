@@ -4,6 +4,7 @@
 # Kees Lijkendijk <clkndk@gmail.com>, 2016
 # Koos van Klojum <Klojum2001@hotmail.com>, 2016
 # Koos van Klojum <Klojum2001@hotmail.com>, 2015-2016
+# Kristof Vergote <kristofvergote1@gmail.com>, 2016
 # Maarten Peels <maartenpeels@gmail.com>, 2015
 # Martijn Kaijser <machine.sanctum@gmail.com>, 2015-2016
 # M. de Boer <de.boer.melle@gmail.com>, 2015-2016
@@ -21,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-11-06 07:26+0000\n"
+"PO-Revision-Date: 2016-12-10 09:01+0000\n"
 "Last-Translator: Martijn Kaijser <machine.sanctum@gmail.com>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -879,11 +880,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "Plotsamenvatting"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "Compilatie"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -1598,7 +1602,7 @@ msgstr "Alle albums"
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#359"
 msgid "Recently added albums"
-msgstr "Onlangs toegevoegde albums"
+msgstr "Recent toegevoegde albums"
 
 #: system/settings/settings.xml
 msgctxt "#360"
@@ -1806,7 +1810,7 @@ msgstr "Temperatuur"
 #: xbmc/windows/GUIWindowWeather.cpp addons/skin.estuary/1080i/MyWeather.xml
 msgctxt "#402"
 msgid "Feels like"
-msgstr "Gevoelstemp."
+msgstr "Gevoelstemperatuur"
 
 #: xbmc/windows/GUIWindowWeather.cpp
 msgctxt "#403"
@@ -2804,11 +2808,6 @@ msgid "Files without ReplayGain information"
 msgstr "Bestanden zonder ReplayGain-informatie"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "Het oversturen van ReplayGained bestanden voorkomen"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "Strekken 16:9 - Niet-linear"
@@ -3352,12 +3351,6 @@ msgstr "Internettoegang"
 msgctxt "#799"
 msgid "Library update"
 msgstr "Bibliotheek bijwerken"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "Muziekbibliotheek moet tags opnieuw scannen van bestanden. Wilt u nu scannen?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5257,6 +5250,11 @@ msgid "Month / Day"
 msgstr "Maand / Dag"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "Privacybeleid"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "Systeem actief"
@@ -5739,8 +5737,8 @@ msgstr "Hardware:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "CPU gebruik:"
+msgid "System CPU usage:"
+msgstr "Systeem CPU gebruik:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -7221,13 +7219,13 @@ msgstr "Bibliotheekinstellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "TV"
+msgid "PVR & Live TV"
+msgstr "PVR & Live TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "TV instellingen"
+msgid "PVR & Live TV settings"
+msgstr "PVR & Live TV instellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -8612,7 +8610,7 @@ msgstr "Toekomstige opnames"
 
 msgctxt "#19026"
 msgid "Add timer..."
-msgstr "Voeg opname toe..."
+msgstr "Voeg timer toe..."
 
 msgctxt "#19027"
 msgid "No search results"
@@ -8783,7 +8781,7 @@ msgstr "Geen informatie beschikbaar"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19056"
 msgid "New timer"
-msgstr "Nieuwe geplande opname"
+msgstr "Nieuwe timer"
 
 #. Notification text to announce that a timer was disabled
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -8808,7 +8806,7 @@ msgstr "Stop opname"
 #: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
 msgctxt "#19060"
 msgid "Delete timer"
-msgstr "Annuleer opname"
+msgstr "Annuleer timer"
 
 #. Label for a context menu entry to open the timer settings dialog
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
@@ -8816,7 +8814,7 @@ msgstr "Annuleer opname"
 #: addons/skin.estuary/1080i/DialogPVRInfo.xml
 msgctxt "#19061"
 msgid "Add timer"
-msgstr "Opnemen"
+msgstr "Timer toevoegen"
 
 msgctxt "#19062"
 msgid "Sort by: Channel"
@@ -9059,7 +9057,7 @@ msgstr "Selecteer a.u.b. een kanaal"
 
 msgctxt "#19106"
 msgid "Next timer on"
-msgstr "Volgende opname op"
+msgstr "Volgende timer op"
 
 msgctxt "#19107"
 msgid "at"
@@ -9139,7 +9137,7 @@ msgstr "Vermijd herhalingen"
 msgctxt "#19122"
 msgid ""
 "This timer is still recording. Are you sure you want to delete this timer?"
-msgstr "Opname loopt nog. Wilt u deze opname verwijderen?"
+msgstr "Timer opname loopt nog. Wilt u deze opname verwijderen?"
 
 #: addons/skin.estuary/1080i/DialogPVRGuideSearch.xml
 msgctxt "#19123"
@@ -9149,7 +9147,7 @@ msgstr "Alleen ongecodeerd"
 #: addons/skin.estuary/1080i/DialogPVRGuideSearch.xml
 msgctxt "#19124"
 msgid "Ignore present timers"
-msgstr "Negeer lopende opnames"
+msgstr "Negeer lopende timers"
 
 #: addons/skin.estuary/1080i/DialogPVRGuideSearch.xml
 msgctxt "#19125"
@@ -11798,12 +11796,12 @@ msgstr "Van serie loskoppelen"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#20386"
 msgid "Recently added movies"
-msgstr "Onlangs toegevoegde speelfilms"
+msgstr "Recent toegevoegde speelfilms"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#20387"
 msgid "Recently added episodes"
-msgstr "Onlangs toegevoegde afleveringen"
+msgstr "Recent toegevoegde afleveringen"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -11825,7 +11823,7 @@ msgstr "Muziekvideo's"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#20390"
 msgid "Recently added music videos"
-msgstr "Onlangs toegevoegde muziekvideo's"
+msgstr "Recent toegevoegde muziekvideo's"
 
 #: xbmc/media/MediaTypes.cpp
 msgctxt "#20391"
@@ -13915,7 +13913,7 @@ msgstr "Wilt u deze skin nu gebruiken?"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24100"
 msgid "To use this feature you must download an add-on:"
-msgstr "Om deze feature te gebruiken moet je een add-on downloaden:"
+msgstr "Voor deze feature moet je een add-on downloaden:"
 
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24101"
@@ -14208,19 +14206,19 @@ msgctxt "#24149"
 msgid ""
 "The following add-ons are incompatible with this version of Kodi and have "
 "been automatically disabled: %s."
-msgstr "De volgende add-ons zijn niet compatibel met deze verzie van Kodi en zijn automatisch uitgeschakeld: %s."
+msgstr "De volgende add-ons zijn niet compatibel met deze versie van Kodi en zijn automatisch uitgeschakeld: %s."
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "Database migratie bezig - even geduld..."
+msgid "Database migration in progress - please wait"
+msgstr "Database migratie bezig - even geduld"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "Add-on migratie bezig - even geduld..."
+msgid "Add-on migration in progress - please wait"
+msgstr "Bezig met add-on migratie - even geduld"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14372,6 +14370,7 @@ msgid "Style"
 msgstr "Stijl"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14384,6 +14383,7 @@ msgid "Artist"
 msgstr "Artiest"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14822,49 +14822,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Wanneer verkeersinformatie wordt verstuurd vannuit RDS, wordt het volume verhoogd"
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "Remixers"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "Arrangeurs"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "Componisten"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "Dirigenten"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ Mixers"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "Tekstschrijvers"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "Orkesten"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15329,6 +15329,20 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "Selecteer het gedrag in wanneer geen geluid is vereist voor ofwel afspelen of GUI geluiden.[CR][Altijd] - Doorlopend onhoorbaar signaal is uitgang, dit behoud het ontvangende geluidsapparaat beschikbaar voor alle nieuwe geluiden, Echter dit kan eveneens ook geluid van andere applicaties blokkeren.[CR][1-10 minuten] Hetzelfde als [Altijd] behalve na de geselecteerde periode of tijd wanneer geluid in en onderbroken staat gaat [CR][uit] Geluidsuitvoer in een onderbroken staat. opmerking: geluiden kunnen worden gemist als geluiden worden onderbroken."
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "Stuur laag volume ruis"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "Om bepaalde AVR`s wakker te houden, sturen wij een onhoorbaar ruissignaal. U kunt deze instelling uit te schakelen als u gebruik maakt van een hoofdtelefoon of analoge uitgang."
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
@@ -15519,6 +15533,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "Apparatuur bibliotheken"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "Nieuwe controller gedetecteerd"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "Een nieuwe controller is gedetecteerd. Het configureren kan op elk moment gedaan worden via \"Instellingen -> Systeeminstellingen -> Invoer\". Wilt u dit nu meteen doen?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr "Herstel skippen"
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr "Sommige controllers hebben knoppen en assen die de mapping storen. Druk deze nu in om ze uit te schakelen:[CR]%s"
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "Knop %d"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "As %d"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr "Controllers kunnen niet geconfigureerd worden."
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr "De controllerconfiguratie is afhankelijk van een uitgeschakelde addon. Wilt u deze inschakelen?"
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15552,20 +15624,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "Gebruik het toetsenbord of de afstandsbediening om een ​​controller profiel te selecteren. Wanneer u wordt gevraagd, drukt u op de knop op de spelcontroller die het beste past bij wat je ziet op het scherm. Als je een fout maakt kunt u het proces herhalen."
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "Joystick ondersteuning niet gevonden"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "Controller configuratie is gedeactiveerd. Installeer de juiste joystick support add-on."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15866,11 +15924,6 @@ msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "Fysiek adres (overschrijft HDMI poort)"
 
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "COM poort (laat leeg, tenzij noodzakelijk)"
-
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
 msgid "Configuration updated"
@@ -15998,6 +16051,11 @@ msgstr "Stop afspelen"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "Pauzeer afspelen"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr "Forceer AVR te ontwaken wanneer Kodi wordt geactiveerd."
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16715,13 +16773,13 @@ msgstr "Selecteer de standaard filminformatiebron. Zie de add-ons beheer voor op
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "Instellingen voor PVR / Live TV."
+msgid "Settings for PVR & Live TV."
+msgstr "Instellingen voor PVR & Live TV"
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "Deze categorie bevat de algemene instellingen voor de PVR / Live TV."
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr "Deze categorie bevat de algemene instellingen voor PVR & Live TV."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -16865,7 +16923,7 @@ msgstr "Verwijder de gebufferde gidsgegevens en herimporteer ze van de server."
 msgctxt "#36226"
 msgid ""
 "This category contains the PVR playback and channel switching settings."
-msgstr "Deze categorie bevat de PVR afspelen, en kanaalwisselinginstellingen."
+msgstr "Deze categorie bevat de PVR-afspelen-, en kanaalwisselingsinstellingen."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
@@ -16906,12 +16964,12 @@ msgid ""
 "When pressing channel up or down, the actual channel switch is delayed, "
 "allowing the user to flip to a channel number without waiting for each "
 "channel switch."
-msgstr "Bij het indrukken van kanaal omhoog of omlaag, wordt de werkelijke kanaal schakelaar vertraagd.zodat de gebruiker mogelijkheden krijgt om naar een kanaal te switchen zonder te wachten op elke kanaal-switch."
+msgstr "Bij het indrukken van kanaal omhoog of omlaag, wordt de werkelijke kanaal schakelaar vertraagd, zodat de gebruiker mogelijkheden krijgt om naar een kanaal te switchen zonder te wachten op elke kanaal-switch."
 
 #: system/settings/settings.xml
 msgctxt "#36233"
 msgid "This category contains the default recording duration settings."
-msgstr "Deze categorie bevat de standaard opnameduurinstellingen."
+msgstr "Deze categorie bevat de standaardopnameduurinstellingen."
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -17174,13 +17232,6 @@ msgid ""
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "Referentievolume (PreAmp niveau) te gebruiken voor bestanden zonder geëncodeerde ReplayGain informatie. Standaard is dit 89dB. Verander met mate."
 
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Verminder het bestandsvolume als clipping zich voordoet."
-
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
 msgctxt "#36271"
@@ -17274,7 +17325,7 @@ msgstr "Deze categorie bevat de instellingen voor de manier waarop CD's worden v
 #: system/settings/settings.xml
 msgctxt "#36283"
 msgid "Autorun CDs when inserted in drive."
-msgstr "Speel CDs automatisch af wanneer deze ingevoerd worden in de lezer."
+msgstr "Speel CD's automatisch af wanneer deze ingevoerd worden in de lezer."
 
 #. Description of setting with label #227 "Load audio CD information from
 #. online service"
@@ -17313,7 +17364,7 @@ msgstr "Selecteer welke audio-encoder gebruikt wordt bij het rippen."
 #: system/settings/settings.xml
 msgctxt "#36288"
 msgid "Select which quality you want to rip your files."
-msgstr "Selecteer de kwaliteit bij het rippen van bestanden."
+msgstr "Selecteer de gewenste kwaliteit bij het rippen van je bestanden."
 
 #. Description of setting with label #623 "Bitrate"
 #: system/settings/settings.xml
@@ -17803,7 +17854,7 @@ msgid ""
 "Videoplayer, might decide to decode the audio stream under certain "
 "conditions. In Videoplayer case, passthrough won't be used for live streams "
 "and when you sync playback to display."
-msgstr "Selecteer om doorvoer audio toe te staan voor het afspelen van gecomprimeerde audio zoals Dolby digital (AC3), DTS, etc.. De Cliënt van de AudioEngine, voor bijvoorbeeld Videospeler, kan overwegen de audiostream te decoderen in bepaalde gevallen. in Videospeler geval, Doorvoer wordt niet gebruikt voor live streams en wanneer jij afspelen synchroniseert naar beeldscherm. "
+msgstr "Selecteer om doorvoer audio toe te staan voor het afspelen van gecomprimeerde audio zoals Dolby Digital (AC3), DTS, etc.. De Cliënt van de AudioEngine, bvb. Videospeler, kan overwegen de audiostream te decoderen in bepaalde gevallen. In het geval van Videospeler, wordt doorvoer niet gebruikt voor live streams en wanneer jij het afspelen synchroniseert naar beeldscherm. "
 
 #. Description of setting with label #349 "TrueHD capable receiver"
 #: system/settings/settings.xml
@@ -18642,7 +18693,7 @@ msgstr "Reproduceer videokleuren accuraat door een weergaveprofiel of een 3D-zoe
 #: system/settings/settings.xml
 msgctxt "#36562"
 msgid "Colour management mode"
-msgstr "Kleurbeheer modus"
+msgstr "Kleurbeheermodus"
 
 #. Description of setting "System -> Video output -> Colour management mode"
 #. with label #36562
@@ -18671,7 +18722,7 @@ msgid ""
 "menu during video playback. This allows for multiple display profiles to "
 "account for different viewing environments and source materials, for example"
 " gamma 2.2 for daytime viewing and 2.4 for nighttime."
-msgstr "Selecteer Het 3DLUT bestand om als  standaard te worden gebruikt. Als je meerdere 3DLUT bestanden in de zelfde locatie plaatst, dan kan je wisselen tussen hen in het OSD menu gedurende het afspelen van video. Dit staat meerdere weergave profielen toe. om rekening te houden met verscheidende weergave omgevingen en bron materialen, bijvoorbeeld gamma 2.2 voor dag weergaven en 2.4 voor nacht."
+msgstr "Selecteer het 3DLUT bestand om als  standaard te worden gebruikt. Als je meerdere 3DLUT bestanden in de zelfde locatie plaatst, dan kan je wisselen tussen hen in het OSD menu gedurende het afspelen van video. Dit staat meerdere weergave profielen toe om rekening te houden met verscheidende weergave omgevingen en bronmaterialen, bvb. gamma 2.2 voor dag weergaven en 2.4 voor nacht."
 
 #: system/settings/settings.xml
 msgctxt "#36566"
@@ -18724,7 +18775,7 @@ msgstr "Selecteer de primaire kleurcoördinatie gelijk aan het bronmateriaal. Ou
 #: system/settings/settings.xml
 msgctxt "#36572"
 msgid "Gamma mode"
-msgstr "Gamma mode"
+msgstr "Gammamode"
 
 #. Description of setting "System -> Video output -> Gamma mode" with label
 #. #36572
@@ -18757,7 +18808,7 @@ msgstr "Gamma voor geslecteerde gamma hoektype, voor invoer en uitvoerafstelilng
 #: system/settings/settings.xml
 msgctxt "#36576"
 msgid "Lookup table size"
-msgstr "Lookup table grootte"
+msgstr "Lookup tabelgrootte"
 
 #. Description of setting "System -> Video output -> Lookup table size" with
 #. label #36576
@@ -18768,7 +18819,7 @@ msgid ""
 "quick preview and higher resolution for more accurate picture. Using a high "
 "resolution may take seconds to prepare when parameters are changed or a new "
 "video is started."
-msgstr "Specificeer de resolutie voor de 3d lookup tafel. Gebruik een lagere resolutie voor een snel voorbeeld en een hogere resolutie voor een nauwkeuriger beeld. Gebruikmaking van een hoge resolutie kan seconden duren ter voorbereiding wanneer de parameters worden gewijzigd of een nieuwe video wordt gestart."
+msgstr "Specificeer de resolutie voor de 3d lookuptabel. Gebruik een lagere resolutie voor een snel voorbeeld en een hogere resolutie voor een nauwkeuriger beeld. Gebruikmaking van een hoge resolutie kan seconden duren ter voorbereiding wanneer de parameters worden gewijzigd of een nieuwe video wordt gestart."
 
 # Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -19052,12 +19103,12 @@ msgstr "afleveringen"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36908"
 msgid "music video"
-msgstr "muziek video"
+msgstr "muziekvideo"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36909"
 msgid "music videos"
-msgstr "muziek video`s"
+msgstr "muziekvideo`s"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36910"
@@ -19152,7 +19203,7 @@ msgstr "(Commentaar van de regisseur)"
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
-msgstr "Laatst gebruikt profiel"
+msgstr "Laatstgebruikt profiel"
 
 #: xbmc/Windows/GUIMediaWindow.cpp
 msgctxt "#37015"
@@ -19210,7 +19261,7 @@ msgstr "Selecteer deze optie als de audio-out-aansluiting alleen multikanaals au
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
-msgstr "Configureer audio-encoderinstellingen, zoals kwaliteit en  compressieniveau"
+msgstr "Configureer audio-encoderinstellingen, zoals kwaliteits- en compressieniveau"
 
 #: system/settings/rbp.xml
 msgctxt "#37026"
@@ -19299,7 +19350,7 @@ msgctxt "#37039"
 msgid ""
 "Prefer the subtitle stream for the hearing impaired to other subtitle "
 "streams of the same language"
-msgstr "Prefereer de ondertitel voor de doven en slechthorenden boven de andere ondertitel streams van de zelfde taal"
+msgstr "Prefereer de ondertitel voor doven en slechthorenden boven de andere ondertitelstreams van dezelfde taal"
 
 #. Setting #37040 Playback
 #: system/settings/settings.xml
@@ -19333,7 +19384,7 @@ msgid ""
 "Defines the time to wait for subsequent key presses before performing the "
 "skip. Only applies when using smart skipping (when using more than one skip "
 "step for a direction)."
-msgstr "Definieert de te wachten tijd voor de volgende toetsaanslagen voordat u de skip wordt uitgevoerd. Alleen van toepassing bij gebruik van smart skipping (bij gebruik van meer dan één skip stap voor een richting)."
+msgstr "Definieert de wachttijd voor de volgende toetsaanslagen voordat u de skip wordt uitgevoerd. Alleen van toepassing bij gebruik van smart skipping (bij gebruik van meer dan één skip stap voor een richting)."
 
 #. Setting #37044 Extract chapter thumbnails
 #: system/settings/settings.xml
@@ -19352,7 +19403,7 @@ msgstr "Uitpakken hoofdstukminiaturen voor presentatie in hoofdstukken / bladwij
 #: system/settings/rbp.xml
 msgctxt "#38010"
 msgid "GPU accelerated"
-msgstr "GPU versneld"
+msgstr "GPU-versneld"
 
 #. Setting #38011 "Show All Items entry"
 #: system/settings/settings.xml
@@ -19364,7 +19415,7 @@ msgstr "Toon \"Alle bestanden\" vermelding"
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Toon \"Alle bestanden\" vermelding in locatie, bv \"Alle albums\" of \"Alle seizoenen\"."
+msgstr "Toon \"Alle bestanden\" vermelding in locatie, b.v. \"Alle albums\" of \"Alle seizoenen\"."
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems
@@ -19426,7 +19477,7 @@ msgstr "Zet mijn score"
 #: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
-msgstr "Informatieleverancier selectie"
+msgstr "Informatieleverancierkeuze"
 
 #: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38025"
@@ -19457,7 +19508,7 @@ msgstr "Wanneer geactiveerd, kunnen video's gemaakt in Multiview-Video Coding (M
 #: system/settings/rbp.xml
 msgctxt "#38029"
 msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Activeer Full HD HDMI-modus voor stereoscopisch 3D"
+msgstr "Activeer FullHD HDMI-modus voor stereoscopisch 3D"
 
 #. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
 #. label #38029
@@ -19467,7 +19518,7 @@ msgid ""
 "This option uses frame-packing to output full resolution for 3D through "
 "HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
 "videos, but may not be supported by all displays."
-msgstr "Deze optie maakt gebruik van frame-packing voor volledige uitvoerresolutie voor 3D via HDMI. [CR] Dit verbetert de kwaliteit van Multiview-Video Coding (MVC) video's, maar wordt mogelijk niet ondersteund door alle beeldschermen."
+msgstr "Deze optie maakt gebruik van frame-packing voor volledige uitvoerresolutie voor 3D via HDMI.[CR]Dit verbetert de kwaliteit van Multiview-Video Coding (MVC) video's, maar wordt mogelijk niet ondersteund door alle beeldschermen."
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -19490,46 +19541,54 @@ msgid "Role"
 msgstr "Rol"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "Orkest"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "Tekstschrijver"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "Remixer"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "Arrangeur"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "Technicus"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "Producent"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJMixer"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "Mixer"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19547,7 +19606,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "Nummer & album artiesten"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19558,6 +19618,22 @@ msgstr "Alle bijdragers"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "Alle rollen"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Muziekbibliotheek moet tags opnieuw scannen van bestanden. Wilt u nu scannen?"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr "Additionele informatie voor albums en artiesten ophalen? Dit kan even duren dus misschien kunt u dit beter later doen."
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -19604,7 +19680,7 @@ msgstr "Deze categorie bevat de instellingen voor het afspelen van foto's via ee
 #: system/settings/settings.xml
 msgctxt "#38106"
 msgid "This category contains the settings for audio & subtitle language"
-msgstr "Deze categorie bevat de instellingen voor audio & ondertitelingstaal"
+msgstr "Deze categorie bevat de instellingen voor audio- en ondertitelingstalen"
 
 #. Description of category #14210 "Videos"
 #: system/settings/settings.xml
@@ -19668,7 +19744,7 @@ msgctxt "#39004"
 msgid ""
 "This category contains provides access to the windows for source management "
 "and the Library settings for the databases"
-msgstr "Deze categorie geeft toegang tot de secties voor bronbeheer en de bibliothekeninstellingen voor de databases."
+msgstr "Deze categorie geeft toegang tot de secties voor bronbeheer en de bibliothekeninstellingen voor databases."
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -19707,4 +19783,4 @@ msgstr "Zoom - 110% Breedte"
 #: view/GUIViewState.cpp
 msgctxt "#39010"
 msgid "Select sort method"
-msgstr "Selecteer sorteer methode"
+msgstr "Selecteer sorteermethode"

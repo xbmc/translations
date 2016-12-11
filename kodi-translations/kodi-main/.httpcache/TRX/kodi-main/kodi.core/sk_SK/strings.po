@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-22 23:17+0000\n"
-"Last-Translator: euvlad93 <euvlad93@gmail.com>\n"
+"PO-Revision-Date: 2016-12-02 12:26+0000\n"
+"Last-Translator: Vladimír Záhradník <vladimir.zahradnik@gmail.com>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/teamxbmc/kodi-main/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -870,11 +870,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "Naznačenie zápletky"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "Kompilácia"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -2795,11 +2798,6 @@ msgid "Files without ReplayGain information"
 msgstr "Súbory bez informácie ReplayGain"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "Zabrániť predimenzovaniu pri normalizovaných súboroch"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "Roztiahnuté 16:9 - Nelineárne"
@@ -3343,12 +3341,6 @@ msgstr "Internetový prístup"
 msgctxt "#799"
 msgid "Library update"
 msgstr "Aktualizácia knižnice"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "Hudobná knižnica potrebuje opätovne prehľadať značky zo súborov. Chcete spustiť prehľadávanie?"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5248,6 +5240,11 @@ msgid "Month / Day"
 msgstr "Mesiac / Deň"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "Zásady ochrany osobných údajov"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "Doba používania"
@@ -5730,8 +5727,8 @@ msgstr "Hardware:"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "Zaťaženie CPU:"
+msgid "System CPU usage:"
+msgstr "Vyťaženie systémového procesora:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -6211,7 +6208,7 @@ msgstr "%s predvolieb"
 
 msgctxt "#13408"
 msgid "(IMDb user rating)"
-msgstr "(Hodnotenie užívateľov IMDb)"
+msgstr "(Hodnotenie používateľov IMDb)"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#13409"
@@ -6879,7 +6876,7 @@ msgstr "Automatický"
 
 msgctxt "#14062"
 msgid "Enter username for"
-msgstr "Zadajte užívateľské meno pre"
+msgstr "Zadajte meno používateľa pre"
 
 msgctxt "#14063"
 msgid "Date & time"
@@ -7212,13 +7209,13 @@ msgstr "Nastavenia knižnice"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "TV"
+msgid "PVR & Live TV"
+msgstr "PVR a televízia"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "Nastavenia TV"
+msgid "PVR & Live TV settings"
+msgstr "Nastavenia PVR a televízie"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -11077,7 +11074,7 @@ msgstr "Nastaviť"
 
 msgctxt "#20142"
 msgid "Username"
-msgstr "Užívateľské meno"
+msgstr "Meno používateľa"
 
 msgctxt "#20143"
 msgid "Enter password for"
@@ -11265,7 +11262,7 @@ msgstr "Použiť zobrazenie 'Plagáty' pre TV seriály"
 
 msgctxt "#20186"
 msgid "Please wait"
-msgstr "Prosím čakajte"
+msgstr "Čakajte, prosím"
 
 #: system/settings/settings.xml
 msgctxt "#20187"
@@ -14204,14 +14201,14 @@ msgstr "Nasledujúce doplnky sú nekompatibilné s touto verziou Kodi a boli aut
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "Prebieha migrácia databázy - čakajte prosím..."
+msgid "Database migration in progress - please wait"
+msgstr "Prebieha migrácia databázy - čakajte, prosím"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "Prebieha migrácia doplnkov - čakajte prosím..."
+msgid "Add-on migration in progress - please wait"
+msgstr "Prebieha migrácia doplnkov - čakajte, prosím"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14363,6 +14360,7 @@ msgid "Style"
 msgstr "Štýl"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14375,6 +14373,7 @@ msgid "Artist"
 msgstr "Umelec"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14813,49 +14812,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "Pokiaľ sa dopravné informácie posielajú z RDS, hlasitosť sa zvýši"
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "Remixery"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "Aranžéri"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "Skladatelia"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "Dirigenti"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ mixéri"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "Textári"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "Orchestre"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15320,10 +15319,24 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "Toto nastavenie vyberte vtedy, keď pre prehrávanie alebo zvuky v grafickom prostredí nie je potrebný žiadny zvuk.[CR][Vždy] Výstupom je neustály nepočuteľný signál. Týmto sa udržiava prijímacie zvukové zariadenie aktívne pre akýkoľvek nový zvuk, avšak týmto sa tiež môže blokovať zvuk z ostatných aplikácií.[CR][1-10 minút] Rovnaké ako pri nastavení [Vždy] s tým rozdielom, že po určitej dobe zvukový výstup prejde do pozastaveného stavu.[CR][Vypnuté] Zvukový výstup prejde do pozastaveného stavu. Poznámka: Ak zvukový výstup prejde do pozastaveného stavu, niektoré zvuky nemusia byť prehrané."
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "Posielať šum s nízkou hlasitosťou"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "Aby sme ponechali určité AV prijímače zapnuté, posielame náhodne vytvorený a nepočuteľný šumový signál. Toto nastavenie môžete vypnúť, ak používate slúchadlá alebo analógový výstup."
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
-msgstr "Prehrať zvuky užívateľského prostredia"
+msgstr "Prehrať zvuky používateľského prostredia"
 
 #. play GUI sounds
 #: system/settings/settings.xml
@@ -15510,6 +15523,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "Knižnice periférnych zariadení"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "Zistil sa nový ovládač"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "Zistil sa nový ovládač. Je ho možné kedykoľvek nakonfigurovať v možnostiach \"Nastavenia -> Systémové nastavenia -> Vstup\". Chcete ho nastaviť teraz?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr "Opraviť preskakovanie"
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr "Niektoré ovládače majú tlačidlá a osi, ktoré sa rušia s mapovaním. Stlačte ich teraz, aby ste ich zakázali:[CR]%s"
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "Tlačidlo %d"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "Os %d"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr "Nie je možné nakonfigurovať ovládače"
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr "Konfigurácia ovládača závisí na zakázanom doplnku. Chcete ho povoliť?"
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15543,20 +15614,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "Použitím klávesnice alebo diaľkového ovládania si vyberte profil ovládača. Po výzve stlačte tlačidlo na vašom hernom ovládači, ktoré najlepšie zodpovedá tomu, čo vidíte na obrazovke. Pokiaľ sa pomýlite, tento postup môžete zopakovať."
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "Podpora pre pákový ovládač nebola nájdená"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "Konfigurácia ovládača je zakázaná. Nainštalujte vhodný doplnok s podporou pákových ovládačov."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15780,7 +15837,7 @@ msgstr "Prepnúť na príkazy diaľkového ovládania"
 #: system/peripherals.xml
 msgctxt "#36004"
 msgid "Press \"user\" button command"
-msgstr "Stlačte tlačidlo príkazu 'užívateľ' (USER)"
+msgstr "Stlačte tlačidlo príkazu 'používateľ' (USER)"
 
 #: system/peripherals.xml
 msgctxt "#36005"
@@ -15856,11 +15913,6 @@ msgstr "Pri spustení prepnúť zdroj na toto zariadenie"
 msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "Fyzická adresa (Ruší HDMI port)"
-
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "COM port (nechajte prázdne, ak je nepotrebný)"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
@@ -15989,6 +16041,11 @@ msgstr "Zastaviť prehrávanie"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "Pozastaviť prehrávanie"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr "Prinútiť AV prijímač, aby sa zobudil po aktivovaní Kodi"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16706,13 +16763,13 @@ msgstr "Vyberte si predvolený zdroj informácií o hudobných videách. Všetky
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "Nastavenia pre PVR / televíziu."
+msgid "Settings for PVR & Live TV."
+msgstr "Nastavenia pre PVR a televíziu."
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "Táto kategória obsahuje všeobecné nastavenia pre PVR / televíziu."
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr "Táto kategória obsahuje všeobecné nastavenia pre PVR a televíziu."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -16897,7 +16954,7 @@ msgid ""
 "When pressing channel up or down, the actual channel switch is delayed, "
 "allowing the user to flip to a channel number without waiting for each "
 "channel switch."
-msgstr "Pri stlačení tlačidiel kanál + a kanál - je prepnutie kanálu pozdržané, aby užívateľ mohol nalistovať konkrétny kanál bez čakania na jednotlivé prepnutia medzi kanálmi."
+msgstr "Pri stlačení tlačidiel kanál + a kanál - je prepnutie kanálu pozdržané, aby používateľ mohol nalistovať konkrétny kanál bez čakania na jednotlivé prepnutia medzi kanálmi."
 
 #: system/settings/settings.xml
 msgctxt "#36233"
@@ -17164,13 +17221,6 @@ msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "Referenčná hlasitosť (úroveň predzosilňovača), aká sa použije na súboroch bez zakódovanej informácie ReplayGain. Predvolená hodnota je 89dB, ako je v štandarde. So zmenou buďte opatrní."
-
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Znížiť hlasitosť pokiaľ sa vyskytne clipping."
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -19481,46 +19531,54 @@ msgid "Role"
 msgstr "Rola"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "Orchester"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "Textári"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "Remixer"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "Aranžér"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "Inžinier"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "Producent"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJ mixér"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "Mixér"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19538,7 +19596,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "Autori piesne & albumu"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19549,6 +19608,22 @@ msgstr "Všetci prispievatelia"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "Všetky roly"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Hudobná knižnica potrebuje opätovne prehľadať značky zo súborov. Chcete spustiť prehľadávanie?"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr "Získať dodatočné informácie o albumoch a umelcoch? To môže chvíľu trvať, takže to možno budete chcieť spraviť neskôr"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml

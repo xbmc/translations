@@ -5,6 +5,7 @@
 # sushiboy <frank@sushiboy.com>, 2015
 # 洪偉翔 <weihsiang.hung@gmail.com>, 2015-2016
 # 陳小昭 <jeremyx@ms9.hinet.net>, 2015-2016
+# Julian Lai <laichiaheng@outlook.com>, 2016
 # Samuel Lin <mubiesam@gmail.com>, 2015
 # 余紀浩 <wowshishen_799@hotmail.com>, 2015
 # 陳小昭 <jeremyx@ms9.hinet.net>, 2016
@@ -13,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-10-28 07:13+0000\n"
+"PO-Revision-Date: 2016-12-09 16:08+0000\n"
 "Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -871,11 +872,14 @@ msgctxt "#203"
 msgid "Plot outline"
 msgstr "大綱"
 
+#. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#204"
 msgid "Compilation"
 msgstr "彙總"
 
+#. label of a smartplaylist filter option to filter for songs or albums on
+#. votes for rating
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#205"
 msgid "Votes"
@@ -2796,11 +2800,6 @@ msgid "Files without ReplayGain information"
 msgstr "沒有回放增益資訊的檔案"
 
 #: system/settings/settings.xml
-msgctxt "#643"
-msgid "Avoid clipping on ReplayGained files"
-msgstr "針對回放增益檔案防止 Clipping"
-
-#: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
 msgstr "拉伸至 16:9 - 非線性"
@@ -3344,12 +3343,6 @@ msgstr "網際網路訪問"
 msgctxt "#799"
 msgid "Library update"
 msgstr "資料庫更新"
-
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
-msgctxt "#800"
-msgid ""
-"Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "音樂庫需要重新掃描檔案標籤。你要現在開始掃描嗎？"
 
 #. Label of progess bar which shows the available/total space of pvr backend
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -5249,6 +5242,11 @@ msgid "Month / Day"
 msgstr "月 / 日"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#12389"
+msgid "Privacy policy"
+msgstr "隱私權政策"
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#12390"
 msgid "System uptime"
 msgstr "系統已運作時間"
@@ -5731,8 +5729,8 @@ msgstr "硬體："
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 #: addons/skin.estuary/1080i/SettingsSystemInfo.xml
 msgctxt "#13271"
-msgid "CPU usage:"
-msgstr "CPU 使用率："
+msgid "System CPU usage:"
+msgstr "系統CPU負載："
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -7213,13 +7211,13 @@ msgstr "資料庫設定"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
-msgid "TV"
-msgstr "電視"
+msgid "PVR & Live TV"
+msgstr "PVR 與 Live TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
-msgid "TV settings"
-msgstr "電視設定"
+msgid "PVR & Live TV settings"
+msgstr "PVR 與 Live TV 設定"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -14205,14 +14203,14 @@ msgstr "下列的附加元件由於不相容此版本的Kodi，已被自動關�
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
-msgid "Database migration in progress - please wait..."
-msgstr "資料庫整合進行中 - 請稍候..."
+msgid "Database migration in progress - please wait"
+msgstr "資料庫整合作業中 - 請稍候"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
-msgid "Add-on migration in progress - please wait..."
-msgstr "附加元件整合進行中 - 請稍候..."
+msgid "Add-on migration in progress - please wait"
+msgstr "附加元件整合作業中 - 請稍候"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14364,6 +14362,7 @@ msgid "Style"
 msgstr "風格"
 
 #. Concert composer of the music (if present)
+#: Label of ListItem.Property(Role.Composer)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
@@ -14376,6 +14375,7 @@ msgid "Artist"
 msgstr "演出者"
 
 #. Conductor of the classic music (if present)
+#: Label of ListItem.Property(Role.Conductor)
 #: addons/skin.estuary/1080i/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
@@ -14814,49 +14814,49 @@ msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
 msgstr "如果路況訊息來自RDS，則加大音量"
 
-#. Music role category
+#. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
 msgstr "重混音器"
 
-#. Music role category
+#. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
 msgstr "編曲者"
 
-#. Music role category
+#. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
 msgstr "作曲者"
 
-#. Music role category
+#. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
 msgstr "指揮"
 
-#. Music role category
+#. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
 msgstr "DJ 混音者"
 
-#. Music role category
+#. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
 msgstr "作詞者"
 
-#. Music role category
+#. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
 msgstr "管弦樂團"
 
-#. Roles from music contributor
+#. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
@@ -15321,6 +15321,20 @@ msgid ""
 "missed if audio enters suspended state."
 msgstr "選擇沒有聲音播放也沒有使用介面音效時的行為。[CR][總是] 持續輸出無聲信號，這會使接收音訊裝置保持運作，不會遺漏任何聲音。然而這樣會持續占用音效輸出裝置，可能會因此讓別的應用程式無法播放聲音。[CR][1-10 分鐘] 與 [總是] 選項相同，但是會在選定的時間之後讓音效輸出裝置進入暫停輸出的狀態。[CR][Off] 音效輸出裝置進入暫停輸出狀態。注意 - 當進入暫停輸出狀態時，可能會遺漏需要播放的聲音。"
 
+#. Indicates if Audio Engine should transmit noise or real silence
+#: system/settings/settings.xml
+msgctxt "#34112"
+msgid "Send low volume noise"
+msgstr "傳送低音量噪音"
+
+#. Description of setting with label #34112 "Send low volume noise"
+#: system/settings/settings.xml
+msgctxt "#34113"
+msgid ""
+"To keep certain AVRs powered we send an inaudible random noise signal. You "
+"can disable this setting if you are using headphone or analog output."
+msgstr "我們會傳送聽不到的隨機噪音訊號來防止某些AVR自動關機，如果您使用耳機或是類比式輸出，可以關掉這個選項。"
+
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
@@ -15511,6 +15525,64 @@ msgctxt "#35010"
 msgid "Peripheral libraries"
 msgstr "周邊裝置資料庫"
 
+#. Title of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35011"
+msgid "New controller detected"
+msgstr "偵測到新的控制器"
+
+#. Text of dialog to ask users if they would like to configure a new
+#. controller
+#: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
+msgctxt "#35012"
+msgid ""
+"A new controller has been detected. Configuration can be done at any time in"
+" \"Settings -> System Settings -> Input\". Would you like to configure it "
+"now?"
+msgstr "偵測到新的控制器。您可隨時到\"設定 -> 系統設定 -> 輸入\"單元完成設定。您要現在處理嗎?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/1080i/DialogGameControllers.xml
+msgctxt "#35013"
+msgid "Fix skipping"
+msgstr ""
+
+#. Help text of the button to fix the bug where buttons are skipped in the
+#. controller dialog. %s - list of disabled buttons and axes
+msgctxt "#35014"
+msgid ""
+"Some controllers have buttons and axes that interfere with mapping. Press "
+"these now to disable them:[CR]%s"
+msgstr ""
+
+#. Name of a controller button, e.g. Button 1. %d - button index
+msgctxt "#35015"
+msgid "Button %d"
+msgstr "%d鍵"
+
+#. Name of a controller axis, e.g. Axis 2. %d - axis index
+msgctxt "#35016"
+msgid "Axis %d"
+msgstr "%d軸"
+
+#. Error dialog title when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35017"
+msgid "Unable to configure controllers"
+msgstr ""
+
+#. Error dialog text when the controller dialog is opened but peripheral add-
+#. ons are disabled
+#: xbmc/peripherals/bus/virtual/PeripheralBusAddon.cpp
+msgctxt "#35018"
+msgid ""
+"Controller configuration depends on a disabled add-on. Would you like to "
+"enable it?"
+msgstr ""
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
@@ -15544,20 +15616,6 @@ msgid ""
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
 msgstr "使用鍵盤或遙控器來選擇控制器設定檔。請依螢幕提示按下最適合該功能的按鍵，如果不小心弄錯的話，重新設定即可。"
-
-#. Title of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35056"
-msgid "Joystick support not found"
-msgstr "找不到支援的搖桿"
-
-#. Text of error dialog shown when no joystick add-ons provide button mapping
-#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
-msgctxt "#35057"
-msgid ""
-"Controller configuration is disabled. Install the proper joystick support "
-"add-on."
-msgstr "控制器設置功能被禁用，請安裝適當的搖桿支援附加元件。"
 
 #. Title of controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15858,11 +15916,6 @@ msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
 msgstr "實體位址（取代 HDMI  連接埠）"
 
-#: system/peripherals.xml
-msgctxt "#36022"
-msgid "COM port (leave empty unless needed)"
-msgstr "COM 連接埠（有需要再填） (leave empty unless needed)"
-
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36023"
 msgid "Configuration updated"
@@ -15990,6 +16043,11 @@ msgstr "停止播放"
 msgctxt "#36045"
 msgid "Pause Playback"
 msgstr "暫停播放"
+
+#: system/peripherals.xml
+msgctxt "#36046"
+msgid "Force AVR to wake up when Kodi is activated"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -16707,13 +16765,13 @@ msgstr "選擇預設的音樂影片資訊來源。附加元件管理員中有更
 
 #: system/settings/settings.xml
 msgctxt "#36201"
-msgid "Settings for PVR / Live TV."
-msgstr "PVR/電視直播的設定。"
+msgid "Settings for PVR & Live TV."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36202"
-msgid "This category contains the general settings for the PVR / Live TV."
-msgstr "此分類包含預錄及即時電視節目的設定。"
+msgid "This category contains the general settings for the PVR & Live TV."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -17165,13 +17223,6 @@ msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
 msgstr "針對無內建播放增益值資料的音檔之音量(前級輸出)參考值。預設的標準值是89dB。小心別亂動。"
-
-#. Description of setting with label #643 "Avoid clipping on ReplayGained
-#. files"
-#: system/settings/settings.xml
-msgctxt "#36270"
-msgid "Reduce the volume of the file if clipping will occur."
-msgstr "如果會發生 Clipping 的話降低檔案的音量。"
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -19428,7 +19479,7 @@ msgstr "選取資訊提供者"
 #: xbmc/view/GUIViewStateVideo.cpp
 msgctxt "#38026"
 msgid "Appearances"
-msgstr "外觀"
+msgstr "出演數"
 
 #: system/settings/rbp.xml
 msgctxt "#38027"
@@ -19482,46 +19533,54 @@ msgid "Role"
 msgstr "角色"
 
 #. Orchestra playing on the recording (if present)
+#: Label of ListItem.Property(Role.Orchestra)
 msgctxt "#38034"
 msgid "Orchestra"
 msgstr "管弦樂團"
 
 #. Lyricist that wrote the lyrics of the song (if present)
+#: Label of ListItem.Property(Role.Lyricist)
 msgctxt "#38035"
 msgid "Lyricist"
 msgstr "作詞者"
 
 #. Remixer of the song (if present)
+#: Label of ListItem.Property(Role.Remixer)
 msgctxt "#38036"
 msgid "Remixer"
 msgstr "重新混音者"
 
 #. Arranger of the song (if present)
+#: Label of ListItem.Property(Role.Arranger)
 msgctxt "#38037"
 msgid "Arranger"
 msgstr "編曲者"
 
 #. Engineer of the song (if present)
+#: Label of ListItem.Property(Role.Engineer)
 msgctxt "#38038"
 msgid "Engineer"
 msgstr "工程師"
 
 #. Producer of the song (if present)
+#: Label of ListItem.Property(Role.Producer)
 msgctxt "#38039"
 msgid "Producer"
 msgstr "製作人"
 
 #. DJMixer of the song (if present)
+#: Label of ListItem.Property(Role.DJMixer)
 msgctxt "#38040"
 msgid "DJMixer"
 msgstr "DJ混音者"
 
 #. Mixer of the song (if present)
+#: Label of ListItem.Property(Role.Mixer)
 msgctxt "#38041"
 msgid "Mixer"
 msgstr "混音師"
 
-#. Missing artist name
+#. Name used when artist name is missing from music file tags
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
@@ -19539,7 +19598,8 @@ msgctxt "#38044"
 msgid "Song & album artists"
 msgstr "單曲及專輯演出者"
 
-#. Title all contributors node (any role)
+#. Title all contributors node (any role e.g. composer, piano, producer,
+#. engineer)
 #: system/library/music/musicroles/allcontributors.xml
 msgctxt "#38045"
 msgid "All contributors"
@@ -19550,6 +19610,22 @@ msgstr "所有發行單位"
 msgctxt "#38046"
 msgid "All roles"
 msgstr "所有角色"
+
+#. Question when forced rescan of music tags needed after upgrade from
+#. previous version of Kodi
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38060"
+msgid ""
+"Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "音樂庫需要重新掃描檔案標籤。你要現在開始掃描嗎？"
+
+#. Extra scraping question on upgrade from previous version
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+msgctxt "#38061"
+msgid ""
+"Fetch additional information for albums and artists? This could take some "
+"time so you may prefer to do this later"
+msgstr ""
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
