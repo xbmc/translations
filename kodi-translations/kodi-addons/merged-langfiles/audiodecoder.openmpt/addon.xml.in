@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="audiodecoder.openmpt"
+  version="1.1.1"
+  name="OpenMPT Audio Decoder"
+  provider-name="spiff">
+  <requires>
+    <import addon="kodi.audiodecoder" version="1.0.0"/>
+  </requires>
+  <extension
+    point="kodi.audiodecoder"
+    name="mod"
+    extension=".mod|.s3m|.xm|.it|.mptm|.stm|.nst|.m15|.stk|.st26|.ice|.wow|.ult|.669|.mtm|.med|.far|.mdl|.ams|.dsm|.amf|.okt|.dmf|.ptm|.psm|.mt2|.dbm|.digi|.imf|.j2b|.gdm|.umx|.xpk|.ppm|.mmcmp"
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">OpenMPT Audio Decoder</summary>
+    <description lang="en_GB">OpenMPT Audio Decoder</description>
+    <platform>@PLATFORM@</platform>
+  </extension>
+</addon>

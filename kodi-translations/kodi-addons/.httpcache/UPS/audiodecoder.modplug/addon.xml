@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="audiodecoder.modplug"
+  version="1.1.0"
+  name="Modplug Audio Decoder"
+  provider-name="spiff">
+  <requires>
+    <import addon="kodi.audiodecoder" version="1.0.0"/>
+  </requires>
+  <extension
+    point="kodi.audiodecoder"
+    name="mod"
+    extension=".669|.abc|.amf|.ams|.dbm|.dmf|.dsm|.far|.it|.j2b|.mdl|.med|.mod|.itgz|.mt2|.mtm|.okt|.pat|.psm|.ptm|.s3m|.stm|.ult|.umx|.xm|.mdgz|.s3gz|.xmgz"
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Modplug Audio Decoder</summary>
+    <description lang="en">Modplug Audio Decoder</description>
+    <platform>@PLATFORM@</platform>
+  </extension>
+</addon>

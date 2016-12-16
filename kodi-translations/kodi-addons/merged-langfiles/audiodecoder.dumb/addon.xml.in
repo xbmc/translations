@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="audiodecoder.dumb"
+  version="1.1.1"
+  name="DUMB Audio Decoder"
+  provider-name="spiff">
+  <requires>
+    <import addon="kodi.audiodecoder" version="1.0.0"/>
+  </requires>
+  <extension
+    point="kodi.audiodecoder"
+    name="dumb"
+    extension=".it|.xm|.s3m"
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="ca_ES">Descodificador d'àudio DUMB</summary>
+    <summary lang="en_GB">DUMB Audio Decoder</summary>
+    <summary lang="lt_LT">DUMB garso dekoderis</summary>
+    <description lang="ca_ES">Descodificador d'àudio DUMB</description>
+    <description lang="en_GB">DUMB Audio Decoder</description>
+    <description lang="lt_LT">DUMB  garso dekoderis</description>
+    <platform>@PLATFORM@</platform>
+  </extension>
+</addon>
