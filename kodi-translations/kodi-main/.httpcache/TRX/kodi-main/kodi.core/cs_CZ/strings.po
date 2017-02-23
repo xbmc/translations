@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-31 11:45+0000\n"
+"PO-Revision-Date: 2017-02-20 14:18+0000\n"
 "Last-Translator: Trottel <trottel09@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -9940,14 +9940,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Vyhledat ikonu"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Vyhledávání ikon kanálů"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Všechny kanály"
@@ -15545,13 +15545,6 @@ msgid ""
 "now?"
 msgstr "Byl rozpoznán nový ovladač. Konfiguraci lze provést kdykoliv v „Nastavení → Nastavení systému → Vstup“. Chcete ho konfigurovat nyní?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Opravit přeskakování"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15585,6 +15578,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "Konfigurace ovladače závisí na zakázaném doplňku. Chcete ho povolit?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignorovat vstup"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16165,8 +16166,9 @@ msgstr "Vyberte formát pro teplotu, čas a datum. Dostupné možnosti závisí 
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Zvolte, která znaková sada bude použita pro zobrazení textu v uživatelském rozhraní."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Zvolte, která znaková sada bude použita pro zobrazení textu v uživatelském rozhraní. Nezmění to znakovou sadu použitou pro titulky, kvůli tomu přejděte do Přehrávač > Jazyk."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19712,6 +19714,22 @@ msgstr "Tato kategorie obsahuje nastavení pro databáze knihoven"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Tato kategorie obsahuje ostatní nastavení grafického uživatelského rozhraní"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Zobrazovat EXIF informace o obrázku"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Pokud existují, budou zobrazeny EXIF informace (datum, čas, použitý fotoaparát, atd.)."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

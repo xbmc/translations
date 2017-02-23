@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-23 03:45+0000\n"
+"PO-Revision-Date: 2017-02-15 06:19+0000\n"
 "Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -9937,14 +9937,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "瀏覽圖示"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "搜尋頻道圖示"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "所有頻道"
@@ -15542,13 +15542,6 @@ msgid ""
 "now?"
 msgstr "偵測到新的控制器。您可隨時到\"設定 -> 系統設定 -> 輸入\"單元完成設定。您要現在處理嗎?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "跳禎修正"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15582,6 +15575,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "按鍵設定功能須啟用某個被官避的附加元件。您要啟用它嗎?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "忽略輸入"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16162,8 +16163,9 @@ msgstr "選擇溫度、時間及日期的格式.可使用的選項視所選的�
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "選擇用來顯示在使用者介面中使用的字元集。"
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "選擇在操作介面中顯示文字內容用的字元集。這不會影響字幕使用的字元集，若需要更改請至 播放器 > 語言"
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19709,6 +19711,22 @@ msgstr "此分類包含資料庫的相關設定"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "此分類包含使用者介面的相關設定"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "顯示 EXIF 圖片資訊"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "如果 EXIF 資訊存在 (日期、時間、使用的相機等等) 的話將會被顯示。"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

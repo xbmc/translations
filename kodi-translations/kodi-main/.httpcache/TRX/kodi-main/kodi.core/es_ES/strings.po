@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-03 11:43+0000\n"
+"PO-Revision-Date: 2017-02-16 14:53+0000\n"
 "Last-Translator: alfonskunk <alfonskunk@gmail.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -2895,7 +2895,7 @@ msgstr "Amplificación de volumen"
 
 msgctxt "#661"
 msgid "Choose export folder"
-msgstr "Escoja la carpeta para exportar"
+msgstr "Elegir carpeta a donde exportar"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#662"
@@ -6508,7 +6508,7 @@ msgstr "Sincronizar la reproducción con el monitor"
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
-msgstr "Elige arte"
+msgstr "Elegir arte"
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
@@ -9952,14 +9952,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Buscar por icono"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Buscando iconos para los canales"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Todos los canales"
@@ -10616,7 +10616,7 @@ msgstr "Sin miniatura"
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogFavourites.cpp
 msgctxt "#20019"
 msgid "Choose thumbnail"
-msgstr "Elija miniatura"
+msgstr "Elegir miniatura"
 
 #. Name of an artwork type
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
@@ -12001,7 +12001,7 @@ msgstr "¿Exportar a un sólo archivo o separar archivos para cada entrada?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 msgctxt "#20427"
 msgid "Choose rule type"
-msgstr "Tipo de regla"
+msgstr "Elegir tipo de regla"
 
 msgctxt "#20428"
 msgid "Single file"
@@ -15050,7 +15050,7 @@ msgstr "Alertas"
 #: Unknown
 msgctxt "#33051"
 msgid "Choose your"
-msgstr "Elegir tus"
+msgstr "Elegir sus"
 
 #: Unknown
 msgctxt "#33052"
@@ -15557,13 +15557,6 @@ msgid ""
 "now?"
 msgstr "Se ha detectado un nuevo mando. Puede configurarlo en cualquier momento en \"Ajustes -> Ajustes de sistema -> Entrada\". ¿Quiere configurarlo ahora?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Reparar omisión de botones"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15597,6 +15590,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "La configuración de los mandos depende de un add-on desactivado. ¿Quiere activarlo?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignorar entrada"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16162,7 +16163,7 @@ msgstr "Esta categoría contiene los ajustes locales / regionales."
 #: system/settings/settings.xml
 msgctxt "#36114"
 msgid "Chooses the language of the user interface."
-msgstr "Elige el idioma de la interfaz de usuario."
+msgstr "Define el idioma de la interfaz de usuario."
 
 #. Description of setting with label #20026 "Region"
 #: system/settings/settings.xml
@@ -16177,8 +16178,9 @@ msgstr "Selecciona los formatos para la temperatura, fecha y hora. Las opciones 
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Elige el conjunto de caracteres usado para mostrar el texto en la interfaz de usuario."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Define el conjunto de caracteres que se usará para el texto de la interfaz de usuario. No cambia el conjunto de caracteres de los subtítulos. Para ello, vaya a Reproductor -> Idioma."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -16559,7 +16561,7 @@ msgctxt "#36168"
 msgid ""
 "Choose whether to use 12 or 24-hour format for displaying the time in the "
 "user interface."
-msgstr "Selecciona el formato de 12 o de 24 horas al mostrar la hora en la interfaz de usuario."
+msgstr "Define el formato de horas, 12 o 24, al mostrar la hora en la interfaz de usuario."
 
 #. Description of setting with label #13505 "Resample quality"
 #: system/settings/settings.xml
@@ -19724,6 +19726,22 @@ msgstr "Esta categoría contiene los ajustes de las bases de datos de las colecc
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Esta categoría contiene otros ajustes de la interfaz de usuario."
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Mostrar la información EXIF de las imágenes"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Si existe información EXIF (fecha, hora, cámara usada, etc.) se mostrará."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

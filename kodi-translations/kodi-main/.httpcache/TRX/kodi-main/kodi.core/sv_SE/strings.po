@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-14 11:48+0000\n"
+"PO-Revision-Date: 2017-02-23 19:44+0000\n"
 "Last-Translator: andbo467 <andbo467@student.liu.se>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/teamxbmc/kodi-main/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
@@ -3427,7 +3427,7 @@ msgstr "Inspelningsgrupp"
 #: system/settings/settings.xml xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#812"
 msgid "Prevent duplicate episodes"
-msgstr "Förhindra dubbletter av episoder"
+msgstr "Förhindra dubbletter av avsnitt"
 
 #. Label of pre-record margin spinner in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -3445,7 +3445,7 @@ msgstr "Avsluta stopptid"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#815"
 msgid "Record all episodes"
-msgstr "Spela in alla episoder"
+msgstr "Spela in alla avsnitt"
 
 #. Value of prevent duplicate episodes list control
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -3720,7 +3720,7 @@ msgstr "Ange sökväg eller bläddra efter mediaplatser."
 #: addons/skin.estuary/1080i/DialogMediaSource.xml
 msgctxt "#1022"
 msgid "Enter a name for this media source."
-msgstr "Fyll i ett namn för denna mediakällan."
+msgstr "Fyll i ett namn för denna mediakälla."
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#1023"
@@ -9741,7 +9741,7 @@ msgstr "Inaktivitetstid för backendsystemet"
 #: system/settings/settings.xml
 msgctxt "#19245"
 msgid "Wakeup command"
-msgstr "Kommando vid uppvaknande"
+msgstr "Kommando vid väckning"
 
 #: system/settings/settings.xml
 msgctxt "#19246"
@@ -9952,14 +9952,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Bläddra efter ikon"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Sök efter kanalikoner"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Alla kanaler"
@@ -10738,7 +10738,7 @@ msgstr "Gick in i huvudläge"
 
 msgctxt "#20055"
 msgid "Allmusic.com thumb"
-msgstr "Allmusic.com-miniatyrbild"
+msgstr "Allmusic.com miniatyrbild"
 
 msgctxt "#20057"
 msgid "Remove thumbnail"
@@ -10813,7 +10813,7 @@ msgctxt "#20072"
 msgid ""
 "Make sure the selected folder is writable and that the new folder name is "
 "valid"
-msgstr "Se till att vald mapp är skrivbar och att mappnamnet är giltigt"
+msgstr "Se till att vald mapp är skrivbar och att det nya mappnamnet är giltigt"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
@@ -10836,7 +10836,7 @@ msgstr "Skal"
 
 msgctxt "#20078"
 msgid "- no link set -"
-msgstr "- ingen länk -"
+msgstr "- ingen länk satt -"
 
 msgctxt "#20079"
 msgid "Enable animations"
@@ -10844,7 +10844,7 @@ msgstr "Aktivera animeringar"
 
 msgctxt "#20080"
 msgid "Disable RSS during music"
-msgstr "Inaktivera RSS vid musikuppspelning"
+msgstr "Inaktivera RSS under musikuppspelning"
 
 msgctxt "#20081"
 msgid "Enable shortcut buttons"
@@ -10932,7 +10932,7 @@ msgstr "Huvudlås och inställningar"
 
 msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
-msgstr "Om man anger huvudkod aktiveras huvudläget"
+msgstr "Om man anger huvudkod aktiveras alltid huvudläget"
 
 msgctxt "#20103"
 msgid "Save changes to profile?"
@@ -11034,17 +11034,17 @@ msgstr "Logga ut"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20129"
 msgid "Weave"
-msgstr "Weave"
+msgstr "Våg"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20130"
 msgid "Weave - Inverted"
-msgstr "Väv - Omvänd"
+msgstr "Våg - Omvänd"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#20131"
 msgid "Blend"
-msgstr "Blend"
+msgstr "Blanda"
 
 msgctxt "#20132"
 msgid "Restart video"
@@ -11252,7 +11252,7 @@ msgstr "Förskjutning"
 #: addons/skin.estuary/1080i/DialogKeyboard.xml
 msgctxt "#20179"
 msgid "Caps Lock"
-msgstr "Capslock"
+msgstr "Caps Lock"
 
 msgctxt "#20180"
 msgid "Symbols"
@@ -11313,12 +11313,12 @@ msgstr "Hämta extra information under uppdatering"
 #: system/settings/settings.xml
 msgctxt "#20193"
 msgid "Default provider for album information"
-msgstr "Standardtjänst för albuminformation"
+msgstr "Standardleverantör för albuminformation"
 
 #: system/settings/settings.xml
 msgctxt "#20194"
 msgid "Default provider for artist information"
-msgstr "Standardtjänst för artistinformation"
+msgstr "Standardleverantör för artistinformation"
 
 msgctxt "#20195"
 msgid "Change information provider"
@@ -11468,7 +11468,7 @@ msgstr "Okänd eller integrerad (skyddad)"
 
 msgctxt "#20314"
 msgid "Videos - Library"
-msgstr "Filmer - Bibliotek"
+msgstr "Videor - Bibliotek"
 
 msgctxt "#20316"
 msgid "Sort by: ID"
@@ -11480,7 +11480,7 @@ msgstr "Skannar filmer med %s"
 
 msgctxt "#20318"
 msgid "Scanning music videos using %s"
-msgstr "Skannar musik med %s"
+msgstr "Skannar musikvideor med %s"
 
 msgctxt "#20319"
 msgid "Scanning TV shows using %s"
@@ -11732,7 +11732,7 @@ msgstr "Prod. kod"
 #: system/settings/settings.xml
 msgctxt "#20369"
 msgid "Show plot for unwatched items"
-msgstr "Visa handling för icke sedda objekt"
+msgstr "Visa handling för osedda objekt"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -12354,7 +12354,7 @@ msgstr "Skärm"
 
 msgctxt "#21374"
 msgid "Video aspect"
-msgstr "Bildläge"
+msgstr "Bildförhållande"
 
 msgctxt "#21375"
 msgid "Normal"
@@ -12366,7 +12366,7 @@ msgstr "Letterbox"
 
 msgctxt "#21377"
 msgid "Widescreen"
-msgstr "Bredbild"
+msgstr "Widescreen"
 
 msgctxt "#21378"
 msgid "Enable 480p"
@@ -12574,7 +12574,7 @@ msgstr "Ny regel..."
 #: addons/skin.estuary/1080i/SmartPlaylistEditor.xml
 msgctxt "#21424"
 msgid "Items must match"
-msgstr "Objekt måste matcha"
+msgstr "Objekten måste matcha"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#21425"
@@ -12584,7 +12584,7 @@ msgstr "alla regler"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#21426"
 msgid "one or more of the rules"
-msgstr "en eller flera regler"
+msgstr "en eller flera av reglerna"
 
 #: addons/skin.estuary/1080i/SmartPlaylistEditor.xml
 msgctxt "#21427"
@@ -12639,7 +12639,7 @@ msgstr "Ny smart spellista..."
 
 msgctxt "#21438"
 msgid "%c Drive"
-msgstr "%c disk"
+msgstr "%c Disk"
 
 msgctxt "#21439"
 msgid "Edit party mode rules"
@@ -12651,7 +12651,7 @@ msgstr "Hemmapp"
 
 msgctxt "#21441"
 msgid "Watched count"
-msgstr "Visningar"
+msgstr "Antal visningar"
 
 msgctxt "#21442"
 msgid "Episode title"
@@ -12824,7 +12824,7 @@ msgstr "Vid första objekt"
 #: system/settings/settings.xml
 msgctxt "#21472"
 msgid "Include \"All seasons\" and \"Specials\""
-msgstr "Inkludera \"alla säsonger\" och \"special\""
+msgstr "Inkludera \"Alla säsonger\" och \"Special\""
 
 #. Description of setting with label #21472 "Include All Seasons and Specials"
 #: system/settings/settings.xml
@@ -12832,7 +12832,7 @@ msgctxt "#21473"
 msgid ""
 "Whether or not to consider the items from \"All seasons\" and \"Specials\" "
 "in the unwatched item selection."
-msgstr "Huruvida objekt från \"alla säsonger\" och \"special\" räknas med i listan över osedda objekt."
+msgstr "Huruvida objekt från \"Alla säsonger\" och \"Special\" räknas med i listan över osedda objekt."
 
 #. One of the values valid for settings #21472 "Include All Seasons and
 #. Specials"
@@ -12853,14 +12853,14 @@ msgstr "Båda"
 #: system/settings/settings.xml
 msgctxt "#21476"
 msgid "Just \"All seasons\""
-msgstr "Bara \"alla säsonger\""
+msgstr "Bara \"Alla säsonger\""
 
 #. One of the values valid for settings #21472 "Include All Seasons and
 #. Specials"
 #: system/settings/settings.xml
 msgctxt "#21477"
 msgid "Just \"Specials\""
-msgstr "Bara \"special\""
+msgstr "Bara \"Special\""
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21478"
@@ -13084,7 +13084,7 @@ msgstr "Upphovsman"
 
 msgctxt "#21868"
 msgid "Byline title"
-msgstr "Upphovmanstitel"
+msgstr "Upphovsmanstitel"
 
 msgctxt "#21869"
 msgid "Credit"
@@ -13651,7 +13651,7 @@ msgstr "Tillgängliga uppdateringar"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24045"
 msgid "Failed to install Add-on from zip file"
-msgstr "Misslyckades att installera Tillägg ifrån zip-fil"
+msgstr "Misslyckades att installera tillägg ifrån zipfil"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24046"
@@ -13692,7 +13692,7 @@ msgstr "Licens:"
 #: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24054"
 msgid "What's new"
-msgstr "Vad har hänt"
+msgstr "Nyheter"
 
 #. Used in the Add-on Manager
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -13716,7 +13716,7 @@ msgstr "Installerar %s..."
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24058"
 msgid "Checking dependencies..."
-msgstr "Kontrollerar krav..."
+msgstr "Kontrollerar beroenden..."
 
 msgctxt "#24059"
 msgid "Would you like to enable this add-on?"
@@ -13821,7 +13821,7 @@ msgstr "Installerar tilläggsberoenden..."
 
 msgctxt "#24080"
 msgid "Try to reconnect?"
-msgstr "Prova ansluta igen?"
+msgstr "Försök att återansluta?"
 
 #. The label in the add-ons manager for helper add-ons
 #: xbmc/addons/Addon.cpp
@@ -13845,7 +13845,7 @@ msgstr "Informationsbibliotek"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24085"
 msgid "Failed to install a dependency"
-msgstr "Misslyckades med att tillfredsställa beroenden"
+msgstr "Misslyckades med att installera beroenden"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
@@ -13863,7 +13863,7 @@ msgstr "Alla förråd"
 #: xbmc/addons/GUIDialogAddonInfo.h
 msgctxt "#24088"
 msgid "The DSP add-on is currently in use and can't be modified."
-msgstr "DSP-tillägget används och kan inte modifieras."
+msgstr "DSP-tillägget används för närvarande och kan inte modifieras."
 
 msgctxt "#24089"
 msgid "Add-on restarts"
@@ -13900,7 +13900,7 @@ msgstr "Lokal cache för paket"
 #: xbmc/addons/Repository.cpp addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24096"
 msgid "Add-on is incompatible or has been marked broken in repository."
-msgstr "Tillägget är inte kompatibelt eller har blivit markerat som trasigt i förrådet."
+msgstr "Tillägget är inkompatibelt eller har blivit markerat som trasigt i förrådet."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -13945,7 +13945,7 @@ msgstr "Tillägget är inte kompatibelt på grund av ej uppfyllda beroenden."
 #: system/settings/settings.xml
 msgctxt "#24105"
 msgid "Pause when searching for subtitles"
-msgstr "Pausa vid sökning av undertexter"
+msgstr "Pausa vid sökning efter undertexter"
 
 #. Description of setting "Videos -> Subtitles -> Save subtitles to movie
 #. folder" with label #24115
@@ -13954,7 +13954,7 @@ msgctxt "#24106"
 msgid ""
 "Specify where downloaded subtitles should be saved, the same location as the"
 " video or a custom location."
-msgstr "Ange var nedladdade undertexter skall sparas, på samma plats som filmen eller till en egen vald plats."
+msgstr "Ange var nedladdade undertexter skall sparas, på samma plats som videon eller till en egen vald plats."
 
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24107"
@@ -14016,7 +14016,7 @@ msgctxt "#24117"
 msgid ""
 "Select the service that will be used as default to search for TV show "
 "subtitles."
-msgstr "Välj standardtjänst för undertexter till TV-serier."
+msgstr "Välj standardtjänst för sökning efter undertexter till TV-serier."
 
 #: system/settings/settings.xml
 msgctxt "#24118"
@@ -14029,7 +14029,7 @@ msgctxt "#24119"
 msgid ""
 "Select the service that will be used as default to search for movie "
 "subtitles."
-msgstr "Välj standardtjänst för undertexter till filmer."
+msgstr "Välj standardtjänst för sökning efter undertexter till filmer."
 
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24120"
@@ -14055,7 +14055,7 @@ msgctxt "#24123"
 msgid ""
 "Pause the current video while searching for subtitles and resume once the "
 "subtitle is available."
-msgstr "Pausa uppspelningen under tiden undertextsökning sker och återuppta den när undertexten finns tillgänglig."
+msgstr "Pausa uppspelningen under tiden sökning efter undertexter sker och återuppta den när undertexten finns tillgänglig."
 
 #: system/settings/settings.xml
 msgctxt "#24124"
@@ -14070,13 +14070,13 @@ msgstr "Anpassad plats"
 #: system/settings/settings.xml
 msgctxt "#24126"
 msgid "Auto download first subtitle"
-msgstr "Automatiskt ladda ned första undertexten"
+msgstr "Ladda automatiskt ned första undertexten"
 
 #. Description of setting with label #24126 "Auto download first subtitle"
 #: system/settings/settings.xml
 msgctxt "#24127"
 msgid "Automatically download first subtitle from the search result list"
-msgstr "Ladda ned första undertexten i söklistan automatiskt "
+msgstr "Ladda automatiskt ned första undertexten i söklistan"
 
 #. Info dialog after migrating userdata from xbmc to kodi
 #: xbmc/Application.cpp
@@ -14096,13 +14096,13 @@ msgstr "Konfigurationen för Kodi har flyttats till den nya platsen för Kodi. S
 #: system/settings/settings.xml
 msgctxt "#24130"
 msgid "Enable parsing for closed captions"
-msgstr "Aktivera bearbetning av undertexter"
+msgstr "Aktivera sökning efter undertexter"
 
 #: system/settings/settings.xml
 msgctxt "#24131"
 msgid ""
 "Enable to parse for CC in video stream. Puts slightly more load on the CPU"
-msgstr "Aktivera för att genomsöka videoströmmar efter textning. Ger marginellt ökad CPU-användning"
+msgstr "Aktivera för att genomsöka videoströmmar efter undertexter. Ger marginellt ökad CPU-användning"
 
 #: xbmc/addons/LanguageResource.cpp
 msgctxt "#24132"
@@ -14125,13 +14125,13 @@ msgstr "Misslyckades med att ladda det valda språket. Vänligen kontrollera spr
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
 msgid "Audio DSP"
-msgstr "Ljud DSP"
+msgstr "Ljud-DSP"
 
 #. To open dsp submenu
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#24136"
 msgid "Audio DSP..."
-msgstr "Ljud DSP..."
+msgstr "Ljud-DSP..."
 
 #: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
 msgctxt "#24137"
@@ -14148,7 +14148,7 @@ msgstr "DSP-tillägget används och kan inte tas bort."
 #: xbmc/events/AddonManagementEvent.cpp
 msgctxt "#24139"
 msgid "View Add-on"
-msgstr "Visa Tillägg"
+msgstr "Visa tillägg"
 
 #. Label for the action provided by media library events to jump to a specific
 #. path/file
@@ -14213,19 +14213,19 @@ msgctxt "#24149"
 msgid ""
 "The following add-ons are incompatible with this version of Kodi and have "
 "been automatically disabled: %s."
-msgstr "Följande tillägg är inkompatibelt med den aktuella versionen av Kodi och har därför automatiskt blivit avaktiverat: %s"
+msgstr "Följande tillägg är inkompatibelt med den aktuella versionen av Kodi och har därför automatiskt blivit inaktiverat: %s"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
 msgid "Database migration in progress - please wait"
-msgstr "Datasbasen migreras - vänligen vänta"
+msgstr "Datasbasmigrering pågår - vänligen vänta"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
-msgstr "Tilläggsmigration pågår - vänligen vänta"
+msgstr "Tilläggsmigrering pågår - vänligen vänta"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14276,7 +14276,7 @@ msgstr "Mina tillägg"
 #: addons/skin.estuary/1080i/AddonBrowser.xml
 msgctxt "#24999"
 msgid "Hide incompatible"
-msgstr "Dölj  ej kompatibla"
+msgstr "Dölj inkompatibla"
 
 #. Used in add-on browser
 msgctxt "#25000"
@@ -14318,7 +14318,7 @@ msgstr "Välj uppspelningsobjekt"
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25007"
 msgid "Chapters: %u - duration: %s"
-msgstr "Kapitel: %u - Längd: %s"
+msgstr "Kapitel: %u - längd: %s"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25008"
@@ -14343,12 +14343,12 @@ msgstr "Reklam"
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25012"
 msgid "Auto-skip off"
-msgstr "Automatisk hoppa över av"
+msgstr "Hoppa över automatiskt av"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25013"
 msgid "Auto-skip on"
-msgstr "Automatisk hoppa över på"
+msgstr "Hoppa över automatiskt på"
 
 #: unused
 msgctxt "#29801"
@@ -14503,7 +14503,7 @@ msgstr "Horoskop"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29926"
 msgid "Adult hits"
-msgstr "Adult hits"
+msgstr "Vuxenhits"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14569,7 +14569,7 @@ msgstr "Soft music"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29937"
 msgid "Adult hits"
-msgstr "Adult hits"
+msgstr "Vuxenhits"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14743,13 +14743,13 @@ msgstr "Countrymusik"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29966"
 msgid "National Music"
-msgstr "Nationell Musik"
+msgstr "Nationell musik"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29967"
 msgid "Oldies Music"
-msgstr "Gammal Musik"
+msgstr "Gammal musik"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14944,7 +14944,7 @@ msgstr "Klipp"
 
 msgctxt "#33017"
 msgid "Restart plug-in to enable"
-msgstr "Starta om insticksprogrammet för att aktivera"
+msgstr "Starta om tilläggsprogrammet för att aktivera"
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -15434,7 +15434,7 @@ msgstr "Misslyckades med att starta AirPlay eftersom det kräver att Zeroconf ä
 msgctxt "#34303"
 msgid ""
 "Unable to stop Zeroconf. AirPlay and AirTunes depend on Zeroconf running."
-msgstr "Kunde inte stoppa Zeroconf. AirPlay och AirTunes kräver att Zeroconf körs."
+msgstr "Kunde inte stoppa Zeroconf. AirPlay och AirTunes är beroende av att Zeroconf körs."
 
 #: xbmc/cores/VideoRenderers/LinuxRendererGL.cpp
 msgctxt "#34400"
@@ -15451,7 +15451,7 @@ msgstr "Kunde inte initiera videofilter / -skalning, återgår till bilinjär sk
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34402"
 msgid "Failed to initialise audio device"
-msgstr "Misslyckades med att initialisera ljudenhet"
+msgstr "Misslyckades att initialisera ljudenhet"
 
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34403"
@@ -15471,12 +15471,12 @@ msgstr "Enfingersvep åt vänster, höger, upp, ned för markör"
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34406"
 msgid "Two finger swipe left for backspace"
-msgstr "2-fingersvep åt vänster för backsteg"
+msgstr "Tvåfingersvep åt vänster för backsteg"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34407"
 msgid "One finger single tap for enter"
-msgstr "1-fingerklick för enter"
+msgstr "Enfingerklick för enter"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34408"
@@ -15557,13 +15557,6 @@ msgid ""
 "now?"
 msgstr "En ny handkontroll har upptäckts. Konfiguration kan göras när som helst i \"Inställningar -> Systeminställningar -> Inmatning\". Vill du konfigurera den nu?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Fixa konflikter"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15596,7 +15589,15 @@ msgctxt "#35018"
 msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
-msgstr "Handkontrollens konfiguration är i beroende av ett avaktiverat tillägg. Vill du aktivera det nu?"
+msgstr "Handkontrollens konfiguration är i beroende av ett inaktiverat tillägg. Vill du aktivera det nu?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignorera inmatning"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15636,7 +15637,7 @@ msgstr "Använd tangentbordet eller fjärrkontrollen för att välja en handkont
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
 msgctxt "#35058"
 msgid "Controller Configuration"
-msgstr "Handkontroll Konfiguration"
+msgstr "Handkontrollskonfiguration"
 
 #. Heading for controller buttons list in controller configuration window
 #: addons/skin.estuary/1080i/DialogGameControllers.xml
@@ -15830,7 +15831,7 @@ msgstr "Åtkomst nekas."
 #: xbmc/addons/AddonCallbacksPVR.cpp
 msgctxt "#35509"
 msgid "Connecting to backend."
-msgstr "Ansluter till bakänden."
+msgstr "Ansluter till backend."
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
@@ -15854,7 +15855,7 @@ msgstr "Byt till kommando på fjärrkontrollsidan"
 #: system/peripherals.xml
 msgctxt "#36004"
 msgid "Press \"user\" button command"
-msgstr "Tryck \"user\"-knappskommando"
+msgstr "Tryck \"användar\"-knappskommando"
 
 #: system/peripherals.xml
 msgctxt "#36005"
@@ -15878,21 +15879,21 @@ msgstr "Enheter att stänga av under avstängning"
 #: system/peripherals.xml
 msgctxt "#36009"
 msgid "Put devices in standby mode when activating the screensaver"
-msgstr "Ställ enheterna i standbyläge när skärmsläckaren aktiveras"
+msgstr "Sätt enheter i standbyläge när skärmsläckaren aktiveras"
 
 msgctxt "#36010"
 msgid "Wake devices when deactivating the screensaver"
-msgstr "Väck enheter när skärmsläckaren avaktiveras"
+msgstr "Väck enheter när skärmsläckaren deaktiveras"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36011"
 msgid "Couldn't detect the CEC com port. Please configure it manually."
-msgstr "Kunde inte hitta CEC-porten. Ställ in den manuellt."
+msgstr "Kunde inte hitta CEC-porten. Vänligen konfigurera den manuellt."
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36012"
 msgid "Couldn't initialise the CEC adapter. Please check your settings."
-msgstr "Det gick inte att initialisera CEC adaptern. Kontrollera dina inställningar."
+msgstr "Det gick inte att initialisera CEC-adaptern. Kontrollera dina inställningar."
 
 #: system/peripherals.xml
 msgctxt "#36015"
@@ -15909,7 +15910,7 @@ msgstr "Ansluten"
 msgctxt "#36017"
 msgid ""
 "Couldn't initialise the CEC adapter: libCEC was not found on your system."
-msgstr "Det gick inte att inte initialisera CEC adaptern: libCEC kunde inte hittas på systemet. "
+msgstr "Det gick inte att inte initialisera CEC-adaptern: libCEC kunde inte hittas på systemet. "
 
 #: system/peripherals.xml
 msgctxt "#36018"
@@ -15939,17 +15940,17 @@ msgstr "Konfiguration uppdaterad"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36024"
 msgid "Failed to set the new configuration. Please check your settings."
-msgstr "Misslyckades att tillämpa den nya konfigurationen. Var god kontrollera dina inställningar."
+msgstr "Misslyckades att tillämpa den nya konfigurationen. Vänligen kontrollera dina inställningar."
 
 #: system/peripherals.xml
 msgctxt "#36025"
 msgid "Send \"Inactive source\" command on shutdown"
-msgstr "Skicka \"Inaktiv källa\" kommand vid avstängning"
+msgstr "Skicka \"Inaktiv källa\" kommando vid avstängning"
 
 #: system/peripherals.xml
 msgctxt "#36026"
 msgid "Devices to also put in standby mode"
-msgstr "Andra enheter att sätta i stanbyläge"
+msgstr "Andra enheter att sätta i standbyläge"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36027"
@@ -15977,12 +15978,12 @@ msgstr "Tappat anslutning"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36031"
 msgid "This user does not have permissions to open the CEC adapter"
-msgstr "Denna användare har inte tillåtelse att öppna CEC adaptern"
+msgstr "Denna användare har inte tillåtelse att öppna CEC-adaptern"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36032"
 msgid "The port is busy. Only one program can access the CEC adapter"
-msgstr "Porten är upptagen. Endast ett program åt gången kan använda CEC adaptern."
+msgstr "Porten är upptagen. Endast ett program åt gången kan använda CEC-adaptern."
 
 #: system/peripherals.xml
 msgctxt "#36033"
@@ -16004,7 +16005,7 @@ msgstr "Alltid"
 #: system/settings/settings.xml
 msgctxt "#36036"
 msgid "On start / stop"
-msgstr "Vid start / stop"
+msgstr "Vid start / stopp"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36037"
@@ -16078,7 +16079,7 @@ msgstr "Gitterdjup"
 #: system/settings/settings.xml
 msgctxt "#36101"
 msgid "Change the look and feel of the user interface."
-msgstr "Ändra utseendet i användargränssnittet."
+msgstr "Ändra utseendet och känslan i användargränssnittet."
 
 #. Description of settings category "Appearance -> Skin" with label #166
 #: system/settings/settings.xml
@@ -16092,7 +16093,7 @@ msgctxt "#36103"
 msgid ""
 "Select the skin for the user interface. This will define the look and feel "
 "of the application."
-msgstr "Väl skal för gränssnittet. Detta kommer att ändra hur applikationen ser ut."
+msgstr "Väl skal för gränssnittet. Detta kommer att definiera utseendet och känslan i applikationen."
 
 #. Description of setting with label #21417 "Settings"
 #: system/settings/settings.xml
@@ -16100,7 +16101,7 @@ msgctxt "#36104"
 msgid ""
 "Select to change the skin specific settings. Which options are available for"
 " configuration depends on the features provided by the skin."
-msgstr "Välj för att ändra skal-specifika inställningar. Vilka inställningar som finns att ändra beror på vilka funktioner skalet är försedd med."
+msgstr "Välj för att ändra skal-specifika inställningar. Vilka inställningar som finns att tillgängliga beror på vilka funktioner skalet är försedd med."
 
 #. Description of setting with label #15111 "Theme"
 #: system/settings/settings.xml
@@ -16126,13 +16127,13 @@ msgstr "Välj typsnitten som visas i användargränssnittet. Teckenuppsättninga
 #: system/settings/settings.xml
 msgctxt "#36108"
 msgid "Resize the view of the user interface."
-msgstr "Byt storlek på gränssnittets vy."
+msgstr "Ändra storlek på användargränssnittet."
 
 #. Description of setting with label #512 "Startup window"
 #: system/settings/settings.xml
 msgctxt "#36109"
 msgid "Select the media window to display on startup."
-msgstr "Välj media fönster att visa vid uppstart."
+msgstr "Välj mediafönster att visa vid uppstart."
 
 #. Description of setting with label #15108 "GUI sounds"
 #: system/settings/settings.xml
@@ -16144,7 +16145,7 @@ msgstr "Välj eller inaktivera ljud som används i användargränssnittet."
 #: system/settings/settings.xml
 msgctxt "#36111"
 msgid "Turn this off to remove the scrolling RSS news ticker."
-msgstr "Stäng av detta för att ta bort den scrollande RSS-nyhetstickern."
+msgstr "Stäng av detta för att ta bort det scrollande RSS-nyhetsflödet."
 
 #. Description of setting with label #21450 "Edit"
 #: system/settings/settings.xml
@@ -16162,7 +16163,7 @@ msgstr "Denna kategori innehåller plats och språkinställningar."
 #: system/settings/settings.xml
 msgctxt "#36114"
 msgid "Chooses the language of the user interface."
-msgstr "Väljer språket på användargränssnittet."
+msgstr "Väljer språket i användargränssnittet."
 
 #. Description of setting with label #20026 "Region"
 #: system/settings/settings.xml
@@ -16177,8 +16178,9 @@ msgstr "Välj format för temperatur, tid och datum. De tillgängliga alternativ
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Välj vilken teckenuppsättning som används för att visa text i gränssnittet."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Välj vilken teckenuppsättning som ska användas för uppvisning av text i användargränssnittet. Detta ändrar inte teckenuppsättningen som används för undertexter, för att ändra det gå till Spelare > Språk."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -16206,7 +16208,7 @@ msgctxt "#36120"
 msgid ""
 "Defaults to the selected subtitle language if more than one language is "
 "available."
-msgstr "Använder valt text-språk om fler språk finns."
+msgstr "Använder valt undertext-språk om fler språk finns."
 
 #. Description of settings with label #16000 "General"
 #: system/settings/settings.xml
@@ -16226,7 +16228,7 @@ msgctxt "#36123"
 msgid ""
 "Show file extensions on media files, for example \"You Enjoy Myself\" would "
 "be shown as \"You Enjoy Myself.mp3\"."
-msgstr "Visa filändelser på mediafiler. Som exempel skulle \"You Enjoy Myself\" visas som \"You Enjoy Myself.mp3\"."
+msgstr "Visa filändelser på mediafiler, till exempel skulle \"You Enjoy Myself\" visas som \"You Enjoy Myself.mp3\"."
 
 #. Description of setting with label #13399 "Ignore articles when sorting"
 #: system/settings/settings.xml
@@ -16256,7 +16258,7 @@ msgstr "Visa knappen \"lägg till källa\" i huvudsektioner i användargränssni
 #: system/settings/settings.xml
 msgctxt "#36127"
 msgid "Show hidden files and directories when listing files."
-msgstr "Visa gömda filer och kataloger i fillistor."
+msgstr "Visa gömda filer och mappar i fillistor."
 
 #. Description of settings category with label #360 "Screensaver"
 #: system/settings/settings.xml
@@ -16280,7 +16282,7 @@ msgctxt "#36130"
 msgid ""
 "Select the screensaver. The \"Dim\" screensaver will be forced when "
 "fullscreen video playback is paused or a dialogue box is active."
-msgstr "Välj skärmsläckaren. Skärmsläckaren \"Dim\" kommer att påtvingas när videouppspelning med fullskärm är pausad eller när en dialogruta är aktiv."
+msgstr "Välj skärmsläckare. Skärmsläckaren \"Dim\" kommer att påtvingas när videouppspelning med fullskärm är pausad eller när en dialogruta är aktiv."
 
 #. #. Description of setting with label #21417 "Settings"
 #: system/settings/settings.xml
@@ -17149,14 +17151,14 @@ msgstr "Hämta artistinformation från informationsleverantörer när ny musik l
 #: system/settings/settings.xml
 msgctxt "#36257"
 msgid "Select the default album information provider."
-msgstr "Välj standardtjänst för albuminformation."
+msgstr "Välj standardleverantör för albuminformation."
 
 #. Description of setting with label #20194 "Default provider for artist
 #. information"
 #: system/settings/settings.xml
 msgctxt "#36258"
 msgid "Select the default artist information provider."
-msgstr "Välj standardtjänst för artistinformation."
+msgstr "Välj standardleverantör för artistinformation."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17804,7 +17806,7 @@ msgid ""
 "match to the source properties as possible; [Optimized] Output properties "
 "are set at the start of playback and will not change if the properties of "
 "the source change."
-msgstr "Välj hur egenskaperna för ljudutgången skall bestämmas: [Fixerad] - ljudutgångsegenskaperna sätts alltid till den specifierade samplingsfrekvensen och högtalarkonfigurationen; [Bästa möjliga] - ljudutgångsegenskaperna sätts att vara så lika originalet som möjligt; [Optimerat] - egenskaperna bestäms vid början av uppspelningen men kommer inte ändras om originalegenskaperna ändras."
+msgstr "Välj hur egenskaperna för ljudutgången skall bestämmas: [Fixerad] - ljudutgångsegenskaperna sätts alltid till den specifierade samplingsfrekvensen och högtalarkonfigurationen; [Bästa matchning] - Ljudutgångsegenskaperna sätts att vara så lika originalet som möjligt; [Optimerad] - Egenskaperna bestäms vid början av uppspelningen men kommer inte ändras om originalegenskaperna ändras."
 
 #. Description of setting with label #34100 "Number of channels"
 #: system/settings/settings.xml
@@ -18272,7 +18274,7 @@ msgid ""
 "Select this if the audio out connection only supports multichannel audio as "
 "Dolby Digital 5.1 (AC-3), such as a S/PDIF connection. If your system "
 "supports PCM multichannel audio via HDMI, leave this disabled."
-msgstr "Välj detta om ljudutgången endast stödjer flerkanalsljud som Dolby Digital 5.1 (AC-3), som en S/PDIF-anslutning. Om ditt system stödjer PCM-flerkanalsljud via HDMI, låt detta vara avaktiverat."
+msgstr "Välj detta om ljudutgången endast stödjer flerkanalsljud som Dolby Digital 5.1 (AC-3), som en S/PDIF-anslutning. Om ditt system stödjer PCM-flerkanalsljud via HDMI, låt detta vara inaktiverat."
 
 #. Description for setting category #14101: "Video Acceleration"
 #: system/settings/settings.xml
@@ -18533,7 +18535,7 @@ msgid ""
 "source when downmixed however volume will be lower. Note: Dynamic range is "
 "the difference between the quietest and loudest sounds in an audio source. "
 "Enable this setting if movie dialogues are barely audible."
-msgstr "Välj hur ljud är nedmixas, t.ex. från 5.1-2.0.[CR][Aktiverad] Bibehåller volymen av den ursprungliga ljudkällan men det dynamiska omfånget komprimeras.[CR][Inaktiverad] Bibehåller det dynamiska omfånget av den ursprungliga ljudkällan när den nedmixas men volymen kommer att bli lägre. Obs: Dynamiskt omfång är skillnaden mellan de tystaste och starkaste ljuden i en ljudkälla. Aktivera den här inställningen om filmdialoger är knappt hörbar."
+msgstr "Välj hur ljud nedmixas, t.ex. från 5.1 till 2.0.[CR][Aktiverad] Bibehåller volymen av den ursprungliga ljudkällan, men det dynamiska omfånget komprimeras.[CR][Inaktiverad] Bibehåller det dynamiska omfånget av den ursprungliga ljudkällan när den nedmixas, men volymen kommer att bli lägre. Obs: Dynamiskt omfång är skillnaden mellan de tystaste och starkaste ljuden i en ljudkälla. Aktivera den här inställningen om filmdialoger knappt är hörbara."
 
 #. Description of setting with label #668 "Component-specific logging..."
 #: system/settings/settings.xml
@@ -19005,7 +19007,7 @@ msgstr "Ändrar hur uppdatering för tillägg hanteras."
 #: system/settings/settings.xml
 msgctxt "#36612"
 msgid "Show notification when an add-on have been updated."
-msgstr "Visa en avisering när ett tillägg har blivit uppdaterat."
+msgstr "Visa en avisering när ett tillägg har uppdaterats."
 
 #. Description of setting with label #24996 "Manage dependencies"
 msgctxt "#36613"
@@ -19724,6 +19726,22 @@ msgstr "Denna kategori innehåller inställningar för biblioteksdatabaserna"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Denna kategori innehåller andra inställningar för det grafiska gränssnittet"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Visa bildens EXIF-information"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Om EXIF-information existerar (datum, tid, kamera, etc.), kommer den att visas."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

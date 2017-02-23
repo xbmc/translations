@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-08 18:47+0000\n"
+"PO-Revision-Date: 2017-02-16 09:17+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/ca_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -6238,7 +6238,7 @@ msgstr "S'està baixant"
 #: system/settings/settings.xml
 msgctxt "#13414"
 msgid "Show song and album artists"
-msgstr "Mostra els artistes de l'àlbum i de la cançò"
+msgstr "Mostra els artistes de l'àlbum i de la cançó"
 
 #: system/settings/settings.xml
 msgctxt "#13415"
@@ -9938,14 +9938,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Navegació per a la icona"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "S'estan cercant icones per al canal"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Tots els canals"
@@ -12313,7 +12313,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#21368"
 msgid "Override ASS / SSA subtitles fonts"
-msgstr "Sobreescriu les fonts dels subtítols ASS / SSA"
+msgstr "Sobreescriu els tipus de lletra dels subtítols ASS / SSA"
 
 #: system/settings/settings.xml
 msgctxt "#21369"
@@ -12439,7 +12439,7 @@ msgstr "Ombrejat de píxels d'alta qualitat v2"
 
 msgctxt "#21399"
 msgid "Use tween animations"
-msgstr "Use tween animations"
+msgstr "Utilitza animacions intermediàries"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21400"
@@ -12708,7 +12708,7 @@ msgstr "Sistema de fitxers arrel"
 
 msgctxt "#21454"
 msgid "Source too slow"
-msgstr "Font massa lenta"
+msgstr "Origen massa lent"
 
 msgctxt "#21455"
 msgid "Read rate too low for continuous playback"
@@ -14585,7 +14585,7 @@ msgstr "Notícies"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29942"
 msgid "Current affairs"
-msgstr "Afers acutals"
+msgstr "Afers actuals"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14681,7 +14681,7 @@ msgstr "Finances"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29958"
 msgid "Children's Programmes"
-msgstr "Programes per nens"
+msgstr "Programació infantil"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15442,7 +15442,7 @@ msgstr "No s'ha pogut inicialitzar el dispositiu d'àudio"
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34403"
 msgid "Check your audio settings"
-msgstr "Comprova els teus paràmetres d'àudio"
+msgstr "Comproveu els vostres ajusts d'àudio"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34404"
@@ -15531,7 +15531,7 @@ msgstr "Biblioteques dels perifèrics"
 #: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
 msgctxt "#35011"
 msgid "New controller detected"
-msgstr "S'ha detectat un nou controlador"
+msgstr "Nou controlador detectat"
 
 #. Text of dialog to ask users if they would like to configure a new
 #. controller
@@ -15541,13 +15541,6 @@ msgid ""
 "A new controller has been detected. Configuration can be done at any time in"
 " \"Settings -> System Settings -> Input\". Would you like to configure it "
 "now?"
-msgstr ""
-
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
 msgstr ""
 
 #. Help text of the button to fix the bug where buttons are skipped in the
@@ -15582,6 +15575,14 @@ msgctxt "#35018"
 msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
+msgstr ""
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
 msgstr ""
 
 #. Name of game add-ons category
@@ -15685,7 +15686,7 @@ msgstr "Disparadors"
 #. dialog.
 msgctxt "#35077"
 msgid "Analog sticks"
-msgstr "Estics analògics"
+msgstr "Palanques analògiques"
 
 #. Setting title for left analog stick deadzone
 #: system/peripherals.xml
@@ -15790,7 +15791,7 @@ msgstr "Inhabilita el joystick quan aquest dispositiu estigui present"
 #: xbmc/addons/AddonCallbacksPVR.cpp
 msgctxt "#35505"
 msgid "Server is unreachable."
-msgstr "Servidor no accessible"
+msgstr "El servidor no és accessible."
 
 #. connection state "server type mismatch" (reachable, but maybe an HTTP
 #. server where an FTP server is expected)
@@ -16163,8 +16164,9 @@ msgstr "Seleccioneu els formats de temperatura, hora i data. Les opcions disponi
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Trieu quin joc de caràcters s'utilitza per mostrar el text a la interfície d'usuari."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -17700,7 +17702,7 @@ msgctxt "#36349"
 msgid ""
 "Section that contains the system related settings for the device this "
 "application is installed on."
-msgstr "Secció que conté els ajusts relacionats amb el sistema pel al dispositiu on està instal·lada aquesta aplicació."
+msgstr "Secció que conté els ajusts relacionats amb el sistema per al dispositiu on està instal·lada aquesta aplicació."
 
 #. Description of setting with label #13026 "Try to wake remote servers on
 #. access"
@@ -18667,7 +18669,7 @@ msgctxt "#36552"
 msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
-msgstr "Defineix el nombre de memòries intermèdies de presentació utilitzats pel controlador dels gràfics. Seleccioneu 2 si el conductor utilitza el doble de la memòria intermèdia o 3 per al triple de la memòria intermèdia."
+msgstr "Defineix el nombre de memòries intermèdies de presentació en ús pel controlador dels gràfics. Seleccioneu 2 si el conductor utilitza el doble de la memòria intermèdia o 3 per al triple de la memòria intermèdia."
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -19585,7 +19587,7 @@ msgstr "Mesclador"
 #: music/MusicDatabase.cpp
 msgctxt "#38042"
 msgid "[Missing]"
-msgstr "[No disponible]"
+msgstr "[falta]"
 
 #. Title album artists node
 #: system/library/music/musicroles/albumartists.xml
@@ -19597,7 +19599,7 @@ msgstr "Artistes de l'àlbum"
 #: system/library/music/musicroles/allartists.xml
 msgctxt "#38044"
 msgid "Song & album artists"
-msgstr "Artistes de l'àlbum i de la cançò"
+msgstr "Artistes de l'àlbum i de la cançó"
 
 #. Title all contributors node (any role e.g. composer, piano, producer,
 #. engineer)
@@ -19648,7 +19650,7 @@ msgctxt "#38102"
 msgid ""
 "Section that contains the settings influencing the GUI experience and for "
 "controlling the GUI/system"
-msgstr "Secció que conté els ajusts que influeixen la la experiència gràfica de l'usuari per al control del sistema i de la interfície gràfica"
+msgstr "Secció que conté els ajusts que influeixen a l'experiència gràfica de l'usuari per al control del sistema i de la interfície gràfica"
 
 #. Description of category #14210 "Videos"
 #: system/settings/settings.xml
@@ -19710,6 +19712,22 @@ msgstr "En aquesta categoria hi ha els ajusts per a les bases de dades de la bib
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "En aquesta categoria hi ha els altres ajusts per a la interfície gràfica"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Mostra la informació EXIF de la imatge"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Es mostrarà la informació EXIF (data, hora, càmera utilitzada), en cas que existeixi."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-31 02:20+0000\n"
+"PO-Revision-Date: 2017-02-23 13:10+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/teamxbmc/kodi-main/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
@@ -6631,7 +6631,7 @@ msgstr "Descargando archivo de lista de reproducción..."
 
 msgctxt "#14004"
 msgid "Downloading streams list..."
-msgstr "Descargando lista de canales..."
+msgstr "Descargando lista de streams..."
 
 msgctxt "#14005"
 msgid "Parsing streams list..."
@@ -8484,7 +8484,7 @@ msgstr "Buscar similares"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
-msgstr "Importango guía desde clientes"
+msgstr "Importando guía desde clientes"
 
 #: addons/skin.estuary/1080i/VideoFullScreen.xml
 msgctxt "#19005"
@@ -9937,14 +9937,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Buscar un icono"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Buscando iconos de canales"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Todos los canales"
@@ -13580,7 +13580,7 @@ msgstr "Todos los add-ons"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24033"
 msgid "Install from repository"
-msgstr "Instalar desde el proveedor"
+msgstr "Instalar desde repositorio"
 
 #: addons/skin.estuary/1080i/AddonBrowser.xml xbmc/addons/ContextMenus.h
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -14153,7 +14153,7 @@ msgstr "El Add-on está desactivado"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24142"
 msgid "The dependency on %s version %s could not be satisfied."
-msgstr "La dependencia x %s version %s no pudo ser satisfecha"
+msgstr "La dependencia en %s version %s no pudo ser satisfecha."
 
 #. Installing the addon from zip file located at <path to zip file> failed due
 #. to an invalid structure.
@@ -15542,13 +15542,6 @@ msgid ""
 "now?"
 msgstr "Se ha detectado un nuevo controlador. La configuración se puede hacer en cualquier momento en \"Configuración -> Ajustes del sistema -> Entrada\". ¿Desea hacerlo ahora?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Arreglar salteo"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15583,11 +15576,19 @@ msgid ""
 "enable it?"
 msgstr "La configuración de mandos depende de un add-on desactivado. ¿Quiere activarlo?"
 
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr ""
+
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35049"
 msgid "Game add-ons"
-msgstr "Add-on de juegos"
+msgstr "Add-ons de juegos"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/1080i/DialogGameControllers.xml xbmc/addons/Addon.cpp
@@ -16162,8 +16163,9 @@ msgstr "Selecciona el formato de temperatura, hora y fecha. Las opciones disponi
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Elija el conjunto de caracteres a usarse para mostrar el texto en la interfaz de usuario."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19709,6 +19711,22 @@ msgstr "Esta categoría contiene los ajustes para las bases de datos de la bibli
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Esta categoría contiene otras configuraciones para la interfaz GUI"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Mostrar la información EXIF de las imágenes"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Si existe información EXIF (fecha, hora, cámara usada, etc.), ésta será mostrada."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

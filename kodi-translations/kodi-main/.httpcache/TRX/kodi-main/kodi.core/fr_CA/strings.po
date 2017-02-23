@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-05 18:55+0000\n"
+"PO-Revision-Date: 2017-02-14 17:52+0000\n"
 "Last-Translator: French language coordinator <french.translation@rbox.me>\n"
 "Language-Team: French (Canada) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_CA/)\n"
 "MIME-Version: 1.0\n"
@@ -9933,14 +9933,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Rechercher des icônes"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Recherche d'icônes de chaînes"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Toutes les chaînes"
@@ -12919,12 +12919,12 @@ msgstr "Description"
 
 msgctxt "#21822"
 msgid "Camera make"
-msgstr "Marque de l'appareil-photo"
+msgstr "Marque de l'appareil photo"
 
 #: addons/skin.estuary/1080i/Variables.xml
 msgctxt "#21823"
 msgid "Camera model"
-msgstr "Modèle de l'appareil-photo"
+msgstr "Modèle de l'appareil photo"
 
 msgctxt "#21824"
 msgid "EXIF comment"
@@ -15538,13 +15538,6 @@ msgid ""
 "now?"
 msgstr "Un nouveau contrôleur a été détecté. La configuration peut être effectuée n'importe quand dans « Paramètres -> Paramètres système -> Entrée ». Souhaitez-vous le configurer maintenant ?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Corriger les sauts"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15578,6 +15571,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "La configuration du contrôleur dépend d'un addiciel qui est désactivé. Souhaitez-vous l'activer maintenant?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignorer l'entrée"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16158,8 +16159,9 @@ msgstr "Choisir les formats de température, d'heure et de date. Les options pro
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Choisir quel jeu de caractères est utilisé pour l'affichage du texte dans l'interface utilisateur."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Choisir quel jeu de caractères est utilisé pour l'affichage du texte dans l'interface utilisateur. Cela ne change pas le jeu de caractères utilisé pour les sous-titres. Pour ce faire, aller dans Lecteur > Langue."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19705,6 +19707,22 @@ msgstr "Cette catégorie contient les paramètres des bases de données de la m�
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Cette catégorie contient d'autres paramètres pour l'interface graphique."
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Afficher les informations EXIF des images"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Si les informations EXIF existent (date, heure, appareil photo utilisé, etc.), elles seront affichées."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

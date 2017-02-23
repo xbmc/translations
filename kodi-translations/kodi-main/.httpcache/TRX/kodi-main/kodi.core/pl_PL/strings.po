@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-10 08:39+0000\n"
+"PO-Revision-Date: 2017-02-23 15:44+0000\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -2200,7 +2200,7 @@ msgstr "Wyszukanie nazw albumu..."
 
 msgctxt "#502"
 msgid "Open"
-msgstr "Otwarty"
+msgstr "Otwórz"
 
 msgctxt "#503"
 msgid "Busy"
@@ -2473,7 +2473,7 @@ msgstr "Rok"
 #: addons/skin.estuary/1080i/DialogFullScreenInfo.xml
 msgctxt "#563"
 msgid "Rating"
-msgstr "Kategoria wiekowa"
+msgstr "Ocena"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
@@ -2487,7 +2487,7 @@ msgstr "Użycie"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
 msgid "Album artist"
-msgstr "Album wykonawcy"
+msgstr "Wykonawca albumu"
 
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/1080i/Variables.xml
 msgctxt "#567"
@@ -2523,7 +2523,7 @@ msgstr "Wytwórnia"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
-msgstr "Ścieżka"
+msgstr "Folder"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -7989,7 +7989,7 @@ msgstr "Otwieranie wielościeżkowego źródła"
 
 msgctxt "#15311"
 msgid "Path:"
-msgstr "Ścieżka:"
+msgstr "Folder:"
 
 #: system/settings/settings.xml
 msgctxt "#16000"
@@ -9933,14 +9933,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Wybierz ikonę"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Wyszukiwanie ikon kanałów"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Wszystkie"
@@ -11717,7 +11717,7 @@ msgstr "Pokazuj fabułę dla nieobejrzanych pozycji"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
-msgstr "* Ukryte. Poznanie fabuły psuje przyjemność oglądania *"
+msgstr "* Fabuła została ukryta *"
 
 msgctxt "#20371"
 msgid "Set season thumb"
@@ -15162,7 +15162,7 @@ msgstr "Nienawidzę"
 #: Unknown
 msgctxt "#33082"
 msgid "Path to script"
-msgstr "Ścieżka do folderu skryptu"
+msgstr "Folderu skryptu"
 
 #: Unknown
 msgctxt "#33083"
@@ -15538,13 +15538,6 @@ msgid ""
 "now?"
 msgstr "Wykryto nowy kontroler. Konfigurację można wykonać w dowolnym momencie w \"Ustawienia -> Ustawienia systemu -> Wejście\". Czy chcesz go skonfigurować teraz?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Napraw pomijanie przycisków"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15578,6 +15571,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "Konfiguracja kontrolera zależy od nieaktywnego dodatku. Czy chcesz go teraz aktywować?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr ""
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16158,8 +16159,9 @@ msgstr "Określa format wyświetlania temperatury, czasu i daty. Dostępne opcje
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Określa zestaw znaków używanych do wyświetlania tekstu w interfejsie użytkownika."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19705,6 +19707,22 @@ msgstr "Kategoria zawierająca ustawienia związane z bazami danych biblioteki."
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Kategoria zawierająca pozostałe ustawienia interfejsu użytkownika."
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Pokazuj dane EXIF obrazu"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Jeśli istnieją informacje EXIF (data, czas, aparat, itp.), to zostaną wyświetlone."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

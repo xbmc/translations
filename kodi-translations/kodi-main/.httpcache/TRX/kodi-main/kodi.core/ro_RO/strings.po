@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-12 12:14+0000\n"
+"PO-Revision-Date: 2017-02-18 10:29+0000\n"
 "Last-Translator: Horia Negura <fakemoth@gmail.com>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/teamxbmc/kodi-main/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
@@ -6450,14 +6450,14 @@ msgstr "Preferă metoda de randare VAAPI"
 #: system/settings/settings.xml
 msgctxt "#13458"
 msgid "Allow hardware acceleration - OMXPlayer"
-msgstr "Permite accelerare dispozitiv fizic -  redator OMX (OMXPlayer)"
+msgstr "Permite accelerare hardware -  OMXPlayer"
 
 #. Description of setting with label #13457 "Allow hardware acceleration
 #. (OMXPlayer)"
 #: system/settings/settings.xml
 msgctxt "#13459"
 msgid "Use OMXPlayer for decoding of video files."
-msgstr "Folosește  redatorul OMX (OMXPlayer) pentru decodarea fișierelor video."
+msgstr "Folosește OMXPlayer pentru decodarea fișierelor video."
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7190,7 +7190,7 @@ msgstr "Intrare"
 #: system/settings/settings.xml
 msgctxt "#14200"
 msgid "Player"
-msgstr "Redator"
+msgstr "Player"
 
 #: system/settings/settings.xml
 msgctxt "#14201"
@@ -8004,7 +8004,7 @@ msgstr "Căutare Internet"
 
 msgctxt "#16003"
 msgid "Player"
-msgstr "Redator"
+msgstr "Player"
 
 msgctxt "#16004"
 msgid "Play media from disc"
@@ -9935,14 +9935,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Răsfoire după pictogramă"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Căutare pictograme canale"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Toate canalele"
@@ -10519,11 +10519,11 @@ msgstr "Dosar muzică salvată"
 
 msgctxt "#20001"
 msgid "Use external DVD player"
-msgstr "Folosește redatorul DVD extern"
+msgstr "Folosește DVD player-ul extern"
 
 msgctxt "#20002"
 msgid "External DVD player"
-msgstr "Redator DVD extern"
+msgstr "DVD player extern"
 
 msgctxt "#20003"
 msgid "Trainers folder"
@@ -12328,7 +12328,7 @@ msgstr "Miniatură"
 #: system/settings/settings.xml
 msgctxt "#21372"
 msgid "Forced DVD player region"
-msgstr "Regiune forțată redator DVD"
+msgstr "Regiune forțată DVD player"
 
 #: system/settings/darwin.xml
 msgctxt "#21373"
@@ -13396,11 +13396,11 @@ msgstr "Scalează teletextul la 4:3"
 
 msgctxt "#23100"
 msgid "External player active"
-msgstr "Redator extern activ"
+msgstr "Player extern activ"
 
 msgctxt "#23101"
 msgid "Click \"OK\" to terminate the player"
-msgstr "Dați clic pe „Bine” pentru a închide redatorul"
+msgstr "Dați clic pe „Bine” pentru a închide player-ul"
 
 msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
@@ -13649,7 +13649,7 @@ msgstr "Acest supliment nu poate fi dezinstalat"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24048"
 msgid "VideoPlayer InputStream"
-msgstr "Flux de intrare redator video"
+msgstr "Flux de intrare video player"
 
 #: unknown
 msgctxt "#24050"
@@ -14915,7 +14915,7 @@ msgstr "Lung"
 
 msgctxt "#33014"
 msgid "Use DVD player instead of regular player"
-msgstr "Folosește redatorul DVD în locul redatorului normal"
+msgstr "Folosește DVD player-ul în locul player-ului normal"
 
 msgctxt "#33015"
 msgid "Ask for download before playing video"
@@ -15540,13 +15540,6 @@ msgid ""
 "now?"
 msgstr "A fost detectat un nou controller. Îl puteți configura oricând la \"Setări -> Setări de sistem -> Intrare\". Doriți să îl configurați acum?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Reglare sărire"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15580,6 +15573,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "Configurarea controller-ului depinde de un supliment dezactivat. Doriți să îl activați?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignoră input"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16160,8 +16161,9 @@ msgstr "Alegeți formatele pentru temperatură, oră și dată. Opțiunile dispo
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Alegeți care set de caractere să fie folosit pentru afișarea textului în interfața cu utilizatorul."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Alegeți setul de caractere folosit pentru afișarea textului interfeței utilizatorului. Nu se schimbă setul de caractere folosit pentru subtitrari, pentru aceasta mergeți la Player > Limbă."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -16526,7 +16528,7 @@ msgctxt "#36166"
 msgid ""
 "Synchronise video and audio to the refresh rate of the monitor. VideoPlayer "
 "won't use passthrough audio in this case because resampling may be required."
-msgstr "Sincronizează fluxul video și audio cu rata de reîmprospătare a monitorului. Redatorul video nu va folosi traversarea sunetul în acest caz deoarece s-ar putea să fie necesară reeșantionarea."
+msgstr "Sincronizează fluxul video și audio cu rata de reîmprospătare a monitorului. Player-ul video nu va folosi traversarea sunetul în acest caz deoarece s-ar putea să fie necesară reeșantionarea."
 
 #. Description of setting with label #14107 "Time format"
 #: system/settings/settings.xml
@@ -17844,7 +17846,7 @@ msgid ""
 "Videoplayer, might decide to decode the audio stream under certain "
 "conditions. In Videoplayer case, passthrough won't be used for live streams "
 "and when you sync playback to display."
-msgstr "Selectați pentru a permite traversarea (trecerea nemodificată a) sunetului pentru redarea fluxurilor audio comprimate cum sunt Dolby Digital (AC3), DTS, etc. Clientul MotoruluiAudio, de exemplu RedatorulVideo, s-ar putea să decidă să decodeze fluxul audio în anumite condiții. În cazul RedatoruluiVideo, traversarea nu va fi folosită pentru fluxurile în direct și atunci când sincronizați redarea cu ecanul."
+msgstr "Selectați pentru a permite traversarea (trecerea nemodificată a) sunetului pentru redarea fluxurilor audio comprimate cum sunt Dolby Digital (AC3), DTS, etc. Clientul AudioEngine, de exemplu Videoplayer-ul, s-ar putea să decidă să decodeze fluxul audio în anumite condiții. În cazul Videoplayer-ului, traversarea nu va fi folosită pentru fluxurile în direct și atunci când sincronizați redarea cu ecanul."
 
 #. Description of setting with label #349 "TrueHD capable receiver"
 #: system/settings/settings.xml
@@ -18297,7 +18299,7 @@ msgstr "Permite accelerare dispozitiv fizic - MMAL"
 #: system/settings/settings.xml
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Folosește redatorul video pentru decodarea fișierelor video cu accelerare MMAL."
+msgstr "Folosește player-ul video pentru decodarea fișierelor video cu accelerare MMAL."
 
 #. Button on settings to opend DSP manager dialog
 #: system/settings/settings.xml
@@ -19707,6 +19709,22 @@ msgstr "Această categorie conține setările pentru bazele de date ale mediatec
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Această categorie conține setările pentru interfața grafică"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Arată informațiile EXIF ale imaginilor"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Dacă există informații EXIF (dată, oră, aparat foto folosit, etc.) acestea vor fi afișate."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

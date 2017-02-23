@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-06 20:25+0000\n"
+"PO-Revision-Date: 2017-02-14 21:23+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -9942,14 +9942,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Rechercher une icône"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Recherche des logos des chaînes"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Toutes les chaînes"
@@ -15547,13 +15547,6 @@ msgid ""
 "now?"
 msgstr "Une nouvelle manette a été détectée. Le configuration peut être effectuée sous Paramètres -> Système -> Entrée. Faut-il la configurer maintenent ?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Corriger"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15587,6 +15580,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "La configuration de la manette dépend d'une extension désactivée. Faut-il l'activer ?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignorer l'entrée"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16167,8 +16168,9 @@ msgstr "Sélectionne le format de la température, de la date et de l'heure. Les
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Sélection de la table de caractères à utiliser pour l'affichage du texte sur l'interface utilisateur."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Permet de choisir quel jeu de caractères utiliser pour afficher le texte de l'interface utilisateur. Ce jeu est indépendant de celui utilisé pour les sous-titres (qui est situé à Lecteur > Langue)."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19714,6 +19716,22 @@ msgstr "Cette catégorie contient les paramètres relatifs aux bases de données
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Cette catégorie contient d'autres paramètres relatifs à l'interface utilisateur."
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Afficher les informations EXIF des images"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Si les informations EXIF existent (date, heure, appareil utilisé, etc.), elles seront affichées."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

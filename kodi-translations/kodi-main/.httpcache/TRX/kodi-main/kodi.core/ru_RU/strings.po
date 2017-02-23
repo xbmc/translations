@@ -7,7 +7,7 @@
 # feruk <witu.900@mail.ru>, 2015
 # RabinoVich, 2015
 # RabinoVich, 2015
-# Roman Miroshnychenko <romanvm@yandex.ru>, 2015-2016
+# Roman Miroshnychenko <romanvm@yandex.ru>, 2015-2017
 # Romans Pokrovskis <motivated.it@gmail.com>, 2016
 # Serge Kukharski, 2016
 # Serge Rodionov <buzzzzer@gmail.com>, 2016
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-13 12:41+0000\n"
+"PO-Revision-Date: 2017-02-15 15:27+0000\n"
 "Last-Translator: Roman Miroshnychenko <romanvm@yandex.ru>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/teamxbmc/kodi-main/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -7213,7 +7213,7 @@ msgstr "Медиатека"
 #: system/settings/settings.xml
 msgctxt "#14203"
 msgid "Library settings"
-msgstr "Настройки библиотеки"
+msgstr "Настройки медиатеки"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
@@ -7358,7 +7358,7 @@ msgstr "Медиатека видео"
 #: system/settings/settings.xml
 msgctxt "#14237"
 msgid "Music Library"
-msgstr "Музыкальная библиотека"
+msgstr "Музыкальная медиатека"
 
 #: system/settings/settings.xml
 msgctxt "#14240"
@@ -7398,17 +7398,17 @@ msgstr "Скрывать состояние обновления медиате�
 #: system/settings/settings.xml
 msgctxt "#14247"
 msgid "Clean library"
-msgstr "Очистка библиотеки"
+msgstr "Очистка медиатеки"
 
 #: system/settings/settings.xml
 msgctxt "#14248"
 msgid "Export library"
-msgstr "Экспорт библиотеки"
+msgstr "Экспорт медиатеки"
 
 #: system/settings/settings.xml
 msgctxt "#14249"
 msgid "Import library"
-msgstr "Импорт библиотеки"
+msgstr "Импорт медиатеки"
 
 #: system/settings/settings.xml
 msgctxt "#14250"
@@ -9943,14 +9943,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Найти значок"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Поиск значков для каналов"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Все каналы"
@@ -14180,7 +14180,7 @@ msgstr "Дополнение удалено."
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#24145"
 msgid "Video library scanner"
-msgstr "Сканер видеотеки."
+msgstr "Сканер медиатеки видео"
 
 #. Used as an event log title for the music library scanner
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
@@ -15548,13 +15548,6 @@ msgid ""
 "now?"
 msgstr "Обнаружен новый контроллер. Его можно настроить в разделе \"Настройки -> Системные настройки -> Ввод\". Настроить сейчас?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Исправить пропуски"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15588,6 +15581,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "Конфигурация контроллера использует отключенное дополнение. Включить его?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr ""
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16168,8 +16169,9 @@ msgstr "Выбор форматов температуры и даты. Дост
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Выбор кодировки текста интерфейса."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19715,6 +19717,22 @@ msgstr "Настройки медиатеки"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Настройки интерфейса"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Показывать сведения о фото из EXIF"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Показывать данные EXIF (дата, время, модель фотоаппарата и т. п.) при их наличии."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

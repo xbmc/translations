@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-12-09 05:43+0000\n"
-"Last-Translator: devilshura <devilshura@gmail.com>\n"
+"PO-Revision-Date: 2017-02-14 15:20+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Thai (Thailand) (http://www.transifex.com/teamxbmc/kodi-main/language/th_TH/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -9929,14 +9929,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "เรียกดูไอคอน"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "ค้นหา ไอคอนช่องรายการ"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "ช่องรายการทั้งหมด"
@@ -15534,13 +15534,6 @@ msgid ""
 "now?"
 msgstr "ตัวควบคุมอันใหม่ถูกตรวจพบ การกำหนดค่าสามารถทำได้ทุกเวลา ใน \"การตั้งค่า -> การตั้งค่าระบบ -> ป้อนข้อมูล\" คุณต้องการที่จะกำหนดค่าตอนนี้หรือไม่?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "ข้ามการแก้ไข"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15574,6 +15567,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "การกำหนดค่าควบคุมขึ้นอยู่กับส่วนเสริมที่ปิดอยู่ คุณต้องการจะเปิดใช้งานมันหรือไม่"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr ""
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16154,8 +16155,9 @@ msgstr "เลือกรูปแบบของอุณหภูมิ, เ�
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "เลือกชุดอักขระที่จะนำไปใช้ สำหรับการแสดงผลตัวอักษรในส่วนติดต่อผู้ใช้."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19701,6 +19703,22 @@ msgstr "หมวดหมู่นี้ประกอบด้วย กา�
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "หมวดหมู่นี้ประกอบด้วย การตั้งค่าสำหรับส่วนติดต่อของ GUI"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "แสดงข้อมูลภาพ EXIF"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "ถ้ามีรายละเอียดข้อมูล EXIF อยู่ (วันที่, เวลา, กล้องที่ใช้, อื่นๆ.), มันจะถูกนำมาแสดงผล."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-01-20 09:25+0000\n"
+"PO-Revision-Date: 2017-02-15 07:05+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -9931,14 +9931,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Parinkti piktogramą"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Ieškoti kanalų piktogramų"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Visi kanalai"
@@ -15536,13 +15536,6 @@ msgid ""
 "now?"
 msgstr "Buvo aptiktas naujas valdiklis. Jį sukonfigūruoti galite bet kuriuo meniu perėję į \"Nustatymai -> Sistemos nustatymai -> Įvestis\". Ar norite sukonfigūruoti jį dabar?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Pataisyti praleidimą"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15576,6 +15569,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "Valdiklio konfigūravimui reikalingas išjungtas priedas. Ar norite jį įjungti?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr "Ignoruoti įvestį"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16156,8 +16157,9 @@ msgstr "Pasirinkite temperatūros, laiko ir datos formatus. Galimos parinktys pr
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Pasirinkite simbolių rinkinį, kuris bus naudojamas rodant vartotojo sąsajos tekstą."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr "Pasirinkite simbolių rinkinį, kuris bus naudojamas vartotojo sąsajos teksto atvaizdavimui. Tai neįtakos simbolių rinkinio naudojamo subtitrams, jiems pakeisti eikite į Grotuvas > Kalba."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19703,6 +19705,22 @@ msgstr "Šioje kategorijoje yra bibliotekos duomenų bazių nustatymai"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Šioje kategorijoje yra kiti vartotojo sąsajos nustatymai"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Rodyti nuotraukų EXIF informaciją"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Jei egzistuoja EXIF informacija (data, laikas, fotoaparatas ir kt.), ji bus atvaizduojama."
 
 #: system/settings/settings.xml
 msgctxt "#39000"

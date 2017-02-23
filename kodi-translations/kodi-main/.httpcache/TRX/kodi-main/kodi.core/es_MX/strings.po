@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-13 16:47+0000\n"
+"PO-Revision-Date: 2017-02-20 17:21+0000\n"
 "Last-Translator: Intel <malo1@luisrivera.com>\n"
 "Language-Team: Spanish (Mexico) (http://www.transifex.com/teamxbmc/kodi-main/language/es_MX/)\n"
 "MIME-Version: 1.0\n"
@@ -3994,7 +3994,7 @@ msgstr "Zeroconf"
 #: system/settings/settings.xml
 msgctxt "#1260"
 msgid "Announce services to other systems"
-msgstr "Anunciár servicios a otros sistemas"
+msgstr "Anuncia servicios a otros sistemas"
 
 #: system/settings/settings.xml
 msgctxt "#1268"
@@ -8181,7 +8181,7 @@ msgstr "Los ya vistos"
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16103"
 msgid "Mark as watched"
-msgstr "Marcar como vistos"
+msgstr "Marcar como visto"
 
 #. Label for a context menu entry to mark an item as unwatched
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
@@ -8190,7 +8190,7 @@ msgstr "Marcar como vistos"
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16104"
 msgid "Mark as unwatched"
-msgstr "Marcar como no vistos"
+msgstr "Marcar como no visto"
 
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
@@ -9932,14 +9932,14 @@ msgctxt "#19285"
 msgid "Browse for icon"
 msgstr "Buscar ícono"
 
-#. Notification message if process starts searching for missing channel icons
-#: xbmc/pvr/PVRManager.cpp
+#. Label for channel icon search progress dialog
+#: xbmc/pvr/channels/PVRChannelGroup.cpp
 msgctxt "#19286"
 msgid "Searching for channel icons"
 msgstr "Buscando para iconos de canal"
 
 #. Label for the default pvr channel group
-#: xbmc/pvr/windows/GUIWindowPVRCommon.cpp
+#: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19287"
 msgid "All channels"
 msgstr "Todos los canales"
@@ -13509,11 +13509,11 @@ msgstr "Clientes PVR"
 
 msgctxt "#24020"
 msgid "Configure"
-msgstr "Configure"
+msgstr "Configurar"
 
 msgctxt "#24021"
 msgid "Disable"
-msgstr "Deshabilitar"
+msgstr "Desactivar"
 
 msgctxt "#24022"
 msgid "Enable"
@@ -13598,7 +13598,7 @@ msgstr "Desinstalar"
 
 msgctxt "#24038"
 msgid "Install"
-msgstr "Install"
+msgstr "Instalar"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -13988,7 +13988,7 @@ msgstr "Ubicación de almacenamiento de Subtitulos"
 #: system/settings/settings.xml
 msgctxt "#24116"
 msgid "Default TV show service"
-msgstr "Servicio deserie predeterminado"
+msgstr "Servicio de serie predeterminado"
 
 #. Description of setting with label #24116 "Default TV Service"
 #: system/settings/settings.xml
@@ -15537,13 +15537,6 @@ msgid ""
 "now?"
 msgstr "Se ha detectado un nuevo controlador. La configuración se puede hacer en cualquier momento en \"Configuración -> Configuración del sistema -> Entrada\". ¿Desea configurarlo ahora?"
 
-#. Label of the button to fix the bug where buttons are skipped in the
-#. controller dialog
-#: addons/skin.estuary/1080i/DialogGameControllers.xml
-msgctxt "#35013"
-msgid "Fix skipping"
-msgstr "Arreglar saltos"
-
 #. Help text of the button to fix the bug where buttons are skipped in the
 #. controller dialog. %s - list of disabled buttons and axes
 msgctxt "#35014"
@@ -15577,6 +15570,14 @@ msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
 msgstr "La configuración del controlador depende de un complemento desactivado. ¿Desea habilitarlo?"
+
+#. Label of the button to fix the bug where buttons are skipped in the
+#. controller dialog
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
+msgctxt "#35019"
+msgid "Ignore input"
+msgstr ""
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16157,8 +16158,9 @@ msgstr "Selecciona el formato de temperatura, hora y fecha. Las opciones disponi
 msgctxt "#36116"
 msgid ""
 "Choose which character set is used for displaying text in the user "
-"interface."
-msgstr "Elija qué juego de caracteres se utiliza para mostrar texto en la interfaz de usuario."
+"interface. This doesn't change the character set used for subtitles, for "
+"that go to Player > Language."
+msgstr ""
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -19195,7 +19197,7 @@ msgstr "Ultimo perfil usado"
 #: xbmc/Windows/GUIMediaWindow.cpp
 msgctxt "#37015"
 msgid "Browse into"
-msgstr "navegar por"
+msgstr "Mostrar adentro"
 
 #. Description of setting with label #448 "Dolby Digital Plus (E-AC3) capable
 #. receiver"
@@ -19704,6 +19706,22 @@ msgstr "Esta categoría contiene los ajustes para las bases de datos de la bibli
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Esta categoría contiene otras configuraciones para la interfaz GUI"
+
+#. Description of setting "Pictures -> Show EXIF picture information" with
+#. label #38207
+#: system/settings/settings.xml
+msgctxt "#38207"
+msgid "Show EXIF picture information"
+msgstr "Mostrar informacion EXIF de imágenes"
+
+#. Help text of setting "Pictures -> Show EXIF picture information" with label
+#. #38208
+#: system/settings/settings.xml
+msgctxt "#38208"
+msgid ""
+"If EXIF information exists (date, time, camera used, etc.), it will be "
+"displayed."
+msgstr "Si informacion EXIF existe (fecha, hora, camara usada, etc), eso puede ser mostrado."
 
 #: system/settings/settings.xml
 msgctxt "#39000"
