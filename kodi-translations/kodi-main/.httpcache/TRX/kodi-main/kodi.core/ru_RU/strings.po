@@ -14,14 +14,15 @@
 # Vasiliy Gurev, 2016
 # Vasiliy Gurev, 2016
 # feruk <witu.900@mail.ru>, 2015
+# TotalCaesar659 <x24cm5b8c54q6szxw@yandex.ru>, 2017
 # Антоха Чудаков <xsandercage2@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-15 15:27+0000\n"
-"Last-Translator: Roman Miroshnychenko <romanvm@yandex.ru>\n"
+"PO-Revision-Date: 2017-03-24 20:31+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/teamxbmc/kodi-main/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13734,7 +13735,7 @@ msgstr "Автообновление"
 
 #. Used as an event log description for add-ons that have been
 #. installed/enabled
-#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonManager.cpp
+#: xbmc/addons/AddonManager.cpp
 msgctxt "#24064"
 msgid "Add-on enabled"
 msgstr "Дополнение включено"
@@ -13832,6 +13833,11 @@ msgctxt "#24083"
 msgid "Information libraries"
 msgstr "Библиотеки сведений"
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24084"
+msgid "Add-on installed"
+msgstr "Дополнение установлено"
+
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24085"
@@ -13883,15 +13889,20 @@ msgctxt "#24093"
 msgid "Checking %s..."
 msgstr "Проверка %s..."
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24094"
+msgid "Add-on disabled due to being marked broken in repository."
+msgstr "Дополнение отключено, поскольку в репозитории оно отмечено как \"испорченное\"."
+
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Локальный кэш пакетов"
 
-#: xbmc/addons/Repository.cpp addons/skin.estuary/1080i/DialogAddonInfo.xml
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24096"
-msgid "Add-on is incompatible or has been marked broken in repository."
-msgstr "Дополнение несовместимо или помечено в репозитории как испорченное."
+msgid "Add-on has been marked broken in repository."
+msgstr "Дополнение было отмечено как \"испорченное\" в репозитории."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -15588,7 +15599,7 @@ msgstr "Конфигурация контроллера использует о�
 #: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
 msgctxt "#35019"
 msgid "Ignore input"
-msgstr ""
+msgstr "Игнорировать ввод"
 
 #. Name of game add-ons category
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15614,6 +15625,18 @@ msgstr "Проверка вибро"
 msgctxt "#35052"
 msgid "Activate the rumble motors of all controllers."
 msgstr "Активировать вибро на всех контроллерах"
+
+#. Setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35053"
+msgid "Enable rumble for notifications"
+msgstr ""
+
+#. Description of setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35054"
+msgid "Activates controller rumble motors when a notification occurs."
+msgstr ""
 
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16171,7 +16194,7 @@ msgid ""
 "Choose which character set is used for displaying text in the user "
 "interface. This doesn't change the character set used for subtitles, for "
 "that go to Player > Language."
-msgstr ""
+msgstr "Выберите кодировку для отображения текста интерфейса. Эта настройка не изменит кодировку субтитров, для ее изменения перейдите в Меню > Язык."
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -18722,7 +18745,7 @@ msgid ""
 "menu during video playback. This allows for multiple display profiles to "
 "account for different viewing environments and source materials, for example"
 " gamma 2.2 for daytime viewing and 2.4 for nighttime."
-msgstr ""
+msgstr "Выберите файл 3DLUT для использования по умолчанию. Если вы поместите несколько файлов 3DLUT в одну папку, то сможете переключаться между ними во время воспроизведения в меню OSD. Это даст возможность нескольким профилям дисплея получать доступ к различным окружениям просмотра и источникам, например, для настройки гаммы 2,2 в дневное время суток и 2,4 — в ночное."
 
 #: system/settings/settings.xml
 msgctxt "#36566"
@@ -18741,7 +18764,7 @@ msgid ""
 "towards display native black (causing raised black level) and white level "
 "scaling when a different whitepoint from display native is selected (as a "
 "workaround, adjust video brightness down to avoid clipping)."
-msgstr ""
+msgstr "Установив профиль дисплея, вы можете изменить параметры видео: гамму, основные цвета и баланс белого. ICC-профиль источника создается на основе параметров и связан с установленным здесь ICC-профилем дисплея. Эта функция экспериментальная, в ней отсутствует корректировка почти черных цветов для отображения настоящего черного (из-за повышенного уровня баланса черного) и уровень баланса белого, если выбран уровень, отличающийся от изначального (чтобы это обойти, уменьшите яркость видео для избежания резкости)."
 
 #: system/settings/settings.xml
 msgctxt "#36568"

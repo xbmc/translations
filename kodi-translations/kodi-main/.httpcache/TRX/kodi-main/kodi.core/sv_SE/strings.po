@@ -16,7 +16,7 @@
 # Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Johan Hedlin <busan.katt@gmail.com>, 2015
 # Jonatan Nyberg <jonatan@autistici.org>, 2016
-# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2016
+# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2017
 # Magnus JH, 2015
 # Magnus JH, 2015
 # sopparus <martin.larsson2@gmail.com>, 2016
@@ -29,8 +29,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-23 19:44+0000\n"
-"Last-Translator: andbo467 <andbo467@student.liu.se>\n"
+"PO-Revision-Date: 2017-03-24 20:31+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/teamxbmc/kodi-main/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2394,7 +2394,7 @@ msgstr "Ljudutgångsenhet"
 #: system/settings/settings.xml
 msgctxt "#546"
 msgid "Passthrough output device"
-msgstr "Genomströmning utenhet"
+msgstr "Utenhet för genomströmning"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#547"
@@ -7606,7 +7606,7 @@ msgstr "Ljudinformation"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15028"
 msgid "Audio DSP settings - Main"
-msgstr "Ljud DSP inställningar - Huvud"
+msgstr "Ljud DSP inställningar - Primär"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15029"
@@ -13743,7 +13743,7 @@ msgstr "Autouppdatera"
 
 #. Used as an event log description for add-ons that have been
 #. installed/enabled
-#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonManager.cpp
+#: xbmc/addons/AddonManager.cpp
 msgctxt "#24064"
 msgid "Add-on enabled"
 msgstr "Tillägg aktiverat"
@@ -13841,6 +13841,11 @@ msgctxt "#24083"
 msgid "Information libraries"
 msgstr "Informationsbibliotek"
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24084"
+msgid "Add-on installed"
+msgstr "Tillägg installerat"
+
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24085"
@@ -13892,15 +13897,20 @@ msgctxt "#24093"
 msgid "Checking %s..."
 msgstr "Kontrollerar %s..."
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24094"
+msgid "Add-on disabled due to being marked broken in repository."
+msgstr "Tillägget har inaktiverats på grund av att det markerats som trasigt i förrådet."
+
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Lokal cache för paket"
 
-#: xbmc/addons/Repository.cpp addons/skin.estuary/1080i/DialogAddonInfo.xml
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24096"
-msgid "Add-on is incompatible or has been marked broken in repository."
-msgstr "Tillägget är inkompatibelt eller har blivit markerat som trasigt i förrådet."
+msgid "Add-on has been marked broken in repository."
+msgstr "Tillägget har markerats som trasigt i förrådet."
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -14563,7 +14573,7 @@ msgstr "Publik"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29936"
 msgid "Soft music"
-msgstr "Soft music"
+msgstr "Soft musik"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14671,7 +14681,7 @@ msgstr "Lätt klassisk"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29954"
 msgid "Serious classical"
-msgstr "Allvarlig klassisk"
+msgstr "Seriös klassisk"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15334,7 +15344,7 @@ msgid ""
 "except that after the selected period of time audio enters a suspended "
 "state.[CR][Off] Audio output enters a suspended state. Note: Sounds can be "
 "missed if audio enters suspended state."
-msgstr "Ange tillvägagångssätt när inget ljud spelas under uppspelning eller GUI-händelser.[CR][Alltid] - En kontinuerlig tyst ljudsignal spelas upp, denna håller ljudenheten aktiv för nya ljud, men kan förhindra ljud från andra applikationer.[CR][1-10 minuter] - Som [Alltid], med skillnaden att efter angiven tidsperiod kommer ljudet att sättas i vänteläge.[CR][Av] - ljudet sätts i vänteläge. Notera att ljudhändelser kan utebli om ljudet sätts i vänteläge."
+msgstr "Ange tillvägagångssätt när inget ljud är nödvändigt för uppspelning eller GUI-ljud.[CR][Alltid] - En kontinuerlig ohörbar ljudsignal spelas upp, denna håller ljudenheten aktiv för nya ljud, men kan även förhindra ljud från andra applikationer.[CR][1-10 minuter] - Som [Alltid], med skillnaden att efter angiven tidsperiod kommer ljudet att sättas i vänteläge.[CR][Av] - Ljudet sätts i vänteläge. Notera att ljudhändelser kan utebli om ljudet sätts i vänteläge."
 
 #. Indicates if Audio Engine should transmit noise or real silence
 #: system/settings/settings.xml
@@ -15623,6 +15633,18 @@ msgstr "Testa vibration"
 msgctxt "#35052"
 msgid "Activate the rumble motors of all controllers."
 msgstr "Aktivera vibrationsmotorerna på alla handkontroller."
+
+#. Setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35053"
+msgid "Enable rumble for notifications"
+msgstr ""
+
+#. Description of setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35054"
+msgid "Activates controller rumble motors when a notification occurs."
+msgstr ""
 
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16578,7 +16600,7 @@ msgstr "Ange omsamplingskvalitet för de tillfällen då ljudet behöver vara av
 msgctxt "#36170"
 msgid ""
 "Stretch the video up to the set percentage in order to minimise black bars."
-msgstr "dra ut videon up till en satt procentdel för att minska svarta ytor."
+msgstr "Dra ut videon upp till angiven procent för att minska svarta kanter."
 
 #. Description of setting with label #173 "Display 4:3 videos as"
 #: system/settings/settings.xml
@@ -16622,7 +16644,7 @@ msgid ""
 "information].[CR][Choose] Will select an item, e.g. open a directory in "
 "files mode.[CR][Resume] Will automatically resume videos from the last "
 "position that you were viewing them, even after restarting the system."
-msgstr "Växla mellan Välj, Spela (standard), Återuppta och Visa Information. Välj kommer välja ett föremål, exempelvis öppna en mapp i filläge. Återuppta kommer automatiskt återuppta videor från senaste positionen, även efter omstart av systemet."
+msgstr "Växla mellan [Välj], [Spela] (standard), [Återuppta] och [Visa Information].[CR][Välj] Kommer välja ett föremål, exempelvis öppna en mapp i filläge.[CR][Återuppta] Kommer automatiskt återuppta videor från senaste positionen, även efter omstart av systemet."
 
 #. Description of setting with label #20433 "Extract thumbnails and video
 #. information"
@@ -16683,7 +16705,7 @@ msgstr "Denna kategori innehåller inställningar för hur undertexter hanteras.
 msgctxt "#36185"
 msgid ""
 "Set the font type to be used for text based (usually downloaded) subtitles."
-msgstr "Välj teckensnitt för text baserade (oftast nedladdade) undertexter."
+msgstr "Välj teckensnitt för textbaserade (oftast nedladdade) undertexter."
 
 #. Description of setting with label #289 "Size"
 #: system/settings/settings.xml
@@ -17230,7 +17252,7 @@ msgctxt "#36268"
 msgid ""
 "Reference volume (PreAmp level) to use for files with encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
-msgstr "Referensvolym (Förstärkarnivå nivå) som ska användas för filer med kodad ReplayGain information. Standard är 89 dB enligt standard. Ändra med försiktighet."
+msgstr "Referensvolym (PreAmp-nivå) som ska användas för filer med kodad ReplayGain-information. Standard är 89 dB. Ändra med försiktighet."
 
 #. Description of setting with label #642 "PreAmp Level - Non ReplayGained
 #. files"
@@ -17239,7 +17261,7 @@ msgctxt "#36269"
 msgid ""
 "Reference volume (PreAmp level) to use for files without encoded ReplayGain "
 "information. Default is 89dB as per standard. Change with caution."
-msgstr "Referensvolym (Förstärkarnivå nivå) som ska användas för filer utan kodade ReplayGain information. Standard är 89 dB enligt standard. Ändra med försiktighet."
+msgstr "Referensvolym (PreAmp-nivå) som ska användas för filer utan kodad ReplayGain-information. Standard är 89 dB. Ändra med försiktighet."
 
 #. Description of setting with label #13314 "Crossfade between songs"
 #: system/settings/settings.xml
@@ -18316,7 +18338,7 @@ msgstr "Tillåt hårdvaruacceleration - MMAL"
 #: system/settings/settings.xml
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Använd VideoPlayer för avkodning av video-filer med MMAL-acceleration."
+msgstr "Använd VideoPlayer för avkodning av videofiler med MMAL-acceleration."
 
 #. Button on settings to opend DSP manager dialog
 #: system/settings/settings.xml
@@ -18656,7 +18678,7 @@ msgid ""
 "needs to be disabled when using iOS 9 or later clients to restore music "
 "streaming via AirPlay. \"Videos\" and \"Pictures\" are only supported for "
 "iOS clients using iOS 8.x and older."
-msgstr "Aktiverar stöd för att ta emot \"Video\" och \"Foton\" via AirPlay. Detta måste vara inaktiverad när man använder iOS 9 eller senare klienter för att återställa musik strömning via AirPlay. \"Video\" och \"Foton\" stöder endast iOS klienter som använder iOS 8.x och äldre."
+msgstr "Aktiverar stöd för att ta emot \"Video\" och \"Foton\" via AirPlay. Detta måste vara inaktiverad när man använder iOS 9 eller senare klienter för att återställa musikströmning via AirPlay. \"Video\" och \"Foton\" stöder endast iOS klienter som använder iOS 8.x och äldre."
 
 #. Name of a setting
 #: system/settings/settings.xml
@@ -18674,7 +18696,7 @@ msgid ""
 "stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the "
 "value should be higher for small screens and lower for large screens. Note: "
 "this is not supported by all skins."
-msgstr "Definierar styrkan av den stereoskopiska 3D-effekten i GUI. Detta görs genom att reglera djupet av uppfattningen inom GUI:en, så ju högre värde, desto fler element hoppar ut på skärmen. [Noll] Inaktiverar stereoskopisk 3D-effekt av det grafiska gränssnittet.[CR]För en god visuell upplevelse, ska värdet vara högre för små skärmar och lägre för stora skärmar. Obs: detta stöds inte av alla skal."
+msgstr "Definierar styrkan av den stereoskopiska 3D-effekten i GUI:t. Detta görs genom att reglera djupet av uppfattningen inom GUI:t, så ju högre värde, desto fler element hoppar ut på skärmen. [Noll] Inaktiverar stereoskopisk 3D-effekt av det grafiska gränssnittet.[CR]För en god visuell upplevelse, ska värdet vara högre för små skärmar och lägre för stora skärmar. Obs: detta stöds inte av alla skal."
 
 #. Description of setting "System -> Video output -> NoOfBuffers" with label
 #. #36043
@@ -19041,7 +19063,7 @@ msgstr "Tillåt installation av tillägg från okända källor."
 msgctxt "#36617"
 msgid ""
 "For security, installation of add-ons from unknown sources is disabled."
-msgstr "Installation av tillägg från okända källor är av säkerhetsskäl inaktiverat."
+msgstr "Installation av tillägg från okända källor är inaktiverat av säkerhetsskäl."
 
 #. Text in confirm dialog when enabling setting "System -> Add-ons -> Unknown
 #. sources"
@@ -19265,7 +19287,7 @@ msgid ""
 "Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
 "FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
 "Pi as this requires a lot of CPU."
-msgstr "Välj detta om din ljudutgång endast stödjer multikanalsljud som Dolby Digital 5.1 (AC3), detta tillåter multikanalsljud som t.ex. AAC5.1 eller FLAC5.1 att spelas upp i 5.1 surroundljud. Obs! Rekommenderas ej för Pi då detta använder mycket processorkraft."
+msgstr "Välj detta om din ljudutgång endast stödjer multikanalsljud som Dolby Digital 5.1 (AC3), detta tillåter multikanalsljud som t.ex. AAC5.1 eller FLAC5.1 att spelas upp i 5.1 surroundljud. Obs: Rekommenderas ej för Pi då detta kräver mycket processorkraft."
 
 #: system/settings/settings.xml
 msgctxt "#37025"
@@ -19303,7 +19325,7 @@ msgctxt "#37031"
 msgid ""
 "Specifies how Blu-rays should be opened / played back. Note: Some disc menus"
 " are not fully supported and may cause problems."
-msgstr "Specificerar hur Blu-rays ska öppnas/spelas. Obs! Vissa skivmenyer har inte fullt stöd ännu och kan medföra problem."
+msgstr "Specificerar hur Blu-rays ska öppnas/spelas. Obs: Vissa skivmenyer har inte fullt stöd ännu och kan medföra problem."
 
 #. Title of category #37032 Accessibility
 #: system/settings/settings.xml
@@ -19374,7 +19396,7 @@ msgid ""
 "If enabled, audio streams that are flagged as default (and match the "
 "preferred language) are preferred over audio streams with higher quality "
 "(number of channels, codec, ...)."
-msgstr "Vid aktivering väljs ljudströmmar som är flaggade som standard (och matchar föredraget språk) framför ljuströmmar med högre ljudkvalitet (antal kanaler, codec, ...)"
+msgstr "Om aktiverad väljs ljudströmmar som är flaggade som standard (och matchar föredraget språk) framför ljudströmmar med högre ljudkvalitet (antal kanaler, codec, ...)"
 
 #. Description of setting Skip steps
 #: system/settings/settings.xml
@@ -19393,7 +19415,7 @@ msgid ""
 "Defines the time to wait for subsequent key presses before performing the "
 "skip. Only applies when using smart skipping (when using more than one skip "
 "step for a direction)."
-msgstr "Definierar tid att vänta på efterföljande knapptryckningar innan ett hopp utförs. Gäller endast vid användning av smarta hopp (när du hoppar mer än ett steg i en riktning)."
+msgstr "Definierar tiden att vänta på efterföljande knapptryckningar innan ett hopp utförs. Gäller endast vid användning av smarta hopp (när du hoppar mer än ett steg i en riktning)."
 
 #. Setting #37044 Extract chapter thumbnails
 #: system/settings/settings.xml
@@ -19432,7 +19454,7 @@ msgstr "Visa \"Alla objekt\"-meny i mappar. Till exempel \"Alla album\" eller \"
 #: system/settings/settings.xml
 msgctxt "#38013"
 msgid "Limit GUI updates during playback"
-msgstr "Limitera GUI uppdateringar vid uppspelning"
+msgstr "Begränsa GUI uppdateringar under uppspelning"
 
 #. Description for the setting with label #38013 "Limit GUI updates when
 #. playing video"
@@ -19441,7 +19463,7 @@ msgctxt "#38014"
 msgid ""
 "Limits the speed (fps) used to update the GUI while playing videos. This can"
 " reduce CPU load and fix playback issues while the GUI is shown."
-msgstr "Limitera hastigheten (fps) användt för att uppdatera GUIn vid uppspelning av videor. Detta kan redusera processor belastning och fixa uppspelnings problem när GUIn visas."
+msgstr "Begränsa hastigheten (fps) använt för att uppdatera GUI:t vid uppspelning av videor. Detta kan reducera processorns belastning och fixa problem med uppspelningen när GUI:t visas."
 
 #. Label of a settings value to indicate the "disabled" state of an otherwise
 #. limiting setting (like fps limit, bandwidth limit, etc.)
@@ -19501,7 +19523,7 @@ msgstr "Förekomster"
 #: system/settings/rbp.xml
 msgctxt "#38027"
 msgid "Decode the stereo stream from 3D files"
-msgstr "Avkoda strömmen från 3D-filer"
+msgstr "Avkoda stereoströmmen från 3D-filer"
 
 #. Description of setting with label #38027 "Decode the stereo stream from 3D
 #. files"
@@ -19512,7 +19534,7 @@ msgid ""
 "be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
 "rays.[CR]Note: Processing of this data may reduce playback performance, so "
 "only enable if you require stereoscopic 3D support."
-msgstr "Om aktiverad, kan videor som skapats i Multiview Video Coding (MVC) -format också ses i stereoskopisk 3D. MVC-formatet återfinns normalt på 3D Blu-ray.[CR] Anm. Behandling av denna data kan minska prestanda vid uppspelning, så aktivera detta endast om du behöver stereoskopisk 3D-stöd."
+msgstr "Om aktiverad, kan videor som skapats i Multiview Video Coding (MVC) -format också ses i stereoskopisk 3D. MVC-formatet återfinns normalt på 3D Blu-ray.[CR]Obs: Behandling av denna data kan minska prestandan vid uppspelning, så aktivera detta endast om du behöver stereoskopisk 3D-stöd."
 
 #: system/settings/rbp.xml
 msgctxt "#38029"

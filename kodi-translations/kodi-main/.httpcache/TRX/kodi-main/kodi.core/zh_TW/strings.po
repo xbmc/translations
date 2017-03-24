@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-15 06:19+0000\n"
-"Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
+"PO-Revision-Date: 2017-03-24 20:31+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13728,7 +13728,7 @@ msgstr "自動更新"
 
 #. Used as an event log description for add-ons that have been
 #. installed/enabled
-#: xbmc/addons/AddonInstaller.cpp xbmc/addons/AddonManager.cpp
+#: xbmc/addons/AddonManager.cpp
 msgctxt "#24064"
 msgid "Add-on enabled"
 msgstr "已啟用附加元件"
@@ -13826,6 +13826,11 @@ msgctxt "#24083"
 msgid "Information libraries"
 msgstr "資訊類"
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24084"
+msgid "Add-on installed"
+msgstr "附加元件已安裝"
+
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24085"
@@ -13877,15 +13882,20 @@ msgctxt "#24093"
 msgid "Checking %s..."
 msgstr "正在檢查 %s....."
 
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24094"
+msgid "Add-on disabled due to being marked broken in repository."
+msgstr "由於本附加元件被其來源庫標示為損壞，故已被停用。"
+
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24095"
 msgid "Local package cache"
 msgstr "本地安裝包快取"
 
-#: xbmc/addons/Repository.cpp addons/skin.estuary/1080i/DialogAddonInfo.xml
+#: addons/skin.estuary/1080i/DialogAddonInfo.xml
 msgctxt "#24096"
-msgid "Add-on is incompatible or has been marked broken in repository."
-msgstr "附加元件不相容或者在元件庫中被標記為已損毀。"
+msgid "Add-on has been marked broken in repository."
+msgstr "本附加元件已被來源庫標示為損壞"
 
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
@@ -15608,6 +15618,18 @@ msgstr "測試震動器"
 msgctxt "#35052"
 msgid "Activate the rumble motors of all controllers."
 msgstr "開啟所有控制器的震動馬達"
+
+#. Setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35053"
+msgid "Enable rumble for notifications"
+msgstr ""
+
+#. Description of setting to enable rumble for GUI notifications
+#: system/settings/settings.xml
+msgctxt "#35054"
+msgid "Activates controller rumble motors when a notification occurs."
+msgstr ""
 
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
