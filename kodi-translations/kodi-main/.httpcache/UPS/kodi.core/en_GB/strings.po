@@ -514,6 +514,7 @@ msgctxt "#127"
 msgid "Objects"
 msgstr ""
 
+#: xbmc/addons/addonsettings.cpp
 #: xbmc/addons/guidialogaddonsettings.cpp
 #: system/settings/settings.xml
 #: addons/skin.estuary/xml/SkinSettings.xml
@@ -851,7 +852,6 @@ msgstr ""
 msgctxt "#193"
 msgid "Scan"
 msgstr ""
-
 
 #. label for "searching" message box heading
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
@@ -6668,11 +6668,6 @@ msgid "Allow hardware acceleration - VTBDecoder"
 msgstr ""
 
 #: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr ""
-
-#: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel shaders"
@@ -9109,8 +9104,8 @@ msgid "Next"
 msgstr ""
 
 #. 'timeline' label used in pvr guide window
-#: addons/skin.estuary/xml/MyPVRGuide.xml
 #. xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19032"
 msgid "Timeline"
 msgstr ""
@@ -9810,7 +9805,7 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr ""
 
-#empty string with id 191407
+#empty string with id 19147
 
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
@@ -10219,7 +10214,7 @@ msgctxt "#19216"
 msgid "All radio channels"
 msgstr ""
 
-#. label for 'all channels' value for 'channels' selector control in pvr guide search dialog 
+#. label for 'all channels' value for 'channels' selector control in pvr guide search dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19217"
 msgid "All TV channels"
@@ -10487,7 +10482,7 @@ msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr ""
 
-# empty string with id 19263
+#empty string with id 19263
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10518,7 +10513,7 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr ""
 
-# empty string with id 19269
+#empty string with id 19269
 
 #. Label of the option to switch between a grouped recordings list and a non-grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -15094,7 +15089,14 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr ""
 
-#empty strings from id 24152 to 24990
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp
+#: xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr ""
+
+#empty strings from id 24153 to 24990
 
 #. Used as error message in add-on browser when add-on repository data could not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15231,13 +15233,19 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr ""
 
-#. The label in the add-ons dll class to report about outdated add-on api version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
+msgid "BD-J menu error"
 msgstr ""
 
-#empty strings from id 29804 to 29899
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid "There was an error encountered loading Java, so BD-J menus will not be functional at this time. BD-J menus require the Java Runtime Environment so make sure this is installed and functioning on your system."
+msgstr ""
+
+#empty strings from id 29805 to 29899
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16514,7 +16522,19 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr ""
 
-#empty strings from id 35021 to 35048
+#empty strings from id 35022 to 35046
+
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr ""
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr ""
 
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp
@@ -16735,7 +16755,7 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr ""
 
-#empty strings from id 35103 to 35149
+#empty strings from id 35105 to 35149
 
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
@@ -17520,7 +17540,7 @@ msgstr ""
 #. Description of setting with label #20458 "Group movies in sets"
 #: system/settings/settings.xml
 msgctxt "#36145"
-msgid "When enabled, movies belonging to a \"Movie set\" are grouped together under one entry for the set in the movie library, this entry can then be opened to display the individual movies. When disabled, each movie will have it's own entry in the movie library even if it belongs to a set."
+msgid "When enabled, movies belonging to a \"Movie set\" are grouped together under one entry for the set in the movie library, this entry can then be opened to display the individual movies. When disabled, each movie will have its own entry in the movie library even if it belongs to a set."
 msgstr ""
 
 #. Description of setting with label #22000 "Update library on startup"
@@ -17611,12 +17631,6 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
-msgstr ""
-
-#. Description of setting with label #13430 "Allow hardware acceleration (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
 msgstr ""
 
 #. Description of setting with label #13432 "Allow hardware acceleration (VideoToolbox)"
@@ -20352,7 +20366,13 @@ msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr ""
 
-#empty strings from id 38112 to 38206
+#empty strings from id 38112 to 38189
+
+msgctxt "#38190"
+msgid "Extract thumbnails from video files"
+msgstr ""
+
+#empty strings from id 38191 to 38206
 
 #. Description of setting "Pictures -> Show EXIF picture information" with label #38207
 #: system/settings/settings.xml
@@ -20457,8 +20477,4 @@ msgstr ""
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#39016"
 msgid "Resume audiobook"
-msgstr ""
-
-msgctxt "#38190"
-msgid "Extract thumbnails from video files"
 msgstr ""
