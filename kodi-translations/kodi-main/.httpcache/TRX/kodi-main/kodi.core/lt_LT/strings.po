@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-17 15:31+0000\n"
+"PO-Revision-Date: 2017-06-22 07:32+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -489,8 +489,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Objektai"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -6333,11 +6333,6 @@ msgstr "Leisti aparatinės įrangos spartinimą - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Leisti aparatinės įrangos spartinimą - VTBDecoder"
-
-#: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Leisti aparatinės įrangos spartinimą - OpenMax"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -14631,6 +14626,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Vyksta priedų migracija - prašome palaukti"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr "Priedas yra nesuderinamas su šia Kodi versija."
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14763,12 +14764,20 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Naudojamas tranzitinis garso perdavimas"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
-msgstr "Nesuderinama API versija su tipui '%s'. Kodi: '%s', priedas: '%s'."
+msgid "BD-J menu error"
+msgstr "BD-J meniu klaida"
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
+msgstr "Įvyko klaida įkeliant Java, dėl to BD-J meniu šį kartą bus nefunkcionalūs. BD-J meniu reikalingas Java Runtime Environment, todėl įsitikinkite, kad jis įdiegtas ir funkcionuoja jūsų sistemoje."
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16020,6 +16029,18 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Paspauskite visus analoginius mygtukus dabar, kad būtų galima juos aptikti:[CR][CR]{0:s}"
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Tvarkyklės nustatymai"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr "Peržiūrėti ir konfigūruoti išorinių įtaisų priedus."
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
@@ -17076,7 +17097,7 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
 msgstr "Kai įjungta, filmai priklausantys \"Filmų rinkiniams\" bus grupuojami kartu po vienu įrašu filmų bibliotekoje, o atidarius šį įrašą bus rodomi atskiri filmai. Kai išjungta, kiekvienas filmas turės atskirą įrašą filmų bibliotekoje, net jei jis ir priklauso rinkiniui."
 
@@ -17190,13 +17211,6 @@ msgstr "Įjungti CrystalHD vaizdo failų dekodavimą."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Įjungti VTB vaizdo failų aparatinės įrangos dekodavimą."
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Įjungti OpenMax vaizdo failų aparatinės įrangos dekodavimą."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"

@@ -15,7 +15,7 @@
 # Hans Melin <hans.melin@gmail.com>, 2015
 # Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Johan Hedlin <busan.katt@gmail.com>, 2015
-# Jonatan Nyberg, 2016
+# Jony, 2016
 # Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2017
 # Magnus JH, 2015
 # Magnus JH, 2015
@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-23 17:31+0000\n"
+"PO-Revision-Date: 2017-06-24 19:13+0000\n"
 "Last-Translator: andbo467 <andbo467@student.liu.se>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/teamxbmc/kodi-main/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
@@ -510,8 +510,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Objekt"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -6354,11 +6354,6 @@ msgstr "Tillåt hårdvaruacceleration - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Tillåt hårdvaruacceleration - VTB-avkodare"
-
-#: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Tillåt hårdvaruacceleration - OpenMax"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -14652,6 +14647,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Tilläggsmigrering pågår - vänligen vänta"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr "Tillägget är inte kompatibelt med denna version av Kodi."
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14784,12 +14785,20 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Genomströmning för ljud används"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
-msgstr "Inkompatibel API-version för typen '%s'. Kodi: '%s', tillägg: '%s'."
+msgid "BD-J menu error"
+msgstr "BD-J menyfel"
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
+msgstr "Det uppstod ett fel vid laddning av Java, så BD-J-menyer kommer inte att fungera för närvarande. BD-J-menyer kräver Java Runtime Environment, så se till att det här är installerat och fungerar på ditt system."
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16041,6 +16050,18 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Tryck på alla analoga knappar nu för att detektera dom:[CR][CR]{0:s}"
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Drivrutininställningar"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr "Visa och konfigurera tillägg för kringutrustning."
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
@@ -17097,9 +17118,9 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Vid aktivering, grupperas filmer tillsammans som tillhör en \"Filmsamling\" under ett objekt i filmbiblioteket som sen kan öppnas för att visa alla individuella filmer.\nNär det här valet inte är aktiverat, placeras filmen separat under sitt eget objekt även om det hör till ett samling."
+msgstr "Om aktiverad, grupperas filmer som hör till en \"Filmuppsättning\" under ett objekt för uppsättningen i filmbiblioteket, detta objekt kan sedan öppnas för att visa de enskilda filmerna. Om avaktiverad, kommer varje film att ha sitt eget objekt i filmbiblioteket även om den hör till en uppsättning."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17211,13 +17232,6 @@ msgstr "Aktivera CrystalHD-avkodning av video."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Aktivera VTB hårdvaruavkodning av videofiler."
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Aktivera OpenMax-hårdvaruavkodning av video."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"

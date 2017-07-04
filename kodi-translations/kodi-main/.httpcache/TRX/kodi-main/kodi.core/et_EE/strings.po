@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-06-18 20:41+0000\n"
+"PO-Revision-Date: 2017-06-28 19:24+0000\n"
 "Last-Translator: Andres Ott <andres_ott@hotmail.com>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/teamxbmc/kodi-main/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
@@ -489,8 +489,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Objektid"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -3150,7 +3150,7 @@ msgstr "Peegelketas"
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#750"
 msgid "Are you sure?"
-msgstr "Oled sa kindel?"
+msgstr "Kas oled kindel?"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#751"
@@ -3321,7 +3321,7 @@ msgstr "Pordi vahemik"
 #: system/settings/settings.xml
 msgctxt "#794"
 msgid "Allow remote control by programs on other systems"
-msgstr ""
+msgstr "Luba teistes süsteemides programmidega kaughaldus"
 
 #: system/settings/settings.xml
 msgctxt "#795"
@@ -3363,7 +3363,7 @@ msgstr "Tüüp"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#804"
 msgid "Search guide for"
-msgstr ""
+msgstr "Otsi telekavast"
 
 #. Help of 'Guide data title search' edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -6333,11 +6333,6 @@ msgstr "Luba riistvaraline kiirendus - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Luba riistvaraline kiirendus - VTBDecoder"
-
-#: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Luba riistvaraline kiirendus - OpenMax"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -14459,34 +14454,34 @@ msgctxt "#24123"
 msgid ""
 "Pause the current video while searching for subtitles and resume once the "
 "subtitle is available."
-msgstr "Pane esitatav video subtiitrite otsimiseks pausile ja jätka esitamist, kui subtiitrid on saadaval."
+msgstr "Pane video subtiitrite otsimise ajaks pausile ja jätka esitamist, kui subtiitrid on saadaval."
 
 #: system/settings/settings.xml
 msgctxt "#24124"
 msgid "Next to the video"
-msgstr ""
+msgstr "Video kõrval"
 
 #: system/settings/settings.xml
 msgctxt "#24125"
 msgid "Custom location"
-msgstr ""
+msgstr "Kohandatud asukoht"
 
 #: system/settings/settings.xml
 msgctxt "#24126"
 msgid "Auto download first subtitle"
-msgstr ""
+msgstr "Lae esimene subtiiter automaatselt alla"
 
 #. Description of setting with label #24126 "Auto download first subtitle"
 #: system/settings/settings.xml
 msgctxt "#24127"
 msgid "Automatically download first subtitle from the search result list"
-msgstr ""
+msgstr "Lae otsingu tulemusest automaatselt alla esimene subtiiter"
 
 #. Info dialog after migrating userdata from xbmc to kodi
 #: xbmc/Application.cpp
 msgctxt "#24128"
 msgid "Configuration has been moved"
-msgstr ""
+msgstr "Seadistus teisaldatud"
 
 #. Info dialog after migrating userdata from xbmc to kodi
 #: xbmc/Application.cpp
@@ -14495,7 +14490,7 @@ msgid ""
 "The configuration of XBMC has been moved to the new location for Kodi. "
 "Please refer to http://kodi.wiki/view/Migration - this message will not be "
 "shown again!"
-msgstr ""
+msgstr "XBMC seadistus on teisaldatud Kodi jaoks uude asukohta. Loe lähemalt aadressilt http://kodi.wiki/view/Migration - enam seda sõnumit ei kuvata!"
 
 #: system/settings/settings.xml
 msgctxt "#24130"
@@ -14511,19 +14506,19 @@ msgstr ""
 #: xbmc/addons/LanguageResource.cpp
 msgctxt "#24132"
 msgid "Would you like to switch to this language?"
-msgstr ""
+msgstr "Kas soovid seda keelt kasutada?"
 
 #: xbmc/Application.cpp
 msgctxt "#24133"
 msgid "Failed to load language"
-msgstr ""
+msgstr "Keele allalaadimine ebaõnnestus"
 
 #: xbmc/Application.cpp
 msgctxt "#24134"
 msgid ""
 "We were unable to load your configured language. Please check your language "
 "settings."
-msgstr ""
+msgstr "Seadistatud keele laadimine ebaõnnestus. Kontrolli keeleseadeid."
 
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
@@ -14535,37 +14530,37 @@ msgstr "Heli DSP"
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#24136"
 msgid "Audio DSP..."
-msgstr ""
+msgstr "Heli DSP..."
 
 #: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
 msgctxt "#24137"
 msgid "Not allowed"
-msgstr ""
+msgstr "Keelatud"
 
 #: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
 msgctxt "#24138"
 msgid "DSP add-on is currently in use and can't be removed."
-msgstr ""
+msgstr "DSP lisamoodul on praegu kasutuses ja seda ei saa eemaldada."
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
 #: xbmc/events/AddonManagementEvent.cpp
 msgctxt "#24139"
 msgid "View Add-on"
-msgstr ""
+msgstr "Kuva lisamoodul"
 
 #. Label for the action provided by media library events to jump to a specific
 #. path/file
 #: xbmc/events/MediaLibraryEvent.cpp
 msgctxt "#24140"
 msgid "View"
-msgstr "Vaata"
+msgstr "Kuva"
 
 #. Used as an event log description for add-ons that have been disabled
 #: xbmc/addons/AddonManager.cpp
 msgctxt "#24141"
 msgid "Add-on disabled"
-msgstr "Lisamoodul ei ole lubatud"
+msgstr "Lisamoodul keelatud"
 
 #. The dependency on <addon id> version <addon version> could not be
 #. satisfied.
@@ -14581,25 +14576,25 @@ msgctxt "#24143"
 msgid ""
 "Installing the Add-on from zip file located at {0:s} failed due to an "
 "invalid structure."
-msgstr ""
+msgstr "Lisamooduli paigaldamine zip-failist asukohas {0:s} ebaõnnestus vale struktuuri tõttu."
 
 #. Used as an event log description for add-ons that have been uninstalled
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24144"
 msgid "Add-on uninstalled"
-msgstr ""
+msgstr "Lisamoodul eemaldatud"
 
 #. Used as an event log title for the video library scanner
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#24145"
 msgid "Video library scanner"
-msgstr ""
+msgstr "Videoteegi skänner"
 
 #. Used as an event log title for the music library scanner
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#24146"
 msgid "Music library scanner"
-msgstr ""
+msgstr "Muusikateegi skänner"
 
 #. Used as an event log description for files that failed to be processed by
 #. the library scanner
@@ -14611,32 +14606,38 @@ msgstr ""
 
 msgctxt "#24148"
 msgid "Incompatible add-ons"
-msgstr ""
+msgstr "Sobimatud lisamoodulid"
 
 msgctxt "#24149"
 msgid ""
 "The following add-ons are incompatible with this version of Kodi and have "
 "been automatically disabled: {0:s}."
-msgstr ""
+msgstr "Järgmised lisamoodulid ei ühildu selle Kodi versiooniga ja on automaatselt keelatud: {0:s}."
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24150"
 msgid "Database migration in progress - please wait"
-msgstr ""
+msgstr "Andmebaasi migreerimine - palun oota"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
-msgstr ""
+msgstr "Lisamooduli migreerimine - palun oota"
+
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr "Lisamoodul ei ühildu selle Kodi versiooniga."
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24991"
 msgid "Could not connect to repository."
-msgstr ""
+msgstr "Repositooriumiga ühendamine ebaõnnestus."
 
 #: xbmc/addons/CGUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14674,13 +14675,13 @@ msgstr ""
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24998"
 msgid "My add-ons"
-msgstr ""
+msgstr "Minu lisad"
 
 #. Used in add-on browser
 #: addons/skin.estuary/xml/AddonBrowser.xml
 msgctxt "#24999"
 msgid "Hide incompatible"
-msgstr ""
+msgstr "Peida mitteühilduvad"
 
 #. Used in add-on browser
 msgctxt "#25000"
@@ -14702,57 +14703,57 @@ msgstr "Vali kõikidest nimetustest..."
 #: xbmc/filesystem/BlurayDirectory.cpp system/settings/settings.xml
 msgctxt "#25003"
 msgid "Show Blu-ray menu"
-msgstr ""
+msgstr "Kuva Blu-ray menüü"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25004"
 msgid "Play main title: {0:d}"
-msgstr ""
+msgstr "Esita põhinimetus: {0:d}"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25005"
 msgid "Title: {0:d}"
-msgstr ""
+msgstr "Pealkiri: {0:d}"
 
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#25006"
 msgid "Select playback item"
-msgstr "Vali esitatav nimetus"
+msgstr "Vali esitatav kirje"
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 msgctxt "#25007"
 msgid "Chapters: {0:d} - duration: {1:s}"
-msgstr ""
+msgstr "Peatükke: {0:d} - kestvus: {1:s}"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25008"
 msgid "Playback of Blu-ray failed"
-msgstr ""
+msgstr "Blu-ray esitus ebaõnnestus"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25009"
 msgid "The menu of this Blu-ray is not supported"
-msgstr ""
+msgstr "Blu-ray menüüd ei toetata"
 
 #: xbmc/video/dialogs/GUIDialogVideoBookmarks.cpp
 msgctxt "#25010"
 msgid "Chapter {0:d}"
-msgstr ""
+msgstr "Peatükk {0:d}"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25011"
 msgid "Commercial"
-msgstr ""
+msgstr "Reklaam"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25012"
 msgid "Auto-skip off"
-msgstr ""
+msgstr "Autom. vahele jätmine väljas"
 
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#25013"
 msgid "Auto-skip on"
-msgstr ""
+msgstr "Autom. vahele jätmine sees"
 
 #: unused
 msgctxt "#29801"
@@ -14763,11 +14764,19 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr ""
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
+msgid "BD-J menu error"
+msgstr "BD-J menüü viga"
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
 msgstr ""
 
 #. Header string on RDS Radiotext+ Info dialog
@@ -14779,7 +14788,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29901"
 msgid "Band"
-msgstr ""
+msgstr "Bänd"
 
 #. Style of the current playing radio
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -14792,7 +14801,7 @@ msgstr "Stiil"
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
-msgstr ""
+msgstr "Helilooja"
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -14805,7 +14814,7 @@ msgstr "Artist"
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29905"
 msgid "Conductor"
-msgstr ""
+msgstr "Dirigent"
 
 #. Moderator currently on radio (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -14823,7 +14832,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29908"
 msgid "Program"
-msgstr ""
+msgstr "Programm"
 
 #. Studio name (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -14842,25 +14851,25 @@ msgstr "Telefon"
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29911"
 msgid "EMail"
-msgstr ""
+msgstr "Epost"
 
 #. SMS message number (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29912"
 msgid "SMS"
-msgstr ""
+msgstr "SMS"
 
 #. Hotline phone (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29913"
 msgid "Hotline"
-msgstr ""
+msgstr "Infotelefon"
 
 #. Website address (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29914"
 msgid "Website"
-msgstr ""
+msgstr "Veebileht"
 
 #. General information news, in list selector (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -14872,31 +14881,31 @@ msgstr "Info"
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29916"
 msgid "News"
-msgstr ""
+msgstr "Uudised"
 
 #. Local news, in list selector (if present)
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29917"
 msgid "News local"
-msgstr ""
+msgstr "Kohalikud uudised"
 
 #. Sport news, in list selector (if present)
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29918"
 msgid "Sport"
-msgstr ""
+msgstr "Sport"
 
 #. Lottery information, in list selector (if present)
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29919"
 msgid "Lottery"
-msgstr ""
+msgstr "Loto"
 
 #. Stock information, in list selector (if present)
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29920"
 msgid "Stock"
-msgstr ""
+msgstr "Aktsiad"
 
 #. Other informations, in list selector (if present)
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
@@ -14908,31 +14917,31 @@ msgstr "Muu"
 #: xbmc/pvr/dialogs/GUIDialogPVRRadioRDSInfo.cpp
 msgctxt "#29922"
 msgid "Horoscope"
-msgstr ""
+msgstr "Horoskoop"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29926"
 msgid "Adult hits"
-msgstr ""
+msgstr "Täiskasvanute lemmikud"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29927"
 msgid "Spanish talk"
-msgstr ""
+msgstr "Hispaaniakeelne jutt"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29928"
 msgid "Spanish music"
-msgstr ""
+msgstr "Hispaania muusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29929"
 msgid "Hip hop"
-msgstr ""
+msgstr "Hip-hop"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14944,7 +14953,7 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29931"
 msgid "Radio message"
-msgstr ""
+msgstr "Raadiosõnum"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14968,19 +14977,19 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29935"
 msgid "Public"
-msgstr ""
+msgstr "Avalik"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29936"
 msgid "Soft music"
-msgstr ""
+msgstr "Kerge muusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29937"
 msgid "Adult hits"
-msgstr ""
+msgstr "Täiskasvanute lemmikud"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -14992,25 +15001,25 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29939"
 msgid "Talk"
-msgstr ""
+msgstr "Vestlus"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29940"
 msgid "No programme type"
-msgstr ""
+msgstr "Programmitüüp puudub"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29941"
 msgid "News"
-msgstr ""
+msgstr "Uudised"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29942"
 msgid "Current affairs"
-msgstr ""
+msgstr "Päevakaja"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15022,13 +15031,13 @@ msgstr "Informatsioon"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29944"
 msgid "Sport"
-msgstr ""
+msgstr "Sport"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29945"
 msgid "Education"
-msgstr ""
+msgstr "Haridus"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15040,55 +15049,55 @@ msgstr "Draama"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29947"
 msgid "Culture"
-msgstr ""
+msgstr "Kultuur"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29948"
 msgid "Science"
-msgstr ""
+msgstr "Teadus"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29949"
 msgid "Varied"
-msgstr ""
+msgstr "Vahelduv"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29950"
 msgid "Pop music"
-msgstr ""
+msgstr "Popmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29951"
 msgid "Rock music"
-msgstr ""
+msgstr "Rokkmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29952"
 msgid "Easy listening music"
-msgstr ""
+msgstr "Lihtne kuulata"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29953"
 msgid "Light classical"
-msgstr ""
+msgstr "Kerge klassika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29954"
 msgid "Serious classical"
-msgstr ""
+msgstr "Sügav klassika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29955"
 msgid "Other music"
-msgstr ""
+msgstr "Muu muusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15100,19 +15109,19 @@ msgstr "Ilm"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29957"
 msgid "Finance"
-msgstr ""
+msgstr "Rahandus"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29958"
 msgid "Children's Programmes"
-msgstr ""
+msgstr "Lasteprogramm"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29959"
 msgid "Social Affairs"
-msgstr ""
+msgstr "Kõmuuudised"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15130,31 +15139,31 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29962"
 msgid "Travel"
-msgstr ""
+msgstr "Reisimine"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29963"
 msgid "Leisure"
-msgstr ""
+msgstr "Vaba aeg"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29964"
 msgid "Jazz Music"
-msgstr ""
+msgstr "Džässmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29965"
 msgid "Country Music"
-msgstr ""
+msgstr "Kantrimuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29966"
 msgid "National Music"
-msgstr ""
+msgstr "Rahvusmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15166,7 +15175,7 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29968"
 msgid "Folk Music"
-msgstr ""
+msgstr "Folkmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
@@ -15178,43 +15187,43 @@ msgstr "Dokumentaal"
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29970"
 msgid "Alarm Test"
-msgstr ""
+msgstr "Äratuse proov"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29971"
 msgid "Alarm"
-msgstr ""
+msgstr "Äratus"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29977"
 msgid "Classic rock music"
-msgstr ""
+msgstr "Klassikaline rokkmuusika"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29978"
 msgid "Classical"
-msgstr ""
+msgstr "Klassikaline"
 
 #. Program style name
 #: xbmc/cores/VideoPlayer/VideoPlayerRadioRDS.cpp
 msgctxt "#29979"
 msgid "Nostalgia"
-msgstr ""
+msgstr "Nostalgia"
 
 #. Settings boolean value to enable/disable RDS
 #: system/settings/settings.xml
 msgctxt "#29980"
 msgid "Enable RDS for radio channels"
-msgstr ""
+msgstr "Luba raadiojaamadele RDS"
 
 #. Help text for RDS enable/disable
 #: system/settings/settings.xml
 msgctxt "#29981"
 msgid "RDS data can be used if present"
-msgstr ""
+msgstr "Kui on saadaval, siis saab kasutada RDS andmeid"
 
 #. Boolean value to enable traffic advisory from RDS
 #: system/settings/settings.xml
@@ -15244,49 +15253,49 @@ msgstr ""
 #: system/library/music/musicroles/Remixers.xml
 msgctxt "#29987"
 msgid "Remixers"
-msgstr ""
+msgstr "Remiksijad"
 
 #. Node title for music artist role, plural of #38037
 #: system/library/music/musicroles/Arrangers.xml
 msgctxt "#29988"
 msgid "Arrangers"
-msgstr ""
+msgstr "Arranžeerijad"
 
 #. Node title for music artist role, plural of #29903
 #: system/library/music/musicroles/Composers.xml
 msgctxt "#29989"
 msgid "Composers"
-msgstr ""
+msgstr "Heliloojad"
 
 #. Node title for music artist role, plural of #29905
 #: system/library/music/musicroles/Conductors.xml
 msgctxt "#29990"
 msgid "Conductors"
-msgstr ""
+msgstr "Dirigendid"
 
 #. Node title for music artist role, plural of #38040
 #: system/library/music/musicroles/DJ.xml
 msgctxt "#29991"
 msgid "DJ Mixers"
-msgstr ""
+msgstr "DJ-d"
 
 #. Node title for music artist role, plural of #38035
 #: system/library/music/musicroles/Lyricists.xml
 msgctxt "#29992"
 msgid "Lyricists"
-msgstr ""
+msgstr "Laulusõnade autorid"
 
 #. Node title for music artist role, plural of #38034
 #: system/library/music/musicroles/Orchestras.xml
 msgctxt "#29993"
 msgid "Orchestras"
-msgstr ""
+msgstr "Orkestrid"
 
 #. Title for music artist roles node
 #: system/library/music/musicroles/index.xml
 msgctxt "#29994"
 msgid "Roles"
-msgstr ""
+msgstr "Rollid"
 
 #: unknown
 msgctxt "#33001"
@@ -15331,7 +15340,7 @@ msgstr "Määra allalaadimiste kaust"
 
 msgctxt "#33011"
 msgid "Search duration"
-msgstr "Otsingu kestvus"
+msgstr "Otsingu kestus"
 
 msgctxt "#33012"
 msgid "Short"
@@ -15347,7 +15356,7 @@ msgstr "Kasuta DVD-mängijat tavalise mängija asemel"
 
 msgctxt "#33015"
 msgid "Ask for download before playing video"
-msgstr "Küsi allalaadimise kinnitust enne video mängimist"
+msgstr "Küsi allalaadimise kinnitust enne video esitamist"
 
 msgctxt "#33016"
 msgid "Clips"
@@ -15355,7 +15364,7 @@ msgstr "Klipid"
 
 msgctxt "#33017"
 msgid "Restart plug-in to enable"
-msgstr "Võimaldamiseks taaskäivita lisamoodul"
+msgstr "Lubamiseks taaskäivita lisamoodul"
 
 msgctxt "#33018"
 msgid "Tonight"
@@ -15363,7 +15372,7 @@ msgstr "Täna õhtul"
 
 msgctxt "#33019"
 msgid "Tomorrow night"
-msgstr ""
+msgstr "Homme öösel"
 
 msgctxt "#33020"
 msgid "Condition"
@@ -15383,7 +15392,7 @@ msgstr "Niiskus"
 
 msgctxt "#33024"
 msgid "Feels"
-msgstr "Tundub kui"
+msgstr "Tajutav"
 
 msgctxt "#33025"
 msgid "Observed"
@@ -15419,11 +15428,11 @@ msgstr "Tõlgi tekst"
 
 msgctxt "#33033"
 msgid "Map list {0:s} category"
-msgstr ""
+msgstr "Vastenda nimekirja {0:s} kategooria"
 
 msgctxt "#33034"
 msgid "36-hour"
-msgstr ""
+msgstr "36 tundi"
 
 #: addons/skin.estuary/xml/MyWeather.xml
 msgctxt "#33035"
@@ -15447,7 +15456,7 @@ msgstr ""
 #: dialogs/GUIDialogMediaSource.cpp
 msgctxt "#33040"
 msgid "{0:s} devices"
-msgstr ""
+msgstr "{0:s} seadet"
 
 #: Unknown
 msgctxt "#33049"
@@ -15461,7 +15470,7 @@ msgstr "Teated"
 #: Unknown
 msgctxt "#33051"
 msgid "Choose your"
-msgstr ""
+msgstr "Vali"
 
 #: Unknown
 msgctxt "#33052"
@@ -15522,7 +15531,7 @@ msgstr "Esita"
 #: addons/skin.estuary/xml/Includes.xml
 msgctxt "#33063"
 msgid "Options"
-msgstr "Seaded"
+msgstr "Suvandid"
 
 #: Unknown
 msgctxt "#33065"
@@ -15562,12 +15571,12 @@ msgstr "Kohandatud taustad"
 #: Unknown
 msgctxt "#33072"
 msgid "View readme"
-msgstr ""
+msgstr "Kuva loemind fail"
 
 #: Unknown
 msgctxt "#33073"
 msgid "View changelog"
-msgstr ""
+msgstr "Kuva muudatused"
 
 #: Unknown
 msgctxt "#33077"
@@ -15617,7 +15626,7 @@ msgstr "Veebiserver"
 #: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33102"
 msgid "Event server"
-msgstr ""
+msgstr "Sündmuste server"
 
 #: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33103"
@@ -15627,7 +15636,7 @@ msgstr "Kaugsuhtluse server"
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
-msgstr ""
+msgstr "Tuvastati uus ühendus"
 
 #: system/settings/settings.xml
 msgctxt "#34000"
@@ -15657,17 +15666,17 @@ msgstr "VAAPI"
 #: system/settings/settings.xml
 msgctxt "#34005"
 msgid "FLAC"
-msgstr ""
+msgstr "FLAC"
 
 #: system/settings/settings.xml
 msgctxt "#34006"
 msgid "MPEG-4 audio (FFmpeg M4A AAC)"
-msgstr ""
+msgstr "MPEG-4 audio (FFmpeg M4A AAC)"
 
 #: system/settings/settings.xml
 msgctxt "#34007"
 msgid "Windows media audio 2 (FFmpeg wmav2)"
-msgstr ""
+msgstr "Windows media audio 2 (FFmpeg wmav2)"
 
 #: system/settings/settings.xml
 msgctxt "#34100"
@@ -15751,7 +15760,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#34112"
 msgid "Send low volume noise"
-msgstr ""
+msgstr "Saada madala helitaseme müra"
 
 #. Description of setting with label #34112 "Send low volume noise"
 #: system/settings/settings.xml
@@ -15817,12 +15826,12 @@ msgstr "192.0"
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
-msgstr "Ei leia järgmist nimetust mida esitada"
+msgstr "Ei leia järgmist kirjet mida esitada"
 
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
-msgstr "Ei leia eelmist nimetust mida esitada"
+msgstr "Ei leia eelmist kirjet mida esitada"
 
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
@@ -15834,12 +15843,12 @@ msgctxt "#34301"
 msgid ""
 "Is Apple's Bonjour service installed? Check the log for more information "
 "about this message."
-msgstr ""
+msgstr "Kas Apple'i Bonjour teenus on paigaldatud? Rohkem infot selle sõnumi kohta saab logifailist."
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34302"
 msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
-msgstr ""
+msgstr "AirPlay käivitamine nurjus, sest Zeroconf on keelatud."
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#34303"
@@ -15850,7 +15859,7 @@ msgstr ""
 #: xbmc/cores/VideoRenderers/LinuxRendererGL.cpp
 msgctxt "#34400"
 msgid "Video rendering"
-msgstr ""
+msgstr "Video renderdamine"
 
 #: xbmc/cores/VideoRenderers/LinuxRendererGL.cpp
 msgctxt "#34401"
@@ -15867,22 +15876,22 @@ msgstr ""
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34403"
 msgid "Check your audio settings"
-msgstr ""
+msgstr "Kontrolli heliseadeid"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34404"
 msgid "Use gestures for navigation:"
-msgstr "Kasuta navigeerimiseks žeste"
+msgstr "Kasuta navigeerimiseks žeste:"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34405"
 msgid "One finger swipe left,right,up,down for cursors"
-msgstr ""
+msgstr "Kursori saamiseks ühe näpuga lohistamine vasakule,paremale,üles,alla"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34406"
 msgid "Two finger swipe left for backspace"
-msgstr ""
+msgstr "Tagasilükke klahvi saamiseks kahe näpuga lohista vasakule"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34407"
@@ -15943,13 +15952,13 @@ msgstr "Klahvitabel lubatud"
 #: system/peripherals.xml
 msgctxt "#35009"
 msgid "Don't use the custom keymap for this device"
-msgstr ""
+msgstr "Ära kasuta selle seadme jaoks kohandatud klahvitabelit"
 
 #. Name of add-ons extending the kodi.peripheral extension point
 #: xbmc/addons/Addon.cpp
 msgctxt "#35010"
 msgid "Peripheral libraries"
-msgstr ""
+msgstr "Välisseadmete teegid"
 
 #. Title of dialog to ask users if they would like to configure a new
 #. controller
@@ -15981,7 +15990,7 @@ msgstr ""
 #: xbmc/input/joysticks/JoystickTranslator.cpp
 msgctxt "#35015"
 msgid "Button {0:d}"
-msgstr ""
+msgstr "Nupp {0:d}"
 
 #. Name of a controller axis, e.g. Axis 2. {0:d} - axis index
 #: xbmc/input/joysticks/JoystickTranslator.cpp
@@ -16011,7 +16020,7 @@ msgstr ""
 #: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
 msgctxt "#35019"
 msgid "Ignore input"
-msgstr ""
+msgstr "Eira sisendit"
 
 #. Help text of the dialog to detect analog buttons on controllers. {0:s} -
 #. list of detected axes
@@ -16020,11 +16029,23 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr ""
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Draiveri seaded"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr ""
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
 msgid "Game add-ons"
-msgstr ""
+msgstr "Mängude lisamoodulid"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
@@ -16076,7 +16097,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35059"
 msgid "Buttons"
-msgstr ""
+msgstr "Nupud"
 
 #. Heading for prompt to reset a controller profile for all devices
 #: xbmc/games/controllers/windows/GUIControllerList.cpp
@@ -16164,66 +16185,66 @@ msgstr ""
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
 msgctxt "#35090"
 msgid "Press {0:s}"
-msgstr ""
+msgstr "Vajuta {0:s}"
 
 #. Button prompt with timeout. {0:s} - button name, {1:d} - seconds left in
 #. prompt
 #: xbmc/games/controllers/guicontrols/GUIScalarFeatureButton.cpp
 msgctxt "#35091"
 msgid "Press {0:s} ({1:d})"
-msgstr ""
+msgstr "Vajuta {0:s} ({1:d})"
 
 #. Analog stick up prompt without timeout. {0:s} - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35092"
 msgid "Move {0:s} up"
-msgstr ""
+msgstr "Liiguta {0:s} üles"
 
 #. Analog stick up prompt with timeout. {0:s} - analog stick name, {1:d} -
 #. seconds left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35093"
 msgid "Move {0:s} up ({1:d})"
-msgstr ""
+msgstr "Liiguta {0:s} üles ({1:d})"
 
 #. Analog stick down prompt without timeout. {0:s} - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35094"
 msgid "Move {0:s} down"
-msgstr ""
+msgstr "Liiguta {0:s} alla"
 
 #. Analog stick down prompt with timeout. {0:s} - analog stick name, {1:d} -
 #. seconds left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35095"
 msgid "Move {0:s} down ({1:d})"
-msgstr ""
+msgstr "Liiguta {0:s} alla ({1:d})"
 
 #. Analog stick right prompt without timeout. {0:s} - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35096"
 msgid "Move {0:s} right"
-msgstr ""
+msgstr "Liiguta {0:s} paremale"
 
 #. Analog stick right prompt with timeout. {0:s} - analog stick name, {1:d} -
 #. seconds left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35097"
 msgid "Move {0:s} right ({1:d})"
-msgstr ""
+msgstr "Liiguta {0:s} paremale ({1:d})"
 
 #. Analog stick left prompt without timeout. {0:s} - analog stick name
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35098"
 msgid "Move {0:s} left"
-msgstr ""
+msgstr "Liiguta {0:s} vasakule"
 
 #. Analog stick left prompt with timeout. {0:s} - analog stick name, {1:d} -
 #. seconds left in prompt
 #: xbmc/games/controllers/guicontrols/GUIAnalogStickButton.cpp
 msgctxt "#35099"
 msgid "Move {0:s} left ({1:d})"
-msgstr ""
+msgstr "Liiguta {0:s} vasakule ({1:d})"
 
 #: system/settings/settings.xml
 msgctxt "#35100"
@@ -16238,31 +16259,31 @@ msgstr "Keela juhtkang selle seadme puhul"
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
 msgid "Buttons"
-msgstr ""
+msgstr "Nupud"
 
 #. Label for relative mounters like the mouse pointer. Used in the controller
 #. mapping dialog.
 msgctxt "#35104"
 msgid "Pointers"
-msgstr ""
+msgstr "Pointerid"
 
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
 msgid "Keyboard"
-msgstr ""
+msgstr "Klaviatuur"
 
 #. Name of group in "Games -> Keyboard" for configuring keyboard players
 #: system/settings/settings.xml
 msgctxt "#35151"
 msgid "Player configuration"
-msgstr ""
+msgstr "Mängija seadistamine"
 
 #. Name of setting for enabling the keyboard during gameplay
 #: system/settings/settings.xml
 msgctxt "#35152"
 msgid "Enable keyboard"
-msgstr ""
+msgstr "Luba klaviatuur"
 
 #. Description of setting with label #35152 "Enable keyboard"
 #: system/settings/settings.xml
@@ -16277,7 +16298,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#35154"
 msgid "Number of keyboard players"
-msgstr ""
+msgstr "Klaviatuuriga mängijate arv"
 
 #. Description of settings with label #35066
 #: system/settings/settings.xml
@@ -16291,61 +16312,61 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#35156"
 msgid "{0:d}"
-msgstr ""
+msgstr "{0:d}"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35157"
 msgid "Configure keyboard player 1"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 1"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35158"
 msgid "Configure keyboard player 2"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 2"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35159"
 msgid "Configure keyboard player 3"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 3"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35160"
 msgid "Configure keyboard player 4"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 4"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35161"
 msgid "Configure keyboard player 5"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 5"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35162"
 msgid "Configure keyboard player 6"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 6"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35163"
 msgid "Configure keyboard player 7"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 7"
 
 #. Name of setting to configure a keyboard player's controller configuration
 #: system/settings/settings.xml
 msgctxt "#35164"
 msgid "Configure keyboard player 8"
-msgstr ""
+msgstr "Seadista klaviatuuriga mängija 8"
 
 #. Name of the keyboard-emulated controller in the list of peripherals
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
 msgctxt "#35165"
 msgid "Keyboard player"
-msgstr ""
+msgstr "Klaviatuuriga mängija"
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -16406,14 +16427,14 @@ msgstr ""
 #: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
-msgstr ""
+msgstr "Mängu esitamine nurjus"
 
 #. Error dialog text when the game requires restricted files to play. {0:s} -
 #. emulator ID
 #: xbmc/games/addons/GameClient.cpp
 msgctxt "#35211"
 msgid "This game requires the following add-on: {0:s}"
-msgstr ""
+msgstr "Mäng vajab järgmiseid lisamooduleid: {0:s}"
 
 #. Error dialog text when launching a game and no emulators are compatible
 #: xbmc/games/GameUtils.cpp
@@ -16459,17 +16480,17 @@ msgstr ""
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
-msgstr ""
+msgstr "Lisa mäng..."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#35251"
 msgid "Add game source"
-msgstr ""
+msgstr "Lisa mängu allikas"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#35252"
 msgid "Edit game source"
-msgstr ""
+msgstr "Muuda mängu allikat"
 
 #: xbmc/games/windows/GUIWindowGames.cpp
 msgctxt "#35253"
@@ -16510,7 +16531,7 @@ msgstr ""
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#35508"
 msgid "Access denied."
-msgstr ""
+msgstr "Juurdepääs keelatud"
 
 #. connection state "connecting" (asynchronous addon start)
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -16521,7 +16542,7 @@ msgstr ""
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
 msgid "Pulse-Eight CEC adapter"
-msgstr ""
+msgstr "Pulse-Eight CEC adapter"
 
 msgctxt "#36001"
 msgid "Pulse-Eight Nyxboard"
@@ -16554,21 +16575,21 @@ msgstr ""
 #: system/peripherals.xml
 msgctxt "#36007"
 msgid "Devices to power on during startup"
-msgstr ""
+msgstr "Käivitamisel sisselülitatavad seadmed"
 
 #: system/peripherals.xml
 msgctxt "#36008"
 msgid "Devices to power off during shutdown"
-msgstr ""
+msgstr "Sulgumisel väljalülitatavad seadmed"
 
 #: system/peripherals.xml
 msgctxt "#36009"
 msgid "Put devices in standby mode when activating the screensaver"
-msgstr ""
+msgstr "Pane seadmed ooterežiimi ekraanisäästja käivitamisel"
 
 msgctxt "#36010"
 msgid "Wake devices when deactivating the screensaver"
-msgstr ""
+msgstr "Ärata seadmed ekraanisäästja sulgemisel"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36011"
@@ -16692,7 +16713,7 @@ msgstr "Alati"
 #: system/settings/settings.xml
 msgctxt "#36036"
 msgid "On start / stop"
-msgstr ""
+msgstr "Käivitamisel/peatamisel"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36037"
@@ -16714,23 +16735,23 @@ msgctxt "#36040"
 msgid ""
 "Detected version of libCEC interface ({0:x}) is lower than the supported "
 "version {1:x}."
-msgstr ""
+msgstr "Tuvastatud libCEC-i ({0:x}) liidese versioon on madalam toetatud {1:x} versioonist."
 
 #: xbmc/video/dialogs/guidialogvideoinfo.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#36041"
 msgid "* Item folder"
-msgstr "* Nimetuse kataloog"
+msgstr "* Kirje kataloog"
 
 #: system/settings/settings.xml
 msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
-msgstr ""
+msgstr "Kasuta piiratud värvi vahemikku (16-235)"
 
 #: system/settings/settings.xml
 msgctxt "#36043"
 msgid "Number of buffers used by graphics driver"
-msgstr ""
+msgstr "Graafika draiveri kasutatud puhvrite arv"
 
 #. Name of an action to perform on a specific event, like changing the CEC
 #. source away from Kodi
@@ -16738,14 +16759,14 @@ msgstr ""
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#36044"
 msgid "Stop Playback"
-msgstr ""
+msgstr "Peata taasesitus"
 
 #. Name of an action to perform on a specific event, like changing the CEC
 #. source away from Kodi
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36045"
 msgid "Pause Playback"
-msgstr ""
+msgstr "Pane pausile"
 
 #: system/peripherals.xml
 msgctxt "#36046"
@@ -16766,13 +16787,13 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36101"
 msgid "Change the look and feel of the user interface."
-msgstr ""
+msgstr "Muuda kasutajaliidese välimust ja tunnetust."
 
 #. Description of settings category "Appearance -> Skin" with label #166
 #: system/settings/settings.xml
 msgctxt "#36102"
 msgid "This category contains all skin related settings."
-msgstr ""
+msgstr "Kategooria sisaldab kõiki rüüga seotud seadeid."
 
 #. Description of setting with label #166 "Skin"
 #: system/settings/settings.xml
@@ -16780,7 +16801,7 @@ msgctxt "#36103"
 msgid ""
 "Select the skin for the user interface. This will define the look and feel "
 "of the application."
-msgstr ""
+msgstr "Vali kasutajaliidesele rüü. See määrab rakenduse välimuse ja tunnetuse."
 
 #. Description of setting with label #21417 "Settings"
 #: system/settings/settings.xml
@@ -16808,31 +16829,31 @@ msgctxt "#36107"
 msgid ""
 "Choose the fonts displayed in the user interface. The font sets are "
 "configured by your skin."
-msgstr ""
+msgstr "Vali kasutajaliideses kuvatavad fondid. Fondikomplekti seadistab rüü."
 
 #. Description of setting with label #20109 "Zoom"
 #: system/settings/settings.xml
 msgctxt "#36108"
 msgid "Resize the view of the user interface."
-msgstr ""
+msgstr "Muuda kasutajaliidese kuva suurust."
 
 #. Description of setting with label #512 "Startup window"
 #: system/settings/settings.xml
 msgctxt "#36109"
 msgid "Select the media window to display on startup."
-msgstr ""
+msgstr "Vali käivitamisel kuvatav meediaaken."
 
 #. Description of setting with label #15108 "GUI sounds"
 #: system/settings/settings.xml
 msgctxt "#36110"
 msgid "Select or disable the sounds used in the user interface."
-msgstr ""
+msgstr "Vali või keela kasutajaliideses kasutatavad helid."
 
 #. Description of setting with label #13305 "Show RSS news feed"
 #: system/settings/settings.xml
 msgctxt "#36111"
 msgid "Turn this off to remove the scrolling RSS news ticker."
-msgstr "Lülita see välja RSS uudisvoo eemaldamiseks."
+msgstr "Lülita liikuv RSS uudisvoog välja."
 
 #. Description of setting with label #21450 "Edit"
 #: system/settings/settings.xml
@@ -16844,7 +16865,7 @@ msgstr "Redigeeri RSS vooge."
 #: system/settings/settings.xml
 msgctxt "#36113"
 msgid "This category contains all locale / regional settings."
-msgstr ""
+msgstr "Kategooria sisaldab kõiki kohalikke / regionaalseid seadeid."
 
 #. Description of setting with label #248 "Language"
 #: system/settings/settings.xml
@@ -16858,7 +16879,7 @@ msgctxt "#36115"
 msgid ""
 "Select the formats for temperature, time and date. The available options "
 "depend on the selected language."
-msgstr "Vali temperatuuri, aja ja kuupäeva formaadid. Võimalikud valikud sõltuvad valitud keelest."
+msgstr "Vali temperatuuri, kellaaja ja kuupäeva formaadid. Võimalikud valikud sõltuvad valitud keelest."
 
 #. Description of setting with label #14091 "Character set"
 #: system/settings/settings.xml
@@ -16873,13 +16894,13 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36117"
 msgid "Select country location."
-msgstr "Vali oma asukohariik."
+msgstr "Vali asukohariik."
 
 #. Description of setting with label #14080 "Timezone"
 #: system/settings/settings.xml
 msgctxt "#36118"
 msgid "Select your current timezone."
-msgstr "Vali oma praegune ajatsoon."
+msgstr "Vali ajatsoon."
 
 #. Description of setting with label #285 "Preferred audio language"
 #: system/settings/settings.xml
@@ -17076,7 +17097,7 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
 msgstr ""
 
@@ -17189,13 +17210,6 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
-msgstr ""
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
 msgstr ""
 
 #. Description of setting with label #13432 "Allow hardware acceleration

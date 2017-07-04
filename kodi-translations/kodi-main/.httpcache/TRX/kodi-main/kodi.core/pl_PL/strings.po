@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-06-20 20:05+0000\n"
+"PO-Revision-Date: 2017-07-03 22:05+0000\n"
 "Last-Translator: Marcin Wójcik\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -492,8 +492,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "pozycje"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -772,7 +772,7 @@ msgstr "Utwory"
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#183"
 msgid "Review"
-msgstr "Przejrzyj"
+msgstr "Recenzja"
 
 msgctxt "#184"
 msgid "Refresh"
@@ -6336,11 +6336,6 @@ msgstr "Zezwalaj na sprzętową akcelerację - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Zezwalaj na sprzętową akcelerację - VTBDecoder"
-
-#: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Zezwalaj na sprzętową akcelerację - OpenMax"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -14634,6 +14629,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Migracja dodatków w toku - proszę czekać"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr "Ten dodatek jest niekompatybilny z aktualną wersją Kodi."
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14766,12 +14767,20 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Korzystasz z przekazywania dźwięku do urządzenia odbiorczego"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
-msgstr "Niekompatybilna wersji API dla typu '%s'. Kodi: '%s', dodatek: '%s'."
+msgid "BD-J menu error"
+msgstr "Błąd menu BD-J"
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
+msgstr "Wystąpił błąd podczas wczytywania Javy, więc menu BD-J nie będzie działać poprawnie. Menu typu BD-J wymaga zainstalowanego i działającego na systemie środowiska wykonawczego Java."
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16023,6 +16032,18 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Naciśnij wszystkie analogowe przyciski w celu ich detekcji:[CR][CR]{0:s}"
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Ustawienia sterownika"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr "Umożliwia podgląd i konfigurację urządzeń peryferyjnych."
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
@@ -16876,7 +16897,7 @@ msgstr "Określa zestaw znaków używanych do wyświetlania tekstu w interfejsie
 #: system/settings/settings.xml
 msgctxt "#36117"
 msgid "Select country location."
-msgstr "Określa aktualną lokalizację - strefę czasową."
+msgstr "Określa lokalizację geograficzną."
 
 #. Description of setting with label #14080 "Timezone"
 #: system/settings/settings.xml
@@ -17079,9 +17100,9 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Zaznacz tę opcję, aby grupować filmy w serie traktowane jako jedna pozycja w bibliotece, która po otworzeniu wyświetla poszczególne filmy należące do serii. Odznacz tę opcję, aby filmy były wyświetlane niezależnie nawet wtedy, gdy należą do tej samej serii."
+msgstr "Jeśli aktywne, filmy należące do \"Serii filmowej\" będą połączone w jedną pozycję serii w bibliotece filmów i ta pozycja może zostać otworzona, aby wyświetlić pojedyncze filmy. Jeśli nieaktywne, każdy film będzie traktowany jako oddzielna pozycja nawet, jeśli należy do serii."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17193,13 +17214,6 @@ msgstr "Umożliwia dekodowanie plików wideo przy pomocy CrystalHD."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Umożliwia sprzętowe dekodowanie plików wideo przy pomocy VTB."
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Umożliwia sprzętowe dekodowanie plików wideo przy pomocy OpenMax."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"

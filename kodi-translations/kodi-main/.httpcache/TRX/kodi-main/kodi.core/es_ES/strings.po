@@ -32,8 +32,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-12 01:52+0000\n"
-"Last-Translator: Jesús Cea <jcea@jcea.es>\n"
+"PO-Revision-Date: 2017-06-22 15:38+0000\n"
+"Last-Translator: alfonskunk <alfonskunk@gmail.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -513,8 +513,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Objetos"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -6359,11 +6359,6 @@ msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Permitir aceleración de hardware - VTBDecoder"
 
 #: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Permitir aceleración de hardware - OpenMax"
-
-#: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel shaders"
@@ -10246,7 +10241,7 @@ msgstr "Específico del cliente"
 #: system/settings/settings.xml
 msgctxt "#19280"
 msgid "Client specific settings"
-msgstr "Opciones del cliente"
+msgstr "Opciones específicas del cliente"
 
 #. pvr settings 'confirm channel switch' setting label.
 #: system/settings/settings.xml
@@ -11507,7 +11502,7 @@ msgstr "Bloquear salvapantallas"
 #: xbmc/media/MediaTypes.cpp
 msgctxt "#20141"
 msgid "Set"
-msgstr "Configurar"
+msgstr "Saga"
 
 msgctxt "#20142"
 msgid "Username"
@@ -14655,6 +14650,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Migración de add-ons en marcha - por favor espera"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr "Este add-on no es compatible con esta versión de Kodi."
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14787,12 +14788,20 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Passthrough de audio en uso"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
-msgstr "Versión de API incompatible para '%s'. Kodi '%s', add-on: '%s'."
+msgid "BD-J menu error"
+msgstr "Error en menú BD-J"
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
+msgstr "Ha ocurrido un error cargando Java, así que los menúes BD-J no funcionarán. Los menúes BD-J requieren el Entorno de Ejecución de Java (JRE). Asegúrese de que está instalado y funcionando en su sistema."
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16044,6 +16053,18 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Pulse todos los botones analógicos ahora para detectarlos:[CR][CR]{0:s}"
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Ajustes de controlador"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr "Ver y configurar add-ons periféricos."
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
@@ -17100,9 +17121,9 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Cuando se activa, las películas que pertenecen a Sagas se agrupan bajo una única entrada en la colección de películas y esta entrada se puede abrir para mostrar las películas de forma individual. Cuando se desactiva, cada película tiene su propia entrada, incluso si pertenece a una saga."
+msgstr "Cuando se activa, las películas que pertenecen a \"Sagas\" se agrupan bajo una única entrada en la colección de películas. Esta entrada se puede abrir para mostrar las películas de forma individual. Cuando se desactiva, cada película tiene su propia entrada, incluso si pertenece a una saga."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17214,13 +17235,6 @@ msgstr "Activa CrystalHD para la decodificación de archivos de vídeo."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Activa VTB para la decodificación por hardware de archivos de vídeo."
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Activa OpenMax para la decodificación por hardware de archivos de vídeo."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
@@ -17391,13 +17405,13 @@ msgstr "Esta categoría contiene los ajustes sobre la gestión de subtitulos."
 msgctxt "#36185"
 msgid ""
 "Set the font type to be used for text based (usually downloaded) subtitles."
-msgstr "Qué tipo de letra se utilizará para los subtítulos en texto (como los descargados)."
+msgstr "Establece el tipo de letra que se utilizará para los subtítulos en texto (como los descargados)."
 
 #. Description of setting with label #289 "Size"
 #: system/settings/settings.xml
 msgctxt "#36186"
 msgid "Set the font size to be used for subtitles."
-msgstr "Establecer el tamaño del tipo de letra usada para los subtítulos."
+msgstr "Establece el tamaño del tipo de letra usada para los subtítulos."
 
 #. Description of setting with label #736 "Style"
 #: system/settings/settings.xml
@@ -18550,7 +18564,7 @@ msgctxt "#36367"
 msgid ""
 "Select the maximum number of audio channels / speakers available for decoded"
 " audio. If optical / coax digital outputs are used, this must be set to 2.0"
-msgstr "Seleccione el número máximo de canales de audio / altavoces disponibles para la decodificación de audio. Si se usan salidas digitales ópticas o coaxiales se debe poner a 2.0"
+msgstr "Selecciona el número máximo de canales de audio / altavoces disponibles para la descodificación de audio. Si se usan salidas digitales ópticas / coaxiales se debe poner a 2.0"
 
 #. Description of setting with label #348 "Enable passthrough"
 #: system/settings/settings.xml
@@ -19814,7 +19828,7 @@ msgstr "videoclips"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36910"
 msgid "set"
-msgstr "configurar"
+msgstr "saga"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36911"

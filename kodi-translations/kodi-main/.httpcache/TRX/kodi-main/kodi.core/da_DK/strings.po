@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-25 18:15+0000\n"
+"PO-Revision-Date: 2017-06-22 20:49+0000\n"
 "Last-Translator: Christian <christian_gade@hotmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -498,8 +498,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Elementer"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -6342,11 +6342,6 @@ msgstr "Tillad hardwareacceleration - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Tillad hardwareacceleration - VTBDecoder"
-
-#: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Tillad hardwareacceleration - OpenMax"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -14640,6 +14635,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Migration af add-ons i gang - vent venligst"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr ""
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14772,11 +14773,19 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Lydgennemgang \"passthrough\" i brug"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
+msgid "BD-J menu error"
+msgstr ""
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
 msgstr ""
 
 #. Header string on RDS Radiotext+ Info dialog
@@ -16029,6 +16038,18 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr ""
 
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr "Indstillinger for driver"
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
+msgstr "Se og konfigurér perifere add-ons."
+
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
 msgctxt "#35049"
@@ -16404,7 +16425,7 @@ msgstr "Emulatorer"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35208"
 msgid "Standalone games"
-msgstr ""
+msgstr "Selvstændige spil"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#35209"
@@ -17085,9 +17106,9 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Ved aktivering vil film tilhørende et filmsæt blive grupperet til en post i filmbiblioteket. Denne post kan åbnes for at vise de individuelle film. Ved deaktivering vil hver film have sin egen post i filmbiblioteket, selvom filmen tilhører et filmsæt."
+msgstr ""
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17199,13 +17220,6 @@ msgstr "Aktiver CrystalHD dekodning af videofiler."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr ""
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Aktiver OpenMax hardware dekodning af videofiler."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
@@ -18738,7 +18752,7 @@ msgctxt "#36395"
 msgid ""
 "This category contains the settings for how the master lock function is "
 "handled."
-msgstr ""
+msgstr "Kategori indeholdende indstillinger for håndtering af funktionen hovedlås."
 
 #. Description of setting with label #20100 "Master lock code and settings"
 #: system/settings/settings.xml

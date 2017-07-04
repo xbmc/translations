@@ -3,6 +3,7 @@
 # Soul Mode Productions <soulmode32@gmail.com>, 2016
 # Ciprian Constantinescu <c.ciprian@gmail.com>, 2016-2017
 # Daniel <danny3@tutanota.com>, 2015-2016
+# Daniel <danny3@tutanota.com>, 2017
 # Horia Negura <fakemoth@gmail.com>, 2016-2017
 # sergiocos <sergiu.dumitru@gmail.com>, 2015
 # sergiocos <sergiu.dumitru@gmail.com>, 2015
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-24 12:49+0000\n"
-"Last-Translator: Ciprian Constantinescu <c.ciprian@gmail.com>\n"
+"PO-Revision-Date: 2017-06-27 09:38+0000\n"
+"Last-Translator: Daniel <danny3@tutanota.com>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/teamxbmc/kodi-main/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -493,8 +494,8 @@ msgctxt "#127"
 msgid "Objects"
 msgstr "Obiecte"
 
-#: xbmc/addons/guidialogaddonsettings.cpp system/settings/settings.xml
-#: addons/skin.estuary/xml/SkinSettings.xml
+#: xbmc/addons/addonsettings.cpp xbmc/addons/guidialogaddonsettings.cpp
+#: system/settings/settings.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/SettingsProfile.xml
 msgctxt "#128"
 msgid "General"
@@ -6339,11 +6340,6 @@ msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Permite accelerare dispozitiv fizic - VTBDecoder"
 
 #: system/settings/settings.xml
-msgctxt "#13430"
-msgid "Allow hardware acceleration - OpenMax"
-msgstr "Permite accelerare dispozitiv fizic - OpenMax"
-
-#: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
 msgctxt "#13431"
 msgid "Pixel shaders"
@@ -8473,17 +8469,17 @@ msgstr "Timp de așteptare repaus ecran"
 #: system/settings/settings.xml
 msgctxt "#17997"
 msgid "{0:d} MByte"
-msgstr ""
+msgstr "{0:d} MOctet"
 
 #: system/settings/settings.xml
 msgctxt "#17998"
 msgid "{0:d} hours"
-msgstr ""
+msgstr "{0:d} ore"
 
 #: system/settings/settings.xml
 msgctxt "#17999"
 msgid "{0:d} days"
-msgstr ""
+msgstr "{0:d} zile"
 
 #. Live TV channels 'play' context menu item label
 #: xbmc/video/ContextMenus.cpp
@@ -10333,13 +10329,13 @@ msgstr "Niciun supliment PVR activat"
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
 msgid "Vertical"
-msgstr ""
+msgstr "Vertical"
 
 #. 'timeline' label used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
 msgid "Horizontal"
-msgstr ""
+msgstr "Orizontal"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -10915,7 +10911,7 @@ msgstr ""
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19694"
 msgid "{0:d} minutes"
-msgstr ""
+msgstr "{0:d} minute"
 
 #. Text for shutdown confirmation dialog
 #: xbmc/pvr/PVRManager.cpp
@@ -11371,7 +11367,7 @@ msgstr "Pornește client UPnP automat"
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20112"
 msgid "Last login: {0:s}"
-msgstr ""
+msgstr "Ultima autntificare: {0:s}"
 
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20113"
@@ -11381,7 +11377,7 @@ msgstr "Niciodată autentificat"
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20114"
 msgid "Profile {0:d} / {1:d}"
-msgstr ""
+msgstr "Profil {0:d} / {1:d}"
 
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20115"
@@ -14635,6 +14631,12 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr "Migrarea suplimentelor este în progres - vă rugăm așteptați"
 
+#. Inform about not supported addon if tried to enable
+#: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
+msgctxt "#24152"
+msgid "The add-on is not compatible with this version of Kodi."
+msgstr ""
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14767,11 +14769,19 @@ msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Este folosită traversarea audio (trecerea nemodificată a sunetului)"
 
-#. The label in the add-ons dll class to report about outdated add-on api
-#. version
-#: xbmc/addons/AddonDll.cpp
+#. Header text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
-msgid "Incompatible API version for type '%s'. Kodi: '%s', add-on: '%s'."
+msgid "BD-J menu error"
+msgstr ""
+
+#. Body text for the BD-J warning dialog
+#: xbmc/settings/DiscSettings.cpp
+msgctxt "#29804"
+msgid ""
+"There was an error encountered loading Java, so BD-J menus will not be "
+"functional at this time. BD-J menus require the Java Runtime Environment so "
+"make sure this is installed and functioning on your system."
 msgstr ""
 
 #. Header string on RDS Radiotext+ Info dialog
@@ -15445,13 +15455,13 @@ msgstr "Sfârșit de săptămână"
 
 msgctxt "#33038"
 msgid "{0:s} day"
-msgstr ""
+msgstr "{0:s} zi"
 
 #. Used in the media source dialog. Will result in "HDHomerun Devices"
 #: dialogs/GUIDialogMediaSource.cpp
 msgctxt "#33040"
 msgid "{0:s} devices"
-msgstr ""
+msgstr "{0:s} dispozitive"
 
 #: Unknown
 msgctxt "#33049"
@@ -15985,7 +15995,7 @@ msgstr ""
 #: xbmc/input/joysticks/JoystickTranslator.cpp
 msgctxt "#35015"
 msgid "Button {0:d}"
-msgstr ""
+msgstr "Buton {0:d}"
 
 #. Name of a controller axis, e.g. Axis 2. {0:d} - axis index
 #: xbmc/input/joysticks/JoystickTranslator.cpp
@@ -16022,6 +16032,18 @@ msgstr "Ignoră input"
 #: xbmc/games/controllers/dialogs/GUIDialogAxisDetection.cpp
 msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
+msgstr ""
+
+#. Name of setting to configure peripheral add-ons
+#: system/settings/settings.xml
+msgctxt "#35047"
+msgid "Driver settings"
+msgstr ""
+
+#. Description of setting with label #35047 "Driver settings"
+#: system/settings/settings.xml
+msgctxt "#35048"
+msgid "View and configure peripheral add-ons."
 msgstr ""
 
 #. Name of game add-ons category
@@ -16248,25 +16270,25 @@ msgstr "Butoane"
 #. mapping dialog.
 msgctxt "#35104"
 msgid "Pointers"
-msgstr ""
+msgstr "Indicatoare"
 
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
 msgid "Keyboard"
-msgstr ""
+msgstr "Tastatură"
 
 #. Name of group in "Games -> Keyboard" for configuring keyboard players
 #: system/settings/settings.xml
 msgctxt "#35151"
 msgid "Player configuration"
-msgstr ""
+msgstr "Configurație jucător"
 
 #. Name of setting for enabling the keyboard during gameplay
 #: system/settings/settings.xml
 msgctxt "#35152"
 msgid "Enable keyboard"
-msgstr ""
+msgstr "Activare tastatură"
 
 #. Description of setting with label #35152 "Enable keyboard"
 #: system/settings/settings.xml
@@ -16393,13 +16415,13 @@ msgstr ""
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35207"
 msgid "Emulators"
-msgstr ""
+msgstr "Emulatoare"
 
 #. Description of add-on category for standalone games
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35208"
 msgid "Standalone games"
-msgstr ""
+msgstr "Jocuri independente"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#35209"
@@ -16458,12 +16480,12 @@ msgstr ""
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
-msgstr ""
+msgstr "Furnizori de jocuri"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
-msgstr ""
+msgstr "Adăugare jocuri..."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#35251"
@@ -16483,12 +16505,12 @@ msgstr ""
 #: xbmc/games/windows/GUIWindowGames.cpp
 msgctxt "#35254"
 msgid "Manage emulators"
-msgstr ""
+msgstr "Gestionare emulatoare"
 
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35255"
 msgid "Browse all emulators"
-msgstr ""
+msgstr "Răsfoiește toate emulatoarele"
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17080,9 +17102,9 @@ msgctxt "#36145"
 msgid ""
 "When enabled, movies belonging to a \"Movie set\" are grouped together under"
 " one entry for the set in the movie library, this entry can then be opened "
-"to display the individual movies. When disabled, each movie will have it's "
+"to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr "Când este activată, filmele artistice care aparțin unei „Colecții de filme” sunt grupate împreună sub o singură intrare în lista de filme, această intrare poate fi deschisă pentru a afișa filmele individuale. Când este dezactivată, fiecare film va avea propria intrare în lista de filme, chiar dacă aparține unei colecții."
+msgstr ""
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17194,13 +17216,6 @@ msgstr "Activează decodare CrystalHD pentru fișierele video."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Activează decodare dispozitiv fizic VTB pentru fișierele video."
-
-#. Description of setting with label #13430 "Allow hardware acceleration
-#. (OpenMax)"
-#: system/settings/settings.xml
-msgctxt "#36161"
-msgid "Enable OpenMax hardware decoding of video files."
-msgstr "Activează decodare dispozitiv fizic OpenMax pentru fișierele video."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
@@ -20127,7 +20142,7 @@ msgstr "Nelimitat"
 #: system/settings/settings.xml
 msgctxt "#38016"
 msgid "{0:d} fps"
-msgstr ""
+msgstr "{0:d} cps"
 
 #. Description of setting #14111 "Blu-ray region code"
 #: system/settings/settings.xml
@@ -20528,4 +20543,4 @@ msgstr ""
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#39016"
 msgid "Resume audiobook"
-msgstr ""
+msgstr "Reia cartea audio"
