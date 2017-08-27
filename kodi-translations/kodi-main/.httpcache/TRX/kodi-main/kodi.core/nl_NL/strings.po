@@ -2,7 +2,7 @@
 # Translators:
 # Alwin Hummels <alwin@fam-hummels.nl>, 2016
 # Evelijn Saaltink <evelijnsaaltink@gmail.com>, 2017
-# Kees Lijkendijk <clkndk@gmail.com>, 2016
+# Kees Lijkendijk <clkndk@gmail.com>, 2016-2017
 # Koos van Klojum, 2016-2017
 # Koos van Klojum, 2015-2016
 # Kristof Vergote <kristofvergote1@gmail.com>, 2016
@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-07-29 17:07+0000\n"
-"Last-Translator: M. de Boer <de.boer.melle@gmail.com>\n"
+"PO-Revision-Date: 2017-08-25 04:14+0000\n"
+"Last-Translator: Koos van Klojum\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -795,7 +795,8 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Albuminformatie ophalen"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/dialogs/GUIDialogSelect.cpp
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#186"
 msgid "OK"
@@ -1144,7 +1145,8 @@ msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "CD-informatie opzoeken"
 
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2504,7 +2506,9 @@ msgctxt "#566"
 msgid "Album artist"
 msgstr "Album artiest"
 
+#. generic "play count" label used in different places
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Aantal keer afgespeeld"
@@ -6189,6 +6193,7 @@ msgstr "Berekenen mapgrootte"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#13395"
 msgid "Video settings"
 msgstr "Videoinstellingen"
@@ -7338,8 +7343,8 @@ msgstr "Beheer"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
-msgid "Other"
-msgstr "Overig"
+msgid "Startup"
+msgstr "Opstart"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7350,6 +7355,11 @@ msgstr "Netwerbeheer"
 msgctxt "#14226"
 msgid "Manage Sources"
 msgstr "Bronnen beheren"
+
+#: system/settings/settings.xml
+msgctxt "#14227"
+msgid "Startup Settings"
+msgstr "Opstart instellingen"
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -8944,6 +8954,12 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Dit programma wordt al opgenomen"
 
+#. Label for recording settings dialog header
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19068"
+msgid "Recording settings"
+msgstr "Opname instellingen"
+
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
@@ -8980,7 +8996,8 @@ msgctxt "#19074"
 msgid "Active"
 msgstr "Actief"
 
-#. Label of name edit in PVR timer settings dialog
+#. Label of name edit in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19075"
 msgid "Name"
@@ -9026,7 +9043,8 @@ msgctxt "#19082"
 msgid "Priority"
 msgstr "Prioriteit"
 
-#. Label of lifetime spinner in PVR timer settings dialog
+#. Label of lifetime selector in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19083"
 msgid "Lifetime"
@@ -9120,8 +9138,9 @@ msgctxt "#19096"
 msgid "\"Smart select\""
 msgstr "\"Slimme selectie\""
 
-#. label of the help text for the timer name edit field in PVR timer settings
-#. dialog
+#. label of the help text for the name edit field in PVR timer and recording
+#. settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19097"
 msgid "Enter the name for the timer"
@@ -9421,6 +9440,15 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Groepen"
 
+#. Dialog warning text for lifetime recording setting
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19147"
+msgid ""
+"Setting the lifetime of this recording to {0:d} days will immediately expire"
+" the recording, which might result in instant deletion of the recording. "
+"Proceed anyway?"
+msgstr "De bewaartijd van deze opname instellen op {0:d} dagen laat de opname direct verlopen, wat kan resulteren in directe verwijdering van de opname. Toch doorgaan?"
+
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
@@ -9683,20 +9711,6 @@ msgstr "Opruimen van alle gerelateerde gegevens."
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "Al uw gidsgegevens worden gewist. Weet u het zeker?"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting label
-#: system/settings/settings.xml
-msgctxt "#19189"
-msgid "Continue last channel on startup"
-msgstr "Hervat laatste kanaal bij opstarten"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting value
-#: system/settings/settings.xml
-msgctxt "#19190"
-msgid "Background"
-msgstr "Achtergrond"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10278,12 +10292,6 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Alle kanalen"
 
-#. pvr settings 'continue last channel on startup' setting value label.
-#: system/settings/settings.xml
-msgctxt "#19288"
-msgid "Foreground"
-msgstr "Voorgrond"
-
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10347,6 +10355,13 @@ msgstr "Verticaal"
 msgctxt "#19298"
 msgid "Horizontal"
 msgstr "Horizontaal"
+
+#. generic "expiration" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/MyPVRRecordings.xml
+msgctxt "#19299"
+msgid "Expires"
+msgstr "Verloopt"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -14800,6 +14815,12 @@ msgid ""
 "make sure this is installed and functioning on your system."
 msgstr "Er was een fout bij het laden van Java, dus zullen de BD-J menu's nu niet werken. BD-J menu's hebben de Java Runtime Environment nodig, zorg er dus voor dat deze geïnstalleerd en werkend is."
 
+#. Body text for the encryption error kaitoast
+#: xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#29805"
+msgid "This Blu-ray disc (or file) is encrypted and can't be played."
+msgstr "Deze Blu-ray disc (of bestand) is encrypted en kan niet worden afgespeeld."
+
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
 msgid "Radiotext Plus info"
@@ -16288,6 +16309,36 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr "Aanwijzers"
 
+#. Heading for buttons mounted on a light gun. Used in the controller mapping
+#. dialog.
+msgctxt "#35105"
+msgid "Light gun"
+msgstr "Licht pistool"
+
+#. Heading for the button that shoots the lightgun offscreen when pressed.
+#. Used in the controller mapping dialog.
+msgctxt "#35106"
+msgid "Shoot offscreen"
+msgstr "Schiet offscreen"
+
+#. Heading for switches found on a game console, such as the Atari 2600. Used
+#. in the controller mapping dialog.
+msgctxt "#35107"
+msgid "Console switches"
+msgstr "Console knoppen"
+
+#. Heading for buttons that control the game console hardware, such as a
+#. microphone button. Used in the controller mapping dialog.
+msgctxt "#35108"
+msgid "Hardware buttons"
+msgstr "Hardware knoppen"
+
+#. Heading for buttons on a numeric keypad (containing 0-9, star and pound).
+#. Used in the controller mapping dialog.
+msgctxt "#35109"
+msgid "Keypad"
+msgstr "Keypad"
+
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
@@ -16388,6 +16439,18 @@ msgstr "Configureer toetsenbord speler 8"
 msgctxt "#35165"
 msgid "Keyboard player"
 msgstr "Toetsenbordspeler"
+
+#. Heading for the button that lets the user map any keyboard key. Used in the
+#. controller mapping dialog.
+msgctxt "#35166"
+msgid "All keys"
+msgstr "Alle toetsen"
+
+#. Heading for the button that lets the user map individual keyboard keys.
+#. Used in the controller mapping dialog.
+msgctxt "#35167"
+msgid "Single keys"
+msgstr "Enkelvoudige toetsen"
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -16492,11 +16555,44 @@ msgctxt "#35216"
 msgid "Support add-ons"
 msgstr "Add-ons ondersteunen"
 
+#. Dialog text asking user to overwrite their savestate file
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35217"
+msgid ""
+"The savestate can only be loaded with \"{0:s}\". Erase savestate and "
+"continue?"
+msgstr "De savestate kan alleen worden geladen met \"{0:s}\". Savestate verwijderen en doorgaan?"
+
+#. Button to erase the savestate
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35218"
+msgid "Erase savestate"
+msgstr "Verwijder savestate"
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
 msgstr "Game aanbieder"
+
+#. Title of the game OSD menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35221"
+msgid "Game Menu"
+msgstr "Game Menu"
+
+#. Label of button in the in-game menu for stopping game playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35222"
+msgid "Exit"
+msgstr "Afsluiten"
+
+#. Label of button in the in-game menu for opening the input configuration
+#. window
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35223"
+msgid "Input settings"
+msgstr "Input instellingen"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16527,6 +16623,13 @@ msgstr "Beheer emulators"
 msgctxt "#35255"
 msgid "Browse all emulators"
 msgstr "Alle emulatoren doorbladeren"
+
+#. Error message when a game client fails to install when a game is being
+#. launched
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35256"
+msgid "Failed to install add-on."
+msgstr "Installatie add-on mislukt."
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17233,6 +17336,12 @@ msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Activeer VTB-hardwaredecodering van videobestanden."
 
+#. Description of setting with label #508 "Startup action"
+#: system/settings/settings.xml
+msgctxt "#36161"
+msgid "Select an action Kodi will perform on startup."
+msgstr "Selecteer een actie die Kodi uit zal voeren tijdens opstarten."
+
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
 #: system/settings/settings.xml
@@ -17652,11 +17761,6 @@ msgid ""
 "Switch to full screen display when starting playback of channels and "
 "recordings."
 msgstr "Schakel over naar volledig beeld wanneer het afspelen van kanalen en opnames wordt gestart."
-
-#: system/settings/settings.xml
-msgctxt "#36228"
-msgid "Continue with the last viewed channel on startup."
-msgstr "Doorgaan met het laatst bekeken kanaal bij opstarten."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18104,6 +18208,12 @@ msgstr "Kies het compressieniveau voor FLAC, standaard 5."
 msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "Automatisch schijf uitwerpen nadat het rippen voltooid is."
+
+#. Description of settings category "Interface -> Startup" with label #14224
+#: system/settings/settings.xml
+msgctxt "#36292"
+msgid "This category contains startup settings."
+msgstr "Deze categorie bevat opstart instellingen."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19533,6 +19643,12 @@ msgid ""
 "video is started."
 msgstr "Specificeer de resolutie voor de 3d lookuptabel. Gebruik een lagere resolutie voor een snel voorbeeld en een hogere resolutie voor een nauwkeuriger beeld. Gebruik van een hoge resolutie kan langer duren   wanneer de parameters worden gewijzigd of een nieuwe video wordt gestart."
 
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36579"
+msgid "UHDTV (BT.2020)"
+msgstr "UHDTV (BT.2020)"
+
 #. Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
@@ -19754,7 +19870,7 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
-msgstr "Add-ons krijgen toegang tot persoonsgegevens die zijn opgeslagen op dit apparaat. Door dit toe te staan,  gaat u er mee akkoord dat alleen u verantwoordelijk bent voor enig verlies van gegevens, ongewenst gedrag, of schade aan uw apparaat. Wilt u verdergaan?"
+msgstr "Add-ons krijgen toegang tot gegevens die zijn opgeslagen op dit apparaat. Met het toestaan gaat u akkoord dat alleen u verantwoordelijk bent voor elk verlies van data, ongewenst gedrag, of schade aan uw apparaat. Wilt u doorgaan?"
 
 #. Label of a setting, allow the user to specify high quality downscaling of
 #. pictures
@@ -20365,7 +20481,7 @@ msgstr "Sectie die de instellingen voor het afspelen van media bevat"
 msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
-"collected, stored, shown, and navigated"
+"collected, stored, shown and navigated"
 msgstr "Sectie die de instellingen bevat voor bronnen en hoe media-informatie wordt verzameld, opgeslagen, getoond en genavigeerd."
 
 #. Description of section #14203 "Customise"
@@ -20481,8 +20597,8 @@ msgstr "Versnellen h264"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category contains provides access to the windows for source management "
-"and the Library settings for the databases"
+"This category provides access to the windows for source management and the "
+"Library settings for the databases"
 msgstr "Deze categorie geeft toegang tot de secties voor bronbeheer en de bibliothekeninstellingen voor databases."
 
 #. Description of setting "Videos... with label #14242
@@ -20568,3 +20684,55 @@ msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
 msgstr "Activeert UPnP. Hiermee kunt u media in uw bibliotheek streamen naar een UPnP-cliënt en UPnP-servers op afstand detecteren."
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39018"
+msgid "optional"
+msgstr "optioneel"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39019"
+msgid "installed"
+msgstr "geïnstalleerd"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39020"
+msgid "The following additional add-ons will be installed"
+msgstr "De volgende aanvullende add-ons zullen worden geïnstalleerd"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39021"
+msgid "Proceed with installation?"
+msgstr "Doorgaan met installatie?"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39022"
+msgid "({0:s})"
+msgstr "({0:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39023"
+msgid "({0:s}, {1:s})"
+msgstr "({0:s}, {1:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#39024"
+msgid "Dependencies"
+msgstr "Afhankelijkheden"
+
+#: system/settings/settings.xml
+msgctxt "#39100"
+msgid "Perform on startup"
+msgstr "Voer uit tijdens opstarten"
+
+#. Startup action option label
+#: system/settings/settings.xml
+msgctxt "#39101"
+msgid "Play TV"
+msgstr "Speel TV"
+
+#: system/settings/settings.xml
+msgctxt "#39102"
+msgid "Play Radio"
+msgstr "Speel Radio"

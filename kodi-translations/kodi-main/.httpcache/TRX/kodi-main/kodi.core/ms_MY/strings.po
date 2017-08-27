@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-07-04 13:43+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2017-08-22 06:50+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/teamxbmc/kodi-main/language/ms_MY/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -778,7 +778,8 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Menggelintar album"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/dialogs/GUIDialogSelect.cpp
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#186"
 msgid "OK"
@@ -1127,7 +1128,8 @@ msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "Mendapatkan maklumat CD"
 
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2487,7 +2489,9 @@ msgctxt "#566"
 msgid "Album artist"
 msgstr "Artis album"
 
+#. generic "play count" label used in different places
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Kiraan main"
@@ -6172,6 +6176,7 @@ msgstr "Mengira saiz folder"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#13395"
 msgid "Video settings"
 msgstr "Tetapan video"
@@ -7321,8 +7326,8 @@ msgstr "Kawalan"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
-msgid "Other"
-msgstr "Lain-lain"
+msgid "Startup"
+msgstr "Permulaan"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7333,6 +7338,11 @@ msgstr "Kawalan Rangkaian"
 msgctxt "#14226"
 msgid "Manage Sources"
 msgstr "Urus Sumber"
+
+#: system/settings/settings.xml
+msgctxt "#14227"
+msgid "Startup Settings"
+msgstr "Tetapan Permulaan"
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -8927,6 +8937,12 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Peristiwa ini sudah dirakam."
 
+#. Label for recording settings dialog header
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19068"
+msgid "Recording settings"
+msgstr "Tetapan rakaman"
+
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
@@ -8963,7 +8979,8 @@ msgctxt "#19074"
 msgid "Active"
 msgstr "Aktif"
 
-#. Label of name edit in PVR timer settings dialog
+#. Label of name edit in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19075"
 msgid "Name"
@@ -9009,7 +9026,8 @@ msgctxt "#19082"
 msgid "Priority"
 msgstr "Keutamaan"
 
-#. Label of lifetime spinner in PVR timer settings dialog
+#. Label of lifetime selector in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19083"
 msgid "Lifetime"
@@ -9103,8 +9121,9 @@ msgctxt "#19096"
 msgid "\"Smart select\""
 msgstr "\"Pilihan bijak\""
 
-#. label of the help text for the timer name edit field in PVR timer settings
-#. dialog
+#. label of the help text for the name edit field in PVR timer and recording
+#. settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19097"
 msgid "Enter the name for the timer"
@@ -9404,6 +9423,15 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Kumpulan"
 
+#. Dialog warning text for lifetime recording setting
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19147"
+msgid ""
+"Setting the lifetime of this recording to {0:d} days will immediately expire"
+" the recording, which might result in instant deletion of the recording. "
+"Proceed anyway?"
+msgstr "Tetapan sepanjang hayat bagi rakaman ini sehingga {0:d} hari akan serta-merta luputkan rakaman, yang mungkin menyebabkan pemadaman serta-merta rakaman. Teruskan jua?"
+
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
@@ -9666,20 +9694,6 @@ msgstr "Kosongkan semua data berkaitan."
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "Semua data panduan anda akan dikosongkan. Anda pasti?"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting label
-#: system/settings/settings.xml
-msgctxt "#19189"
-msgid "Continue last channel on startup"
-msgstr "Teruskan saluran terakhir pada permulaan"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting value
-#: system/settings/settings.xml
-msgctxt "#19190"
-msgid "Background"
-msgstr "Latar Belakang"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10261,12 +10275,6 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Semua saluran"
 
-#. pvr settings 'continue last channel on startup' setting value label.
-#: system/settings/settings.xml
-msgctxt "#19288"
-msgid "Foreground"
-msgstr "Latar hadapan"
-
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10330,6 +10338,13 @@ msgstr "Anjakan menegak"
 msgctxt "#19298"
 msgid "Horizontal"
 msgstr "Mengufuk"
+
+#. generic "expiration" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/MyPVRRecordings.xml
+msgctxt "#19299"
+msgid "Expires"
+msgstr "Luput"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12676,7 +12691,7 @@ msgstr "Buat masa ini tiada kemaskini tersedia untuk tambahan ini."
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
-msgstr ""
+msgstr "Benarkan sokongan UPnP"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21359"
@@ -14634,7 +14649,7 @@ msgstr "Pemindahan tambahan sedang berlangsung - tunggu sebentar"
 #: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
 msgctxt "#24152"
 msgid "The add-on is not compatible with this version of Kodi."
-msgstr ""
+msgstr "Tambahan berikut tidak serasi dengan versi Kodi ini."
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -14772,7 +14787,7 @@ msgstr "Audio passthrough digunakan"
 #: xbmc/settings/DiscSettings.cpp
 msgctxt "#29803"
 msgid "BD-J menu error"
-msgstr ""
+msgstr "Ralat menu BD-J"
 
 #. Body text for the BD-J warning dialog
 #: xbmc/settings/DiscSettings.cpp
@@ -14781,7 +14796,13 @@ msgid ""
 "There was an error encountered loading Java, so BD-J menus will not be "
 "functional at this time. BD-J menus require the Java Runtime Environment so "
 "make sure this is installed and functioning on your system."
-msgstr ""
+msgstr "Terdapat ralat dihadapi ketika memuatkan Java, oleh itu menu BD-J tidak akan berfungsi buat masa ini. Menu BD-J memerlukan Persekitaran Masa Jalan Java jadi pastikan ia dipasang dan berfungsi dalam sistem anda."
+
+#. Body text for the encryption error kaitoast
+#: xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#29805"
+msgid "This Blu-ray disc (or file) is encrypted and can't be played."
+msgstr "Cakera Blu-ray ini (atau fail) disulitkan dan tidak dapat dimainkan."
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16037,13 +16058,13 @@ msgstr "Tekan semua butang analog sekarang untuk mengesannya:[CR][CR]{0:s}"
 #: system/settings/settings.xml
 msgctxt "#35047"
 msgid "Driver settings"
-msgstr ""
+msgstr "Tetapan pemacu"
 
 #. Description of setting with label #35047 "Driver settings"
 #: system/settings/settings.xml
 msgctxt "#35048"
 msgid "View and configure peripheral add-ons."
-msgstr ""
+msgstr "Lihan dan konfigur tambahan persisian"
 
 #. Name of game add-ons category
 #: xbmc/addons/Addon.cpp xbmc/games/windows/GUIViewStateWindowGames.cpp
@@ -16271,6 +16292,36 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr "Penuding"
 
+#. Heading for buttons mounted on a light gun. Used in the controller mapping
+#. dialog.
+msgctxt "#35105"
+msgid "Light gun"
+msgstr "Senapan cahaya"
+
+#. Heading for the button that shoots the lightgun offscreen when pressed.
+#. Used in the controller mapping dialog.
+msgctxt "#35106"
+msgid "Shoot offscreen"
+msgstr "Tembak luar skrin"
+
+#. Heading for switches found on a game console, such as the Atari 2600. Used
+#. in the controller mapping dialog.
+msgctxt "#35107"
+msgid "Console switches"
+msgstr "Suis konsol"
+
+#. Heading for buttons that control the game console hardware, such as a
+#. microphone button. Used in the controller mapping dialog.
+msgctxt "#35108"
+msgid "Hardware buttons"
+msgstr "Butang perkakasan"
+
+#. Heading for buttons on a numeric keypad (containing 0-9, star and pound).
+#. Used in the controller mapping dialog.
+msgctxt "#35109"
+msgid "Keypad"
+msgstr "Pad Kekunci"
+
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
@@ -16371,6 +16422,18 @@ msgstr "Mengkonfigurasi pemain papan kekunci nombor 8"
 msgctxt "#35165"
 msgid "Keyboard player"
 msgstr "Pemain papan kekunci"
+
+#. Heading for the button that lets the user map any keyboard key. Used in the
+#. controller mapping dialog.
+msgctxt "#35166"
+msgid "All keys"
+msgstr "Semua kekunci"
+
+#. Heading for the button that lets the user map individual keyboard keys.
+#. Used in the controller mapping dialog.
+msgctxt "#35167"
+msgid "Single keys"
+msgstr "Kekunci tunggal"
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -16475,11 +16538,44 @@ msgctxt "#35216"
 msgid "Support add-ons"
 msgstr "Tambahan sokongan"
 
+#. Dialog text asking user to overwrite their savestate file
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35217"
+msgid ""
+"The savestate can only be loaded with \"{0:s}\". Erase savestate and "
+"continue?"
+msgstr "Keadaan simpan hanya boleh dimuatkan dengan \"{0:s}\". Padam keadaan simpan dan teruskan?"
+
+#. Button to erase the savestate
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35218"
+msgid "Erase savestate"
+msgstr "Padam keadaan simpan"
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
 msgstr "Penyedia permainan"
+
+#. Title of the game OSD menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35221"
+msgid "Game Menu"
+msgstr "Menu Permainan"
+
+#. Label of button in the in-game menu for stopping game playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35222"
+msgid "Exit"
+msgstr "Keluar"
+
+#. Label of button in the in-game menu for opening the input configuration
+#. window
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35223"
+msgid "Input settings"
+msgstr "Tetapan input"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16510,6 +16606,13 @@ msgstr "Urus emulator"
 msgctxt "#35255"
 msgid "Browse all emulators"
 msgstr "Layar semua emulator"
+
+#. Error message when a game client fails to install when a game is being
+#. launched
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35256"
+msgid "Failed to install add-on."
+msgstr "Gagal memasang tambahan."
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17103,7 +17206,7 @@ msgid ""
 " one entry for the set in the movie library, this entry can then be opened "
 "to display the individual movies. When disabled, each movie will have its "
 "own entry in the movie library even if it belongs to a set."
-msgstr ""
+msgstr "Bila dibenarkan, cereka dalam kategori \"Set Cereka\" dikelompok bersama-sama di bawah satu masukan untuk set dalam pustaka cereka, masukan ini boleh dibuka untuk paparkan cereka secara berasingan. Bila dilumpuhkan, setiap cereka mempunyai masukan masing-masing di dalam pustaka cereka walaupun sepatutnya berada dalam satu set."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -17215,6 +17318,12 @@ msgstr "Benarkan penyahkodan CrystalHD untuk menyahkod fail video."
 msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Benarkan penyahkodan perkakasan VTB untuk menyahkod fail video."
+
+#. Description of setting with label #508 "Startup action"
+#: system/settings/settings.xml
+msgctxt "#36161"
+msgid "Select an action Kodi will perform on startup."
+msgstr "Pilih satu tindakan Kodi yang lakukan ketika permulaan."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
@@ -17635,11 +17744,6 @@ msgid ""
 "Switch to full screen display when starting playback of channels and "
 "recordings."
 msgstr "Tukar ke paparan berskrin penuh bula mula main balik saluran dan rakaman."
-
-#: system/settings/settings.xml
-msgctxt "#36228"
-msgid "Continue with the last viewed channel on startup."
-msgstr "Teruskan dengan saluran terakhir ditonton ketika permulaan."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18087,6 +18191,12 @@ msgstr "Bagai aras pemampatan takrif FLAC, lalai adalah 5."
 msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "Auto-lenting cakera selepas peretasan selesai."
+
+#. Description of settings category "Interface -> Startup" with label #14224
+#: system/settings/settings.xml
+msgctxt "#36292"
+msgid "This category contains startup settings."
+msgstr "Kategori ini mengandungi tetapan permulaan."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19516,6 +19626,12 @@ msgid ""
 "video is started."
 msgstr "Nyatakan resolusi bagi jadual carian 3D. Guna resolusi lebih rendah untuk pratonton pantas dan resolusi lebih tinggi untuk gambar yang lebih tepat. Penggunaan resolusi tinggi mengambil masa bila parameter berubah atau video baharu bermula."
 
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36579"
+msgid "UHDTV (BT.2020)"
+msgstr "UHDTV (BT.2020)"
+
 #. Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
@@ -20348,7 +20464,7 @@ msgstr "Seksyen yang mengandungi tetapan untuk main balik media"
 msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
-"collected, stored, shown, and navigated"
+"collected, stored, shown and navigated"
 msgstr "Seksyen yang mengandungi tetapan bagi sumber dan bagaimana maklumat media dikutip, disimpan, dipaparkan, dan dinavigasikan"
 
 #. Description of section #14203 "Customise"
@@ -20464,9 +20580,9 @@ msgstr "Pecutkan h264"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category contains provides access to the windows for source management "
-"and the Library settings for the databases"
-msgstr "Kategori ini mengandungi capaian ke tetingkap untuk pengurusan sumber dan tetapan Pustaka untuk pangkalan data"
+"This category provides access to the windows for source management and the "
+"Library settings for the databases"
+msgstr "Kategori ini menyediakan capaian ke tetingkap untuk pengurusan sumber dan tetapan Pustaka bagi pangkalan data"
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -20550,4 +20666,56 @@ msgctxt "#39017"
 msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
-msgstr ""
+msgstr "Benarkan UPnP. Ia membolehkan anda strimkan media dari pustaka anda kepada klien UPnP dan untuk mengesan pelayan UPnP jauh."
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39018"
+msgid "optional"
+msgstr "pilihan"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39019"
+msgid "installed"
+msgstr "dipasang"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39020"
+msgid "The following additional add-ons will be installed"
+msgstr "Tambahan berikut akan dipasang"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39021"
+msgid "Proceed with installation?"
+msgstr "Teruskan pemasangan?"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39022"
+msgid "({0:s})"
+msgstr "({0:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39023"
+msgid "({0:s}, {1:s})"
+msgstr "({0:s}, {1:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#39024"
+msgid "Dependencies"
+msgstr "Dependensi"
+
+#: system/settings/settings.xml
+msgctxt "#39100"
+msgid "Perform on startup"
+msgstr "Dilakukan ketika permulaan"
+
+#. Startup action option label
+#: system/settings/settings.xml
+msgctxt "#39101"
+msgid "Play TV"
+msgstr "Main TV"
+
+#: system/settings/settings.xml
+msgctxt "#39102"
+msgid "Play Radio"
+msgstr "Main Radio"

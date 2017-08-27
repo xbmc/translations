@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-07-27 12:03+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"PO-Revision-Date: 2017-08-04 18:33+0000\n"
+"Last-Translator: Trottel <trottel09@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -789,7 +789,8 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Vyhledávání alba"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/dialogs/GUIDialogSelect.cpp
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#186"
 msgid "OK"
@@ -1138,7 +1139,8 @@ msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "Načítání informací o CD"
 
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2498,7 +2500,9 @@ msgctxt "#566"
 msgid "Album artist"
 msgstr "Interpret alba"
 
+#. generic "play count" label used in different places
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Počet přehrání"
@@ -5213,7 +5217,7 @@ msgstr "Nastavení a správce souborů"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all media"
-msgstr "Nastavit jako výchozí pro všechna media"
+msgstr "Nastavit jako výchozí pro všechna média"
 
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -6183,6 +6187,7 @@ msgstr "Vypočítávání velikosti složky"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#13395"
 msgid "Video settings"
 msgstr "Nastavení videa"
@@ -7332,8 +7337,8 @@ msgstr "Ovládání"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
-msgid "Other"
-msgstr "Jiné"
+msgid "Startup"
+msgstr "Spuštění"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7344,6 +7349,11 @@ msgstr "Ovládání po síti"
 msgctxt "#14226"
 msgid "Manage Sources"
 msgstr "Spravovat zdroje"
+
+#: system/settings/settings.xml
+msgctxt "#14227"
+msgid "Startup Settings"
+msgstr "Nastavení spuštění"
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -8363,7 +8373,7 @@ msgstr "Lanczos3 - Optimalizovaný"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
-msgstr "Automatická"
+msgstr "Automaticky"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
@@ -8938,6 +8948,12 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Tato událost se již nahrává."
 
+#. Label for recording settings dialog header
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19068"
+msgid "Recording settings"
+msgstr "Nastavení nahrávání"
+
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
@@ -8974,7 +8990,8 @@ msgctxt "#19074"
 msgid "Active"
 msgstr "Aktivní"
 
-#. Label of name edit in PVR timer settings dialog
+#. Label of name edit in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19075"
 msgid "Name"
@@ -9020,7 +9037,8 @@ msgctxt "#19082"
 msgid "Priority"
 msgstr "Priorita"
 
-#. Label of lifetime spinner in PVR timer settings dialog
+#. Label of lifetime selector in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19083"
 msgid "Lifetime"
@@ -9114,8 +9132,9 @@ msgctxt "#19096"
 msgid "\"Smart select\""
 msgstr "„Chytrý výběr“"
 
-#. label of the help text for the timer name edit field in PVR timer settings
-#. dialog
+#. label of the help text for the name edit field in PVR timer and recording
+#. settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19097"
 msgid "Enter the name for the timer"
@@ -9415,6 +9434,15 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "Skupiny"
 
+#. Dialog warning text for lifetime recording setting
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19147"
+msgid ""
+"Setting the lifetime of this recording to {0:d} days will immediately expire"
+" the recording, which might result in instant deletion of the recording. "
+"Proceed anyway?"
+msgstr "Nastavení doby platnosti této nahrávky na {0:d} dní okamžitě ukončí platnost záznamu, což může vést k okamžitému odstranění záznamu. Přesto pokračovat?"
+
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
@@ -9677,20 +9705,6 @@ msgstr "Mazání všech souvisejících dat."
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "Všechna vaše data televizního programu budou vymazána. Opravdu to chcete?"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting label
-#: system/settings/settings.xml
-msgctxt "#19189"
-msgid "Continue last channel on startup"
-msgstr "Po spuštění pokračovat s posledním kanálem"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting value
-#: system/settings/settings.xml
-msgctxt "#19190"
-msgid "Background"
-msgstr "Pozadí"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10272,12 +10286,6 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Všechny kanály"
 
-#. pvr settings 'continue last channel on startup' setting value label.
-#: system/settings/settings.xml
-msgctxt "#19288"
-msgid "Foreground"
-msgstr "Popředí"
-
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10341,6 +10349,13 @@ msgstr "Svisle"
 msgctxt "#19298"
 msgid "Horizontal"
 msgstr "Vodorovně"
+
+#. generic "expiration" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/MyPVRRecordings.xml
+msgctxt "#19299"
+msgid "Expires"
+msgstr "Končí platnost"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -14794,6 +14809,12 @@ msgid ""
 "make sure this is installed and functioning on your system."
 msgstr "Při načítání jazyka Java došlo k chybě, takže nabídky BD-J nebudou v tuto chvíli funkční. Nabídky BD-J vyžadují prostředí Java Runtime Environment, takže se ujistěte, že je nainstalováno a funguje ve vašem systému."
 
+#. Body text for the encryption error kaitoast
+#: xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#29805"
+msgid "This Blu-ray disc (or file) is encrypted and can't be played."
+msgstr "Tento disk Blu-ray (nebo soubor) je šifrovaný a nemůže být přehrán."
+
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
 msgid "Radiotext Plus info"
@@ -16282,6 +16303,36 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr "Ukazatele"
 
+#. Heading for buttons mounted on a light gun. Used in the controller mapping
+#. dialog.
+msgctxt "#35105"
+msgid "Light gun"
+msgstr "Světelná pistol"
+
+#. Heading for the button that shoots the lightgun offscreen when pressed.
+#. Used in the controller mapping dialog.
+msgctxt "#35106"
+msgid "Shoot offscreen"
+msgstr "Střílet mimo obrazovku"
+
+#. Heading for switches found on a game console, such as the Atari 2600. Used
+#. in the controller mapping dialog.
+msgctxt "#35107"
+msgid "Console switches"
+msgstr "Přepínače konzole"
+
+#. Heading for buttons that control the game console hardware, such as a
+#. microphone button. Used in the controller mapping dialog.
+msgctxt "#35108"
+msgid "Hardware buttons"
+msgstr "Hardwarová tlačítka"
+
+#. Heading for buttons on a numeric keypad (containing 0-9, star and pound).
+#. Used in the controller mapping dialog.
+msgctxt "#35109"
+msgid "Keypad"
+msgstr "Klávesnice"
+
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
@@ -16382,6 +16433,18 @@ msgstr "Konfigurovat 8. hráče na klávesnici"
 msgctxt "#35165"
 msgid "Keyboard player"
 msgstr "Hráč na klávesnici"
+
+#. Heading for the button that lets the user map any keyboard key. Used in the
+#. controller mapping dialog.
+msgctxt "#35166"
+msgid "All keys"
+msgstr "Všechny klávesy"
+
+#. Heading for the button that lets the user map individual keyboard keys.
+#. Used in the controller mapping dialog.
+msgctxt "#35167"
+msgid "Single keys"
+msgstr "Jednotlivé klávesy"
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -16486,11 +16549,44 @@ msgctxt "#35216"
 msgid "Support add-ons"
 msgstr "Podpůrné doplňky"
 
+#. Dialog text asking user to overwrite their savestate file
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35217"
+msgid ""
+"The savestate can only be loaded with \"{0:s}\". Erase savestate and "
+"continue?"
+msgstr "Uložený stav může být načten pouze pomocí \"{0:s}\". Vymazat uložený stav a pokračovat?"
+
+#. Button to erase the savestate
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35218"
+msgid "Erase savestate"
+msgstr "Vymazat uložený stav"
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
 msgstr "Poskytovatelé her"
+
+#. Title of the game OSD menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35221"
+msgid "Game Menu"
+msgstr "Nabídka her"
+
+#. Label of button in the in-game menu for stopping game playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35222"
+msgid "Exit"
+msgstr "Ukončit"
+
+#. Label of button in the in-game menu for opening the input configuration
+#. window
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35223"
+msgid "Input settings"
+msgstr "Nastavení vstupu"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16521,6 +16617,13 @@ msgstr "Spravovat emulátory"
 msgctxt "#35255"
 msgid "Browse all emulators"
 msgstr "Procházet všechny emulátory"
+
+#. Error message when a game client fails to install when a game is being
+#. launched
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35256"
+msgid "Failed to install add-on."
+msgstr "Nepodařilo se nainstalovat doplněk."
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17227,6 +17330,12 @@ msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "Povolit hardwarové dekódování VTB pro soubory videa."
 
+#. Description of setting with label #508 "Startup action"
+#: system/settings/settings.xml
+msgctxt "#36161"
+msgid "Select an action Kodi will perform on startup."
+msgstr "Vyberte akci, kterou Kodi provede při spuštění:"
+
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
 #: system/settings/settings.xml
@@ -17646,11 +17755,6 @@ msgid ""
 "Switch to full screen display when starting playback of channels and "
 "recordings."
 msgstr "Při spuštění přehrávání kanálů a nahrávek přepnout na zobrazení na celou obrazovku."
-
-#: system/settings/settings.xml
-msgctxt "#36228"
-msgid "Continue with the last viewed channel on startup."
-msgstr "Po spuštění pokračovat s naposledy sledovaným kanálem."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18098,6 +18202,12 @@ msgstr "Definuje úroveň komprese pro FLAC, výchozí je 5."
 msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "Automaticky vysunout disk po dokončení kopírování."
+
+#. Description of settings category "Interface -> Startup" with label #14224
+#: system/settings/settings.xml
+msgctxt "#36292"
+msgid "This category contains startup settings."
+msgstr "Tato kategorie obsahuje nastavení spuštění."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19527,6 +19637,12 @@ msgid ""
 "video is started."
 msgstr "Zadejte rozlišení pro 3D vyhledávací tabulku. Použijte nižší rozlišení pro rychlý náhled a vyšší rozlišení pro přesnější obraz. Při použití vysokého rozlišení může trvat příprava několik sekund, když se změní parametry nebo je spuštěno nové video."
 
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36579"
+msgid "UHDTV (BT.2020)"
+msgstr "UHDTV (BT.2020)"
+
 #. Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
@@ -20359,7 +20475,7 @@ msgstr "Sekce, která obsahuje nastavení související s obrázky a jak je s ni
 msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
-"collected, stored, shown, and navigated"
+"collected, stored, shown and navigated"
 msgstr "Sekce, která obsahuje nastavení pro zdroje a jak jsou informace o médiích shromažďovány, ukládány, zobrazovány a jak je v nich navigováno"
 
 #. Description of section #14203 "Customise"
@@ -20475,8 +20591,8 @@ msgstr "Akcelerovat h264"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category contains provides access to the windows for source management "
-"and the Library settings for the databases"
+"This category provides access to the windows for source management and the "
+"Library settings for the databases"
 msgstr "Tato kategorie poskytuje přístup do oken pro správu zdrojů a nastavení knihovny pro databáze"
 
 #. Description of setting "Videos... with label #14242
@@ -20562,3 +20678,55 @@ msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
 msgstr "Povolí UPnP. Toto vám umožňuje streamovat média ve vašich knihovnách do klienta UPnP a rozpoznávat vzdálené servery UPnP."
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39018"
+msgid "optional"
+msgstr "volitelné"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39019"
+msgid "installed"
+msgstr "nainstalováno"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39020"
+msgid "The following additional add-ons will be installed"
+msgstr "Budou nainstalovány následující volitelné doplňky"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39021"
+msgid "Proceed with installation?"
+msgstr "Pokračovat v instalaci?"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39022"
+msgid "({0:s})"
+msgstr "({0:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39023"
+msgid "({0:s}, {1:s})"
+msgstr "({0:s}, {1:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#39024"
+msgid "Dependencies"
+msgstr "Závislosti"
+
+#: system/settings/settings.xml
+msgctxt "#39100"
+msgid "Perform on startup"
+msgstr "Provést při spuštění"
+
+#. Startup action option label
+#: system/settings/settings.xml
+msgctxt "#39101"
+msgid "Play TV"
+msgstr "Přehrát televizi"
+
+#: system/settings/settings.xml
+msgctxt "#39102"
+msgid "Play Radio"
+msgstr "Přehrát rádio"

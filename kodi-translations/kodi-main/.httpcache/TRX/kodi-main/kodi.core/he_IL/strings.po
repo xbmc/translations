@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-07-05 05:50+0000\n"
-"Last-Translator: BenEfrati <ben1189@gmail.com>\n"
+"PO-Revision-Date: 2017-08-02 19:25+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Hebrew (Israel) (http://www.transifex.com/teamxbmc/kodi-main/language/he_IL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -789,7 +789,8 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "מחפש אלבום"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/dialogs/GUIDialogSelect.cpp
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#186"
 msgid "OK"
@@ -1138,7 +1139,8 @@ msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "מאחזר פרטי דיסק"
 
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2498,7 +2500,9 @@ msgctxt "#566"
 msgid "Album artist"
 msgstr "אמן אלבום"
 
+#. generic "play count" label used in different places
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "מספר פעמים שנוגן"
@@ -6183,6 +6187,7 @@ msgstr "מחשב נפח תיקיה"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#13395"
 msgid "Video settings"
 msgstr "הגדרות וידאו"
@@ -7332,8 +7337,8 @@ msgstr "שליטה"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
-msgid "Other"
-msgstr "אחר"
+msgid "Startup"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7344,6 +7349,11 @@ msgstr "הגדרות רשת"
 msgctxt "#14226"
 msgid "Manage Sources"
 msgstr "ניהול מקורות"
+
+#: system/settings/settings.xml
+msgctxt "#14227"
+msgid "Startup Settings"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -8938,6 +8948,12 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "האירוע כבר במהלך הקלטה."
 
+#. Label for recording settings dialog header
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19068"
+msgid "Recording settings"
+msgstr ""
+
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
@@ -8974,7 +8990,8 @@ msgctxt "#19074"
 msgid "Active"
 msgstr "פעיל"
 
-#. Label of name edit in PVR timer settings dialog
+#. Label of name edit in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19075"
 msgid "Name"
@@ -9020,7 +9037,8 @@ msgctxt "#19082"
 msgid "Priority"
 msgstr "קדימות"
 
-#. Label of lifetime spinner in PVR timer settings dialog
+#. Label of lifetime selector in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19083"
 msgid "Lifetime"
@@ -9114,8 +9132,9 @@ msgctxt "#19096"
 msgid "\"Smart select\""
 msgstr ""
 
-#. label of the help text for the timer name edit field in PVR timer settings
-#. dialog
+#. label of the help text for the name edit field in PVR timer and recording
+#. settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19097"
 msgid "Enter the name for the timer"
@@ -9415,6 +9434,15 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "קבוצות"
 
+#. Dialog warning text for lifetime recording setting
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19147"
+msgid ""
+"Setting the lifetime of this recording to {0:d} days will immediately expire"
+" the recording, which might result in instant deletion of the recording. "
+"Proceed anyway?"
+msgstr ""
+
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
@@ -9677,20 +9705,6 @@ msgstr "מנקה את כל הנתונים הקשורים."
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "כל נתוני לוח השידורים יאופסו. האם להמשיך?"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting label
-#: system/settings/settings.xml
-msgctxt "#19189"
-msgid "Continue last channel on startup"
-msgstr "המשך צפייה בערוץ אחרון לאחר הפעלה מחדש"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting value
-#: system/settings/settings.xml
-msgctxt "#19190"
-msgid "Background"
-msgstr "רקע"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10272,12 +10286,6 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "כל הערוצים"
 
-#. pvr settings 'continue last channel on startup' setting value label.
-#: system/settings/settings.xml
-msgctxt "#19288"
-msgid "Foreground"
-msgstr "חזית"
-
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10340,6 +10348,13 @@ msgstr ""
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
 msgid "Horizontal"
+msgstr ""
+
+#. generic "expiration" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/MyPVRRecordings.xml
+msgctxt "#19299"
+msgid "Expires"
 msgstr ""
 
 #. label for epg genre value
@@ -14794,6 +14809,12 @@ msgid ""
 "make sure this is installed and functioning on your system."
 msgstr ""
 
+#. Body text for the encryption error kaitoast
+#: xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#29805"
+msgid "This Blu-ray disc (or file) is encrypted and can't be played."
+msgstr ""
+
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
 msgid "Radiotext Plus info"
@@ -16282,6 +16303,36 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr ""
 
+#. Heading for buttons mounted on a light gun. Used in the controller mapping
+#. dialog.
+msgctxt "#35105"
+msgid "Light gun"
+msgstr ""
+
+#. Heading for the button that shoots the lightgun offscreen when pressed.
+#. Used in the controller mapping dialog.
+msgctxt "#35106"
+msgid "Shoot offscreen"
+msgstr ""
+
+#. Heading for switches found on a game console, such as the Atari 2600. Used
+#. in the controller mapping dialog.
+msgctxt "#35107"
+msgid "Console switches"
+msgstr ""
+
+#. Heading for buttons that control the game console hardware, such as a
+#. microphone button. Used in the controller mapping dialog.
+msgctxt "#35108"
+msgid "Hardware buttons"
+msgstr ""
+
+#. Heading for buttons on a numeric keypad (containing 0-9, star and pound).
+#. Used in the controller mapping dialog.
+msgctxt "#35109"
+msgid "Keypad"
+msgstr ""
+
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
@@ -16381,6 +16432,18 @@ msgstr ""
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
 msgctxt "#35165"
 msgid "Keyboard player"
+msgstr ""
+
+#. Heading for the button that lets the user map any keyboard key. Used in the
+#. controller mapping dialog.
+msgctxt "#35166"
+msgid "All keys"
+msgstr ""
+
+#. Heading for the button that lets the user map individual keyboard keys.
+#. Used in the controller mapping dialog.
+msgctxt "#35167"
+msgid "Single keys"
 msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
@@ -16486,10 +16549,43 @@ msgctxt "#35216"
 msgid "Support add-ons"
 msgstr ""
 
+#. Dialog text asking user to overwrite their savestate file
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35217"
+msgid ""
+"The savestate can only be loaded with \"{0:s}\". Erase savestate and "
+"continue?"
+msgstr ""
+
+#. Button to erase the savestate
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35218"
+msgid "Erase savestate"
+msgstr ""
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
+msgstr ""
+
+#. Title of the game OSD menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35221"
+msgid "Game Menu"
+msgstr ""
+
+#. Label of button in the in-game menu for stopping game playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35222"
+msgid "Exit"
+msgstr "יציאה"
+
+#. Label of button in the in-game menu for opening the input configuration
+#. window
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35223"
+msgid "Input settings"
 msgstr ""
 
 #: xbmc/windows/GUIMediaWindow.cpp
@@ -16520,6 +16616,13 @@ msgstr ""
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35255"
 msgid "Browse all emulators"
+msgstr ""
+
+#. Error message when a game client fails to install when a game is being
+#. launched
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35256"
+msgid "Failed to install add-on."
 msgstr ""
 
 #. connection state "host unreachable"
@@ -17227,6 +17330,12 @@ msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "אפשר פיענוח חומרתי VTB של קבצי וידאו."
 
+#. Description of setting with label #508 "Startup action"
+#: system/settings/settings.xml
+msgctxt "#36161"
+msgid "Select an action Kodi will perform on startup."
+msgstr ""
+
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
 #: system/settings/settings.xml
@@ -17646,11 +17755,6 @@ msgid ""
 "Switch to full screen display when starting playback of channels and "
 "recordings."
 msgstr ""
-
-#: system/settings/settings.xml
-msgctxt "#36228"
-msgid "Continue with the last viewed channel on startup."
-msgstr "לאחר הפעלה מחדש, פתיחה אוטומטית של הערוץ האחרון שנצפה לשם המשך צפייה."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18098,6 +18202,12 @@ msgstr "קביעת רמת דחיסה עבור FLAC, ברירת המחדל היא
 msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "הוצאת הדיסק לאחר השלמת העתקה."
+
+#. Description of settings category "Interface -> Startup" with label #14224
+#: system/settings/settings.xml
+msgctxt "#36292"
+msgid "This category contains startup settings."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19527,6 +19637,12 @@ msgid ""
 "video is started."
 msgstr "הגדר רזולוציה לטבלת החיפוש בתלת מימד. השתמש ברזולוציה נמוכה לתצוגה מוקדמת מהירה ורזולוציה גבוהה יותר לתמונה מדוייקת. שימוש ברזולוציה גבוהה יכול לקחת מספר שניות להכנה כשהפרמטרים משתנים או כשוידאו חדש מתחיל."
 
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36579"
+msgid "UHDTV (BT.2020)"
+msgstr ""
+
 #. Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
@@ -20359,8 +20475,8 @@ msgstr "חלק זה מכיל הגדרות להקרנה של מדיה"
 msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
-"collected, stored, shown, and navigated"
-msgstr "אגף זה מכיר הגדרות למקורות ואיך שהמידע על המדיה נאסף, מאוחסן, מוצג ומנווט"
+"collected, stored, shown and navigated"
+msgstr ""
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -20475,9 +20591,9 @@ msgstr "האצת H264"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category contains provides access to the windows for source management "
-"and the Library settings for the databases"
-msgstr "קטגוריה זו מספקת גישה לניהול מקור וספריית הגדרות לבסיסי הנתונים"
+"This category provides access to the windows for source management and the "
+"Library settings for the databases"
+msgstr ""
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -20561,4 +20677,56 @@ msgctxt "#39017"
 msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39018"
+msgid "optional"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39019"
+msgid "installed"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39020"
+msgid "The following additional add-ons will be installed"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39021"
+msgid "Proceed with installation?"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39022"
+msgid "({0:s})"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39023"
+msgid "({0:s}, {1:s})"
+msgstr ""
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#39024"
+msgid "Dependencies"
+msgstr "תלויות"
+
+#: system/settings/settings.xml
+msgctxt "#39100"
+msgid "Perform on startup"
+msgstr ""
+
+#. Startup action option label
+#: system/settings/settings.xml
+msgctxt "#39101"
+msgid "Play TV"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39102"
+msgid "Play Radio"
 msgstr ""

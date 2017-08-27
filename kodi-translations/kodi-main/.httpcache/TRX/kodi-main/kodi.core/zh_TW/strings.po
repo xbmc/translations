@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-07-05 09:43+0000\n"
+"PO-Revision-Date: 2017-08-07 09:59+0000\n"
 "Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -786,7 +786,8 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "正在搜尋專輯"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/dialogs/GUIDialogSelect.cpp
+#: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#186"
 msgid "OK"
@@ -1135,7 +1136,8 @@ msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "獲取 CD 資訊"
 
-#: xbmc/dialogs/GUIDialogFileBrowser.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2495,7 +2497,9 @@ msgctxt "#566"
 msgid "Album artist"
 msgstr "專輯演出者"
 
+#. generic "play count" label used in different places
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "播放次數"
@@ -6180,6 +6184,7 @@ msgstr "計算資料夾大小"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
+#: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#13395"
 msgid "Video settings"
 msgstr "視訊設定"
@@ -7329,8 +7334,8 @@ msgstr "控制"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
-msgid "Other"
-msgstr "其他"
+msgid "Startup"
+msgstr "啟動"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7341,6 +7346,11 @@ msgstr "網路控制"
 msgctxt "#14226"
 msgid "Manage Sources"
 msgstr "管理來源"
+
+#: system/settings/settings.xml
+msgctxt "#14227"
+msgid "Startup Settings"
+msgstr "啟動設定"
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -8935,6 +8945,12 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "這個事件已經錄製"
 
+#. Label for recording settings dialog header
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19068"
+msgid "Recording settings"
+msgstr "錄影設定"
+
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
@@ -8971,7 +8987,8 @@ msgctxt "#19074"
 msgid "Active"
 msgstr "啟動"
 
-#. Label of name edit in PVR timer settings dialog
+#. Label of name edit in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19075"
 msgid "Name"
@@ -9017,7 +9034,8 @@ msgctxt "#19082"
 msgid "Priority"
 msgstr "優先順序"
 
-#. Label of lifetime spinner in PVR timer settings dialog
+#. Label of lifetime selector in PVR timer and recording settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19083"
 msgid "Lifetime"
@@ -9111,8 +9129,9 @@ msgctxt "#19096"
 msgid "\"Smart select\""
 msgstr "\"智選\""
 
-#. label of the help text for the timer name edit field in PVR timer settings
-#. dialog
+#. label of the help text for the name edit field in PVR timer and recording
+#. settings dialog
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19097"
 msgid "Enter the name for the timer"
@@ -9412,6 +9431,15 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "群組"
 
+#. Dialog warning text for lifetime recording setting
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+msgctxt "#19147"
+msgid ""
+"Setting the lifetime of this recording to {0:d} days will immediately expire"
+" the recording, which might result in instant deletion of the recording. "
+"Proceed anyway?"
+msgstr "將錄影檔的存活時間設至 {0:d} 天將會導致立即到期，可能會導致錄影檔遭到刪除。確定要這麼做嗎?"
+
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
@@ -9674,20 +9702,6 @@ msgstr "清除所有相關的數據。"
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "你全部的節目表資料都將被清除。你確定嗎？"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting label
-#: system/settings/settings.xml
-msgctxt "#19189"
-msgid "Continue last channel on startup"
-msgstr "啟動時切換到上次的頻道"
-
-#. pvr settings "automatically start last played channel after Kodi startup"
-#. setting value
-#: system/settings/settings.xml
-msgctxt "#19190"
-msgid "Background"
-msgstr "桌面背景"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10269,12 +10283,6 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "所有頻道"
 
-#. pvr settings 'continue last channel on startup' setting value label.
-#: system/settings/settings.xml
-msgctxt "#19288"
-msgid "Foreground"
-msgstr "前景"
-
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10338,6 +10346,13 @@ msgstr "垂直"
 msgctxt "#19298"
 msgid "Horizontal"
 msgstr "平行"
+
+#. generic "expiration" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/MyPVRRecordings.xml
+msgctxt "#19299"
+msgid "Expires"
+msgstr "到期"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -14791,6 +14806,12 @@ msgid ""
 "make sure this is installed and functioning on your system."
 msgstr "由於載入Java時發生錯誤，目前BD-J選單無法正常運作。請確認您的系統中已安裝Java Runtime Environment 並正確執行。"
 
+#. Body text for the encryption error kaitoast
+#: xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#29805"
+msgid "This Blu-ray disc (or file) is encrypted and can't be played."
+msgstr "此藍光片(或檔案)已被加密，無法播放。"
+
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
 msgid "Radiotext Plus info"
@@ -16279,6 +16300,36 @@ msgctxt "#35104"
 msgid "Pointers"
 msgstr "游標"
 
+#. Heading for buttons mounted on a light gun. Used in the controller mapping
+#. dialog.
+msgctxt "#35105"
+msgid "Light gun"
+msgstr "光線槍"
+
+#. Heading for the button that shoots the lightgun offscreen when pressed.
+#. Used in the controller mapping dialog.
+msgctxt "#35106"
+msgid "Shoot offscreen"
+msgstr "射擊到螢幕以外"
+
+#. Heading for switches found on a game console, such as the Atari 2600. Used
+#. in the controller mapping dialog.
+msgctxt "#35107"
+msgid "Console switches"
+msgstr "平台切換"
+
+#. Heading for buttons that control the game console hardware, such as a
+#. microphone button. Used in the controller mapping dialog.
+msgctxt "#35108"
+msgid "Hardware buttons"
+msgstr "硬體按鍵"
+
+#. Heading for buttons on a numeric keypad (containing 0-9, star and pound).
+#. Used in the controller mapping dialog.
+msgctxt "#35109"
+msgid "Keypad"
+msgstr "小型鍵盤"
+
 #. Name of keyboard category in the settings category window
 #: system/settings/settings.xml
 msgctxt "#35150"
@@ -16379,6 +16430,18 @@ msgstr "設定鍵盤玩家 8"
 msgctxt "#35165"
 msgid "Keyboard player"
 msgstr "鍵盤玩家"
+
+#. Heading for the button that lets the user map any keyboard key. Used in the
+#. controller mapping dialog.
+msgctxt "#35166"
+msgid "All keys"
+msgstr "所有按鍵"
+
+#. Heading for the button that lets the user map individual keyboard keys.
+#. Used in the controller mapping dialog.
+msgctxt "#35167"
+msgid "Single keys"
+msgstr "獨立按鍵"
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -16483,11 +16546,44 @@ msgctxt "#35216"
 msgid "Support add-ons"
 msgstr "支援的附加元件"
 
+#. Dialog text asking user to overwrite their savestate file
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35217"
+msgid ""
+"The savestate can only be loaded with \"{0:s}\". Erase savestate and "
+"continue?"
+msgstr "進度存檔僅能由\"{0:s}\"載入。清除存檔並繼續?"
+
+#. Button to erase the savestate
+#: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
+msgctxt "#35218"
+msgid "Erase savestate"
+msgstr "清除進度存檔"
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
 msgid "Game providers"
 msgstr "遊戲提供者"
+
+#. Title of the game OSD menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35221"
+msgid "Game Menu"
+msgstr "遊戲選單"
+
+#. Label of button in the in-game menu for stopping game playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35222"
+msgid "Exit"
+msgstr "離開"
+
+#. Label of button in the in-game menu for opening the input configuration
+#. window
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35223"
+msgid "Input settings"
+msgstr "輸入設定"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16518,6 +16614,13 @@ msgstr "管理模擬器"
 msgctxt "#35255"
 msgid "Browse all emulators"
 msgstr "瀏覽所有的模擬器"
+
+#. Error message when a game client fails to install when a game is being
+#. launched
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35256"
+msgid "Failed to install add-on."
+msgstr "安裝附加元件失敗"
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17224,6 +17327,12 @@ msgctxt "#36160"
 msgid "Enable VTB hardware decoding of video files."
 msgstr "啟用影片檔案 VTB 硬體解碼。"
 
+#. Description of setting with label #508 "Startup action"
+#: system/settings/settings.xml
+msgctxt "#36161"
+msgid "Select an action Kodi will perform on startup."
+msgstr "選擇Kodi啟動時要執行的動作"
+
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
 #: system/settings/settings.xml
@@ -17643,11 +17752,6 @@ msgid ""
 "Switch to full screen display when starting playback of channels and "
 "recordings."
 msgstr "播放頻道或錄影檔時切換至全螢幕顯示。"
-
-#: system/settings/settings.xml
-msgctxt "#36228"
-msgid "Continue with the last viewed channel on startup."
-msgstr "啟動時切換到上次收看的頻道。"
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18095,6 +18199,12 @@ msgstr "FLAC 壓縮等級，預設為 5。"
 msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "擷取完成後自動退出光碟。"
+
+#. Description of settings category "Interface -> Startup" with label #14224
+#: system/settings/settings.xml
+msgctxt "#36292"
+msgid "This category contains startup settings."
+msgstr "本類別包含啟動的相關設定"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19524,6 +19634,12 @@ msgid ""
 "video is started."
 msgstr "定義3D LUT的解析度。較低解析度可加快預覽的速度，反之則可得到較精確的圖像。相關數據變更或新的影片開始播放時，使用高解析度可能會花幾秒時間作準備。"
 
+#. primaries labels
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36579"
+msgid "UHDTV (BT.2020)"
+msgstr "UHDTV (BT.2020)"
+
 #. Dialog title for 3D LUT file picker
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36580"
@@ -20356,8 +20472,8 @@ msgstr "本區包含媒體播放相關設定。"
 msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
-"collected, stored, shown, and navigated"
-msgstr "本區包含媒體來源及媒體資訊的收集、儲存、顯示及導引等相關設定。"
+"collected, stored, shown and navigated"
+msgstr "包含媒體來源相關的設定與媒體資訊的收集、儲存、顯示及瀏覽"
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -20472,9 +20588,9 @@ msgstr "h264加速"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category contains provides access to the windows for source management "
-"and the Library settings for the databases"
-msgstr "此分類包含來源管理相關的存取及資料庫相關設定"
+"This category provides access to the windows for source management and the "
+"Library settings for the databases"
+msgstr "本類別提供媒體來源管理視窗的使用及資料庫的相關設定"
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -20559,3 +20675,55 @@ msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
 msgstr "啟用UPnp可讓您將資料庫內容串流至UPnP客戶端裝置，並偵測遠端的UPnP伺服器。"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39018"
+msgid "optional"
+msgstr "選用"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39019"
+msgid "installed"
+msgstr "已安裝"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39020"
+msgid "The following additional add-ons will be installed"
+msgstr "以下的附加元件將被安裝"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39021"
+msgid "Proceed with installation?"
+msgstr "要執行安裝嗎?"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39022"
+msgid "({0:s})"
+msgstr "({0:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#39023"
+msgid "({0:s}, {1:s})"
+msgstr "({0:s}, {1:s})"
+
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#39024"
+msgid "Dependencies"
+msgstr "依賴的附加元件"
+
+#: system/settings/settings.xml
+msgctxt "#39100"
+msgid "Perform on startup"
+msgstr "啟動時執行"
+
+#. Startup action option label
+#: system/settings/settings.xml
+msgctxt "#39101"
+msgid "Play TV"
+msgstr "播放電視"
+
+#: system/settings/settings.xml
+msgctxt "#39102"
+msgid "Play Radio"
+msgstr "播放廣播"
