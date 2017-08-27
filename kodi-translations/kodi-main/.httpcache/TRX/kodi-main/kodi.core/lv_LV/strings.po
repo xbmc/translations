@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-08-02 19:25+0000\n"
+"PO-Revision-Date: 2017-08-27 11:53+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Latvian (Latvia) (http://www.transifex.com/teamxbmc/kodi-main/language/lv_LV/)\n"
 "MIME-Version: 1.0\n"
@@ -759,6 +759,7 @@ msgctxt "#180"
 msgid "Duration"
 msgstr "Ilgums"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#181"
 msgid "Select album"
 msgstr "Atlasīt albumu"
@@ -1123,10 +1124,12 @@ msgctxt "#254"
 msgid "DTS capable receiver"
 msgstr "DTS spējīgs atskaņotājs"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "Uzmeklē CD informāciju"
@@ -1405,46 +1408,57 @@ msgctxt "#317"
 msgid "Cleaned database successfully"
 msgstr "Veiksmīgi iztīrīta datubāze"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#318"
 msgid "Cleaning songs..."
 msgstr "Tīra dziesmas..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#319"
 msgid "Error cleaning songs"
 msgstr "Kļūda tīrot dziesmas"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#320"
 msgid "Cleaning artists..."
 msgstr "Tīra izpildītājus..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#321"
 msgid "Error cleaning artists"
 msgstr "Kļūda tīrot izpildītājus"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#322"
-msgid "Cleaning genres..."
-msgstr "Tīra žanrus..."
+msgid "Cleaning genres, roles etc...."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#323"
-msgid "Error cleaning genres"
-msgstr "Kļūda tīrot žanrus"
+msgid "Error cleaning genres, roles etc."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#324"
 msgid "Cleaning paths..."
 msgstr "Tīra ceļus..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#325"
 msgid "Error cleaning paths"
 msgstr "Kļūda tīrot ceļus"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#326"
 msgid "Cleaning albums..."
 msgstr "Tīra albumus..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#327"
 msgid "Error cleaning albums"
 msgstr "Kļūda tīrot albumus"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#328"
 msgid "Writing changes..."
 msgstr "Rakstu izmaiņas..."
@@ -1453,10 +1467,12 @@ msgctxt "#329"
 msgid "Error writing changes"
 msgstr "Kļūda rakstot izmaiņas"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#330"
 msgid "This may take some time..."
 msgstr "Tas var aizņemt kādu laiku..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#331"
 msgid "Compressing database..."
 msgstr "Saspiežu datubāzi..."
@@ -2827,10 +2843,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "Importēt video bibliotēku"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#649"
 msgid "Importing"
 msgstr "Importē"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#650"
 msgid "Exporting"
 msgstr "Eksportē"
@@ -2978,10 +2996,22 @@ msgctxt "#681"
 msgid "Verbose logging for the [B]Webserver[/B] component"
 msgstr ""
 
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#682"
+msgid "Verbose logging for the [B]Database[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#683"
+msgid "Verbose logging of [B]audio/video timing information[/B]"
+msgstr ""
+
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "Uzkopj bibliotēku"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#701"
 msgid "Removing old songs from the library"
 msgstr "Izņem vecas dziesmas no bibliotēkas"
@@ -8362,6 +8392,7 @@ msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr ""
 
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
@@ -9698,6 +9729,19 @@ msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr ""
 
+#. message box text stating that the PVR backend forbids to record a given epg
+#. event.
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19189"
+msgid "The PVR backend does not allow to record this event."
+msgstr ""
+
+#. generic "play program" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19190"
+msgid "Play programme"
+msgstr ""
+
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
 msgid "PVR service"
@@ -9926,12 +9970,6 @@ msgstr "Beidzas ieraksts"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr ""
-
-#. label for PVR settings close channel OSD after channel switch control
-#: system/settings/settings.xml
-msgctxt "#19229"
-msgid "Close channel OSD after switching channels"
-msgstr "Aizvērt kanāla OSD pēc kanālu pārslēgšanas"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -11728,6 +11766,7 @@ msgctxt "#20194"
 msgid "Default provider for artist information"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20195"
 msgid "Change information provider"
 msgstr ""
@@ -14530,18 +14569,6 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr ""
 
-#: xbmc/Application.cpp
-msgctxt "#24133"
-msgid "Failed to load language"
-msgstr ""
-
-#: xbmc/Application.cpp
-msgctxt "#24134"
-msgid ""
-"We were unable to load your configured language. Please check your language "
-"settings."
-msgstr ""
-
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16580,6 +16607,19 @@ msgctxt "#35223"
 msgid "Input settings"
 msgstr ""
 
+#. Label of button in the in-game menu for pausing and resuming playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35224"
+msgid "Pause / Resume"
+msgstr ""
+
+#. Label of button in the in-game menu for changing the video filter (also
+#. called a video shader)
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35225"
+msgid "Video filter"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17671,11 +17711,6 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr ""
-
-#: system/settings/settings.xml
-msgctxt "#36214"
-msgid "Close the on screen display controls after switching channels."
-msgstr "Aizvērt OSD kontroles pēc kanālu pārslēgšanas"
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -19874,6 +19909,52 @@ msgid ""
 "moderate performance impact)."
 msgstr ""
 
+#. Label of a setting, allow the maximum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36621"
+msgid "Maximum protocol version"
+msgstr ""
+
+#. Description of setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36622"
+msgid ""
+"Set the maximum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 or SMBv1 compatibility may be required with older NAS and "
+"Windows shares."
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version" - none
+#. means "no protocol version is forced"
+#: system/settings/settings.xml
+msgctxt "#36623"
+msgid "None"
+msgstr "Nav"
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36624"
+msgid "SMBv1"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36625"
+msgid "SMBv2"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36626"
+msgid "SMBv3"
+msgstr ""
+
+#. Label of a group, that allows configuration of the system SMB client
+#: system/settings/settings.xml
+msgctxt "#36627"
+msgid "Client"
+msgstr "Klients"
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -20454,6 +20535,87 @@ msgstr ""
 #: xbmc/Application.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
+msgstr ""
+
+#. Label for a context submenu entry to change the default addon used to fetch
+#. artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38063"
+msgid "Set default information provider"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific artist, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38064"
+msgid "Set for this artist"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all artists in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38065"
+msgid "Set for all artists shown"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific album, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38066"
+msgid "Set for this album"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all albums in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38067"
+msgid "Set for all albums shown"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all artists shown in node, after #38065
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38068"
+msgid "Use this information provider for all the artists shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all albums shown in node, after #38067
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38069"
+msgid "Use this information provider for all the albums shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default artist
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38070"
+msgid ""
+"Use this information provider for all artists, clearing any previous "
+"settings for specific artists?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default album
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38071"
+msgid ""
+"Use this information provider for all albums, clearing any previous settings"
+" for specific albums?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for all the
+#. artists or albums in the node immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38072"
+msgid "Do you want to refresh information for all these items now?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for the
+#. current artist or album immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38073"
+msgid "Do you want to refresh information for this item now?"
 msgstr ""
 
 #. Description of section #14200 "Player""

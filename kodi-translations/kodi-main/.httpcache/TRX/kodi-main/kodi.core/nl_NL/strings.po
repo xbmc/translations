@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-08-25 04:14+0000\n"
-"Last-Translator: Koos van Klojum\n"
+"PO-Revision-Date: 2017-08-27 11:53+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -773,6 +773,7 @@ msgctxt "#180"
 msgid "Duration"
 msgstr "Tijdsduur"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#181"
 msgid "Select album"
 msgstr "Selecteer album"
@@ -1137,10 +1138,12 @@ msgctxt "#254"
 msgid "DTS capable receiver"
 msgstr "DTS geschikte ontvanger"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "CD-informatie opzoeken"
@@ -1419,46 +1422,57 @@ msgctxt "#317"
 msgid "Cleaned database successfully"
 msgstr "Klaar met bibliotheek opschonen"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#318"
 msgid "Cleaning songs..."
 msgstr "Nummers opschonen..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#319"
 msgid "Error cleaning songs"
 msgstr "Fout tijdens opschonen nummers"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#320"
 msgid "Cleaning artists..."
 msgstr "Artiesten opschonen..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#321"
 msgid "Error cleaning artists"
 msgstr "Fout tijdens opschonen artiesten"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#322"
-msgid "Cleaning genres..."
-msgstr "Genres opschonen..."
+msgid "Cleaning genres, roles etc...."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#323"
-msgid "Error cleaning genres"
-msgstr "Fout tijdens opschonen genres"
+msgid "Error cleaning genres, roles etc."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#324"
 msgid "Cleaning paths..."
 msgstr "Locaties opschonen..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#325"
 msgid "Error cleaning paths"
 msgstr "Fout tijdens opschonen locaties"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#326"
 msgid "Cleaning albums..."
 msgstr "Albums opschonen..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#327"
 msgid "Error cleaning albums"
 msgstr "Fout tijdens opschonen albums"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#328"
 msgid "Writing changes..."
 msgstr "Aanpassingen opslaan..."
@@ -1467,10 +1481,12 @@ msgctxt "#329"
 msgid "Error writing changes"
 msgstr "Fout tijdens opslaan aanpassingen"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#330"
 msgid "This may take some time..."
 msgstr "Een moment geduld a.u.b."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#331"
 msgid "Compressing database..."
 msgstr "Bibliotheek comprimeren..."
@@ -2841,10 +2857,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "Videobibliotheek importeren..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#649"
 msgid "Importing"
 msgstr "Importeren"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#650"
 msgid "Exporting"
 msgstr "Exporteren"
@@ -2992,10 +3010,22 @@ msgctxt "#681"
 msgid "Verbose logging for the [B]Webserver[/B] component"
 msgstr "Uitgebreide logging voor het [B]Webserver[/B] component"
 
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#682"
+msgid "Verbose logging for the [B]Database[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#683"
+msgid "Verbose logging of [B]audio/video timing information[/B]"
+msgstr ""
+
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "Bibliotheek opschonen"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#701"
 msgid "Removing old songs from the library"
 msgstr "Oude nummers uit bibliotheek verwijderen"
@@ -8376,6 +8406,7 @@ msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Geoptimaliseerd"
 
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
@@ -9712,6 +9743,19 @@ msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "Al uw gidsgegevens worden gewist. Weet u het zeker?"
 
+#. message box text stating that the PVR backend forbids to record a given epg
+#. event.
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19189"
+msgid "The PVR backend does not allow to record this event."
+msgstr ""
+
+#. generic "play program" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19190"
+msgid "Play programme"
+msgstr ""
+
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
 msgid "PVR service"
@@ -9940,12 +9984,6 @@ msgstr "Opname voltooid"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Timer verwijderd"
-
-#. label for PVR settings close channel OSD after channel switch control
-#: system/settings/settings.xml
-msgctxt "#19229"
-msgid "Close channel OSD after switching channels"
-msgstr "Sluit OSD van kanaal na wijzigen kanaal"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -11742,6 +11780,7 @@ msgctxt "#20194"
 msgid "Default provider for artist information"
 msgstr "Standaardaanbieder voor artiestinformatie"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20195"
 msgid "Change information provider"
 msgstr "Wijzig informatieaanbieder"
@@ -14544,18 +14583,6 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "Wilt u overschakelen naar deze taal?"
 
-#: xbmc/Application.cpp
-msgctxt "#24133"
-msgid "Failed to load language"
-msgstr "Niet gelukt taal te laden"
-
-#: xbmc/Application.cpp
-msgctxt "#24134"
-msgid ""
-"We were unable to load your configured language. Please check your language "
-"settings."
-msgstr "Wij waren niet in staat uw ingestelde taal te laden. Controleer a.u.b. de taalinstellingen"
-
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16594,6 +16621,19 @@ msgctxt "#35223"
 msgid "Input settings"
 msgstr "Input instellingen"
 
+#. Label of button in the in-game menu for pausing and resuming playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35224"
+msgid "Pause / Resume"
+msgstr ""
+
+#. Label of button in the in-game menu for changing the video filter (also
+#. called a video shader)
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35225"
+msgid "Video filter"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17685,11 +17725,6 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "Open de groepsbeheerder, die toestaat wijzigingen van groepen en hun respectievelijke kanalen door te voeren."
-
-#: system/settings/settings.xml
-msgctxt "#36214"
-msgid "Close the on screen display controls after switching channels."
-msgstr "Sluit het controlemenu na een nieuwe kanaalkeuze."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -19888,6 +19923,52 @@ msgid ""
 "moderate performance impact)."
 msgstr "Activeer het omlaag schalen van de hogekwaliteit van afbeeldingen (vraagt meer geheugen en heeft enige impact op de algehele prestatie)."
 
+#. Label of a setting, allow the maximum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36621"
+msgid "Maximum protocol version"
+msgstr ""
+
+#. Description of setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36622"
+msgid ""
+"Set the maximum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 or SMBv1 compatibility may be required with older NAS and "
+"Windows shares."
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version" - none
+#. means "no protocol version is forced"
+#: system/settings/settings.xml
+msgctxt "#36623"
+msgid "None"
+msgstr "Geen"
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36624"
+msgid "SMBv1"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36625"
+msgid "SMBv2"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36626"
+msgid "SMBv3"
+msgstr ""
+
+#. Label of a group, that allows configuration of the system SMB client
+#: system/settings/settings.xml
+msgctxt "#36627"
+msgid "Client"
+msgstr "Client"
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -20469,6 +20550,87 @@ msgstr "Additionele informatie voor albums en artiesten ophalen? Dit kan even du
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Voer de volledige tag scan uit zelfs wanneer de muziekbestanden ongewijzigd zijn?"
+
+#. Label for a context submenu entry to change the default addon used to fetch
+#. artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38063"
+msgid "Set default information provider"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific artist, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38064"
+msgid "Set for this artist"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all artists in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38065"
+msgid "Set for all artists shown"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific album, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38066"
+msgid "Set for this album"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all albums in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38067"
+msgid "Set for all albums shown"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all artists shown in node, after #38065
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38068"
+msgid "Use this information provider for all the artists shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all albums shown in node, after #38067
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38069"
+msgid "Use this information provider for all the albums shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default artist
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38070"
+msgid ""
+"Use this information provider for all artists, clearing any previous "
+"settings for specific artists?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default album
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38071"
+msgid ""
+"Use this information provider for all albums, clearing any previous settings"
+" for specific albums?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for all the
+#. artists or albums in the node immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38072"
+msgid "Do you want to refresh information for all these items now?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for the
+#. current artist or album immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38073"
+msgid "Do you want to refresh information for this item now?"
+msgstr ""
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml

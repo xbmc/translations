@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-08-02 19:25+0000\n"
+"PO-Revision-Date: 2017-08-27 11:53+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/teamxbmc/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -757,6 +757,7 @@ msgctxt "#180"
 msgid "Duration"
 msgstr "재생시간"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#181"
 msgid "Select album"
 msgstr "앨범 선택"
@@ -1121,10 +1122,12 @@ msgctxt "#254"
 msgid "DTS capable receiver"
 msgstr "DTS 지원 리시버"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "CD 정보 가져오기"
@@ -1403,46 +1406,57 @@ msgctxt "#317"
 msgid "Cleaned database successfully"
 msgstr "정상적으로 데이터베이스 정리됨"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#318"
 msgid "Cleaning songs..."
 msgstr "노래 정리 중..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#319"
 msgid "Error cleaning songs"
 msgstr "노래 정리 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#320"
 msgid "Cleaning artists..."
 msgstr "아티스트 정리 중..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#321"
 msgid "Error cleaning artists"
 msgstr "아티스트 정리 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#322"
-msgid "Cleaning genres..."
-msgstr "장르 정리 중..."
+msgid "Cleaning genres, roles etc...."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#323"
-msgid "Error cleaning genres"
-msgstr "장르 정리 오류"
+msgid "Error cleaning genres, roles etc."
+msgstr ""
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#324"
 msgid "Cleaning paths..."
 msgstr "경로 정리 중..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#325"
 msgid "Error cleaning paths"
 msgstr "경로 정리 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#326"
 msgid "Cleaning albums..."
 msgstr "앨범 정리 중..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#327"
 msgid "Error cleaning albums"
 msgstr "앨범 정리 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#328"
 msgid "Writing changes..."
 msgstr "변경 내용 쓰는중..."
@@ -1451,10 +1465,12 @@ msgctxt "#329"
 msgid "Error writing changes"
 msgstr "변경 내용 쓰기 오류"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#330"
 msgid "This may take some time..."
 msgstr "시간이 좀 걸립니다..."
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#331"
 msgid "Compressing database..."
 msgstr "데이터베이스 압축 중..."
@@ -2825,10 +2841,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "비디오 라이브러리 가져오기"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#649"
 msgid "Importing"
 msgstr "가져오기"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#650"
 msgid "Exporting"
 msgstr "내보내기"
@@ -2976,10 +2994,22 @@ msgctxt "#681"
 msgid "Verbose logging for the [B]Webserver[/B] component"
 msgstr "[B]웹서버[/B] 구성 요소 자세히 로깅"
 
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#682"
+msgid "Verbose logging for the [B]Database[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#683"
+msgid "Verbose logging of [B]audio/video timing information[/B]"
+msgstr ""
+
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "라이브러리 정리"
 
+#: xbmc/music/MusicDatabase.cpp
 msgctxt "#701"
 msgid "Removing old songs from the library"
 msgstr "라이브러리에서 오래된 노래 제거"
@@ -8360,6 +8390,7 @@ msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Optimised"
 
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16316"
 msgid "Auto"
@@ -9696,6 +9727,19 @@ msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
 msgstr "모든 편성표 데이터를 초기화합니다. 확실합니까?"
 
+#. message box text stating that the PVR backend forbids to record a given epg
+#. event.
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19189"
+msgid "The PVR backend does not allow to record this event."
+msgstr ""
+
+#. generic "play program" label used in different places
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19190"
+msgid "Play programme"
+msgstr ""
+
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
 msgid "PVR service"
@@ -9924,12 +9968,6 @@ msgstr "녹화 완료"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "타이머 삭제됨"
-
-#. label for PVR settings close channel OSD after channel switch control
-#: system/settings/settings.xml
-msgctxt "#19229"
-msgid "Close channel OSD after switching channels"
-msgstr "채널 변경 후 채널 OSD 닫기"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -11726,6 +11764,7 @@ msgctxt "#20194"
 msgid "Default provider for artist information"
 msgstr "아티스트 정보 기본 제공자"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20195"
 msgid "Change information provider"
 msgstr "정보 제공자 변경"
@@ -14528,18 +14567,6 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "이 언어로 변경하겠습니까?"
 
-#: xbmc/Application.cpp
-msgctxt "#24133"
-msgid "Failed to load language"
-msgstr "언어 불러오기 실패"
-
-#: xbmc/Application.cpp
-msgctxt "#24134"
-msgid ""
-"We were unable to load your configured language. Please check your language "
-"settings."
-msgstr "설정된 언어를 불러올 수 없습니다. 언어 설정을 확인하세요."
-
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16578,6 +16605,19 @@ msgctxt "#35223"
 msgid "Input settings"
 msgstr ""
 
+#. Label of button in the in-game menu for pausing and resuming playback
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35224"
+msgid "Pause / Resume"
+msgstr ""
+
+#. Label of button in the in-game menu for changing the video filter (also
+#. called a video shader)
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35225"
+msgid "Video filter"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17669,11 +17709,6 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "그룹과 해당 채널을 수정하는 그룹 매니저를 엽니다."
-
-#: system/settings/settings.xml
-msgctxt "#36214"
-msgid "Close the on screen display controls after switching channels."
-msgstr "채널 변경 후 화면에 표시되는 채널 컨트롤을 닫습니다."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -19872,6 +19907,52 @@ msgid ""
 "moderate performance impact)."
 msgstr "고품질 다운스케일링을 켭니다. (더 많은 메모리를 사용하므로 성능에 영향을 미칩니다.)"
 
+#. Label of a setting, allow the maximum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36621"
+msgid "Maximum protocol version"
+msgstr ""
+
+#. Description of setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36622"
+msgid ""
+"Set the maximum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 or SMBv1 compatibility may be required with older NAS and "
+"Windows shares."
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version" - none
+#. means "no protocol version is forced"
+#: system/settings/settings.xml
+msgctxt "#36623"
+msgid "None"
+msgstr "사용 안 함"
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36624"
+msgid "SMBv1"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36625"
+msgid "SMBv2"
+msgstr ""
+
+#. Values for setting with label #36621 "Maximum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36626"
+msgid "SMBv3"
+msgstr ""
+
+#. Label of a group, that allows configuration of the system SMB client
+#: system/settings/settings.xml
+msgctxt "#36627"
+msgid "Client"
+msgstr "클라이언트"
+
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
 msgid "movie"
@@ -20452,6 +20533,87 @@ msgstr "앨범과 아티스트의 추가 정보를 가져오겠습니까? 이 �
 #: xbmc/Application.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
+msgstr ""
+
+#. Label for a context submenu entry to change the default addon used to fetch
+#. artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38063"
+msgid "Set default information provider"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific artist, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38064"
+msgid "Set for this artist"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all artists in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38065"
+msgid "Set for all artists shown"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for a
+#. specific album, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38066"
+msgid "Set for this album"
+msgstr ""
+
+#. Label for a context submenu entry to change the information provider for
+#. all albums in node, related to #20195
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38067"
+msgid "Set for all albums shown"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all artists shown in node, after #38065
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38068"
+msgid "Use this information provider for all the artists shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change the information provider
+#. for all albums shown in node, after #38067
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38069"
+msgid "Use this information provider for all the albums shown here?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default artist
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38070"
+msgid ""
+"Use this information provider for all artists, clearing any previous "
+"settings for specific artists?"
+msgstr ""
+
+#. Dialog message asking for confirmation of change to the default album
+#. information provider, after #38063
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38071"
+msgid ""
+"Use this information provider for all albums, clearing any previous settings"
+" for specific albums?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for all the
+#. artists or albums in the node immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38072"
+msgid "Do you want to refresh information for all these items now?"
+msgstr ""
+
+#. Dialog message asking for confirmation to get additional info for the
+#. current artist or album immediately
+#: xbmc/music/windows/GUIWindowMusicNav.cpp
+msgctxt "#38073"
+msgid "Do you want to refresh information for this item now?"
 msgstr ""
 
 #. Description of section #14200 "Player""
