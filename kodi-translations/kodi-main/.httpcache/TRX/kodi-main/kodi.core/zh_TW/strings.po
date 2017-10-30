@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-22 06:17+0000\n"
+"PO-Revision-Date: 2017-10-30 05:51+0000\n"
 "Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -6125,6 +6125,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "啟動裝置"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "音量"
@@ -8322,6 +8324,31 @@ msgid ""
 " this message."
 msgstr "至少一個檔案刪除失敗。更多關於這個錯誤的資訊請查看日誌。"
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr "像素鋸齒"
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr "平滑處理"
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr "如實顯示遊戲像素，不做修正"
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr "將相鄰的像素作漸進融合處理，以消除鋸齒邊緣"
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9612,12 +9639,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "隱藏影片資訊顯示區"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "開始播放時超時"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9689,11 +9710,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "選單/播放工具列"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "顯示日數"
+msgid "Future days to display"
+msgstr "顯示未來天數"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9975,6 +9996,12 @@ msgstr "錄影已完成"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "計時器已刪除"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "顯示過去天數"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -11081,7 +11108,7 @@ msgstr "橫幅圖"
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
-msgstr "海報圖"
+msgstr "主題放大橫列海報"
 
 msgctxt "#20023"
 msgid "Conflict"
@@ -14713,7 +14740,7 @@ msgstr "正在執行"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24995"
 msgid "Orphaned"
-msgstr "變孤兒了的"
+msgstr "無主"
 
 #: system/settings/settings.xml
 msgctxt "#24996"
@@ -15882,6 +15909,18 @@ msgstr "96.0"
 msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr "352.8"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr "384.0"
 
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
@@ -17742,9 +17781,15 @@ msgid ""
 msgstr "此分類包含電子節目表(EPG)的設定。"
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "從後端擷取過去幾天的資料，並顯示在節目表中"
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "設定要在節目表中顯示及從後端匯入資料的天數"
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "從後端擷取未來幾天的資料，並顯示在節目表中"
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17794,13 +17839,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "在編碼格式資料視窗中顯示訊號品質資訊(前提是附加元件及後端要支援)。"
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "設定從切換頻道到開始接收頻道內容的間隔時間。此功能在OTA頻道偶發訊號不穩定時很有用。"
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -19860,7 +19898,7 @@ msgid ""
 "Manage modules and support libraries that have been automatically installed "
 "as a dependency to other add-ons. Items listed as \"Orphaned\" are no longer"
 " required by any add-ons and are safe to uninstall."
-msgstr "管理附加元件所自動安裝的相依性模組或函式庫，被列為\"孤兒\"的項目表示不再被任何附加元件需要，可以放心刪除。"
+msgstr "管理附加元件所自動安裝的相依性模組或函式庫，被列為\"無主\"的項目表示不再被任何附加元件需要，可以放心刪除。"
 
 #. Description of setting with label #24994 "Running"
 #: system/settings/settings.xml
@@ -20725,6 +20763,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "如果 EXIF 資訊存在 (日期、時間、使用的相機等等) 的話將會被顯示。"
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "重置接續播放的時間點"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

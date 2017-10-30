@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-23 21:09+0000\n"
+"PO-Revision-Date: 2017-10-14 12:07+0000\n"
 "Last-Translator: ksooo <kai.sommerfeld@gmx.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Videos"
 
 msgctxt "#4"
 msgid "TV guide"
-msgstr "TV-Guide"
+msgstr "Programm-Guide"
 
 #: xbmc/windows/GUIWindowFileManager.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#5"
@@ -433,7 +433,7 @@ msgstr "Verknüpfungen"
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#112"
 msgid "Paused"
-msgstr "Pausiert"
+msgstr "Pause"
 
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#113"
@@ -3422,13 +3422,13 @@ msgstr "Typ"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#804"
 msgid "Search guide for"
-msgstr "Im TV-Guide suchen nach"
+msgstr "Im Programm-Guide suchen nach"
 
 #. Help of 'Guide data title search' edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#805"
 msgid "Enter the search string to use to lookup matching events in the guide"
-msgstr "Zeichenkette, mit der im TV-Guide nach passenden Sendungen gesucht werden soll"
+msgstr "Zeichenkette, mit der im Programm-Guide nach passenden Sendungen gesucht werden soll"
 
 #. Label of "Fulltext search" edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -3526,7 +3526,7 @@ msgstr "Einmalig"
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#821"
 msgid "One time (guide-based)"
-msgstr "Einmalig (TV-Guide-basiert)"
+msgstr "Einmalig (Programm-Guide-basiert)"
 
 #. Representation of a timer rule
 #: xbmc/pvr/addons/PVRClient.cpp
@@ -3538,7 +3538,7 @@ msgstr "Timer-Regel"
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#823"
 msgid "Timer rule (guide-based)"
-msgstr "Timer-Regel (TV-Guide-basiert)"
+msgstr "Timer-Regel (Programm-Guide-basiert)"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -6143,6 +6143,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Gerät verwenden"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Lautstärke"
@@ -8340,6 +8342,31 @@ msgid ""
 " this message."
 msgstr "Mindestens eine Datei konnte nicht gelöscht werden. Für mehr Details Logdatei einsehen."
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr ""
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr ""
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr ""
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr ""
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -8569,7 +8596,7 @@ msgstr "Nach Ähnlichem suchen"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
-msgstr "TV-Guide wird von den Clients importiert"
+msgstr "Programm-Guide wird von den PVR-Clients importiert"
 
 #. used by several skins
 msgctxt "#19005"
@@ -8728,7 +8755,7 @@ msgstr "Keine Suchergebnisse vorhanden"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19028"
 msgid "No guide entries"
-msgstr "Keine TV-Guide-Einträge"
+msgstr "Keine Programm-Guide-Einträge"
 
 #. generic 'channel' label used in different places
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
@@ -8870,7 +8897,7 @@ msgstr "Informationen zur Sendung"
 #: system/settings/settings.xml xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19048"
 msgid "Group manager"
-msgstr "Gruppen-Manager"
+msgstr "Kanalgruppen-Manager"
 
 #: @@@ unused?
 msgctxt "#19049"
@@ -9004,7 +9031,7 @@ msgstr "Aufnahme-Einstellungen"
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19069"
 msgid "Guide"
-msgstr "Guide"
+msgstr "Programm-Guide"
 
 #. Label for epg grid window "jump to now" (current epg events) context menu
 #. entry
@@ -9113,7 +9140,7 @@ msgstr "Sofortaufnahme-Aktion"
 #: system/settings/settings.xml
 msgctxt "#19087"
 msgid "Record current show (if guide data available)"
-msgstr "Aktuelle Sendung aufnehmen (wenn Guide-Daten verfügbar)"
+msgstr "Aktuelle Sendung aufnehmen (wenn Programm-Guide-Daten verfügbar)"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
@@ -9426,7 +9453,7 @@ msgstr "Kanal nicht verfügbar"
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19137"
 msgid "No groups defined. Please create a group first"
-msgstr "Es sind keine Gruppen angelegt. Bitte zuerst eine Gruppe erstellen"
+msgstr "Es sind keine Kanalgruppen angelegt. Bitte zuerst eine Gruppe erstellen."
 
 #. Label of timer rules tv/radio home submenu item
 #: addons/skin.estuary/xml/Variables.xml
@@ -9438,7 +9465,7 @@ msgstr "Timer-Regeln"
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19139"
 msgid "Name of the new group"
-msgstr "Name der neuen Gruppe"
+msgstr "Name der neuen Kanalgruppe"
 
 #. PVR search window 'search' list item label
 #: xbmc/pvr/windows/GUIWindowPVRSearch.cpp
@@ -9453,22 +9480,22 @@ msgstr "Suchen..."
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19141"
 msgid "Group"
-msgstr "Gruppe"
+msgstr "Kanalgruppe"
 
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19142"
 msgid "Search guide"
-msgstr "TV-Guide durchsuchen"
+msgstr "Programm-Guide durchsuchen"
 
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19143"
 msgid "Group management"
-msgstr "Gruppenverwaltung"
+msgstr "Kanalgruppenverwaltung"
 
 #. used by several skins
 msgctxt "#19144"
 msgid "No groups defined"
-msgstr "Keine Gruppen festgelegt"
+msgstr "Keine Kanalgruppen festgelegt"
 
 #. used by several skins
 msgctxt "#19145"
@@ -9478,7 +9505,7 @@ msgstr "Gruppiert"
 #: addons/skin.estuary/xml/DialogPVRChannelsOSD.xml
 msgctxt "#19146"
 msgid "Groups"
-msgstr "Gruppen"
+msgstr "Kanalgruppen"
 
 #. Dialog warning text for lifetime recording setting
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
@@ -9630,12 +9657,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Videoinformationsbox ausblenden"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Zeitüberschreitung beim Starten der Wiedergabe"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9707,11 +9728,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Menü / OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Anzuzeigende Tage"
+msgid "Future days to display"
+msgstr "Anzuzeigende zukünftige Tage"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9738,7 +9759,7 @@ msgctxt "#19186"
 msgid ""
 "All your TV related data (channels, groups, guide) will be cleared. Are you "
 "sure?"
-msgstr "Alle TV-Daten (Kanäle, Gruppen, Guide) werden gelöscht. Fortfahren?"
+msgstr "Alle TV-Daten (Kanäle, Kanalgruppen, Programm-Guide) werden gelöscht. Fortfahren?"
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9750,7 +9771,7 @@ msgstr "Daten werden gelöscht."
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
-msgstr "Alle Guide-Daten werden gelöscht. Fortfahren?"
+msgstr "Alle Programm-Guide-Daten werden gelöscht. Fortfahren?"
 
 #. message box text stating that the PVR backend forbids to record a given epg
 #. event.
@@ -9825,7 +9846,7 @@ msgstr "Kanal-Manager"
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19200"
 msgid "Guide source:"
-msgstr "TV-Guide Quelle:"
+msgstr "Programm-Guide Quelle:"
 
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19201"
@@ -9852,12 +9873,12 @@ msgstr "Neuer Kanal"
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19205"
 msgid "Group management"
-msgstr "Gruppenverwaltung"
+msgstr "Kanalgruppenverwaltung"
 
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19206"
 msgid "Activate guide:"
-msgstr "TV-Guide aktivieren:"
+msgstr "Programm-Guide aktivieren:"
 
 #. used by several skins
 msgctxt "#19207"
@@ -9931,7 +9952,7 @@ msgstr "Alle TV-Kanäle"
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 msgctxt "#19218"
 msgid "Visible"
-msgstr "Sichtbar"
+msgstr "Sichtbare"
 
 #. label for 'ungrouped' control in pvr channel group manager dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
@@ -9955,7 +9976,7 @@ msgstr "Kanalgruppen mit Backend(s) synchronisieren"
 #: addons/skin.estouchy/xml/Includes.xml
 msgctxt "#19222"
 msgid "Guide"
-msgstr "Guide"
+msgstr "Programm-Guide"
 
 #. unused?
 msgctxt "#19223"
@@ -9993,6 +10014,12 @@ msgstr "Aufnahme abgeschlossen"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Timer gelöscht"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "Anzuzeigende vergangene Tage"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -10119,27 +10146,27 @@ msgstr "Kanalfilter"
 #: xbmc/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
-msgstr "TV-Guide wird aus der Datenbank geladen"
+msgstr "Programm-Guide wird aus der Datenbank geladen"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19251"
 msgid "Update guide information"
-msgstr "TV-Guide Informationen aktualisieren"
+msgstr "Programm-Guide Informationen aktualisieren"
 
 #. label for 'update channel epg' confirmation dialog text
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19252"
 msgid "Schedule guide update for this channel?"
-msgstr "TV-Guide Aktualisierung für diesen Kanal anstoßen?"
+msgstr "Programm-Guide Aktualisierung für diesen Kanal anstoßen?"
 
 #. label for notification text stating that an epg data update for a given
 #. channel was started
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19253"
 msgid "Guide update scheduled for channel"
-msgstr "TV-Guide Aktualisierung angestoßen für den Kanal"
+msgstr "Programm-Guide Aktualisierung angestoßen für den Kanal"
 
 #. label for notification text stating that an epg data update for a given
 #. channel failed
@@ -15901,6 +15928,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr ""
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -17693,7 +17732,7 @@ msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend, instead of configuring them "
 "manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr "Kanalnumerierung des Backends benutzen, anstatt diese selbst im Kanal-Manager zu konfigurieren. Funktioniert nur, wenn genau ein PVR-Addon aktiviert ist!"
+msgstr "Kanalnumerierung des Backends benutzen. Funktioniert nur, wenn nicht mehr als ein PVR-Addon aktiviert ist!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -17733,7 +17772,7 @@ msgctxt "#36213"
 msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
-msgstr "Öffnet den Gruppen-Manager. Mit diesem können Gruppen und zugehörige Kanäle bearbeitet werden."
+msgstr "Öffnet den Kanalgruppen-Manager. Mit diesem können Gruppen und zugehörige Kanäle bearbeitet werden."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -17757,41 +17796,47 @@ msgstr "Suche nach fehlenden Kanalsymbolen."
 msgctxt "#36218"
 msgid ""
 "This category contains the electronic programming guide (EPG) settings."
-msgstr "Kategorie mit Einstellungen für den elektronischen Programmführer (EPG, TV-Guide)."
+msgstr "Kategorie mit Einstellungen für den elektronischen Programmführer (EPG, Programm-Guide)."
+
+#: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "Anzahl von vergangenen Tagen, die im Ptramm-Guide angezeigt und entsprechend Daten vom Backend importiert werden sollen.."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Anzahl von Tagen, die im TV-Guide angezeigt und entsprechend Daten vom Backend importiert werden sollen.."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "Anzahl von zukünftigen Tagen, die im Programm-Guide angezeigt und entsprechend Daten vom Backend importiert werden sollen.."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
 msgid "Time between imports of guide data from backends."
-msgstr "Zeitspanne zwischen TV-Guide-Importvorgängen."
+msgstr "Zeitspanne zwischen Programm-Guide-Importvorgängen."
 
 #: system/settings/settings.xml
 msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
-msgstr "Kein TV-Guide-Import während aktiver TV-Wiedergabe, um die CPU-Last zu reduzieren."
+msgstr "Kein Programm-Guide-Import während aktiver Wiedergabe, um die CPU-Last zu reduzieren."
 
 #: system/settings/settings.xml
 msgctxt "#36223"
 msgid ""
 "By default, the guide data is cached in a local database to speed up "
 "importing on startup."
-msgstr "Standardmäßig werden TV-Guide-Daten in einer lokalen Datenbank zwischengespeichert, um den Import beim Systemstart zu beschleunigen."
+msgstr "Standardmäßig werden Programm-Guide-Daten in einer lokalen Datenbank zwischengespeichert, um den Import beim Systemstart zu beschleunigen."
 
 #: system/settings/settings.xml
 msgctxt "#36224"
 msgid ""
 "Hide \"No information available\" labels when no guide data is available for"
 " a channel."
-msgstr "Anzeige \"Keine Informationen verfügbar\" verstecken, wenn für einen Kanal keine TV-Guide-Daten verfügabr sind."
+msgstr "Anzeige \"Keine Informationen verfügbar\" verstecken, wenn für einen Kanal keine Programm-Guide-Daten verfügabr sind."
 
 #: system/settings/settings.xml
 msgctxt "#36225"
 msgid "Delete the cached guide data and reimport it from the backend."
-msgstr "Zwischengespeicherte TV-Guide-Daten löschen und erneut importieren."
+msgstr "Zwischengespeicherte Programm-Guide-Daten löschen und erneut importieren."
 
 #: system/settings/settings.xml
 msgctxt "#36226"
@@ -17812,13 +17857,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Signalqualität im PVR-Informationsfenster anzeigen (wenn von Addon und Backend unterstützt)."
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "Zeit, die auf einen Kanal nach dem Umschalten gewartet werden soll. Nützlich für Kanäle mit schwankender Signalstärke."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -17925,19 +17963,19 @@ msgid ""
 "marked as locked in the channels editor on the general tab. Parental locked "
 "channels can't be played or recorded without entering a pin code, and the "
 "guide information is hidden for those channels."
-msgstr "Fragt nach einem PIN-Code beim Zugriff auf jugendgeschützte Kanäle. Kanäle können im Kanal-Manager als \"gesperrt\" markiert werden. Jugendgeschützte Kanäle können ohne vorherige Eingabe des PIN-Codes weder angesehen noch aufgenommen werden. Außerdem sind die TV-Guide-Informationen für solche Kanäle versteckt."
+msgstr "Fragt nach einem PIN-Code beim Zugriff auf Kanäle mit Kindersicherung. Kanäle können im Kanal-Manager mit einer Kindersicherung versehen werden. Solche Kanäle können ohne vorherige Eingabe des PIN-Codes weder angesehen noch aufgenommen werden. Außerdem sind die Programm-Guide-Informationen für solche Kanäle versteckt."
 
 #: system/settings/settings.xml
 msgctxt "#36249"
 msgid "Enter a new pin code to unlock parental locked channels."
-msgstr "Einen neuen PIN-Code eingeben, um jugendgeschützte Kanäle freizugeben."
+msgstr "Einen neuen PIN-Code eingeben, um Kanäle mit Kindersicherung freizugeben."
 
 #: system/settings/settings.xml
 msgctxt "#36250"
 msgid ""
 "Ask for the pin code again when trying to access a parental locked channel "
 "and the code hasn't been asked for this duration."
-msgstr "Erneut nach dem PIN-Code fragen, wenn versucht wird, auf einen jugendgeschützten Kanal zuzugreifen und während der angegbenen Zeitspanne noch nicht nach dem Code gefragt wurde."
+msgstr "Erneut nach dem PIN-Code fragen, wenn versucht wird, auf einen Kanal mit Kindersicherung zuzugreifen und während der angegbenen Zeitspanne noch nicht nach dem Code gefragt wurde."
 
 #: system/settings/settings.xml
 msgctxt "#36251"
@@ -17973,7 +18011,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Aktion, die auszuführen ist, wenn der Aufnahme-Knopf betätigt wird. [Aktuelle Sendung aufnehmen] nimmt die aktuelle Sendung von \"jetzt\" bis zum Ende der Sendung auf. Wenn aktuell keine Guide-Daten verfügbar sind, wir eine Aufnahme mit der Länge gestartet, die mit \"Sofortaufnahme-Dauer\" festgelegt wurde. [Eine festgelegte Zeit lang aufnehmen] nimmt von \"jetzt\" mit der Länge auf, die mit \"Sofortaufnahme-Dauer\" festgelegt wurde. [Fragen, was getan werden soll] öffnet einen Dialog mit verschiedenen Auswahlmöglichkeiten, z.B. \"Aktuelle Sendung aufnahmen\", \"Nächste Sendung aufnehmen\" und einige Optionen für feste Aufnahmelängen. "
+msgstr "Aktion, die auszuführen ist, wenn der Aufnahme-Knopf betätigt wird. [Aktuelle Sendung aufnehmen] nimmt die aktuelle Sendung von \"jetzt\" bis zum Ende der Sendung auf. Wenn aktuell keine Programm-Guide-Daten verfügbar sind, wir eine Aufnahme mit der Länge gestartet, die mit \"Sofortaufnahme-Dauer\" festgelegt wurde. [Eine festgelegte Zeit lang aufnehmen] nimmt von \"jetzt\" mit der Länge auf, die mit \"Sofortaufnahme-Dauer\" festgelegt wurde. [Fragen, was getan werden soll] öffnet einen Dialog mit verschiedenen Auswahlmöglichkeiten, z.B. \"Aktuelle Sendung aufnahmen\", \"Nächste Sendung aufnehmen\" und einige Optionen für feste Aufnahmelängen. "
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -19102,7 +19140,7 @@ msgid ""
 " options; [Record] Will create a recording timer for the selected item. "
 "[\"Smart select\"] The action is choosen dynamically, depending on whether "
 "the event is in the past, now or in the future."
-msgstr "Legt fest, was passiert, wenn ein Eintrag im TV-Guide ausgewählt wird: [Kontextmenü anzeigen] öffnet ein Kontextmenü, in dem weitere Aktionen ausgewählt werden können; [Zum Kanal wechseln] schaltet umgehend zum entsprechenden Kanal um; [Informationen anzeigen] zeigt eine detaillierte Übersicht mit Handlung und weiteren Optionen an; [Aufnehmen] legt einen Aufnahme-Timer für das ausgewählte Event an. [\"Smart select\"] Die Aktion wird dynamisch festgelegt, abhängig davon, ob das Event in der  Vergangenheit, Gegenwart oder Zukunft ist."
+msgstr "Legt fest, was passiert, wenn ein Eintrag im Programm-Guide ausgewählt wird: [Kontextmenü anzeigen] öffnet ein Kontextmenü, in dem weitere Aktionen ausgewählt werden können; [Zum Kanal wechseln] schaltet umgehend zum entsprechenden Kanal um; [Informationen anzeigen] zeigt eine detaillierte Übersicht mit Handlung und weiteren Optionen an; [Aufnehmen] legt einen Aufnahme-Timer für das ausgewählte Event an. [\"Smart select\"] Die Aktion wird dynamisch festgelegt, abhängig davon, ob das Event in der  Vergangenheit, Gegenwart oder Zukunft ist."
 
 #: system/settings/settings.xml
 msgctxt "#36425"
@@ -20743,6 +20781,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "Wenn EXIF-Informationen existieren (Datum, Zeit, verwendete Kamera, etc.), werden diese angezeigt."
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "Gespeicherte Position zurücksetzen"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

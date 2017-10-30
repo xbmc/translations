@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-23 21:10+0000\n"
+"PO-Revision-Date: 2017-10-04 21:26+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -6127,6 +6127,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "启用设备"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "音量"
@@ -8324,6 +8326,31 @@ msgid ""
 " this message."
 msgstr "至少一个文件删除失败。更多相关信息见日志。"
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr ""
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr ""
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr ""
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr ""
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9614,12 +9641,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "隐藏视频信息框"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "开始播放时超时"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9691,11 +9712,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "菜单/OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "显示日"
+msgid "Future days to display"
+msgstr ""
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9977,6 +9998,12 @@ msgstr "录像已完成"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "定时器已删除"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr ""
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -15885,6 +15912,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr ""
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -17744,9 +17783,15 @@ msgid ""
 msgstr "此功能区包含电子节目单（EPG）设置。"
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "指南中显示的天数及从后端导入数据天数。"
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17796,13 +17841,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "在编码信息窗显示信号质量信息（如果插件和后端支持）。"
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "切换频道后等待接收频道的时间。用于无线频道偶尔失去信号强度的情况。"
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20727,6 +20765,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "如果存在 EXIF 信息（日期、时间、相机型号等）将会显示出来。"
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#39000"

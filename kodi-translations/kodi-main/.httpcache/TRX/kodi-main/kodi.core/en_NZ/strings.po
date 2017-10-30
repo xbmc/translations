@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-22 06:13+0000\n"
+"PO-Revision-Date: 2017-10-04 21:26+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: English (New Zealand) (http://www.transifex.com/teamxbmc/kodi-main/language/en_NZ/)\n"
 "MIME-Version: 1.0\n"
@@ -6116,6 +6116,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Enable device"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Volume"
@@ -8313,6 +8315,31 @@ msgid ""
 " this message."
 msgstr "Failed to delete at least one file. Check the log for more information about this message."
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr ""
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr ""
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr ""
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr ""
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9603,12 +9630,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Hide video information box"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Timeout when starting playback"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9680,11 +9701,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Menu / OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Days to display"
+msgid "Future days to display"
+msgstr ""
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9966,6 +9987,12 @@ msgstr "Recording completed"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Timer deleted"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr ""
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -15874,6 +15901,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr ""
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -17733,9 +17772,15 @@ msgid ""
 msgstr "This category contains the electronic programming guide (EPG) settings."
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Number of days to show in the guide and import data for from backends."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17785,13 +17830,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Display signal quality information in the codec information window (if supported by the add-on and backend)."
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "Time to wait for a channel to be received after a channel change. Useful for over-the-air channels that occasionally lose signal strength."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20716,6 +20754,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "If EXIF information exists (date, time, camera used, etc.), it will be displayed."
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#39000"

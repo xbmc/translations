@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-15 08:42+0000\n"
+"PO-Revision-Date: 2017-10-17 10:57+0000\n"
 "Last-Translator: Christian <christian_gade@hotmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -2195,7 +2195,7 @@ msgstr "Overordnet lydplads (dB)"
 
 msgctxt "#495"
 msgid "Upscale videos to GUI resolution"
-msgstr "Opskaler videoer til GUI opløsning"
+msgstr "Opskaler videoer til samme opløsning som den grafiske brugerflade"
 
 msgctxt "#496"
 msgid "Calibration"
@@ -4567,7 +4567,7 @@ msgstr "Indstillinger - Skærm"
 
 msgctxt "#10010"
 msgid "Settings - Appearance - GUI calibration"
-msgstr "Indstillinger - Udseende - Kalibrering af GUI"
+msgstr "Indstillinger - Udseende - Kalibrering af den grafiske brugerflade"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -6127,6 +6127,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Tænd enhed"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Lydstyrke"
@@ -7950,7 +7952,7 @@ msgstr "Indlæser..."
 #: system/settings/settings.xml
 msgctxt "#15108"
 msgid "GUI Sounds"
-msgstr "GUI Lyde"
+msgstr "Lyde til den grafiske brugerflade"
 
 msgctxt "#15109"
 msgid "Skin default"
@@ -8323,6 +8325,31 @@ msgid ""
 "Failed to delete at least one file. Check the log for more information about"
 " this message."
 msgstr "Sletningen af mindst én fil mislykkedes. Check loggen for detaljer om denne besked."
+
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr "Pixelere"
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr ""
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr "Viser spilets pixels uden ændringer."
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr "Fjerner de skarpe kanter på pixels ved ensartet fading mellem tilstødende pixels."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -9614,12 +9641,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Skjul infoboks til video"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Tidsfrist for start af afspilning"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9691,11 +9712,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Menu / OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Dage at vise"
+msgid "Future days to display"
+msgstr "Fremtidige dage der vises"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9977,6 +9998,12 @@ msgstr "Optagelse fuldført"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Timeroptagelse slettet"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "Tidligere dage der vises"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -11810,7 +11837,7 @@ msgid ""
 " will override anything you have set in your song tags, such as genres, "
 "year, song artists etc. Useful if you have MusicBrainz identifiers in your "
 "song tags."
-msgstr "Med dette aktiveret, vil alle oplysninger, der er downloadet for albums og kunstnere tilsidesætte det du har angivet i din sang tags, såsom genrer, årstal, sang kunstnere osv. Nyttigt, hvis du har MusicBrainz identifikatorer i din sang tags."
+msgstr "Med dette aktiveret, vil alle oplysninger, der er downloadet for albummer og kunstnere tilsidesætte det du har angivet i din sang tags, såsom genrer, årstal, sang kunstnere osv. Nyttigt, hvis du har MusicBrainz identifikatorer i din sang tags."
 
 #: system/settings/settings.xml
 msgctxt "#20222"
@@ -11946,7 +11973,7 @@ msgstr "Skanner kunstnere med {0:s}"
 
 msgctxt "#20321"
 msgid "Scanning albums using {0:s}"
-msgstr "Skanner albums med {0:s}"
+msgstr "Skanner albummer med {0:s}"
 
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20322"
@@ -12797,7 +12824,7 @@ msgstr "Aktiver support for mus og berøringsfølsomskærm"
 
 msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
-msgstr "Afspil GUI-lyde under afspilning."
+msgstr "Afspil den grafiske brugerflades lyde under afspilning af medier."
 
 msgctxt "#21371"
 msgid "Thumbnail"
@@ -13918,7 +13945,7 @@ msgstr "Mediekilder"
 #: system/settings/settings.xml xbmc/addons/Addon.cpp
 msgctxt "#24006"
 msgid "GUI sounds"
-msgstr "GUI lyde"
+msgstr "Lyde til den grafiske brugerflade"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24007"
@@ -15835,7 +15862,7 @@ msgstr "For at holde visse AVR'er drevet sender vi et uhørbart tilfældigt stø
 #: system/settings/settings.xml
 msgctxt "#34120"
 msgid "Play GUI sounds"
-msgstr "Afspil lyde i brugerfladen"
+msgstr "Afspil lyde i den grafiske brugerflade"
 
 #. play GUI sounds
 #: system/settings/settings.xml
@@ -15884,6 +15911,18 @@ msgstr "96.0"
 msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr "352.8"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr "384.0"
 
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
@@ -17717,7 +17756,7 @@ msgctxt "#36213"
 msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
-msgstr ""
+msgstr "Åbn indstillinger for grupper, for ændring af grupper og deres respektive kanaler."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -17744,9 +17783,15 @@ msgid ""
 msgstr "Kategori indeholdende indstillinger for elektronisk program guide (EPG)."
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "Antal tidligere dage, der vises i guiden og importeres fra backenderne."
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Antal dage, der skal vises i guiden og importeres fra backenden."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "Antal fremtidige dage, der vises i guiden og importeres fra backenderne."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17796,13 +17841,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Vis information om signalkvalitet i codec informationsvinduet (hvis det understøttes af både backend og add-on)."
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -19423,7 +19461,7 @@ msgid ""
 "stereoscopic 3D mode. For video playlists with mixed stereoscopic 3D and 2D "
 "content, then the GUI will also stay in stereoscopic 3D mode even when a "
 "non-stereoscopic 2D video is playing."
-msgstr "[Aktiveret] Skift GUI (og nogle TV) tilbage til 2D-tilstand, mellem videoer i afspilningslisten eller når afspilningen er afsluttet. [CR][Deaktiveret] GUI og TV vil blive i stereoskopisk 3D-tilstand. For videolister med blandede 3D- og 2D-film vil GUI'en forblive i 3D-tilstand selvom 2D-video afspilles."
+msgstr "[Aktiveret] Skift den grafiske brugerflade (og nogle TV) tilbage til 2D-tilstand, mellem videoer i afspilningslisten eller når afspilningen er afsluttet. [CR][Deaktiveret] Den grafiske brugerflade og TV vil blive i stereoskopisk 3D-tilstand. For videolister med blandede 3D- og 2D-film vil den grafiske brugerflade forblive i 3D-tilstand selvom 2D-video afspilles."
 
 #. Description of setting with label #36500 "Stereoscopic mode (current)"
 #: system/settings/settings.xml
@@ -19487,7 +19525,7 @@ msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
-msgstr "Begræns opløsninger af GUI for at spare hukommelse. Har ingen indflydelse på videoafspilning. Genstart påkrævet."
+msgstr "Begrænser opløsningen af den grafiske brugerflade for at spare hukommelse. Har ingen indflydelse på videoafspilning. Genstart påkrævet."
 
 #. Description of setting with label #1268 "iOS 8 compatibility mode"
 #: system/settings/settings.xml
@@ -19515,7 +19553,7 @@ msgid ""
 "stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the "
 "value should be higher for small screens and lower for large screens. Note: "
 "this is not supported by all skins."
-msgstr ""
+msgstr "Definerer styrken af den stereoskopiske 3D-effekt i den grafiske brugerflade. Dette gøres ved at kontrollere dybden af opfattelsen i den grafiske brugerflade, så jo højere værdien er, desto flere elementer kommer ud af skærmen. [Zero] Deaktiverer den stereoskopiske 3D-effekt i den grafiske brugerflade.[CR]For en god visuel oplevelse skal værdien være højere for små skærme og lavere for store skærme. Bemærk: Dette understøttes ikke af alle skins."
 
 #. Description of setting "System -> Video output -> NoOfBuffers" with label
 #. #36043
@@ -20060,7 +20098,7 @@ msgstr "album"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36919"
 msgid "albums"
-msgstr "albums"
+msgstr "albummer"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36920"
@@ -20139,7 +20177,7 @@ msgstr "Aktiver højere farvedybde artwork"
 #: system/settings/rbp.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
-msgstr "Sæt GUI opløsnings grænsen."
+msgstr "Sæt grænsen for opløsning af den grafiske brugerflade"
 
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37022"
@@ -20317,7 +20355,7 @@ msgstr "Vis \"Vis Alle\" "
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Vis \"Alle elementer\" i mappevisning, fx. \"Alle album\" eller \"Alle sæsoner\"."
+msgstr "Vis \"Alle elementer\" i mappevisning, fx. \"Alle albummer\" eller \"Alle sæsoner\"."
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems
@@ -20535,7 +20573,7 @@ msgctxt "#38061"
 msgid ""
 "Fetch additional information for albums and artists? This could take some "
 "time so you may prefer to do this later"
-msgstr ""
+msgstr "Hent yderligere oplysninger til albummer og kunstnere? Dette kan tage lidt tid, så du foretrækker måske at gøre det senere"
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
@@ -20577,7 +20615,7 @@ msgstr "Vælg for dette album"
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
-msgstr "Vælg for alle viste albums"
+msgstr "Vælg for alle viste albummer"
 
 #. Dialog message asking for confirmation of change the information provider
 #. for all artists shown in node, after #38065
@@ -20591,7 +20629,7 @@ msgstr "Anvend denne informationudbyder for alle kunstnerne, der vises her?"
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
 msgctxt "#38069"
 msgid "Use this information provider for all the albums shown here?"
-msgstr "Anvend denne informationsudbyder for alle albums, der vises her?"
+msgstr "Anvend denne informationsudbyder for alle albummer, der vises her?"
 
 #. Dialog message asking for confirmation of change to the default artist
 #. information provider, after #38063
@@ -20609,7 +20647,7 @@ msgctxt "#38071"
 msgid ""
 "Use this information provider for all albums, clearing any previous settings"
 " for specific albums?"
-msgstr ""
+msgstr "Anvend denne informationsudbyder til alle albummer, og samtidig rydde alle tidligere indstillinger for specifikke albummer?"
 
 #. Dialog message asking for confirmation to get additional info for all the
 #. artists or albums in the node immediately
@@ -20645,7 +20683,7 @@ msgctxt "#38102"
 msgid ""
 "Section that contains the settings influencing the GUI experience and for "
 "controlling the GUI/system"
-msgstr ""
+msgstr "Sektion indeholdende indstillinger der påvirker oplevelsen af den grafiske brugerflade, og som kontrollerer systemet for den grafiske brugerflade"
 
 #. Description of category #14210 "Videos"
 #: system/settings/settings.xml
@@ -20727,6 +20765,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "Hvis EXIF information findes (date, time, camera used, etc.), vil den blive vist."
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "Nulstil genoptagelsesposition"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

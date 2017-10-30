@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-29 19:37+0000\n"
+"PO-Revision-Date: 2017-10-30 20:05+0000\n"
 "Last-Translator: Marcin Wójcik\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -6121,6 +6121,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Aktywuj urządzenie"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Głośność"
@@ -6622,7 +6624,7 @@ msgstr "{0:d} minut"
 #: system/settings/settings.xml
 msgctxt "#13556"
 msgid "Skip steps"
-msgstr "Stopnie przeskoku"
+msgstr "Kroki przeskoku"
 
 #. Name of a setting to configure the time to wait for subsequent keypresses
 #. in order to apply additive skipping
@@ -8318,6 +8320,31 @@ msgid ""
 " this message."
 msgstr "Nieudane usuwanie jednego lub więcej plików. Więcej informacji na ten temat znajdziesz w pliku dziennika diagnostycznego."
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr "Zamazany"
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr "Gładki"
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr "Wyświetla piksele gry bez żadnych modyfikacji."
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr "Umożliwia usuwanie poszarpanych krawędzi poprzez rozmazywanie sąsiadujących pikseli."
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9465,7 +9492,7 @@ msgid ""
 "Setting the lifetime of this recording to {0:d} days will immediately expire"
 " the recording, which might result in instant deletion of the recording. "
 "Proceed anyway?"
-msgstr ""
+msgstr "Ustawienie czasu życia tego tego nagrania na {0:d} dni spowoduje natychmiastowe jego przeterminowanie, co może skutkować natychmiastowym usunięciem tego nagrania.Czy kontynuować mimo tego?"
 
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
@@ -9608,12 +9635,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Ukrywaj informacje o wideo"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Limit czasu na uruchomienie odtwarzania"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9685,11 +9706,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Menu ekranowe"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Wyświetlane dni"
+msgid "Future days to display"
+msgstr "Liczba wyświetlanych dni z przyszłości"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9971,6 +9992,12 @@ msgstr "Nagrywanie zakończone"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Usunięto zadanie"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "Liczba wyświetlanych dni z przeszłości"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -15879,6 +15906,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr "352.8"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr "384.0"
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -16575,7 +16614,7 @@ msgctxt "#35217"
 msgid ""
 "The savestate can only be loaded with \"{0:s}\". Erase savestate and "
 "continue?"
-msgstr ""
+msgstr "Zapisany stan może zostać wczytany tylko z \"{0:s}\". Wymazać stan i kontynuować?"
 
 #. Button to erase the savestate
 #: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
@@ -17256,7 +17295,7 @@ msgstr "Jeśli aktywne, filmy należące do \"Serii filmowej\" będą połączon
 #: system/settings/settings.xml
 msgctxt "#36146"
 msgid "Check for new media files on startup."
-msgstr "Umożlwia wyszukiwania nowych plików mediów zaraz po uruchomieniu."
+msgstr "Umożliwia wyszukiwanie nowych plików mediów zaraz po uruchomieniu."
 
 #. Description of setting with label #22001 "Hide progress of library updates"
 #: system/settings/settings.xml
@@ -17278,7 +17317,7 @@ msgctxt "#36149"
 msgid ""
 "Export the video library database to XML files. This will optionally "
 "overwrite your current XML files."
-msgstr "Umożlwiai eksport bazy danych biblioteki wideo do plików XML. Opcjonalnie nadpisuje aktualne pliki XML."
+msgstr "Umożliwia eksport bazy danych biblioteki wideo do plików XML. Opcjonalnie nadpisuje aktualne pliki XML."
 
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
@@ -17738,9 +17777,15 @@ msgid ""
 msgstr "Kategoria zawierająca ustawienia przewodnika programów."
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "Określa liczbę dni z przeszłości wyświetlanych w przewodniku i importowanych z serwerów."
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Określa liczby dni wyświetlanych w widoku przewodnika i importowanych z serwerów telewizji."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "Określa liczbę dni z przyszłości wyświetlanych w przewodniku i importowanych z serwerów."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17790,13 +17835,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Umożliwia wyświetlanie informacji o jakości sygnału w oknie informacji o kodekach (jeśli obsługiwane przez klienta i serwer telewizji)."
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "Określa czas oczekiwania na odbiór transmisji telewizyjnej po zmianie kanału. Użyteczne w przypadki kanałów odbieranych przy pomocy anteny, które mają problem z siłą sygnału."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -19923,7 +19961,7 @@ msgid ""
 "Set the maximum SMB protocol version to negotiate when making connections. "
 "Forcing SMBv2 or SMBv1 compatibility may be required with older NAS and "
 "Windows shares."
-msgstr ""
+msgstr "Określa maksymalną wersję protokołu SMB negocjowaną podczas tworzenia połączenia. Wymuszenie kompatybilności z SMBv2 lub SMBv1 może być wymagane w przypadku starszych serwerów NAS lub udziałów Windows."
 
 #. Values for setting with label #36621 "Maximum protocol version" - none
 #. means "no protocol version is forced"
@@ -20610,7 +20648,7 @@ msgstr "Czy używać tego dostawcy informacji dla wszystkich albumów, czyszczą
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
 msgctxt "#38072"
 msgid "Do you want to refresh information for all these items now?"
-msgstr ""
+msgstr "Czy chcesz teraz odświeżyć informację dla wszystkich tych pozycji?"
 
 #. Dialog message asking for confirmation to get additional info for the
 #. current artist or album immediately
@@ -20631,7 +20669,7 @@ msgctxt "#38101"
 msgid ""
 "Section that contains the settings for sources and how media information is "
 "collected, stored, shown and navigated"
-msgstr ""
+msgstr "Sekcja zawierająca ustawienia źródeł mediów oraz sposobu ich pobierania, składowania i przeglądania."
 
 #. Description of section #14203 "Customise"
 #: system/settings/settings.xml
@@ -20722,6 +20760,12 @@ msgid ""
 "displayed."
 msgstr "Jeśli istnieją informacje EXIF (data, czas, aparat, itp.), to zostaną wyświetlone."
 
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "Wyczyść pozycję wznawiania"
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -20748,7 +20792,7 @@ msgctxt "#39004"
 msgid ""
 "This category provides access to the windows for source management and the "
 "Library settings for the databases"
-msgstr ""
+msgstr "Kategoria zawierająca ustawienia związane z zarządzaniem źród‭łami oraz ustawieniami baz danych biblioteki."
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml

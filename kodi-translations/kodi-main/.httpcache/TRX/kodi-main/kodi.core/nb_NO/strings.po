@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-23 21:09+0000\n"
+"PO-Revision-Date: 2017-10-05 11:27+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/teamxbmc/kodi-main/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr "Videoer"
 
 msgctxt "#4"
 msgid "TV guide"
-msgstr "TV-guide"
+msgstr "Programguide"
 
 #: xbmc/windows/GUIWindowFileManager.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#5"
@@ -2833,7 +2833,7 @@ msgstr "Unngå klippingsbeskyttelse på filer som har blitt utsatt for Replay Ga
 #: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
-msgstr "Stekk 16:9 - ikke-lineær"
+msgstr "Strekk 16:9 - ikke-lineær"
 
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
@@ -3409,13 +3409,13 @@ msgstr "Type"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#804"
 msgid "Search guide for"
-msgstr "Søk i guide etter"
+msgstr "Søk i programguide etter"
 
 #. Help of 'Guide data title search' edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#805"
 msgid "Enter the search string to use to lookup matching events in the guide"
-msgstr "Skriv inn søkestrengen å bruke til å slå opp treff på hendelser i guiden"
+msgstr "Skriv inn søkestrengen å bruke til å slå opp treff på hendelser i programguiden"
 
 #. Label of "Fulltext search" edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -3513,7 +3513,7 @@ msgstr "En gang"
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#821"
 msgid "One time (guide-based)"
-msgstr "En gang (guide-basert)"
+msgstr "Én gang (programguide-basert)"
 
 #. Representation of a timer rule
 #: xbmc/pvr/addons/PVRClient.cpp
@@ -3525,7 +3525,7 @@ msgstr "Tidsursregel"
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#823"
 msgid "Timer rule (guide-based)"
-msgstr "Tidsursregel (guide basert)"
+msgstr "Tidsursregel (programguide-basert)"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -6130,6 +6130,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Aktiver enhet"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Volum"
@@ -8327,6 +8329,31 @@ msgid ""
 " this message."
 msgstr "Klarte ikke å slette minst én fil. Sjekk loggen for mer informasjon om denne meldingen."
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr "Pikseler"
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr "Glatt ut"
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr "Viser spillets piksler uten modifisering"
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr "Fjerner de taggede hjørenene av piksler ved å glatte ut piksler overstående hverandre."
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -8627,7 +8654,7 @@ msgstr "Kryptering"
 #. unused?
 msgctxt "#19016"
 msgid "PVR backend {0:d} - {1:s}"
-msgstr "PVR-bakende {0:d} - {1:s}"
+msgstr "PVR-tjenerdel {0:d} - {1:s}"
 
 #. generic label for pvr recordings used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/Variables.xml
@@ -8796,7 +8823,7 @@ msgstr "Vis signalkvalitet"
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
-msgstr "Ikke støttet av PVR-bakenden."
+msgstr "Ikke støttet av PVR-tjenerdelen."
 
 #. message box text asking for confirmation to hide a channel.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -9100,7 +9127,7 @@ msgstr "Øyeblikkelig opptakshendelse"
 #: system/settings/settings.xml
 msgctxt "#19087"
 msgid "Record current show (if guide data available)"
-msgstr "Ta opp nåværende program (dersom data finnes)"
+msgstr "Ta opp nåværende program (dersom det finnes data i programguide)"
 
 #. Label for "Instant recording action" settings value
 #: system/settings/settings.xml
@@ -9445,7 +9472,7 @@ msgstr "Gruppe"
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19142"
 msgid "Search guide"
-msgstr "Søkeguide"
+msgstr "Søk i programguide"
 
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19143"
@@ -9617,12 +9644,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Skjul videoinformasjonsboks"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Timeout når avspilling starter"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9694,11 +9715,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Meny / OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Hvor mange dager skal vises?"
+msgid "Future days to display"
+msgstr "Fremtidige dager å vise"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9744,7 +9765,7 @@ msgstr "Alle dine data for programguide vil bli slettet. Er du sikker?"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19189"
 msgid "The PVR backend does not allow to record this event."
-msgstr "PVR-bakenden støtter ikke opptak av denne hendelsen."
+msgstr "PVR-tjenerdelen støtter ikke opptak av denne hendelsen."
 
 #. generic "play program" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
@@ -9762,7 +9783,7 @@ msgstr "PVR-tjeneste"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
-msgstr "Ingen av de tilkoblede PVR-bakendene støtter skanning etter kanaler."
+msgstr "Ingen av de tilkoblede PVR-tjenerdelene støtter kanalsøk."
 
 #. error message box text stating that a given pvr channel could not be played
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -9899,7 +9920,7 @@ msgstr "Skriv inn gyldig URL for ny kanal"
 #: xbmc/pvr/windows/GUIWindowsPVRTimersBase.cpp
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
-msgstr "PVR-bakenden støtter ikke tidsur."
+msgstr "PVR-tjenerdelen støtter ikke tidsur."
 
 #. used by several skins
 msgctxt "#19216"
@@ -9980,6 +10001,12 @@ msgstr "Opptak fullført"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Tidsur slettet"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "Tidligere dager å vise"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -10133,7 +10160,7 @@ msgstr "Oppdatering av programguide er planlagt for denne kanalen"
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19254"
 msgid "Guide update failed for channel"
-msgstr "Oppdatering av programguide feilet for kanalen"
+msgstr "Oppdatering av programguide mislyktes for kanalen"
 
 #. for a timer rule, the number of child timers which are currently scheduled
 #. to record. For use in "status" fields.
@@ -10233,13 +10260,13 @@ msgctxt "#19272"
 msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Du trenger en tuner, tilhørende programvare og en utvidelse for KODI for å kunne bruke PVR. Vennligst besøk http://kodi.wiki/view/PVR for å lære mer."
+msgstr "Du trenger en tuner, tilhørende programvare og en utvidelse for KODI for å kunne bruke PVR. Besøk http://kodi.wiki/view/PVR for å lære mer."
 
 #. Settings -> Interface -> Other -> Startup window value
 #: xbmc/addons/Skin.cpp
 msgctxt "#19273"
 msgid "TV guide"
-msgstr "TV-guide"
+msgstr "TV-programguide"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: xbmc/addons/Skin.cpp
@@ -15888,6 +15915,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192,0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr "352.8"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr "384.0"
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -16697,7 +16736,7 @@ msgstr "Tilgang nektet."
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#35509"
 msgid "Connecting to backend."
-msgstr "Kobler til bakende."
+msgstr "Kobler til tjenerdel."
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
@@ -17666,7 +17705,7 @@ msgctxt "#36204"
 msgid ""
 "Import channel groups from the PVR backend (if supported). Will delete user "
 "created groups if they're not found on the backend."
-msgstr "Hent kanalgrupper fra PVR-bakenden (hvis støttet). Dette vil slette brukeropprettede kanalgrupper som ikke eksisterer på bakenden."
+msgstr "Hent kanalgrupper fra PVR-tjenerdelen (hvis støttet). Dette vil slette brukeropprettede kanalgrupper som ikke eksisterer på bakenden."
 
 #: system/settings/settings.xml
 msgctxt "#36205"
@@ -17747,9 +17786,15 @@ msgid ""
 msgstr "Denne kategorien inneholder innstillinger for elektronisk programguide (EPG)."
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "Antall dager å vise i programguide, og for importering fra tjenerdeler."
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Antall dager å vise i programguide og for importerte data fra tjenerdeler."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "Antall fremtidige dager å vise i programguide og for import fra tjenerdeler."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17766,19 +17811,19 @@ msgctxt "#36223"
 msgid ""
 "By default, the guide data is cached in a local database to speed up "
 "importing on startup."
-msgstr "Som standard er data for programguide lagret i en lokal database for å øke hastigheten på import ved oppstart."
+msgstr "Som forvalg er data for programguide lagret i en lokal database for å øke hastigheten på import ved oppstart."
 
 #: system/settings/settings.xml
 msgctxt "#36224"
 msgid ""
 "Hide \"No information available\" labels when no guide data is available for"
 " a channel."
-msgstr "Skjul \"Ingen informasjon tilgjengelig\" etiketter når programguide data ikke er tilgjengelig for en kanal."
+msgstr "Skjul \"Ingen informasjon tilgjengelig\" etiketter når programguide-data ikke er tilgjengelig for en kanal."
 
 #: system/settings/settings.xml
 msgctxt "#36225"
 msgid "Delete the cached guide data and reimport it from the backend."
-msgstr "Slett mellomlagrede data for tv-guide og importer fra tjenerdelen på nytt."
+msgstr "Slett mellomlagrede data fra programguide og importer fra tjenerdelen på nytt."
 
 #: system/settings/settings.xml
 msgctxt "#36226"
@@ -17799,13 +17844,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Vis informasjon om signalkvaliteten i vinduet for kodekinformasjon (hvis støttet av utvidelsen og tjenerdelen)"
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "Tid å vente på at en kanal skal mottas etter en kanalendring. Nyttig for kanaler som sendes over lufta som tidvis mister signalstyrke."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -17912,7 +17950,7 @@ msgid ""
 "marked as locked in the channels editor on the general tab. Parental locked "
 "channels can't be played or recorded without entering a pin code, and the "
 "guide information is hidden for those channels."
-msgstr "Ber om en PIN-kode for å få tilgang til foreldre låste kanaler. Kanaler kan merkes som låst i kanalbehandler under \"Generelt\" kategorien. Foreldre låste kanaler kan ikke spilles eller spilles inn uten å legge inn en pinkode, og programguide informasjonen er skjult for disse kanalene."
+msgstr "Ber om en PIN-kode for å få tilgang til foreldre låste kanaler. Kanaler kan merkes som låst i kanalbehandler under \"Generelt\" kategorien. Foreldre låste kanaler kan ikke spilles eller spilles inn uten å legge inn en PIN-kode, og programguideinformasjonen er skjult for disse kanalene."
 
 #: system/settings/settings.xml
 msgctxt "#36249"
@@ -17960,7 +17998,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Hendelser som oppstår ved trykk på opptaksknappen. [Ta opp gjeldene serie] vil ta opp gjeldende serie fra \"nå\" til serien slutter. Dersom ingen TV-guidedata er tilgjengelig vil en satt lengde opptak starte \"nå\", men verdien satt for \"Øyeblikkelig opptakstid\" vil bli brukt. [Ta opp en satt periode] vil sette en gitt periode som starter \"nå\", med verdien satt til \"Øyeblikkelig opptakstid\". [Spør hva skal gjøres] vil gi en dialogboks med valg om forskjellige hendelser å velge mellom, som \"Ta opp gjeldende serie\", \"Ta opp neste serie\" og noen satte opptaksperioder."
+msgstr "Hendelser som oppstår ved trykk på opptaksknappen. [Ta opp gjeldene serie] vil ta opp gjeldende serie fra \"nå\" til serien slutter. Dersom ingen TV-programguidedata er tilgjengelig vil en satt lengde opptak starte \"nå\", men verdien satt for \"Øyeblikkelig opptakstid\" vil bli brukt. [Ta opp en satt periode] vil sette en gitt periode som starter \"nå\", med verdien satt til \"Øyeblikkelig opptakstid\". [Spør hva skal gjøres] vil gi en dialogboks med valg om forskjellige hendelser å velge mellom, som \"Ta opp gjeldende serie\", \"Ta opp neste serie\" og noen satte opptaksperioder."
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -20730,6 +20768,12 @@ msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
 msgstr "Hvis EXIF-informasjon (dato, tid, kameratype, etc.) eksisterer, vil den bli vist."
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "Tilbakestill posisjon for fortsatt visning"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

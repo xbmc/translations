@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-22 06:17+0000\n"
+"PO-Revision-Date: 2017-10-04 21:26+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Albanian (Albania) (http://www.transifex.com/teamxbmc/kodi-main/language/sq_AL/)\n"
 "MIME-Version: 1.0\n"
@@ -6117,6 +6117,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Aktivoni apartin"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Niveli i zërit"
@@ -8314,6 +8316,31 @@ msgid ""
 " this message."
 msgstr ""
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr ""
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr ""
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr ""
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr ""
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9604,12 +9631,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Fshihni kallëpin e informacioneve mbi video"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Timeout para se të filloje riprodhimi"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9681,10 +9702,10 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr ""
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
+msgid "Future days to display"
 msgstr ""
 
 #. Settings -> Interface -> Other -> Startup window value
@@ -9966,6 +9987,12 @@ msgstr "Përfundoi regjistrimi"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19228"
 msgid "Timer deleted"
+msgstr ""
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
 msgstr ""
 
 #. label for PVR settings no epg updates during playback control
@@ -15875,6 +15902,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr ""
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr ""
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr ""
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -17734,8 +17773,14 @@ msgid ""
 msgstr ""
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
+msgid ""
+"Number of future days to show in the guide and to import from backends."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -17785,13 +17830,6 @@ msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
-msgstr ""
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -20716,6 +20754,12 @@ msgctxt "#38208"
 msgid ""
 "If EXIF information exists (date, time, camera used, etc.), it will be "
 "displayed."
+msgstr ""
+
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
 msgstr ""
 
 #: system/settings/settings.xml

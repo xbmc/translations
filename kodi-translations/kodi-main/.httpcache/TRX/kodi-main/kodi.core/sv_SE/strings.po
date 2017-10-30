@@ -3,6 +3,7 @@
 # Adrian Bara, 2015
 # andbo467 <andbo467@student.liu.se>, 2017
 # andbo467 <andbo467@student.liu.se>, 2017
+# Andreas, 2017
 # Andreas Törner <andreas@torner.se>, 2015
 # sopparus <martin.larsson2@gmail.com>, 2015
 # Berggren <christofer.berggren@gmail.com>, 2015
@@ -29,8 +30,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-23 21:10+0000\n"
-"Last-Translator: andbo467 <andbo467@student.liu.se>\n"
+"PO-Revision-Date: 2017-10-15 21:30+0000\n"
+"Last-Translator: Andreas\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/teamxbmc/kodi-main/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6139,6 +6140,8 @@ msgctxt "#13375"
 msgid "Enable device"
 msgstr "Aktivera enhet"
 
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+#: xbmc/games/dialogs/osd/DialogGameVolume.cpp
 msgctxt "#13376"
 msgid "Volume"
 msgstr "Volym"
@@ -8336,6 +8339,31 @@ msgid ""
 " this message."
 msgstr "Raderingen av en eller flera filer misslyckades. Se loggen för mer information om det här meddelandet."
 
+#. Name of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16296"
+msgid "Pixelate"
+msgstr "Pixelera"
+
+#. Name of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16297"
+msgid "Smooth"
+msgstr "Jämna ut"
+
+#. Description of the video filter that uses jagged pixels without smoothing
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16298"
+msgid "Shows the game's pixels without any modifications."
+msgstr "Visar spelets pixlar utan några förändringar."
+
+#. Description of the video filter that smooths pixels to remove jagged edges
+#: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
+msgctxt "#16299"
+msgid ""
+"Removes the jagged edges of pixels by evenly fading between adjacent pixels."
+msgstr "Döljer pixlarnas ojämna kanter genom att göra en jämn toning mellan intilliggande pixlar."
+
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -9626,12 +9654,6 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Dölj rutan med videoinformation"
 
-#. pvr settings "playback timeout" setting label
-#: system/settings/settings.xml
-msgctxt "#19170"
-msgid "Timeout when starting playback"
-msgstr "Timeout när uppspelning startas"
-
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
 msgctxt "#19171"
@@ -9703,11 +9725,11 @@ msgctxt "#19181"
 msgid "Menu / OSD"
 msgstr "Meny / OSD"
 
-#. pvr settings "epg days to display" setting value
+#. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
 msgctxt "#19182"
-msgid "Days to display"
-msgstr "Dagar att visa"
+msgid "Future days to display"
+msgstr "Kommande dagar att visa"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9989,6 +10011,12 @@ msgstr "Inspelning färdig"
 msgctxt "#19228"
 msgid "Timer deleted"
 msgstr "Timer raderad"
+
+#. pvr settings "past epg days to display" setting value
+#: system/settings/settings.xml
+msgctxt "#19229"
+msgid "Past days to display"
+msgstr "Tidigare dagar att visa"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -15897,6 +15925,18 @@ msgctxt "#34128"
 msgid "192.0"
 msgstr "192.0"
 
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34129"
+msgid "352.8"
+msgstr "352,8"
+
+#. SPDIF max sampling rate
+#: system/settings/settings.xml
+msgctxt "#34130"
+msgid "384.0"
+msgstr "384,0"
+
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
 msgid "Can't find a next item to play"
@@ -17756,9 +17796,15 @@ msgid ""
 msgstr "Denna kategori innehåller inställningar för den elektroniska programguiden (EPG)."
 
 #: system/settings/settings.xml
+msgctxt "#36219"
+msgid "Number of past days to show in the guide and to import from backends."
+msgstr "Antal tidigare dagar att visa i guiden och att importera från backend."
+
+#: system/settings/settings.xml
 msgctxt "#36220"
-msgid "Number of days to show in the guide and import data for from backends."
-msgstr "Antal dagar att visa i guiden och importera data åt från backends"
+msgid ""
+"Number of future days to show in the guide and to import from backends."
+msgstr "Antal kommande dagar att visa i guiden och att importera från backend."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -17808,13 +17854,6 @@ msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Visa information om signalkvalitet i fönstret för codecinformation (om det stöds av tillägget och backenden)."
-
-#: system/settings/settings.xml
-msgctxt "#36230"
-msgid ""
-"Time to wait for a channel to be received after a channel change. Useful for"
-" over-the-air channels that occasionally lose signal strength."
-msgstr "Tid att vänta på en kanal som tas emot efter ett kanalbyte. Användbart för over-the-air kanaler som ibland förlorar signalstyrkan."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20740,6 +20779,12 @@ msgid ""
 "displayed."
 msgstr "Om EXIF-information existerar (datum, tid, kamera, etc.), kommer den att visas."
 
+#. Contextmenu entry to remove the resume point of the currently selected item
+#: xbmc/video/ContextMenus.h
+msgctxt "#38209"
+msgid "Reset resume position"
+msgstr "Nollställ position för återupptagning"
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -20818,7 +20863,7 @@ msgctxt "#39012"
 msgid ""
 "Set the maximum time to wait for the network to come up after starting or "
 "waking up. When time has passed before network is up startup will continue."
-msgstr "Ställ in maximal tid att vänta på att nätverket ska färdigställas, efter uppstartat eller uppvaknande. Om tiden går ut innan nätverket är klart, kommer uppstarten att fortsätta."
+msgstr "Ställ in maximal tid att vänta på att nätverket ska färdigställas efter uppstart eller uppvaknande. Om tiden går ut innan nätverket är klart, kommer uppstarten att fortsätta."
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#39013"
