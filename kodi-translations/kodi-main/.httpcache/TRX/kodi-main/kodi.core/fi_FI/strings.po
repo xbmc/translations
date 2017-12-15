@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-28 14:51+0000\n"
-"Last-Translator: A B\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/teamxbmc/kodi-main/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -390,12 +390,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "Lajittelu: Koko"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "Ei"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "Kyllä"
@@ -731,12 +731,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "Koottu:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "Musiikkityyli"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Tyylilaji"
@@ -794,6 +795,7 @@ msgstr "Haetaan albumia"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "OK"
@@ -847,11 +849,11 @@ msgstr "Valitse elokuva:"
 
 msgctxt "#197"
 msgid "Querying {0:s} information"
-msgstr "Haetaan {0:s}:n tietoja"
+msgstr "Haetaan tietoja lähteestä {0:s}"
 
 msgctxt "#198"
 msgid "Loading movie details"
-msgstr "Noudetaan elokuvan tietoja"
+msgstr "Noudetaan elokuvatietoja"
 
 #: xbmc/addons/Addon.cpp system/settings/settings.xml
 msgctxt "#199"
@@ -983,6 +985,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "Verkkoa ei ole kytketty"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -2105,7 +2116,7 @@ msgstr "Tyyppi"
 
 msgctxt "#468"
 msgid "Move the bar to change the OSD position"
-msgstr "Siirrä kuvaruutuvalikon sijaintia pystysuunnassa"
+msgstr "Muuta kuvaruutuvalikon sijaintia pystysuunnassa"
 
 msgctxt "#469"
 msgid "OSD position"
@@ -2913,6 +2924,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "Voimakkuuden vahvistus"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "Valitse vientikansio"
@@ -3387,6 +3400,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "Internetyhteys"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "Kirjaston päivitys"
@@ -4539,19 +4553,11 @@ msgstr "Tiedostonhallinta"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Asetukset"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "Musiikki"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "Videot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4560,16 +4566,8 @@ msgstr "Järjestelmätiedot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "Asetukset - Yleiset"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "Asetukset - Näyttö"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "Asetukset - Käyttöliittymä - Käyttöliittymän kalibrointi"
+msgid "Settings - Test patterns"
+msgstr "Asetukset - Testikuviot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4577,53 +4575,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "Asetukset - Videot - Kuvaruudun kalibrointi"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "Asetukset - Kuvat"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "Asetukset - Ohjelmat"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "Asetukset - Sää"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "Asetukset - Musiikki"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "Asetukset - Järjestelmä"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "Asetukset - Videot"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "Asetukset - Verkko"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "Asetukset - Käyttöliittymä"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "Skriptit"
+msgid "Settings - Service"
+msgstr "Asetukset - Palvelut"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "Asetukset - Tv"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "Asetukset - Pelit"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4648,13 +4615,29 @@ msgid "Login screen"
 msgstr "Kirjautumisruutu"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "Asetukset - Soitin"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "Asetukset - Media"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "Asetukset - Käyttöliittymä"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Asetukset - Profiilit"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "Palauta"
+msgid "Skin Settings"
+msgstr "Ulkoasun asetukset"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4720,10 +4703,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "Lisää musiikkilähde"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "Lisää kuvalähde"
+msgid "Event log"
+msgstr "Tapahtumaloki"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4761,14 +4744,94 @@ msgid "Edit file source"
 msgstr "Muokkaa tiedostolähdettä"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "Osoitin"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
-msgstr "Kyllä/Ei -dialogi"
+msgid "Yes / No dialog"
+msgstr "Kyllä / Ei -dialogi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
-msgstr "Tila -dialogi"
+msgid "Progress dialog"
+msgstr "Edistymisdialogi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "Virtuaalinäppäimistö"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "Äänenvoimakkuuspalkki"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "Sisältövalikko"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "Ilmoitusdialogi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "Numeronäppäimistö"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr "Peliohjain"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "Sammutusvalikko"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "Toistosäätimet"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "Hakupalkki"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "Soittimen tiedot"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "Musiikin kuvaruutuvalikko"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "Visualisoinnin esiasetuslista"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "Kuvaruutuvalikon videoasetukset"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "Kuvaruutuvalikon ääniasetukset"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "Videokirjanmerkit"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4807,8 +4870,8 @@ msgstr "Suosikit"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "Kappale / Info"
+msgid "Song info"
+msgstr "Kappaletiedot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4822,8 +4885,8 @@ msgstr "Älykkään toistolistan ehtojen muokkaus"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "Kuvat / Info"
+msgid "Picture info"
+msgstr "Kuvatiedot"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4831,9 +4894,59 @@ msgid "Add-on settings"
 msgstr "Lisäosan asetukset"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "Kokoruudun tiedot"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "Liukupalkki"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "Lisäosat / Info"
+msgid "Add-on info"
+msgstr "Lisäosatiedot"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "Tekstiselain"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "Oheislaiteasetukset"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "Laajennettu edistymisdialogi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "Mediasuodatin"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "Tekstityshaku"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "Äänen DSP-hallinta"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "Kuvaruutuvalikon ääni- ja DSP-asetukset"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "Kuvaruutuvalikon CMS-asetukset"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4857,8 +4970,8 @@ msgstr "Aloitetaan siirtoa"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "Musiikki / Soittolista"
+msgid "Music playlist"
+msgstr "Musiikkitoistolista"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4867,8 +4980,8 @@ msgstr "Musiikki"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
-msgstr "Toistolistojen muokkaus"
+msgid "Music playlist editor"
+msgstr "Musiikkitoistolistan muokkaus"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -4925,29 +5038,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "Elokuvatiedot"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "Teksti-tv"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "Ohjelmatiedot"
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "Tallennetiedot"
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr "Ajastusasetukset"
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "Kanavaryhmien hallinta"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "Kanavien hallinta"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "Ohjelmahaku"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "Kanavahaku"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "PVR-päivityksen tila"
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "Kuvaruutuvalikon kanavalista"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "Kuvaruutuvalikon ohjelmaopas"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr "Radion RDS-tiedot"
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr "Tallenneasetukset"
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "Tv-kanavat"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "Tallennetut tv-ohjelmat"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "Tv:n ohjelmaopas"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "Ajastetut tv-ohjelmat"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "Tv-ohjelmahaku"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "Radiokanavat"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "Tallennetut radio-ohjelmat"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "Radion ohjelmaopas"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "Ajastetut radio-ohjelmat"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "Radion ohjelmahaku"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "Tv:n ajastussäännöt"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "Radion ajastussäännöt"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "Kokoruudun tv-lähetys"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "Kokoruudun radio"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "Pelien videosuodatin"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "Pelit"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "Pelien kuvaruutuvalikko"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "Peliohjaimet"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "Pelien videoasetukset"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
-msgstr "Valitse dialogi"
+msgid "Select dialog"
+msgstr "Valintadialogi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "Musiikki / Info"
+msgid "Music info"
+msgstr "Musiikkitiedot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
-msgstr "Dialogi OK"
+msgid "OK dialog"
+msgstr "OK-dialogi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "Videot / Info"
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "Skriptit / Tiedot"
+msgid "Video info"
+msgstr "Videotiedot"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4960,9 +5197,9 @@ msgid "Audio visualisation"
 msgstr "Äänen visualisointi"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "Tiedoston valinta"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "Äänen visualisointi"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5342,6 +5579,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "Kokoruudun kuvaruutuvalikko"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "Kokoruudun peli"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "Käynnistys"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5371,6 +5618,21 @@ msgstr "- Tiedoston vähimmäiskesto"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "Sammuta"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "Lisää kuvalähde"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "Palauta"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5718,7 +5980,7 @@ msgstr "Viimeksi ladattu profiili:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -6082,6 +6344,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "Albumitiedot"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "Lisää kirjastoon"
@@ -6323,16 +6586,6 @@ msgstr "Renderöintimenetelmä"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automaattinen tunnistus"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "Yksinkertaiset varjostimet (ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "Edistyneet varjostimet (GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6997,7 +7250,7 @@ msgstr "Kesäaika käytössä"
 #: xbmc/windows/GUIMediaWindow.cpp xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#14076"
 msgid "Add to favourites"
-msgstr "Lisää suosikkeihin"
+msgstr "Lisää suosikiksi"
 
 #: xbmc/windows/GUIMediaWindow.cpp xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#14077"
@@ -7599,7 +7852,7 @@ msgstr "Sijainti ei ole saatavilla"
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15013"
 msgid "What would you like to do with media items from {0:s}"
-msgstr "Mitä haluaisit tehdä kohteen {0:s} medialle"
+msgstr "Mitä tehdään mediatiedoille, jotka viittaavat sijaintiin {0:s}"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15014"
@@ -8245,12 +8498,12 @@ msgstr "Kaikki videot"
 
 msgctxt "#16101"
 msgid "Unwatched"
-msgstr "Katsomattomat"
+msgstr "Ei katsottu"
 
 #: addons/skin.estuary/xml/Home.xml
 msgctxt "#16102"
 msgid "Watched"
-msgstr "Katsotut"
+msgstr "Katsottu"
 
 #. Label for a context menu entry to mark an item as watched
 #: xbmc/music/windows/GUIWindowMusicNav.cpp xbmc/pvr/PVRContextMenus.cpp
@@ -9002,7 +9255,6 @@ msgstr "Kanavalogot"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Tämän ohjelman tallennus on jo käynnissä."
@@ -9113,8 +9365,8 @@ msgstr "Ensimmäinen päivä"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "Tuntematon kanava {0:d}"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9270,22 +9522,23 @@ msgid "Fallback framerate"
 msgstr "Oletusvirkistystaajuus"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "Ajastuksen lisääminen epäonnistui. Katso lokitiedostosta lisätietoja tästä viestistä."
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "Määrittelemätön virhetilanne. Kokeile uudelleen tai katso lokitiedostosta lisätietoja tästä viestistä."
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9609,9 +9862,9 @@ msgstr "Tallenteet"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "Tallennusta ei voitu aloittaa. Katso lokitiedostosta lisätietoja tästä viestistä."
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9642,6 +9895,14 @@ msgstr "Poistetut ja palautettavissa olevat tallenteet"
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Piilota videon tietolaatikko"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -9694,7 +9955,7 @@ msgstr "Toisto"
 #: system/settings/settings.xml
 msgctxt "#19178"
 msgid "Show channel information when switching channels"
-msgstr "Näytä kanavan tiedot kanavavaihdon yhteydessä"
+msgstr "Näytä ohjelmatiedot kanavaa vaihdettaessa"
 
 #. header used in pvr recordings window
 #: xbmc/pvr/windows/GUIWindowPVRRecordings.cpp
@@ -9712,7 +9973,7 @@ msgstr "Tv-kanavat"
 #: system/settings/settings.xml
 msgctxt "#19181"
 msgid "Menu / OSD"
-msgstr "Valikko/OSD"
+msgstr "Valikot"
 
 #. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
@@ -10067,6 +10328,14 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Käynnistää taustasäikeitä"
 
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "Asiakasohjelmien tärkeysjärjestys"
+
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10145,21 +10414,21 @@ msgstr "Päivitä ohjelmaopas"
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19252"
 msgid "Schedule guide update for this channel?"
-msgstr "Ajasta opppaan päivitys tälle kanavalle?"
+msgstr "Haluatko päivittää ohjelmaoppaan tälle kanavalle?"
 
 #. label for notification text stating that an epg data update for a given
 #. channel was started
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19253"
 msgid "Guide update scheduled for channel"
-msgstr "Oppaan päivitys ajastettu kanavalle"
+msgstr "Ohjelmaoppaan päivitys ajastettu kanavalle"
 
 #. label for notification text stating that an epg data update for a given
 #. channel failed
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
 msgctxt "#19254"
 msgid "Guide update failed for channel"
-msgstr "Kanavan ohjelmatietojen päivitys epäonnistui"
+msgstr "Ohjelmaoppaan päivitys epäonnistui kanavalle"
 
 #. for a timer rule, the number of child timers which are currently scheduled
 #. to record. For use in "status" fields.
@@ -10208,6 +10477,14 @@ msgstr "Vaihda PIN-koodi"
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "Lapsilukon hallinta. Syötä PIN-koodi:"
+
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11846,6 +12123,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "Etsi ulkoisia tekstityksiä"
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "Esittäjätietojen kansio"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11870,6 +12153,31 @@ msgstr "Android-valokuvat"
 msgctxt "#20244"
 msgid "Android apps"
 msgstr "Android-sovellukset"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Windowsin musiikkikirjasto"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Windowsin videokirjasto"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Windowsin kuvakirjasto"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Windowsin valokuvakirjasto"
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Windowsin tiedostot"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -12023,6 +12331,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "Käytetäänkö haettaessa tiedosto- vai kansionimiä?"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "Aseta sisältö"
@@ -12086,6 +12395,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "Tv-sarjat"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12138,7 +12448,7 @@ msgstr "Noudetaan tv-sarjan tiedot"
 
 msgctxt "#20354"
 msgid "Fetching episode guide"
-msgstr "Noudetaan jaksojen tietoja"
+msgstr "Noudetaan jaksotietoja"
 
 msgctxt "#20355"
 msgid "Loading information for episodes in directory"
@@ -12255,6 +12565,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "Päivitetäänkö kaikkien jaksojen tiedot?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "Valittu kansio sisältää yhden tv-sarjan"
@@ -12479,6 +12790,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "Fanikuvien kuvaesitys"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Tallennetaanko yhdistettynä tiedostona vai erillisinä?"
@@ -12488,14 +12800,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "Valitse ehtotyyppi"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Yhdistettynä"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "Erillisinä"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "Tallennetaanko pienoiskuvat ja fanitaide?"
@@ -12504,6 +12819,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "Kirjoitetaanko vanhojen päälle?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "Ohita polku kirjastoja päivitettäessä"
@@ -13677,17 +13993,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Esittäjätiedot"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Soittimet"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Syntynyt"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Perustettu"
@@ -13697,12 +14013,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "Teemat"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Lopettanut"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Kuollut"
@@ -14117,7 +14433,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "(poista nykyinen valinta)"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Asenna zip-tiedostosta"
@@ -16630,6 +16946,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "Poista tallennus"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "Tarvittavia tiedostoja ei löytynyt."
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16683,27 +17006,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Muokkaa pelilähdettä"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "Asenna emulaattori"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "Hallitse emulaattoreita"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "Selaa emulaattoreita"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Lisäosan asentaminen epäonnistui"
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "Asennettu"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "Valitse, mitä emulaattoria käytetään {0:s}-tiedoston kanssa"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17330,7 +17657,7 @@ msgstr "Vie videokirjaston tietokanta XML-tiedostoihin. Tämä ylikirjoittaa ole
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
+msgid "Import an XML file into the video library database."
 msgstr "Tuo XML-tiedosto videokirjaston tietokantaan."
 
 #. Description of settings category with label #14086 "Playback"
@@ -17740,6 +18067,14 @@ msgid ""
 msgstr "Tyhjentää kanavien ja ohjelmaoppaan tietokannan, minkä jälkeen tiedot haetaan uudelleen taustaosalta."
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr "Avaa valikon, jonka kautta voit muokata käytössä olevien PVR-asiakasohjelmien tärkeysjärjestystä. Tästä on hyötyä, jos haluat valita minkä taustosan kanavat näkyvät kanavalistassa ylimpänä. Suurempi numero merkitsee korkeampaa tärkeysastetta."
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -18054,14 +18389,14 @@ msgstr "Tätä virkistystaajuutta käytetään, jos kanavan fps-nopeutta ei pyst
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "Vie musiikkikirjaston tietokanta XML-tiedostoihin. Tämä ylikirjoittaa olemassa olevat XML-tiedostot."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "Kirjoittaa musiikkikirjaston tietoja XML- tai NFO-tiedostoihin. Tämä ylikirjoittaa olemassa olevat NFO- ja kuvatiedostot."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
+msgid "Import an XML file into the music library database."
 msgstr "Tuo XML-tiedosto musiikkikirjaston tietokantaan."
 
 #. Description of settings category with label #14086 "Playback"
@@ -18282,6 +18617,14 @@ msgstr "Poista CD automaattisesti kun rippaus on valmis."
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "Tämä kategoria sisältää käynnistysasetukset."
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "Valitse kansio, johon esittäjätiedot (nfo-tiedostot ja kuvat) tallennetaan."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -20127,21 +20470,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(Ohjaajan kommentit 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(Pakotettu)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(Ohjaajan kommentit 2)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20381,7 +20709,7 @@ msgstr "Rajoittaa käyttöliittymän ruudunpäivitysnopeutta (fps) videotoiston 
 #: system/settings/settings.xml
 msgctxt "#38015"
 msgid "Unlimited"
-msgstr "Rajaton"
+msgstr "Rajoittamaton"
 
 #. Used to format framerate values. {0:d} will be replaced with the according
 #. number/integer, like "24 fps", "50 fps"
@@ -20579,42 +20907,42 @@ msgstr "Noudetaanko albumien ja esittäjien lisätietoja? Siinä voi mennä kaua
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Tutkitaanko tagit, vaikka musiikkitiedostoissa ei ole havaittu muutoksia?"
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "Aseta oletustarjoaja"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr "Aseta tälle esittäjälle"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr "Aseta kaikille näkyville esittäjille"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "Aseta tälle albumille"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "Aseta kaikille näkyville albumeille"
@@ -20774,6 +21102,176 @@ msgctxt "#38209"
 msgid "Reset resume position"
 msgstr "Unohda katselutilanne"
 
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "Vie musiikkikirjasto"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "Yhdistetty"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "Erilliset tiedostot"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "Kirjaston kansiot"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "Valitse vientitapa"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "Kohdekansio"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "Vietävät tietotyypit"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "Vie myös kuvat, kuten pienoiskuvat ja fanitaide"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr "Vie myös puutteelliset tiedot (NFO-tiedostomallien luomiseksi)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr "Vie vain kuvat, älä NFO-tiedostoja"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "Korvaa vanhat tiedostot"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "Kappaleiden esittäjät"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "Muut esittäjät"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr "Kirjaston kansoihin vieminen ei ole mahdollista, koska esittäjätietojen kansiota ei ole määritelty"
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "Tietojen vieminen ei ole mahdollista, koska kohdekansiota ei ole olemassa"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "Vie"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr "Onko sinulla paikallisia esittäjätietoja (NFO) ja kuvatiedostoja, joita haluat käyttää? Määritä näiden tietojen sijainti nyt."
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "Aseta musiikkitietojen tarjoajat"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "Aseta albumitietojen tarjoaja"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "Aseta esittäjätietojen tarjoaja"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "Nouda lisätietoja ja kuvia haun aikana"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "Albumitietojen tarjoaja"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "Esittäjätietojen tarjoaja"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "Paikallinen esittäjätietokansio"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "Lisätietojen hakuasetukset"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "Valitse, miten asetuksia käytetään"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "Asetusten käyttötapa"
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -20922,6 +21420,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "Riippuvuudet"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20937,3 +21453,44 @@ msgstr "Katso tv:tä"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "Kuuntele radiota"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "Verkkosijainnin määritys epäonnistui. Annettu polku ei kelpaa."
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-30 05:51+0000\n"
-"Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -386,12 +386,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "排序：大小"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "否"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "是"
@@ -470,19 +470,19 @@ msgstr "確認刪除"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#123"
 msgid "Would you like to copy the selected file(s)?"
-msgstr "你要複製所選的檔案嗎？"
+msgstr "您要複製所選的檔案嗎？"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#124"
 msgid "Would you like to move the selected file(s)?"
-msgstr "你要移動所選的檔案嗎？"
+msgstr "您要移動所選的檔案嗎？"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#125"
 msgid ""
 "Would you like to delete the selected file(s)?[CR]Warning - this action "
 "can't be undone!"
-msgstr "你要刪除所選的檔案嗎？[CR]警告 - 這個動作無法復原!"
+msgstr "您要刪除所選的檔案嗎？[CR]警告 - 這個動作無法復原!"
 
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
@@ -727,12 +727,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "組譯："
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "情境"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "風格"
@@ -790,6 +791,7 @@ msgstr "正在搜尋專輯"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "確定"
@@ -979,6 +981,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "網路未連線"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -1489,7 +1500,7 @@ msgstr "壓縮資料庫錯誤！"
 #: xbmc/music/MusicDatabase.cpp
 msgctxt "#333"
 msgid "Do you want to clean the library?"
-msgstr "你確定要整理資料庫嗎？"
+msgstr "您確定要整理資料庫嗎？"
 
 #: system/settings/settings.xml
 msgctxt "#334"
@@ -1826,7 +1837,7 @@ msgstr "體感溫度"
 #: xbmc/windows/GUIWindowWeather.cpp
 msgctxt "#403"
 msgid "UV index"
-msgstr "紫外線"
+msgstr "紫外線指數"
 
 #: xbmc/windows/GUIWindowWeather.cpp
 msgctxt "#404"
@@ -1964,7 +1975,7 @@ msgstr "偵測不到光碟機"
 #: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
-msgstr "你需要一台光碟機來播放這個視訊"
+msgstr "您需要一台光碟機來播放這個視訊"
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -2575,7 +2586,7 @@ msgstr "已花費日期"
 #: xbmc/utils/SortUtils.cpp
 msgctxt "#578"
 msgid "Artist / Year"
-msgstr "藝人 / 年份"
+msgstr "演出者 / 年份"
 
 msgctxt "#580"
 msgid "Sort direction"
@@ -2909,6 +2920,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "音量放大"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "選擇匯出資料夾"
@@ -2920,7 +2933,7 @@ msgstr "這個檔案已經無法使用。"
 
 msgctxt "#663"
 msgid "Would you like to remove it from the library?"
-msgstr "你要將它從資料庫移除嗎？"
+msgstr "您要將它從資料庫移除嗎？"
 
 msgctxt "#664"
 msgid "Browse for script"
@@ -3191,7 +3204,7 @@ msgstr "映像"
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#750"
 msgid "Are you sure?"
-msgstr "你確定嗎？"
+msgstr "您確定嗎？"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#751"
@@ -3383,6 +3396,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "網際網路訪問"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "資料庫更新"
@@ -3610,7 +3624,7 @@ msgstr "確定刪除本次及之後的所有排程嗎？"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#846"
 msgid "Are you sure you want to delete this timer?"
-msgstr "你確定要刪除這個計時器嗎？"
+msgstr "您確定要刪除這個計時器嗎？"
 
 #. Heading for a dialog for confirming to stop an active recording
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3622,7 +3636,7 @@ msgstr "確認停止錄影"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
-msgstr "你確定要停止這段錄影嗎？"
+msgstr "您確定要停止這段錄影嗎？"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -3666,7 +3680,7 @@ msgctxt "#1002"
 msgid ""
 "The connection to the network location couldn't be established. This could "
 "be due to the network not being connected. Would you like to add it anyway?"
-msgstr "無法與此網路位址建立連結，可能是因為網路中斷，你仍然要增加此位址嗎？"
+msgstr "無法與此網路位址建立連結，可能是因為網路中斷，您仍然要增加此位址嗎？"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -3764,7 +3778,7 @@ msgctxt "#1025"
 msgid ""
 "Couldn't retrieve directory information. This could be due to the network "
 "not being connected. Would you like to add it anyway?"
-msgstr "無法取得目錄資料，可能是因為網路中斷，你仍然要增加此位址嗎？"
+msgstr "無法取得目錄資料，可能是因為網路中斷，您仍然要增加此位址嗎？"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/windows/GUIMediaWindow.cpp
 #: xbmc/windows/GUIWindowFileManager.cpp
@@ -4535,19 +4549,11 @@ msgstr "檔案管理員"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "系統設定"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "音樂"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "視訊"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4556,16 +4562,8 @@ msgstr "系統資訊"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "設定 - 一般"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "設定 - 螢幕"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "設定 - 佈景主題 - 界面校正"
+msgid "Settings - Test patterns"
+msgstr "設定 - 電視檢驗圖"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4573,53 +4571,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "設定 - 視訊 - 螢幕校正"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "設定 - 圖片"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "設定 - 程式"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "設定 - 天氣"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "設定 - 音樂"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "設定 - 系統"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "設定 - 視訊"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "設定 - 網路"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "設定 - 佈景主題"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "腳本"
+msgid "Settings - Service"
+msgstr "設定 - 服務"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "設定 - 電視"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "設定 - 遊戲"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4644,13 +4611,29 @@ msgid "Login screen"
 msgstr "登入畫面"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "設定 - 播放器"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "設定 - 媒體"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "設定 - 介面"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "設定 - 使用者設定檔"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "重置"
+msgid "Skin Settings"
+msgstr "佈景主題設定"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4681,7 +4664,7 @@ msgstr "重設上方的設定為預設值"
 #: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#10042"
 msgid "Are you sure you want to reset the settings in this category?"
-msgstr "你確定要重設該類別下的設定嗎？"
+msgstr "您確定要重設該類別下的設定嗎？"
 
 msgctxt "#10043"
 msgid "Help"
@@ -4716,10 +4699,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "增加音樂來源"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "增加圖片來源"
+msgid "Event log"
+msgstr "事件記錄"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4757,14 +4740,94 @@ msgid "Edit file source"
 msgstr "編輯檔案來源"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "游標"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
-msgstr "確認對話框"
+msgid "Yes / No dialog"
+msgstr "是 / 非 對話框"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
+msgid "Progress dialog"
 msgstr "進度對話框"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "虛擬鍵盤"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "音量條"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "跳出式選單"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "通知對話框"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "數字輸入"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr "遊戲手把輸入"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "關機選單"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "播放器控制"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "搜尋條"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "播放器運作資料"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "音樂播放工具列"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "視覺效果列表"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "影片播放工具列設定"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "音樂播放工具列設定"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "影片書籤"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4803,8 +4866,8 @@ msgstr "我的最愛"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "歌曲/資訊"
+msgid "Song info"
+msgstr "曲目資訊"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4818,8 +4881,8 @@ msgstr "智慧型播放清單規則編輯器"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "圖片/資訊"
+msgid "Picture info"
+msgstr "圖片資訊"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4827,9 +4890,59 @@ msgid "Add-on settings"
 msgstr "附加元件設定"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "全螢幕資訊"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "滑動式對話框"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "附加元件 / 資訊"
+msgid "Add-on info"
+msgstr "附加元件資訊"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "純文字檢視器"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "周邊設備設定"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "延伸進度對話框"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "媒體篩選"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "字幕搜尋"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "音效數位處理器管理"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "播放工具列中的音效數位處理設定"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "播放工具列中的内容管理設定"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4853,8 +4966,8 @@ msgstr "打開串流媒體"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "音樂/播放列表"
+msgid "Music playlist"
+msgstr "音樂播放列表"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4863,8 +4976,8 @@ msgstr "音樂"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
-msgstr "播放列表編輯"
+msgid "Music playlist editor"
+msgstr "音樂播放列表編輯器"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -4921,29 +5034,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "電影資訊"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "電傳聞訊"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "PVR節目表資訊"
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "PVR錄影資訊"
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr "PVR定時器資訊"
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "PVR群組管理"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "PVR頻道管理"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "PVR節目表搜尋"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "PVR頻道掃描"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "PVR更新進度"
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "PVR頻道顯示"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "PVR節目表顯示"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr "PVR廣播RDS資訊"
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr "PVR錄影設定"
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "電視頻道"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "電視節目錄影檔"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "電視節目表"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "電視節目定時器"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "電視節目搜尋"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "廣播電台頻道"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "廣播錄音檔"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "廣播節目表"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "廣播定時器"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "廣播搜尋"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "電視節目定時器規則"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "廣播定時器規則"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "全螢幕直播電視"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "全螢幕廣播"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "遊戲影片濾鏡"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "遊戲"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "遊戲資訊顯示"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "遊戲控制器"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "遊戲影像設定"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
+msgid "Select dialog"
 msgstr "選擇對話框"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "音樂 / 資訊"
+msgid "Music info"
+msgstr "音樂資訊"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
-msgstr "確認對話框"
+msgid "OK dialog"
+msgstr "OK對話框"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "影片 / 資訊"
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "腳本 / 資訊"
+msgid "Video info"
+msgstr "影片資訊"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4956,9 +5193,9 @@ msgid "Audio visualisation"
 msgstr "音效視覺效果"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "檔案堆疊對話框"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "音效視覺效果"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5250,7 +5487,7 @@ msgstr "設為所有媒體類型的預設值"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12377"
 msgid "This will reset any previously saved values. Are you sure?"
-msgstr "將重設之前的設定。你確定嗎？"
+msgstr "將重設之前的設定。您確定嗎？"
 
 #: system/settings/settings.xml
 msgctxt "#12378"
@@ -5338,6 +5575,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "全螢幕播放工具列"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "全螢幕遊戲"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "啟動"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5367,6 +5614,21 @@ msgstr "- 最小媒體檔案長度"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "關機"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "增加圖片來源"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "重置"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5553,7 +5815,7 @@ msgstr "儲存此解析度？"
 #: xbmc/settings/DisplaySettings.cpp
 msgctxt "#13111"
 msgid "Would you like to keep this change?"
-msgstr "你要保留這個修改嗎？"
+msgstr "您要保留這個修改嗎？"
 
 #. unused?
 msgctxt "#13112"
@@ -5630,7 +5892,7 @@ msgctxt "#13141"
 msgid ""
 "If you proceed, you might not be able to control this application any "
 "longer. Are you sure you want to stop the event server?"
-msgstr "本命令執行後，你將不能再控制本應用程式，你確定要停止事件伺服器？"
+msgstr "本命令執行後，您將不能再控制本應用程式，您確定要停止事件伺服器？"
 
 #: xbmc/osx/XBMCHelper.cpp
 msgctxt "#13144"
@@ -5643,7 +5905,7 @@ msgid ""
 "If you are currently using the Apple Remote to control this application, "
 "changing this setting might affect your ability to continue controlling it. "
 "Do you want to proceed?"
-msgstr "如果你目前正在使用 Apple Remote 來控制這個應用程式，修改這個設定可能會讓你無法繼續控制它。你要繼續嗎？"
+msgstr "如果您目前正在使用 Apple Remote 來控制這個應用程式，修改這個設定可能會讓您無法繼續控制它。您要繼續嗎？"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13159"
@@ -5714,7 +5976,7 @@ msgstr "最近載入的設定檔："
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -5918,7 +6180,7 @@ msgstr "音軌命名參數"
 #: unused
 msgctxt "#13308"
 msgid "Do you wish to reboot your system instead of just this application?"
-msgstr "你不重新啟動這個應用程式而選擇重新啟動你的系統嗎？"
+msgstr "您要重啟系統而不是僅重啟此應用程式嗎？"
 
 msgctxt "#13310"
 msgid "Zoom effect"
@@ -6078,6 +6340,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "專輯資訊"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "掃描項目到資料庫"
@@ -6307,7 +6570,7 @@ msgstr "下載中"
 #: system/settings/settings.xml
 msgctxt "#13414"
 msgid "Show song and album artists"
-msgstr "顯示單曲及專輯藝人名"
+msgstr "顯示單曲及專輯演出者名"
 
 #: system/settings/settings.xml
 msgctxt "#13415"
@@ -6319,16 +6582,6 @@ msgstr "渲染模式"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "自動偵測"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "基本著色(ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "高級著色(GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6843,7 +7096,7 @@ msgctxt "#14039"
 msgid ""
 "A restart is required to change your network setup. Would you like to "
 "restart now?"
-msgstr "修改網路設定需要重新啟動。你要現在重新啟動嗎？"
+msgstr "修改網路設定需要重新啟動。您要現在重新啟動嗎？"
 
 #: system/settings/settings.xml
 msgctxt "#14041"
@@ -7595,7 +7848,7 @@ msgstr "無法取得的來源"
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15013"
 msgid "What would you like to do with media items from {0:s}"
-msgstr "你想要對{0:s}媒體黨執行什麼操作？"
+msgstr "您想要對{0:s}媒體檔執行什麼操作？"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15014"
@@ -7823,7 +8076,7 @@ msgctxt "#15079"
 msgid ""
 "You have changed some audio DSP settings.\n"
 "Would you like to keep the new settings?"
-msgstr "你已改變某些數位音效處理器的設定。\n要保留新設定嗎？"
+msgstr "您已改變某些數位音效處理器的設定。\n要保留新設定嗎？"
 
 #. DSP manager dialog context menu entry
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
@@ -7975,35 +8228,35 @@ msgctxt "#15113"
 msgid ""
 "Here you can configure pre-processing modes. This processing stage only "
 "change the input data stream."
-msgstr "你可以在這裡設定前置處理的模式，這個步驟僅改變輸入的資料流。"
+msgstr "您可以在這裡設定前置處理的模式，這個步驟僅改變輸入的資料流。"
 
 #: addons/skin.estuary/xml/DialogAudioDSPManager.xml
 msgctxt "#15114"
 msgid ""
 "Here you can configure an input resampling process. Notice: Only one active "
 "mode is allowed!"
-msgstr "你可以在這裡調整重取樣器的設定。注意：只允許啟用單一模式！"
+msgstr "您可以在這裡調整重取樣器的設定。注意：只允許啟用單一模式！"
 
 #: addons/skin.estuary/xml/DialogAudioDSPManager.xml
 msgctxt "#15115"
 msgid ""
 "Here you can configure master processing modes. Notice: On playback only one"
 " active mode can be selected!"
-msgstr "你可以在這裡設定後製處理的模式。注意：在播放中僅允許啟用單一模式！"
+msgstr "您可以在這裡設定後製處理的模式。注意：在播放中僅允許啟用單一模式！"
 
 #: addons/skin.estuary/xml/DialogAudioDSPManager.xml
 msgctxt "#15116"
 msgid ""
 "Here you can configure a output resampling process. Notice: Only one active "
 "mode is allowed!"
-msgstr "你可以在這裡設定輸出重取樣的處理。注意：只允許啟用單一模式！"
+msgstr "您可以在這裡設定輸出重取樣的處理。注意：只允許啟用單一模式！"
 
 #: addons/skin.estuary/xml/DialogAudioDSPManager.xml
 msgctxt "#15117"
 msgid ""
 "Here you can configure post-processing modes. This processing stage can be "
 "used for equalizing and volume correction..."
-msgstr "你可以在這裡設定後期處理的模式。這個步驟可用來設定等化器及音量的修正..."
+msgstr "您可以在這裡設定後期處理的模式。這個步驟可用來設定等化器及音量的修正..."
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -8824,7 +9077,7 @@ msgstr "PVR 後端不支援。"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19039"
 msgid "Are you sure you want to hide this channel?"
-msgstr "你確定你要隱藏這個頻道嗎？"
+msgstr "您確定要隱藏這個頻道嗎？"
 
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19040"
@@ -8835,13 +9088,13 @@ msgstr "定時"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19041"
 msgid "Are you sure you want to rename this recording?"
-msgstr "你確定你要重新命名這個錄影嗎？"
+msgstr "您確定要重新命名這個錄影嗎？"
 
 #. label for "rename timer" confirmation input dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19042"
 msgid "Are you sure you want to rename this timer?"
-msgstr "你確定要重新命名這個計時器嗎？"
+msgstr "您確定要重新命名這個計時器嗎？"
 
 #. pvr settings "recording" category label
 #: system/settings/settings.xml
@@ -8854,7 +9107,7 @@ msgctxt "#19044"
 msgid ""
 "Please check your configuration. Check the log for more information about "
 "this message."
-msgstr "請檢查你的設定，相關資料請參閱log檔"
+msgstr "請檢查您的設定，相關資料請參閱log檔"
 
 #: @@@ unused?
 msgctxt "#19045"
@@ -8998,7 +9251,6 @@ msgstr "頻道圖示"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "這個事件已經錄製"
@@ -9109,8 +9361,8 @@ msgstr "首日"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "未知的頻道{0:d}"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9266,22 +9518,23 @@ msgid "Fallback framerate"
 msgstr "掉禎"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "無法儲存計時器，相關資料請參閱log檔"
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "發生未知的錯誤。請稍候再試或從日誌查看更多資訊。"
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9351,7 +9604,7 @@ msgstr "避免重複"
 msgctxt "#19122"
 msgid ""
 "This timer is still recording. Are you sure you want to delete this timer?"
-msgstr "這個定時器仍在錄影。你卻掉要刪除這個定時器嗎？"
+msgstr "這個定時器仍在錄影。您確定要刪除這個定時器嗎？"
 
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19123"
@@ -9605,9 +9858,9 @@ msgstr "錄影"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "無法開始錄影，相關資料請參閱log檔"
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9638,6 +9891,14 @@ msgstr "已刪除而且可恢復的錄影"
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "隱藏影片資訊顯示區"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -9741,7 +10002,7 @@ msgctxt "#19186"
 msgid ""
 "All your TV related data (channels, groups, guide) will be cleared. Are you "
 "sure?"
-msgstr "所有的電視相關資料(頻道、群組、節目表)都會被清除，你確定嗎？"
+msgstr "所有的電視相關資料(頻道、群組、節目表)都會被清除，您確定嗎？"
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9753,7 +10014,7 @@ msgstr "清除所有相關的數據。"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
-msgstr "你全部的節目表資料都將被清除。你確定嗎？"
+msgstr "您全部的節目表資料都將被清除。您確定嗎？"
 
 #. message box text stating that the PVR backend forbids to record a given epg
 #. event.
@@ -9965,7 +10226,7 @@ msgctxt "#19223"
 msgid ""
 "No PVR add-on could be enabled. Check your settings or the log for more "
 "information."
-msgstr "沒有可啟用的PVR附加元件。請檢查你的設定或者查閱日誌以取得更多資訊。"
+msgstr "沒有可啟用的PVR附加元件。請檢查您的設定或者查閱日誌以取得更多資訊。"
 
 #. Notification text to announce that a recording was aborted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -10062,6 +10323,14 @@ msgstr "正在從用戶端載入錄影檔"
 msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "開始背景執行緒"
+
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "客戶端優先權"
 
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
@@ -10205,6 +10474,14 @@ msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "家長控制，輸入PIN碼："
 
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
+
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19264"
@@ -10255,7 +10532,7 @@ msgctxt "#19272"
 msgid ""
 "You need a tuner, backend software, and an add-on for the backend to be able"
 " to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "你需要選台器、支援軟體及其附加元件才能使用 PVR。請參考 http://kodi.wiki/view/PVR"
+msgstr "您需要選台器、支援軟體及其附加元件才能使用 PVR。請參考 http://kodi.wiki/view/PVR"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: xbmc/addons/Skin.cpp
@@ -11059,7 +11336,7 @@ msgstr "視訊播放列表"
 
 msgctxt "#20013"
 msgid "Do you wish to launch the game?"
-msgstr "你要執行該遊戲？"
+msgstr "要執行該遊戲嗎？"
 
 msgctxt "#20014"
 msgid "Sort by: Playlist"
@@ -11418,11 +11695,11 @@ msgstr "儲存預設檔變更？"
 
 msgctxt "#20104"
 msgid "Old settings found. Do you want to use them?"
-msgstr "發現舊的設定。你要使用嗎？"
+msgstr "發現舊的設定。您要使用嗎？"
 
 msgctxt "#20106"
 msgid "Old media sources found. Do you want to use them?"
-msgstr "找到舊的媒體來源。你要使用嗎？"
+msgstr "找到舊的媒體來源。您要使用嗎？"
 
 msgctxt "#20107"
 msgid "Separate (locked)"
@@ -11477,7 +11754,7 @@ msgstr "密碼無效"
 
 msgctxt "#20118"
 msgid "This requires the master lock to be set. Would you like to set it now?"
-msgstr "需先設定管理員密碼。你要現在設定嗎？"
+msgstr "需先設定管理員密碼。您要現在設定嗎？"
 
 msgctxt "#20120"
 msgid "Loading program information"
@@ -11540,7 +11817,7 @@ msgstr "移除網路位置"
 
 msgctxt "#20135"
 msgid "Do you want to scan the folder?"
-msgstr "你想掃描這個資料夾？"
+msgstr "要掃描這個資料夾嗎？"
 
 msgctxt "#20136"
 msgid "Memory unit"
@@ -11585,7 +11862,7 @@ msgstr "自動定時關機(分鐘)"
 
 msgctxt "#20146"
 msgid "Started, shutdown in {0:d}m"
-msgstr "以啓動，在{0:d}分鐘後自動關機"
+msgstr "已啓動，在{0:d}分鐘後自動關機"
 
 msgctxt "#20147"
 msgid "Shutdown in 30 minutes"
@@ -11835,12 +12112,18 @@ msgid ""
 " will override anything you have set in your song tags, such as genres, "
 "year, song artists etc. Useful if you have MusicBrainz identifiers in your "
 "song tags."
-msgstr "啟用這個選項後，全部下載的專輯和演出者資訊將會蓋過原本的歌曲標籤，例如類型、年分、歌曲演出者等等。如果你在你的歌曲標籤中帶有 MusicBrainz 識別碼的話將會很有用。"
+msgstr "啟用這個選項後，全部下載的專輯和演出者資訊將會蓋過原本的歌曲標籤，例如類型、年分、歌曲演出者等等。如果您在您的歌曲標籤中帶有 MusicBrainz 識別碼的話將會很有用。"
 
 #: system/settings/settings.xml
 msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "尋找外掛字幕"
+
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "演出者資訊資料夾"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -11867,6 +12150,31 @@ msgctxt "#20244"
 msgid "Android apps"
 msgstr "Android 應用程式"
 
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Windows 音樂資料庫"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Windows 影片資料庫"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Windows 圖片資料庫"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Windows 照片資料庫"
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Windows 文件"
+
 msgctxt "#20250"
 msgid "Party on! (videos)"
 msgstr "派對模式！(視訊)"
@@ -11891,7 +12199,7 @@ msgstr "WebDAV 伺服器 (HTTPS)"
 
 msgctxt "#20255"
 msgid "First logon, edit your profile"
-msgstr "第一次登入，請編輯你的設定檔"
+msgstr "第一次登入，請編輯您的設定檔"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20259"
@@ -12019,6 +12327,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "以檔案或資料夾名稱來搜尋？"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "設定內容"
@@ -12063,7 +12372,7 @@ msgstr "導演"
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#20340"
 msgid "Do you want to remove all items within this path from your library?"
-msgstr "你要從資料庫中移除此路徑下的所有項目嗎？"
+msgstr "您要從資料庫中移除此路徑下的所有項目嗎？"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -12082,6 +12391,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "電視劇"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12251,6 +12561,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "重新整理所有影集資訊？"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "選擇的資料夾包含單一個電視劇"
@@ -12414,7 +12725,7 @@ msgstr "取得劇照"
 
 msgctxt "#20414"
 msgid "Show fanart in video and music libraries"
-msgstr "在影片和音樂資料庫中顯示劇照（藝人照）"
+msgstr "在影片和音樂資料庫中顯示劇照（演出者圖片）"
 
 msgctxt "#20415"
 msgid "Scanning for new content"
@@ -12475,6 +12786,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "劇照幻燈秀"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "匯出成單一或多個檔案？"
@@ -12484,14 +12796,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "選擇規則類型"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "單一檔案"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "多個檔案"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "要匯出縮略圖和劇照嗎？"
@@ -12500,6 +12815,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "覆蓋原檔案?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "資料庫更新時排除的路徑"
@@ -12558,7 +12874,7 @@ msgstr "更新內容"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
-msgstr "你要更新此路徑下的所有項目的資訊嗎？"
+msgstr "您要更新此路徑下的所有項目的資訊嗎？"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20444"
@@ -12578,7 +12894,7 @@ msgstr "找到本地的資料。要忽略並從網際網路更新嗎？"
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20447"
 msgid "Do you want to add the media from this source to your library?"
-msgstr "要將此來源中的媒體檔加入你的資料庫嗎？"
+msgstr "要將此來源中的媒體檔加入您的資料庫嗎？"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20448"
@@ -12594,7 +12910,7 @@ msgstr "無法連接到遠端伺服器"
 msgctxt "#20450"
 msgid ""
 "Unable to connect to remote server. Would you like to continue scanning?"
-msgstr "無法連接到遠端伺服器。你要繼續掃描嗎？"
+msgstr "無法連接到遠端伺服器。您要繼續掃描嗎？"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -13210,7 +13526,7 @@ msgstr "來源速度過慢"
 
 msgctxt "#21455"
 msgid "Read rate too low for continuous playback"
-msgstr "讀取過慢以致無法滿足連續播放的需求"
+msgstr "讀取過慢，無法連續播放"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
@@ -13673,17 +13989,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "演出者資訊"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "樂器"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "出生"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "出道"
@@ -13693,12 +14009,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "主題"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "解散"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "死亡"
@@ -13784,7 +14100,7 @@ msgstr "簡介資料"
 #: system/settings/settings.xml
 msgctxt "#22014"
 msgid "Use dim if paused during video playback"
-msgstr "暫停視訊播放時啟用陰暗效果"
+msgstr "暫停視訊播放時啟用暗化效果"
 
 msgctxt "#22015"
 msgid "All recordings"
@@ -14113,7 +14429,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "（清除目前的設定）"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "從 zip 檔案安裝"
@@ -14202,11 +14518,11 @@ msgstr "正在檢查依賴的附加元件..."
 
 msgctxt "#24059"
 msgid "Would you like to enable this add-on?"
-msgstr "你想要啟用這個附加元件嗎？"
+msgstr "您想要啟用這個附加元件嗎？"
 
 msgctxt "#24060"
 msgid "Would you like to disable this add-on?"
-msgstr "你想要停用這個附加元件嗎？"
+msgstr "您想要停用這個附加元件嗎？"
 
 #: xbmc/addons/RepositoryUpdater.cpp
 msgctxt "#24061"
@@ -14397,7 +14713,7 @@ msgstr "本附加元件已被來源庫標示為損壞"
 #: xbmc/addons/Repository.cpp
 msgctxt "#24097"
 msgid "Would you like to disable it on your system?"
-msgstr "你想要在你的系統上停用嗎？"
+msgstr "您想要在您的系統上停用它嗎？"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#24098"
@@ -14412,12 +14728,12 @@ msgstr "是否要切換到這個佈景主題？"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24100"
 msgid "To use this feature you must download an add-on:"
-msgstr "要使用這項功能你必須下載一個附加元件："
+msgstr "要使用這項功能您必須下載一個附加元件："
 
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24101"
 msgid "Would you like to download this add-on?"
-msgstr "你要下載這個附加元件嗎？"
+msgstr "您要下載這個附加元件嗎？"
 
 #: xbmc/Application.cpp
 msgctxt "#24102"
@@ -14599,7 +14915,7 @@ msgstr "開啟影片中的隱藏式字幕處理。會稍微加重CPU的負擔"
 #: xbmc/addons/LanguageResource.cpp
 msgctxt "#24132"
 msgid "Would you like to switch to this language?"
-msgstr "你想要切換到這個語言嗎？"
+msgstr "您想要切換到這個語言嗎？"
 
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
@@ -15557,17 +15873,17 @@ msgstr "提醒"
 #: Unknown
 msgctxt "#33051"
 msgid "Choose your"
-msgstr "選擇你的"
+msgstr "選擇您的"
 
 #: Unknown
 msgctxt "#33052"
 msgid "Check"
-msgstr "查看你的"
+msgstr "查看您的"
 
 #: Unknown
 msgctxt "#33053"
 msgid "Configure the"
-msgstr "設定你的"
+msgstr "設定您的"
 
 #: xbmc/filesystem/VideoDatabaseDirectory.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
@@ -15578,27 +15894,27 @@ msgstr "季節"
 #: Unknown
 msgctxt "#33055"
 msgid "Use your"
-msgstr "使用你的"
+msgstr "使用您的"
 
 #: Unknown
 msgctxt "#33056"
 msgid "Watch your"
-msgstr "觀看你的"
+msgstr "觀看您的"
 
 #: Unknown
 msgctxt "#33057"
 msgid "Listen to"
-msgstr "聆聽你的"
+msgstr "聆聽您的"
 
 #: Unknown
 msgctxt "#33058"
 msgid "View your"
-msgstr "瀏覽你的"
+msgstr "瀏覽您的"
 
 #: Unknown
 msgctxt "#33059"
 msgid "Configure the"
-msgstr "設定你的"
+msgstr "設定您的"
 
 #: Unknown
 msgctxt "#33060"
@@ -15613,7 +15929,7 @@ msgstr "選單"
 #: Unknown
 msgctxt "#33062"
 msgid "Play the"
-msgstr "播放你的"
+msgstr "播放您的"
 
 #: addons/skin.estuary/xml/Includes.xml
 msgctxt "#33063"
@@ -15628,7 +15944,7 @@ msgstr "編輯"
 #: Unknown
 msgctxt "#33066"
 msgid "About your"
-msgstr "關於你的"
+msgstr "關於您的"
 
 #: Unknown
 msgctxt "#33067"
@@ -15975,7 +16291,7 @@ msgstr "初始化音訊裝置失敗"
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34403"
 msgid "Check your audio settings"
-msgstr "檢查你的音訊設定"
+msgstr "檢查您的音訊設定"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34404"
@@ -16209,7 +16525,7 @@ msgstr "重置控制器設定檔"
 msgctxt "#35061"
 msgid ""
 "Would you like to reset this controller profile for all attached devices?"
-msgstr "你想要重置這個控制器設定檔來重置已連接的設備嗎？"
+msgstr "您想要重置這個控制器設定檔來重置已連接的設備嗎？"
 
 #. Notice that all controller profiles are installed
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16562,7 +16878,7 @@ msgstr "獨立執行的遊戲"
 #: xbmc/addons/Addon.cpp
 msgctxt "#35209"
 msgid "Game resources"
-msgstr "遊戲資源黨"
+msgstr "遊戲資源檔"
 
 #. Dialog title when gameplay fails
 #: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
@@ -16626,6 +16942,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "清除進度存檔"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "找不到所需的檔案。"
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16679,27 +17002,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "編輯遊戲資源檔"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "安裝模擬器"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "管理模擬器"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "瀏覽所有的模擬器"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "安裝附加元件失敗"
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "已安裝"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "選擇 {0:s} 檔案的模擬器"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -16793,7 +17120,7 @@ msgstr "無法偵測CEC連接埠。請手動設定。"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36012"
 msgid "Couldn't initialise the CEC adapter. Please check your settings."
-msgstr "無法初始化 CEC 配接器。請檢查你的設定。"
+msgstr "無法初始化 CEC 配接器。請檢查您的設定。"
 
 #: system/peripherals.xml
 msgctxt "#36015"
@@ -16840,7 +17167,7 @@ msgstr "設定已更新"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36024"
 msgid "Failed to set the new configuration. Please check your settings."
-msgstr "無法套用新的設定。請檢查你的設定。"
+msgstr "無法套用新的設定。請檢查您的設定。"
 
 #: system/peripherals.xml
 msgctxt "#36025"
@@ -17009,13 +17336,13 @@ msgstr "選擇以修改佈景主題特有的設定。這些選項可以用來設
 #: system/settings/settings.xml
 msgctxt "#36105"
 msgid "Change the theme associated with your selected skin."
-msgstr "改變你所選的佈景主題所關連的主題。"
+msgstr "改變您所選的佈景主題所關連的主題。"
 
 #. Description of setting with label #14078 "Colours"
 #: system/settings/settings.xml
 msgctxt "#36106"
 msgid "Change the colours of your selected skin."
-msgstr "改變你所選佈景主題的顏色設定"
+msgstr "改變您所選佈景主題的顏色設定"
 
 #. Description of setting with label #13303 "Fonts"
 #: system/settings/settings.xml
@@ -17116,7 +17443,7 @@ msgstr "如果有多種語系可選擇，則預設使用選用的字幕語系"
 #: system/settings/settings.xml
 msgctxt "#36121"
 msgid "This category contains the settings for how media lists are displayed."
-msgstr "此分類包含媒體黨列表如何被顯示的設定。"
+msgstr "此分類包含媒體檔列表顯示方式的設定。"
 
 #. Description of setting with label #13306 "Show parent folder items"
 #: system/settings/settings.xml
@@ -17184,7 +17511,7 @@ msgctxt "#36130"
 msgid ""
 "Select the screensaver. The \"Dim\" screensaver will be forced when "
 "fullscreen video playback is paused or a dialogue box is active."
-msgstr "選擇螢幕保護程式。當全螢幕播放模式下被暫停或有顯示對話框時，會強制使用\"變暗\"這個螢幕保護程式。"
+msgstr "選擇螢幕保護程式。當全螢幕播放模式下被暫停或有顯示對話框時，會強制使用\"暗化\"這個螢幕保護程式。"
 
 #. #. Description of setting with label #21417 "Settings"
 #: system/settings/settings.xml
@@ -17217,7 +17544,7 @@ msgctxt "#36134"
 msgid ""
 "Dim the display when media is paused. Not valid for the \"Dim\" screensaver "
 "mode."
-msgstr "播放暫停的時候螢幕變暗。使用\"Dim\"螢幕保護程式時將沒有效果。"
+msgstr "播放暫停的時候螢幕變暗。使用\"暗化\"螢幕保護程式時將沒有效果。"
 
 #: system/settings/settings.xml
 msgctxt "#36135"
@@ -17313,7 +17640,7 @@ msgctxt "#36148"
 msgid ""
 "Remove items from your library that can't be found (either renamed, deleted,"
 " or on removable storage that is currently unplugged)."
-msgstr "從你的資料庫中移除找不到的項目 (可能是被改名、刪除、或者存在可移除的裝置中)。"
+msgstr "從您的資料庫中移除找不到的項目 (可能是被改名、刪除、或者存在可移除的裝置中)。"
 
 #. Description of setting with label #647 "Export video library"
 #: system/settings/settings.xml
@@ -17321,13 +17648,13 @@ msgctxt "#36149"
 msgid ""
 "Export the video library database to XML files. This will optionally "
 "overwrite your current XML files."
-msgstr "將影片資料庫匯出成 XML 檔。你可選擇是否覆蓋目前的 XML 檔案。"
+msgstr "將影片資料庫匯出成 XML 檔。您可選擇是否覆蓋目前的 XML 檔案。"
 
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
-msgstr "匯入一個 XML 檔案到影片資料庫中。"
+msgid "Import an XML file into the video library database."
+msgstr "匯入XML檔至影片資料庫"
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -17736,6 +18063,14 @@ msgid ""
 msgstr "刪除頻道及節目表等資料庫項目，然後從後端重新匯入資料"
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr "開啟客戶端優先權可根據您個人喜好調整使用中的PVR客戶端優先權，例如整理數個客戶端的頻道。較高的值表示較高的優先權。"
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -18002,7 +18337,7 @@ msgid ""
 "When enabled, both song and album artists are shown. When disabled, only "
 "album artists are shown and artists that appear only on individual songs "
 "from an album are excluded."
-msgstr "開啟後將同時顯示單曲及專輯的藝人名。關閉時只顯示專輯藝人名，而只出現在專輯中某些單曲的藝人將會被排除。"
+msgstr "開啟後將同時顯示單曲及專輯的演出者名。關閉時只顯示專輯演出者名，而只出現在專輯中某些單曲的演出者將會被排除。"
 
 #. Description of setting with label #20192 "Fetch additional information
 #. during updates"
@@ -18011,7 +18346,7 @@ msgctxt "#36256"
 msgid ""
 "Automatically fetch album and artist information from information providers "
 "when adding songs to the library."
-msgstr "當新增歌曲至資料庫時自動從資訊提供單位抓取專輯及藝人相關資料"
+msgstr "當新增歌曲至資料庫時自動從資訊提供單位抓取專輯及演出者相關資料"
 
 #. Description of setting with label #20193 "Default provider for album
 #. information"
@@ -18050,15 +18385,15 @@ msgstr "啟用時，針對我們無法偵測幀率的串流媒體檔，將會使
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "將音樂資料庫匯出成 XML 檔。你可選擇是否覆蓋目前的 XML 檔案。"
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "將部分的音樂資料庫內容匯出成XML或NFO格式。您可選擇是否覆蓋目前的NFO及圖片類檔案。"
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
-msgstr "匯入一個 XML 檔到你的音樂資料庫。"
+msgid "Import an XML file into the music library database."
+msgstr "將XML檔匯入至音樂資料庫。"
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -18124,7 +18459,7 @@ msgctxt "#36271"
 msgid ""
 "Smoothly fade from one audio track to the next. You can set the amount of "
 "overlap from 1-15 seconds."
-msgstr "歌曲切換時使用淡出與淡入的效果。你可以設定的切換時間範圍為1-15秒。"
+msgstr "歌曲切換時使用淡出與淡入的效果。您可以設定的切換時間範圍為1-15秒。"
 
 #. Description of setting with label #13400 "Crossfade between songs on the
 #. same album"
@@ -18220,7 +18555,7 @@ msgctxt "#36284"
 msgid ""
 "Read the information belonging to an audio CD, like song title and artist, "
 "from the Internet database freedb.org."
-msgstr "從網路資料庫freedb.org讀取音樂CD的歌名及藝人名等資料。"
+msgstr "從網路資料庫freedb.org讀取音樂CD的歌名及演出者名等資料。"
 
 #. Description of setting label #20000 "Saved music folder"
 #: system/settings/settings.xml
@@ -18278,6 +18613,14 @@ msgstr "擷取完成後自動退出光碟。"
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "本類別包含啟動的相關設定"
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "選擇要存放演出者資料(nfo檔及圖片)的資料夾。"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -18410,7 +18753,7 @@ msgctxt "#36323"
 msgid ""
 "Enables the UPnP server. This allows you to stream media in your libraries "
 "to a UPnP client."
-msgstr "啟用 UPnP 服務。此功能可讓你將資料庫內容串流至 UPnP 用戶端。"
+msgstr "啟用 UPnP 服務。此功能可讓您將資料庫內容串流至 UPnP 用戶端。"
 
 #. Description of setting with label #20188 "Announce library updates"
 #: system/settings/settings.xml
@@ -18424,7 +18767,7 @@ msgctxt "#36325"
 msgid ""
 "Enable the UPnP client. This allows you to stream media from any UPnP server"
 " with a control point and control playback from that server."
-msgstr "啟用 UPnP 用戶端。這將允許你從任何 UPnP 伺服器串流媒體且包含播放控制的功能。"
+msgstr "啟用 UPnP 用戶端。這將允許您從任何 UPnP 伺服器串流媒體且包含播放控制的功能。"
 
 #. Description of setting with label #21361 "Look for remote UPnP players"
 #: system/settings/settings.xml
@@ -18654,7 +18997,7 @@ msgctxt "#36357"
 msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
-msgstr "調整視訊畫面的畫寬設定值以校正使用者介面。如果你的影像顯示在顯示器上有太大或太小的情況，請使用這個工具進行調整。"
+msgstr "調整視訊畫面的畫寬設定值以校正使用者介面。如果您的影像顯示在顯示器上有太大或太小的情況，請使用這個工具進行調整。"
 
 #. Description of setting with label #226 "Test patterns..."
 #: system/settings/settings.xml
@@ -18671,7 +19014,7 @@ msgid ""
 "Limited range should be used if your display is a regular HDMI TV and "
 "doesn't have a PC or other mode to display full range colour, however if "
 "your display is a PC monitor then leave this disabled to get proper blacks."
-msgstr "使用受限的顏色範圍 (16-235) 而非使用完整的顏色範圍(0-255)。如果你的顯示器是普通的 HDMI 電視而且沒有沒有 PC 或其他模式可以顯示完整的顏色範圍請啟用受限的顏色範圍。如果你的顯示器是電腦螢幕的話，請停用這個選項以顯示真正的黑色。"
+msgstr "使用受限的顏色範圍 (16-235) 而非使用完整的顏色範圍(0-255)。如果您的顯示器是普通的 HDMI 電視而且沒有沒有 PC 或其他模式可以顯示完整的顏色範圍請啟用受限的顏色範圍。如果您的顯示器是電腦螢幕的話，請停用這個選項以顯示真正的黑色。"
 
 #. Description of settings category with label #772 "Audio"
 #: system/settings/settings.xml
@@ -18721,14 +19064,14 @@ msgctxt "#36365"
 msgid ""
 "Select this option if your receiver is capable of decoding Dolby Digital "
 "(AC3) streams."
-msgstr "如果你的接收器有能力解碼杜比數位 (AC3) 串流則選擇這個選項。"
+msgstr "如果您的接收器有能力解碼杜比數位 (AC3) 串流則選擇這個選項。"
 
 #. Description of setting with label #254 "DTS capable receiver"
 #: system/settings/settings.xml
 msgctxt "#36366"
 msgid ""
 "Select this option if your receiver is capable of decoding DTS streams."
-msgstr "如果你的接收器有能力解碼 DTS 串流則選擇這個選項。"
+msgstr "如果您的接收器有能力解碼 DTS 串流則選擇這個選項。"
 
 #: system/settings/darwin_osx.xml
 msgctxt "#36367"
@@ -18753,14 +19096,14 @@ msgstr "將 Dolby Digital (AC3)、DTS等經壓縮演算後的訊號直接輸出�
 msgctxt "#36369"
 msgid ""
 "Select this option if your receiver is capable of decoding TrueHD streams."
-msgstr "如果你的接收器有能力解碼 TrueHD 串流則選擇這個選項。"
+msgstr "如果您的接收器有能力解碼 TrueHD 串流則選擇這個選項。"
 
 #. Description of setting with label #347 "DTS-HD capable receiver"
 #: system/settings/settings.xml
 msgctxt "#36370"
 msgid ""
 "Select this option if your receiver is capable of decoding DTS-HD streams."
-msgstr "如果你的接收器有能力解碼 DTS-HD 串流則選擇這個選項。"
+msgstr "如果您的接收器有能力解碼 DTS-HD 串流則選擇這個選項。"
 
 #. Description of setting with label #545 "Audio output device"
 #: system/settings/settings.xml
@@ -18805,7 +19148,7 @@ msgctxt "#36376"
 msgid ""
 "When activated, your keyboard arrows will move the selection on the virtual "
 "keyboard. When deactivated, they will move the cursor from your text."
-msgstr "啟用時，你的鍵盤方向鍵可以移動虛擬鍵盤的選擇框。停用時，你的鍵盤方向鍵可以移動虛擬鍵盤的文字輸入游標。"
+msgstr "啟用時，您的鍵盤方向鍵可以移動虛擬鍵盤的選擇框。停用時，您的鍵盤方向鍵可以移動虛擬鍵盤的文字輸入游標。"
 
 #. Description of setting with label #21369 "Enable mouse and Touch Screen
 #. support"
@@ -18836,7 +19179,7 @@ msgstr "此分類包含如何處理網路存取的設定。也可以在這裡選
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your Internet connection uses a proxy server, configure it here."
-msgstr "如果你的網路是使用代理伺服器連線，請於此進行配置。"
+msgstr "如果您的網路是使用代理伺服器連線，請於此進行配置。"
 
 #. Description of setting with label #1180 "Proxy type"
 #: system/settings/settings.xml
@@ -18875,7 +19218,7 @@ msgctxt "#36386"
 msgid ""
 "If your Internet connection has limited bandwidth available, use this "
 "setting to keep bandwidth usage by this application within defined limits."
-msgstr "如果你的網路有頻寬限制，請在此項目中設定本程式可用的流量上限。"
+msgstr "如果您的網路有頻寬限制，請在此項目中設定本程式可用的流量上限。"
 
 #. Description of settings category with label #14095 "Power saving"
 #: system/settings/settings.xml
@@ -18910,7 +19253,7 @@ msgid ""
 "This category contains the settings for enabling event and debug logging. "
 "You can also enable component-specific debug logging in order to help "
 "troubleshoot related issues in more detail."
-msgstr "此分類包含啟用事件及除錯建檔的設定。你可以啟用針對特定組件的除錯記錄檔，更多記錄細節對相關問題的排除更有幫助。"
+msgstr "此分類包含啟用事件及除錯建檔的設定。您可以啟用針對特定組件的除錯記錄檔，更多記錄細節對相關問題的排除更有幫助。"
 
 #. Description of setting with label #20191 "Enable debug logging"
 #: system/settings/settings.xml
@@ -18947,7 +19290,7 @@ msgid ""
 "Here you can enable or disable master lock and define the PIN code used to "
 "unlock it. You can also specify which areas of the application would need a "
 "PIN to access them."
-msgstr "你可以在這裡啟用或禁用主密碼鎖並設定用來解鎖的PIN碼。也可以指定本軟體中需要輸入PIN碼後才可使用的範圍。"
+msgstr "您可以在這裡啟用或禁用管理員密碼並設定用來解鎖的PIN碼。也可以指定本軟體中需要輸入PIN碼後才可使用的範圍。"
 
 #. Description of setting with label #20076 "Ask for master lock code on
 #. startup"
@@ -19075,7 +19418,7 @@ msgstr "指定使用的遙控器種類。"
 #: system/settings/settings.xml
 msgctxt "#36417"
 msgid "Always run a Kodi helper so that the remote can be used to start Kodi."
-msgstr "永遠執行 Kodi 小幫手讓你可以使用遙控器來啟動 Kodi。"
+msgstr "永遠執行 Kodi 小幫手讓您可以使用遙控器來啟動 Kodi。"
 
 #. Description of setting with label #13603 "Sequence delay time"
 #: system/settings/settings.xml
@@ -19151,7 +19494,7 @@ msgid ""
 "Select this if the audio out connection only supports multichannel audio as "
 "Dolby Digital 5.1 (AC-3), such as a S/PDIF connection. If your system "
 "supports PCM multichannel audio via HDMI, leave this disabled."
-msgstr "如果聲音輸出如 S/PDIF 之類的連接只支援 Dolby Digital 5.1 (AC-3) 多聲道音效的情況下，請選擇此選項。如果你的系統支援透過 HDMI 的 PCM 多聲道音效，則不要啟用此選項。"
+msgstr "如果聲音輸出如 S/PDIF 之類的連接只支援 Dolby Digital 5.1 (AC-3) 多聲道音效的情況下，請選擇此選項。如果您的系統支援透過 HDMI 的 PCM 多聲道音效，則不要啟用此選項。"
 
 #. Description for setting category #14101: "Video Acceleration"
 #: system/settings/settings.xml
@@ -19592,7 +19935,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr "使用預先計算好的3D LUT來進行校色，或是使用你的顯示器所提供的設定檔來計算每個影片的變化。推薦使用前者，因其可受惠於ArgyllCMS的進階功能及高精確度。使用顯示器設定檔的校色方式適用在測試各種數值，或在沒有3D LUT可用時模擬其設定。"
+msgstr "使用預先計算好的3D LUT來進行校色，或是使用您的顯示器所提供的設定檔來計算每個影片的變化。推薦使用前者，因其可受惠於ArgyllCMS的進階功能及高精確度。使用顯示器設定檔的校色方式適用在測試各種數值，或在沒有3D LUT可用時模擬其設定。"
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -19817,7 +20160,7 @@ msgid ""
 " 7 or 6 bit setting may eliminate more banding. Lower settings are available"
 " for testing purposes only to make it easy to see whether dithering is "
 "applied and that the dither noise pixel size matches the display resolution."
-msgstr "影片抖色的輸出精確值以bits計。應使用最高值以避免色階不連續現象，對大多數系統來說預設值是8。如果你電腦的設定為等比放大RGB輸出或使用筆記型電腦的螢幕，使用7或6 bit的設定或許可以改善一點色階不連續的現象。較低的設定值僅用來做為測試用途，可以較清楚的比較出抖色的效果，同時抖色雜點大小與顯示解析度有關。"
+msgstr "影片抖色的輸出精確值以bits計。應使用最高值以避免色階不連續現象，對大多數系統來說預設值是8。如果您電腦的設定為等比放大RGB輸出或使用筆記型電腦的螢幕，使用7或6 bit的設定或許可以改善一點色階不連續的現象。較低的設定值僅用來做為測試用途，可以較清楚的比較出抖色的效果，同時抖色雜點大小與顯示解析度有關。"
 
 #. Description of settings category with label #14022 "Library"
 #: system/settings/settings.xml
@@ -19934,7 +20277,7 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
-msgstr "附加元件將被授予本機個人資料的存取權。若你允許，必須同意對可能因此造成的任何資料遺失、意外的行為或裝置損害等結果負全責。要執行嗎？"
+msgstr "附加元件將被授予本機個人資料的存取權。若您允許，必須同意對可能因此造成的任何資料遺失、意外的行為或裝置損害等結果負全責。要執行嗎？"
 
 #. Label of a setting, allow the user to specify high quality downscaling of
 #. pictures
@@ -20123,21 +20466,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(導演評論 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(強制)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(導演評論)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20155,7 +20483,7 @@ msgctxt "#37016"
 msgid ""
 "Select this option if your receiver is capable of decoding Dolby Digital "
 "Plus (E-AC3) streams."
-msgstr "如果你的接收器有能力解碼杜比數位 (E-AC3) 串流則選擇這個選項。"
+msgstr "如果您的接收器有能力解碼杜比數位 (E-AC3) 串流則選擇這個選項。"
 
 #: system/settings/rbp.xml
 msgctxt "#37017"
@@ -20185,7 +20513,7 @@ msgstr "UPnP 播放器"
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37023"
 msgid "Do you wish to stop playback on the remote device?"
-msgstr "你想要停止遠端裝置上的播放嗎？"
+msgstr "您想要停止遠端裝置上的播放嗎？"
 
 #: system/settings/rbp.xml
 msgctxt "#37024"
@@ -20563,7 +20891,7 @@ msgstr "所有角色"
 msgctxt "#38060"
 msgid ""
 "Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "音樂資料庫需要重新掃描檔案標籤。你要現在開始掃描嗎？"
+msgstr "音樂資料庫需要重新掃描檔案標籤。您要現在開始掃描嗎？"
 
 #. Extra scraping question on upgrade from previous version
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
@@ -20571,46 +20899,46 @@ msgctxt "#38061"
 msgid ""
 "Fetch additional information for albums and artists? This could take some "
 "time so you may prefer to do this later"
-msgstr "是否要擷取專輯及藝人的額外資料?這會花點時間，建議您稍後再執行。"
+msgstr "是否要擷取專輯及演出者的額外資料?這會花點時間，建議您稍後再執行。"
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "即使音樂檔案沒有更動過也要進行全面的資訊掃描嗎?"
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "設定預設的資料提供者"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
-msgstr "此藝人的專屬設定"
+msgstr "此演出者的專屬設定"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
-msgstr "設定給所有看得到的藝人"
+msgstr "設定給所有看得到的演出者"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "此專輯的專屬設定"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "設定給所有看得到的專輯"
@@ -20620,7 +20948,7 @@ msgstr "設定給所有看得到的專輯"
 #: xbmc/music/windows/GUIWindowMusicNav.cpp
 msgctxt "#38068"
 msgid "Use this information provider for all the artists shown here?"
-msgstr "要將在這裡看得到的所有藝人設定為使用這個資訊提供者嗎?"
+msgstr "要將在這裡看得到的所有演出者設定為使用這個資訊提供者嗎?"
 
 #. Dialog message asking for confirmation of change the information provider
 #. for all albums shown in node, after #38067
@@ -20636,7 +20964,7 @@ msgctxt "#38070"
 msgid ""
 "Use this information provider for all artists, clearing any previous "
 "settings for specific artists?"
-msgstr "要將所有藝人設定為使用這個資訊提供者，並清除所有之前針對個別藝人的設定值嗎?"
+msgstr "要將所有演出者設定為使用這個資訊提供者，並清除所有之前針對個別演出者的設定值嗎?"
 
 #. Dialog message asking for confirmation of change to the default album
 #. information provider, after #38063
@@ -20645,7 +20973,7 @@ msgctxt "#38071"
 msgid ""
 "Use this information provider for all albums, clearing any previous settings"
 " for specific albums?"
-msgstr "要將所有專輯設定為使用這個資訊提供者，並清除所有之前針對個別藝人的設定值嗎?"
+msgstr "要將所有專輯設定為使用這個資訊提供者，並清除所有之前針對個別演出者的設定值嗎?"
 
 #. Dialog message asking for confirmation to get additional info for all the
 #. artists or albums in the node immediately
@@ -20769,6 +21097,176 @@ msgstr "如果 EXIF 資訊存在 (日期、時間、使用的相機等等) 的�
 msgctxt "#38209"
 msgid "Reset resume position"
 msgstr "重置接續播放的時間點"
+
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "匯出音樂資料庫"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "單一檔案"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "針對各個項目分開存檔"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "至資料庫資料夾"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "選擇匯出的檔案類型"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "目標資料夾"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "要匯出的項目"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "包括美術圖片，例如縮圖及劇照"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr "包含還沒有收集到的項目(用以產生NFO檔模板)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr "僅輸出美術圖，而不包含nfo檔"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "覆蓋既存檔案"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "歌曲演出者"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "其他演出者"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr "由於尚未設定存放演出者資訊的資料夾，故無法匯出至資料庫資料夾"
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "由於目的地資料庫不存在，故無法匯出資料"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "匯出"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr "您在本機有存放演出者資訊(NFO)及圖片檔嗎?請立即設定這些資料夾"
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "設定音樂資訊內容提供者"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "設定專輯資訊內容提供者"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "設定演出者資訊內容提供者"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "在掃描時擷取額外的相關資訊與圖片"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "專輯資訊內容提供者"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "演出者資訊內容提供者"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "本機中存放演出者資訊的資料夾"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "額外資訊擷取的相關設定"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "選擇套用設定的方式"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "如何套用資訊提供者的設定"
 
 #: system/settings/settings.xml
 msgctxt "#39000"
@@ -20918,6 +21416,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "依賴的附加元件"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20933,3 +21449,44 @@ msgstr "播放電視"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "播放廣播"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "無法進行網路位址組態，提供的路徑不可用。"
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

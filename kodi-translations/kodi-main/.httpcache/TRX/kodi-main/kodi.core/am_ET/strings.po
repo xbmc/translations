@@ -1,12 +1,12 @@
 # Kodi Media Center language file
 # Translators:
-# samson <sambelet@yahoo.com>, 2015
+# samson <sambelet@yahoo.com>, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-04 21:26+0000\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Amharic (Ethiopia) (http://www.transifex.com/teamxbmc/kodi-main/language/am_ET/)\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "ማሰናጃዎች"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#6"
 msgid "Kodi GIT"
-msgstr ""
+msgstr "ኮዲ GIT"
 
 msgctxt "#7"
 msgid "File manager"
@@ -177,7 +177,7 @@ msgstr "ሐሙ"
 
 msgctxt "#45"
 msgid "Fri"
-msgstr "አር"
+msgstr "ዓር"
 
 msgctxt "#46"
 msgid "Sat"
@@ -377,12 +377,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "በ መጠን: መለያ"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "አይ"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "አዎ"
@@ -687,7 +687,7 @@ msgstr " የፋይል ተግባር መሰረዣ"
 #: xbmc/settings/windows/GUIWindowSettingsCategory.cpp
 msgctxt "#168"
 msgid "{0:s}- {1:s}"
-msgstr ""
+msgstr "{0:s}- {1:s}"
 
 #: system/settings/settings.xml addons/skin.estuary/xml/Variables.xml
 msgctxt "#169"
@@ -716,14 +716,15 @@ msgstr "ማሳያ 4:3 ቪዲዮ እንደ "
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#174"
 msgid "Compiled:"
-msgstr ""
+msgstr "የ ተሰናዳ:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr ""
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "ዘዴዎች"
@@ -732,13 +733,13 @@ msgstr "ዘዴዎች"
 #: xbmc/Application.cpp
 msgctxt "#177"
 msgid "{0:s} successfully started"
-msgstr ""
+msgstr "{0:s} ተሳክቶ ጀምሯል"
 
 #. <application name> has been successfully started.
 #: xbmc/Application.cpp
 msgctxt "#178"
 msgid "{0:s} has been successfully started."
-msgstr ""
+msgstr "{0:s} ተሳክቶ ጀምሯል "
 
 #: xbmc/media/MediaTypes.cpp
 msgctxt "#179"
@@ -781,6 +782,7 @@ msgstr "አልበም በመፈለግ ላይ"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "እሺ "
@@ -834,7 +836,7 @@ msgstr "ሙቪ ይምረጡ:"
 
 msgctxt "#197"
 msgid "Querying {0:s} information"
-msgstr ""
+msgstr "መረጃ {0:s} በ መጠየቅ ላይ "
 
 msgctxt "#198"
 msgid "Loading movie details"
@@ -970,6 +972,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "ከኔትዎርክ ጋር አልተገናኘም "
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -1055,7 +1066,7 @@ msgstr "ማሳያ ዘዴ "
 
 msgctxt "#241"
 msgid "Full screen #{0:d}"
-msgstr ""
+msgstr "በ ሙሉ መመልከቻ ዘዴ #{0:d}"
 
 msgctxt "#242"
 msgid "Windowed"
@@ -1245,7 +1256,7 @@ msgstr "እባክዎን የ XML ፋይሎችን ይመርምሩ "
 
 msgctxt "#282"
 msgid "Found {0:d} items"
-msgstr ""
+msgstr "እቃዎች {0:d} ተገኝተዋል"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#283"
@@ -1320,7 +1331,7 @@ msgstr "ምልክት ማድረጊያ"
 
 msgctxt "#299"
 msgid "Bookmark {0:d}"
-msgstr ""
+msgstr "ምልክት ማድረጊያ  {0:d}"
 
 msgctxt "#300"
 msgid "MP1 capable receiver"
@@ -1375,7 +1386,7 @@ msgstr "የፊደል ገበታ አቀራረብ"
 #: xbmc/input/KeyboardLayout.cpp
 msgctxt "#311"
 msgid "{0:s} {1:s}"
-msgstr ""
+msgstr "{0:s} {1:s}"
 
 msgctxt "#312"
 msgid "(0=auto)"
@@ -2337,7 +2348,7 @@ msgstr ""
 
 msgctxt "#534"
 msgid "View: {0:s}"
-msgstr ""
+msgstr "መመልከቻ: {0:s}"
 
 #: addons/skin.estuary/xml/View_50_List.xml
 #: addons/skin.estuary/xml/EventLog.xml
@@ -2409,7 +2420,7 @@ msgstr "ቁጥር"
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#550"
 msgid "Sort by: {0:s}"
-msgstr ""
+msgstr "መለያ በ: {0:s}"
 
 #. generic "name" label used in different places
 #: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/view/GUIViewState.cpp
@@ -2780,7 +2791,7 @@ msgstr "ዋነኛው መጠን "
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#636"
 msgid "Custom"
-msgstr ""
+msgstr "ማስተካከያ"
 
 msgctxt "#637"
 msgid "ReplayGain"
@@ -2819,7 +2830,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
-msgstr ""
+msgstr "ማስፊያ 16:9 - ቀጥተኛ ያልሆነ"
 
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
@@ -2894,12 +2905,14 @@ msgstr "የዘፈን መረጃ "
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#659"
 msgid "Non-linear stretch"
-msgstr ""
+msgstr "ቀጥተኛ-ያልሆነ ማስፊያ"
 
 msgctxt "#660"
 msgid "Volume amplification"
 msgstr "መጠኑን ማጉያ"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "የመላኪያ ፎልደር ይምረጡ"
@@ -3177,7 +3190,7 @@ msgstr "መንገዱን ማረሚያ"
 
 msgctxt "#749"
 msgid "Mirror image"
-msgstr ""
+msgstr "አንፀባራቂ ምስል "
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#750"
@@ -3374,6 +3387,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "ኢንተርኔት "
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "መጻህፍት ቤት ማሻሻያ"
@@ -3382,7 +3396,7 @@ msgstr "መጻህፍት ቤት ማሻሻያ"
 #: xbmc/pvr/PVRGUIInfo.cpp
 msgctxt "#802"
 msgid "{0:s} of {1:s} available"
-msgstr ""
+msgstr "{0:s} ከ {1:s} ዝግጁ ነው"
 
 #. Label of list control for choosing the timer type (one time, repeating,
 #. ...) in PVR timer settings dialog
@@ -3395,7 +3409,7 @@ msgstr "አይነት"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#804"
 msgid "Search guide for"
-msgstr ""
+msgstr "መምሪያ መፈለጊያ ለ "
 
 #. Help of 'Guide data title search' edit field in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -3413,26 +3427,26 @@ msgstr ""
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#807"
 msgid "Any day"
-msgstr ""
+msgstr "በ ማንኛውም ቀን"
 
 #. special days of week representation for a timer rule
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#808"
 msgid "Every day"
-msgstr ""
+msgstr "በየ ቀኑ"
 
 #. special channel representation value for a timer rule
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#809"
 msgid "Any channel"
-msgstr ""
+msgstr "ማንኛውም ጣቢያ"
 
 #. Label of "Start any time" radio button in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#810"
 msgid "Start any time"
-msgstr ""
+msgstr "በ ማንኛውም ጊዜ ማስጀመሪያ"
 
 #. Label of recording group list control in the PVR timer settings dialog
 #. Part of value of recording group list control in the PVR timer settings
@@ -3481,19 +3495,19 @@ msgstr ""
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#817"
 msgid "End any time"
-msgstr ""
+msgstr "በ ማንኛውም ጊዜ መጨረሻ"
 
 #. Label of "MaxRecordings" list in the PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#818"
 msgid "Max recordings"
-msgstr ""
+msgstr "ከፍተኛ መቅረጫ "
 
 #. Representation of a one-time timer.
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#820"
 msgid "One time"
-msgstr ""
+msgstr "አንድ ጊዜ"
 
 #. Representation of an epg-based one-time timer.
 #: xbmc/pvr/addons/PVRClient.cpp
@@ -3505,7 +3519,7 @@ msgstr ""
 #: xbmc/pvr/addons/PVRClient.cpp
 msgctxt "#822"
 msgid "Timer rule"
-msgstr ""
+msgstr "የ ሰአት ደንብ"
 
 #. Representation of an epg-based timer rule.
 #: xbmc/pvr/addons/PVRClient.cpp
@@ -3581,13 +3595,13 @@ msgstr "ይህን ብቻ"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#843"
 msgid "Activate"
-msgstr ""
+msgstr "ማስጀመሪያ"
 
 #. Label for a context menu entry to deactivate a currently active timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#844"
 msgid "Deactivate"
-msgstr ""
+msgstr "ማቦዘኛ"
 
 #. Message in a dialog when a user wants to delete a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3607,7 +3621,7 @@ msgstr ""
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#847"
 msgid "Confirm stop recording"
-msgstr ""
+msgstr "መቅረጫ ማስቆሚያ ማረጋገጫ"
 
 #. Message in a dialog when a user wants to stop an active recording
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3871,7 +3885,7 @@ msgstr "የዌብ አድራሻ ያስገቡ "
 #: system/settings/settings.xml
 msgctxt "#1180"
 msgid "Proxy type"
-msgstr ""
+msgstr "የ ወኪል አይነት"
 
 #: system/settings/settings.xml
 msgctxt "#1181"
@@ -4070,7 +4084,7 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#1275"
 msgid "Filter {0:s}"
-msgstr ""
+msgstr "ማጣሪያ {0:s}"
 
 msgctxt "#1300"
 msgid "Custom audio device"
@@ -4208,7 +4222,7 @@ msgstr "ቀዝቃዛ"
 #. Weather token
 msgctxt "#1399"
 msgid "Late"
-msgstr ""
+msgstr "የዘገየ"
 
 #. Weather token
 msgctxt "#1400"
@@ -4488,7 +4502,7 @@ msgstr ""
 #: xbmc/interfaces/python/PythonInvoker.cpp
 msgctxt "#2102"
 msgid "{0:s} error"
-msgstr ""
+msgstr "{0:s} ስህተት"
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4526,19 +4540,11 @@ msgstr "ፋይል"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "ማሰናጃዎች"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "ሙዚቃ"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "ቪዲዮ"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4547,16 +4553,8 @@ msgstr "የስርአቱ መረጃ "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "ባጠቃላይ - ማሰናጃ "
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "መመለከቻ  - ማሰናጃ "
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "ማሰናጃ - አቀራረብ - GUI ማስተካከያ"
+msgid "Settings - Test patterns"
+msgstr "የ መሞከሪያ ዘዴ - ማሰናጃ "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4564,60 +4562,29 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "ማሰናጃ - ቪዲዮ - መመልከቻ ማስተካከያ"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "ስእል - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "ፕሮግራም - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "የአየር ንብረት - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "ሙዚቃ - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "አርአት - ማሰናጃ "
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "ቪዲዮ - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "ኔትዎርክ - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "አቀራረብ - ማሰናጃ "
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "ጽሁፎች"
+msgid "Settings - Service"
+msgstr "ግልጋሎት - ማሰናጃ "
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "ቲቪ - ማሰናጃ "
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "ጨዋታ - ማሰናጃ "
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeTvShowOverview.cpp
 msgctxt "#10024"
 msgid "Titles"
-msgstr ""
+msgstr "አርእስት"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10025"
@@ -4635,13 +4602,29 @@ msgid "Login screen"
 msgstr "የመግቢያ መመለከቻ "
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "ማጫወቻ - ማሰናጃ "
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "መገናኛ - ማሰናጃ "
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "ገጽታ - ማሰናጃ "
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "ገጽታ ማሰናጃ "
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "እንደነበር መመለሻ "
+msgid "Skin Settings"
+msgstr "ቆዳ ማሰናጃ"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4700,62 +4683,142 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10048"
 msgid "Add video source"
-msgstr ""
+msgstr "የ ቪዲዮ ምንጭ መጨመሪያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10049"
 msgid "Add music source"
-msgstr ""
+msgstr "የ ሙዚቃ ምንጭ መጨመሪያ"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
+msgid "Event log"
 msgstr ""
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
 msgid "Add program source"
-msgstr ""
+msgstr "የ ፕሮግራም ምንጭ መጨመሪያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10052"
 msgid "Add file source"
-msgstr ""
+msgstr "የ ፋይል ምንጭ መጨመሪያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10053"
 msgid "Edit video source"
-msgstr ""
+msgstr "የ ቪዲዮ ምንጭ ማረሚያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10054"
 msgid "Edit music source"
-msgstr ""
+msgstr "የ ሙዚቃ ምንጭ ማረሚያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10055"
 msgid "Edit picture source"
-msgstr ""
+msgstr "የ ስእል ምንጭ ማረሚያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10056"
 msgid "Edit program source"
-msgstr ""
+msgstr "የ ፕሮግራም ምንጭ ማረሚያ"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10057"
 msgid "Edit file source"
-msgstr ""
+msgstr "የ ፋይል ምንጭ ማረሚያ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "መጠቆሚያ"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
-msgstr "አዎ/አይ ንግግር"
+msgid "Yes / No dialog"
+msgstr "አዎ / አይ ንግግር"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
+msgid "Progress dialog"
 msgstr "የ ሂደት ንግግር"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "የ መጠን መደርደሪያ "
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "የ አገባብ ዝርዝር"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "የ ማስታወቂያ ንግግር"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "ቁጥር ማስገቢያ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "የ ማጫወቻ መቆጣጠሪያ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "መፈለጊያ መደርደሪያ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "ሙዚቃ OSD"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "የ ቪዲዮ OSD ማሰናጃ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "የ ድምፅ OSD ማሰናጃ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4794,8 +4857,8 @@ msgstr "የምወዳቸው"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "የ ዘፈኖች/መረጃ"
+msgid "Song info"
+msgstr "የ ዘፈን መረጃ "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4809,8 +4872,8 @@ msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "የ ስእሎች/ መረጃ"
+msgid "Picture info"
+msgstr "የ ስእል መረጃ "
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4818,9 +4881,59 @@ msgid "Add-on settings"
 msgstr "ተጨማ-ሪዎች ማሰናጃ "
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "በ ሙሉ መመልከቻ ዘዴ መረጃ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "የ ተንሸራታች ንግግር"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "የ ተጨማ-ሪዎች / መረጃ"
+msgid "Add-on info"
+msgstr "የ ተጨ-ማሪ መረጃ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "ጽሁፍ መመልከቻ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "የ መገናኛ ማጣሪያ "
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "ንዑስ አርእስት መፈለጊያ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr ""
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4844,8 +4957,8 @@ msgstr "ስርአቱን በመክፈት ላይ "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "የ ሙዚቃ / ማጫወቻ ዝርዝር"
+msgid "Music playlist"
+msgstr "የ ሙዚቃ የሚጫወቱ ዝርዝር"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4854,8 +4967,8 @@ msgstr "ሙዚቃ"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
-msgstr "ዝርዝር ማረሚያ "
+msgid "Music playlist editor"
+msgstr "የ ሙዚቃ የሚጫወቱ ዝርዝር ማረሚያ"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -4912,29 +5025,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "የሙቪ መረጃ "
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "ቴሌቴክስት"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "የ PVR መምሪያ መረጃ "
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "የ PVR መቅረጫ መረጃ "
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr ""
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "የ PVR ቡድን አስተዳዳሪ"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "የ PVR ጣቢያ አስተዳዳሪ"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "የ PVR መምሪያ መፈለጊያ"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "የ PVR ጣቢያ ማሰሻ"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "የ PVR ማሻሻያ ሂደት "
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "የ PVR OSD ጣቢያ"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "የ PVR OSD መምሪያ"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr ""
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr ""
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "የቲቪ ጣቢያ "
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "ቲቪ መቅረጫ"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "የ ቲቪ መምሪያ"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr ""
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "የ ቲቪ መፈለጊያ"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "የሬዲዮ ጣቢያ"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "ሬዲዮ መቅረጫ "
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "የ ሬዲዮ መምሪያ"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr ""
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "ሬዲዮ መፈለጊያ"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr ""
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr ""
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr ""
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr ""
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr ""
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "ጨዋታዎች"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr ""
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "ጨዋታ መቆጣጠሪያ"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr ""
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
+msgid "Select dialog"
 msgstr "ንግግር ይምረጡ"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "የ ሙዚቃ / መረጃ "
+msgid "Music info"
+msgstr "የ ሙዚቃ መረጃ  "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
-msgstr "እሺ ንግግር "
+msgid "OK dialog"
+msgstr "የ እሺ ንግግር"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "የ ቪዲዮ / መረጃ "
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "የ ጽሁፍ / መረጃ"
+msgid "Video info"
+msgstr "የ ቪዲዮ መረጃ "
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4947,8 +5184,8 @@ msgid "Audio visualisation"
 msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
+msgctxt "#12007"
+msgid "Audio visualisation"
 msgstr ""
 
 #. Does not match window ID description
@@ -4970,12 +5207,12 @@ msgstr "ወደ ቪዲዮ መስኮት መመለሻ "
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#12012"
 msgid "Last used"
-msgstr ""
+msgstr "መጨረሻ የተጠቀሙት"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#12013"
 msgid "Install date"
-msgstr ""
+msgstr "የ ተገጠመበት ቀን:"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#12014"
@@ -4994,7 +5231,7 @@ msgstr ""
 #: xbmc/pvr/PVRGUIActions.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#12022"
 msgid "Resume from {0:s}"
-msgstr ""
+msgstr "መቀጠያ ከ {0:s}"
 
 #. unused?
 msgctxt "#12023"
@@ -5257,7 +5494,7 @@ msgstr ""
 #: xbmc/LangInfo.cpp
 msgctxt "#12382"
 msgid "{0:s} xx"
-msgstr ""
+msgstr "{0:s} xx"
 
 #: system/settings/settings.xml
 msgctxt "#12383"
@@ -5329,6 +5566,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "በሙሉ መመልከቻ OSD"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "በ ሙሉ መመልከቻ ዘዴ ጨዋታ"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "ማስጀመሪያ"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5358,6 +5605,21 @@ msgstr "- አነስተኛ ፋይል የሚቆይበት ጊዜ"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "ማጥፊያ "
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "የ ስእል ምንጭ መጨመሪያ"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "እንደነበር መመለሻ "
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5424,7 +5686,7 @@ msgstr "ሌላ ክፍለ ጊዜ ንቁ ነው ምናልባት over ssh?"
 #: xbmc/storage/MediaManager.cpp
 msgctxt "#13021"
 msgid "Mounted removable storage device"
-msgstr ""
+msgstr "የ ተጫነ የሚወልቅ ሃርድ ድራይቭ"
 
 #: xbmc/storage/MediaManager.cpp
 msgctxt "#13022"
@@ -5487,17 +5749,17 @@ msgstr ""
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13034"
 msgid "Updated for {0:s}"
-msgstr ""
+msgstr "ተሻሽሏል ለ {0:s}"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13035"
 msgid "Found for {0:s}"
-msgstr ""
+msgstr "ተገኝቷል ለ {0:s}"
 
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13036"
 msgid "Failed for {0:s}"
-msgstr ""
+msgstr "አልተገኘም ለ {0:s}"
 
 #: xbmc/powermanagement/PowerManager.cpp
 msgctxt "#13050"
@@ -5594,7 +5856,7 @@ msgstr "VDPAU"
 #: xbmc/Application.cpp
 msgctxt "#13123"
 msgid "Keep skin?"
-msgstr ""
+msgstr "ቆዳውን ላስቀምጠው?"
 
 #: system/settings/settings.xml
 msgctxt "#13130"
@@ -5705,7 +5967,7 @@ msgstr "መጨረሻ የተጫነው ገጽታ:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -5752,13 +6014,13 @@ msgstr ""
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#13213"
 msgid "{0:2.0f}m"
-msgstr ""
+msgstr "{0:2.0f}m"
 
 #. seconds (left from countdown)
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#13214"
 msgid "{0:2.0f}s"
-msgstr ""
+msgstr "{0:2.0f}s"
 
 msgctxt "#13249"
 msgid "Search for subtitles in RARs"
@@ -5921,7 +6183,7 @@ msgstr "የ መንሳፈፊያ ውጤት"
 
 msgctxt "#13312"
 msgid "Black bar reduction"
-msgstr ""
+msgstr "ጥቁር መደርደሪያ መቀነሻ"
 
 msgctxt "#13313"
 msgid "Restart"
@@ -5981,15 +6243,15 @@ msgstr "A/V delay"
 
 msgctxt "#13328"
 msgid "{0:s} not found"
-msgstr ""
+msgstr "{0:s} አልተገኘም"
 
 msgctxt "#13329"
 msgid "Error opening {0:s}"
-msgstr ""
+msgstr "ስህተት በመክፈት ላይ {0:s}"
 
 msgctxt "#13330"
 msgid "Unable to load {0:s}"
-msgstr ""
+msgstr "መጫን አልተቻለም {0:s}"
 
 msgctxt "#13331"
 msgid "Error: Out of memory"
@@ -6069,6 +6331,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "የአልበም መረጃ "
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr ""
@@ -6241,7 +6504,7 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 msgctxt "#13401"
 msgid "Browse for {0:s}"
-msgstr ""
+msgstr "መቃኛ ለ {0:s}"
 
 msgctxt "#13402"
 msgid "Show track position"
@@ -6310,16 +6573,6 @@ msgstr ""
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "በራሱ ፈልጎ ማግኛ"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6549,32 +6802,32 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
-msgstr ""
+msgstr "ይምረጡ ኪነት"
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
-msgstr ""
+msgstr "የ አሁኑ ኪነት"
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13513"
 msgid "Remote art"
-msgstr ""
+msgstr "የ ርቀት ኪነት "
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13514"
 msgid "Local art"
-msgstr ""
+msgstr "የ አካባቢ ኪነት "
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
-msgstr ""
+msgstr "ምንም ኪነት የለም"
 
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
 msgid "Add art"
-msgstr ""
+msgstr "ኪነት መጨመሪያ "
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6600,19 +6853,19 @@ msgstr "ማጥፊያ "
 
 msgctxt "#13552"
 msgid "{0:.1f} second"
-msgstr ""
+msgstr "{0:.1f} ሰከንድ"
 
 msgctxt "#13553"
 msgid "{0:.1f} seconds"
-msgstr ""
+msgstr "{0:.1f} ሰከንዶች"
 
 msgctxt "#13554"
 msgid "{0:d} Minute"
-msgstr ""
+msgstr "{0:d} ደቂቃ"
 
 msgctxt "#13555"
 msgid "{0:d} Minutes"
-msgstr ""
+msgstr "{0:d} ደቂቃዎች"
 
 #. Label of a setting that allows to select the skip step sizes to use for
 #. skipping
@@ -6848,32 +7101,32 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14044"
 msgid "{0:d} min"
-msgstr ""
+msgstr "{0:d} ደቂቃ"
 
 #: system/settings/settings.xml
 msgctxt "#14045"
 msgid "{0:d} sec"
-msgstr ""
+msgstr "{0:d} ሰከንድ"
 
 #: system/settings/darwin.xml system/settings/settings.xml
 msgctxt "#14046"
 msgid "{0:d} ms"
-msgstr ""
+msgstr "{0:d} ማሰ"
 
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#14047"
 msgid "{0:d} %"
-msgstr ""
+msgstr "{0:d} %"
 
 #: system/settings/settings.xml
 msgctxt "#14048"
 msgid "{0:d} kbps"
-msgstr ""
+msgstr "{0:d} ኪቢበሰ"
 
 #: system/settings/settings.xml
 msgctxt "#14049"
 msgid "{0:d} kb"
-msgstr ""
+msgstr "{0:d} ኪቢ"
 
 #: system/settings/settings.xml
 msgctxt "#14050"
@@ -7157,7 +7410,7 @@ msgstr "የ ረጅም ቀን አቀራረብ"
 
 msgctxt "#14111"
 msgid "Events"
-msgstr ""
+msgstr "ሁኔታዎች"
 
 #. Label of setting to enable/disable event logging
 #: system/settings/settings.xml
@@ -7206,7 +7459,7 @@ msgstr "ስህተት"
 #: xbmc/event/windows/GUIWindowEventLog.cpp
 msgctxt "#14119"
 msgid "Level: {0:s}"
-msgstr ""
+msgstr "ደረጃ: {0:s}"
 
 #. Label for the option to show/hide higher level events in the event log
 #. window
@@ -7225,25 +7478,25 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14122"
 msgid "Region A"
-msgstr ""
+msgstr "አካባቢ A"
 
 #. Region Code option for Blu-ray
 #: system/settings/settings.xml
 msgctxt "#14123"
 msgid "Region B"
-msgstr ""
+msgstr "አካባቢ B"
 
 #. Region Code option for Blu-ray
 #: system/settings/settings.xml
 msgctxt "#14124"
 msgid "Region C"
-msgstr ""
+msgstr "አካባቢ C"
 
 #. This is in the context of input devices!
 #: system/settings/settings.xml
 msgctxt "#14125"
 msgid "Input"
-msgstr ""
+msgstr "ማስገቢያ"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -7253,7 +7506,7 @@ msgstr "ማጫወቻ"
 #: system/settings/settings.xml
 msgctxt "#14201"
 msgid "Player settings"
-msgstr ""
+msgstr "ማጫወቻ ማሰናጃ"
 
 #: system/settings/settings.xml
 msgctxt "#14202"
@@ -7263,7 +7516,7 @@ msgstr "መጻህፍት ቤት "
 #: system/settings/settings.xml
 msgctxt "#14203"
 msgid "Library settings"
-msgstr ""
+msgstr "መጻህፍት ቤት ማሰናጃ"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
@@ -7303,7 +7556,7 @@ msgstr "ገጽታ ማሰናጃዎች"
 #: system/settings/settings.xml
 msgctxt "#14211"
 msgid "Media"
-msgstr ""
+msgstr "መገናኛ  "
 
 #: system/settings/settings.xml
 msgctxt "#14212"
@@ -7333,7 +7586,7 @@ msgstr "ቋንቋ "
 #: system/settings/settings.xml
 msgctxt "#14219"
 msgid "Databases"
-msgstr ""
+msgstr "ዳታቤዝ"
 
 #: system/settings/settings.xml
 msgctxt "#14220"
@@ -7348,7 +7601,7 @@ msgstr "ድምጽ"
 #: system/settings/settings.xml
 msgctxt "#14222"
 msgid "Regional"
-msgstr ""
+msgstr "አካባቢ"
 
 #: system/settings/settings.xml
 msgctxt "#14223"
@@ -7358,7 +7611,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14224"
 msgid "Startup"
-msgstr ""
+msgstr "ማስጀመሪያ"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
@@ -7398,7 +7651,7 @@ msgstr "ቴሌቴክስት"
 #: system/settings/settings.xml
 msgctxt "#14234"
 msgid "Blu-ray"
-msgstr ""
+msgstr "ብሉ-ሬይ"
 
 #: system/settings/settings.xml
 msgctxt "#14235"
@@ -7408,17 +7661,17 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14236"
 msgid "Video Library"
-msgstr ""
+msgstr "የ ቪዲዮ መጻህፍት ቤት"
 
 #: system/settings/settings.xml
 msgctxt "#14237"
 msgid "Music Library"
-msgstr ""
+msgstr "የ ሙዚቃ መጻህፍት ቤት"
 
 #: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
-msgstr ""
+msgstr "ዝርዝር & መመልከቻ"
 
 #: system/settings/settings.xml
 msgctxt "#14241"
@@ -7428,17 +7681,17 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14242"
 msgid "Videos..."
-msgstr ""
+msgstr "ቪዲዮ..."
 
 #: system/settings/settings.xml
 msgctxt "#14243"
 msgid "Music..."
-msgstr ""
+msgstr "ሙዚቃ..."
 
 #: system/settings/settings.xml
 msgctxt "#14244"
 msgid "Pictures..."
-msgstr ""
+msgstr "ስእሎች..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7488,7 +7741,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14256"
 msgid "Wake"
-msgstr ""
+msgstr "መቀስቀሻ"
 
 #: system/settings/settings.xml
 msgctxt "#14260"
@@ -7541,7 +7794,7 @@ msgstr "ምልክቶች "
 #: system/settings/settings.xml
 msgctxt "#14303"
 msgid "Updates"
-msgstr ""
+msgstr "ማሻሻያ "
 
 #. pvr "RDS" settings group label
 #: system/settings/settings.xml
@@ -7559,19 +7812,19 @@ msgstr "መሰረታዊ "
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15005"
 msgid "Application"
-msgstr ""
+msgstr "መተግበሪያ"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15006"
 msgid "Phone"
-msgstr ""
+msgstr "ስልክ"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15007"
 msgid "Message"
-msgstr ""
+msgstr "መልእክት"
 
 #: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
@@ -7647,7 +7900,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15027"
 msgid "Audio information..."
-msgstr ""
+msgstr "የ ድምፅ መረጃ..."
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15028"
@@ -7677,7 +7930,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15034"
 msgid "Miscellaneous..."
-msgstr ""
+msgstr "የ ተለያዩ..."
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15035"
@@ -7713,7 +7966,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogAudioDSPSettings.xml
 msgctxt "#15042"
 msgid "Content:"
-msgstr ""
+msgstr "ይዞታ:"
 
 #. Label for a context menu entry and dialog button to open audio DSP settings
 #. dialog
@@ -7800,13 +8053,13 @@ msgstr ""
 #. Close the DSP manager window
 msgctxt "#15067"
 msgid "Close"
-msgstr ""
+msgstr "መዝጊያ"
 
 #. DSP manager dialog context menu entry
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#15078"
 msgid "Mode settings"
-msgstr ""
+msgstr "ዘዴ ማሰናጃ"
 
 #. DSP manager yes/no dialog text
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
@@ -7863,13 +8116,13 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
-msgstr ""
+msgstr "ማስገቢያ"
 
 #. Audio DSP process chain indication
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15088"
 msgid "Output"
-msgstr ""
+msgstr "ውጤት"
 
 #. Audio DSP process chain indication
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -7887,7 +8140,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15091"
 msgid "Positions"
-msgstr ""
+msgstr "ቦታዎች"
 
 #. Audio DSP process chain indication
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -8325,7 +8578,7 @@ msgstr ""
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16297"
 msgid "Smooth"
-msgstr ""
+msgstr "ለስላሳ"
 
 #. Description of the video filter that uses jagged pixels without smoothing
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
@@ -8388,7 +8641,7 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16309"
 msgid "Sinc (software)"
-msgstr ""
+msgstr "ማስማሚያ (ሶፍትዌር)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16310"
@@ -8424,7 +8677,7 @@ msgstr "በራሱ "
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16317"
 msgid "Temporal (half)"
-msgstr ""
+msgstr "ጊዚያዊ (ግማሽ)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16318"
@@ -8454,7 +8707,7 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16324"
 msgid "Software - Blend"
-msgstr ""
+msgstr "ሶፍትዌር - ማስማሚያ"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16325"
@@ -8530,17 +8783,17 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#17997"
 msgid "{0:d} MByte"
-msgstr ""
+msgstr "{0:d} ሜጋ ባይት"
 
 #: system/settings/settings.xml
 msgctxt "#17998"
 msgid "{0:d} hours"
-msgstr ""
+msgstr "{0:d} ሰአቶች"
 
 #: system/settings/settings.xml
 msgctxt "#17999"
 msgid "{0:d} days"
-msgstr ""
+msgstr "{0:d} ቀኖች"
 
 #. Live TV channels 'play' context menu item label
 #: xbmc/video/ContextMenus.cpp
@@ -8635,7 +8888,7 @@ msgstr "በፍጥነት "
 #: addons/skin.estuary/xml/DialogPlayerProcessInfo.xml
 msgctxt "#19015"
 msgid "Encryption"
-msgstr ""
+msgstr "መመስጠሪያ"
 
 #. unused?
 msgctxt "#19016"
@@ -8760,7 +9013,7 @@ msgstr "ይቀጥሉ "
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19032"
 msgid "Timeline"
-msgstr ""
+msgstr "የ ሰአት መስመር"
 
 #. generic 'information' label used in different places, like labels for
 #. message box headers
@@ -8802,7 +9055,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#19037"
 msgid "Show signal quality"
-msgstr ""
+msgstr "የ ምልክት ጥራት ማሳያ"
 
 #. message box text stating that a PVR backend does not support a certain
 #. functionality.
@@ -8959,14 +9212,14 @@ msgstr ""
 #: @@@ unused?
 msgctxt "#19062"
 msgid "Sort by: Channel"
-msgstr ""
+msgstr "በ ጣቢያ: መለያ "
 
 #. Label for epg grid window "jump to grid start" (oldest available events)
 #. context menu entry
 #: /xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19063"
 msgid "Go to beginning"
-msgstr ""
+msgstr "ወደ መጀመሪያው መሄጃ "
 
 #. Label for epg grid window "jump to grid end" (youngest available events)
 #. context menu entry
@@ -8979,17 +9232,16 @@ msgstr "ወደ መጨረሻው መሄጃ "
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19065"
 msgid "Timer settings"
-msgstr ""
+msgstr "ሰአት ማሰናጃ"
 
 #. Name of a shortcut to a custom folder for channel icons
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#19066"
 msgid "Channel icons"
-msgstr ""
+msgstr "የ ጣቢያው ምልክት:"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr ""
@@ -8998,7 +9250,7 @@ msgstr ""
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#19068"
 msgid "Recording settings"
-msgstr ""
+msgstr "መቅረጫ ማሰናጃ"
 
 #. Electronic program guide
 #: addons/skin.estuary/xml/Variables.xml
@@ -9034,7 +9286,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19074"
 msgid "Active"
-msgstr ""
+msgstr "ንቁ:"
 
 #. Label of name edit in PVR timer and recording settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
@@ -9052,7 +9304,7 @@ msgstr "ፎልደር"
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
 msgctxt "#19077"
 msgid "Hide disabled"
-msgstr ""
+msgstr "የ ተሰናከለ መደበቂያ"
 
 #. Label of channel selector list in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9065,17 +9317,17 @@ msgstr "ጣቢያ "
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19079"
 msgid "Days of week"
-msgstr ""
+msgstr "የ ሳምንቱ ቀኖች"
 
 #. used by several skins
 msgctxt "#19080"
 msgid "Begin"
-msgstr ""
+msgstr "መጀመሪያ:"
 
 #. used by several skins
 msgctxt "#19081"
 msgid "End"
-msgstr ""
+msgstr "መጨረሻ:"
 
 #. Label of priority spinner in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9094,13 +9346,13 @@ msgstr ""
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19084"
 msgid "First day"
-msgstr ""
+msgstr "የ መጀመሪያ ቀን:"
 
 #. default for channels without a name. place holder will be filled with
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
+msgid "Unknown channel {0:s}"
 msgstr ""
 
 #. Label for "Instant recording action" setting
@@ -9125,7 +9377,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#19089"
 msgid "Ask what to do"
-msgstr ""
+msgstr "ምን እንደሚሰራ ጠይቀኝ"
 
 #. Label for "Instant recording action" dialog settings value
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -9193,7 +9445,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
-msgstr ""
+msgstr "ማስጠንቀቂያ!"
 
 #. service label in pvr info dialog
 #: addons/skin.estuary/xml/DialogPlayerProcessInfo.xml
@@ -9224,7 +9476,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19103"
 msgid "Go to channel"
-msgstr ""
+msgstr "ወደ ጣቢያ መሄጃ"
 
 #. label of the help text for the recording folder edit field in PVR timer
 #. settings dialog
@@ -9236,7 +9488,7 @@ msgstr ""
 #. unused?
 msgctxt "#19105"
 msgid "Please select a channel"
-msgstr ""
+msgstr "እባክዎን ጣቢያ ይምረጡ"
 
 #. part of timer information text (e.g. "Next timer on 10/10/2016 at 9:00 AM")
 #: xbmc/pvr/PVRGUIInfo.cpp
@@ -9257,22 +9509,23 @@ msgid "Fallback framerate"
 msgstr ""
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
+"Could not save the timer. Check the log for more information about this "
+"message."
 msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
+"Could not delete the timer. Check the log for more information about this "
+"message."
 msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9288,7 +9541,7 @@ msgstr ""
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19113"
 msgid "Delete all recordings in this folder?"
-msgstr ""
+msgstr "በ ፎልደር ውስጥ ያለውን የ ተቀረጸውን ላጥፋው?"
 
 #. label for PVR backend version in system information's PVR section
 #: xbmc/windows/GUIWindowSystemInfo.cpp
@@ -9313,7 +9566,7 @@ msgstr "የ ዲስክ መጠን"
 #: system/settings/settings.xml
 msgctxt "#19117"
 msgid "Search for channels"
-msgstr ""
+msgstr "ጣቢያ መፈለጊያ"
 
 #. unused?
 msgctxt "#19118"
@@ -9330,7 +9583,7 @@ msgstr ""
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19120"
 msgid "Client number"
-msgstr ""
+msgstr "የ ደንበኛ ቁጥር"
 
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19121"
@@ -9405,7 +9658,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19133"
 msgid "Search string"
-msgstr ""
+msgstr "ሀረግ መፈለጊያ"
 
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19134"
@@ -9458,7 +9711,7 @@ msgstr "ቡድን"
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19142"
 msgid "Search guide"
-msgstr ""
+msgstr "መምሪያ መፈለጊያ"
 
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19143"
@@ -9552,12 +9805,12 @@ msgstr "ከ"
 #: addons/skin.estuary/xml/Home.xml
 msgctxt "#19157"
 msgid "Next recording"
-msgstr ""
+msgstr "የሚቀጥለው መቅረጫ "
 
 #: addons/skin.estuary/xml/Home.xml
 msgctxt "#19158"
 msgid "Currently recording"
-msgstr ""
+msgstr "የ አሁኑ መቅረጫ "
 
 #. part of timer / timer rule textual representation (e.g. "10/10/2016 from
 #. 11:00 PM to 10/11/2016 1:00 AM". "Mondays from any time to any time")
@@ -9578,13 +9831,13 @@ msgstr "ለ"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19161"
 msgid "any time"
-msgstr ""
+msgstr "በ ማንኛውም ጊዜ"
 
 #. timer status textual representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19162"
 msgid "Recording active"
-msgstr ""
+msgstr "መቅረጫ ንቁ ነው"
 
 #. label for number of PVR recordings in system information's PVR section
 #: xbmc/windows/GUIWindowSystemInfo.cpp
@@ -9596,7 +9849,7 @@ msgstr "መቅረጫ "
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
 msgstr ""
 
@@ -9628,6 +9881,14 @@ msgstr ""
 #. unused?
 msgctxt "#19169"
 msgid "Hide video information box"
+msgstr ""
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
 msgstr ""
 
 #. pvr settings "start playback full screen" setting label
@@ -9699,7 +9960,7 @@ msgstr "የቲቪ ጣቢያ "
 #: system/settings/settings.xml
 msgctxt "#19181"
 msgid "Menu / OSD"
-msgstr ""
+msgstr "ዝርዝር / OSD"
 
 #. pvr settings "future epg days to display" setting value
 #: system/settings/settings.xml
@@ -9724,7 +9985,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#19185"
 msgid "Clear data"
-msgstr ""
+msgstr "ዳታ ማጽጃ"
 
 #. message box text for pvr data reset confirmation
 #: xbmc/pvr/PVRManager.cpp
@@ -9757,7 +10018,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19190"
 msgid "Play programme"
-msgstr ""
+msgstr "ፕሮግራም ማጫወቻ "
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -9788,7 +10049,7 @@ msgstr "ልቀጥል?"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19195"
 msgid "Client actions"
-msgstr ""
+msgstr "የ ደንበኛ ተግባር"
 
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -9814,7 +10075,7 @@ msgstr ""
 #: system/settings/settings.xml addons/skin.estuary/xml/Variables.xml
 msgctxt "#19199"
 msgid "Channel manager"
-msgstr ""
+msgstr "የ ጣቢያ አስተዳዳሪ "
 
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 msgctxt "#19200"
@@ -10054,6 +10315,14 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr ""
 
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr ""
+
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10196,6 +10465,14 @@ msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "ለ ወላጅ መቆጣጠሪያ የመግቢያ ቃል ያስገቡ:"
 
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
+
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19264"
@@ -10258,7 +10535,7 @@ msgstr "የ ቲቪ መምሪያ"
 #: xbmc/addons/Skin.cpp
 msgctxt "#19274"
 msgid "Radio guide"
-msgstr ""
+msgstr "የ ሬዲዮ መምሪያ"
 
 #. timer status textual representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -11767,7 +12044,7 @@ msgstr ""
 
 msgctxt "#20190"
 msgid "Custom"
-msgstr ""
+msgstr "ማስተካከያ"
 
 #: system/settings/settings.xml
 msgctxt "#20191"
@@ -11833,6 +12110,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr ""
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr ""
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11856,6 +12139,31 @@ msgstr ""
 #: addons/skin.estuary/xml/Includes.xml
 msgctxt "#20244"
 msgid "Android apps"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr ""
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
 msgstr ""
 
 msgctxt "#20250"
@@ -12010,6 +12318,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "ይዞታ ማሰናጃ"
@@ -12073,6 +12382,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "የቲቪ ትርኢት "
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12242,6 +12552,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr ""
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr ""
@@ -12466,6 +12777,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr ""
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr ""
@@ -12475,14 +12787,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr ""
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "ነጠላ ፋይል "
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "መለያ "
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr ""
@@ -12491,6 +12806,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr ""
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr ""
@@ -13664,17 +13980,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "የ ከያኒ መረጃ"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "መሳሪያዎች "
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "የተወለደው"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr ""
@@ -13684,12 +14000,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr ""
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr ""
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "የሞተው "
@@ -14104,7 +14420,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr ""
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr ""
@@ -14923,7 +15239,7 @@ msgstr "ስቱዲዮ "
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29910"
 msgid "Phone"
-msgstr ""
+msgstr "ስልክ"
 
 #. EMail address (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -16617,6 +16933,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr ""
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr ""
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16670,26 +16993,30 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr ""
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr ""
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr ""
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr ""
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
+msgstr ""
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr ""
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr ""
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
 msgstr ""
 
 #. connection state "host unreachable"
@@ -17317,7 +17644,7 @@ msgstr ""
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
+msgid "Import an XML file into the video library database."
 msgstr ""
 
 #. Description of settings category with label #14086 "Playback"
@@ -17727,6 +18054,14 @@ msgid ""
 msgstr ""
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -18041,14 +18376,14 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
 msgstr ""
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
+msgid "Import an XML file into the music library database."
 msgstr ""
 
 #. Description of settings category with label #14086 "Playback"
@@ -18268,6 +18603,14 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36292"
 msgid "This category contains startup settings."
+msgstr ""
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -19840,7 +20183,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36605"
 msgid "Updates"
-msgstr ""
+msgstr "ማሻሻያ "
 
 #. Option for setting "System -> Add-ons -> Updates"
 #: system/settings/settings.xml
@@ -20112,21 +20455,6 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
 msgctxt "#37002"
 msgid "(Director's comments 2)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
 msgstr ""
 
 #: xbmc/GUIInfoManager.cpp
@@ -20566,42 +20894,42 @@ msgstr ""
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr ""
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr ""
@@ -20761,6 +21089,176 @@ msgctxt "#38209"
 msgid "Reset resume position"
 msgstr ""
 
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr ""
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "ነጠላ ፋይል "
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr ""
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr ""
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr ""
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr ""
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr ""
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr ""
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr ""
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr ""
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr ""
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr ""
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr ""
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr ""
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr ""
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr ""
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr ""
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr ""
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr ""
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr ""
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr ""
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr ""
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -20909,6 +21407,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr ""
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20923,4 +21439,45 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39102"
 msgid "Play Radio"
+msgstr ""
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr ""
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
 msgstr ""

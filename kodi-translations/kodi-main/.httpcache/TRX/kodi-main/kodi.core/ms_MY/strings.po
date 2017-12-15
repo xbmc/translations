@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-04 21:26+0000\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/teamxbmc/kodi-main/language/ms_MY/)\n"
 "MIME-Version: 1.0\n"
@@ -378,12 +378,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "Isih mengikut: Saiz"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "Tidak"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "Ya"
@@ -719,12 +719,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "Dikompil:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "Suasana"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Gaya"
@@ -782,6 +783,7 @@ msgstr "Menggelintar album"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "OK"
@@ -971,6 +973,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "Tiada sambungan rangkaian"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -2901,6 +2912,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "Penguatan volum"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "Pilih folder eksport"
@@ -3375,6 +3388,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "Capaian internet"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "Kemaskini pustaka"
@@ -4527,19 +4541,11 @@ msgstr "Pengurus Fail"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Tetapan"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "Muzik"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "Video"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4548,16 +4554,8 @@ msgstr "Maklumat sistem"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "Tetapan - Am"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "Tetapan - Skrin"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "Tetapan - Penampilan - Penentukuran GUI"
+msgid "Settings - Test patterns"
+msgstr "Tetapan - Uji pola"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4565,53 +4563,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "Tetapan - Video - Penentukuran skrin"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "Tetapan - Gambar"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "Tetapan - Program"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "Tetapan - Cuaca"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "Tetapan - Muzik"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "Tetapan - Sistem"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "Tetapan - Video"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "Tetapan - Rangkaian"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "Tetapan - Penampilan"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "Skrip"
+msgid "Settings - Service"
+msgstr "Tetapan - Perkhidmatan"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "Tetapan - TV"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "Tetapan - Permainan"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4636,13 +4603,29 @@ msgid "Login screen"
 msgstr "Skrin daftar masuk"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "Tetapan - Pemain"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "Tetapan - Media"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "Tetapan - Antaramuka"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Tetapan - Profil"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "Tetap semula"
+msgid "Skin Settings"
+msgstr "Tetapan Kulit"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4708,10 +4691,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "Tambah sumber muzik"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "Tambah sumber gambar"
+msgid "Event log"
+msgstr "Log peristiwa"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4749,14 +4732,94 @@ msgid "Edit file source"
 msgstr "Sunting sumber fail"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "Penuding"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
+msgid "Yes / No dialog"
 msgstr "Dialog Ya / Tidak"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
+msgid "Progress dialog"
 msgstr "Dialog kemajuan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "Papan kekunci maya"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "Palang volum"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "Menu konteks"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "Dialog pemberitahuan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "Input Angka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr "Input pad permainan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "Menu matikan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "Kawalan pemain"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "Palang jangkau"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "Maklumat proses pemain"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "OSD Muzik"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "Senarai praset pengvisualan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "Tetapan OSD video"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "Tetapan OSD audio"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "Tanda buku video"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4795,8 +4858,8 @@ msgstr "Kegemaran"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "Lagu / Maklumat"
+msgid "Song info"
+msgstr "Maklumat lagu"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4810,8 +4873,8 @@ msgstr "Penyunting peraturan senarai main pintar"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "Gambar / Maklumat"
+msgid "Picture info"
+msgstr "Maklumat gambar"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4819,9 +4882,59 @@ msgid "Add-on settings"
 msgstr "Tetapan tambahan"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "Maklumat skrin penuh"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "Dialog pelungsur"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "Tambahan / Maklumat"
+msgid "Add-on info"
+msgstr "Maklumat tambahan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "Pelihat teks"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "Tetapan persisian"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "Dialog kemajuan lanjutan"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "Penapis media"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "Gelintar sarikata"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "Pengurus DSP audio"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "Tetapan DSP audio OSD"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "Tetapan CMS OSD"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4845,8 +4958,8 @@ msgstr "Membuka strim"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "Muzik / Senarai Main"
+msgid "Music playlist"
+msgstr "Senarai main muzik"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4855,8 +4968,8 @@ msgstr "Muzik"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
-msgstr "Penyunting senarai main"
+msgid "Music playlist editor"
+msgstr "Penyunting senarai main muzik"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -4913,29 +5026,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "Maklumat cereka"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "Teleteks"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "Maklumat panduan PVR"
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "Maklumat rakaman PVR"
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr "Tetapan pemasa PVR"
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "Pengurus kumpulan PVR"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "Pengurus saluran PVR"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "Gelintar panduan PVR"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "Imbas saluran PVR"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "Kemajuan kemaskini PVR"
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "Saluran OSD PVR"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "Panduan OSD PVR"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr "Maklumat RSD radio PVR"
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr "Tetapan rakaman PVR"
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "Saluran TV"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "Rakaman TV"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "Panduan TV"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "Pemasa TV"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "Gelintar TV"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "Saluran radio"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "Rakaman radio"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "Panduan radio"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "Pemasa radio"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "Gelintar radio"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "Peraturan pemasa TV"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "Peraturan pemasa radio"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "TV langsung skrin penuh"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "Radio skrin penuh"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "Penapis video permainan"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "Permainan"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "OSD permainan"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "Pengawal permainan"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "Tetapan video permainan"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
-msgstr "Pilih dialog"
+msgid "Select dialog"
+msgstr "Dialog pilih"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "Muzik / Maklumat"
+msgid "Music info"
+msgstr "Maklumat muzik"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
+msgid "OK dialog"
 msgstr "Dialog OK"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "Video / Maklumat"
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "Skrip / Maklumat"
+msgid "Video info"
+msgstr "Maklumat video"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4948,9 +5185,9 @@ msgid "Audio visualisation"
 msgstr "Pengvisualan audio"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "Dialog oenindanan fail"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "Pengvisualan audio"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5330,6 +5567,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "OSD Skrin Penuh"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "Permainan skrin penuh"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "Permulaan"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5359,6 +5606,21 @@ msgstr "- Tempoh fail minimum"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "Matikan"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "Tambah sumber gambar"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "Tetap semula"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5706,7 +5968,7 @@ msgstr "Profil terakhir dimuatkan:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -6070,6 +6332,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "Maklumat album"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "Imbas item ke pustaka"
@@ -6311,16 +6574,6 @@ msgstr "Kaedah penerapan"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Auto kesan"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "Pelorek asas (ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "Pelorek lanjutan (GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -8320,26 +8573,26 @@ msgstr "Gagal memadam sekurang-kurangnya satu fail. Periksa log untuk maklumat l
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16296"
 msgid "Pixelate"
-msgstr ""
+msgstr "Berpiksel"
 
 #. Name of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16297"
 msgid "Smooth"
-msgstr ""
+msgstr "Lancar"
 
 #. Description of the video filter that uses jagged pixels without smoothing
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16298"
 msgid "Shows the game's pixels without any modifications."
-msgstr ""
+msgstr "Tunjuk piksel permainan tanpa apa-apa pengubahsuaian."
 
 #. Description of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16299"
 msgid ""
 "Removes the jagged edges of pixels by evenly fading between adjacent pixels."
-msgstr ""
+msgstr "Buang pinggir piksel bergerigi dengan pemudaran sekata diantara piksel bersebelahan."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -8990,7 +9243,6 @@ msgstr "Ikon saluran"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Peristiwa ini sudah dirakam."
@@ -9101,8 +9353,8 @@ msgstr "Hari pertama"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "Saluran {0:d} tidak diketahui"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9258,22 +9510,23 @@ msgid "Fallback framerate"
 msgstr "Jatuh-balik kadar bingkai"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "Tidak dapat simpan pemaca. Periksa log untuk maklumat lanjut mengenai mesej ini."
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "Satu ralat tidak dijangka berlaku. Cuba lagi kemudian atau periksa log untuk maklumat lanjut."
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9597,9 +9850,9 @@ msgstr "Rakaman"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "Tidak dapat memulakan rakaman. Periksa log untuk maklumat lanjut mengenai mesej ini."
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9630,6 +9883,14 @@ msgstr "Rakaman dipadam dan dipulih semula"
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Sembunyi kotak maklumat video"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -9706,7 +9967,7 @@ msgstr "Menu / OSD"
 #: system/settings/settings.xml
 msgctxt "#19182"
 msgid "Future days to display"
-msgstr ""
+msgstr "Hari akan datang yang dipaparkan"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9993,7 +10254,7 @@ msgstr "Pemasa dipadamkan"
 #: system/settings/settings.xml
 msgctxt "#19229"
 msgid "Past days to display"
-msgstr ""
+msgstr "Hari lepas yang dipaparkan"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -10054,6 +10315,14 @@ msgstr "Memuatkan rakaman daripada klien"
 msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Memulakan bebenang latar belakang"
+
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "Keutamaan klien"
 
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
@@ -10196,6 +10465,14 @@ msgstr "Ubah PIN"
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "Kawalan ibubapa, Masukkan PIN:"
+
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11834,6 +12111,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "Cari sarikata luar"
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "Folder maklumat artis"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11858,6 +12141,31 @@ msgstr "Gambar Android"
 msgctxt "#20244"
 msgid "Android apps"
 msgstr "Apl Android"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Pustaka muzik Windows"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Pustaka video Windows"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Pustaka gambar Windows"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Pustaka foro Windows"
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Dokumen Windows"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -12011,6 +12319,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "Guna nama fail atau folder dalam carian?"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "Tetapkan kandungan"
@@ -12074,6 +12383,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "Rancangan TV"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12243,6 +12553,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "Segar semula maklumat untuk semua episod?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "Folder terpilih mengandungi satu rancangan TV"
@@ -12467,6 +12778,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "Paparan slaid seni peminat"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Eksport ke satu fail atau asing fail per masukan?"
@@ -12476,14 +12788,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "Pilih jenis peraturan"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Satu fail"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "Asing"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "Eksport lakaran kenit dan seni peminat?"
@@ -12492,6 +12807,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "Tulis-ganti fail lama?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "Asingkan laluan dari kemaskini pustaka"
@@ -13665,17 +13981,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Maklumat artis"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instrumen"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Lahir"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Ditubuhkan"
@@ -13685,12 +14001,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "Tema"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Dibubar"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Meninggal"
@@ -14105,7 +14421,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "(Kosongkan tetapan semasa)"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Pasang dari fail zip"
@@ -15906,13 +16222,13 @@ msgstr "192.0"
 #: system/settings/settings.xml
 msgctxt "#34129"
 msgid "352.8"
-msgstr ""
+msgstr "352.8"
 
 #. SPDIF max sampling rate
 #: system/settings/settings.xml
 msgctxt "#34130"
 msgid "384.0"
-msgstr ""
+msgstr "384.0"
 
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
@@ -16618,6 +16934,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "Padam keadaan simpan"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "Fail yang diperlukan tidak ditemui."
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16671,27 +16994,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Sunting sumber game"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "Pasang emulator"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "Urus emulator"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "Layar semua emulator"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Gagal memasang tambahan."
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "Dipasang"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "Pilih emulator untuk fail {0:s}"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17318,8 +17645,8 @@ msgstr "Eksport pangkalan data pustaka video ke dalam fail XML. Ia secara piliha
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
-msgstr "Import fail XML ke dalam pangkalan data pustaka video."
+msgid "Import an XML file into the video library database."
+msgstr "Import satu fail XML ke dalam pangkalan data pustaka video."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -17728,6 +18055,14 @@ msgid ""
 msgstr "Padam pangkalan data untuk saluran dan panduan dan import semula data dari bahagian belakang selepas itu."
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr "Buka dialog keutamaan klien yang membolehkan pengubahsuaian prioriti bagiklien PVR dibenarkan berdasarkan keutamaan peribadi anda, sebagai contoh untuk tertibkan klien saluran mengikut klien. Nilai lebih tinggi bermaksud prioriti lebih tinggi."
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -17775,13 +18110,13 @@ msgstr "Kategori ini mengandungi tetapan panduan pengaturcaraan elektronik (EPG)
 #: system/settings/settings.xml
 msgctxt "#36219"
 msgid "Number of past days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Bilangan hari di masa lalu untuk ditunjukkan dalam panduan dan import dari bahagian belakang."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
 msgid ""
 "Number of future days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Bilangan hari di masa hadapan untuk ditunjukkan dalam panduan dan import dari bahagian belakang."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -18042,15 +18377,15 @@ msgstr "Jika dibenarkan, kadar bingkai ini digunakan untuk strim yang tidak dala
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "Eksport pangkalan data pustaka muzik ke dalam fail XML. Ia secara pilihan menulis-ganti fail XML semasa anda."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "Eksport bahagian ustaka muzik ke dalam fail XML atau fail NFO. Ia secara pilihan menulis-ganti fail NFO dan kerja seni semasa anda."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
-msgstr "Import fail XML ke dalam pangkalan data pustaka muzik."
+msgid "Import an XML file into the music library database."
+msgstr "Import satu fail XML ke dalam pangkalan data pustaka muzik."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -18270,6 +18605,14 @@ msgstr "Auto-lenting cakera selepas peretasan selesai."
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "Kategori ini mengandungi tetapan permulaan."
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "Pilih folder yang mana maklumat artis (fail dan imej nfo) sepatutnya disimpan."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -20115,21 +20458,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(Ulasan pengarah 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(Dipaksa)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(Ulasan pengarah)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20567,42 +20895,42 @@ msgstr "Dapatkan maklumat tambahan album dan artis? Ia mengambil sedikit masa ol
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Buat imbasan tag penuh walaupun ketika fail muzik tidak berubah?"
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "Tetapkan penyedia maklumat lalai"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr "Tetapkan untuk artis ini"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr "Tetapkan untuk semua artis yang ditunjukkan"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "Tetapkan untuk album ini"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "Tetapkan untuk semua album yang ditunjukkan"
@@ -20760,7 +21088,177 @@ msgstr "Jika maklumat EXIF wujud (tarikh, masa, kamera yang digunakan, dan lain-
 #: xbmc/video/ContextMenus.h
 msgctxt "#38209"
 msgid "Reset resume position"
-msgstr ""
+msgstr "Tetap semula kedudukan sambung semula"
+
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "Eksport Pustaka Muzik"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "Satu fail"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "Pisah fail bagi setiap item"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "Ke folder pustaka"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "Pilih jenis output eksport"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "Folder destinasi"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "Item yang dieksport"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "Sertakan kerja seni seperti lakaran kenit dan seni peminat"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr "Sertakan item yang belum lagi dimusnahkan (untuk hasilkan fail NFO templat)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr "Output hanya kerja seni, bukannya fail NFO"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "Tulis-ganti fail sedia ada"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "Artis lagu"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "Lain-lain artis"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr "Tidak boleh eksport ke folder pustaka kerana tetapan folder maklumat artis sistem adalah kosong"
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "Tidak boleh eksport data kerana folder destinasi tidak wujud"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "Eksport"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr "Anda mempunyai maklumat artis setempat (NFO) dan fail seni yang mahu diambilkan? Tetapkan lokasi folder artis ini sekarang."
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "Tetapkan Penyedia Maklumat Muzik"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "Tetapkan Penyedia Maklumat Album"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "Tetapkan Penyedia Maklumat Artis"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "Dapatkan maklumat tambahan dan seni ketika mengimbas"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "Penyedia maklumat album"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "Penyedia maklumat artis"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "Folder maklumat artis setempat"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "Pilihan untuk mendapatkan maklumat tambahan"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "Pilih bagaimana hendak laksanakan tetapan"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "Bagaimanan hendak laksanakan tetapan penyedia maklumat"
 
 #: system/settings/settings.xml
 msgctxt "#39000"
@@ -20910,6 +21408,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "Dependensi"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20925,3 +21441,44 @@ msgstr "Main TV"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "Main Radio"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "Tidak boleh konfigur lokasi rangkaian. Laluan tidak sah diberi."
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

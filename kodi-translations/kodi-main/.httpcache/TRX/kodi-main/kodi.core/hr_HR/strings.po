@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Translators:
 # Doktor_X <doktorxnetwork@gmail.com>, 2016
-# Doktor_X <doktorxnetwork@gmail.com>, 2016
+# Doktor_X <doktorxnetwork@gmail.com>, 2016-2017
 # gogo <trebelnik2@gmail.com>, 2015
 # Stanislav Vlasic <svlasic@gmail.com>, 2015
 # gogo <trebelnik2@gmail.com>, 2015-2017
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-19 18:56+0000\n"
-"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/teamxbmc/kodi-main/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -381,12 +381,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "Razvrstaj po: Veličini"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "Ne"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "Da"
@@ -722,12 +722,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "Kompilirano:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "Raspoloženja"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stilovi"
@@ -785,6 +786,7 @@ msgstr "Pretraživanje albuma"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "U redu"
@@ -974,6 +976,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "Mreža nije povezana"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -2904,6 +2915,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "Pojačavanje glasnoće zvuka"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "Odaberite mapu izvoza"
@@ -3367,7 +3380,7 @@ msgstr "Početno vrijeme ponavljanja (ms)"
 #: system/settings/settings.xml
 msgctxt "#796"
 msgid "Continuous repeat delay (ms)"
-msgstr "Neprekidno vrijeme ponavljanja (ms)"
+msgstr "Odgoda premotavanja (ms)"
 
 msgctxt "#797"
 msgid "Maximum number of clients"
@@ -3378,6 +3391,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "Internet pristup"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "Nadopuni zbirku"
@@ -4530,19 +4544,11 @@ msgstr "Upravitelj datoteka"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Postavke"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "Glazba"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "Video"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4551,16 +4557,8 @@ msgstr "Informacije sustava"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "Postavke - Općenito"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "Postavke - Zaslon"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "Postavke - Izgled - GUI kalibracija"
+msgid "Settings - Test patterns"
+msgstr "Postavke - Testni uzorci"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4568,53 +4566,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "Postavke - Video - Kalibracija zaslona"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "Postavke - Slike"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "Postavke - Programi"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "Postavke - Vrijeme"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "Postavke - Glazba"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "Postavke - Sustav"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "Postavke - Video"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "Postavke - Mreža"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "Postavke - Izgled"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "Skripte"
+msgid "Settings - Service"
+msgstr "Postavke - Usluge"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "Postavke - TV"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "Postavke - Igre"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4639,13 +4606,29 @@ msgid "Login screen"
 msgstr "Zaslon prijave"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "Postavke - Reproduktor"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "Postavke - Mediji"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "Postavke - Sučelje"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Postavke - Profili"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "Vrati na početno"
+msgid "Skin Settings"
+msgstr "Postavke presvlake"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4711,10 +4694,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "Dodaj glazbeni izvor"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "Dodaj slikovni izvor"
+msgid "Event log"
+msgstr "Zapis događaja"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4752,14 +4735,94 @@ msgid "Edit file source"
 msgstr "Uredi izvor datoteke"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "Pokazivač"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
+msgid "Yes / No dialog"
 msgstr "Da/Ne dijalog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
+msgid "Progress dialog"
 msgstr "Dijalog napretka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "Virtualna tipkovnica"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "Traka glasnoće zvuka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "Sadržajni izbornik"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "Dijalog obavijesti"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "Brojčani ulaz"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr ""
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "Izbornik isključivanja"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "Upravljanje reproduktorom"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "Traka premotavanja"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "Informacije reproduktora"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "OSD glazbe"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "Popis predložaka vizualizacije"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "Video OSD postavke"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "Zvučne OSD postavke"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "Video zabilješke"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4798,8 +4861,8 @@ msgstr "Omiljeno"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "Pjesma/Informacije"
+msgid "Song info"
+msgstr "Informacije pjesme"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4813,8 +4876,8 @@ msgstr "Pravila uređivača pametnog popisa izvođenja"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "Slike/Informacije"
+msgid "Picture info"
+msgstr "Informacije slike"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4822,9 +4885,59 @@ msgid "Add-on settings"
 msgstr "Postavke dodatka"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "Cjelozaslonske informacije"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "Dijalog klizača"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "Dodaci/Informacije"
+msgid "Add-on info"
+msgstr "Informacije dodatka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "Preglednik teksta"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "Postavke periferije"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "Prošireni dijalog napretka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "Filter medija"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "Pretraga podnaslova"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "Upravitelj DSP zvuka"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "Zvučni OSD DSP postavke"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "OSD CMS postavke"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4848,8 +4961,8 @@ msgstr "Otvaranje streama"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "Glazba/Popis izvođenja"
+msgid "Music playlist"
+msgstr "Glazbeni popis izvođenja"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4858,7 +4971,7 @@ msgstr "Glazba"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
+msgid "Music playlist editor"
 msgstr "Uređivač popisa izvođenja"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
@@ -4916,29 +5029,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "Informacije filma"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "Teletekst"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "PVR informacije EPG vodiča"
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "PVR informacije snimanja"
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr "PVR informacije zakazanog snimanja"
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "PVR upravitelj grupa"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "PVR upravitelj programa"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "PVR pretraga EPG vodiča"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "PVR pretraga programa"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "PVR napredak nadopune"
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "PVR OSD programa"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "PVR OSD EPG vodiča"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr "PVR informacije RDS radia"
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr "PVR postavke snimanja"
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "TV programi"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "TV snimke"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "TV vodič"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "TV zakazana snimanja"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "TV pretraga"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "Radio programi"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "Radio snimke"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "Radio vodič"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "Radio zakazana snimanja"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "Radio pretraga"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "Pravila TV zakazivanja snimanja"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "Pravila radio zakazivanja snimanja"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "TV u punom zaslonu"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "Radio u punom zaslonu"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "Video filter igre"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "Igre"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "OSD igre"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "Kontroler za igre"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "Video postavke igre"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
-msgstr "Odaberi dijalog"
+msgid "Select dialog"
+msgstr "Dijalog odabira"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "Glazba/Informacije"
+msgid "Music info"
+msgstr "Informacije glazbe"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
+msgid "OK dialog"
 msgstr "Dijalog 'U redu'"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "Video/Informacije"
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "Skripte/Informacije"
+msgid "Video info"
+msgstr "Video informacije"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4951,9 +5188,9 @@ msgid "Audio visualisation"
 msgstr "Zvučna vizualizacija"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "Prozor slaganja datoteka"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "Zvučna vizualizacija"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5333,6 +5570,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "OSD cijelog zaslona"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "Igra u punom zaslonu"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "Pokretanje"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5362,6 +5609,21 @@ msgstr "- Minimalno trajanje datoteke"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "Isključi"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "Dodaj slikovni izvor"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "Vrati na početno"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5709,7 +5971,7 @@ msgstr "Zadnji učitani profil:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -6073,6 +6335,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "Informacije albuma"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "Pretraži stavke u zbirci"
@@ -6314,16 +6577,6 @@ msgstr "Način prikazivanja"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automatsko otkrivanje"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "Osnovni shaderi (ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "Napredni shaderi (GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -8148,7 +8401,7 @@ msgstr "Bob (obrnut)"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 msgctxt "#16023"
 msgid "Choose operator"
-msgstr ""
+msgstr "Odaberi operatera"
 
 #: xbmc/dialogs/GUIDialogProgress.cpp
 msgctxt "#16024"
@@ -8323,13 +8576,13 @@ msgstr "Neuspjelo brisanje bar jedne datoteke. Provjerite zapis za više informa
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16296"
 msgid "Pixelate"
-msgstr ""
+msgstr "Pikselizacija"
 
 #. Name of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16297"
 msgid "Smooth"
-msgstr ""
+msgstr "Glatko"
 
 #. Description of the video filter that uses jagged pixels without smoothing
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
@@ -8993,7 +9246,6 @@ msgstr "Ikone programa"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Ovaj događaj se već snima."
@@ -9104,8 +9356,8 @@ msgstr "Prvi dan"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "Nepoznati program {0:d}"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9261,22 +9513,23 @@ msgid "Fallback framerate"
 msgstr "Pomoćna frekvencija osvježavanja"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "Nemoguće spremanje zakazanog snimanja. Provjerite zapis za više informacija."
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "Pojavila se neočekivana greška. Pokušajte ponovno kasnije ili provjerite zapis za pojedinosti."
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9600,9 +9853,9 @@ msgstr "Snimke"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "Nemoguće pokretanje snimanja. Provjerite zapis za više informacija."
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9633,6 +9886,14 @@ msgstr "Obrisana i obnovljena snimanja"
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Sakrij okvir video informacija"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -10058,6 +10319,14 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Pokrećem radnje u pozadini"
 
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "Prioriteti klijenta"
+
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10199,6 +10468,14 @@ msgstr "Promijeni PIN"
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "Roditeljski nadzor. Upišite PIN:"
+
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11837,6 +12114,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "Potraži vanjske podnaslove"
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "Mapa informacija izvođača"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11861,6 +12144,31 @@ msgstr "Android fotografije"
 msgctxt "#20244"
 msgid "Android apps"
 msgstr "Android aplikacije"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Windows fonoteka "
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Windows videoteka"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Windows fototeka "
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Windows fototeka "
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Windows dokumenti"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -12014,6 +12322,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "Koristi nazive datoteka ili mapa za pretraživanja?"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "Postavi sadržaj"
@@ -12077,6 +12386,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "TV serije"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12246,6 +12556,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "Osvježi informacije za sve epizode?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "Odabrana mapa sadrži jednu TV emisjiu"
@@ -12470,6 +12781,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "Slikovna prezentacija postera obožavatelja"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Izvezi u jednu datoteku ili odvojene po unosu?"
@@ -12479,14 +12791,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "Odaberi vrstu pravila"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Jedna datoteka"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "Odvojene datoteke"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "Izvezi minijature i postere obožavatelja?"
@@ -12495,6 +12810,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "Prepiši preko starih datoteka?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "Isključi putanju iz nadopune zbirke"
@@ -13205,7 +13521,7 @@ msgstr "Izvor je prespor"
 
 msgctxt "#21455"
 msgid "Read rate too low for continuous playback"
-msgstr "Brzina čitanja je prespora za neprekidnu reprodukciju"
+msgstr "Brzina učitavanja izvora je prespora za premotavanje"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21456"
@@ -13668,17 +13984,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informacije izvođača"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instrumenti"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Rođen/a"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Osnovan"
@@ -13688,12 +14004,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "Teme"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Raspušten"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Preminuo/la"
@@ -13871,7 +14187,7 @@ msgstr "Uključi teletekst"
 
 msgctxt "#23051"
 msgid "Part {0:d}"
-msgstr ""
+msgstr "Dio {0:d}"
 
 msgctxt "#23052"
 msgid "Buffering {0:d} bytes"
@@ -14108,7 +14424,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "(Obriši trenutne postavke)"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Instaliraj iz zip datoteke"
@@ -16359,7 +16675,7 @@ msgstr "Tipke"
 #. mapping dialog.
 msgctxt "#35104"
 msgid "Pointers"
-msgstr ""
+msgstr "Pokazivači"
 
 #. Heading for buttons mounted on a light gun. Used in the controller mapping
 #. dialog.
@@ -16621,6 +16937,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "Obriši spremljeno stanje"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "Potrebne datoteke se ne mogu pronaći."
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16674,27 +16997,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Uredi izvor igre"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "Instaliraj emulator"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "Upravljanje emulatorima"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "Pregledaj sve emulatore"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Neuspjela instalacija dodatka."
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "Instalirano"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "Odaberi emulator za {0:s} datoteku"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17321,7 +17648,7 @@ msgstr "Izvezite bazu podataka Videoteke u XML format datoteke. Moguće je da ć
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
+msgid "Import an XML file into the video library database."
 msgstr "Uvezi XML datoteku u bazu podataka videteke."
 
 #. Description of settings category with label #14086 "Playback"
@@ -17731,6 +18058,14 @@ msgid ""
 msgstr "Obriši baze podataka programa i EPG vodiča i ponovno uvezi podatke iz pozadinskog softvera."
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr "Otvori dijalog prioriteta klijenta koji vam omogućuje prilagodbu prioriteta omogućenih PVR klijenata prema vašim osobnim potrebama, na primjer za poredak programa klijenta prema klijentu. Veća vrijednost znači viši prioritet."
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -18045,14 +18380,14 @@ msgstr "Ako je omogućeno, ova frekvencija osvježavanja se koristi za streamove
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "Izvezite bazu podataka Fonoteke u XML format datoteke. Moguće je da će ovo prepisti vaše trenutne XML datoteke."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "Izvezite bazu podataka Fonoteke u XML ili NFO format datoteke. Moguće je da će ovo prepisati vaše trenutne NFO i datoteke slika omota."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
+msgid "Import an XML file into the music library database."
 msgstr "Uvezi XML datoteku u bazu podataka fonoteke."
 
 #. Description of settings category with label #14086 "Playback"
@@ -18273,6 +18608,14 @@ msgstr "Automatski izbaci disk kada je ripanje završeno."
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "Kategorija sadrži postavke pokretanja."
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "Odaberite mapu za spremanje informacija izvođača (nfo datoteke i slike)."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -18525,7 +18868,7 @@ msgstr "Odgoda početnog ponavljanja (ms)."
 #: system/settings/settings.xml
 msgctxt "#36340"
 msgid "Continuous repeat delay (ms)."
-msgstr "Odgoda neprekidnog ponavljanja (ms)."
+msgstr "Odgoda premotavanja (ms)."
 
 #. Description of settings category with label #1259 "Zeroconf"
 #: system/settings/settings.xml
@@ -20118,21 +20461,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(Komentari redatelja 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(Prisilno)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(Komentari redatelja)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20570,42 +20898,42 @@ msgstr "Preuzmi dodatne informacije za albume i izvođače? Ovo može potrajati 
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Izvedi potpuno pretraživanje oznaka čak i ako su glazbene datoteke nepromijenjene."
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "Postavi zadanog pružatelja usluge informacija"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr "Postavi za ovog izvođača"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr "Postavi za sve prikazane izvođače"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "Postavi za ovaj album"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "Postavi za sve prikazane albume"
@@ -20765,6 +21093,176 @@ msgctxt "#38209"
 msgid "Reset resume position"
 msgstr "Poništi početni položaj"
 
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "Izvezi fonoteku"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "Jedna datoteka"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "Zasebne datoteke za svaku stavku"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "U mape zbirke"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "Odaberi vrstu izlaza izvoza"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "Odredišna mapa"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "Stavke za izvoz"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "Uključi omote albuma poput minijatura i postera obožavatelja"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "Prebriši postojeće datoteke"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "Izvođači pjesme"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "Ostali izvođači"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr "Nemoguć izvoz u mape fonoteke zato što je mapa sustava informacija izvođača prazna"
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "Nemoguć izvoz podataka zato što odredišna mapa ne postoji"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "Izvoz"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr "Imate li lokalne informacije izvođača (NFO) i datoteke omota ilustracija koje želite preuzeti? Postavite odmah lokaciju za te mape izvođača"
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "Postavi pružatelja usluge informacija glazbe"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "Postavi pružatelja usluge informacija albuma"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "Postavi pružatelja usluge informacija izvođača"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "Preuzmi dodatne informacije i omote tijekom pretrage"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "Pružatelj usluge informacija albuma"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "Pružatelj usluge informacija izvođača"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "Mapa lokalnih informacija izvođača"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "Mogućnosti preuzimanja dodatnih informacija"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "Odaberi način primijenjivanja postavki"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "Način primjene postavki pružatelja usluge informacija"
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -20913,6 +21411,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "Zavisnosti"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20928,3 +21444,44 @@ msgstr "Gledaj TV"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "Slušaj radio"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "Nemoguće podešavanje mrežne lokacije. Zadana je neispravna putanja."
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

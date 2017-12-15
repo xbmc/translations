@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-04 21:26+0000\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -395,12 +395,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "Sorteer op: Grootte"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "Nee"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "Ja"
@@ -736,12 +736,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "Gecompileerd:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "Stemmingen"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stijlen"
@@ -799,6 +800,7 @@ msgstr "Albuminformatie ophalen"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "OK"
@@ -988,6 +990,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "Netwerk is niet verbonden"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -2918,6 +2929,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "Volumeversterking"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "Exporteerlocatie kiezen"
@@ -3392,6 +3405,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "Internettoegang"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "Bibliotheek bijwerken"
@@ -4544,19 +4558,11 @@ msgstr "Bestandsbeheer"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Instellingen"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "Muziek"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "Video"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4565,16 +4571,8 @@ msgstr "Systeeminformatie"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "Instellingen - Algemeen"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "Instellingen - Beeld"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "Instellingen - Uiterlijk - GUI-kalibratie"
+msgid "Settings - Test patterns"
+msgstr "Instellingen - Testpatronen"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4582,53 +4580,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "Instellingen - Video's - Schermkalibratie"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "Instellingen - Afbeeldingen"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "Instellingen - Programma's"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "Instellingen - Weer"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "Instellingen - Muziek"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "Instellingen - Systeem"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "Instellingen - Video's"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "Instellingen - Netwerk"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "Instellingen - Uiterlijk"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "Scripts"
+msgid "Settings - Service"
+msgstr "Instellingen - Dienst"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "Instellingen - TV"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "Instellingen - Spellen"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4653,13 +4620,29 @@ msgid "Login screen"
 msgstr "Inlogscherm"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "Instellingen - Speler"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "Instellingen - Media"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "Instellingen - Interface"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Instellingen - Profielen"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "Reset"
+msgid "Skin Settings"
+msgstr "Skininstellingen"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4725,10 +4708,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "Toevoegen muziek locatie"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "Toevoegen afbeeldingen locatie"
+msgid "Event log"
+msgstr "Gebeurtenisregistratie"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4766,14 +4749,94 @@ msgid "Edit file source"
 msgstr "Aanpassen bestand locatie"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "Aanwijzer"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
-msgstr "Ja / Nee venster"
+msgid "Yes / No dialog"
+msgstr "Ja / Nee dialoog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
-msgstr "voortgangsscherm"
+msgid "Progress dialog"
+msgstr "Voortgangscherm"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "Virtueel toetsenbord"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "Volumebalk"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "Contextmenu"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "Notificatiedialoog"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "Numerieke invoer"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr "Gamepad-invoer"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "Afsluitmenu"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "spelerbesturing"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "Zoekbalk"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "Voortgangsinfo speler"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "Muziek-OSD"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "Visualisatie voorinstellingslijst"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "VideoOSD-instellingen"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "AudioOSD-instellingen"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "Videobladwijzers"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4812,8 +4875,8 @@ msgstr "Favorieten"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "Nummers / Info"
+msgid "Song info"
+msgstr "Liedinformatie"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4827,8 +4890,8 @@ msgstr "Slimme afspeellijst regels editor"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "Afbeeldingen / Info"
+msgid "Picture info"
+msgstr "Afbeeldingsinformatie"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4836,9 +4899,59 @@ msgid "Add-on settings"
 msgstr "Add-on instellingen"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "Volledig scherminformatie"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "Schuifdialoog"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "Add-ons / Info"
+msgid "Add-on info"
+msgstr "Add-on info"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "Tekstkijker"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "Randapparatuurinstellingen"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "Uitgebreide voortgangsdialoog"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "Mediafilter"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "Ondertitel zoeken"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "Audio-DSP beheerder"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "OSD DSP geluidsinstellingen"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "OSD CMS-instellingen"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4862,8 +4975,8 @@ msgstr "Bezig met het openen van stream"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "Muziek / Afspeellijst"
+msgid "Music playlist"
+msgstr "Muziekafspeellijst"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4872,8 +4985,8 @@ msgstr "Muziek"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
-msgstr "Afspeellijst bewerken"
+msgid "Music playlist editor"
+msgstr "Muziekafspeellijstbewerker"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -4930,29 +5043,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "Filminformatie"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "Teletekst"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr "PVR-gidsinformatie"
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr "PVR-opnameinformatie"
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr "PVR-timerinstelling"
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr "PVR-groepsbeheerder"
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr "PVR-kanaalbeheerder"
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr "PVR-gids zoeken"
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr "PVR-kanaalscan"
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr "PVR-updatevoortgang"
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr "PVR-OSD-kanalen"
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr "PVR-OSD-gids"
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr "PVR-radio RDS-informatie"
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr "PVR-opnameinstelling"
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "TV-kanalen"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "TV-opnamen"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "TV-gids"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "TV-timers"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "TV zoeken"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "Radiokanalen"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "Radio-opnamen"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "Radiogids"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "Radiotimer"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "Radio zoeken"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "TV-timerregels"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "Radio timerregels"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "Volledig scherm Live-TV"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "Volledig scherm radio"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "Spelvideofilter"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "Spellen"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "Spel OSD"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "Spelcontrollers"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "Spelvideoinstellingen"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
+msgid "Select dialog"
 msgstr "Selecteer dialoog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "Muziek / Info"
+msgid "Music info"
+msgstr "Muziek info"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
-msgstr "OK dialoog"
+msgid "OK dialog"
+msgstr "OK-dialoog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "Films / Informatie"
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "Scripts / Informatie"
+msgid "Video info"
+msgstr "Videoinformatie"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4965,9 +5202,9 @@ msgid "Audio visualisation"
 msgstr "Geluidsvisualisatie"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "Bestandgroepering dialoog"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "Geluidsvisualisatie"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5347,6 +5584,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "Volledig scherm OSD"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "Spel in volledig scherm"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "Opstart"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5376,6 +5623,21 @@ msgstr "- Minimale bestandsduur"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "Uitschakelen"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "Toevoegen afbeeldingenlocatie"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "Reset"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5723,7 +5985,7 @@ msgstr "Laatst gebruikt profiel:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -6087,6 +6349,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "Albuminformatie"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "Aan bibliotheek toevoegen"
@@ -6328,16 +6591,6 @@ msgstr "Rendermethode"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Automatisch detecteren"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "Eenvoudige shaders (ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "Geavanceerde shaders (GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -8337,26 +8590,26 @@ msgstr "Niet gelukt om tenminste één bestand te verwijderen. Controleer het lo
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16296"
 msgid "Pixelate"
-msgstr ""
+msgstr "Pixeleren"
 
 #. Name of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16297"
 msgid "Smooth"
-msgstr ""
+msgstr "Glad"
 
 #. Description of the video filter that uses jagged pixels without smoothing
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16298"
 msgid "Shows the game's pixels without any modifications."
-msgstr ""
+msgstr "Toont de pixels van de game zonder enige aanpassingen."
 
 #. Description of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16299"
 msgid ""
 "Removes the jagged edges of pixels by evenly fading between adjacent pixels."
-msgstr ""
+msgstr "Verwijdert gekartelde randen van pixels door gelijkmatig te vervagen tussen aangrenzende pixels."
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
@@ -9007,7 +9260,6 @@ msgstr "Kanaaliconen"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Dit programma wordt al opgenomen"
@@ -9118,8 +9370,8 @@ msgstr "Eerste dag"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "Onbekend kanaal {0:d}"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9275,22 +9527,23 @@ msgid "Fallback framerate"
 msgstr "Terugval framerate"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "Kan de timer niet opslaan. Controleer het log voor meer informatie over dit bericht."
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "Er is een onverwachte fout opgetreden. Probeer later opnieuw of controleer het logbestand voor meer info."
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9614,9 +9867,9 @@ msgstr "Opnames"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "Kan de opname niet starten. Controleer het log voor meer informatie over dit bericht."
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9647,6 +9900,14 @@ msgstr "Verwijderde en herstelbare opnamen "
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Verberg videoinformatie"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -9723,7 +9984,7 @@ msgstr "Menu / OSD"
 #: system/settings/settings.xml
 msgctxt "#19182"
 msgid "Future days to display"
-msgstr ""
+msgstr "Toekomstige dagen om weer te geven"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -10010,7 +10271,7 @@ msgstr "Timer verwijderd"
 #: system/settings/settings.xml
 msgctxt "#19229"
 msgid "Past days to display"
-msgstr ""
+msgstr "Afgelopen dagen om weer te geven"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -10071,6 +10332,14 @@ msgstr "Opnames worden geladen van add-ons"
 msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Achtergrond processen worden gestart"
+
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "cliëntprioriteiten"
 
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
@@ -10213,6 +10482,14 @@ msgstr "Verander de PIN-code"
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "Ouderlijk toezicht. Voer de PIN code in:"
+
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11851,6 +12128,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "Zoek naar externe ondertitels"
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "Artiestinformatiefolder"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11875,6 +12158,31 @@ msgstr "Android foto's"
 msgctxt "#20244"
 msgid "Android apps"
 msgstr "Android apps"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Windows muziekbibliotheek"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Windows videobibliotheek"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Windows afbeeldingenbibliotheek"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Windows fotobibliotheek"
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Windows documenten"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -12028,6 +12336,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "Ook in bestands- of mapnamen zoeken?"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "Inhoud toewijzen"
@@ -12091,6 +12400,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "Series"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12260,6 +12570,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "Informatie voor alle afleveringen vernieuwen?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "Geselecteerde map bevat één enkele serie"
@@ -12484,6 +12795,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "Fanart diavoorstelling"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Exporteren naar een enkel bestand of afzonderlijke bestanden per item ?"
@@ -12493,14 +12805,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "Kies regel type"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Eén bestand"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "Meerdere"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "Miniaturen en fanart exporteren?"
@@ -12509,6 +12824,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "Oude bestanden overschrijven?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "Locatie uitsluiten van bibliotheekupdates"
@@ -13682,17 +13998,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Artiestinformatie"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Instrumenten"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Geboren"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Gevormed"
@@ -13702,12 +14018,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "Thema's"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Uit elkaar"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Gestorven op"
@@ -14122,7 +14438,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "(Huidige instellingen wissen)"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Add-ons installeren via een zipbestand"
@@ -15923,13 +16239,13 @@ msgstr "192.0"
 #: system/settings/settings.xml
 msgctxt "#34129"
 msgid "352.8"
-msgstr ""
+msgstr "352.8"
 
 #. SPDIF max sampling rate
 #: system/settings/settings.xml
 msgctxt "#34130"
 msgid "384.0"
-msgstr ""
+msgstr "384.0"
 
 #: xbmc/PlayListPlayer.cpp
 msgctxt "#34201"
@@ -16635,6 +16951,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "Verwijder savestate"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "De vereiste bestanden kunnen niet worden gevonden."
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16688,27 +17011,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Game bron bewerken"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "Installeer emulator"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "Beheer emulators"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "Alle emulatoren doorbladeren"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Installatie van add-on mislukt."
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "geïnstalleerd"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "Selecteer emulator voor {0: s} bestand"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17335,8 +17662,8 @@ msgstr "Exporteer de videobibliotheekdatabase naar XML-bestanden. Dit zal mogeli
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
-msgstr "Importeer een XML-bestand in de videobibliotheekdatabase."
+msgid "Import an XML file into the video library database."
+msgstr "Importeer een XML-bestand in de videotheekdatabase."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -17745,6 +18072,14 @@ msgid ""
 msgstr "Verwijder databases van kanalen en gidsen en herimporteer de data van de server daarna."
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr "Open het klantprioriteitenvenster waarmee u de prioriteit voor ingeschakelde PVR-clients kunt aanpassen aan uw persoonlijke voorkeuren. Bijvoorbeeld om kanalen per client in volgorde te zetten. Een hogere waarde betekent hogere prioriteit."
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -17792,13 +18127,13 @@ msgstr "Deze categorie bevat de elektronische programmeringsgids (EPG) instellin
 #: system/settings/settings.xml
 msgctxt "#36219"
 msgid "Number of past days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Het aantal dagen in het verleden dat in de gids wordt weergegeven, en uit backends wordt geïmporteerd."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
 msgid ""
 "Number of future days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Aantal toekomstige dagen dat in de gids wordt weergegeven en van backends wordt geïmporteerd."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -18059,15 +18394,15 @@ msgstr "Wanneer geactiveerd wordt deze framerate gebruikt voor streams waar geen
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "Exporteer de muziek bibliotheekdatabase naar XML-bestanden. Dit zal mogelijk uw huidige XML-bestanden overschrijven."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "Exporteer delen van de muziekbibliotheek naar een XML-bestand of NFO-bestanden. Dit zal optioneel uw huidige NFO- en illustratiebestanden overschrijven."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
-msgstr "Importeer een XML-bestand in de muziekbibliotheekdatabase"
+msgid "Import an XML file into the music library database."
+msgstr "Importeer een XML-bestand in de muziekbibliotheekdatabase."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -18287,6 +18622,14 @@ msgstr "Automatisch schijf uitwerpen nadat het rippen voltooid is."
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "Deze categorie bevat opstart instellingen."
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "Selecteer de map waarin artiestinformatie (nfo-bestanden en afbeeldingen) moeten worden opgeslagen."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -20132,21 +20475,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(Commentaar van de regisseur 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(Geforceerd)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(Commentaar van de regisseur)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20584,42 +20912,42 @@ msgstr "Additionele informatie voor albums en artiesten ophalen? Dit kan even du
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Voer de volledige tag scan uit zelfs wanneer de muziekbestanden ongewijzigd zijn?"
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "Stel de standaard informatieprovider in"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr "Instellen voor deze artiest"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr "Instellen voor alle getoonde artiesten"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "Instellen voor dit album"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "Instellen voor alle getoonde albums"
@@ -20777,7 +21105,177 @@ msgstr "Als EXIF-informatie beschikbaar is (datum, tijd, gebruikt cameramodel, e
 #: xbmc/video/ContextMenus.h
 msgctxt "#38209"
 msgid "Reset resume position"
-msgstr ""
+msgstr "Reset positie om te hervatten"
+
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "Exporteer muziekbibliotheek"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "Eén bestand"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "Aparte bestanden voor elk item"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "Naar bibliotheek mappen"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "Kies welke soort export output"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "Bestemming folder"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "Items om te exporteren"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "Inclusief illustraties zoals miniaturen en fanart"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
+msgstr "Items opnemen die niet zijn gescraped (om sjabloon-NFO-bestanden te maken)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr "Geef alleen illustraties weer, geen NFO-bestanden"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "bestaande bestanden overschrijven"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "Lied artiesten"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "Andere artiesten"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr "Kan niet exporteren naar bibliotheek mappen omdat de map met systeemontwerpgegevens leeg is"
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "Gegevens kunnen niet worden geëxporteerd omdat de doelmap niet bestaat"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "Exporteer"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr "Heeft u lokale artiestinformatie (NFO) en illustratie bestanden die u wilt ophalen? Stel nu de locatie van deze artiestenmappen in"
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "Stel muziekinformatieproviders in"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "Stel informatie provider album in"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "Stel een artiest informatie provider in"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "Haal extra informatie en Illustraties op tijdens het scannen"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "Album informatie provider"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "Artiest informatie provider"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "Lokale artiest informatie map"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "Opties voor het ophalen van aanvullende informatie"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "Kies hoe u instellingen wilt toepassen"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "Hoe informatie provider instellingen toe te passen"
 
 #: system/settings/settings.xml
 msgctxt "#39000"
@@ -20927,6 +21425,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "Afhankelijkheden"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20942,3 +21458,44 @@ msgstr "Speel TV"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "Radio afspelen"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "Kan de netwerklocatie niet configureren. Ongeldig pad gegeven."
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

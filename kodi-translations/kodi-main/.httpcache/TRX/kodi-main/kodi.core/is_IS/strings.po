@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-10-27 13:19+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2017-12-15 14:06+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Icelandic (Iceland) (http://www.transifex.com/teamxbmc/kodi-main/language/is_IS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -380,12 +380,12 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr "Raða eftir: Stærð"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr "Nei"
 
-#: xbmc/dialogs/GUIDialogYesNo.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
 msgstr "Já"
@@ -721,12 +721,13 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr "Vistþýtt:"
 
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr "Tónar"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stílar"
@@ -784,6 +785,7 @@ msgstr "Leita á hljómplötu"
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
 msgstr "Í lagi"
@@ -973,6 +975,15 @@ msgctxt "#221"
 msgid "Network is not connected"
 msgstr "Net er ekki tengt"
 
+#: xbmc/addons/settings/GUIDialogAddonSettings.cpp
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+#: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
+#: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 msgctxt "#222"
 msgid "Cancel"
@@ -1734,7 +1745,7 @@ msgstr "Sterkur"
 #. Weather token
 msgctxt "#385"
 msgid "Fair"
-msgstr "Létt"
+msgstr "Bjart"
 
 #. Weather token
 msgctxt "#386"
@@ -1948,7 +1959,7 @@ msgstr "Viltu í alvörunni fjarlægja '{0:s}' úr safninu?"
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
-msgstr "Úr {0:s} á {1:d} {2:s}"
+msgstr "{0:s}-átt með {1:d} {2:s}"
 
 #: xbmc/Application.cpp
 msgctxt "#435"
@@ -2903,6 +2914,8 @@ msgctxt "#660"
 msgid "Volume amplification"
 msgstr "Mögnun hljóðstyrks"
 
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#661"
 msgid "Choose export folder"
 msgstr "Veldu möppu til að vista í"
@@ -2914,7 +2927,7 @@ msgstr "Þessi skrá er ekki lengur tiltæk."
 
 msgctxt "#663"
 msgid "Would you like to remove it from the library?"
-msgstr "Viltu fjarlægja hana úr safninu?"
+msgstr "Viltu fjarlægja það úr safninu?"
 
 msgctxt "#664"
 msgid "Browse for script"
@@ -3242,7 +3255,7 @@ msgstr "Ljósgrátt"
 
 msgctxt "#767"
 msgid "Grey"
-msgstr "Frátekið"
+msgstr "Grátt"
 
 msgctxt "#770"
 msgid "Error {0:d}: share not available"
@@ -3377,6 +3390,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "Internetaðgangur"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr "Uppfæra safn"
@@ -4529,19 +4543,11 @@ msgstr "Skráarsýsl"
 #: xbmc/addons/GUIDialogAddonSettings.cpp xbmc/guilib/WindowIDs.h
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Stillingar"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10005"
-msgid "Music"
-msgstr "Tónlist"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10006"
-msgid "Videos"
-msgstr "Myndskeið"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -4550,16 +4556,8 @@ msgstr "Kerfisupplýsingar"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
-msgid "Settings - General"
-msgstr "Stillingar - Almennar"
-
-msgctxt "#10009"
-msgid "Settings - Screen"
-msgstr "Stillingar - Skjár"
-
-msgctxt "#10010"
-msgid "Settings - Appearance - GUI calibration"
-msgstr "Stillingar - Útlit- Forstillingar notandaviðmóts"
+msgid "Settings - Test patterns"
+msgstr "Stillingar - Prufumynstur"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4567,53 +4565,22 @@ msgid "Settings - Videos - Screen calibration"
 msgstr "Stillingar - Myndskeið - Kvörðun skjás"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10012"
-msgid "Settings - Pictures"
-msgstr "Stillingar - Ljósmyndir"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10013"
-msgid "Settings - Programs"
-msgstr "Stillingar - Forrit"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10014"
-msgid "Settings - Weather"
-msgstr "Stillingar - Veður"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10015"
-msgid "Settings - Music"
-msgstr "Stillingar - Tónlist"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
 msgid "Settings - System"
 msgstr "Stillingar - Kerfi"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10017"
-msgid "Settings - Videos"
-msgstr "Stillingar - Myndskeið"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
-msgid "Settings - Network"
-msgstr "Stillingar - Netkerfi"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10019"
-msgid "Settings - Appearance"
-msgstr "Stillingar - Útlit"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10020"
-msgid "Scripts"
-msgstr "Skriftur"
+msgid "Settings - Service"
+msgstr "Stillingar - Þjónusta"
 
 msgctxt "#10021"
 msgid "Settings - TV"
 msgstr "Stillingar - Sjónvarp"
+
+msgctxt "#10022"
+msgid "Settings - Games"
+msgstr "Stillingar - Leikir"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4638,13 +4605,29 @@ msgid "Login screen"
 msgstr "Innskráningarskjár"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10030"
+msgid "Settings - Player"
+msgstr "Stillingar - Spilari"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10031"
+msgid "Settings - Media"
+msgstr "Stillingar - Gagnamiðlar"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10032"
+msgid "Settings - Interface"
+msgstr "Stillingar - Viðmót"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Stillingar - Notendur"
 
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10035"
-msgid "Reset"
-msgstr "Endurstilla"
+msgid "Skin Settings"
+msgstr "Stillingar skinns"
 
 msgctxt "#10036"
 msgid "Basic"
@@ -4710,10 +4693,10 @@ msgctxt "#10049"
 msgid "Add music source"
 msgstr "Bæta við tónlistarveitu"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10050"
-msgid "Add picture source"
-msgstr "Bæta við ljósmyndaveitu"
+msgid "Event log"
+msgstr "Atvikaskrá"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10051"
@@ -4751,14 +4734,94 @@ msgid "Edit file source"
 msgstr "Breyta skráaveitu"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10099"
+msgid "Pointer"
+msgstr "Bendill"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
-msgid "Yes / No dialogue"
-msgstr "Já / Nei valgluggi"
+msgid "Yes / No dialog"
+msgstr "Já / Nei samskiptagluggi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
-msgid "Progress dialogue"
-msgstr "Framvindu-gluggi"
+msgid "Progress dialog"
+msgstr "Framvindugluggi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10103"
+msgid "Virtual keyboard"
+msgstr "Sýndarlyklaborð"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10104"
+msgid "Volume bar"
+msgstr "Hljóðstyrksstika"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10106"
+msgid "Context menu"
+msgstr "Samhengisvalmynd"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10107"
+msgid "Notification dialog"
+msgstr "Tilkynningagluggi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10109"
+msgid "Numeric Input"
+msgstr "Inntak á talnaborði"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10110"
+msgid "Gamepad input"
+msgstr "Inntak með leikjafjarstýringu"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10111"
+msgid "Shutdown menu"
+msgstr "Slökkva-valmynd"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10114"
+msgid "Player controls"
+msgstr "Stjórntæki margmiðlunarspilara"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10115"
+msgid "Seek bar"
+msgstr "Leitarstika"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10116"
+msgid "Player process info"
+msgstr "Upplýsingar um framvindu spilara"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10120"
+msgid "Music OSD"
+msgstr "Tónlistarskjár"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10122"
+msgid "Visualization preset list"
+msgstr "Listi yfir forstillt sjónhrif"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10123"
+msgid "Video OSD settings"
+msgstr "Stillingar stjórntexta myndskeiða"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10124"
+msgid "Audio OSD settings"
+msgstr "Stillingar stjórntexta hljóðs"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10125"
+msgid "Video bookmarks"
+msgstr "Bókamerki myndskeiða"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -4797,8 +4860,8 @@ msgstr "Eftirlæti"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10135"
-msgid "Songs / Info"
-msgstr "Lög / upplýsingar"
+msgid "Song info"
+msgstr "Upplýsingar um lag"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
@@ -4812,8 +4875,8 @@ msgstr "Snjall titill fyrir reglur spilunarlista"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
-msgid "Pictures / Info"
-msgstr "Ljósmyndir / upplýsingar"
+msgid "Picture info"
+msgstr "Upplýsingar um mynd"
 
 #: addons/skin.estuary/xml/MyGames.xml xbmc/guilib/WindowIDs.h
 msgctxt "#10140"
@@ -4821,9 +4884,59 @@ msgid "Add-on settings"
 msgstr "Stilling viðbóta"
 
 #: xbmc/guilib/WindowIDs.h
+msgctxt "#10142"
+msgid "Fullscreen info"
+msgstr "Upplýsingar í skjáfylli"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10145"
+msgid "Slider dialog"
+msgstr "Samskiptagluggi með rennislá"
+
+#: xbmc/guilib/WindowIDs.h
 msgctxt "#10146"
-msgid "Add-ons / Info"
-msgstr "Viðbætur / upplýsingar"
+msgid "Add-on info"
+msgstr "Upplýsingar um viðbót"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10147"
+msgid "Text viewer"
+msgstr "Textaskoðari"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10150"
+msgid "Peripheral settings"
+msgstr "Stillingar jaðartækis"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10151"
+msgid "Extended progress dialog"
+msgstr "Ítarlegur framvindugluggi"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10152"
+msgid "Media filter"
+msgstr "Gagnahlutasía"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10153"
+msgid "Subtitle search"
+msgstr "Skjátextaleit"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10154"
+msgid "Audio DSP manager"
+msgstr "DSP-hljóðstjórnun"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10155"
+msgid "OSD audio DSP settings"
+msgstr "Stjórntexti DSP-hljóðstillinga"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10157"
+msgid "OSD CMS settings"
+msgstr "CMS-stillingar OSD-stjórntexta"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -4847,8 +4960,8 @@ msgstr "Opna streymi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
-msgid "Music / Playlist"
-msgstr "Tónlist / Spilunarlisti"
+msgid "Music playlist"
+msgstr "Lagalistar"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4857,7 +4970,7 @@ msgstr "Tónlist"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
-msgid "Playlist editor"
+msgid "Music playlist editor"
 msgstr "Spilunarlistaritill"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
@@ -4915,29 +5028,153 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr "Kvikmyndaupplýsingar"
 
+msgctxt "#10550"
+msgid "Teletext"
+msgstr "Textavarp"
+
+msgctxt "#10600"
+msgid "PVR guide info"
+msgstr ""
+
+msgctxt "#10601"
+msgid "PVR recording info"
+msgstr ""
+
+msgctxt "#10602"
+msgid "PVR timer setting"
+msgstr ""
+
+msgctxt "#10603"
+msgid "PVR group manager"
+msgstr ""
+
+msgctxt "#10604"
+msgid "PVR channel manager"
+msgstr ""
+
+msgctxt "#10605"
+msgid "PVR guide search"
+msgstr ""
+
+msgctxt "#10606"
+msgid "PVR channel scan"
+msgstr ""
+
+msgctxt "#10607"
+msgid "PVR update progress"
+msgstr ""
+
+msgctxt "#10608"
+msgid "PVR OSD channels"
+msgstr ""
+
+msgctxt "#10609"
+msgid "PVR OSD guide"
+msgstr ""
+
+msgctxt "#10610"
+msgid "PVR radio RDS info"
+msgstr ""
+
+msgctxt "#10611"
+msgid "PVR recording setting"
+msgstr ""
+
+msgctxt "#10700"
+msgid "TV channels"
+msgstr "Sjónvarpsrásir"
+
+msgctxt "#10701"
+msgid "TV recordings"
+msgstr "Sjónvarpsupptökur"
+
+msgctxt "#10702"
+msgid "TV guide"
+msgstr "Sjónvarpsdagskrá"
+
+msgctxt "#10703"
+msgid "TV timers"
+msgstr "Tímatökur sjónvarps"
+
+msgctxt "#10704"
+msgid "TV search"
+msgstr "Leita í sjónvarpsstöðvum"
+
+msgctxt "#10705"
+msgid "Radio channels"
+msgstr "Útvarpsrásir"
+
+msgctxt "#10706"
+msgid "Radio recordings"
+msgstr "Útvarpsupptökur"
+
+msgctxt "#10707"
+msgid "Radio guide"
+msgstr "Útvarpsdagskrá"
+
+msgctxt "#10708"
+msgid "Radio timers"
+msgstr "Tímatökur útvarps"
+
+msgctxt "#10709"
+msgid "Radio search"
+msgstr "Leita í útvarpsstöðvum"
+
+msgctxt "#10710"
+msgid "TV timer rules"
+msgstr "Tímatökureglur sjónvarps"
+
+msgctxt "#10711"
+msgid "Radio timer rules"
+msgstr "Tímatökureglur útvarps"
+
+msgctxt "#10800"
+msgid "Fullscreen live TV"
+msgstr "Sjónvarpsútsending í skjáfylli"
+
+msgctxt "#10801"
+msgid "Fullscreen radio"
+msgstr "Útvarp í skjáfylli"
+
+msgctxt "#10820"
+msgid "Game video filter"
+msgstr "Myndmerkissía leiks"
+
+msgctxt "#10821"
+msgid "Games"
+msgstr "Leikir"
+
+msgctxt "#10822"
+msgid "Game OSD"
+msgstr "Stjórntexti leikja"
+
+msgctxt "#10823"
+msgid "Game controllers"
+msgstr "Leikjastýritæki"
+
+msgctxt "#10824"
+msgid "Game video settings"
+msgstr "Myndstillingar leiks"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
-msgid "Select dialogue"
+msgid "Select dialog"
 msgstr "Valgluggi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
-msgid "Music / Info"
-msgstr "Tónlist / upplýsingar"
+msgid "Music info"
+msgstr "Upplýsingar um tónlist"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12002"
-msgid "Dialogue OK"
-msgstr "Valmyndagluggi Í lagi"
+msgid "OK dialog"
+msgstr "'Í lagi' gluggi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
-msgid "Videos / Info"
-msgstr "Myndskeið / Uppl."
-
-msgctxt "#12004"
-msgid "Scripts / Info"
-msgstr "Skriftur / Uppl."
+msgid "Video info"
+msgstr "Upplýsingar um myndskeið"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -4950,9 +5187,9 @@ msgid "Audio visualisation"
 msgstr "Sjónhrif hljóðs"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#12008"
-msgid "File stacking dialogue"
-msgstr "Gluggi fyrir stöflun skráa"
+msgctxt "#12007"
+msgid "Audio visualisation"
+msgstr "Sjónhrif hljóðs"
 
 #. Does not match window ID description
 #: xbmc/guilib/WindowIDs.h
@@ -5332,6 +5569,16 @@ msgctxt "#12901"
 msgid "Fullscreen OSD"
 msgstr "Stjórntexti á heilskjá"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12906"
+msgid "Fullscreen game"
+msgstr "Leikur í skjáfylli"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#12999"
+msgid "Startup"
+msgstr "Ræsing"
+
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
 msgid "System"
@@ -5361,6 +5608,21 @@ msgstr "- Lágmarks tímalengd skrár"
 msgctxt "#13005"
 msgid "Shutdown"
 msgstr "Slökkva"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#13006"
+msgid "Add picture source"
+msgstr "Bæta við ljósmyndaveitu"
+
+#: addons/skin.estouchy/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estouchy/xml/GameOSD.xml
+#: addons/skin.estouchy/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/GameOSD.xml
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#13007"
+msgid "Reset"
+msgstr "Endurstilla"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -5708,7 +5970,7 @@ msgstr "Seinasti notandi:"
 #: xbmc/peripherals/bus/PeripheralBus.cpp
 #: xbmc/peripherals/devices/Peripheral.cpp xbmc/platform/win32/WIN32Util.cpp
 #: xbmc/pvr/addons/PVRClients.cpp xbmc/pvr/channels/PVRChannel.cpp
-#: xbmc/pvr/PVRGUIInfo.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
 msgctxt "#13205"
@@ -6072,6 +6334,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr "Hljómplötuupplýsingar"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr "Skanna hlut í safn"
@@ -6291,7 +6554,7 @@ msgstr "Lágmarks viftuhraði"
 
 msgctxt "#13412"
 msgid "Play from here"
-msgstr "Spila hér"
+msgstr "Spila héðan"
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 msgctxt "#13413"
@@ -6313,16 +6576,6 @@ msgstr "Myndgerðarhamur"
 msgctxt "#13416"
 msgid "Auto detect"
 msgstr "Sjálfvirkt"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13417"
-msgid "Basic shaders (ARB)"
-msgstr "Grunn skygging (ARB)"
-
-#: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
-msgctxt "#13418"
-msgid "Advanced shaders (GLSL)"
-msgstr "Ítarleg skygging (GLSL)"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -8334,7 +8587,7 @@ msgstr "Mýkt"
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
 msgctxt "#16298"
 msgid "Shows the game's pixels without any modifications."
-msgstr ""
+msgstr "Birtir mynddíla leiksins án nokkurra breytinga."
 
 #. Description of the video filter that smooths pixels to remove jagged edges
 #: xbmc/games/dialogs/osd/DialogGameVideoFilter.cpp
@@ -8992,7 +9245,6 @@ msgstr "Táknmyndir rása"
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Það er þegar verið að taka upp þennan atburð."
@@ -9103,8 +9355,8 @@ msgstr "Fyrsta dag"
 #. channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
-msgstr "Óþekkt rás {0:d}"
+msgid "Unknown channel {0:s}"
+msgstr ""
 
 #. Label for "Instant recording action" setting
 #: system/settings/settings.xml xbmc/pvr/PVRGUIActions.cpp
@@ -9260,22 +9512,23 @@ msgid "Fallback framerate"
 msgstr "Rammatíðni til vara"
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
 msgid ""
-"Couldn't save timer. Check the log for more information about this message."
-msgstr "Gat ekki vistað tímatöku. Athugaðu atvikaskrá fyrir upplýsingar um þessi skilaboð."
+"Could not save the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
 msgid ""
-"An unexpected error occurred. Try again later or check the log for more "
-"information."
-msgstr "Óvænt villa kom upp. Reyndu aftur síðar eða skoðaðu atvikaskrá fyrir upplýsingar."
+"Could not delete the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. message box text stating that a PVR backend error occured
-#: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
 "PVR backend error. Check the log for more information about this message."
@@ -9599,9 +9852,9 @@ msgstr "Upptökur"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
 msgid ""
-"Can't start recording. Check the log for more information about this "
+"Could not start recording. Check the log for more information about this "
 "message."
-msgstr "Get ekki hafið upptöku. Skoðaðu atvikaskrána fyrir upplýsingar um þessi skilaboð."
+msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19165"
@@ -9632,6 +9885,14 @@ msgstr "Eyddar upptökur og upptökur sem hægt er að endurheimta"
 msgctxt "#19169"
 msgid "Hide video information box"
 msgstr "Fela upplýsingabox fyrir mynd"
+
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid ""
+"Could not stop recording. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -10057,6 +10318,14 @@ msgctxt "#19239"
 msgid "Starting background threads"
 msgstr "Ræsi bakgrunnsþræði"
 
+#. label for pvr settings client priorities control and client priorities
+#. dialog heading.
+#: system/settings/settings.xml
+#: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp
+msgctxt "#19240"
+msgid "Client priorities"
+msgstr "Forgangur biðlara"
+
 #. Label for context menu entry to open settings dialog for a timer (read-
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10198,6 +10467,14 @@ msgstr "Breyta PIN"
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr "Barnalæsing. Settu inn PIN:"
+
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid ""
+"Could not update the timer. Check the log for more information about this "
+"message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11836,6 +12113,12 @@ msgctxt "#20222"
 msgid "Look for external subtitles"
 msgstr "Leita að utanaðkomandi skjátextum"
 
+#: system/settings/settings.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#20223"
+msgid "Artist information folder"
+msgstr "Mappa með upplýsingum um listamann"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -11860,6 +12143,31 @@ msgstr "Android ljósmyndir"
 msgctxt "#20244"
 msgid "Android apps"
 msgstr "Android forrit"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr "Windows tónlistarsafn"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr "Windows myndskeiðasafn"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr "Windows myndasafn"
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr "Windows ljósmyndasafn"
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr "Windows skjöl"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -12013,6 +12321,7 @@ msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
 msgstr "Nota möppu eða skráarnafn til að leita?"
 
+#: xbmc/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20333"
 msgid "Set content"
 msgstr "Velja innihald"
@@ -12076,6 +12385,7 @@ msgctxt "#20343"
 msgid "TV shows"
 msgstr "Sjónvarpsþættir"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: addons/skin.estuary/xml/DialogContentSettings.xml
 msgctxt "#20344"
 msgid "This directory contains"
@@ -12245,6 +12555,7 @@ msgctxt "#20378"
 msgid "Refresh information for all episodes?"
 msgstr "Uppfæra upplýsingar fyrir allar þáttaraðir?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
 msgstr "Mappa inniheldur einn sjónvarpsþátt"
@@ -12469,6 +12780,7 @@ msgctxt "#20425"
 msgid "Fanart slideshow"
 msgstr "Skyggnusýning aðdáendamynda"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20426"
 msgid "Export to a single file or separate files per entry?"
 msgstr "Flytja út í eina skrá eða aðskildar skrár fyrir hverja færslu?"
@@ -12478,14 +12790,17 @@ msgctxt "#20427"
 msgid "Choose rule type"
 msgstr "Veldu tegund reglu"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20428"
 msgid "Single file"
 msgstr "Ein skrá"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20429"
 msgid "Separate"
 msgstr "Aðskilja"
 
+#. xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#20430"
 msgid "Export thumbnails and fanart?"
 msgstr "Flytja út smámyndir og aðdáendamyndir?"
@@ -12494,6 +12809,7 @@ msgctxt "#20431"
 msgid "Overwrite old files?"
 msgstr "Skrifa yfir eldri skrár?"
 
+#. xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20432"
 msgid "Exclude path from library updates"
 msgstr "Undanskilja slóð frá uppfærslum á safni"
@@ -13667,17 +13983,17 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr "Upplýsingar um flytjanda"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr "Hljóðfæri"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr "Fæddur"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
 msgstr "Varð til"
@@ -13687,12 +14003,12 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr "Þema"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr "Hætti"
 
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
 msgstr "Dó"
@@ -14107,7 +14423,7 @@ msgctxt "#24040"
 msgid "(Clear the current setting)"
 msgstr "(Hreinsa núverandi stillingu)"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Setja inn frá zip skrá"
@@ -16620,6 +16936,13 @@ msgctxt "#35218"
 msgid "Erase savestate"
 msgstr "Eyða vistunarstöðu"
 
+#. Error dialog text when trying to play a game and the game's files aren't
+#. found.
+#: xbmc/games/GameClient.cpp
+msgctxt "#35219"
+msgid "The required files can't be found."
+msgstr "Nauðsynlegar skrár fundust ekki."
+
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35220"
@@ -16673,27 +16996,31 @@ msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Breyta leikjaveitu"
 
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35253"
-msgid "Install emulator"
-msgstr "Setja inn hermi"
-
-#: xbmc/games/windows/GUIWindowGames.cpp
-msgctxt "#35254"
-msgid "Manage emulators"
-msgstr "Sýsla með herma"
-
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
-msgctxt "#35255"
-msgid "Browse all emulators"
-msgstr "Skoða alla herma"
-
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Mistókst að setja inn viðbót."
+
+#. Label on installed emulators in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35257"
+msgid "Installed"
+msgstr "Uppsett"
+
+#. Title of the dialog to select an emulator for the current game. {0:s} -
+#. game file extension
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35258"
+msgid "Select emulator for {0:s} file"
+msgstr "Veldu hermi fyrir {0:s} skrá"
+
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -17320,8 +17647,8 @@ msgstr "Flytja út XML skrár kvikmyndasafns. Valkostur er að skrifa yfir núve
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
-msgid "Import a XML file into the video library database."
-msgstr "Flytja inn XML skrá í gagnagrunn kvikmyndasafns."
+msgid "Import an XML file into the video library database."
+msgstr "Flytja XML-skrá inn í gagnagrunn kvikmyndasafns."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -17730,6 +18057,14 @@ msgid ""
 msgstr "Eyða gagnagrunni fyrir rásir og dagskrárvísa og flytja síðan upplýsingar aftur inn frá bakenda."
 
 #: system/settings/settings.xml
+msgctxt "#36210"
+msgid ""
+"Open the client priorities dialog which allows modifying the priority for "
+"enabled PVR clients according to your personal preferences, for instance to "
+"order channels client by client. Higher value means higher priority."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36211"
 msgid ""
 "This category contains the settings for PVR menus and on-screen display "
@@ -17777,13 +18112,13 @@ msgstr "Þessi flokkur inniheldur stillingar rafræns dagskrárvísis (EPG)."
 #: system/settings/settings.xml
 msgctxt "#36219"
 msgid "Number of past days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Fjöldi liðinna daga sem á að sýna í dagskrárvísi og innflutningur gagna frá bakendum."
 
 #: system/settings/settings.xml
 msgctxt "#36220"
 msgid ""
 "Number of future days to show in the guide and to import from backends."
-msgstr ""
+msgstr "Fjöldi næstu daga sem á að sýna í dagskrárvísi og innflutningur gagna frá bakendum."
 
 #: system/settings/settings.xml
 msgctxt "#36221"
@@ -18044,15 +18379,15 @@ msgstr "Ef virkjað, er þessi rammatíðni notaður fyrir streymi ef við getum
 #: system/settings/settings.xml
 msgctxt "#36262"
 msgid ""
-"Export the music library database to XML files. This will optionally "
-"overwrite your current XML files."
-msgstr "Flytja út gagnagrunn tónlistarsafns í XML skrár. Þetta mun hugsanlega skrifa yfir núverandi XML skrár."
+"Export parts of the music library to an XML file or NFO files. This will "
+"optionally overwrite your current NFO and artwork files."
+msgstr "Flytja út hluta af gagnagrunni tónlistarsafns í XML-skrá eða NFO- skrár. Þetta mun hugsanlega skrifa yfir núverandi NFO-skrár og myndefnisskrár."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
-msgid "Import a XML file into the music library database."
-msgstr "Flytja inn XML skrár í gagnagrunn Tónlistarsafns."
+msgid "Import an XML file into the music library database."
+msgstr "Flytja XML-skrá inn í gagnagrunn tónlistarsafns."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -18272,6 +18607,14 @@ msgstr "Sjálfvirkt setja geisladisk út eftir að afritun er lokið."
 msgctxt "#36292"
 msgid "This category contains startup settings."
 msgstr "Þessi flokkur inniheldur stillingar fyrir ræsingu forritsins."
+
+#. Description of setting with label #20223 "Artist information folder"
+#: system/settings/settings.xml
+msgctxt "#36293"
+msgid ""
+"Select the folder where artist information (nfo files and images) should be "
+"saved in."
+msgstr "Veldu möppuna þar sem á að vista upplýsingar um flytjendur (NFO-skrár og myndefni)."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -20117,21 +20460,6 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr "(Athugasemdir leikstjóra 2)"
 
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr "(CC)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr "(Þvingað)"
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr "(Athugasemdir leikstjóra)"
-
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
 msgid "Last used profile"
@@ -20569,42 +20897,42 @@ msgstr "Ná í viðbótarupplýsingar fyrir hljómplötur og listamenn? Slíkt g
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr "Framkvæma fulla skönnun jafnvel þótt tónlistarskrár séu óbreyttar?"
 
-#. Label for a context submenu entry to change the default addon used to fetch
-#. artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used
+#. to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr "Setja sjálfgefna upplýsingaveitu"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr "Setja fyrir þennan listamann"
 
-#. Label for a context submenu entry to change the information provider for
-#. all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr "Setja fyrir alla birta listamenn"
 
-#. Label for a context submenu entry to change the information provider for a
+#. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr "Setja fyrir þessa hljómplötu"
 
-#. Label for a context submenu entry to change the information provider for
-#. all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all
+#. albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr "Setja fyrir allar birtar hljómplötur"
@@ -20762,7 +21090,177 @@ msgstr "Ef EXIF-upplýsingar eru tiltækar (dagsetning, tími og myndavél notu�
 #: xbmc/video/ContextMenus.h
 msgctxt "#38209"
 msgid "Reset resume position"
+msgstr "Endurstilla spilunarstaðsetningu"
+
+#. Dialog header for settings for how to export specific music library data
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38300"
+msgid "Export Music Library"
+msgstr "Flytja út tónlistarsafn"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38301"
+msgid "Single file"
+msgstr "Ein skrá"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38302"
+msgid "Separate files for each item"
+msgstr "Stakar skrár fyrir hvert atriði"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38303"
+msgid "To library folders"
+msgstr "Í möppur í safni"
+
+#. Selection of export to a single file, many separate files or the library
+#. folder(s)
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38304"
+msgid "Choose kind of export output"
+msgstr "Veldu gerð útflutningsfrálags"
+
+#. Folder path for export output file or files
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38305"
+msgid "Destination folder"
+msgstr "Móttökumappa"
+
+#. Section of music items to export - albums, album artists, song artists etc.
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38306"
+msgid "Items to export"
+msgstr "atriði sem á að flytja út"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38307"
+msgid "Include art work such as thumbnails and fanart"
+msgstr "Hafa með myndefni á borð við smámyndir og aðdáendamyndir"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38308"
+msgid ""
+"Include items that have not been scraped (to create template NFO files)"
 msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38309"
+msgid "Output only artwork, not NFO files"
+msgstr "Setja einungis út myndefni, ekki NFO-skrár"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38310"
+msgid "Overwrite existing files"
+msgstr "Yfirskrifa fyrirliggjandi skrár"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38312"
+msgid "Song artists"
+msgstr "Flytjendur lags"
+
+#. Music item to export output, see #38093
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38313"
+msgid "Other artists"
+msgstr "Aðrir flytjendur"
+
+#. Message when trying to do a kind #38303 of export and setting #20223 is
+#. empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38317"
+msgid ""
+"Unable to export to library folders as the system artist information folder "
+"setting is empty"
+msgstr ""
+
+#. Message when trying to do export and destination folder #38305 does not
+#. exist
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38318"
+msgid "Unable to export data as the destination folder does not exist"
+msgstr "Gat ekki flutt út gögn því móttökumappan er ekki til"
+
+#. Button text to start export
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38319"
+msgid "Export"
+msgstr "Flytja út"
+
+#. Message when adding music source and setting #20223 is empty
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38320"
+msgid ""
+"Do you have local artist information (NFO) and art files that you want to "
+"fetch? Set the location of these artist folders now"
+msgstr ""
+
+#. Dialog heading when editing default settings for fetching additional music
+#. information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr "Stilla upplýsingaveitur fyrir tónlist"
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr "Stilla upplýsingaveitur fyrir hljómplötur"
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr "Stilla upplýsingaveitur fyrir flytjendur"
+
+#. Use scrapers to fetch additional album and artist information and art
+#. during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr "Ná í aðrar upplýsingar og myndefni við skönnun"
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr "Upplýsingaveita fyrir hljómplötur"
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr "Upplýsingaveita fyrir flytjendur"
+
+#. Location of folder where local art and nfo files can be found for artists.
+#. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr "Staðvær mappa með upplýsingum um listamann"
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr "Valkostir við að ná í viðbótarupplýsingar"
+
+#. Selecting what items the settings will be used for, selecting from #38064
+#. to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr "Veldu hvernig eigi að virkja stillingar"
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr "Hvernig á að virkja stillingar upplýsingaveitu"
 
 #: system/settings/settings.xml
 msgctxt "#39000"
@@ -20912,6 +21410,24 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr "Kerfiskröfur"
 
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist
+#. with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -20927,3 +21443,44 @@ msgstr "Spila sjónvarp"
 msgctxt "#39102"
 msgid "Play Radio"
 msgstr "Spila útvarp"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr "Tókst ekki að stilla netstaðsetningu. Ógild slóð var gefin."
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
+msgstr ""

@@ -403,11 +403,13 @@ msgctxt "#105"
 msgid "Sort by: Size"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#106"
 msgid "No"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/dialogs/GUIDialogYesNo.cpp
 msgctxt "#107"
 msgid "Yes"
@@ -753,12 +755,14 @@ msgctxt "#174"
 msgid "Compiled:"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
@@ -3538,6 +3542,7 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
 msgid "Library update"
 msgstr ""
@@ -4714,8 +4719,6 @@ msgstr ""
 
 #empty strings from id 2105 to 9999
 
-# ID's from 10000 to 10999 reserved for window names
-
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10000"
 msgid "Home"
@@ -4741,6 +4744,7 @@ msgstr ""
 #: addons/skin.estuary/xml/AddonBrowser.xml
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#10004"
 msgid "Settings"
 msgstr ""
@@ -4758,7 +4762,6 @@ msgid "Settings - Test patterns"
 msgstr ""
 
 #empty strings from id 10009 to 10010
-msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4962,7 +4965,7 @@ msgctxt "#10101"
 msgid "Progress dialog"
 msgstr ""
 
-#empty strings from id 10102 to 10102
+#empty string with id 10102
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10103"
@@ -5279,13 +5282,13 @@ msgctxt "#10524"
 msgid "Movie information"
 msgstr ""
 
-#empty strings from id 10525 to 11549
+#empty strings from id 10525 to 10549
 
 msgctxt "#10550"
 msgid "Teletext"
 msgstr ""
 
-#empty strings from id 10551 to 11599
+#empty strings from id 10551 to 10599
 
 msgctxt "#10600"
 msgid "PVR guide info"
@@ -5335,7 +5338,7 @@ msgctxt "#10611"
 msgid "PVR recording setting"
 msgstr ""
 
-#empty strings from id 10612 to 11699
+#empty strings from id 10612 to 10699
 
 msgctxt "#10700"
 msgid "TV channels"
@@ -5385,7 +5388,7 @@ msgctxt "#10711"
 msgid "Radio timer rules"
 msgstr ""
 
-#empty strings from id 10712 to 11799
+#empty strings from id 10712 to 10799
 
 msgctxt "#10800"
 msgid "Fullscreen live TV"
@@ -5395,7 +5398,7 @@ msgctxt "#10801"
 msgid "Fullscreen radio"
 msgstr ""
 
-#empty strings from id 10802 to 11819
+#empty strings from id 10802 to 10819
 
 msgctxt "#10820"
 msgid "Game video filter"
@@ -5418,8 +5421,6 @@ msgid "Game video settings"
 msgstr ""
 
 #empty strings from id 10825 to 11999
-
-# ID's from 12000 to 12999 reserved for window names
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
@@ -6705,6 +6706,7 @@ msgctxt "#13351"
 msgid "Album information"
 msgstr ""
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#13352"
 msgid "Scan item to library"
 msgstr ""
@@ -9699,7 +9701,6 @@ msgstr ""
 
 #. message box text stating that an epg event is already being recorded
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr ""
@@ -9808,7 +9809,7 @@ msgstr ""
 #. default for channels without a name. place holder will be filled with channel number.
 #: xbmc/pvr/channels/PVRChannel.cpp
 msgctxt "#19085"
-msgid "Unknown channel {0:d}"
+msgid "Unknown channel {0:s}"
 msgstr ""
 
 #. Label for "Instant recording action" setting
@@ -9957,21 +9958,19 @@ msgid "Fallback framerate"
 msgstr ""
 
 #. message box text stating that a timer could not be saved
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19109"
-msgid "Couldn't save timer. Check the log for more information about this message."
+msgid "Could not save the timer. Check the log for more information about this message."
 msgstr ""
 
-#. message box text stating that an unexpected error occured
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. message box text stating that a timer could not be deleted
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19110"
-msgid "An unexpected error occurred. Try again later or check the log for more information."
+msgid "Could not delete the timer. Check the log for more information about this message."
 msgstr ""
 
 #. message box text stating that a PVR backend error occured
 #: xbmc/pvr/PVRGUIActions.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19111"
 msgid "PVR backend error. Check the log for more information about this message."
 msgstr ""
@@ -10277,7 +10276,7 @@ msgstr ""
 #. error box text stating that recording could not be started
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19164"
-msgid "Can't start recording. Check the log for more information about this message."
+msgid "Could not start recording. Check the log for more information about this message."
 msgstr ""
 
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10310,7 +10309,11 @@ msgctxt "#19169"
 msgid "Hide video information box"
 msgstr ""
 
-#empty string with id 19170
+#. error box text stating that recording could not be stopped
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19170"
+msgid "Could not stop recording. Check the log for more information about this message."
+msgstr ""
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -10729,8 +10732,6 @@ msgctxt "#19240"
 msgid "Client priorities"
 msgstr ""
 
-#empty string with id 19240
-
 #. Label for context menu entry to open settings dialog for a timer (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
@@ -10860,7 +10861,11 @@ msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
 msgstr ""
 
-#empty string with id 19263
+#. message box text stating that a timer could not be updated
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19263"
+msgid "Could not update the timer. Check the log for more information about this message."
+msgstr ""
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -12590,7 +12595,30 @@ msgctxt "#20244"
 msgid "Android apps"
 msgstr ""
 
-#empty strings from id 20245 to 20249
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20245"
+msgid "Windows music library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20246"
+msgid "Windows videos library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20247"
+msgid "Windows pictures library"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaSource.cpp
+msgctxt "#20248"
+msgid "Windows photos library"
+msgstr ""
+
+#: addons/skin.estuary/xml/Includes.xml
+msgctxt "#20249"
+msgid "Windows documents"
+msgstr ""
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
@@ -14440,16 +14468,19 @@ msgctxt "#21891"
 msgid "Artist information"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
@@ -14460,11 +14491,13 @@ msgctxt "#21895"
 msgid "Themes"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
 msgstr ""
 
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
@@ -17485,7 +17518,13 @@ msgctxt "#35258"
 msgid "Select emulator for {0:s} file"
 msgstr ""
 
-#empty strings from id 35259 to 35504
+#. Label on emulators with a savestate in the emulator selection dialog
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+msgctxt "#35259"
+msgid "Saved"
+msgstr ""
+
+#empty strings from id 35260 to 35504
 
 #. connection state "host unreachable"
 #: xbmc/pvr/addons/PVRClients.cpp
@@ -20442,22 +20481,7 @@ msgctxt "#37002"
 msgid "(Director's comments 2)"
 msgstr ""
 
-#empty strings from id 37003 to 37010
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37011"
-msgid "(CC)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37012"
-msgid "(Forced)"
-msgstr ""
-
-#: xbmc/cores/VideoPlayer/DVDInputStreams/DVDInputStreamNavigator.cpp
-msgctxt "#37013"
-msgid "(Director's comments)"
-msgstr ""
+#empty strings from id 37003 to 37013
 
 #: xbmc/GUIInfoManager.cpp
 msgctxt "#37014"
@@ -20848,37 +20872,37 @@ msgid "Fetch additional information for albums and artists? This could take some
 msgstr ""
 
 #. Full tag scanning question on library update (by default tags are only scanned when the file has changed since last time)
-#: xbmc/Application.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
 msgstr ""
 
-#. Label for a context submenu entry to change the default addon used to fetch artist or album information, related to #20195, #20193 and #20194
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338. Settings will change the default addon used to fetch artist or album information, related to #20195, #20193 and #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for a specific artist, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for a specific artist, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for all artists in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all artists in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for a specific album, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for a specific album, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
 msgstr ""
 
-#. Label for a context submenu entry to change the information provider for all albums in node, related to #20195
-#: xbmc/music/windows/GUIWindowMusicNav.cpp
+#. Item in selection list #38338 to change the information provider for all albums in node, related to #20195
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
 msgstr ""
@@ -21058,7 +21082,7 @@ msgctxt "#38305"
 msgid "Destination folder"
 msgstr ""
 
-#. Section of music items to export - albums, album artists, song artists etc. 
+#. Section of music items to export - albums, album artists, song artists etc.
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38306"
 msgid "Items to export"
@@ -21084,7 +21108,7 @@ msgctxt "#38310"
 msgid "Overwrite existing files"
 msgstr ""
 
-#empty string id 38311
+#empty string with id 38311
 
 #. Music item to export output, see #38093
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21124,7 +21148,69 @@ msgctxt "#38320"
 msgid "Do you have local artist information (NFO) and art files that you want to fetch? Set the location of these artist folders now"
 msgstr ""
 
-#empty strings from id 38321 to 38999
+#empty strings from id 38321 to 38329
+
+#. Dialog heading when editing default settings for fetching additional music information
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38330"
+msgid "Set Music Information Providers"
+msgstr ""
+
+#. Dialog heading when editing album information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38331"
+msgid "Set Album Information Provider"
+msgstr ""
+
+#. Dialog heading when editing artist information provider
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38332"
+msgid "Set Artist Information Provider"
+msgstr ""
+
+#. Use scrapers to fetch additional album and artist information and art during scan
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38333"
+msgid "Fetch additional information and art during scan"
+msgstr ""
+
+#. Scraper to use for additional album information. See #20193
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38334"
+msgid "Album information provider"
+msgstr ""
+
+#. Scraper to use for additional artist information. See #20194
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38335"
+msgid "Artist information provider"
+msgstr ""
+
+#. Location of folder where local art and nfo files can be found for artists. See #20223
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38336"
+msgid "Local artist information folder"
+msgstr ""
+
+#. Group header describing the settings
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38337"
+msgid "Options for fetching additional information"
+msgstr ""
+
+#. Selecting what items the settings will be used for, selecting from #38064 to 38067
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38338"
+msgid "Choose how to apply settings"
+msgstr ""
+
+#. Heading when selecting from list for #38338
+#: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
+msgctxt "#38339"
+msgid "How to apply information provider settings"
+msgstr ""
+
+#empty strings from id 38340 to 38999
 
 #: system/settings/settings.xml
 msgctxt "#39000"
@@ -21259,7 +21345,26 @@ msgctxt "#39024"
 msgid "Dependencies"
 msgstr ""
 
-#empty strings from id 39025 to 39099
+#. Artist gender - male, female, other
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39025"
+msgid "Gender"
+msgstr ""
+
+#. Brief comment to distinguish artists with the same name e.g "former bassist with Journey"
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39026"
+msgid "Disambiguation"
+msgstr ""
+
+#. Sort name of artist (e.g. Jackson, Michael)
+msgctxt "#39027"
+msgid "Sortname"
+msgstr ""
+
+#empty strings from id 39028 to 39099
 
 #: system/settings/settings.xml
 msgctxt "#39100"
@@ -21275,4 +21380,45 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39102"
 msgid "Play Radio"
+msgstr ""
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#39103"
+msgid "Unable to configure network location. Invalid path given."
+msgstr ""
+
+#: xbmc/windows/GUIWindowFileManager.cpp
+msgctxt "#39104"
+msgid "View as text"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_DEFAULT
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39105"
+msgid "default"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_FORCED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#39106"
+msgid "forced"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39107"
+msgid "captions"
+msgstr ""
+
+#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39108"
+msgid "audio description"
+msgstr ""
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39109"
+msgid "Select Program"
 msgstr ""
