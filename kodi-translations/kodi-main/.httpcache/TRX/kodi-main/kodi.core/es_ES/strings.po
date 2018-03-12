@@ -2,7 +2,7 @@
 # Translators:
 # Aitor Prado <aitorprado@gmail.com>, 2016
 # alfonskunk <alfonskunk@gmail.com>, 2015,2017
-# alfonskunk <alfonskunk@gmail.com>, 2015,2017
+# alfonskunk <alfonskunk@gmail.com>, 2015,2017-2018
 # Andrés Krüger <andreskru@gmail.com>, 2017
 # daryl, 2017
 # daryl, 2017
@@ -34,8 +34,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-01-18 08:42+0000\n"
-"Last-Translator: NetVicious <netvicious@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2522,7 +2522,7 @@ msgid "Year"
 msgstr "Año"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
@@ -3141,6 +3141,11 @@ msgstr "Servidor Web"
 msgctxt "#728"
 msgid "FTP server"
 msgstr "Servidor FTP"
+
+#: system/settings/settings.xml
+msgctxt "#729"
+msgid "Enable SSL"
+msgstr "Activar SSL"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3779,7 +3784,7 @@ msgstr "Introduzca las rutas o busque la ubicación de los contenidos."
 #: addons/skin.estuary/xml/DialogMediaSource.xml
 msgctxt "#1022"
 msgid "Enter a name for this media source."
-msgstr "Ingrese un nombre para esta fuente de contenidos."
+msgstr "Introduzca un nombre para esta fuente de contenidos."
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#1023"
@@ -3816,7 +3821,6 @@ msgstr "Introduzca la nueva etiqueta"
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr "Buscar una imagen"
@@ -6172,7 +6176,7 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Control manual del ventilador"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr "Tipos de letra"
@@ -6507,8 +6511,8 @@ msgstr "Ajustes de vídeo"
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
-msgstr "Ajustes de sonido y subtítulos"
+msgid "Audio settings"
+msgstr ""
 
 msgctxt "#13397"
 msgid "Enable subtitles"
@@ -6649,6 +6653,11 @@ msgstr "Permitir aceleración de hardware - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Permitir aceleración de hardware - VTBDecoder"
+
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6827,11 +6836,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr "Sincronizar la reproducción con el monitor"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr "Elegir arte"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -6847,15 +6858,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr "Arte local"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr "No hay arte"
 
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
-msgstr "Añadir arte"
+msgid "Add art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6869,6 +6882,23 @@ msgid ""
 " be applied. This avoids the \"chipmonk voices\" that normally result from "
 "speeding up a video"
 msgstr "Cuando el cambio de velocidad excede este umbral, se aplicará un filtro de corrección de pitch. Esto evita las \"voces de ardilla\" que normalmente resultan al acelerar un vídeo"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13519"
+msgid "Embedded art"
+msgstr "Arte embebido"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13520"
+msgid "Embedded fanart"
+msgstr "Fanart embebido"
+
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
+#. etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9493,7 +9523,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Proveedor"
 
-#. message box text prompting user to switch to nother channel
+#. message box text prompting user to switch to another channel
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -10533,6 +10563,12 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr "Ocultar \"No hay información disponible\""
 
+#. pvr settings "Preselect playing channel in lists" control label
+#: system/settings/settings.xml
+msgctxt "#19269"
+msgid "Preselect playing channel in lists"
+msgstr "Preseleccionar canal a reproducir en las listas"
+
 #. Label of the option to switch between a grouped recordings list and a non-
 #. grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -10644,6 +10680,12 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Todos los canales"
 
+#. Label for epg grid window "go to date" context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19288"
+msgid "Go to date"
+msgstr "Ir a la fecha"
+
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10696,17 +10738,17 @@ msgctxt "#19296"
 msgid "No PVR add-on enabled"
 msgstr "No hay ningún add-on PVR activado"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for vertical channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
-msgid "Vertical"
-msgstr "Vertical"
+msgid "Vertical channels"
+msgstr "Canales en vertical"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
-msgid "Horizontal"
-msgstr "Horizontal"
+msgid "Horizontal channels"
+msgstr "Canales en horizontal"
 
 #. generic "expiration" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10714,6 +10756,20 @@ msgstr "Horizontal"
 msgctxt "#19299"
 msgid "Expires"
 msgstr "Expira"
+
+#. 'Viewtype' label for vertical channel layout without channel group selctor,
+#. used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19300"
+msgid "Vertical channels, no group selector"
+msgstr "Canales en vertical, sin selector de grupo"
+
+#. 'Viewtype' label for horizontal channel layout without channel group
+#. selctor, used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19301"
+msgid "Horizontal channels, no group selector"
+msgstr "Canales en horizontal, sin selector de grupo"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11368,7 +11424,6 @@ msgstr "Miniatura IMDb"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr "Miniatura actual"
@@ -11382,7 +11437,6 @@ msgstr "Miniatura local"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr "Sin miniatura"
@@ -11393,14 +11447,14 @@ msgid "Choose thumbnail"
 msgstr "Elegir miniatura"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
 msgid "Banner"
 msgstr "Pancarta"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
@@ -12004,6 +12058,11 @@ msgid "FTP server"
 msgstr "Servidor FTP"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20174"
+msgid "FTPS server"
+msgstr "Servidor FTPS"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
 msgstr "Servidor UPnP"
@@ -12251,8 +12310,13 @@ msgstr "No se puede escribir en la carpeta:"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
-msgid "RSS Feed"
-msgstr "Canal RSS"
+msgid "RSS Feed (HTTP)"
+msgstr "Archivo RSS (HTTP)"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20305"
+msgid "RSS Feed (HTTPS)"
+msgstr "Archivo RSS (HTTPS)"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12900,7 +12964,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr "Añadir a la colección"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
 msgid "Fanart"
@@ -13097,6 +13162,16 @@ msgctxt "#21342"
 msgid "There are currently no updates available for this add-on."
 msgstr "No hay actualizaciones disponibles para este add-on."
 
+#: system/settings.xml
+msgctxt "#21343"
+msgid "Use video tags"
+msgstr "Usar etiquetas de vídeo"
+
+#: system/settings.xml
+msgctxt "#21344"
+msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr "Si el fichero mp4 o mkv tiene etiquetas, usarlas para la información de la colección"
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
@@ -13159,6 +13234,10 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr "Reproducir sonidos de la interfaz de usuario durante la reproducción de contenido"
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr "Miniatura"
@@ -14936,6 +15015,16 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "¿Quiere cambiar a este idioma?"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
+
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16566,6 +16655,24 @@ msgid ""
 "systems."
 msgstr "Empareja sus controladores con una variedad de dispositivos de entrada para diferentes sistemas de videojuegos."
 
+#. Label for buttons that appear on a racing wheel for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35071"
+msgid "Racing wheel"
+msgstr "Volante de carreras"
+
+#. Label for paddle buttons that appear on a racing wheel for games. Used in
+#. the controller mapping dialog.
+msgctxt "#35072"
+msgid "Paddles"
+msgstr "Paletas"
+
+#. Label for buttons that appear on a joystick for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35073"
+msgid "Joysticks"
+msgstr "Joysticks"
+
 #. Label for buttons that appear on the face of the controller. Used in the
 #. controller mapping dialog.
 msgctxt "#35074"
@@ -16843,6 +16950,29 @@ msgstr "Todas las teclas"
 msgctxt "#35167"
 msgid "Single keys"
 msgstr "Teclas únicas"
+
+#. Name of the button that prompts you to select a key on the keyboard. Used
+#. in the controller mapping dialog.
+msgctxt "#35168"
+msgid "Select key"
+msgstr "Elegir tecla"
+
+#. Keyboard prompt without a timeout. Used in the controller mapping dialog.
+msgctxt "#35169"
+msgid "Press a key"
+msgstr "Pulse una tecla"
+
+#. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
+#. controller mapping dialog.
+msgctxt "#35170"
+msgid "Press a key ({1:d})"
+msgstr "Pulse una tecla ({1:d})"
+
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
+msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -17312,6 +17442,21 @@ msgstr "Pausar reproducción"
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
 msgstr "Forzar activación de AVR junto con Kodi"
+
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17834,6 +17979,15 @@ msgid ""
 "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr "Selecciona que nivel de zoom se le aplica a los vídeos 4:3 al mostrarlos en pantallas anchas."
 
+#. Description of setting with label #13430 "Allow hardware acceleration -
+#. PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
+
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
 msgctxt "#36173"
@@ -18109,6 +18263,16 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "Abre el administrador de gupos, que permite modificar los grupos y sus respectivos canales."
+
+#: system/settings/settings.xml
+msgctxt "#36214"
+msgid ""
+"Preselect the playing channel in windows and dialogs containing channel "
+"lists. If enabled and there is a playing channel, the playing channel will "
+"be selected when opening a window or dialog containing a channel list. If "
+"disabled, the channel previously selected in a window or dialog will be "
+"selected when opening a window containing a channel list. "
+msgstr "Preselecciona el canal al reproducir en las ventanas y diálogos que contienen listas de canales. Si está activado y hay una lista de canales, el canal a reproducir será seleccionado al abrir una ventana o diálogo que contenga una lista de canales. Si no está activado, el canal escogido previamente en una ventana o diálogo será el escogido cuando se abra la ventana que contenga la lista de canales."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -20329,26 +20493,29 @@ msgid ""
 "Windows shares."
 msgstr "Configure la versión máxima de SMB cuando se negocie la conexión. Forzar a SMBv2 o SMBv1 puede ser necesario en NAS antiguos y carpetas compartidas de Windows"
 
-#. Values for setting with label #36621 "Maximum protocol version" - none
-#. means "no protocol version is forced"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version" - none means "no protocol version is forced"
 #: system/settings/settings.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Ninguno"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36624"
 msgid "SMBv1"
 msgstr "SMBv1"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36625"
 msgid "SMBv2"
 msgstr "SMBv2"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36626"
 msgid "SMBv3"
@@ -20359,6 +20526,44 @@ msgstr "SMBv3"
 msgctxt "#36627"
 msgid "Client"
 msgstr "Cliente"
+
+#. Label of a setting, allow the minimum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36628"
+msgid "Minimum protocol version"
+msgstr "Versión mínima del protocolo"
+
+#. Description of setting with label #36628 "Minimum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36629"
+msgid ""
+"Set the minimum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
+msgstr "Establece la versión mínima del protocolo SMB que negociará al hacer conexiones. Forzar SMBv2 puede ser requerido para evitar el uso de SMBv1 en algunos SO."
+
+#. Label of a setting, sets additional config required for some proprietary
+#. SMBv1 implementations (mostly routers)
+#: system/settings/settings.xml
+msgctxt "#36630"
+msgid "Use legacy security"
+msgstr "Usar seguridad Legacy"
+
+#. Description of setting with label #36630 "Use legacy security"
+#: system/settings/settings.xml
+msgctxt "#36631"
+msgid ""
+"Force weak SMBv1 security for compatibility with the USB sharing features on"
+" some WiFi routers and NAS devices."
+msgstr "Fuerza la seguridad débil de SMBv1 para hacer compatible él compartir USB con algunos routers WiFi o dispositivos NAS."
+
+#. Description of setting with label #729 "Enable SSL"
+#: system/settings/settings.xml
+msgctxt "#36899"
+msgid ""
+"Enables SSL encryption in the webserver. Certificate "
+"special://userdata/server.key and Key special://userdata/server.pem must be "
+"created manually"
+msgstr "Activa el cifrado SSL en el servidor web. El certificado special://userdata/server.key y la Llave special://userdata/server.pem deben ser creadas manualmente."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20749,12 +20954,14 @@ msgctxt "#38018"
 msgid "My rating"
 msgstr "Mi calificación"
 
-#. Used for the viewstate selection
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr "Sin calificación"
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Establecer mi calificación"

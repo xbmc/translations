@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-01-11 06:56+0000\n"
-"Last-Translator: Lorenz Damara <lorenzrenz@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Indonesian (Indonesia) (http://www.transifex.com/teamxbmc/kodi-main/language/id_ID/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2498,7 +2498,7 @@ msgid "Year"
 msgstr "Tahun"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
@@ -3117,6 +3117,11 @@ msgstr "Server Web"
 msgctxt "#728"
 msgid "FTP server"
 msgstr "Server FTP"
+
+#: system/settings/settings.xml
+msgctxt "#729"
+msgid "Enable SSL"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3792,7 +3797,6 @@ msgstr "Masukkan label baru"
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr "sebuah image"
@@ -5031,7 +5035,7 @@ msgstr "Informasi Film"
 
 msgctxt "#10550"
 msgid "Teletext"
-msgstr ""
+msgstr "Teleteks"
 
 msgctxt "#10600"
 msgid "PVR guide info"
@@ -5087,7 +5091,7 @@ msgstr "Saluran TV"
 
 msgctxt "#10701"
 msgid "TV recordings"
-msgstr ""
+msgstr "Rekaman TV"
 
 msgctxt "#10702"
 msgid "TV guide"
@@ -5578,7 +5582,7 @@ msgstr ""
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12999"
 msgid "Startup"
-msgstr ""
+msgstr "Pemulaian"
 
 #: system/settings/settings.xml addons/skin.estuary/xml/Includes.xml
 msgctxt "#13000"
@@ -6054,7 +6058,7 @@ msgstr "Perangkat Keras"
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#13271"
 msgid "System CPU usage:"
-msgstr ""
+msgstr "Penggunaan CPU sistem:"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -6148,7 +6152,7 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Mengesampingkan Kecepatan Kipas"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr "Font"
@@ -6247,15 +6251,15 @@ msgstr "penundaan A/V"
 
 msgctxt "#13328"
 msgid "{0:s} not found"
-msgstr ""
+msgstr "{0:s} tidak ditemukan"
 
 msgctxt "#13329"
 msgid "Error opening {0:s}"
-msgstr ""
+msgstr "Galat saat membuka {0:s}"
 
 msgctxt "#13330"
 msgid "Unable to load {0:s}"
-msgstr ""
+msgstr "Tidak dapat membuka {0:s}"
 
 msgctxt "#13331"
 msgid "Error: Out of memory"
@@ -6483,8 +6487,8 @@ msgstr "Setelan Video"
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
-msgstr "Audio dan Setelan Teks Film"
+msgid "Audio settings"
+msgstr ""
 
 msgctxt "#13397"
 msgid "Enable subtitles"
@@ -6508,7 +6512,7 @@ msgstr "Crossfade trek album"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 msgctxt "#13401"
 msgid "Browse for {0:s}"
-msgstr ""
+msgstr "Ramban untuk {0:s}"
 
 msgctxt "#13402"
 msgid "Show track position"
@@ -6565,7 +6569,7 @@ msgstr "Mengunduh"
 #: system/settings/settings.xml
 msgctxt "#13414"
 msgid "Show song and album artists"
-msgstr ""
+msgstr "Tampilkan album lagu dan album artis"
 
 #: system/settings/settings.xml
 msgctxt "#13415"
@@ -6624,6 +6628,11 @@ msgstr "Perbolehkan akselerasi perangkat keras - CrystalHD"
 #: system/settings/settings.xml
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
+msgstr "Ijinkan akselerasi perangkat keras - VTBDecoder"
+
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -6671,7 +6680,7 @@ msgstr "Ijinkan akselerasi perangkat-keras - MediaCodec"
 #: system/settings/settings.xml
 msgctxt "#13440"
 msgid "Allow hardware acceleration - MediaCodec (Surface)"
-msgstr ""
+msgstr "Ijinkan akselerasi perangkat keras - MediaCoded (Surface)"
 
 #: system/settings/settings.xml
 msgctxt "#13441"
@@ -6803,11 +6812,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr "Sinkronisasi playback yang ditampilkan"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr "Pilih art"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -6823,15 +6834,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr "Art lokal"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr "Tanpa art"
 
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
-msgstr "Tambahkan art"
+msgid "Add art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6844,6 +6857,23 @@ msgid ""
 "When the speed change exceeds this threshold, a pitch-correction filter will"
 " be applied. This avoids the \"chipmonk voices\" that normally result from "
 "speeding up a video"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13519"
+msgid "Embedded art"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13520"
+msgid "Embedded fanart"
+msgstr ""
+
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
+#. etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -7273,7 +7303,7 @@ msgstr "Daftar berkas"
 #: system/settings/settings.xml
 msgctxt "#14082"
 msgid "Reset the Audio DSP database..."
-msgstr ""
+msgstr "Ulang basisdata Audio DSP"
 
 #: system/settings/settings.xml
 msgctxt "#14083"
@@ -7326,7 +7356,7 @@ msgstr "Keamanan"
 
 msgctxt "#14094"
 msgid "Devices"
-msgstr ""
+msgstr "Perangkat"
 
 #: system/settings/settings.xml
 msgctxt "#14095"
@@ -7362,7 +7392,7 @@ msgstr "Berhenti menyalin CD"
 #: system/settings/settings.xml
 msgctxt "#14101"
 msgid "Processing"
-msgstr ""
+msgstr "Pemrosesan"
 
 #. Name of a setting for Blu-ray playback mode
 #: system/settings/settings.xml
@@ -7414,25 +7444,25 @@ msgstr "Format tanggal lengkap"
 
 msgctxt "#14111"
 msgid "Events"
-msgstr ""
+msgstr "Acara"
 
 #. Label of setting to enable/disable event logging
 #: system/settings/settings.xml
 msgctxt "#14112"
 msgid "Enable event logging"
-msgstr ""
+msgstr "Aktifkan log acara"
 
 #. Label of setting to enable/disable event logging for notifications
 #: system/settings/settings.xml
 msgctxt "#14113"
 msgid "Enable notification event logging"
-msgstr ""
+msgstr "Aktifkan pemberitahuan log acara"
 
 #. Label of setting to go into the event log window
 #: system/settings/settings.xml
 msgctxt "#14114"
 msgid "Show event log"
-msgstr ""
+msgstr "Tampilkan log acara"
 
 #. Label for the "Basic" event level
 #: xbmc/event/windows/GUIWindowEventLog.cpp
@@ -7463,44 +7493,44 @@ msgstr "Kesalahan"
 #: xbmc/event/windows/GUIWindowEventLog.cpp
 msgctxt "#14119"
 msgid "Level: {0:s}"
-msgstr ""
+msgstr "Tingkat: {0:s}"
 
 #. Label for the option to show/hide higher level events in the event log
 #. window
 #: xbmc/event/windows/GUIWindowEventLog.cpp
 msgctxt "#14120"
 msgid "Show higher levels"
-msgstr ""
+msgstr "Tampilkan tingkat yang lebih tinggi"
 
 #. Name of a setting for Blu-ray region codes
 #: system/settings/settings.xml
 msgctxt "#14121"
 msgid "Blu-ray region Code"
-msgstr ""
+msgstr "Kode wilayah blu-ray"
 
 #. Region Code option for Blu-ray
 #: system/settings/settings.xml
 msgctxt "#14122"
 msgid "Region A"
-msgstr ""
+msgstr "Wilayah A"
 
 #. Region Code option for Blu-ray
 #: system/settings/settings.xml
 msgctxt "#14123"
 msgid "Region B"
-msgstr ""
+msgstr "Wilayah B"
 
 #. Region Code option for Blu-ray
 #: system/settings/settings.xml
 msgctxt "#14124"
 msgid "Region C"
-msgstr ""
+msgstr "WIlayah C"
 
 #. This is in the context of input devices!
 #: system/settings/settings.xml
 msgctxt "#14125"
 msgid "Input"
-msgstr ""
+msgstr "Masukan"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -7510,7 +7540,7 @@ msgstr "Player"
 #: system/settings/settings.xml
 msgctxt "#14201"
 msgid "Player settings"
-msgstr ""
+msgstr "Setelah pemutar"
 
 #: system/settings/settings.xml
 msgctxt "#14202"
@@ -7520,37 +7550,37 @@ msgstr "Pustaka"
 #: system/settings/settings.xml
 msgctxt "#14203"
 msgid "Library settings"
-msgstr ""
+msgstr "Setelan pustaka"
 
 #: system/settings/settings.xml
 msgctxt "#14204"
 msgid "PVR & Live TV"
-msgstr ""
+msgstr "PVR & Live TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
 msgid "PVR & Live TV settings"
-msgstr ""
+msgstr "Setelan PVR & Live TV"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
 msgid "Interface"
-msgstr ""
+msgstr "Antarmuka"
 
 #: system/settings/settings.xml
 msgctxt "#14207"
 msgid "Interface settings"
-msgstr ""
+msgstr "Setelan antarmuka"
 
 #: system/settings/settings.xml
 msgctxt "#14208"
 msgid "Service settings"
-msgstr ""
+msgstr "Setelan layanan"
 
 #: system/settings/settings.xml
 msgctxt "#14209"
 msgid "System settings"
-msgstr ""
+msgstr "Setelan sistem"
 
 #: system/settings/settings.xml
 msgctxt "#14210"
@@ -7560,12 +7590,12 @@ msgstr "Pengaturan profil"
 #: system/settings/settings.xml
 msgctxt "#14211"
 msgid "Media"
-msgstr ""
+msgstr "Media"
 
 #: system/settings/settings.xml
 msgctxt "#14212"
 msgid "Media settings"
-msgstr ""
+msgstr "Setelan media"
 
 #: system/settings/settings.xml
 msgctxt "#14215"
@@ -7590,7 +7620,7 @@ msgstr "Bahasa"
 #: system/settings/settings.xml
 msgctxt "#14219"
 msgid "Databases"
-msgstr ""
+msgstr "Basisdata"
 
 #: system/settings/settings.xml
 msgctxt "#14220"
@@ -7605,32 +7635,32 @@ msgstr "Audio"
 #: system/settings/settings.xml
 msgctxt "#14222"
 msgid "Regional"
-msgstr ""
+msgstr "WIlayah"
 
 #: system/settings/settings.xml
 msgctxt "#14223"
 msgid "Control"
-msgstr ""
+msgstr "Kontrol"
 
 #: system/settings/settings.xml
 msgctxt "#14224"
 msgid "Startup"
-msgstr ""
+msgstr "Pemulaian"
 
 #: system/settings/settings.xml
 msgctxt "#14225"
 msgid "Network Control"
-msgstr ""
+msgstr "Kontrol jaringa"
 
 #: system/settings/settings.xml
 msgctxt "#14226"
 msgid "Manage Sources"
-msgstr ""
+msgstr "Atur sumber"
 
 #: system/settings/settings.xml
 msgctxt "#14227"
 msgid "Startup Settings"
-msgstr ""
+msgstr "Setelan pemulaian"
 
 #: system/settings/settings.xml
 msgctxt "#14230"
@@ -7640,62 +7670,62 @@ msgstr "Aksi"
 #: system/settings/settings.xml
 msgctxt "#14231"
 msgid "Processing"
-msgstr ""
+msgstr "Sedang memproses"
 
 #: system/settings/settings.xml
 msgctxt "#14232"
 msgid "Stereoscopic 3D"
-msgstr ""
+msgstr "Streoscopic 3D"
 
 #: system/settings/settings.xml
 msgctxt "#14233"
 msgid "Teletext"
-msgstr ""
+msgstr "Teleteks"
 
 #: system/settings/settings.xml
 msgctxt "#14234"
 msgid "Blu-ray"
-msgstr ""
+msgstr "Blu-ray"
 
 #: system/settings/settings.xml
 msgctxt "#14235"
 msgid "Download Services"
-msgstr ""
+msgstr "Layanan Unduh"
 
 #: system/settings/settings.xml
 msgctxt "#14236"
 msgid "Video Library"
-msgstr ""
+msgstr "Pustaka Video"
 
 #: system/settings/settings.xml
 msgctxt "#14237"
 msgid "Music Library"
-msgstr ""
+msgstr "Pustaka Musik"
 
 #: system/settings/settings.xml
 msgctxt "#14240"
 msgid "Lists & Views"
-msgstr ""
+msgstr "List & Views"
 
 #: system/settings/settings.xml
 msgctxt "#14241"
 msgid "Metadata"
-msgstr ""
+msgstr "Metadata"
 
 #: system/settings/settings.xml
 msgctxt "#14242"
 msgid "Videos..."
-msgstr ""
+msgstr "Video..."
 
 #: system/settings/settings.xml
 msgctxt "#14243"
 msgid "Music..."
-msgstr ""
+msgstr "Musik..."
 
 #: system/settings/settings.xml
 msgctxt "#14244"
 msgid "Pictures..."
-msgstr ""
+msgstr "Gambar..."
 
 #: system/settings/settings.xml
 msgctxt "#14245"
@@ -7710,27 +7740,27 @@ msgstr "Sembunyikan perkembangan pembaruan pustaka"
 #: system/settings/settings.xml
 msgctxt "#14247"
 msgid "Clean library"
-msgstr ""
+msgstr "Bersihkan pustaka"
 
 #: system/settings/settings.xml
 msgctxt "#14248"
 msgid "Export library"
-msgstr ""
+msgstr "Ekspor pustaka"
 
 #: system/settings/settings.xml
 msgctxt "#14249"
 msgid "Import library"
-msgstr ""
+msgstr "Impor pustaka"
 
 #: system/settings/settings.xml
 msgctxt "#14250"
 msgid "Audio Decoder"
-msgstr ""
+msgstr "Decoder suara"
 
 #: system/settings/settings.xml
 msgctxt "#14251"
 msgid "Audio DSP"
-msgstr ""
+msgstr "Suara DSP"
 
 #: system/settings/settings.xml
 msgctxt "#14252"
@@ -7740,47 +7770,47 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14255"
 msgid "Sleep / Shutdown"
-msgstr ""
+msgstr "Tidur / Matikan"
 
 #: system/settings/settings.xml
 msgctxt "#14256"
 msgid "Wake"
-msgstr ""
+msgstr "Bangun"
 
 #: system/settings/settings.xml
 msgctxt "#14260"
 msgid "Debug"
-msgstr ""
+msgstr "Debug"
 
 #: system/settings/settings.xml
 msgctxt "#14261"
 msgid "Configure skin..."
-msgstr ""
+msgstr "Konfigurasi kulit..."
 
 #: system/settings/settings.xml
 msgctxt "#14270"
 msgid "Unit Formats"
-msgstr ""
+msgstr "Format Unit."
 
 #: system/settings/settings.xml
 msgctxt "#14271"
 msgid "Region default format"
-msgstr ""
+msgstr "Format standar wilayah"
 
 #: system/settings/settings.xml
 msgctxt "#14275"
 msgid "Application control"
-msgstr ""
+msgstr "kontrol aplikasi"
 
 #: system/settings/settings.xml
 msgctxt "#14276"
 msgid "Allow remote control from applications on this system"
-msgstr ""
+msgstr "Ijinkan pengendali jarak jauh dari aplikasi pada sistem ini"
 
 #: system/settings/settings.xml
 msgctxt "#14277"
 msgid "Allow remote control from applications on other systems"
-msgstr ""
+msgstr "Ijinkan pengendali jarak jauh dari aplikasi pada sistem lain"
 
 #. pvr "channels" settings group label
 #: system/settings/settings.xml
@@ -7798,13 +7828,13 @@ msgstr "Ikon"
 #: system/settings/settings.xml
 msgctxt "#14303"
 msgid "Updates"
-msgstr ""
+msgstr "Pembaruan"
 
 #. pvr "RDS" settings group label
 #: system/settings/settings.xml
 msgctxt "#14304"
 msgid "RDS Radio"
-msgstr ""
+msgstr "Radio RDS"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -7816,24 +7846,24 @@ msgstr "Dasar"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15005"
 msgid "Application"
-msgstr ""
+msgstr "Aplikasi"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15006"
 msgid "Phone"
-msgstr ""
+msgstr "Telfon"
 
 #. Name of a class/preset for audio DSP
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15007"
 msgid "Message"
-msgstr ""
+msgstr "Pesan"
 
 #: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "{0:d} Items failed to export"
-msgstr ""
+msgstr "{0:d} Item gagal diekspor"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15012"
@@ -7843,7 +7873,7 @@ msgstr "Sumber tidak tersedia"
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15013"
 msgid "What would you like to do with media items from {0:s}"
-msgstr ""
+msgstr "Apa yang ingin kamu lakukan dengan item media dari {0:s}"
 
 #: xbmc/video/VideoDatabase.cpp
 msgctxt "#15014"
@@ -7874,12 +7904,12 @@ msgstr "Manajer DSP suara"
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15021"
 msgid "Content type"
-msgstr ""
+msgstr "Tipe konten"
 
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15022"
 msgid "Listening mode"
-msgstr ""
+msgstr "Moda pendengaran "
 
 #: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSPMode.cpp
 msgctxt "#15023"
@@ -8120,7 +8150,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#15087"
 msgid "Input"
-msgstr ""
+msgstr "Masukan"
 
 #. Audio DSP process chain indication
 #: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
@@ -9469,7 +9499,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Penyedia"
 
-#. message box text prompting user to switch to nother channel
+#. message box text prompting user to switch to another channel
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -10509,6 +10539,12 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr "Sembunyikan label \"Tidak ada informasi tersedia\""
 
+#. pvr settings "Preselect playing channel in lists" control label
+#: system/settings/settings.xml
+msgctxt "#19269"
+msgid "Preselect playing channel in lists"
+msgstr ""
+
 #. Label of the option to switch between a grouped recordings list and a non-
 #. grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -10620,6 +10656,12 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Semua kanal"
 
+#. Label for epg grid window "go to date" context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19288"
+msgid "Go to date"
+msgstr ""
+
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10672,16 +10714,16 @@ msgctxt "#19296"
 msgid "No PVR add-on enabled"
 msgstr "Tidak ada pengaya PVR diaktifkan"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for vertical channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
-msgid "Vertical"
+msgid "Vertical channels"
 msgstr ""
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
-msgid "Horizontal"
+msgid "Horizontal channels"
 msgstr ""
 
 #. generic "expiration" label used in different places
@@ -10689,6 +10731,20 @@ msgstr ""
 #: addons/skin.estuary/xml/MyPVRRecordings.xml
 msgctxt "#19299"
 msgid "Expires"
+msgstr ""
+
+#. 'Viewtype' label for vertical channel layout without channel group selctor,
+#. used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19300"
+msgid "Vertical channels, no group selector"
+msgstr ""
+
+#. 'Viewtype' label for horizontal channel layout without channel group
+#. selctor, used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19301"
+msgid "Horizontal channels, no group selector"
 msgstr ""
 
 #. label for epg genre value
@@ -11344,7 +11400,6 @@ msgstr "IMDb Thumb"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr "Thumb Saat ini"
@@ -11358,7 +11413,6 @@ msgstr "Thumb Lokal"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr "Tidak Ada Thumb"
@@ -11369,14 +11423,14 @@ msgid "Choose thumbnail"
 msgstr "Pilih Thumb"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
 msgid "Banner"
 msgstr ""
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
@@ -11980,6 +12034,11 @@ msgid "FTP server"
 msgstr "Server FTP"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20174"
+msgid "FTPS server"
+msgstr ""
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
 msgstr "Server UPnP"
@@ -12227,8 +12286,13 @@ msgstr "Mendeteksi BIOS"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
-msgid "RSS Feed"
-msgstr "Mendeteksi Tanggal Produksi"
+msgid "RSS Feed (HTTP)"
+msgstr ""
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20305"
+msgid "RSS Feed (HTTPS)"
+msgstr ""
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12876,7 +12940,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr ""
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
 msgid "Fanart"
@@ -13073,6 +13138,16 @@ msgctxt "#21342"
 msgid "There are currently no updates available for this add-on."
 msgstr ""
 
+#: system/settings.xml
+msgctxt "#21343"
+msgid "Use video tags"
+msgstr ""
+
+#: system/settings.xml
+msgctxt "#21344"
+msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
@@ -13135,6 +13210,10 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr "Mainkan suara GUI saat media playback"
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr "Thumbnail"
@@ -14912,11 +14991,21 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "Apakah Anda ingin mengganti bahasa ini?"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
+
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
 msgid "Audio DSP"
-msgstr ""
+msgstr "Suara DSP"
 
 #. To open dsp submenu
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
@@ -16542,6 +16631,24 @@ msgid ""
 "systems."
 msgstr ""
 
+#. Label for buttons that appear on a racing wheel for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35071"
+msgid "Racing wheel"
+msgstr ""
+
+#. Label for paddle buttons that appear on a racing wheel for games. Used in
+#. the controller mapping dialog.
+msgctxt "#35072"
+msgid "Paddles"
+msgstr ""
+
+#. Label for buttons that appear on a joystick for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35073"
+msgid "Joysticks"
+msgstr ""
+
 #. Label for buttons that appear on the face of the controller. Used in the
 #. controller mapping dialog.
 msgctxt "#35074"
@@ -16818,6 +16925,29 @@ msgstr ""
 #. Used in the controller mapping dialog.
 msgctxt "#35167"
 msgid "Single keys"
+msgstr ""
+
+#. Name of the button that prompts you to select a key on the keyboard. Used
+#. in the controller mapping dialog.
+msgctxt "#35168"
+msgid "Select key"
+msgstr ""
+
+#. Keyboard prompt without a timeout. Used in the controller mapping dialog.
+msgctxt "#35169"
+msgid "Press a key"
+msgstr ""
+
+#. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
+#. controller mapping dialog.
+msgctxt "#35170"
+msgid "Press a key ({1:d})"
+msgstr ""
+
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
 msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
@@ -17287,6 +17417,21 @@ msgstr ""
 #: system/peripherals.xml
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -17810,6 +17955,15 @@ msgid ""
 "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr "Pilih tingkat zum untuk menampilkan video 4:3 pada tampilan layar lebar."
 
+#. Description of setting with label #13430 "Allow hardware acceleration -
+#. PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
+
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
 msgctxt "#36173"
@@ -18084,6 +18238,16 @@ msgctxt "#36213"
 msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36214"
+msgid ""
+"Preselect the playing channel in windows and dialogs containing channel "
+"lists. If enabled and there is a playing channel, the playing channel will "
+"be selected when opening a window or dialog containing a channel list. If "
+"disabled, the channel previously selected in a window or dialog will be "
+"selected when opening a window containing a channel list. "
 msgstr ""
 
 #. Description of setting with label #14110 "Long date format"
@@ -20187,7 +20351,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36605"
 msgid "Updates"
-msgstr ""
+msgstr "Pembaruan"
 
 #. Option for setting "System -> Add-ons -> Updates"
 #: system/settings/settings.xml
@@ -20305,26 +20469,29 @@ msgid ""
 "Windows shares."
 msgstr ""
 
-#. Values for setting with label #36621 "Maximum protocol version" - none
-#. means "no protocol version is forced"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version" - none means "no protocol version is forced"
 #: system/settings/settings.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Tidak Ada"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36624"
 msgid "SMBv1"
 msgstr ""
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36625"
 msgid "SMBv2"
 msgstr ""
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36626"
 msgid "SMBv3"
@@ -20335,6 +20502,44 @@ msgstr ""
 msgctxt "#36627"
 msgid "Client"
 msgstr "Klien"
+
+#. Label of a setting, allow the minimum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36628"
+msgid "Minimum protocol version"
+msgstr ""
+
+#. Description of setting with label #36628 "Minimum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36629"
+msgid ""
+"Set the minimum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
+msgstr ""
+
+#. Label of a setting, sets additional config required for some proprietary
+#. SMBv1 implementations (mostly routers)
+#: system/settings/settings.xml
+msgctxt "#36630"
+msgid "Use legacy security"
+msgstr ""
+
+#. Description of setting with label #36630 "Use legacy security"
+#: system/settings/settings.xml
+msgctxt "#36631"
+msgid ""
+"Force weak SMBv1 security for compatibility with the USB sharing features on"
+" some WiFi routers and NAS devices."
+msgstr ""
+
+#. Description of setting with label #729 "Enable SSL"
+#: system/settings/settings.xml
+msgctxt "#36899"
+msgid ""
+"Enables SSL encryption in the webserver. Certificate "
+"special://userdata/server.key and Key special://userdata/server.pem must be "
+"created manually"
+msgstr ""
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20725,12 +20930,14 @@ msgctxt "#38018"
 msgid "My rating"
 msgstr ""
 
-#. Used for the viewstate selection
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr ""
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr ""

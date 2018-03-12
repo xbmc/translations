@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-02-04 18:33+0000\n"
-"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/teamxbmc/kodi-main/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2499,7 +2499,7 @@ msgid "Year"
 msgstr "Godina"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
@@ -3118,6 +3118,11 @@ msgstr "Web poslužitelj"
 msgctxt "#728"
 msgid "FTP server"
 msgstr "FTP poslužitelj"
+
+#: system/settings/settings.xml
+msgctxt "#729"
+msgid "Enable SSL"
+msgstr "Omogući SSL"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3793,7 +3798,6 @@ msgstr "Upišite novu oznaku"
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr "Potraži sliku"
@@ -5624,7 +5628,7 @@ msgstr "Dodaj slikovni izvor"
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#13007"
 msgid "Reset"
-msgstr "Vrati na početno"
+msgstr "Vrati izvorno"
 
 #: system/settings/settings.xml
 msgctxt "#13008"
@@ -6149,7 +6153,7 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Veća brzina ventilatora"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr "Slova"
@@ -6484,8 +6488,8 @@ msgstr "Video postavke"
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
-msgstr "Postavke podnaslova i zvuka"
+msgid "Audio settings"
+msgstr ""
 
 msgctxt "#13397"
 msgid "Enable subtitles"
@@ -6626,6 +6630,11 @@ msgstr "Dopusti hardversko ubrzanje - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Dopusti hardversko ubrzanje - VTBDecoder"
+
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6804,11 +6813,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr "Uskladi reprodukciju prikaza"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr "Odaberi sliku omota"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -6824,15 +6835,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr "Lokalna slika omota"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr "Nema slike omota"
 
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
-msgstr "Dodaj sliku omota"
+msgid "Add art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6846,6 +6859,23 @@ msgid ""
 " be applied. This avoids the \"chipmonk voices\" that normally result from "
 "speeding up a video"
 msgstr "Kada promjena brzina premaši ovaj prag, primjenjivat će se filter ispravljanja najviše točke. Time se izbjegava \"efekt izobličenja glasova\" koji je uobičajeno rezultat ubrzavanja video snimke"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13519"
+msgid "Embedded art"
+msgstr "Ugrađena slika omota"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13520"
+msgid "Embedded fanart"
+msgstr "Ugrađen poster obožavatelja"
+
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
+#. etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9470,7 +9500,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Pružatelj usluge"
 
-#. message box text prompting user to switch to nother channel
+#. message box text prompting user to switch to another channel
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -10510,6 +10540,12 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr "Sakrij upozorenje \"Informacija nije dostupna\""
 
+#. pvr settings "Preselect playing channel in lists" control label
+#: system/settings/settings.xml
+msgctxt "#19269"
+msgid "Preselect playing channel in lists"
+msgstr "Predodaberi reproducirani program na popisu"
+
 #. Label of the option to switch between a grouped recordings list and a non-
 #. grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -10621,6 +10657,12 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Svi programi"
 
+#. Label for epg grid window "go to date" context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19288"
+msgid "Go to date"
+msgstr "Idi na datum"
+
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10673,17 +10715,17 @@ msgctxt "#19296"
 msgid "No PVR add-on enabled"
 msgstr "Nema omogućenih PVR dodataka"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for vertical channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
-msgid "Vertical"
-msgstr "Okomito"
+msgid "Vertical channels"
+msgstr "Okomiti programi"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
-msgid "Horizontal"
-msgstr "Vodoravno"
+msgid "Horizontal channels"
+msgstr "Vodoravni programi"
 
 #. generic "expiration" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10691,6 +10733,20 @@ msgstr "Vodoravno"
 msgctxt "#19299"
 msgid "Expires"
 msgstr "Istječe"
+
+#. 'Viewtype' label for vertical channel layout without channel group selctor,
+#. used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19300"
+msgid "Vertical channels, no group selector"
+msgstr "Okomiti programi, bez odabira grupa"
+
+#. 'Viewtype' label for horizontal channel layout without channel group
+#. selctor, used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19301"
+msgid "Horizontal channels, no group selector"
+msgstr "Vodoravni programi, bez odabira grupa"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11345,7 +11401,6 @@ msgstr "Udaljena minijatura"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr "Trenutna minijatura"
@@ -11359,7 +11414,6 @@ msgstr "Lokalna minijatura"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr "Bez minijatura"
@@ -11370,14 +11424,14 @@ msgid "Choose thumbnail"
 msgstr "Odaberi minijaturu"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
 msgid "Banner"
 msgstr "Transparent"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
@@ -11981,6 +12035,11 @@ msgid "FTP server"
 msgstr "FTP poslužitelj"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20174"
+msgid "FTPS server"
+msgstr "FTPS poslužitelj"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
 msgstr "UPnP poslužitelj"
@@ -12228,8 +12287,13 @@ msgstr "Nemoguće zapisivanje u mapu:"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
-msgid "RSS Feed"
-msgstr "RSS kanal"
+msgid "RSS Feed (HTTP)"
+msgstr "RSS kanal (HTTP)"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20305"
+msgid "RSS Feed (HTTPS)"
+msgstr "RSS kanal (HTTPS)"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12877,7 +12941,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr "Dodaj u fonoteku"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
 msgid "Fanart"
@@ -13074,6 +13139,16 @@ msgctxt "#21342"
 msgid "There are currently no updates available for this add-on."
 msgstr "Trenutno nema dostupnih nadopuna za ovaj dodatak."
 
+#: system/settings.xml
+msgctxt "#21343"
+msgid "Use video tags"
+msgstr "Koristi video oznake"
+
+#: system/settings.xml
+msgctxt "#21344"
+msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr "Ako mp4 ili mkv datoteke imaju oznake, koristi ih za metapodatke videoteke"
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
@@ -13136,6 +13211,10 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr "Reproduciraj GUI zvukove prilikom reprodukcije medija"
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr "Minijature"
@@ -14913,6 +14992,16 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "Želite li odabrati ovaj jezik?"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
+
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -14960,7 +15049,7 @@ msgstr "Dodatak onemogućen"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24142"
 msgid "The dependency on {0:s} version {1:s} could not be satisfied."
-msgstr "Zavisnosti {0:s} inačice {1:s} se ne mogu udovoljiti."
+msgstr "Zavisnost {0:s} inačice {1:s} se ne može udovoljiti."
 
 #. Installing the addon from zip file located at <path to zip file> failed due
 #. to an invalid structure.
@@ -16277,7 +16366,7 @@ msgctxt "#34401"
 msgid ""
 "Failed to initialize video filters / scalers, falling back to bilinear "
 "scaling"
-msgstr "Neuspješno pokretanje video filtera/skalirnja, vraćanje natrag na bilinearno skaliranje"
+msgstr "Neuspješno pokretanje video filtera/promjena razlučivosti, vraćanje natrag na bilinearnu promjenu razlučivosti"
 
 #: xbmc/cores/audioengine/sinks/aesinknull.cpp
 msgctxt "#34402"
@@ -16542,6 +16631,24 @@ msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
 msgstr "Uparite svoje upravljačke uređaje s raznim ulaznim uređajima drugih igračih sustava."
+
+#. Label for buttons that appear on a racing wheel for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35071"
+msgid "Racing wheel"
+msgstr ""
+
+#. Label for paddle buttons that appear on a racing wheel for games. Used in
+#. the controller mapping dialog.
+msgctxt "#35072"
+msgid "Paddles"
+msgstr ""
+
+#. Label for buttons that appear on a joystick for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35073"
+msgid "Joysticks"
+msgstr ""
 
 #. Label for buttons that appear on the face of the controller. Used in the
 #. controller mapping dialog.
@@ -16820,6 +16927,29 @@ msgstr "Sve tipke"
 msgctxt "#35167"
 msgid "Single keys"
 msgstr "Pojedine tipke"
+
+#. Name of the button that prompts you to select a key on the keyboard. Used
+#. in the controller mapping dialog.
+msgctxt "#35168"
+msgid "Select key"
+msgstr "Odaberi tipku"
+
+#. Keyboard prompt without a timeout. Used in the controller mapping dialog.
+msgctxt "#35169"
+msgid "Press a key"
+msgstr "Pritisni tipku"
+
+#. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
+#. controller mapping dialog.
+msgctxt "#35170"
+msgid "Press a key ({1:d})"
+msgstr "Pritisni tipku ({1:d})"
+
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
+msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -17289,6 +17419,21 @@ msgstr "Pauziraj reprodukciju"
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
 msgstr "Prisili AV prijemnik da se probudi kada se Kodi aktivira"
+
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17811,6 +17956,15 @@ msgid ""
 "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr "Odaberi razinu zumiranja kojom će  4:3 video snimke biti prikazane na širokim zaslonima."
 
+#. Description of setting with label #13430 "Allow hardware acceleration -
+#. PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
+
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
 msgctxt "#36173"
@@ -18086,6 +18240,16 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "Otvorite Upravitelja grupa, koji vam dopušta promjenu grupa i njihovih programa."
+
+#: system/settings/settings.xml
+msgctxt "#36214"
+msgid ""
+"Preselect the playing channel in windows and dialogs containing channel "
+"lists. If enabled and there is a playing channel, the playing channel will "
+"be selected when opening a window or dialog containing a channel list. If "
+"disabled, the channel previously selected in a window or dialog will be "
+"selected when opening a window containing a channel list. "
+msgstr "Predodabir reproduciranog programa u prozorima i dijalozima sadrži popis programa. Ako je omogućeno i reproducira se program, reproducirani program će se odabrati kada se otvara prozor ili dijalog sadrži popis programa. Ako je onemogućeno, program prije odabran u prozoru ili dijalogu biti će odabran kada otvarajući prozor sadrži popis programa."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -20306,26 +20470,29 @@ msgid ""
 "Windows shares."
 msgstr "Postavi najveću inačicu SMB protokola za komunikaciju pri uspostavljanju povezivanja. SMBv2 ili SMBv1 kompatibilnosti možda je potrebna za starije NAS i Windows dijeljenje."
 
-#. Values for setting with label #36621 "Maximum protocol version" - none
-#. means "no protocol version is forced"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version" - none means "no protocol version is forced"
 #: system/settings/settings.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Nijedno"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36624"
 msgid "SMBv1"
 msgstr "SMBv1"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36625"
 msgid "SMBv2"
 msgstr "SMBv2"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36626"
 msgid "SMBv3"
@@ -20336,6 +20503,44 @@ msgstr "SMBv3"
 msgctxt "#36627"
 msgid "Client"
 msgstr "Klijent"
+
+#. Label of a setting, allow the minimum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36628"
+msgid "Minimum protocol version"
+msgstr "Najmanja inačica protokola"
+
+#. Description of setting with label #36628 "Minimum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36629"
+msgid ""
+"Set the minimum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
+msgstr "Postavi najmanju inačicu SMB protokola za komunikaciju pri uspostavljanju povezivanja. Prisila SMBv2 moglo bi biti zahtijevano da se spriječi korištenje SMBv1 na određenim OS-ovima."
+
+#. Label of a setting, sets additional config required for some proprietary
+#. SMBv1 implementations (mostly routers)
+#: system/settings/settings.xml
+msgctxt "#36630"
+msgid "Use legacy security"
+msgstr "Koristi zastarjelu sigurnost"
+
+#. Description of setting with label #36630 "Use legacy security"
+#: system/settings/settings.xml
+msgctxt "#36631"
+msgid ""
+"Force weak SMBv1 security for compatibility with the USB sharing features on"
+" some WiFi routers and NAS devices."
+msgstr "Postavi slabu SMBv1 sigurnost zbog kompatibilnosti sa značajkama USB dijeljenja na određenim bežičnim usmjernicima i NAS uređajima."
+
+#. Description of setting with label #729 "Enable SSL"
+#: system/settings/settings.xml
+msgctxt "#36899"
+msgid ""
+"Enables SSL encryption in the webserver. Certificate "
+"special://userdata/server.key and Key special://userdata/server.pem must be "
+"created manually"
+msgstr "Omogući SSL šifriranje na web poslužiteljima. Vjerodajnica special://userdata/server.key i ključ special://userdata/server.pem moraju biti stvoreni ručno"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20726,12 +20931,14 @@ msgctxt "#38018"
 msgid "My rating"
 msgstr "Moja ocjena"
 
-#. Used for the viewstate selection
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr "Nema ocjena"
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Postavi moju ocjenu"
@@ -21151,7 +21358,7 @@ msgstr "Uključi stavke koje nisu prikupljene (za stvaranje predloška NFO datot
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
 msgid "Output only artwork, not NFO files"
-msgstr ""
+msgstr "Izlaz samo omot albuma, ne NFO datoteka"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
@@ -21423,12 +21630,12 @@ msgstr "Spol"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39026"
 msgid "Disambiguation"
-msgstr ""
+msgstr "Razlika"
 
 #. Sort name of artist (e.g. Jackson, Michael)
 msgctxt "#39027"
 msgid "Sortname"
-msgstr ""
+msgstr "Naziv razvrstavanja"
 
 #: system/settings/settings.xml
 msgctxt "#39100"
@@ -21454,7 +21661,7 @@ msgstr "Nemoguće podešavanje mrežne lokacije. Zadana je neispravna putanja."
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#39104"
 msgid "View as text"
-msgstr ""
+msgstr "Prikaži kao tekst"
 
 #. audio/video/subtilte flag - FLAG_DEFAULT
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
@@ -21474,7 +21681,7 @@ msgstr "prisilno"
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39107"
 msgid "captions"
-msgstr ""
+msgstr "naslovi"
 
 #. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
@@ -21485,4 +21692,4 @@ msgstr "opis zvučnog zapisa"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39109"
 msgid "Select Program"
-msgstr ""
+msgstr "Odaberi program"

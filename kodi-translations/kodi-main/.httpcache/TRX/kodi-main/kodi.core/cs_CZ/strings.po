@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-01-20 19:26+0000\n"
-"Last-Translator: Trottel <trottel09@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2507,7 +2507,7 @@ msgid "Year"
 msgstr "Rok"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
@@ -3126,6 +3126,11 @@ msgstr "Webový server"
 msgctxt "#728"
 msgid "FTP server"
 msgstr "Server FTP"
+
+#: system/settings/settings.xml
+msgctxt "#729"
+msgid "Enable SSL"
+msgstr "Povolit SSL"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3801,7 +3806,6 @@ msgstr "Zadejte nový popisek"
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr "Vyhledat obrázek"
@@ -5140,7 +5144,7 @@ msgstr "Pravidla pro časovače rádia"
 
 msgctxt "#10800"
 msgid "Fullscreen live TV"
-msgstr "Právě vysílaná televize na celé obrazovce"
+msgstr "Živé vysílání na celou obrazovku"
 
 msgctxt "#10801"
 msgid "Fullscreen radio"
@@ -5164,7 +5168,7 @@ msgstr "Herní ovladače"
 
 msgctxt "#10824"
 msgid "Game video settings"
-msgstr "Nastavení obrazu pro hry"
+msgstr "Nastavení herního videa"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
@@ -5205,7 +5209,7 @@ msgstr "Vizualizace zvuku"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12009"
 msgid "Rebuild index..."
-msgstr "Znovu sestavit rejstřík…"
+msgstr "Znovu sestavit index…"
 
 #: unknown
 msgctxt "#12010"
@@ -6157,7 +6161,7 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Přepsat otáčky ventilátoru"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr "Písma"
@@ -6492,8 +6496,8 @@ msgstr "Nastavení videa"
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
-msgstr "Nastavení zvuku a titulků"
+msgid "Audio settings"
+msgstr ""
 
 msgctxt "#13397"
 msgid "Enable subtitles"
@@ -6634,6 +6638,11 @@ msgstr "Povolit hardwarovou akceleraci - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Povolit hardwarovou akceleraci - VTBDecoder"
+
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6812,11 +6821,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr "Synchronizovat přehrávání k zobrazení"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr "Zvolte obrázek"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -6832,15 +6843,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr "Místní obrázek"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr "Žádný obrázek"
 
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
-msgstr "Přidat obrázek"
+msgid "Add art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6854,6 +6867,23 @@ msgid ""
 " be applied. This avoids the \"chipmonk voices\" that normally result from "
 "speeding up a video"
 msgstr "Když změna rychlosti překročí tento práh, bude použit filtr korekce výšky. Tím se zabrání „šmoulím hlasům“, které za normálních okolností vyplývají ze zrychlení videa"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13519"
+msgid "Embedded art"
+msgstr "Vložený obrázek"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13520"
+msgid "Embedded fanart"
+msgstr "Vložený fanart"
+
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
+#. etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9478,7 +9508,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Poskytovatel"
 
-#. message box text prompting user to switch to nother channel
+#. message box text prompting user to switch to another channel
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -10518,6 +10548,12 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr "Skrýt popisky „Nejsou dostupné žádné informace“"
 
+#. pvr settings "Preselect playing channel in lists" control label
+#: system/settings/settings.xml
+msgctxt "#19269"
+msgid "Preselect playing channel in lists"
+msgstr "Předvybrat přehrávaný kanál v seznamech"
+
 #. Label of the option to switch between a grouped recordings list and a non-
 #. grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -10629,6 +10665,12 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Všechny kanály"
 
+#. Label for epg grid window "go to date" context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19288"
+msgid "Go to date"
+msgstr "Přejít na datum"
+
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10681,17 +10723,17 @@ msgctxt "#19296"
 msgid "No PVR add-on enabled"
 msgstr "Nebyl povolen žádný doplněk PVR"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for vertical channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
-msgid "Vertical"
-msgstr "Svisle"
+msgid "Vertical channels"
+msgstr "Svislé kanály"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
-msgid "Horizontal"
-msgstr "Vodorovně"
+msgid "Horizontal channels"
+msgstr "Vodorovné kanály"
 
 #. generic "expiration" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10699,6 +10741,20 @@ msgstr "Vodorovně"
 msgctxt "#19299"
 msgid "Expires"
 msgstr "Končí platnost"
+
+#. 'Viewtype' label for vertical channel layout without channel group selctor,
+#. used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19300"
+msgid "Vertical channels, no group selector"
+msgstr "Svislé kanály, bez výběru skupiny"
+
+#. 'Viewtype' label for horizontal channel layout without channel group
+#. selctor, used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19301"
+msgid "Horizontal channels, no group selector"
+msgstr "Vodorovné kanály, bez výběru skupiny"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11353,7 +11409,6 @@ msgstr "Vzdálený náhled"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr "Aktuální náhled"
@@ -11367,7 +11422,6 @@ msgstr "Místní náhled"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr "Bez náhledu"
@@ -11378,14 +11432,14 @@ msgid "Choose thumbnail"
 msgstr "Zvolte náhled"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
 msgid "Banner"
 msgstr "Banner"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
@@ -11989,6 +12043,11 @@ msgid "FTP server"
 msgstr "Server FTP"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20174"
+msgid "FTPS server"
+msgstr "Server FTPS"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
 msgstr "Server UPnP"
@@ -12236,8 +12295,13 @@ msgstr "Nelze zapisovat do složky:"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
-msgid "RSS Feed"
-msgstr "Kanál RSS"
+msgid "RSS Feed (HTTP)"
+msgstr "Kanál RSS (HTTP)"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20305"
+msgid "RSS Feed (HTTPS)"
+msgstr "Kanál RSS (HTTPS)"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12885,7 +12949,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr "Přidat do knihovny"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
 msgid "Fanart"
@@ -13082,6 +13147,16 @@ msgctxt "#21342"
 msgid "There are currently no updates available for this add-on."
 msgstr "Pro tento doplněk nejsou aktuálně dostupné žádné aktualizace."
 
+#: system/settings.xml
+msgctxt "#21343"
+msgid "Use video tags"
+msgstr "Použít štítky videa"
+
+#: system/settings.xml
+msgctxt "#21344"
+msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr "Pokud mají soubory mp4 nebo mkv štítky, použít je pro metadata knihovny"
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
@@ -13144,6 +13219,10 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr "Přehrát zvuky grafického rozhraní během přehrávání médií"
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr "Náhled"
@@ -14921,6 +15000,16 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "Chcete přepnout na tento jazyk?"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
+
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16551,6 +16640,24 @@ msgid ""
 "systems."
 msgstr "Spárujte své ovladače s různými vstupními zařízeními různých herních systémů."
 
+#. Label for buttons that appear on a racing wheel for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35071"
+msgid "Racing wheel"
+msgstr "Závodní volant"
+
+#. Label for paddle buttons that appear on a racing wheel for games. Used in
+#. the controller mapping dialog.
+msgctxt "#35072"
+msgid "Paddles"
+msgstr "Pedály"
+
+#. Label for buttons that appear on a joystick for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35073"
+msgid "Joysticks"
+msgstr "Joysticky"
+
 #. Label for buttons that appear on the face of the controller. Used in the
 #. controller mapping dialog.
 msgctxt "#35074"
@@ -16828,6 +16935,29 @@ msgstr "Všechny klávesy"
 msgctxt "#35167"
 msgid "Single keys"
 msgstr "Jednotlivé klávesy"
+
+#. Name of the button that prompts you to select a key on the keyboard. Used
+#. in the controller mapping dialog.
+msgctxt "#35168"
+msgid "Select key"
+msgstr "Vyberte klávesu"
+
+#. Keyboard prompt without a timeout. Used in the controller mapping dialog.
+msgctxt "#35169"
+msgid "Press a key"
+msgstr "Stiskněte klávesu"
+
+#. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
+#. controller mapping dialog.
+msgctxt "#35170"
+msgid "Press a key ({1:d})"
+msgstr "Stiskněte klávesu ({1:d})"
+
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
+msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -17297,6 +17427,21 @@ msgstr "Pozastavit přehrávání"
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
 msgstr "Vynutit probuzení AVR při aktivaci Kodi"
+
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17819,6 +17964,15 @@ msgid ""
 "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr "Vyberte úroveň přiblížení, pomocí které budou videa 4:3 zobrazována na širokoúhlých obrazovkách."
 
+#. Description of setting with label #13430 "Allow hardware acceleration -
+#. PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
+
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
 msgctxt "#36173"
@@ -18094,6 +18248,16 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "Otevřít správce skupin, který umožní změnu skupin a jejich odpovídajících kanálů."
+
+#: system/settings/settings.xml
+msgctxt "#36214"
+msgid ""
+"Preselect the playing channel in windows and dialogs containing channel "
+"lists. If enabled and there is a playing channel, the playing channel will "
+"be selected when opening a window or dialog containing a channel list. If "
+"disabled, the channel previously selected in a window or dialog will be "
+"selected when opening a window containing a channel list. "
+msgstr "Předvyberte přehrávaný kanál v oknech a dialogových oknech obsahujících seznamy kanálů. Pokud je povoleno a existuje přehrávaný kanál, bude při otevření okna nebo dialogového okna obsahujícího seznam kanálů vybrán přehrávaný kanál. Pokud je zakázáno, bude při otevření okna obsahujícího seznam kanálů vybrán kanál, který byl dříve vybrán v okně nebo dialogovém okně."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -20314,26 +20478,29 @@ msgid ""
 "Windows shares."
 msgstr "Nastavte maximální verzi protokolu SMB vyjednanou při vytváření připojení. U starších úložišť NAS nebo sdílení Windows může být vyžadováno vynucení kompatibility SMBv2 nebo SMBv1."
 
-#. Values for setting with label #36621 "Maximum protocol version" - none
-#. means "no protocol version is forced"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version" - none means "no protocol version is forced"
 #: system/settings/settings.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Žádný"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36624"
 msgid "SMBv1"
 msgstr "SMBv1"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36625"
 msgid "SMBv2"
 msgstr "SMBv2"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36626"
 msgid "SMBv3"
@@ -20344,6 +20511,44 @@ msgstr "SMBv3"
 msgctxt "#36627"
 msgid "Client"
 msgstr "Klient"
+
+#. Label of a setting, allow the minimum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36628"
+msgid "Minimum protocol version"
+msgstr "Minimální verze protokolu"
+
+#. Description of setting with label #36628 "Minimum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36629"
+msgid ""
+"Set the minimum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
+msgstr "Nastavte minimální verzi protokolu SMB vyjednanou při vytváření připojení. V některých OS může být vyžadováno vynucení SMBv2 pro zabránění použití SMBv1."
+
+#. Label of a setting, sets additional config required for some proprietary
+#. SMBv1 implementations (mostly routers)
+#: system/settings/settings.xml
+msgctxt "#36630"
+msgid "Use legacy security"
+msgstr "Použít starší zabezpečení"
+
+#. Description of setting with label #36630 "Use legacy security"
+#: system/settings/settings.xml
+msgctxt "#36631"
+msgid ""
+"Force weak SMBv1 security for compatibility with the USB sharing features on"
+" some WiFi routers and NAS devices."
+msgstr "Vynutit slabé zabezpečení SMBv1 pro kompatibilitu s funkcemi sdílení USB v některých směrovačích WiFi a zařízeních NAS."
+
+#. Description of setting with label #729 "Enable SSL"
+#: system/settings/settings.xml
+msgctxt "#36899"
+msgid ""
+"Enables SSL encryption in the webserver. Certificate "
+"special://userdata/server.key and Key special://userdata/server.pem must be "
+"created manually"
+msgstr "Povolí šifrování SSL ve webovém serveru. Certifikát special://userdata/server.key a klíč special://userdata/server.pem musí být vytvořeny ručně"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20734,12 +20939,14 @@ msgctxt "#38018"
 msgid "My rating"
 msgstr "Moje hodnocení"
 
-#. Used for the viewstate selection
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr "Bez hodnocení"
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Nastavit mé hodnocení"

@@ -3,7 +3,7 @@
 # Alwin Hummels <alwin@fam-hummels.nl>, 2016
 # Evelijn Saaltink <evelijnsaaltink@gmail.com>, 2017
 # Kees Lijkendijk <clkndk@gmail.com>, 2016-2017
-# Koos van Klojum, 2016-2017
+# Koos van Klojum, 2016-2018
 # Koos van Klojum, 2015-2016
 # Kristof Vergote <kristofvergote1@gmail.com>, 2016
 # maarten peels <maartenpeels@gmail.com>, 2015
@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-01-07 20:23+0000\n"
-"Last-Translator: M. de Boer <de.boer.melle@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2512,7 +2512,7 @@ msgid "Year"
 msgstr "Jaar"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
@@ -3131,6 +3131,11 @@ msgstr "Webserver"
 msgctxt "#728"
 msgid "FTP server"
 msgstr "FTP-server"
+
+#: system/settings/settings.xml
+msgctxt "#729"
+msgid "Enable SSL"
+msgstr "SSL inschakelen"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3806,7 +3811,6 @@ msgstr "Nieuw label opgeven"
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr "Bladeren naar een afbeelding"
@@ -6162,7 +6166,7 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Snelheidsregeling ventilator"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr "Lettertypes"
@@ -6497,8 +6501,8 @@ msgstr "Videoinstellingen"
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
-msgstr "Geluids- en ondertitelinstellingen"
+msgid "Audio settings"
+msgstr ""
 
 msgctxt "#13397"
 msgid "Enable subtitles"
@@ -6639,6 +6643,11 @@ msgstr "Toestaan hardwareversnelling - CrystalHD"
 msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr "Toestaan hardwareversnelling - VTBDecoder"
+
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6817,11 +6826,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr "Synchroniseer video met beeldschermfrequentie"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr "Kies afbeelding"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -6837,15 +6848,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr "Lokale afbeeldingen"
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr "Geen afbeeldingen"
 
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
-msgstr "Voeg afbeeldingen toe"
+msgid "Add art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6859,6 +6872,23 @@ msgid ""
 " be applied. This avoids the \"chipmonk voices\" that normally result from "
 "speeding up a video"
 msgstr "Wanneer de snelheidsverandering deze drempelwaarde overschrijdt, zal een pitchfilter toegepast worden. Dit voorkomt \"chipmunkstemmen\" die normaliter voortkomen uit het versnellen van een video."
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13519"
+msgid "Embedded art"
+msgstr "Ingesloten art"
+
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#13520"
+msgid "Embedded fanart"
+msgstr "Ingesloten fanart"
+
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
+#. etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9483,7 +9513,7 @@ msgctxt "#19101"
 msgid "Provider"
 msgstr "Provider"
 
-#. message box text prompting user to switch to nother channel
+#. message box text prompting user to switch to another channel
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp
 msgctxt "#19102"
 msgid "Please switch to another channel."
@@ -10523,6 +10553,12 @@ msgctxt "#19268"
 msgid "Hide \"No information available\" labels"
 msgstr "Verberg \"Geen informatie beschikbaar\" labels"
 
+#. pvr settings "Preselect playing channel in lists" control label
+#: system/settings/settings.xml
+msgctxt "#19269"
+msgid "Preselect playing channel in lists"
+msgstr "Voorselecteren van af te spelen kanaal in lijsten"
+
 #. Label of the option to switch between a grouped recordings list and a non-
 #. grouped recordings list in pvr recordings window.
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
@@ -10634,6 +10670,12 @@ msgctxt "#19287"
 msgid "All channels"
 msgstr "Alle kanalen"
 
+#. Label for epg grid window "go to date" context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19288"
+msgid "Go to date"
+msgstr "Ga naar datum"
+
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 msgctxt "#19289"
@@ -10686,17 +10728,17 @@ msgctxt "#19296"
 msgid "No PVR add-on enabled"
 msgstr "Geen PVR add-on geactiveerd"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for vertical channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
-msgid "Vertical"
-msgstr "Verticaal"
+msgid "Vertical channels"
+msgstr "Vertikale kanalen"
 
-#. 'timeline' label used in pvr guide window
+#. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
-msgid "Horizontal"
-msgstr "Horizontaal"
+msgid "Horizontal channels"
+msgstr "Horizontale kanalen"
 
 #. generic "expiration" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10704,6 +10746,20 @@ msgstr "Horizontaal"
 msgctxt "#19299"
 msgid "Expires"
 msgstr "Verloopt"
+
+#. 'Viewtype' label for vertical channel layout without channel group selctor,
+#. used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19300"
+msgid "Vertical channels, no group selector"
+msgstr "Verticale kanalen, geen groepskeuze"
+
+#. 'Viewtype' label for horizontal channel layout without channel group
+#. selctor, used in pvr guide window
+#: addons/skin.estuary/xml/MyPVRGuide.xml
+msgctxt "#19301"
+msgid "Horizontal channels, no group selector"
+msgstr "Horizontale kanalen, geen groepskeuze"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11358,7 +11414,6 @@ msgstr "Internetafbeelding"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr "Huidige afbeelding"
@@ -11372,7 +11427,6 @@ msgstr "Lokale afbeelding"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr "Geen afbeelding"
@@ -11383,14 +11437,14 @@ msgid "Choose thumbnail"
 msgstr "Miniatuur kiezen"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
 msgid "Banner"
 msgstr "Banner"
 
 #. Name of an artwork type
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
 msgid "Poster"
@@ -11994,6 +12048,11 @@ msgid "FTP server"
 msgstr "FTP-server"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20174"
+msgid "FTPS server"
+msgstr "FTPS-server"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
 msgstr "UPnP-server"
@@ -12241,8 +12300,13 @@ msgstr "Kan niet schrijven naar map:"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
-msgid "RSS Feed"
-msgstr "RSS-feed"
+msgid "RSS Feed (HTTP)"
+msgstr "RSS-feed (HTTP)"
+
+#: xbmc/network/GUIDialogNetworkSetup.cpp
+msgctxt "#20305"
+msgid "RSS Feed (HTTPS)"
+msgstr "RSS-feed (HTTPS)"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12890,7 +12954,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr "Voeg toe aan bibliotheek"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
 msgid "Fanart"
@@ -13087,6 +13152,16 @@ msgctxt "#21342"
 msgid "There are currently no updates available for this add-on."
 msgstr "Er zijn geen updates beschikbaar voor deze add-on."
 
+#: system/settings.xml
+msgctxt "#21343"
+msgid "Use video tags"
+msgstr "Gebruik videotags"
+
+#: system/settings.xml
+msgctxt "#21344"
+msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr "Indien MP4- of MKV-bestanden tags bevatten, gebruik deze voor bibliotheekmetadata"
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
@@ -13149,6 +13224,10 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr "Speel GUI-geluiden af tijdens afspelen media"
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr "Miniatuur"
@@ -14926,6 +15005,16 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr "Wilt u overschakelen naar deze taal?"
 
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
+
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
 msgctxt "#24135"
@@ -16556,6 +16645,24 @@ msgid ""
 "systems."
 msgstr "Koppel uw controllers met de verschillende invoerapparaten van verschillende spelsystemen. "
 
+#. Label for buttons that appear on a racing wheel for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35071"
+msgid "Racing wheel"
+msgstr "Racestuur"
+
+#. Label for paddle buttons that appear on a racing wheel for games. Used in
+#. the controller mapping dialog.
+msgctxt "#35072"
+msgid "Paddles"
+msgstr "Flippers"
+
+#. Label for buttons that appear on a joystick for games. Used in the
+#. controller mapping dialog.
+msgctxt "#35073"
+msgid "Joysticks"
+msgstr "Joysticks"
+
 #. Label for buttons that appear on the face of the controller. Used in the
 #. controller mapping dialog.
 msgctxt "#35074"
@@ -16833,6 +16940,29 @@ msgstr "Alle toetsen"
 msgctxt "#35167"
 msgid "Single keys"
 msgstr "Enkelvoudige toetsen"
+
+#. Name of the button that prompts you to select a key on the keyboard. Used
+#. in the controller mapping dialog.
+msgctxt "#35168"
+msgid "Select key"
+msgstr "Kies een toets"
+
+#. Keyboard prompt without a timeout. Used in the controller mapping dialog.
+msgctxt "#35169"
+msgid "Press a key"
+msgstr "Druk op een toets"
+
+#. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
+#. controller mapping dialog.
+msgctxt "#35170"
+msgid "Press a key ({1:d})"
+msgstr "Druk op een toets ({1:d})"
+
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
+msgstr ""
 
 #. This string is an early meme from the late 1990's that made fun of the poor
 #. translation in the 16-bit game Zero Wing from the late 1980's. DO NOT
@@ -17302,6 +17432,21 @@ msgstr "Pauzeer afspelen"
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
 msgstr "Forceer AVR te ontwaken wanneer Kodi wordt geactiveerd."
+
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17824,6 +17969,15 @@ msgid ""
 "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr "Kies het zoomniveau voor 4:3 video's op breedbeeldschermen."
 
+#. Description of setting with label #13430 "Allow hardware acceleration -
+#. PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
+
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
 msgctxt "#36173"
@@ -18099,6 +18253,16 @@ msgid ""
 "Open the group manager, which allows modification of groups and their "
 "respective channels"
 msgstr "Open de groepsbeheerder, die toestaat wijzigingen van groepen en hun respectievelijke kanalen door te voeren."
+
+#: system/settings/settings.xml
+msgctxt "#36214"
+msgid ""
+"Preselect the playing channel in windows and dialogs containing channel "
+"lists. If enabled and there is a playing channel, the playing channel will "
+"be selected when opening a window or dialog containing a channel list. If "
+"disabled, the channel previously selected in a window or dialog will be "
+"selected when opening a window containing a channel list. "
+msgstr "Voorselecteren van het afspelende kanaal in vensters of dialogen die kanaallijsten bevatten. Indien ingeschakeld bij een afspelend kanaal zal het afspelende kanaal gekozen worden wanneer een venster of dialoog met een kanaallijst wordt geopend. Indien uitgeschakeld zal het kanaal, dat eerder in een venster of dialoog was gekozen, opnieuw zijn gekozen wanneer een venster of dialoog wordt geopend."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -20319,26 +20483,29 @@ msgid ""
 "Windows shares."
 msgstr "Stel het hoogste SMB-protocol in als negotiatie bij het maken van connecties. Het forceren van SMBv2- of SMBv1-compatibiliteit kan nodig zijn bij oudere NAS- en Windows-shares."
 
-#. Values for setting with label #36621 "Maximum protocol version" - none
-#. means "no protocol version is forced"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version" - none means "no protocol version is forced"
 #: system/settings/settings.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Geen"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36624"
 msgid "SMBv1"
 msgstr "SMBv1"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36625"
 msgid "SMBv2"
 msgstr "SMBv2"
 
-#. Values for setting with label #36621 "Maximum protocol version"
+#. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
+#. version"
 #: system/settings/settings.xml
 msgctxt "#36626"
 msgid "SMBv3"
@@ -20349,6 +20516,44 @@ msgstr "SMBv3"
 msgctxt "#36627"
 msgid "Client"
 msgstr "Client"
+
+#. Label of a setting, allow the minimum smbclient protocol to be configured
+#: system/settings/settings.xml
+msgctxt "#36628"
+msgid "Minimum protocol version"
+msgstr "Minimale protocolversie"
+
+#. Description of setting with label #36628 "Minimum protocol version"
+#: system/settings/settings.xml
+msgctxt "#36629"
+msgid ""
+"Set the minimum SMB protocol version to negotiate when making connections. "
+"Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
+msgstr "Stel de minimale SMB-protocolversie om verbindingen te maken. Het forceren van SMBv2 is wellicht noodzakelijk om SMBv1-gebruik op sommige systemen te voorkomen."
+
+#. Label of a setting, sets additional config required for some proprietary
+#. SMBv1 implementations (mostly routers)
+#: system/settings/settings.xml
+msgctxt "#36630"
+msgid "Use legacy security"
+msgstr "Gebruik verouderde beveiliging"
+
+#. Description of setting with label #36630 "Use legacy security"
+#: system/settings/settings.xml
+msgctxt "#36631"
+msgid ""
+"Force weak SMBv1 security for compatibility with the USB sharing features on"
+" some WiFi routers and NAS devices."
+msgstr "Gebruik zwakke SMBv1-beveiliging voor compatibiliteit met de USB deelmogelijkheden op sommige WiFi-routers en NAS-apparaten."
+
+#. Description of setting with label #729 "Enable SSL"
+#: system/settings/settings.xml
+msgctxt "#36899"
+msgid ""
+"Enables SSL encryption in the webserver. Certificate "
+"special://userdata/server.key and Key special://userdata/server.pem must be "
+"created manually"
+msgstr "Inschakelen van SSL-encryptie in de webserver. Certificaat special://userdata/server.key and sleutel special://userdata/server.pem dienen handmatig aangemaakt te worden."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20739,12 +20944,14 @@ msgctxt "#38018"
 msgid "My rating"
 msgstr "Mijn score"
 
-#. Used for the viewstate selection
-#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr "Geen score"
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Zet mijn score"
@@ -21436,7 +21643,7 @@ msgstr "Geslacht"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39026"
 msgid "Disambiguation"
-msgstr "ondubbelzinnig"
+msgstr "Ondubbelzinnigheid"
 
 #. Sort name of artist (e.g. Jackson, Michael)
 msgctxt "#39027"
@@ -21493,7 +21700,7 @@ msgstr "Hoofdletters"
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
-msgstr "Audio omschrijving"
+msgstr "Audio-omschrijving"
 
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39109"

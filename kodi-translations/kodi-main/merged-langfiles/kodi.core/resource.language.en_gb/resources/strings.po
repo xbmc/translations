@@ -2589,6 +2589,7 @@ msgstr ""
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
@@ -3955,7 +3956,6 @@ msgstr ""
 
 #: xbmc/dialogs/GUIDialogFavourites.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#1030"
 msgid "Browse for image"
 msgstr ""
@@ -6513,6 +6513,7 @@ msgid "Fan speed override"
 msgstr ""
 
 #: system/settings/settings.xml
+#: xbmc/addons/AddonInfo.cpp
 msgctxt "#13303"
 msgid "Fonts"
 msgstr ""
@@ -6856,7 +6857,7 @@ msgstr ""
 #: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
+msgid "Audio settings"
 msgstr ""
 
 msgctxt "#13397"
@@ -7003,7 +7004,10 @@ msgctxt "#13429"
 msgid "Allow hardware acceleration - VTBDecoder"
 msgstr ""
 
-#empty string with id 13430
+#: system/settings/settings.xml
+msgctxt "#13430"
+msgid "Allow hardware acceleration - PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -7170,11 +7174,13 @@ msgctxt "#13510"
 msgid "Sync playback to display"
 msgstr ""
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13511"
 msgid "Choose art"
 msgstr ""
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13512"
 msgid "Current art"
@@ -7190,14 +7196,17 @@ msgctxt "#13514"
 msgid "Local art"
 msgstr ""
 
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13515"
 msgid "No art"
 msgstr ""
 
+#. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
-msgid "Add art"
+msgid "Add art type"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -7220,7 +7229,13 @@ msgctxt "#13520"
 msgid "Embedded fanart"
 msgstr ""
 
-#empty strings from id 13521 to 13549
+#. Heading for selection of a type of art e.g. "thumb", "poster", "fanart" etc.
+#: xbmc/music/MusicUtils.cpp
+msgctxt "#13521"
+msgid "Choose art type"
+msgstr ""
+
+#empty strings from id 13522 to 13549
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -11803,7 +11818,6 @@ msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
 msgstr ""
@@ -11817,7 +11831,6 @@ msgstr ""
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
 msgstr ""
@@ -11829,6 +11842,7 @@ msgid "Choose thumbnail"
 msgstr ""
 
 #. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_501_Banner.xml
 msgctxt "#20020"
@@ -11836,6 +11850,7 @@ msgid "Banner"
 msgstr ""
 
 #. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: addons/skin.estuary/xml/View_51_Poster.xml
 msgctxt "#20021"
@@ -13396,6 +13411,8 @@ msgctxt "#20444"
 msgid "Add to library"
 msgstr ""
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: addons/skin.estuary/xml/View_502_FanArt.xml
 msgctxt "#20445"
@@ -13668,6 +13685,11 @@ msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
 msgstr ""
 
+#. Name of an artwork type
+#: xbmc/music/MusicUtils.cpp
+#: xbmc/music/dialogs/GUIDialogSongInfo.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: xbmc/dialogs/GUIDialogFileBrowser.h
 msgctxt "#21371"
 msgid "Thumbnail"
 msgstr ""
@@ -15466,7 +15488,15 @@ msgctxt "#24132"
 msgid "Would you like to switch to this language?"
 msgstr ""
 
-#empty strings from id 24133 to 24134
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24133"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24134"
+msgid "Download subtitle..."
+msgstr ""
 
 #. Folder name in addon settings window
 #: xbmc/addons/addon.cpp
@@ -17412,7 +17442,13 @@ msgctxt "#35170"
 msgid "Press a key ({1:d})"
 msgstr ""
 
-#empty strings from id 35171 to 35199
+#. Name of mouse connected to the computer
+#: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
+msgctxt "#35171"
+msgid "Mouse"
+msgstr ""
+
+#empty strings from id 35172 to 35199
 
 #. This string is an early meme from the late 1990's that made fun of the poor translation in the 16-bit game Zero Wing from the late 1980's. DO NOT TRANSLATE!
 #: system/settings/settings.xml
@@ -17879,7 +17915,22 @@ msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
 msgstr ""
 
-#empty strings from id 36047 to 36098
+#: system/peripherals.xml
+msgctxt "#36047"
+msgid "Remote button press delay before repeating (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36048"
+msgid "Remote button press repeat rate (ms)"
+msgstr ""
+
+#: system/peripherals.xml
+msgctxt "#36049"
+msgid "Remote button press release time (ms)"
+msgstr ""
+
+#empty strings from id 36050 to 36098
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -18316,7 +18367,11 @@ msgctxt "#36171"
 msgid "Select the zoom level that 4:3 videos are shown on widescreen displays."
 msgstr ""
 
-#empty string with id 36172
+#. Description of setting with label #13430 "Allow hardware acceleration - PRIME"
+#: system/settings/settings.xml
+msgctxt "#36172"
+msgid "Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel is available."
+msgstr ""
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -20827,12 +20882,16 @@ msgstr ""
 
 #empty strings from id 38019 to 38021
 
-#. Used for the viewstate selection
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38022"
 msgid "No rating"
 msgstr ""
 
+#. Used for the rating selection
+#: xbmc/music/MusicUtils.cpp
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr ""
