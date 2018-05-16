@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-04-17 10:25+0000\n"
-"Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
+"PO-Revision-Date: 2018-05-14 11:41+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -643,7 +643,6 @@ msgctxt "#156"
 msgid "Free"
 msgstr "可用"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: addons/skin.estuary/xml/Includes.xml
 msgctxt "#157"
 msgid "Video"
@@ -765,7 +764,7 @@ msgctxt "#180"
 msgid "Duration"
 msgstr "持續時間"
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#181"
 msgid "Select album"
 msgstr "選擇專輯"
@@ -1111,7 +1110,6 @@ msgid "Language"
 msgstr "語言"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/media/MediaTypes.cpp
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#249"
 msgid "Music"
 msgstr "音樂"
@@ -1185,9 +1183,10 @@ msgctxt "#263"
 msgid "Allow remote control via HTTP"
 msgstr "允許 HTTP 遠端遙控"
 
-#. Label for a context menu entry to start/schedule a recording
+#. Label for a context menu entry / button to start/schedule a recording
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
-#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp xbmc/pvr/PVRContextMenus.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp xbmc/pvr/PVRContextMenus.cpp
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#264"
 msgid "Record"
@@ -1488,7 +1487,7 @@ msgctxt "#330"
 msgid "This may take some time..."
 msgstr "這需要一些時間…"
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#331"
 msgid "Compressing database..."
 msgstr "正在壓縮資料庫…"
@@ -1530,6 +1529,7 @@ msgctxt "#339"
 msgid "Optimized"
 msgstr "最佳化"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#340"
 msgid "Various artists"
 msgstr "多位演出者"
@@ -2244,9 +2244,18 @@ msgctxt "#504"
 msgid "Empty"
 msgstr "空的"
 
+#. label for library update progress bar when scanning media files
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#505"
 msgid "Loading media information from files..."
 msgstr "正在從檔案載入媒體資訊…"
+
+#. label for library update progress bar when checking for new or changed
+#. media files
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+msgctxt "#506"
+msgid "Checking media files..."
+msgstr ""
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -2720,7 +2729,6 @@ msgctxt "#612"
 msgid "Bits/sample"
 msgstr "位元/樣本"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: addons/skin.estuary/xml/MusicVisualisation.xml
 msgctxt "#613"
 msgid "Sample rate"
@@ -3024,7 +3032,7 @@ msgctxt "#683"
 msgid "Verbose logging of [B]audio/video timing information[/B]"
 msgstr "[B]影音時序資訊[/B]的純文字紀錄檔"
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "整理資料庫"
@@ -4934,16 +4942,6 @@ msgid "Subtitle search"
 msgstr "字幕搜尋"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10154"
-msgid "Audio DSP manager"
-msgstr "音效數位處理器管理"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10155"
-msgid "OSD audio DSP settings"
-msgstr "播放工具列中的音效數位處理設定"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10157"
 msgid "OSD CMS settings"
 msgstr "播放工具列中的内容管理設定"
@@ -5480,7 +5478,6 @@ msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "系統設定和檔案管理員"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12376"
@@ -6770,6 +6767,32 @@ msgid ""
 " on Intel hardware."
 msgstr "啟用此選項以使用基於 VC-1 編碼的硬體加速。如果不啟用，則會使用 CPU 來進行運算。Intel 硬體加速常在 VC-1 交錯式處理時出現錯誤。"
 
+#: system/settings/settings.xml
+msgctxt "#13453"
+msgid "Use VP8 VAAPI"
+msgstr ""
+
+#. Description of setting with label #13453 "Use VP8 VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13454"
+msgid ""
+"Enable this option to use hardware acceleration for the VP8 codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13455"
+msgid "Use VP9 VAAPI"
+msgstr ""
+
+#. Description of setting with label #13453 "Use VP9 VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13456"
+msgid ""
+"Enable this option to use hardware acceleration for the VP9 codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
+
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
 msgctxt "#13457"
@@ -6787,6 +6810,19 @@ msgstr "允許硬體加速 - OMXPlayer"
 msgctxt "#13459"
 msgid "Use OMXPlayer for decoding of video files."
 msgstr "使用 OMXPlayer 解碼影片檔案"
+
+#: system/settings/settings.xml
+msgctxt "#13460"
+msgid "Use HEVC VAAPI"
+msgstr ""
+
+#. Description of setting with label #13460 "Use HEVC VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13461"
+msgid ""
+"Enable this option to use hardware acceleration for the HEVC codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7218,12 +7254,6 @@ msgctxt "#14060"
 msgid "Unknown type cache - Internet"
 msgstr "未知類型緩衝區 - 網際網路"
 
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#14061"
-msgid "Auto"
-msgstr "自動"
-
 msgctxt "#14062"
 msgid "Enter username for"
 msgstr "輸入帳號"
@@ -7303,13 +7333,6 @@ msgctxt "#14081"
 msgid "File lists"
 msgstr "檔案列表"
 
-#. Label of button in Settings -> Audio output to clear the audio DSP
-#. database.
-#: system/settings/settings.xml
-msgctxt "#14082"
-msgid "Reset the Audio DSP database..."
-msgstr "重設音頻DSP資料庫"
-
 #: system/settings/settings.xml
 msgctxt "#14083"
 msgid "Use fullscreen window"
@@ -7319,6 +7342,11 @@ msgstr "使用全螢幕視窗"
 msgctxt "#14084"
 msgid "Queue songs on selection"
 msgstr "選中歌曲加入播放清單"
+
+#: system/settings/settings.xml
+msgctxt "#14085"
+msgid "Whitelist"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -7763,11 +7791,6 @@ msgid "Audio Decoder"
 msgstr "音訊解碼器"
 
 #: system/settings/settings.xml
-msgctxt "#14251"
-msgid "Audio DSP"
-msgstr "音效數位訊號處理"
-
-#: system/settings/settings.xml
 msgctxt "#14252"
 msgid "Audio Passthrough"
 msgstr "音訊直通輸出"
@@ -7841,30 +7864,6 @@ msgctxt "#14304"
 msgid "RDS Radio"
 msgstr "RDS 廣播"
 
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15004"
-msgid "Basic"
-msgstr "基本"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15005"
-msgid "Application"
-msgstr "應用程式"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15006"
-msgid "Phone"
-msgstr "電話"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15007"
-msgid "Message"
-msgstr "訊息"
-
 #: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "{0:d} Items failed to export"
@@ -7891,7 +7890,6 @@ msgid "Remove"
 msgstr "移除"
 
 #: system/settings/settings.xml
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15016"
 msgid "Games"
 msgstr "遊戲"
@@ -7899,121 +7897,6 @@ msgstr "遊戲"
 msgctxt "#15019"
 msgid "Add"
 msgstr "新增"
-
-#: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
-#: addons/skin.estuary/xml/Custom_1105_MusicOSDSettings.xml
-msgctxt "#15020"
-msgid "Audio DSP manager"
-msgstr "音效數位處理器管理"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15021"
-msgid "Content type"
-msgstr "內容類型"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15022"
-msgid "Listening mode"
-msgstr "監聽模式"
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSPMode.cpp
-msgctxt "#15023"
-msgid "Master mode"
-msgstr "後製模式"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15024"
-msgid "Pre-process setup..."
-msgstr "預處理設定..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15025"
-msgid "Listening mode setup..."
-msgstr "監聽模式設定..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15026"
-msgid "Speaker / Output setup..."
-msgstr "喇叭 / 輸出設定"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15027"
-msgid "Audio information..."
-msgstr "音樂資訊"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15028"
-msgid "Audio DSP settings - Main"
-msgstr "音效數位處理器設定 - 主要"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15029"
-msgid "Audio DSP settings - Listening mode"
-msgstr "音效數位處理器設定 - 監聽模式"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15030"
-msgid "Audio DSP settings - Speaker / Output"
-msgstr "音效數位處理器設定 - 喇叭 / 輸出"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15031"
-msgid "Audio DSP settings - Audio information"
-msgstr "音效數位處理器設定 - 音樂資訊"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15033"
-msgid "Resampler setup..."
-msgstr "重取樣設定"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15034"
-msgid "Miscellaneous..."
-msgstr "雜項"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15035"
-msgid "Audio DSP settings - Resampler"
-msgstr "音效數位處理器設定 - 重取樣器"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15037"
-msgid "Audio DSP settings - Pre-process"
-msgstr "音效數位處理器設定 - 預處理"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15038"
-msgid "Audio DSP settings - Miscellaneous"
-msgstr "音效數位處理器設定 - 雜項"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15039"
-msgid "Pre-processing setup..."
-msgstr "預處理設定"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15040"
-msgid ""
-"The settings dialogue can only be opened from the OSD menu during playback"
-msgstr "在播放時，設定項的對話框僅能從播放工具列選單中開啟"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15041"
-msgid "Unknown mode name"
-msgstr "未命名的模式"
-
-#: addons/skin.estuary/xml/DialogAudioDSPSettings.xml
-msgctxt "#15042"
-msgid "Content:"
-msgstr "內容："
-
-#. Label for a context menu entry and dialog button to open audio DSP settings
-#. dialog
-#: xbmc/pvr/PVRContextMenus.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
-#: addons/skin.estuary/xml/Custom_1105_MusicOSDSettings.xml
-msgctxt "#15047"
-msgid "Audio DSP settings"
-msgstr "音效數位處理器設定"
 
 #. Name of a list with amount of entries behind on GUI
 msgctxt "#15050"
@@ -8030,162 +7913,14 @@ msgctxt "#15052"
 msgid "Password"
 msgstr "密碼"
 
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15057"
-msgid "Input resampling"
-msgstr "輸入訊號重新取樣中"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15058"
-msgid "Pre-processing"
-msgstr "預處理中"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15059"
-msgid "Master processing"
-msgstr "後製處理中"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15060"
-msgid "Post-processing"
-msgstr "視訊後處理"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15061"
-msgid "Output resampling"
-msgstr "輸出訊號重新取樣中"
-
-#. Header on detailed add-on dsp mode description
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15062"
-msgid "Detailed description"
-msgstr "詳細描述"
-
-#. Fallback string if nothing from addon is present
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15063"
-msgid "No description available"
-msgstr "無可用的描述"
-
-#. DSP manager boolean enable/disable value text
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15064"
-msgid "Apply changes directly"
-msgstr "直接套用修改"
-
-#. Warning if no dsp modes are present
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15065"
-msgid "No audio DSP modes available"
-msgstr "沒有可用的數位音效處理模式"
-
 #. Button to disable all enabled modes on current selected type
 msgctxt "#15066"
 msgid "Clear active modes"
 msgstr "清除啟用中的模式"
 
-#. Close the DSP manager window
 msgctxt "#15067"
 msgid "Close"
 msgstr "關閉"
-
-#. DSP manager dialog context menu entry
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15078"
-msgid "Mode settings"
-msgstr "模式設定"
-
-#. DSP manager yes/no dialog text
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15079"
-msgid ""
-"You have changed some audio DSP settings.\n"
-"Would you like to keep the new settings?"
-msgstr "您已改變某些數位音效處理器的設定。\n要保留新設定嗎？"
-
-#. DSP manager dialog context menu entry
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15080"
-msgid "Change resampler"
-msgstr "切換重取樣器"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15081"
-msgid "Process chain (with CPU usage)"
-msgstr "處理串列(使用CPU運算)"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15082"
-msgid "Resampling to {0:d} Hz"
-msgstr "重取樣至 {0:d} Hz"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15083"
-msgid "Final resampling to {0:d} Hz"
-msgstr "最終重取樣至 {0:d} Hz"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15084"
-msgid "Master process"
-msgstr "後製處理"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15085"
-msgid "Pre-process"
-msgstr "預處理"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15086"
-msgid "Post-process"
-msgstr "後處理"
-
-#. Audio DSP process chain indication - this is in the context of input signal
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-#: system/settings/settings.xml
-msgctxt "#15087"
-msgid "Input"
-msgstr "輸入"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15088"
-msgid "Output"
-msgstr "輸出"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15089"
-msgid "Input signal"
-msgstr "輸入訊號"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15090"
-msgid "Output signal"
-msgstr "輸出訊號"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15091"
-msgid "Positions"
-msgstr "位置"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15092"
-msgid "CPU usage for DSP"
-msgstr "數位音效處理的CPU使用率"
 
 msgctxt "#15100"
 msgid "Library"
@@ -8252,41 +7987,6 @@ msgstr "主題"
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "預設主題"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15113"
-msgid ""
-"Here you can configure pre-processing modes. This processing stage only "
-"change the input data stream."
-msgstr "您可以在這裡設定前置處理的模式，這個步驟僅改變輸入的資料流。"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15114"
-msgid ""
-"Here you can configure an input resampling process. Notice: Only one active "
-"mode is allowed!"
-msgstr "您可以在這裡調整重取樣器的設定。注意：只允許啟用單一模式！"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15115"
-msgid ""
-"Here you can configure master processing modes. Notice: On playback only one"
-" active mode can be selected!"
-msgstr "您可以在這裡設定後製處理的模式。注意：在播放中僅允許啟用單一模式！"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15116"
-msgid ""
-"Here you can configure a output resampling process. Notice: Only one active "
-"mode is allowed!"
-msgstr "您可以在這裡設定輸出重取樣的處理。注意：只允許啟用單一模式！"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15117"
-msgid ""
-"Here you can configure post-processing modes. This processing stage can be "
-"used for equalizing and volume correction..."
-msgstr "您可以在這裡設定後期處理的模式。這個步驟可用來設定等化器及音量的修正..."
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -8376,6 +8076,7 @@ msgctxt "#16010"
 msgid "Enter the profile name"
 msgstr "輸入設定檔名稱"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#16011"
 msgid "Enter the album name"
 msgstr "輸入專輯名稱"
@@ -8443,6 +8144,7 @@ msgctxt "#16024"
 msgid "Cancelling..."
 msgstr "正在取消..."
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#16025"
 msgid "Enter the artist name"
 msgstr "輸入演出者名稱"
@@ -9479,9 +9181,7 @@ msgstr "輸入定時器名稱"
 
 #. generic warning label used at several places
 #: xbmc/addons/AddonSystemSettings.cpp
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
 msgstr "警告!"
@@ -9892,7 +9592,9 @@ msgid ""
 "message."
 msgstr "無法開始錄製動作。詳細資訊請檢視記錄檔。"
 
+#. Label for "switch to channel" button""
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp
 msgctxt "#19165"
 msgid "Switch"
 msgstr "切換"
@@ -10751,6 +10453,15 @@ msgstr "垂直式頻道列表，無群組"
 msgctxt "#19301"
 msgid "Horizontal channels, no group selector"
 msgstr "水平式頻道列表，無群組"
+
+#. text for yes no dialog shown when user selects a future programme in the
+#. guide window and default select action is 'smart select'
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19302"
+msgid ""
+"Do you want to record the selected programme or to switch to the current "
+"programme?"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12184,6 +11895,19 @@ msgctxt "#20223"
 msgid "Artist information folder"
 msgstr "演出者資訊資料夾"
 
+#: system/settings/settings.xml
+msgctxt "#20224"
+msgid "Prefer online album art"
+msgstr ""
+
+#. Description of setting with label #20224 "Prefer online album art"
+#: system/settings/settings.xml
+msgctxt "#20225"
+msgid ""
+"Where no local album cover exists, online art will be used. Where neither is"
+" available, cover images embedded in music files will be used"
+msgstr ""
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -12337,10 +12061,12 @@ msgctxt "#20319"
 msgid "Scanning TV shows using {0:s}"
 msgstr "正在使用{0:s}掃描電視節目"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20320"
 msgid "Scanning artists using {0:s}"
 msgstr "正在使用{0:s}掃描演出者"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20321"
 msgid "Scanning albums using {0:s}"
 msgstr "正在使用{0:s}掃描專輯"
@@ -14063,7 +13789,7 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "選擇演出者"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "演出者資訊"
@@ -14741,12 +14467,6 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "全部附加元件庫"
 
-#. Description on error dialog why not possible
-#: xbmc/addons/GUIDialogAddonInfo.h
-msgctxt "#24088"
-msgid "The DSP add-on is currently in use and can't be modified."
-msgstr "數位音效處理外掛目前使用中，不能修改。"
-
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "重新啟動附加元件"
@@ -15005,28 +14725,6 @@ msgstr "字幕設定"
 msgctxt "#24134"
 msgid "Download subtitle..."
 msgstr "下載字幕..."
-
-#. Folder name in addon settings window
-#: xbmc/addons/addon.cpp
-msgctxt "#24135"
-msgid "Audio DSP"
-msgstr "音效數位訊號處理"
-
-#. To open dsp submenu
-#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
-msgctxt "#24136"
-msgid "Audio DSP..."
-msgstr "音效數位訊號處理..."
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#24137"
-msgid "Not allowed"
-msgstr "不允許"
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#24138"
-msgid "DSP add-on is currently in use and can't be removed."
-msgstr "數位音效處理的附加元件目前使用中，不能移除。"
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -19155,6 +18853,14 @@ msgid ""
 " are blacked out."
 msgstr "在多螢幕環境時，非本軟體顯示範圍的螢幕會變黑。"
 
+#. Description of setting with label #14085 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36356"
+msgid ""
+"Whitelisted modes are allowed to be switched to when changing resolution and"
+" refresh rate"
+msgstr ""
+
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19701,50 +19407,6 @@ msgstr "允許硬體加速 - MMAL"
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "使用MMAL加速器來協同影片撥放器的解碼程序。"
-
-#. Button on settings to opend DSP manager dialog
-#: system/settings/settings.xml
-msgctxt "#36436"
-msgid "Audio DSP manager..."
-msgstr "音效數位訊號處理管理員..."
-
-#. Description of setting with label 36436 "Audio DSP manager..."
-#: system/settings/settings.xml
-msgctxt "#36437"
-msgid ""
-"Allows to configure available modes for different stages in audio processing"
-" and to arrange the steps within the processing chain of each selected mode."
-msgstr "允許設定音效處理過程中每一個階段的可用模式，並安排每個模式中的作業鏈執行順序。"
-
-#. Description of setting with label 36441 "Enable Audio DSP processing"
-#: system/settings/settings.xml
-msgctxt "#36438"
-msgid ""
-"Enables digital signal processing (DSP) of audio channels specified by the "
-"speaker configuration."
-msgstr "針對喇叭設定中所指定的音頻輸出通道啟用數位訊號處理器(DSP)"
-
-#. Description of setting with label 14082 "Reset the Audio DSP database..."
-#: system/settings/settings.xml
-msgctxt "#36439"
-msgid ""
-"All data (add-on settings and audio DSP manager settings) in the audio DSP "
-"database will be erased."
-msgstr "所有在 DSP 資料庫中的資料(附加元件設定及音效處理器設定)都會被消除。"
-
-#. Used in confirm on dialog to erase database
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#36440"
-msgid ""
-"Erasing all DSP add-on and audio DSP manager settings in the audio DSP "
-"database."
-msgstr "正在刪除音效 DSP 資料庫中的附加元件及音效處理器設定。"
-
-#. Settings boolean value name
-#: system/settings/settings.xml
-msgctxt "#36441"
-msgid "Enable audio DSP processing"
-msgstr "啟用音效DSP處理"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302

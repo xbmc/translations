@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-03-12 10:38+0000\n"
+"PO-Revision-Date: 2018-05-14 11:41+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/teamxbmc/kodi-main/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
@@ -641,7 +641,6 @@ msgctxt "#156"
 msgid "Free"
 msgstr "Liberă"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: addons/skin.estuary/xml/Includes.xml
 msgctxt "#157"
 msgid "Video"
@@ -763,7 +762,7 @@ msgctxt "#180"
 msgid "Duration"
 msgstr "Durată"
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#181"
 msgid "Select album"
 msgstr "Selectați albumul"
@@ -1109,7 +1108,6 @@ msgid "Language"
 msgstr "Limbă"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/media/MediaTypes.cpp
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#249"
 msgid "Music"
 msgstr "Muzică"
@@ -1183,9 +1181,10 @@ msgctxt "#263"
 msgid "Allow remote control via HTTP"
 msgstr "Permite controlul de la distanță prin HTTP"
 
-#. Label for a context menu entry to start/schedule a recording
+#. Label for a context menu entry / button to start/schedule a recording
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
-#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp xbmc/pvr/PVRContextMenus.cpp
+#: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
+#: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp xbmc/pvr/PVRContextMenus.cpp
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#264"
 msgid "Record"
@@ -1486,7 +1485,7 @@ msgctxt "#330"
 msgid "This may take some time..."
 msgstr "S-ar putea să dureze ceva timp..."
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#331"
 msgid "Compressing database..."
 msgstr "Se comprimă baza de date..."
@@ -1528,6 +1527,7 @@ msgctxt "#339"
 msgid "Optimized"
 msgstr "Optimizată"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#340"
 msgid "Various artists"
 msgstr "Artiști diferiți"
@@ -2242,9 +2242,18 @@ msgctxt "#504"
 msgid "Empty"
 msgstr "Gol"
 
+#. label for library update progress bar when scanning media files
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#505"
 msgid "Loading media information from files..."
 msgstr "Se încarcă informații media din fișiere..."
+
+#. label for library update progress bar when checking for new or changed
+#. media files
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+msgctxt "#506"
+msgid "Checking media files..."
+msgstr ""
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -2718,7 +2727,6 @@ msgctxt "#612"
 msgid "Bits/sample"
 msgstr "Biți/eșantion"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: addons/skin.estuary/xml/MusicVisualisation.xml
 msgctxt "#613"
 msgid "Sample rate"
@@ -3022,7 +3030,7 @@ msgctxt "#683"
 msgid "Verbose logging of [B]audio/video timing information[/B]"
 msgstr ""
 
-#: xbmc/music/MusicDatabase.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "Se curăță mediateca"
@@ -4932,16 +4940,6 @@ msgid "Subtitle search"
 msgstr "Căutare subtitluri"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10154"
-msgid "Audio DSP manager"
-msgstr "Gestionar PSD audio"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10155"
-msgid "OSD audio DSP settings"
-msgstr ""
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10157"
 msgid "OSD CMS settings"
 msgstr ""
@@ -5478,7 +5476,6 @@ msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Setări și gestionar de fișiere"
 
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12376"
@@ -6768,6 +6765,32 @@ msgid ""
 " on Intel hardware."
 msgstr "Activați această opțiune pentru a folosi accelerarea, oferită de o componentă fizică (hardware), pentru codecurile bazate pe VC-1. Dacă este dezactivată, se va folosi procesorul în loc. În special eșuează VC-1 întrețesut pe componente fizice Intel."
 
+#: system/settings/settings.xml
+msgctxt "#13453"
+msgid "Use VP8 VAAPI"
+msgstr ""
+
+#. Description of setting with label #13453 "Use VP8 VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13454"
+msgid ""
+"Enable this option to use hardware acceleration for the VP8 codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#13455"
+msgid "Use VP9 VAAPI"
+msgstr ""
+
+#. Description of setting with label #13453 "Use VP9 VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13456"
+msgid ""
+"Enable this option to use hardware acceleration for the VP9 codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
+
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
 msgctxt "#13457"
@@ -6785,6 +6808,19 @@ msgstr "Permite accelerare fizică (hardware) -  redatorul OMX"
 msgctxt "#13459"
 msgid "Use OMXPlayer for decoding of video files."
 msgstr "Folosește redatorul OMX pentru decodarea fișierelor video."
+
+#: system/settings/settings.xml
+msgctxt "#13460"
+msgid "Use HEVC VAAPI"
+msgstr ""
+
+#. Description of setting with label #13460 "Use HEVC VAAPI"
+#: system/settings/settings.xml
+msgctxt "#13461"
+msgid ""
+"Enable this option to use hardware acceleration for the HEVC codec. If "
+"disabled the CPU will be used instead."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7216,12 +7252,6 @@ msgctxt "#14060"
 msgid "Unknown type cache - Internet"
 msgstr "Preîncărcare tip necunoscut - Internet"
 
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#14061"
-msgid "Auto"
-msgstr "Automată"
-
 msgctxt "#14062"
 msgid "Enter username for"
 msgstr "Introduceți nume utilizator pentru"
@@ -7301,13 +7331,6 @@ msgctxt "#14081"
 msgid "File lists"
 msgstr "Liste de fișiere"
 
-#. Label of button in Settings -> Audio output to clear the audio DSP
-#. database.
-#: system/settings/settings.xml
-msgctxt "#14082"
-msgid "Reset the Audio DSP database..."
-msgstr "Resetare bază de date DSP audio..."
-
 #: system/settings/settings.xml
 msgctxt "#14083"
 msgid "Use fullscreen window"
@@ -7317,6 +7340,11 @@ msgstr "Folosește o fereastră pe tot ecranul"
 msgctxt "#14084"
 msgid "Queue songs on selection"
 msgstr "La selectare pune cântecele la coadă"
+
+#: system/settings/settings.xml
+msgctxt "#14085"
+msgid "Whitelist"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -7761,11 +7789,6 @@ msgid "Audio Decoder"
 msgstr "Decodor audio"
 
 #: system/settings/settings.xml
-msgctxt "#14251"
-msgid "Audio DSP"
-msgstr "PSD audio"
-
-#: system/settings/settings.xml
 msgctxt "#14252"
 msgid "Audio Passthrough"
 msgstr "Traversare audio"
@@ -7839,30 +7862,6 @@ msgctxt "#14304"
 msgid "RDS Radio"
 msgstr "Radio RDS"
 
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15004"
-msgid "Basic"
-msgstr "De bază"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15005"
-msgid "Application"
-msgstr "Aplicație"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15006"
-msgid "Phone"
-msgstr "Telefon"
-
-#. Name of a class/preset for audio DSP
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15007"
-msgid "Message"
-msgstr "Mesaj"
-
 #: xbmc/music/MusicDatabase.cpp xbmc/video/VideoDatabase.cpp
 msgctxt "#15011"
 msgid "{0:d} Items failed to export"
@@ -7889,7 +7888,6 @@ msgid "Remove"
 msgstr "Elimină"
 
 #: system/settings/settings.xml
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
 msgctxt "#15016"
 msgid "Games"
 msgstr "Jocuri"
@@ -7897,121 +7895,6 @@ msgstr "Jocuri"
 msgctxt "#15019"
 msgid "Add"
 msgstr "Adaugă"
-
-#: addons/skin.estuary/xml/Custom_1106_VideoOSDSettings.xml
-#: addons/skin.estuary/xml/Custom_1105_MusicOSDSettings.xml
-msgctxt "#15020"
-msgid "Audio DSP manager"
-msgstr "Gestionar PSD audio"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15021"
-msgid "Content type"
-msgstr "Tip conținut"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15022"
-msgid "Listening mode"
-msgstr "Mod de ascultare"
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSPMode.cpp
-msgctxt "#15023"
-msgid "Master mode"
-msgstr "Mod principal"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15024"
-msgid "Pre-process setup..."
-msgstr "Configurare pre-procesare..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15025"
-msgid "Listening mode setup..."
-msgstr "Configurare mod de ascultare..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15026"
-msgid "Speaker / Output setup..."
-msgstr "Configurare difuzor / ieșire..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15027"
-msgid "Audio information..."
-msgstr "Informații audio..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15028"
-msgid "Audio DSP settings - Main"
-msgstr "Setări DSP audio - Principale"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15029"
-msgid "Audio DSP settings - Listening mode"
-msgstr "Setări DSP audio - Mod de ascultare"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15030"
-msgid "Audio DSP settings - Speaker / Output"
-msgstr "Setări DSP audio - Difuzor / Ieșire"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15031"
-msgid "Audio DSP settings - Audio information"
-msgstr "Setări DSP audio - Informații audio"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15033"
-msgid "Resampler setup..."
-msgstr "Configurare reeșantionatizator..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15034"
-msgid "Miscellaneous..."
-msgstr "Diverse..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15035"
-msgid "Audio DSP settings - Resampler"
-msgstr "Setări DSP audio - Reeșantionare"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15037"
-msgid "Audio DSP settings - Pre-process"
-msgstr "Setări DSP audio - Pre-procesare"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15038"
-msgid "Audio DSP settings - Miscellaneous"
-msgstr "Setări DSP audio - Diverse"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15039"
-msgid "Pre-processing setup..."
-msgstr "Configurare pre-procesare..."
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15040"
-msgid ""
-"The settings dialogue can only be opened from the OSD menu during playback"
-msgstr "Dialogul setărilor poate fi deschis doar din meniul (OSD) afișat deasupra în timpul redării"
-
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15041"
-msgid "Unknown mode name"
-msgstr "Nume mod necunoscut"
-
-#: addons/skin.estuary/xml/DialogAudioDSPSettings.xml
-msgctxt "#15042"
-msgid "Content:"
-msgstr "Conținut:"
-
-#. Label for a context menu entry and dialog button to open audio DSP settings
-#. dialog
-#: xbmc/pvr/PVRContextMenus.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
-#: addons/skin.estuary/xml/Custom_1105_MusicOSDSettings.xml
-msgctxt "#15047"
-msgid "Audio DSP settings"
-msgstr "Setări DSP audio"
 
 #. Name of a list with amount of entries behind on GUI
 msgctxt "#15050"
@@ -8028,162 +7911,14 @@ msgctxt "#15052"
 msgid "Password"
 msgstr "Parolă"
 
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15057"
-msgid "Input resampling"
-msgstr "Reeșantionare intrare"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15058"
-msgid "Pre-processing"
-msgstr "Pre-procesare"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15059"
-msgid "Master processing"
-msgstr "Procesare principală"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15060"
-msgid "Post-processing"
-msgstr "Post-procesare video"
-
-#. Chain select button name
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15061"
-msgid "Output resampling"
-msgstr "Reeșantionare ieșire"
-
-#. Header on detailed add-on dsp mode description
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15062"
-msgid "Detailed description"
-msgstr "Descriere detaliată"
-
-#. Fallback string if nothing from addon is present
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15063"
-msgid "No description available"
-msgstr "Nicio descriere disponibilă"
-
-#. DSP manager boolean enable/disable value text
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15064"
-msgid "Apply changes directly"
-msgstr "Aplică modificările direct"
-
-#. Warning if no dsp modes are present
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15065"
-msgid "No audio DSP modes available"
-msgstr "Niciun supliment PSD disponibil"
-
 #. Button to disable all enabled modes on current selected type
 msgctxt "#15066"
 msgid "Clear active modes"
 msgstr "Elimină modurile active"
 
-#. Close the DSP manager window
 msgctxt "#15067"
 msgid "Close"
 msgstr "Închide"
-
-#. DSP manager dialog context menu entry
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15078"
-msgid "Mode settings"
-msgstr "Setări mod"
-
-#. DSP manager yes/no dialog text
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15079"
-msgid ""
-"You have changed some audio DSP settings.\n"
-"Would you like to keep the new settings?"
-msgstr "Ați modificat unele setări DSP audio.\nDoriți să păstrați noile setări?"
-
-#. DSP manager dialog context menu entry
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
-msgctxt "#15080"
-msgid "Change resampler"
-msgstr "Schimbare reeșantionatizator"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15081"
-msgid "Process chain (with CPU usage)"
-msgstr "Lanțul de procese (cu utilizarea procesorului)"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15082"
-msgid "Resampling to {0:d} Hz"
-msgstr "Reeșantionare la {0:d} Hz"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15083"
-msgid "Final resampling to {0:d} Hz"
-msgstr "Reeșantionare finală la {0:d} Hz"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15084"
-msgid "Master process"
-msgstr "Proces principal"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15085"
-msgid "Pre-process"
-msgstr "Pre-procesare"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15086"
-msgid "Post-process"
-msgstr "Post-procesare"
-
-#. Audio DSP process chain indication - this is in the context of input signal
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-#: system/settings/settings.xml
-msgctxt "#15087"
-msgid "Input"
-msgstr "Intrare"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15088"
-msgid "Output"
-msgstr "Ieșire"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15089"
-msgid "Input signal"
-msgstr "Semnal de intrare"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15090"
-msgid "Output signal"
-msgstr "Semnal de ieșire"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15091"
-msgid "Positions"
-msgstr "Poziții"
-
-#. Audio DSP process chain indication
-#: xbmc/settings/dialogs/GUIDialogAudioDSPSettings.cpp
-msgctxt "#15092"
-msgid "CPU usage for DSP"
-msgstr "Utilizare procesor pentru PSD"
 
 msgctxt "#15100"
 msgid "Library"
@@ -8250,41 +7985,6 @@ msgstr "Temă"
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "Temă implicită"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15113"
-msgid ""
-"Here you can configure pre-processing modes. This processing stage only "
-"change the input data stream."
-msgstr "Aici puteți configura modurile de pre-procesare. Această etapă a procesării modifică doar fluxul de date de intrare."
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15114"
-msgid ""
-"Here you can configure an input resampling process. Notice: Only one active "
-"mode is allowed!"
-msgstr "Aici puteți configura un proces de reeșantionare a intrării. Atenție: Doar un singur mod activ este permis!"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15115"
-msgid ""
-"Here you can configure master processing modes. Notice: On playback only one"
-" active mode can be selected!"
-msgstr "Aici puteți configura modurile procesării principale. Atenție: La redare doar un singur mod activ poate fi selectat!"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15116"
-msgid ""
-"Here you can configure a output resampling process. Notice: Only one active "
-"mode is allowed!"
-msgstr "Aici puteți configura un proces de reeșantionare a ieșirii. Atenție: Doar un singur mod activ este permis!"
-
-#: addons/skin.estuary/xml/DialogAudioDSPManager.xml
-msgctxt "#15117"
-msgid ""
-"Here you can configure post-processing modes. This processing stage can be "
-"used for equalizing and volume correction..."
-msgstr "Aici puteți configura modurile de post-processing. Această etapă a procesării poate fi folosită pentru egalizarea și corectarea volumului..."
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -8374,6 +8074,7 @@ msgctxt "#16010"
 msgid "Enter the profile name"
 msgstr "Introduceți nume profil"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#16011"
 msgid "Enter the album name"
 msgstr "Introduceți nume album"
@@ -8441,6 +8142,7 @@ msgctxt "#16024"
 msgid "Cancelling..."
 msgstr "Renunțare..."
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#16025"
 msgid "Enter the artist name"
 msgstr "Introduceți nume artist"
@@ -9477,9 +9179,7 @@ msgstr "Introduceți numele cronometrului"
 
 #. generic warning label used at several places
 #: xbmc/addons/AddonSystemSettings.cpp
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
-#: xbmc/settings/dialogs/GUIDialogAudioDSPManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
 msgstr "Atenție!"
@@ -9890,7 +9590,9 @@ msgid ""
 "message."
 msgstr ""
 
+#. Label for "switch to channel" button""
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp
 msgctxt "#19165"
 msgid "Switch"
 msgstr "Schimbă"
@@ -10748,6 +10450,15 @@ msgstr ""
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19301"
 msgid "Horizontal channels, no group selector"
+msgstr ""
+
+#. text for yes no dialog shown when user selects a future programme in the
+#. guide window and default select action is 'smart select'
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19302"
+msgid ""
+"Do you want to record the selected programme or to switch to the current "
+"programme?"
 msgstr ""
 
 #. label for epg genre value
@@ -12182,6 +11893,19 @@ msgctxt "#20223"
 msgid "Artist information folder"
 msgstr ""
 
+#: system/settings/settings.xml
+msgctxt "#20224"
+msgid "Prefer online album art"
+msgstr ""
+
+#. Description of setting with label #20224 "Prefer online album art"
+#: system/settings/settings.xml
+msgctxt "#20225"
+msgid ""
+"Where no local album cover exists, online art will be used. Where neither is"
+" available, cover images embedded in music files will be used"
+msgstr ""
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -12335,10 +12059,12 @@ msgctxt "#20319"
 msgid "Scanning TV shows using {0:s}"
 msgstr "Se scanează filmele seriale folosind {0:s}"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20320"
 msgid "Scanning artists using {0:s}"
 msgstr "Se scanează artiștii folosind {0:s}"
 
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20321"
 msgid "Scanning albums using {0:s}"
 msgstr "Se scanează albumele folosind {0:s}"
@@ -14061,7 +13787,7 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "Selectați artist"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informații artist"
@@ -14739,12 +14465,6 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Toate depozitele"
 
-#. Description on error dialog why not possible
-#: xbmc/addons/GUIDialogAddonInfo.h
-msgctxt "#24088"
-msgid "The DSP add-on is currently in use and can't be modified."
-msgstr "Suplimentul PSD este momentan în folosință și nu poate fi modificat."
-
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Reporniri supliment"
@@ -15003,28 +14723,6 @@ msgstr ""
 msgctxt "#24134"
 msgid "Download subtitle..."
 msgstr ""
-
-#. Folder name in addon settings window
-#: xbmc/addons/addon.cpp
-msgctxt "#24135"
-msgid "Audio DSP"
-msgstr "PSD audio"
-
-#. To open dsp submenu
-#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
-msgctxt "#24136"
-msgid "Audio DSP..."
-msgstr "PSD audio..."
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#24137"
-msgid "Not allowed"
-msgstr "Nepermis"
-
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#24138"
-msgid "DSP add-on is currently in use and can't be removed."
-msgstr "Suplimentul PSD este momentan în folosință și nu poate fi eliminat."
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -19153,6 +18851,14 @@ msgid ""
 " are blacked out."
 msgstr "Într-o configurație cu mai multe ecrane, ecranele pe acare acest program nu este afișat sunt întunecate."
 
+#. Description of setting with label #14085 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36356"
+msgid ""
+"Whitelisted modes are allowed to be switched to when changing resolution and"
+" refresh rate"
+msgstr ""
+
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19699,50 +19405,6 @@ msgstr "Permite accelerare dispozitiv fizic - MMAL"
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "Folosește player-ul video pentru decodarea fișierelor video cu accelerare MMAL."
-
-#. Button on settings to opend DSP manager dialog
-#: system/settings/settings.xml
-msgctxt "#36436"
-msgid "Audio DSP manager..."
-msgstr "gestionar PSD audio..."
-
-#. Description of setting with label 36436 "Audio DSP manager..."
-#: system/settings/settings.xml
-msgctxt "#36437"
-msgid ""
-"Allows to configure available modes for different stages in audio processing"
-" and to arrange the steps within the processing chain of each selected mode."
-msgstr "Vă permite să configurați modurile disponibile pentru etape diferite din procesarea sunetului și să aranjați pașii din lanțul de procesare al fiecărul mod selectat."
-
-#. Description of setting with label 36441 "Enable Audio DSP processing"
-#: system/settings/settings.xml
-msgctxt "#36438"
-msgid ""
-"Enables digital signal processing (DSP) of audio channels specified by the "
-"speaker configuration."
-msgstr "Activează procesarea semnalului digital (PSD) pentru canalele audio specificate de configurația difuzoarelor."
-
-#. Description of setting with label 14082 "Reset the Audio DSP database..."
-#: system/settings/settings.xml
-msgctxt "#36439"
-msgid ""
-"All data (add-on settings and audio DSP manager settings) in the audio DSP "
-"database will be erased."
-msgstr "Toate datele (setările suplimentului și setările administratorului DSP audio) din baza de date DSP audio vor fi șterse."
-
-#. Used in confirm on dialog to erase database
-#: xbmc/cores/AudioEngine/DSPAddons/ActiveAEDSP.cpp
-msgctxt "#36440"
-msgid ""
-"Erasing all DSP add-on and audio DSP manager settings in the audio DSP "
-"database."
-msgstr "Se șterg toate suplimentele DSP și toate setările administratorului DSP din baza de date a DSP audio."
-
-#. Settings boolean value name
-#: system/settings/settings.xml
-msgctxt "#36441"
-msgid "Enable audio DSP processing"
-msgstr "Activează PSD audio"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
