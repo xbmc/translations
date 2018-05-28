@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-16 06:26+0000\n"
+"PO-Revision-Date: 2018-05-23 06:23+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt_LT\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: xbmc/addons/Addon.cpp system/settings/settings.xml
 #: addons/skin.estuary/xml/Includes.xml
@@ -3024,6 +3024,11 @@ msgstr "Išsamus [B]duomenų bazės[/B] komponento žurnalo rašymas"
 msgctxt "#683"
 msgid "Verbose logging of [B]audio/video timing information[/B]"
 msgstr "Išsamus [B]garso/video laikų[/B] žurnalo rašymas"
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#684"
+msgid "Verbose logging of [B]Windowing[/B] component"
+msgstr "Išsamus [B]langų[/B] komponento žurnalo rašymas"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -6863,6 +6868,7 @@ msgctxt "#13513"
 msgid "Remote art"
 msgstr "Nuotolinė iliustracija"
 
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13514"
 msgid "Local art"
@@ -11884,6 +11890,7 @@ msgstr "Ieškoti išorinių subtitrų"
 
 #: system/settings/settings.xml
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20223"
 msgid "Artist information folder"
 msgstr "Atlikėjo informacijos aplankas"
@@ -21352,3 +21359,8 @@ msgstr "garso aprašymas"
 msgctxt "#39109"
 msgid "Select Program"
 msgstr "Pasirinkite programą"
+
+#: xbmc/video/PlayerController.cpp
+msgctxt "#39110"
+msgid "Select Resolution"
+msgstr "Pasirinkti raišką"
