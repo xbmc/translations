@@ -1,22 +1,23 @@
 # Kodi Media Center language file
 # Addon Name: DVBViewer Client
 # Addon id: pvr.dvbviewer
-# Addon Provider: A600, Manuel Mausz
+# Addon Provider: Manuel Mausz
 # Translators:
-# Trottel <trottel09@gmail.com>, 2017
+# Pavel Borecki <pavel.borecki@gmail.com>, 2018
+# Trottel <trottel09@gmail.com>, 2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-14 11:42+0000\n"
+"PO-Revision-Date: 2018-06-29 23:45+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs_CZ\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 msgctxt "Addon Summary"
 msgid "Kodi's frontend for DVBViewer"
@@ -30,14 +31,13 @@ msgstr "Rozhraní služby nahrávání DVBViewer; podporuje streamování živé
 
 msgctxt "Addon Disclaimer"
 msgid ""
-"This is unstable software! The authors are in no way responsible for failed "
-"recordings, incorrect timers, wasted hours, or any other undesirable "
-"effects.."
+"The authors are in no way responsible for failed recordings, incorrect "
+"timers, wasted hours, or any other undesirable effects.."
 msgstr "Tento software není stabilní! Autoři nejsou žádným způsobem zodpovědní za neúspěšná nahrávání, chybné časovače, ztracený čas nebo jakékoliv jiné nežádoucí výsledky..."
 
 msgctxt "#30000"
 msgid "DVBViewer Media Server IP Address"
-msgstr ""
+msgstr "IP adresa mediálního serveru DVBVieweru"
 
 msgctxt "#30001"
 msgid "Webinterface Port"
@@ -97,7 +97,7 @@ msgstr "Povolit režim nízkého výkonu (zakáže loga a náhledy)"
 
 msgctxt "#30041"
 msgid "Custom Live TV timeout (0 to use default)"
-msgstr ""
+msgstr "Vlastní časový limit živého vysílání (0 pro použití výchozího)"
 
 msgctxt "#30050"
 msgid "Group recordings"
@@ -109,7 +109,7 @@ msgstr "zakázáno"
 
 msgctxt "#30052"
 msgid "by recording directory"
-msgstr "podle adresáře nahrávky"
+msgstr "podle složky nahrávky"
 
 msgctxt "#30053"
 msgid "by recording date"
@@ -177,15 +177,15 @@ msgstr "Parametry převodu URL"
 
 msgctxt "#30080"
 msgid "Enable EDL support"
-msgstr ""
+msgstr "Povolit podporu EDL"
 
 msgctxt "#30081"
 msgid "Start time padding"
-msgstr ""
+msgstr "Odsazení času začátku"
 
 msgctxt "#30082"
 msgid "Stop time padding"
-msgstr ""
+msgstr "Odsazení času zastavení"
 
 msgctxt "#30100"
 msgid "General"
@@ -205,7 +205,7 @@ msgstr "Živé vysílání"
 
 msgctxt "#30110"
 msgid "Wake-on-LAN"
-msgstr ""
+msgstr "Probuzení po síti"
 
 msgctxt "#30111"
 msgid "Favourites"
@@ -217,11 +217,11 @@ msgstr "Časový posun"
 
 msgctxt "#30113"
 msgid "Edit Decision List"
-msgstr ""
+msgstr "Upravit seznam rozhodnutí"
 
 msgctxt "#30114"
 msgid "Transcoding"
-msgstr ""
+msgstr "Překódování"
 
 msgctxt "#30400"
 msgid "Default"
@@ -251,13 +251,33 @@ msgctxt "#30410"
 msgid "Automatic"
 msgstr "Automatické"
 
+msgctxt "#30420"
+msgid "One time (Scheduled by guide-based timer rule)"
+msgstr ""
+
+msgctxt "#30430"
+msgid "Disabled"
+msgstr "Zakázáno"
+
+msgctxt "#30431"
+msgid "Record if EPG title differs"
+msgstr ""
+
+msgctxt "#30432"
+msgid "Record if EPG subtitle differs"
+msgstr ""
+
+msgctxt "#30433"
+msgid "Record if EPG title and subtitle differs"
+msgstr ""
+
 msgctxt "#30500"
 msgid "Unable to connect to the DVBViewer Media Server"
-msgstr ""
+msgstr "Nelze se spojit s mediálním serverem DBVieweru"
 
 msgctxt "#30501"
 msgid "DVBViewer Media Server version %s or higher required"
-msgstr ""
+msgstr "Je vyžadován mediální server DVBVieweru verze %s nebo vyšší"
 
 msgctxt "#30502"
 msgid "Unable to parse channel list"
@@ -265,19 +285,19 @@ msgstr "Nelze analyzovat seznam kanálů"
 
 msgctxt "#30503"
 msgid "Check Kodi log for more information"
-msgstr "Více informací najdete v protokolu Kodi"
+msgstr "Více informací najdete v záznamu událostí (log) v Kodi"
 
 msgctxt "#30504"
 msgid "Unable to open local favourites.xml"
-msgstr "Nelze otevřít místní favourites.xml"
+msgstr "Nedaří se otevřít místní favourites.xml"
 
 msgctxt "#30505"
 msgid "Unable to parse favourites list"
-msgstr "Nelze analyzovat seznam oblíbených"
+msgstr "Nedaří se analyzovat seznam oblíbených"
 
 msgctxt "#30506"
 msgid "Unable to parse timer list"
-msgstr "Nelze analyzovat seznam časovačů"
+msgstr "Nedaří se analyzovat seznam časovačů"
 
 msgctxt "#30507"
 msgid "Please reset the EPG database and restart Kodi afterwards"
@@ -293,12 +313,20 @@ msgstr "Oblíbené jsou povoleny, ale nejsou definovány"
 
 msgctxt "#30510"
 msgid "The time period cannot span more than 24 hours"
-msgstr ""
+msgstr "Časové období nemůže překlenout více než 24 hodin"
 
 msgctxt "#30511"
 msgid "EDL support requires DVBViewer Media Server %s or higher"
-msgstr ""
+msgstr "Podpora EDL vyžaduje mediální server DVBVieweru %s nebo vyšší"
 
 msgctxt "#30512"
 msgid "PVR is running with guest permissions"
+msgstr "PVR je spuštěno s oprávněním hosta"
+
+msgctxt "#30513"
+msgid "Search phrase cannot be empty"
+msgstr ""
+
+msgctxt "#30514"
+msgid "Timeshift buffer path does not exist"
 msgstr ""

@@ -34,8 +34,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-26 15:36+0000\n"
-"Last-Translator: Stefan Grossmann <stefangrossmann@freenet.de>\n"
+"PO-Revision-Date: 2018-06-29 23:45+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1393,10 +1393,19 @@ msgctxt "#306"
 msgid "Non-interleaved"
 msgstr "Nicht-interleaved"
 
-#: xbmc/LangInfo.cpp
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "default" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#307"
+msgid "Media default"
+msgstr "Medien-Standard"
+
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "original" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#308"
-msgid "Original stream's language"
-msgstr "Ursprüngliche Sprache des Streams"
+msgid "Original language"
+msgstr "Originalsprache"
 
 #: xbmc/LangInfo.cpp
 msgctxt "#309"
@@ -2274,7 +2283,7 @@ msgstr "Metainformationen werden geladen..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Mediendateien werden geprüft"
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -3054,6 +3063,16 @@ msgstr "Ausführliche Protokollierung von [B]Audio/Video Timing-Informationen[/B
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
+msgstr "Ausführliche Protokollierung der [B]Windowing[/B]-Komponente"
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#685"
+msgid "Verbose logging of [B]PVR[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#686"
+msgid "Verbose logging of [B]EPG[/B] component"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3221,7 +3240,7 @@ msgctxt "#743"
 msgid "Yellow"
 msgstr "Gelb"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: system/library/music/files.xml xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#744"
 msgid "Files"
 msgstr "Dateien"
@@ -4870,6 +4889,12 @@ msgctxt "#10126"
 msgid "File browser"
 msgstr "Dateibrowser"
 
+#. Audio Channel count
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#10127"
+msgid "channels"
+msgstr ""
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
 msgid "Network setup"
@@ -4969,6 +4994,11 @@ msgstr "Untertitel-Suche"
 msgctxt "#10157"
 msgid "OSD CMS settings"
 msgstr "CMS Einstellungs-OSD"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10159"
+msgid "Subtitle OSD settings"
+msgstr ""
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -6004,6 +6034,7 @@ msgstr "Zuletzt geladenes Profil:"
 #: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#13205"
 msgid "Unknown"
 msgstr "Unbekannt"
@@ -6848,6 +6879,31 @@ msgid ""
 "disabled the CPU will be used instead."
 msgstr "Diese Option aktivieren, um die Hardwarebeschleunigung für den HEVC-Codec zu verwenden. Wenn deaktiviert, wird stattdessen die CPU verwendet. "
 
+#. Option for setting the PRIME render method
+#: system/settings/settings.xml
+msgctxt "#13462"
+msgid "PRIME Render Method"
+msgstr ""
+
+#. Description of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13463"
+msgid ""
+"This option switches between direct-to-plane and EGL rendering methods."
+msgstr ""
+
+#. String for options 1 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13464"
+msgid "Direct To Plane"
+msgstr ""
+
+#. String for options 2 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13465"
+msgid "EGL"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#13505"
 msgid "Resample quality"
@@ -7371,7 +7427,7 @@ msgstr "Titel bei Auswahl in Wiedergabeliste einreihen"
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "Erlaubte Auflösungen"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -10486,7 +10542,7 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
-msgstr "Möchtest Du die selektierte Sendung aufnehmen oder zu dem Sender wechseln?"
+msgstr "Die selektierte Sendung aufnehmen oder zum Sender wechseln?"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11032,7 +11088,7 @@ msgstr "Ausschalten bestätigen"
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#19686"
 msgid "Channel guide"
-msgstr "Guide"
+msgstr "Programm-Guide"
 
 #: Label for context menu entries, dialog heading, button to start playing a
 #: recording xbmc/pvr/PVRContextMenus.cpp xbmc/pvr/PVRGUIActions.cpp
@@ -11924,7 +11980,7 @@ msgstr "Ordner für Interpreten-Infos"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "Online Album-Grafik bevorzugen"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -11932,7 +11988,7 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr ""
+msgstr "Wenn kein lokales Album-Cover existiert, wird eine online Grafik benutzt. Wenn weder lokale noch online Grafiken verfügbar sind, werden Bilder, die in den Musikdateien eingebettet sind, verwendet."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12193,7 +12249,7 @@ msgstr "Alle Elemente innerhalb dieses Pfades aus der Bibliothek entfernen?"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Filme"
@@ -12202,7 +12258,7 @@ msgstr "Filme"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Serien"
@@ -12290,7 +12346,7 @@ msgstr "Episode"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/View_51_Poster.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Episoden"
@@ -12431,6 +12487,7 @@ msgstr "Studios"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/view/GUIViewState.cpp
 msgctxt "#20389"
 msgid "Music videos"
 msgstr "Musikvideos"
@@ -12904,6 +12961,12 @@ msgstr "Video-Tags verwenden"
 msgctxt "#21344"
 msgid "If mp4 or mkv files have tags, use this for library metadata"
 msgstr "Wenn MP4- oder MKV-Dateien Video-Tags enthalten, diese für Bibliotheks-Metadaten verwenden"
+
+#. Used in AutoPlayNextItem dialogs for not categorized listItem directories
+#: xbmc/view/GUIViewState.cpp
+msgctxt "#21345"
+msgid "Uncategorized"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#21358"
@@ -15984,7 +16047,7 @@ msgctxt "#34113"
 msgid ""
 "To keep certain AVRs powered we send an inaudible random noise signal. You "
 "can disable this setting if you are using headphone or analog output."
-msgstr "Ein unhörbares Signal senden, um bestimmte AV-Receiver am selbständigen Ausschalten zu hindern. Diese Einstellung kann abgeschaltet werden, wenn Kophhörer oder ein analoger Tonausgang beutzt werden."
+msgstr "Ein unhörbares Signal senden, um bestimmte AV-Receiver am selbständigen Ausschalten zu hindern. Diese Einstellung kann abgeschaltet werden, wenn Kophhörer oder ein analoger Tonausgang benutzt werden."
 
 #: system/settings/settings.xml
 msgctxt "#34120"
@@ -16841,6 +16904,50 @@ msgctxt "#35225"
 msgid "Video filter"
 msgstr "Videofilter"
 
+#. Label of button in the in-game menu for advanced settings
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35226"
+msgid "Advanced settings"
+msgstr "Erweitert"
+
+#. Label of button in the in-game menu for changing the video rotation
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35227"
+msgid "Rotation"
+msgstr ""
+
+#. Label of the thumbnail for when the video is not rotated and is displayed
+#. normally
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35228"
+msgid "0°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the right
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35229"
+msgid "90°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated upside down
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35230"
+msgid "180°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the left
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35231"
+msgid "270°"
+msgstr ""
+
+#. Label of thumbnail in the in-game menu for stretching the video to
+#. fullscreen
+#: xbmc/games/dialogs/osd/DialogGameViewMode.h
+msgctxt "#35232"
+msgid "Fullscreen"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17534,8 +17641,10 @@ msgstr "Kategorie mit Einstellungen für die Videowiedergabe."
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
 msgctxt "#36152"
-msgid "Enable automatic playback of the next file in the list."
-msgstr "Aktiviert die automatische Wiedergabe der nächsten Datei in Datei-Listen."
+msgid ""
+"Enable automatic playback of the next file in the list for selected playlist"
+" types."
+msgstr ""
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -18885,7 +18994,7 @@ msgctxt "#36356"
 msgid ""
 "Whitelisted modes are allowed to be switched to when changing resolution and"
 " refresh rate"
-msgstr ""
+msgstr "Modi, die benutzt werden dürfen beim Umschalten der Bildschirmauflösung und Bildwiederholrate."
 
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
@@ -19756,6 +19865,30 @@ msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr "Definiert die Anzahl an Anzeigepuffern, die vom Grafiktreiber verwendet werden. 2 auswählen, wenn der Treiber double buffering verwendet, 3, falls er triple buffering benutzt."
+
+#. label of a setting, allowing to specify tonemap method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36553"
+msgid "Tone mapping"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36554"
+msgid "off"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36555"
+msgid "Reinhard"
+msgstr ""
+
+#. label of a setting, allowing to specify tone mapping parameter
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36556"
+msgid "Tone mapping parameter"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20697,6 +20830,7 @@ msgstr "Blickwinkel"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#38033"
 msgid "Role"
 msgstr "Rolle"
@@ -21329,6 +21463,21 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr "Sortiername"
 
+#. Media source, a filter and smart playlist rule option
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39030"
+msgid "Source"
+msgstr "Quelle"
+
+#. Node title, plural of #39030
+#: system/library/music/files.xml
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+msgctxt "#39031"
+msgid "Sources"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -21355,27 +21504,27 @@ msgctxt "#39104"
 msgid "View as text"
 msgstr "Als Text ansehen"
 
-#. audio/video/subtilte flag - FLAG_DEFAULT
+#. audio/video/subtitle flag - FLAG_DEFAULT
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39105"
 msgid "default"
 msgstr "Standard"
 
-#. audio/video/subtilte flag - FLAG_FORCED
+#. audio/video/subtitle flag - FLAG_FORCED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39106"
 msgid "forced"
 msgstr "Erzwungene"
 
-#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "Für Hörgeschädigte"
 
-#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
@@ -21389,4 +21538,11 @@ msgstr "Programm auswählen"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
-msgstr ""
+msgstr "Auflösung wählen"
+
+#. audio flag - FLAG_ORIGINAL
+#. language prefix displayed in audio settings stream selection
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39111"
+msgid "original"
+msgstr "Original"

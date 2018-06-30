@@ -6,7 +6,7 @@
 # Jarda Tesar <intossh@gmail.com>, 2015
 # Josef Hruška <pepa.hruska@gmail.com>, 2015
 # Lukáš Polívka <lukas.polivka@yatun.cz>, 2015-2016
-# Pavel Borecki <pavel.borecki@gmail.com>, 2017
+# Pavel Borecki <pavel.borecki@gmail.com>, 2017-2018
 # Petr Šimáček <petr.simacek@gmail.com>, 2018
 # Roman Ondráček <ondracek.roman@centrum.cz>, 2016
 # Trottel <trottel09@gmail.com>, 2016-2018
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-22 08:11+0000\n"
+"PO-Revision-Date: 2018-06-29 23:45+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -582,7 +582,7 @@ msgstr "Procesor:"
 
 msgctxt "#141"
 msgid "GPU:"
-msgstr "GPU:"
+msgstr "Graf. čip:"
 
 msgctxt "#142"
 msgid "Time:"
@@ -1069,7 +1069,7 @@ msgstr "Zvětšení"
 
 msgctxt "#239"
 msgid "Clear playlist on finish"
-msgstr "Vymazat seznam stop po dokončení"
+msgstr "Po dokončení vymazat seznam stop"
 
 #: system/settings/settings.xml
 msgctxt "#240"
@@ -1126,7 +1126,7 @@ msgstr "Vizualizace"
 
 msgctxt "#251"
 msgid "Select destination directory"
-msgstr "Vyberte cílový adresář"
+msgstr "Vyberte cílovou složku"
 
 #: system/settings/settings.xml
 msgctxt "#252"
@@ -1185,7 +1185,7 @@ msgstr "Výstup skriptů"
 #: system/settings/settings.xml
 msgctxt "#263"
 msgid "Allow remote control via HTTP"
-msgstr "Povolit vzdálené ovládání prostřednictvím HTTP"
+msgstr "Umožnit vzdálené ovládání prostřednictvím HTTP"
 
 #. Label for a context menu entry / button to start/schedule a recording
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
@@ -1260,7 +1260,7 @@ msgstr "Nelze načíst nastavení"
 
 msgctxt "#280"
 msgid "Using default settings"
-msgstr "Používání výchozích nastavení"
+msgstr "Používají se výchozí nastavení"
 
 msgctxt "#281"
 msgid "Please check the XML files"
@@ -1378,10 +1378,19 @@ msgctxt "#306"
 msgid "Non-interleaved"
 msgstr "Neprokládané"
 
-#: xbmc/LangInfo.cpp
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "default" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#307"
+msgid "Media default"
+msgstr "Výchozí média"
+
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "original" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#308"
-msgid "Original stream's language"
-msgstr "Původní jazyk stopy"
+msgid "Original language"
+msgstr "Původní jazyk"
 
 #: xbmc/LangInfo.cpp
 msgctxt "#309"
@@ -1964,7 +1973,7 @@ msgstr "Odebrat film z knihovny"
 
 msgctxt "#433"
 msgid "Would you really like to remove '{0:s}' from library?"
-msgstr "Opravdu chcete odebrat ‚{0:s}‘ z knihovny?"
+msgstr "Opravdu chcete odebrat „{0:s}“ z knihovny?"
 
 #. From <wind dir.> at <speed> <unit>
 msgctxt "#434"
@@ -2259,7 +2268,7 @@ msgstr "Načítání informací o médiích ze souborů..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Zjišťování souborů s médii…"
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -2575,7 +2584,7 @@ msgstr "Studio"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#573"
 msgid "Path"
-msgstr "Cesta"
+msgstr "Popis umístění"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -3039,6 +3048,16 @@ msgstr "Podrobné protokolování [B]informací o časování audia nebo videa[/
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
+msgstr "Podrobné protokolování pro komponentu [B]Windowing[/B]"
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#685"
+msgid "Verbose logging of [B]PVR[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#686"
+msgid "Verbose logging of [B]EPG[/B] component"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3053,7 +3072,7 @@ msgstr "Odebírání starých skladeb z knihovny"
 
 msgctxt "#702"
 msgid "This path has been scanned before"
-msgstr "Tato cesta již byla prohledána"
+msgstr "Toto umístění už bylo prohledáno"
 
 msgctxt "#705"
 msgid "Network"
@@ -3075,7 +3094,7 @@ msgstr "Internetový protokol (IP)"
 
 msgctxt "#712"
 msgid "Invalid port specified. Value must be between 1 and 65535."
-msgstr "Zadán neplatný port. Hodnota musí být mezi 1 a 65535."
+msgstr "Zadán neplatný port. Je třeba, aby hodnota byla mezi 1 a 65535."
 
 msgctxt "#713"
 msgid "HTTP proxy"
@@ -3122,7 +3141,7 @@ msgstr "Uložit a restartovat"
 
 msgctxt "#724"
 msgid "Invalid address specified. Value must be AAA.BBB.CCC.DDD"
-msgstr "Zadána neplatná adresa. Hodnota musí být AAA.BBB.CCC.DDD"
+msgstr "Zadána neplatná adresa. Je třeba, aby hodnota měla podobu AAA.BBB.CCC.DDD"
 
 msgctxt "#725"
 msgid "with numbers between 0 and 255."
@@ -3143,7 +3162,7 @@ msgstr "Server FTP"
 #: system/settings/settings.xml
 msgctxt "#729"
 msgid "Enable SSL"
-msgstr "Povolit SSL"
+msgstr "Zapnout SSL"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3206,7 +3225,7 @@ msgctxt "#743"
 msgid "Yellow"
 msgstr "Žlutá"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: system/library/music/files.xml xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#744"
 msgid "Files"
 msgstr "Soubory"
@@ -3239,7 +3258,7 @@ msgstr "Přidat odkaz na program"
 
 msgctxt "#755"
 msgid "Edit program path"
-msgstr "Upravit cestu k programu"
+msgstr "Upravit popis umístění programu"
 
 msgctxt "#756"
 msgid "Edit program name"
@@ -3416,7 +3435,7 @@ msgstr "Maximální počet klientů"
 #: system/settings/settings.xml
 msgctxt "#798"
 msgid "Internet access"
-msgstr "Přístup k internetu"
+msgstr "Přístup k Internetu"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#799"
@@ -4584,12 +4603,12 @@ msgstr "Systémové informace"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10008"
 msgid "Settings - Test patterns"
-msgstr "Nastavení – Testovací vzory"
+msgstr "Nastavení – testovací obrazce"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
-msgstr "Nastavení - Videa - Kalibrace obrazovky"
+msgstr "Nastavení – Videa – Kalibrace obrazovky"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10016"
@@ -4599,15 +4618,15 @@ msgstr "Nastavení – Systém"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10018"
 msgid "Settings - Service"
-msgstr "Nastavení - Služby"
+msgstr "Nastavení – Služby"
 
 msgctxt "#10021"
 msgid "Settings - TV"
-msgstr "Nastavení - Televize"
+msgstr "Nastavení – Televize"
 
 msgctxt "#10022"
 msgid "Settings - Games"
-msgstr "Nastavení - Hry"
+msgstr "Nastavení – Hry"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMusicVideosOverview.cpp
@@ -4634,7 +4653,7 @@ msgstr "Přihlašovací obrazovka"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10030"
 msgid "Settings - Player"
-msgstr "Nastavení - Přehrávač"
+msgstr "Nastavení – Přehrávač"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10031"
@@ -4855,6 +4874,12 @@ msgctxt "#10126"
 msgid "File browser"
 msgstr "Prohlížeč souborů"
 
+#. Audio Channel count
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#10127"
+msgid "channels"
+msgstr ""
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
 msgid "Network setup"
@@ -4955,13 +4980,18 @@ msgctxt "#10157"
 msgid "OSD CMS settings"
 msgstr "Nastavení OSD pro CMS"
 
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10159"
+msgid "Subtitle OSD settings"
+msgstr ""
+
 msgctxt "#10210"
 msgid "Looking for subtitles..."
 msgstr "Vyhledávání titulků…"
 
 msgctxt "#10211"
 msgid "Looking for or caching subtitles..."
-msgstr "Vyhledávání titulků nebo jejich ukládání do mezipaměti..."
+msgstr "Vyhledávání titulků nebo jejich ukládání do mezipaměti…"
 
 msgctxt "#10212"
 msgid "terminating"
@@ -5006,7 +5036,7 @@ msgstr "Programy"
 
 msgctxt "#10507"
 msgid "Configuration"
-msgstr "Konfigurace"
+msgstr "Nastavení"
 
 msgctxt "#10508"
 msgid "Weather forecast"
@@ -5409,7 +5439,7 @@ msgstr "Zadejte nové heslo"
 #: xbmc/dialogs/GUIDialogNumeric.cpp xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12341"
 msgid "Re-enter new password"
-msgstr "Zadejte znovu nové heslo"
+msgstr "Zopakujte zadání nového hesla"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
 msgctxt "#12342"
@@ -5425,7 +5455,7 @@ msgstr "zbývající pokusy"
 #: xbmc/guilib/GUIKeyboardFactory.cpp
 msgctxt "#12344"
 msgid "Passwords entered did not match."
-msgstr "Zadaná hesla se neshodují."
+msgstr "Zadání hesla se neshodují."
 
 #: xbmc/GUIPassword.cpp
 msgctxt "#12345"
@@ -5989,6 +6019,7 @@ msgstr "Naposledy načtený profil:"
 #: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#13205"
 msgid "Unknown"
 msgstr "Neznámý"
@@ -6719,7 +6750,7 @@ msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead. Some ION hardware has problems with "
 "this being enabled by default."
-msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodeky MPEG-4. Pokud je zakázáno, bude namísto toho použit procesor. Některé chipy ION mají problémy, pokud je toto ve výchozím nastavení povoleno."
+msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodek MPEG-4. Pokud je zakázáno, bude namísto toho použit procesor. Některé chipy ION mají problémy, pokud je toto ve výchozím nastavení povoleno."
 
 #: system/settings/settings.xml
 msgctxt "#13445"
@@ -6760,7 +6791,7 @@ msgctxt "#13450"
 msgid ""
 "Enable this option to use hardware acceleration for the MPEG-4 codec. If "
 "disabled the CPU will be used instead."
-msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodeky MPEG-4. Pokud je zakázáno, bude namísto toho použit procesor."
+msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodek MPEG-4. Pokud je zakázáno, bude namísto toho použit procesor."
 
 #: system/settings/settings.xml
 msgctxt "#13451"
@@ -6779,7 +6810,7 @@ msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodeky za
 #: system/settings/settings.xml
 msgctxt "#13453"
 msgid "Use VP8 VAAPI"
-msgstr ""
+msgstr "Použít VP8 VAAPI"
 
 #. Description of setting with label #13453 "Use VP8 VAAPI"
 #: system/settings/settings.xml
@@ -6787,12 +6818,12 @@ msgctxt "#13454"
 msgid ""
 "Enable this option to use hardware acceleration for the VP8 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodek VP8. Pokud je zakázáno, bude namísto toho použit procesor."
 
 #: system/settings/settings.xml
 msgctxt "#13455"
 msgid "Use VP9 VAAPI"
-msgstr ""
+msgstr "Použít VP9 VAAPI"
 
 #. Description of setting with label #13453 "Use VP9 VAAPI"
 #: system/settings/settings.xml
@@ -6800,7 +6831,7 @@ msgctxt "#13456"
 msgid ""
 "Enable this option to use hardware acceleration for the VP9 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodek VP9. Pokud je zakázáno, bude namísto toho použit procesor."
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6823,7 +6854,7 @@ msgstr "Použít OMXPlayer pro dekódování souborů videa."
 #: system/settings/settings.xml
 msgctxt "#13460"
 msgid "Use HEVC VAAPI"
-msgstr ""
+msgstr "Použít HEVC VAAPI"
 
 #. Description of setting with label #13460 "Use HEVC VAAPI"
 #: system/settings/settings.xml
@@ -6831,6 +6862,31 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
+msgstr "Povolit tuto možnost pro použití hardwarové akcelerace pro kodek HEVC. Pokud je zakázáno, bude namísto toho použit procesor."
+
+#. Option for setting the PRIME render method
+#: system/settings/settings.xml
+msgctxt "#13462"
+msgid "PRIME Render Method"
+msgstr ""
+
+#. Description of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13463"
+msgid ""
+"This option switches between direct-to-plane and EGL rendering methods."
+msgstr ""
+
+#. String for options 1 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13464"
+msgid "Direct To Plane"
+msgstr ""
+
+#. String for options 2 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13465"
+msgid "EGL"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -7356,7 +7412,7 @@ msgstr "Zařadit skladby do fronty při výběru"
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "Seznam povolených"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -10471,7 +10527,7 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
-msgstr ""
+msgstr "Chcete nahrát vybraný pořad nebo přepnout na aktuální pořad?"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11235,7 +11291,7 @@ msgstr "Opustit hlavní režim"
 
 msgctxt "#20047"
 msgid "Create profile '{0:s}'?"
-msgstr "Vytvořit profil ‚{0:s}‘?"
+msgstr "Vytvořit profil „{0:s}“?"
 
 #: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
 msgctxt "#20048"
@@ -11370,7 +11426,7 @@ msgstr "- žádný odkaz -"
 
 msgctxt "#20079"
 msgid "Enable animations"
-msgstr "Povolit animace"
+msgstr "Zapnout animace"
 
 msgctxt "#20080"
 msgid "Disable RSS during music"
@@ -11909,7 +11965,7 @@ msgstr "Složka s informacemi o interpretovi"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "Upřednostňovat online obrázek alba"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -11917,7 +11973,7 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr ""
+msgstr "Když neexistuje žádný místní obal alba, bude použit online obrázek. Pokud není dostupný ani ten, budou použity obrázky obalů vložené do hudebních souborů."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12178,7 +12234,7 @@ msgstr "Chcete odebrat všechny položky v této cestě z vaší knihovny?"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Filmy"
@@ -12187,7 +12243,7 @@ msgstr "Filmy"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Seriály"
@@ -12275,7 +12331,7 @@ msgstr "Epizoda"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/View_51_Poster.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Epizody"
@@ -12416,6 +12472,7 @@ msgstr "Studia"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/view/GUIViewState.cpp
 msgctxt "#20389"
 msgid "Music videos"
 msgstr "Hudební videoklipy"
@@ -12890,10 +12947,16 @@ msgctxt "#21344"
 msgid "If mp4 or mkv files have tags, use this for library metadata"
 msgstr "Pokud mají soubory mp4 nebo mkv štítky, použít je pro metadata knihovny"
 
+#. Used in AutoPlayNextItem dialogs for not categorized listItem directories
+#: xbmc/view/GUIViewState.cpp
+msgctxt "#21345"
+msgid "Uncategorized"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
-msgstr "Povolit podporu pro UPnP"
+msgstr "Povolit podporu UPnP"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21359"
@@ -16826,6 +16889,50 @@ msgctxt "#35225"
 msgid "Video filter"
 msgstr "Filtr videa"
 
+#. Label of button in the in-game menu for advanced settings
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35226"
+msgid "Advanced settings"
+msgstr "Rozšířená nastavení"
+
+#. Label of button in the in-game menu for changing the video rotation
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35227"
+msgid "Rotation"
+msgstr ""
+
+#. Label of the thumbnail for when the video is not rotated and is displayed
+#. normally
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35228"
+msgid "0°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the right
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35229"
+msgid "90°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated upside down
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35230"
+msgid "180°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the left
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35231"
+msgid "270°"
+msgstr ""
+
+#. Label of thumbnail in the in-game menu for stretching the video to
+#. fullscreen
+#: xbmc/games/dialogs/osd/DialogGameViewMode.h
+msgctxt "#35232"
+msgid "Fullscreen"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17519,8 +17626,10 @@ msgstr "Tato kategorie obsahuje nastavení jak zacházet s přehráváním videa
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
 msgctxt "#36152"
-msgid "Enable automatic playback of the next file in the list."
-msgstr "Povolit automatické přehrávání následujícího souboru v seznamu."
+msgid ""
+"Enable automatic playback of the next file in the list for selected playlist"
+" types."
+msgstr ""
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -18870,7 +18979,7 @@ msgctxt "#36356"
 msgid ""
 "Whitelisted modes are allowed to be switched to when changing resolution and"
 " refresh rate"
-msgstr ""
+msgstr "Na režimy seznamů povolených je povoleno přepnout při změně rozlišení a obnovovací frekvence"
 
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
@@ -19573,7 +19682,7 @@ msgstr "Vyberte stereoskopický 3D režim"
 #: guilib/StereoscopicsManager.cpp
 msgctxt "#36531"
 msgid "Select alternate mode..."
-msgstr "Vyberte alternativní režim..."
+msgstr "Vyberte alternativní režim…"
 
 #. option label of a setting/dialog asking for the desired stereoscopic
 #. playback mode
@@ -19741,6 +19850,30 @@ msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr "Definuje počet prezentačních vyrovnávacích pamětí používaných grafickým ovladačem. Vyberte 2, pokud ovladač používá dvojité ukládání do vyrovnávací paměti, nebo 3 pro trojité ukládání do vyrovnávací paměti."
+
+#. label of a setting, allowing to specify tonemap method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36553"
+msgid "Tone mapping"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36554"
+msgid "off"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36555"
+msgid "Reinhard"
+msgstr ""
+
+#. label of a setting, allowing to specify tone mapping parameter
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36556"
+msgid "Tone mapping parameter"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20682,6 +20815,7 @@ msgstr "Úhel"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#38033"
 msgid "Role"
 msgstr "Role"
@@ -21314,6 +21448,21 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr "Název řazení"
 
+#. Media source, a filter and smart playlist rule option
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39030"
+msgid "Source"
+msgstr "Zdroj"
+
+#. Node title, plural of #39030
+#: system/library/music/files.xml
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+msgctxt "#39031"
+msgid "Sources"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -21340,27 +21489,27 @@ msgctxt "#39104"
 msgid "View as text"
 msgstr "Zobrazit jako text"
 
-#. audio/video/subtilte flag - FLAG_DEFAULT
+#. audio/video/subtitle flag - FLAG_DEFAULT
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39105"
 msgid "default"
 msgstr "výchozí"
 
-#. audio/video/subtilte flag - FLAG_FORCED
+#. audio/video/subtitle flag - FLAG_FORCED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39106"
 msgid "forced"
 msgstr "vynucené"
 
-#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "titulky"
 
-#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
@@ -21374,4 +21523,11 @@ msgstr "Vybrat program"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
-msgstr ""
+msgstr "Vyberte rozlišení"
+
+#. audio flag - FLAG_ORIGINAL
+#. language prefix displayed in audio settings stream selection
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39111"
+msgid "original"
+msgstr "původní"

@@ -1,12 +1,13 @@
 # Kodi Media Center language file
 # Translators:
-# GW <Wallglenn@hotmail.com>, 2015-2017
+# GW <Wallglenn@hotmail.com>, 2015-2018
+# Rhoslyn Prys, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-22 08:11+0000\n"
+"PO-Revision-Date: 2018-06-29 23:45+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Welsh (United Kingdom) (http://www.transifex.com/teamxbmc/kodi-main/language/cy_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -193,7 +194,7 @@ msgstr "Ion"
 
 msgctxt "#52"
 msgid "Feb"
-msgstr "Chw"
+msgstr "Chwef"
 
 msgctxt "#53"
 msgid "Mar"
@@ -1365,10 +1366,19 @@ msgctxt "#306"
 msgid "Non-interleaved"
 msgstr "Anrhyngweithiol"
 
-#: xbmc/LangInfo.cpp
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "default" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#307"
+msgid "Media default"
+msgstr "Cyfrwng Rhagosodedig"
+
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "original" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#308"
-msgid "Original stream's language"
-msgstr "Iaith wreiddiol y ffrwd"
+msgid "Original language"
+msgstr "Iaith wreiddiol"
 
 #: xbmc/LangInfo.cpp
 msgctxt "#309"
@@ -2246,7 +2256,7 @@ msgstr "Wrthi'n llwytho gwybodaeth y cyfrwng o'r ffeiliau..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Gwirio'r ffeiliau cyfrwng..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -3026,6 +3036,16 @@ msgstr "Logio Verbose o [B]wybodaeth amseru sain/fideo amser[/B]"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
+msgstr "Logio amleiriog am y gydran [B]Ffenestr[/B]"
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#685"
+msgid "Verbose logging of [B]PVR[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#686"
+msgid "Verbose logging of [B]EPG[/B] component"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3130,7 +3150,7 @@ msgstr "Gweinydd FTP"
 #: system/settings/settings.xml
 msgctxt "#729"
 msgid "Enable SSL"
-msgstr ""
+msgstr "Galluogi SSL"
 
 #: system/settings/settings.xml
 msgctxt "#730"
@@ -3193,7 +3213,7 @@ msgctxt "#743"
 msgid "Yellow"
 msgstr "Melyn"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: system/library/music/files.xml xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#744"
 msgid "Files"
 msgstr "Ffeiliau"
@@ -4820,17 +4840,17 @@ msgstr "OSD Cerddoriaeth"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10122"
 msgid "Visualization preset list"
-msgstr ""
+msgstr "Rhagosodiad y rhestr delweddu"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10123"
 msgid "Video OSD settings"
-msgstr ""
+msgstr "Gosodiadau fideo OSD"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10124"
 msgid "Audio OSD settings"
-msgstr ""
+msgstr "Gosodiadau Sain DSP"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10125"
@@ -4841,6 +4861,12 @@ msgstr "Nodau tudalennau fideo"
 msgctxt "#10126"
 msgid "File browser"
 msgstr "Porwr ffeiliau"
+
+#. Audio Channel count
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#10127"
+msgid "channels"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4915,31 +4941,36 @@ msgstr "Gwybodaeth ychwanegion"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10147"
 msgid "Text viewer"
-msgstr ""
+msgstr "Darllenydd testun"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10150"
 msgid "Peripheral settings"
-msgstr ""
+msgstr "Gosodiadau ymylol"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10151"
 msgid "Extended progress dialog"
-msgstr ""
+msgstr "Deialog cynnydd estynedig"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10152"
 msgid "Media filter"
-msgstr ""
+msgstr "Hidl cyfrwng"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10153"
 msgid "Subtitle search"
-msgstr ""
+msgstr "Chwilio'r isdeitlau"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10157"
 msgid "OSD CMS settings"
+msgstr "Gosodiadau CMS OSD"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10159"
+msgid "Subtitle OSD settings"
 msgstr ""
 
 msgctxt "#10210"
@@ -4965,7 +4996,7 @@ msgstr "Agor ffrwd"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
 msgid "Music playlist"
-msgstr ""
+msgstr "Rhestrau chwarae cerddoriaeth"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10502"
@@ -4975,7 +5006,7 @@ msgstr "Ceddoriaeth"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10503"
 msgid "Music playlist editor"
-msgstr ""
+msgstr "Golygydd rhestrau chwarae cerddoriaeth"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeTop100.cpp
 msgctxt "#10504"
@@ -5038,7 +5069,7 @@ msgstr "Teludestun"
 
 msgctxt "#10600"
 msgid "PVR guide info"
-msgstr ""
+msgstr "Manylion canllaw y recordydd"
 
 msgctxt "#10601"
 msgid "PVR recording info"
@@ -5976,6 +6007,7 @@ msgstr "Proffil diwethaf lwythwyd:"
 #: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#13205"
 msgid "Unknown"
 msgstr "Anhysbys"
@@ -6818,6 +6850,31 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
+msgstr ""
+
+#. Option for setting the PRIME render method
+#: system/settings/settings.xml
+msgctxt "#13462"
+msgid "PRIME Render Method"
+msgstr ""
+
+#. Description of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13463"
+msgid ""
+"This option switches between direct-to-plane and EGL rendering methods."
+msgstr ""
+
+#. String for options 1 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13464"
+msgid "Direct To Plane"
+msgstr ""
+
+#. String for options 2 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13465"
+msgid "EGL"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -10920,7 +10977,7 @@ msgstr ""
 #: xbmc/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
-msgstr ""
+msgstr "Iaith wreiddiol"
 
 #. label for "special characteristics" epg subgenre value
 #: xbmc/epg/Epg.cpp
@@ -12165,7 +12222,7 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Ffilmiau"
@@ -12174,7 +12231,7 @@ msgstr "Ffilmiau"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Rhaglenni teledu"
@@ -12262,7 +12319,7 @@ msgstr "Rhifyn"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/View_51_Poster.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Rhifynnau"
@@ -12403,6 +12460,7 @@ msgstr "Studios"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/view/GUIViewState.cpp
 msgctxt "#20389"
 msgid "Music videos"
 msgstr "Fideos cerddoriaeth"
@@ -12875,6 +12933,12 @@ msgstr ""
 #: system/settings.xml
 msgctxt "#21344"
 msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr ""
+
+#. Used in AutoPlayNextItem dialogs for not categorized listItem directories
+#: xbmc/view/GUIViewState.cpp
+msgctxt "#21345"
+msgid "Uncategorized"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -16813,6 +16877,50 @@ msgctxt "#35225"
 msgid "Video filter"
 msgstr ""
 
+#. Label of button in the in-game menu for advanced settings
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35226"
+msgid "Advanced settings"
+msgstr ""
+
+#. Label of button in the in-game menu for changing the video rotation
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35227"
+msgid "Rotation"
+msgstr ""
+
+#. Label of the thumbnail for when the video is not rotated and is displayed
+#. normally
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35228"
+msgid "0°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the right
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35229"
+msgid "90°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated upside down
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35230"
+msgid "180°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the left
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35231"
+msgid "270°"
+msgstr ""
+
+#. Label of thumbnail in the in-game menu for stretching the video to
+#. fullscreen
+#: xbmc/games/dialogs/osd/DialogGameViewMode.h
+msgctxt "#35232"
+msgid "Fullscreen"
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17506,8 +17614,10 @@ msgstr ""
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
 msgctxt "#36152"
-msgid "Enable automatic playback of the next file in the list."
-msgstr "Galluogi chwarae'r ffeil nesaf ar y rhestr, yn awtomatig."
+msgid ""
+"Enable automatic playback of the next file in the list for selected playlist"
+" types."
+msgstr ""
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -19729,6 +19839,30 @@ msgid ""
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr ""
 
+#. label of a setting, allowing to specify tonemap method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36553"
+msgid "Tone mapping"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36554"
+msgid "off"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36555"
+msgid "Reinhard"
+msgstr ""
+
+#. label of a setting, allowing to specify tone mapping parameter
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36556"
+msgid "Tone mapping parameter"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36560"
 msgid "Colour management"
@@ -20669,6 +20803,7 @@ msgstr ""
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#38033"
 msgid "Role"
 msgstr ""
@@ -21301,6 +21436,21 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr ""
 
+#. Media source, a filter and smart playlist rule option
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39030"
+msgid "Source"
+msgstr "Ffynhonnell"
+
+#. Node title, plural of #39030
+#: system/library/music/files.xml
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+msgctxt "#39031"
+msgid "Sources"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -21327,27 +21477,27 @@ msgctxt "#39104"
 msgid "View as text"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_DEFAULT
+#. audio/video/subtitle flag - FLAG_DEFAULT
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39105"
 msgid "default"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_FORCED
+#. audio/video/subtitle flag - FLAG_FORCED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39106"
 msgid "forced"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
@@ -21361,4 +21511,11 @@ msgstr ""
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
+msgstr ""
+
+#. audio flag - FLAG_ORIGINAL
+#. language prefix displayed in audio settings stream selection
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39111"
+msgid "original"
 msgstr ""

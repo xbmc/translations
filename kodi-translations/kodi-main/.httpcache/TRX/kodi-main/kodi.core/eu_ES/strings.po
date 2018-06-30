@@ -4,7 +4,7 @@
 # Aritz Jorge Sánchez <aritz.jorge@protonmail.com>, 2015
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2015,2017
 # Beñat Agirre <agirrebenat@gmail.com>, 2017
-# David García-Abad <dgarciabad@gmail.com>, 2017
+# David García-Abad <dgarciabad@gmail.com>, 2017-2018
 # Ibai Gurrutxaga <ibai.gurrutxaga@gmail.com>, 2016
 # Ibai Oihanguren Sala <ibai@oihanguren.com>, 2015
 # Iñigo Zendegi Urzelai, 2017
@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-05-24 16:34+0000\n"
-"Last-Translator: Osoitz <oelkoro@gmail.com>\n"
+"PO-Revision-Date: 2018-06-29 23:45+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Basque (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/eu_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1376,9 +1376,18 @@ msgctxt "#306"
 msgid "Non-interleaved"
 msgstr "Tartekatu gabe"
 
-#: xbmc/LangInfo.cpp
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "default" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
+msgctxt "#307"
+msgid "Media default"
+msgstr "Media lehenetsia"
+
+#. Select option for the setting "Preferred audio language".
+#. Will prefer the stream marked as "original" if available.
+#: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#308"
-msgid "Original stream's language"
+msgid "Original language"
 msgstr "Jatorrizko hizkuntza"
 
 #: xbmc/LangInfo.cpp
@@ -2257,7 +2266,7 @@ msgstr "Fitxategietatik multimedia-informazioa kargatzen..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Media fitxategiak egiaztatzen..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -3027,7 +3036,7 @@ msgstr "Erregistratze hanpatua [B]Webserver[/B] osagaiarentzat"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#682"
 msgid "Verbose logging for the [B]Database[/B] component"
-msgstr ""
+msgstr "Erregistratze hanpatua [B]Database[/B] osagaiarentzat"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#683"
@@ -3037,6 +3046,16 @@ msgstr ""
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#685"
+msgid "Verbose logging of [B]PVR[/B] component"
+msgstr ""
+
+#: xbmc/settings/AdvancedSettings.cpp
+msgctxt "#686"
+msgid "Verbose logging of [B]EPG[/B] component"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3204,7 +3223,7 @@ msgctxt "#743"
 msgid "Yellow"
 msgstr "Horia"
 
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: system/library/music/files.xml xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#744"
 msgid "Files"
 msgstr "Fitxategiak"
@@ -4831,7 +4850,7 @@ msgstr "Musika OSD"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10122"
 msgid "Visualization preset list"
-msgstr ""
+msgstr "Bistaratze aurrezarpenen zerrenda"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10123"
@@ -4852,6 +4871,12 @@ msgstr "Bideoaren laster-markak"
 msgctxt "#10126"
 msgid "File browser"
 msgstr "Fitxategi kudeatzailea"
+
+#. Audio Channel count
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#10127"
+msgid "channels"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4951,6 +4976,11 @@ msgstr "Azpitituluak bilatu"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10157"
 msgid "OSD CMS settings"
+msgstr "OSD CMS ezarpenak"
+
+#: xbmc/guilib/WindowIDs.h
+msgctxt "#10159"
+msgid "Subtitle OSD settings"
 msgstr ""
 
 msgctxt "#10210"
@@ -5987,6 +6017,7 @@ msgstr "Azkenengoan kargatutako profila"
 #: xbmc/pvr/dialogs/GUIDialogPVRClientPriorities.cpp xbmc/pvr/PVRGUIInfo.cpp
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/PlayerController.cpp
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#13205"
 msgid "Unknown"
 msgstr "Ezezaguna"
@@ -6642,7 +6673,7 @@ msgstr "Baimendu hardware azelerazioa - VTBDecoder"
 #: system/settings/settings.xml
 msgctxt "#13430"
 msgid "Allow hardware acceleration - PRIME"
-msgstr ""
+msgstr "Onartu hardware azelerazioa - PRIME"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6785,12 +6816,12 @@ msgctxt "#13454"
 msgid ""
 "Enable this option to use hardware acceleration for the VP8 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Gaitu aukera hau VP8 kodekerako hardware azelerazioa erabiltzeko. Desgaituta utziz gero PUZa erabiliko da."
 
 #: system/settings/settings.xml
 msgctxt "#13455"
 msgid "Use VP9 VAAPI"
-msgstr ""
+msgstr "Erabili VP9 VAAPI"
 
 #. Description of setting with label #13453 "Use VP9 VAAPI"
 #: system/settings/settings.xml
@@ -6798,7 +6829,7 @@ msgctxt "#13456"
 msgid ""
 "Enable this option to use hardware acceleration for the VP9 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Gaitu aukera hau VP9 kodekerako hardware azelerazioa erabiltzeko. Desgaituta utziz gero PUZa erabiliko da."
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6821,7 +6852,7 @@ msgstr "Erabili OMXPlayer bideo fitxategiak deskodetzeko."
 #: system/settings/settings.xml
 msgctxt "#13460"
 msgid "Use HEVC VAAPI"
-msgstr ""
+msgstr "Erabili HEVC VAAPI"
 
 #. Description of setting with label #13460 "Use HEVC VAAPI"
 #: system/settings/settings.xml
@@ -6829,6 +6860,31 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
+msgstr "Gaitu aukera hau HEVC kodekerako hardware azelerazioa erabiltzeko. Desgaituta utziz gero PUZa erabiliko da."
+
+#. Option for setting the PRIME render method
+#: system/settings/settings.xml
+msgctxt "#13462"
+msgid "PRIME Render Method"
+msgstr ""
+
+#. Description of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13463"
+msgid ""
+"This option switches between direct-to-plane and EGL rendering methods."
+msgstr ""
+
+#. String for options 1 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13464"
+msgid "Direct To Plane"
+msgstr ""
+
+#. String for options 2 of setting with label #13462 "PRIME Render Method"
+#: system/settings/settings.xml
+msgctxt "#13465"
+msgid "EGL"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -6916,7 +6972,7 @@ msgstr "Txertatutako artea"
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13520"
 msgid "Embedded fanart"
-msgstr ""
+msgstr "Txertatutako fanart"
 
 #. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
 #. etc.
@@ -9324,7 +9380,7 @@ msgstr "Ezin dira PVR funtzioak erabili bilaketak dirauen bitartean."
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19119"
 msgid "On which backend do you want to search?"
-msgstr ""
+msgstr "Zer atzekaldetan nahi duzu bilatu?"
 
 #. label for PVR client number in system information's PVR section
 #: xbmc/windows/GUIWindowSystemInfo.cpp
@@ -9487,7 +9543,7 @@ msgid ""
 "Setting the lifetime of this recording to {0:d} days will immediately expire"
 " the recording, which might result in instant deletion of the recording. "
 "Proceed anyway?"
-msgstr ""
+msgstr "Grabaketa honen iraupena [0:d] egunetara jartzeak grabaketa berehala iragungiaraziko du. Honek grabaketaren berehalako ezabaketa eragin lezake. Jarraitu hala ere?"
 
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
@@ -9598,7 +9654,7 @@ msgctxt "#19164"
 msgid ""
 "Could not start recording. Check the log for more information about this "
 "message."
-msgstr ""
+msgstr "Ezin izan da grabatzen hasi. Egiaztatu erregistroa mezu honi buruzko informazio gehiago lortzeko."
 
 #. Label for "switch to channel" button""
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -9638,7 +9694,7 @@ msgctxt "#19170"
 msgid ""
 "Could not stop recording. Check the log for more information about this "
 "message."
-msgstr ""
+msgstr "Ezin izan da grabaketa gelditu. Egiaztatu erregistroa mezu honi buruzko informazio gehiago lortzeko."
 
 #. pvr settings "start playback full screen" setting label
 #: system/settings/settings.xml
@@ -9715,7 +9771,7 @@ msgstr "Menua / OSD"
 #: system/settings/settings.xml
 msgctxt "#19182"
 msgid "Future days to display"
-msgstr ""
+msgstr "Erakusteko etorkizuneko egunak"
 
 #. Settings -> Interface -> Other -> Startup window value
 #: system/settings/settings.xml
@@ -9761,13 +9817,13 @@ msgstr "Gidako datu guztiak ezabatuko dira. Ziur zaude?"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19189"
 msgid "The PVR backend does not allow to record this event."
-msgstr ""
+msgstr "PVR atzekaldeak ez du ekitaldi hau grabatzea onartzen."
 
 #. generic "play program" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19190"
 msgid "Play programme"
-msgstr ""
+msgstr "Programa erreproduzitu"
 
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#19191"
@@ -10002,7 +10058,7 @@ msgstr "Programazioa ezabatu da."
 #: system/settings/settings.xml
 msgctxt "#19229"
 msgid "Past days to display"
-msgstr ""
+msgstr "Erakusteko iraganeko egunak"
 
 #. label for PVR settings no epg updates during playback control
 #: system/settings/settings.xml
@@ -10220,7 +10276,7 @@ msgctxt "#19263"
 msgid ""
 "Could not update the timer. Check the log for more information about this "
 "message."
-msgstr ""
+msgstr "Ezin izan da tenporizadorea eguneratu. Egiaztatu erregistroa mezu honen gaineko informazio gehiago lortzeko. "
 
 #. label for 'incorrect pin' error dialog header
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10453,14 +10509,14 @@ msgstr "Iraungitzea"
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19300"
 msgid "Vertical channels, no group selector"
-msgstr ""
+msgstr "Kanal bertikalak, ez dago talde hautatzailerik"
 
 #. 'Viewtype' label for horizontal channel layout without channel group
 #. selctor, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19301"
 msgid "Horizontal channels, no group selector"
-msgstr ""
+msgstr "Kanal horizontalak, ez dago talde hautatzailerik"
 
 #. text for yes no dialog shown when user selects a future programme in the
 #. guide window and default select action is 'smart select'
@@ -10469,7 +10525,7 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
-msgstr ""
+msgstr "Hautatutako programa grabatu nahi duzu edo aldatu oraingo programara?"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11180,7 +11236,7 @@ msgstr "Eskualdea"
 #: xbmc/LangInfo.cpp
 msgctxt "#20035"
 msgid "Regional ({0:s})"
-msgstr ""
+msgstr "Erregionala ({0:s})"
 
 #. Used for date/time format settings like "10:00:00 (HH:mm:ss)"
 #: xbmc/LangInfo.cpp
@@ -11902,12 +11958,12 @@ msgstr "Bilatu kanpoko azpitituluak"
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20223"
 msgid "Artist information folder"
-msgstr ""
+msgstr "Artistaren informazio karpeta"
 
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "Hobetsi albumaren lineako informazioa"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -12176,7 +12232,7 @@ msgstr "Zure liburutegitik bide honetako elementu guztiak ezabatu nahi dituzu?"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Filmak"
@@ -12185,7 +12241,7 @@ msgstr "Filmak"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "TB saioak"
@@ -12273,7 +12329,7 @@ msgstr "Atala"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/View_51_Poster.xml
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
 msgctxt "#20360"
 msgid "Episodes"
 msgstr "Atalak"
@@ -12414,6 +12470,7 @@ msgstr "Estudioak"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/view/GUIViewState.cpp
 msgctxt "#20389"
 msgid "Music videos"
 msgstr "Musika bideoak"
@@ -12886,6 +12943,12 @@ msgstr "Erabili bideo-etiketak"
 #: system/settings.xml
 msgctxt "#21344"
 msgid "If mp4 or mkv files have tags, use this for library metadata"
+msgstr "mp4 edo mkv fitxategiek etiketak badauzkate, hau erabili liburutegiaren metadatarako"
+
+#. Used in AutoPlayNextItem dialogs for not categorized listItem directories
+#: xbmc/view/GUIViewState.cpp
+msgctxt "#21345"
+msgid "Uncategorized"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -14811,13 +14874,13 @@ msgstr "Ondorengo gehigarriak bateraezinak dira Kodiren bertsio honekin eta auto
 #: xbmc/Application.cpp
 msgctxt "#24150"
 msgid "Database migration in progress - please wait"
-msgstr ""
+msgstr "Datu-basearen migrazioa egiten ari da - itxaron, mesedez"
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
-msgstr ""
+msgstr "Add-on migrazioa egiten ari da - itxaron, mesedez"
 
 #. Inform about not supported addon if tried to enable
 #: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
@@ -14955,7 +15018,7 @@ msgstr "QWERTY teklatua"
 
 msgctxt "#29802"
 msgid "Passthrough audio in use"
-msgstr ""
+msgstr "Passthrough Audioa erabiltzen"
 
 #. Header text for the BD-J warning dialog
 #: xbmc/settings/DiscSettings.cpp
@@ -14976,7 +15039,7 @@ msgstr ""
 #: xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#29805"
 msgid "This Blu-ray disc (or file) is encrypted and can't be played."
-msgstr ""
+msgstr "Blu-ray disko (edo fitxategi) hau enkriptatuta dago eta ezin ida erreproduzitu"
 
 #. Header string on RDS Radiotext+ Info dialog
 msgctxt "#29900"
@@ -16223,7 +16286,7 @@ msgctxt "#35018"
 msgid ""
 "Controller configuration depends on a disabled add-on. Would you like to "
 "enable it?"
-msgstr ""
+msgstr "Kontroladore honek ezgaituta dagoen add-on bat behar du. Gaitu nahi duzu?"
 
 #. Label of the button to fix the bug where buttons are skipped in the
 #. controller dialog
@@ -16238,7 +16301,7 @@ msgstr "Ez ikusia egin sarrerari"
 #: xbmc/games/controllers/dialogs/GUIDialogAxisDetection.cpp
 msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
-msgstr ""
+msgstr "Sakatu botoi analogiko guztiak orain detektatu ahal izateko:[CR][CR]{0:s}"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -16287,7 +16350,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#35054"
 msgid "Activates controller rumble motors when a notification occurs."
-msgstr ""
+msgstr "Kontroladoreen bibrazio motorrak aktibatzen ditu jakinarazpen bat iristean."
 
 #. Help text for controller window
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
@@ -16341,7 +16404,7 @@ msgctxt "#35064"
 msgid ""
 "Pair your controllers with the various input devices of different game "
 "systems."
-msgstr ""
+msgstr "Parekatu zure kontroladoreak joku sistema desberdinen sarrera gailuekin."
 
 #. Label for buttons that appear on a racing wheel for games. Used in the
 #. controller mapping dialog.
@@ -16401,7 +16464,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#35088"
 msgid "Power off controllers on exit"
-msgstr ""
+msgstr "Itzali kontroladoreak irteterakoan"
 
 #. Description for the setting that enables/disables powering off controllers
 #. on exit
@@ -16551,7 +16614,7 @@ msgid ""
 "This allows the keyboard to emulate up to 8 game controllers. If disabled, "
 "the keyboard can still be used to control emulators like DOSBox which "
 "require a full keyboard."
-msgstr ""
+msgstr "Honek gaitzen du teklatua gehienez 8 joku kontroladore emulatzeko. Desgaituta badago ere, teklatua erabili daiteke DOSBox moduko emuladoreak kontrolateko, berauek teklatu oso bat behar baitute."
 
 #. Setting name for number of keyboard players
 #: system/settings/settings.xml
@@ -16566,7 +16629,7 @@ msgid ""
 "Set the number of players using the keyboard. This is intended for devices "
 "that use keyboard drivers, but you can also see how many people fit around a"
 " keyboard!"
-msgstr ""
+msgstr "Teklatua erabiliko duten jokalari kopurua ezarri. Hau teklatu kontroladoreak erabiltzen duten gailuentzat pentsatuta dago, baina era berean ikus dezakezu zenbat pertsona moldatu daitezkeen teklatu bera erabitzeko!"
 
 #: system/settings/settings.xml
 msgctxt "#35156"
@@ -16710,7 +16773,7 @@ msgstr "Emuladoreak"
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#35208"
 msgid "Standalone games"
-msgstr ""
+msgstr "Bakarrik exekutatu daitezkeen jokuak"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#35209"
@@ -16750,13 +16813,13 @@ msgctxt "#35214"
 msgid ""
 "This game can only be played directly from a hard drive or partition. "
 "Compressed files must be extracted."
-msgstr ""
+msgstr "Joku hau bakarrik disko-gogor edo partizio batetik erabili daiteke modu zuzenean. Konprimatutako fitxategiak deskonprimatu egin behar dira."
 
 #. Error dialog text when libretro support is disabled
 #: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#35215"
 msgid "This game depends on a disabled add-on. Would you like to enable it?"
-msgstr ""
+msgstr "Joku honek ezgaituta dagoen add-on bat behar du. Gaitu nahi duzu?"
 
 #. Description of add-on category for game support add-ons like game.libretro
 #. (the libretro wrapper)
@@ -16777,14 +16840,14 @@ msgstr ""
 #: xbmc/cores/RetroPlayer/RetroPlayer.cpp"
 msgctxt "#35218"
 msgid "Erase savestate"
-msgstr ""
+msgstr "Ezabatu gordetako egoera"
 
 #. Error dialog text when trying to play a game and the game's files aren't
 #. found.
 #: xbmc/games/GameClient.cpp
 msgctxt "#35219"
 msgid "The required files can't be found."
-msgstr ""
+msgstr "Behar diren fitxategiak ezin izan dira aurkitu."
 
 #. Description of add-on category for game providers
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -16796,7 +16859,7 @@ msgstr "Joko hornitzaileak"
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35221"
 msgid "Game Menu"
-msgstr ""
+msgstr "Jokuaren Menua"
 
 #. Label of button in the in-game menu for stopping game playback
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -16809,7 +16872,7 @@ msgstr "Irten"
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35223"
 msgid "Input settings"
-msgstr ""
+msgstr "Sarrerako ezarpenak"
 
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -16822,6 +16885,50 @@ msgstr ""
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35225"
 msgid "Video filter"
+msgstr "Bideoaren iragazkia"
+
+#. Label of button in the in-game menu for advanced settings
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35226"
+msgid "Advanced settings"
+msgstr ""
+
+#. Label of button in the in-game menu for changing the video rotation
+#: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
+msgctxt "#35227"
+msgid "Rotation"
+msgstr ""
+
+#. Label of the thumbnail for when the video is not rotated and is displayed
+#. normally
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35228"
+msgid "0°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the right
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35229"
+msgid "90°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated upside down
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35230"
+msgid "180°"
+msgstr ""
+
+#. Label of the thumbnail for when the video is rotated to the left
+#: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+msgctxt "#35231"
+msgid "270°"
+msgstr ""
+
+#. Label of thumbnail in the in-game menu for stretching the video to
+#. fullscreen
+#: xbmc/games/dialogs/osd/DialogGameViewMode.h
+msgctxt "#35232"
+msgid "Fullscreen"
 msgstr ""
 
 #: xbmc/windows/GUIMediaWindow.cpp
@@ -16844,7 +16951,7 @@ msgstr "Editatu joko iturburua"
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
-msgstr ""
+msgstr "Huts egin du gehigarria instalatzean"
 
 #. Label on installed emulators in the emulator selection dialog
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
@@ -16895,7 +17002,7 @@ msgstr "Sarbidea ukatuta"
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#35509"
 msgid "Connecting to backend."
-msgstr ""
+msgstr "Atzekaldera konektatzen"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36000"
@@ -16943,11 +17050,11 @@ msgstr "Itzaltzean amatatu beharreko gailuak"
 #: system/peripherals.xml
 msgctxt "#36009"
 msgid "Put devices in standby mode when activating the screensaver"
-msgstr ""
+msgstr "Gailuak standby moduan jarri pantaila-babeslea aktibatutakoan"
 
 msgctxt "#36010"
 msgid "Wake devices when deactivating the screensaver"
-msgstr ""
+msgstr "Gailuak iratzarri pantaila-babeslea ezgaitzean"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36011"
@@ -17014,7 +17121,7 @@ msgstr "Bidali \"Iturburu inaktiboa\" komandoa itzaltzean"
 #: system/peripherals.xml
 msgctxt "#36026"
 msgid "Devices to also put in standby mode"
-msgstr ""
+msgstr "Standby moduan ere jarri beharreko gailuak"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36027"
@@ -17134,17 +17241,17 @@ msgstr "Behartu AVR esnatzea Kodi aktibatzean"
 #: system/peripherals.xml
 msgctxt "#36047"
 msgid "Remote button press delay before repeating (ms)"
-msgstr ""
+msgstr "Errepikatu aurreko urrutiko botoiaren atzerapena (ms)"
 
 #: system/peripherals.xml
 msgctxt "#36048"
 msgid "Remote button press repeat rate (ms)"
-msgstr ""
+msgstr "Urrutiko botoia sakatzearen errepikapen tasa (ms)"
 
 #: system/peripherals.xml
 msgctxt "#36049"
 msgid "Remote button press release time (ms)"
-msgstr ""
+msgstr "Urrutiko botoia sakatu ondoren askatzeko denbora (ms)"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17238,7 +17345,7 @@ msgstr "Editatu RSS jarioak."
 #: system/settings/settings.xml
 msgctxt "#36113"
 msgid "This category contains all locale / regional settings."
-msgstr ""
+msgstr "Kategoria honetan hizkuntza / herrialdeko ezarpen guztiak daude."
 
 #. Description of setting with label #248 "Language"
 #: system/settings/settings.xml
@@ -17281,7 +17388,7 @@ msgctxt "#36119"
 msgid ""
 "Defaults to the selected audio language if more than one language is "
 "available."
-msgstr ""
+msgstr "Lehenetsitako audio hizkuntza aukeratuko da hizkuntza bat baino gehiago eskuragarri badago."
 
 #. Description of setting with label #286 "Preferred subtitle language"
 #: system/settings/settings.xml
@@ -17289,19 +17396,19 @@ msgctxt "#36120"
 msgid ""
 "Defaults to the selected subtitle language if more than one language is "
 "available."
-msgstr ""
+msgstr "Lehenetsitako azpititulu hizkuntza aukeratuko da hizkuntza bat baino gehiago eskuragarri badago."
 
 #. Description of settings with label #16000 "General"
 #: system/settings/settings.xml
 msgctxt "#36121"
 msgid "This category contains the settings for how media lists are displayed."
-msgstr ""
+msgstr "Kategoria honetan media zerrendak bistaratzeko moduarekin erlazionaturiko ezarpenak daude."
 
 #. Description of setting with label #13306 "Show parent folder items"
 #: system/settings/settings.xml
 msgctxt "#36122"
 msgid "Display the (..) item in lists for visiting the parent folder."
-msgstr ""
+msgstr "Zerrendetan (..) elementua erakutsi maila bat gorago dagoen karpetara joateko."
 
 #. Description of setting with label #497 "Show file extensions"
 #: system/settings/settings.xml
@@ -17309,7 +17416,7 @@ msgctxt "#36123"
 msgid ""
 "Show file extensions on media files, for example \"You Enjoy Myself\" would "
 "be shown as \"You Enjoy Myself.mp3\"."
-msgstr ""
+msgstr "Erakutsi fitxategien luzapenak media fitxategietan. Esate baterako, \"You Enjoy Myself\" \"You Enjoy Myself.mp3\" moduan agertuko zen."
 
 #. Description of setting with label #13399 "Ignore articles when sorting"
 #: system/settings/settings.xml
@@ -17317,7 +17424,7 @@ msgctxt "#36124"
 msgid ""
 "Ignore certain tokens, e.g. \"The\", during sort operations. \"The "
 "Simpsons\" would for example be sorted as \"Simpsons\"."
-msgstr ""
+msgstr "Zenbakit token kontuan ez hartu ordenatzeko eragiketetan zehar. Esate baterako, \"The Simpsons\", \"Simpsons\" moduan ordenatuko zen."
 
 #. Description of setting with label #14071 "Allow file renaming and deletion"
 #: system/settings/settings.xml
@@ -17332,7 +17439,7 @@ msgstr "Baimendu erabiltzaile-interfazearen bidez fitxategiak ezabatzea edo izen
 #: system/settings/settings.xml
 msgctxt "#36126"
 msgid "Show the add source button in root sections of the user interface."
-msgstr ""
+msgstr "Erakutsi iturria gehitzeko botoia erabiltzailearen interfazearen erroko ataletan."
 
 #. Description of setting with label #21330 "Show hidden files and
 #. directories"
@@ -17347,7 +17454,7 @@ msgctxt "#36128"
 msgid ""
 "This category contains the settings for how the screensaver add-ons are "
 "handled."
-msgstr ""
+msgstr "Kategoria honetan pantaila-babeslearen gehigarriak kutzeatzeko moduarekin loturiko ezarpenak daude."
 
 #. Description of setting with label #355 "Wait time"
 #: system/settings/settings.xml
@@ -17355,7 +17462,7 @@ msgctxt "#36129"
 msgid ""
 "Set the time to wait for any activity to occur before displaying the "
 "screensaver."
-msgstr ""
+msgstr "Ezarri pantaila-babeslea erakustsi dadin aktibitaterik gabeko itxaron beharreko denbora. "
 
 #. Description of setting with label #356 "Screensaver mode"
 #: system/settings/settings.xml
@@ -17425,7 +17532,7 @@ msgstr ""
 msgctxt "#36139"
 msgid ""
 "This category contains the settings for how the video library is handled."
-msgstr ""
+msgstr "Kategoria honetan bideo liburutegiarekin erlazionaturiko ezarpenak daude."
 
 #. Description of setting with label #14105 "Temperature unit"
 #: system/settings/settings.xml
@@ -17484,7 +17591,7 @@ msgstr "Bilatu media fitxategi berriak abioan"
 #: system/settings/settings.xml
 msgctxt "#36147"
 msgid "Hide the library scanning progress bar during scans."
-msgstr ""
+msgstr "Ezkutatu aurrerapenaren barra liburutegiaren aztertzen ari delarik."
 
 #. Description of setting with label #334 "Clean library..."
 #: system/settings/settings.xml
@@ -17492,7 +17599,7 @@ msgctxt "#36148"
 msgid ""
 "Remove items from your library that can't be found (either renamed, deleted,"
 " or on removable storage that is currently unplugged)."
-msgstr ""
+msgstr "Topatu ezin daitezkeen elementuak ezabatu zure liburutegitik (berrizendatuta, ezabatuta edo konektuta ez dagoen biltegiragailu ateragarri batean dagoena)"
 
 #. Description of setting with label #647 "Export video library"
 #: system/settings/settings.xml
@@ -17500,13 +17607,13 @@ msgctxt "#36149"
 msgid ""
 "Export the video library database to XML files. This will optionally "
 "overwrite your current XML files."
-msgstr ""
+msgstr "Esportatu bideo liburutegiaren datubasea XML fitxategietara. Honek aukera emango dizu zure oraingo XML fitxategiak gainidazteko."
 
 #. Description of setting with label #648 "Import video library"
 #: system/settings/settings.xml
 msgctxt "#36150"
 msgid "Import an XML file into the video library database."
-msgstr ""
+msgstr "Inportatu XML fitxategia bideo liburutegi datu-basera."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -17517,14 +17624,16 @@ msgstr ""
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
 msgctxt "#36152"
-msgid "Enable automatic playback of the next file in the list."
-msgstr "Gaitu zerrendako hurrengo fitxategia automatikoki erreproduzitzea."
+msgid ""
+"Enable automatic playback of the next file in the list for selected playlist"
+" types."
+msgstr ""
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
 msgctxt "#36153"
 msgid "Adjust the method used to process and display video."
-msgstr ""
+msgstr "Egokitu bideoa prozesatzeko eta erakusteko metodoa."
 
 #. Description of setting with label #13435 "Enable HQ Scalers for scaling
 #. above"
@@ -17589,7 +17698,7 @@ msgstr "Gaitu bideo-fitxategien VTB hardware deskodetzea."
 #: system/settings/settings.xml
 msgctxt "#36161"
 msgid "Select an action Kodi will perform on startup."
-msgstr ""
+msgstr "Hautatu Kodik abioan egingo duena."
 
 #. Description of setting with label #13432 "Allow hardware acceleration
 #. (VideoToolbox)"
@@ -17688,7 +17797,7 @@ msgstr "Aukeratu erabiltzaile-interfazean data bistaratzeko erabiliko den data f
 #: system/settings/settings.xml
 msgctxt "#36174"
 msgid "Enable teletext when watching a live TV stream."
-msgstr ""
+msgstr "Teletextoa gaitu zuzeneko TV korronte bat ikustean."
 
 #. Description of setting with label #23055 "Scale Teletext to 4:3"
 #: system/settings/settings.xml
@@ -17701,7 +17810,7 @@ msgstr "Eskalatu teletestua 4:3 erlaziora"
 msgctxt "#36176"
 msgid ""
 "This category contains the settings for how video file lists are handled."
-msgstr ""
+msgstr "Kategoria honetan bideo zerrendak kudeatzeko moduarekin loturiko ezarpenak daude."
 
 #. Description of setting with label #22079 "Default select action"
 #: system/settings/settings.xml
@@ -17728,7 +17837,7 @@ msgctxt "#36179"
 msgid ""
 "When a file is scanned into the library it will display the metadata title "
 "instead of the file name."
-msgstr ""
+msgstr "Fitxategi bat liburutegian sartzen denean, metadatuen izenburua erakutsiko da fitxategiaren izanaren ordez."
 
 #. Description of setting with label #20433 "Extract thumbnails and video
 #. information"
@@ -17838,7 +17947,7 @@ msgstr "Behartu eskualde bat DVDaren erreprodukziorako."
 #: system/settings/settings.xml
 msgctxt "#36196"
 msgid "Attempt to skip \"unskippable\" introductions before DVD menu."
-msgstr ""
+msgstr "Saiatu DVDaren menuaren aurreko \"ekidinezinak\" diren sarrerak saltatzen."
 
 #: system/settings/settings.xml
 msgctxt "#36197"
@@ -19740,6 +19849,30 @@ msgid ""
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
 msgstr ""
 
+#. label of a setting, allowing to specify tonemap method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36553"
+msgid "Tone mapping"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36554"
+msgid "off"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36555"
+msgid "Reinhard"
+msgstr ""
+
+#. label of a setting, allowing to specify tone mapping parameter
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36556"
+msgid "Tone mapping parameter"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36560"
 msgid "Colour management"
@@ -20364,7 +20497,7 @@ msgstr ""
 #: system/settings/rbp.xml
 msgctxt "#37017"
 msgid "Dual audio output"
-msgstr ""
+msgstr "Audio irteera bikoitza"
 
 #: system/settings/rbp.xml
 msgctxt "#37018"
@@ -20532,7 +20665,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#37044"
 msgid "Extract chapter thumbnails"
-msgstr ""
+msgstr "Atera kapituluen miniaturak"
 
 #. Description of setting #37044 Extract chapter thumbnails"
 #: system/settings/settings.xml
@@ -20680,6 +20813,7 @@ msgstr "Angelua"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#38033"
 msgid "Role"
 msgstr ""
@@ -20784,42 +20918,42 @@ msgstr ""
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
-msgstr ""
+msgstr "Musika fitxategiak ez dira aldatu. Hala ere, etiketak eskaneatu nahi duzu?"
 
 #. Item in selection list #38338. Settings will change the default addon used
 #. to fetch artist or album information, related to #20195, #20193 and #20194
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
-msgstr ""
+msgstr "Aukeratu informazio hornitzaile lehenetsia"
 
 #. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
-msgstr ""
+msgstr "Ezarri artista honentzat"
 
 #. Item in selection list #38338 to change the information provider for all
 #. artists in node, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
-msgstr ""
+msgstr "Ezarri erakutsitako artista guztientzat"
 
 #. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
-msgstr ""
+msgstr "Ezarri album honetarako"
 
 #. Item in selection list #38338 to change the information provider for all
 #. albums in node, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
-msgstr ""
+msgstr "Ezarri erakutsitako album guztietarako"
 
 #. Dialog message asking for confirmation of change the information provider
 #. for all artists shown in node, after #38065
@@ -20980,7 +21114,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38300"
 msgid "Export Music Library"
-msgstr ""
+msgstr "Esportatu Musikaren Liburutegia"
 
 #. Kind of export output, see #38304
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -20992,7 +21126,7 @@ msgstr "Fitxategi bakarra"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38302"
 msgid "Separate files for each item"
-msgstr ""
+msgstr "Banandu fitxategiak elementu bakoitzerako"
 
 #. Kind of export output, see #38304
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21005,19 +21139,19 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38304"
 msgid "Choose kind of export output"
-msgstr ""
+msgstr "Aukeratu esportatzeko irteeraren mota"
 
 #. Folder path for export output file or files
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38305"
 msgid "Destination folder"
-msgstr ""
+msgstr "Helburuko karpeta"
 
 #. Section of music items to export - albums, album artists, song artists etc.
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38306"
 msgid "Items to export"
-msgstr ""
+msgstr "Esportatu beharreko elementuak"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
@@ -21038,7 +21172,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
 msgid "Overwrite existing files"
-msgstr ""
+msgstr "Gainidatzi existitzen diren fitxategiak"
 
 #. Music item to export output, see #38093
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21072,7 +21206,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38319"
 msgid "Export"
-msgstr ""
+msgstr "Esportatu"
 
 #. Message when adding music source and setting #20223 is empty
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21312,6 +21446,21 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr ""
 
+#. Media source, a filter and smart playlist rule option
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39030"
+msgid "Source"
+msgstr "Iturria"
+
+#. Node title, plural of #39030
+#: system/library/music/files.xml
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+msgctxt "#39031"
+msgid "Sources"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#39100"
 msgid "Perform on startup"
@@ -21338,27 +21487,27 @@ msgctxt "#39104"
 msgid "View as text"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_DEFAULT
+#. audio/video/subtitle flag - FLAG_DEFAULT
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39105"
 msgid "default"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_FORCED
+#. audio/video/subtitle flag - FLAG_FORCED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39106"
 msgid "forced"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_HEARING_IMPAIRED
+#. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr ""
 
-#. audio/video/subtilte flag - FLAG_VISUAL_IMPAIRED
+#. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
@@ -21367,9 +21516,16 @@ msgstr ""
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39109"
 msgid "Select Program"
-msgstr ""
+msgstr "Aukeratu Programa"
 
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
+msgstr "Aukeratu Bereizmena"
+
+#. audio flag - FLAG_ORIGINAL
+#. language prefix displayed in audio settings stream selection
+#: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+msgctxt "#39111"
+msgid "original"
 msgstr ""
