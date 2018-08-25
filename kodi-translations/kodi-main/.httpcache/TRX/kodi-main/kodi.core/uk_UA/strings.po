@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-07 21:33+0000\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/teamxbmc/kodi-main/language/uk_UA/)\n"
 "MIME-Version: 1.0\n"
@@ -659,11 +659,6 @@ msgstr "Немає з'єднання"
 msgctxt "#160"
 msgid "Free"
 msgstr "Вільно"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "Недоступно"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1378,7 +1373,7 @@ msgstr "Без чергування"
 #: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#307"
 msgid "Media default"
-msgstr ""
+msgstr "Мова потоку за замовчуванням"
 
 #. Select option for the setting "Preferred audio language".
 #. Will prefer the stream marked as "original" if available.
@@ -1891,12 +1886,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "Завантаження ескізів…"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "Дані відсутні"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "Вигляд: велик. піктограми"
@@ -2263,7 +2252,7 @@ msgstr "Завантаження медіа-інформації з файлів
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Перевірка мультимедійних файлів…"
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -3043,16 +3032,20 @@ msgstr "Докладний журнал [B]синхронізації звуку
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
-msgstr ""
+msgstr "Докладний журнал компонента [B]Windowing[/B]"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#685"
 msgid "Verbose logging of [B]PVR[/B] component"
-msgstr ""
+msgstr "Докладний журнал компонента [B]PVR[/B]"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
+msgstr "Докладний журнал компонента [B]EPG[/B]"
+
+msgctxt "#687"
+msgid "From metadata"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3164,6 +3157,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "Порт"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "Чорний екран"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Зберегти та застосувати"
@@ -3224,6 +3222,15 @@ msgstr "Жовтий"
 msgctxt "#744"
 msgid "Files"
 msgstr "Файли"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr "Колір тла"
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr "Прозорість тла"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4590,6 +4597,21 @@ msgctxt "#10004"
 msgid "Settings"
 msgstr "Налаштування"
 
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "Дані відсутні"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr "Н/Д"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
 msgid "System information"
@@ -4873,7 +4895,7 @@ msgstr "Файловий браузер"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#10127"
 msgid "channels"
-msgstr ""
+msgstr "канал(-и)"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4978,7 +5000,7 @@ msgstr "Налаштування OSD CMS"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10159"
 msgid "Subtitle OSD settings"
-msgstr ""
+msgstr "Налаштування OSD субтитрів"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -6805,7 +6827,7 @@ msgstr "Увімкнути апаратне прискорення для код
 #: system/settings/settings.xml
 msgctxt "#13453"
 msgid "Use VP8 VAAPI"
-msgstr ""
+msgstr "Використовувати VP8 VAAPI"
 
 #. Description of setting with label #13453 "Use VP8 VAAPI"
 #: system/settings/settings.xml
@@ -6813,12 +6835,12 @@ msgctxt "#13454"
 msgid ""
 "Enable this option to use hardware acceleration for the VP8 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Увімкнути апаратне відтворення кодека VP8. Якщо вимкнути налаштування, декодування буде виконуватися програмно."
 
 #: system/settings/settings.xml
 msgctxt "#13455"
 msgid "Use VP9 VAAPI"
-msgstr ""
+msgstr "Використовувати VP9 VAAPI"
 
 #. Description of setting with label #13453 "Use VP9 VAAPI"
 #: system/settings/settings.xml
@@ -6826,7 +6848,7 @@ msgctxt "#13456"
 msgid ""
 "Enable this option to use hardware acceleration for the VP9 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Увімкнути апаратне відтворення кодека VP9. Якщо вимкнути налаштування, декодування буде виконуватися програмно."
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6849,7 +6871,7 @@ msgstr "Використовувати OMXPlayer для декодування �
 #: system/settings/settings.xml
 msgctxt "#13460"
 msgid "Use HEVC VAAPI"
-msgstr ""
+msgstr "Використовувати HEVC VAAPI"
 
 #. Description of setting with label #13460 "Use HEVC VAAPI"
 #: system/settings/settings.xml
@@ -6857,13 +6879,13 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Увімкнути апаратне відтворення кодека HEVC. Якщо вимкнути налаштування, декодування буде виконуватися програмно."
 
 #. Option for setting the PRIME render method
 #: system/settings/settings.xml
 msgctxt "#13462"
 msgid "PRIME Render Method"
-msgstr ""
+msgstr "Метод обробки PRIME"
 
 #. Description of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
@@ -13698,6 +13720,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "Висота GPS"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Орієнтація"
@@ -16898,18 +16921,21 @@ msgstr ""
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
 msgstr ""
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
 msgstr ""
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
 msgstr ""
@@ -16949,6 +16975,18 @@ msgstr "Додати джерело ігор"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Змінити джерело ігор"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr ""
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18152,12 +18190,24 @@ msgid ""
 "recordings."
 msgstr "Перемикатися на повний екран при увімкненні перегляду каналів і записів."
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Показувати відомості про якість сигналу у вікні з відомостями про кодек (якщо підтримується надбудовою і ТБ-сервером)."
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20804,6 +20854,7 @@ msgstr ""
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Відеопотік"
@@ -21507,12 +21558,14 @@ msgstr ""
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr ""
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr ""
@@ -21532,4 +21585,17 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39111"
 msgid "original"
+msgstr ""
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr ""

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-07 21:33+0000\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -656,11 +656,6 @@ msgstr "Brak połączenia"
 msgctxt "#160"
 msgid "Free"
 msgstr "Dostępne"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "Niedostępny"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1888,12 +1883,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "Pobieranie miniatury..."
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "Brak"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "Widok: Duże plakaty"
@@ -3052,6 +3041,10 @@ msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
 msgstr "Rejestruj zdarzenia komponentu [B]Przewodnik[/B]"
 
+msgctxt "#687"
+msgid "From metadata"
+msgstr ""
+
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3161,6 +3154,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "Port"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "Czarny ekran"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Zastosuj i zapisz"
@@ -3221,6 +3219,15 @@ msgstr "Żółty"
 msgctxt "#744"
 msgid "Files"
 msgstr "Pliki"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr "Kolor tła"
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr "Przezroczystość tła"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4586,6 +4593,21 @@ msgstr "Menedżer plików"
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Ustawienia"
+
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "Brak"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr "Brak"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -13695,6 +13717,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "Wysokość bezwzględna (GPS)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Orientacja"
@@ -16895,18 +16918,21 @@ msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
 msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
 msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
 msgstr "270°"
@@ -16924,13 +16950,13 @@ msgstr "Pełny ekran"
 #: xbmc/games/dialogs/osdDialogGameViewMode.cpp
 msgctxt "#35233"
 msgid "Stretch mode"
-msgstr ""
+msgstr "Tryb rozciągania"
 
 #. Label of button in the in-game menu for configuring the game's controls
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35234"
 msgid "Controls"
-msgstr ""
+msgstr "Sterowanie"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16946,6 +16972,18 @@ msgstr "Dodaj źródło gier"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Edytuj źródło gier"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr "Aktywuj automatyczny zapis jeśli obsługiwany"
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr ""
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18149,12 +18187,24 @@ msgid ""
 "recordings."
 msgstr "Umożliwia przełączanie do trybu pełnoekranowego po rozpoczęciu odtwarzania kanałów i nagrań."
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr "Określa kolor używany jako tło napisów."
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Umożliwia wyświetlanie informacji o jakości sygnału w oknie informacji o kodekach (jeśli obsługiwane przez klienta i serwer telewizji)."
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr "Określa przezroczystość tła napisów."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -19866,13 +19916,13 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36555"
 msgid "Reinhard"
-msgstr ""
+msgstr "Reinhard"
 
 #. label of a setting, allowing to specify tone mapping parameter
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36556"
 msgid "Tone mapping parameter"
-msgstr ""
+msgstr "Parametr mapowania tonalnego"
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20801,6 +20851,7 @@ msgstr "Umożliwia korzystanie z funkcji pakowania ramek w celu wyświetlania pe
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Ścieżka wideo"
@@ -21504,12 +21555,14 @@ msgstr "wymuszone"
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "opisy"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr "opis dźwiękowy"
@@ -21530,3 +21583,16 @@ msgstr "Wybierz rozdzielczość"
 msgctxt "#39111"
 msgid "original"
 msgstr "oryginalne"
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
+msgstr ""

@@ -11,6 +11,7 @@
 # Tao Guo <gt945@163.com>, 2016
 # taxigps <taxigps@sina.com>, 2015-2018
 # Wamdy <wamdy@live.cn>, 2017
+# Wei Zhang <zwzhang250@sina.com>, 2018
 # wwj402 <wwj402@gmail.com>, 2018
 # XODI, 2017
 # 無情天 X <kofzhanganguo@126.com>, 2017
@@ -19,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-07 21:33+0000\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -664,11 +665,6 @@ msgstr "无连接"
 msgctxt "#160"
 msgid "Free"
 msgstr "空闲"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "无效的"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1383,7 +1379,7 @@ msgstr "非交错"
 #: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#307"
 msgid "Media default"
-msgstr ""
+msgstr "媒体默认"
 
 #. Select option for the setting "Preferred audio language".
 #. Will prefer the stream marked as "original" if available.
@@ -1896,12 +1892,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "下载缩略图..."
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "不可用"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "视图：大图标"
@@ -2268,7 +2258,7 @@ msgstr "从文件中载入媒体信息..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "检查媒体文件..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -3048,16 +3038,20 @@ msgstr "[B]音频/视频定时信息[/B]详细日志"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
-msgstr ""
+msgstr "[B]窗口[/B]组件详细日志"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#685"
 msgid "Verbose logging of [B]PVR[/B] component"
-msgstr ""
+msgstr "[B]PVR[/B] 组件详细日志"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
+msgstr "[B]电子节目单[/B]组件详细日志"
+
+msgctxt "#687"
+msgid "From metadata"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3169,6 +3163,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "端口"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "黑屏"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "保存 & 应用"
@@ -3229,6 +3228,15 @@ msgstr "黄色"
 msgctxt "#744"
 msgid "Files"
 msgstr "文件"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr "背景颜色"
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr "背景不透明度"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4595,6 +4603,21 @@ msgctxt "#10004"
 msgid "Settings"
 msgstr "设置"
 
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "不可用"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr "不可用"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
 msgid "System information"
@@ -4878,7 +4901,7 @@ msgstr "文件浏览器"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#10127"
 msgid "channels"
-msgstr ""
+msgstr "频道"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4983,7 +5006,7 @@ msgstr "OSD CMS 设置"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10159"
 msgid "Subtitle OSD settings"
-msgstr ""
+msgstr "字幕 OSD 设置"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -6810,7 +6833,7 @@ msgstr "启用此选项激活基于 VC-1 的编码的硬件加速，禁用则为
 #: system/settings/settings.xml
 msgctxt "#13453"
 msgid "Use VP8 VAAPI"
-msgstr ""
+msgstr "使用 VP8 VAAPI"
 
 #. Description of setting with label #13453 "Use VP8 VAAPI"
 #: system/settings/settings.xml
@@ -6818,12 +6841,12 @@ msgctxt "#13454"
 msgid ""
 "Enable this option to use hardware acceleration for the VP8 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "启用此选项激活 VP8 编码的硬件加速，禁用则为 CPU 解码。"
 
 #: system/settings/settings.xml
 msgctxt "#13455"
 msgid "Use VP9 VAAPI"
-msgstr ""
+msgstr "使用 VP9 VAAPI"
 
 #. Description of setting with label #13453 "Use VP9 VAAPI"
 #: system/settings/settings.xml
@@ -6831,7 +6854,7 @@ msgctxt "#13456"
 msgid ""
 "Enable this option to use hardware acceleration for the VP9 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "启用此选项激活 VP9 编码的硬件加速，禁用则为 CPU 解码。"
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6854,7 +6877,7 @@ msgstr "使用 OMXPlayer 解码视频文件。"
 #: system/settings/settings.xml
 msgctxt "#13460"
 msgid "Use HEVC VAAPI"
-msgstr ""
+msgstr "使用 HEVC VAAPI"
 
 #. Description of setting with label #13460 "Use HEVC VAAPI"
 #: system/settings/settings.xml
@@ -6862,32 +6885,32 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "启用此选项激活 HEVC 编码的硬件加速，禁用则为 CPU 解码。"
 
 #. Option for setting the PRIME render method
 #: system/settings/settings.xml
 msgctxt "#13462"
 msgid "PRIME Render Method"
-msgstr ""
+msgstr "PRIME 渲染模式"
 
 #. Description of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13463"
 msgid ""
 "This option switches between direct-to-plane and EGL rendering methods."
-msgstr ""
+msgstr "此选项在直接平面和 EGL 渲染模式间切换。"
 
 #. String for options 1 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13464"
 msgid "Direct To Plane"
-msgstr ""
+msgstr "直接平面"
 
 #. String for options 2 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13465"
 msgid "EGL"
-msgstr ""
+msgstr "EGL"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -6974,7 +6997,7 @@ msgstr "嵌入的艺术图片"
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13520"
 msgid "Embedded fanart"
-msgstr "嵌入的手绘图片"
+msgstr "嵌入的同人画"
 
 #. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
 #. etc.
@@ -7412,7 +7435,7 @@ msgstr "选中歌曲加入播放列表"
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "白名单列表"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -10491,13 +10514,13 @@ msgstr "无启用的 PVR 插件"
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19297"
 msgid "Vertical channels"
-msgstr "垂直方向频道"
+msgstr "纵排频道"
 
 #. 'Viewtype' label for horizontal channel layout, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19298"
 msgid "Horizontal channels"
-msgstr "水平方向频道"
+msgstr "横排频道"
 
 #. generic "expiration" label used in different places
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
@@ -10511,14 +10534,14 @@ msgstr "过期"
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19300"
 msgid "Vertical channels, no group selector"
-msgstr "垂直方向频道，无分组选择"
+msgstr "纵排频道，无分组选择"
 
 #. 'Viewtype' label for horizontal channel layout without channel group
 #. selctor, used in pvr guide window
 #: addons/skin.estuary/xml/MyPVRGuide.xml
 msgctxt "#19301"
 msgid "Horizontal channels, no group selector"
-msgstr "水平方向频道，无分组选择"
+msgstr "横排频道，无分组选择"
 
 #. text for yes no dialog shown when user selects a future programme in the
 #. guide window and default select action is 'smart select'
@@ -10527,7 +10550,7 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
-msgstr ""
+msgstr "录制已选择节目还是切换到当前节目？"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11965,7 +11988,7 @@ msgstr "歌手信息文件夹"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "优先选择在线专辑艺术图片"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -11973,7 +11996,7 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr ""
+msgstr "无本地专辑封面时，使用在线艺术图片。如本地和在线图片均不可用，则使用音乐文件内嵌封面图片"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12083,12 +12106,12 @@ msgstr "无法写入文件夹："
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20304"
 msgid "RSS Feed (HTTP)"
-msgstr "RSS 订阅 (HTTP)"
+msgstr "RSS 订阅（HTTP）"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20305"
 msgid "RSS Feed (HTTPS)"
-msgstr "RSS 订阅 (HTTPS)"
+msgstr "RSS 订阅（HTTPS）"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#20307"
@@ -12945,13 +12968,13 @@ msgstr "使用视频标签"
 #: system/settings.xml
 msgctxt "#21344"
 msgid "If mp4 or mkv files have tags, use this for library metadata"
-msgstr "如果 mp4 或 mkv 文件具有标签，请将其用于库的元数据"
+msgstr "如果 mp4 或 mkv 文件含有标签，将其用于资料库的元数据"
 
 #. Used in AutoPlayNextItem dialogs for not categorized listItem directories
 #: xbmc/view/GUIViewState.cpp
 msgctxt "#21345"
 msgid "Uncategorized"
-msgstr ""
+msgstr "未分类"
 
 #: system/settings/settings.xml
 msgctxt "#21358"
@@ -13703,6 +13726,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "GPS 海拔"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "方向"
@@ -16418,7 +16442,7 @@ msgstr "方向盘"
 #. the controller mapping dialog.
 msgctxt "#35072"
 msgid "Paddles"
-msgstr "球拍"
+msgstr "按键"
 
 #. Label for buttons that appear on a joystick for games. Used in the
 #. controller mapping dialog.
@@ -16719,7 +16743,7 @@ msgstr "按一个键"
 #. controller mapping dialog.
 msgctxt "#35170"
 msgid "Press a key ({1:d})"
-msgstr "按一个键 ({1: d})"
+msgstr "按一个键（{1: d}）"
 
 #. Name of mouse connected to the computer
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
@@ -16892,39 +16916,42 @@ msgstr "高级设置"
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35227"
 msgid "Rotation"
-msgstr ""
+msgstr "旋转"
 
 #. Label of the thumbnail for when the video is not rotated and is displayed
 #. normally
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 msgctxt "#35228"
 msgid "0°"
-msgstr ""
+msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
-msgstr ""
+msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
-msgstr ""
+msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
-msgstr ""
+msgstr "270°"
 
 #. Label of thumbnail in the in-game menu for stretching the video to
 #. fullscreen
 #: xbmc/games/dialogs/osd/DialogGameViewMode.h
 msgctxt "#35232"
 msgid "Fullscreen"
-msgstr ""
+msgstr "全屏幕"
 
 #. Label of the setting in the in-game menu for stretching the game to fit the
 #. monitor
@@ -16932,13 +16959,13 @@ msgstr ""
 #: xbmc/games/dialogs/osdDialogGameViewMode.cpp
 msgctxt "#35233"
 msgid "Stretch mode"
-msgstr ""
+msgstr "拉伸模式"
 
 #. Label of button in the in-game menu for configuring the game's controls
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35234"
 msgid "Controls"
-msgstr ""
+msgstr "控制"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -16954,6 +16981,18 @@ msgstr "添加游戏来源"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "编辑游戏来源"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr "如果支持则启用自动保存"
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr "如果支持则在游戏运行时自动保存。游戏可从退出时状态继续。"
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -17250,17 +17289,17 @@ msgstr "当 Kodi 激活时强制唤醒 AVR"
 #: system/peripherals.xml
 msgctxt "#36047"
 msgid "Remote button press delay before repeating (ms)"
-msgstr "重复前远程按钮延迟（毫秒）"
+msgstr "遥控器按钮按压重复前延迟（毫秒）"
 
 #: system/peripherals.xml
 msgctxt "#36048"
 msgid "Remote button press repeat rate (ms)"
-msgstr "远程按钮按下重复速率（毫秒）"
+msgstr "遥控器按钮按压重复速率（毫秒）"
 
 #: system/peripherals.xml
 msgctxt "#36049"
 msgid "Remote button press release time (ms)"
-msgstr "远程按钮按下释放时间（毫秒）"
+msgstr "遥控器按钮按压释放时间（毫秒）"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17636,7 +17675,7 @@ msgctxt "#36152"
 msgid ""
 "Enable automatic playback of the next file in the list for selected playlist"
 " types."
-msgstr ""
+msgstr "针对选定播放列表类型启用自动播放列表中的下一个文件。"
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -17792,7 +17831,7 @@ msgctxt "#36172"
 msgid ""
 "Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
 "is available."
-msgstr "启用 PRIME 硬件解码视频文件，如果 ffmpeg PRIME hwaccel 可用，则使用该解码。"
+msgstr "启用视频文件 PRIME 硬件解码，当 ffmpeg PRIME hwaccel 可用时使用。"
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18157,12 +18196,24 @@ msgid ""
 "recordings."
 msgstr "开始播放频道和录像时切换到全屏显示。"
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr "设置字幕背景使用的颜色。"
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "在编码信息窗显示信号质量信息（如果插件和后端支持）。"
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr "设置字幕背景不透明度。"
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -18986,7 +19037,7 @@ msgctxt "#36356"
 msgid ""
 "Whitelisted modes are allowed to be switched to when changing resolution and"
 " refresh rate"
-msgstr ""
+msgstr "改变分辨率和刷新率时，允许切换到白名单上的模式。"
 
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
@@ -19862,25 +19913,25 @@ msgstr "定义图形驱动使用的显示缓冲区数。如果驱动使用双缓
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36553"
 msgid "Tone mapping"
-msgstr ""
+msgstr "色调映射"
 
 #. label of a setting, tone mapping method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36554"
 msgid "off"
-msgstr ""
+msgstr "关"
 
 #. label of a setting, tone mapping method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36555"
 msgid "Reinhard"
-msgstr ""
+msgstr "莱因哈德"
 
 #. label of a setting, allowing to specify tone mapping parameter
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36556"
 msgid "Tone mapping parameter"
-msgstr ""
+msgstr "色调映射参数"
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20333,14 +20384,14 @@ msgctxt "#36629"
 msgid ""
 "Set the minimum SMB protocol version to negotiate when making connections. "
 "Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
-msgstr "设置连接时要协商的最低 SMB 协议版本。可能需要强制 SMBv2 防止 SMBv1 在某些操作系统上使用。"
+msgstr "设置连接协商使用的最低 SMB 协议版本。可能需要强制 SMBv2 以阻止某些操作系统使用 SMBv1。"
 
 #. Label of a setting, sets additional config required for some proprietary
 #. SMBv1 implementations (mostly routers)
 #: system/settings/settings.xml
 msgctxt "#36630"
 msgid "Use legacy security"
-msgstr "使用旧式安全性"
+msgstr "使用传统安全性"
 
 #. Description of setting with label #36630 "Use legacy security"
 #: system/settings/settings.xml
@@ -20348,7 +20399,7 @@ msgctxt "#36631"
 msgid ""
 "Force weak SMBv1 security for compatibility with the USB sharing features on"
 " some WiFi routers and NAS devices."
-msgstr "强制弱化 SMBv1 安全性，以便与某些 WiFi 路由器和 NAS 设备上的 USB 共享功能兼容。"
+msgstr "强制弱 SMBv1 安全性，以兼容某些无线路由器和 NAS 设备上的 USB 共享。"
 
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
@@ -20357,7 +20408,7 @@ msgid ""
 "Enables SSL encryption in the webserver. Certificate "
 "special://userdata/server.key and Key special://userdata/server.pem must be "
 "created manually"
-msgstr "在 Web 服务器中启用SSL加密。证书 special://userdata/server.key 和 密钥 special://userdata/server.pem 必须手动创建"
+msgstr "在 Web 服务器中启用 SSL 加密。证书 special://userdata/server.key 和密钥 special://userdata/server.pem 必须手动创建"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20809,6 +20860,7 @@ msgstr "此选项通过 HDMI 以帧封装输出全分辨率立体视频。[CR]�
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "视频流"
@@ -21468,7 +21520,7 @@ msgstr "来源"
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#39031"
 msgid "Sources"
-msgstr ""
+msgstr "来源"
 
 #: system/settings/settings.xml
 msgctxt "#39100"
@@ -21512,12 +21564,14 @@ msgstr "强制"
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "解说字幕"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr "语音描述"
@@ -21530,11 +21584,24 @@ msgstr "选择程序"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
-msgstr ""
+msgstr "选择分辨率"
 
 #. audio flag - FLAG_ORIGINAL
 #. language prefix displayed in audio settings stream selection
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39111"
 msgid "original"
+msgstr "原始"
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr ""

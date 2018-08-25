@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-07 21:33+0000\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/teamxbmc/kodi-main/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -665,11 +665,6 @@ msgstr "Ingen forbindelse"
 msgctxt "#160"
 msgid "Free"
 msgstr "Ledig"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "Utilgjengelig"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1897,12 +1892,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "Laster ned miniatyrbilde…"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "Ikke tilgjengelig"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "Visning: Store ikoner"
@@ -3061,6 +3050,10 @@ msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
 msgstr ""
 
+msgctxt "#687"
+msgid "From metadata"
+msgstr ""
+
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3170,6 +3163,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "Port"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "Svart"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Lagre og aktiver"
@@ -3230,6 +3228,15 @@ msgstr "Gul"
 msgctxt "#744"
 msgid "Files"
 msgstr "Filer"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr ""
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr ""
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4595,6 +4602,21 @@ msgstr "Filbehandler"
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Innstillinger"
+
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "Ikke tilgjengelig"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -13704,6 +13726,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "Høyde over havet (GPS)"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Orientering "
@@ -16904,18 +16927,21 @@ msgstr ""
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
 msgstr ""
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
 msgstr ""
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
 msgstr ""
@@ -16955,6 +16981,18 @@ msgstr "Legg til spillkilde"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Rediger spillkilde"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr ""
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18158,12 +18196,24 @@ msgid ""
 "recordings."
 msgstr "Bytt til fullskjerm når avspilling starter av kanaler og opptak."
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Vis informasjon om signalkvaliteten i vinduet for kodekinformasjon (hvis støttet av utvidelsen og tjenerdelen)"
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20810,6 +20860,7 @@ msgstr "Denne innstillingen bruker rammepakking til utganger med full oppløsnin
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Videostrøm"
@@ -21513,12 +21564,14 @@ msgstr ""
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr ""
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr ""
@@ -21538,4 +21591,17 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39111"
 msgid "original"
+msgstr ""
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr ""

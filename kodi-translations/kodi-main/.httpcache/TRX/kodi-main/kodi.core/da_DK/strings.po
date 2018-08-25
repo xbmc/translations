@@ -8,7 +8,7 @@
 # Fernor <nikolajdt@gmail.com>, 2015
 # Peter Dyhr, 2015
 # Salvation <fartilmange@gmail.com>, 2015
-# Meliox <silent.ftp@gmail.com>, 2017
+# Meliox <silent.ftp@gmail.com>, 2017-2018
 # Steffan Petersen <steffansp@gmail.com>, 2015
 # Teddy Møller, 2015
 # Thomas Pryds <thomas@pryds.eu>, 2017
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-07 21:33+0000\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -663,11 +663,6 @@ msgctxt "#160"
 msgid "Free"
 msgstr "Fri"
 
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "Ikke tilgængelig"
-
 msgctxt "#162"
 msgid "Tray open"
 msgstr "Skuffe åben"
@@ -859,12 +854,12 @@ msgstr "Web-brugerflade"
 
 msgctxt "#200"
 msgid "Audio encoders"
-msgstr "Audio encodere"
+msgstr "Lyddekodere"
 
 #: xbmc/filesystem/AddonsDirectory.cpp
 msgctxt "#201"
 msgid "Audio decoders"
-msgstr "Audio dekodere"
+msgstr "Lyddekodere"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#202"
@@ -1893,12 +1888,6 @@ msgstr "Ingen anmeldelse af dette album"
 msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "Henter miniaturebillede..."
-
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "Ikke tilgængelig"
 
 msgctxt "#417"
 msgid "View: Big icons"
@@ -3046,16 +3035,20 @@ msgstr "Detaljeret logning af [B]audio/video timing-information[/B]"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
-msgstr ""
+msgstr "Verbose logning af [B]Windowing[/B] komponent"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#685"
 msgid "Verbose logging of [B]PVR[/B] component"
-msgstr ""
+msgstr "Verbose logning af [B]PVR[/B] komponent"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
+msgstr "Verbose logning af [B]EPG[/B] komponent"
+
+msgctxt "#687"
+msgid "From metadata"
 msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
@@ -3167,6 +3160,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "Port"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "Sort"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Gem og anvend"
@@ -3227,6 +3225,15 @@ msgstr "Gul"
 msgctxt "#744"
 msgid "Files"
 msgstr "Filer"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr "Baggrundsfarve"
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr "Baggrundens dækkeevne"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4593,6 +4600,21 @@ msgctxt "#10004"
 msgid "Settings"
 msgstr "Indstillinger"
 
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "Ikke tilgængelig"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr "N/A"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
 msgid "System information"
@@ -4800,7 +4822,7 @@ msgstr "Virtuelt tastatur"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10104"
 msgid "Volume bar"
-msgstr ""
+msgstr "Volume bar"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10106"
@@ -4830,12 +4852,12 @@ msgstr "Nedlukningsmenu"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10114"
 msgid "Player controls"
-msgstr ""
+msgstr "Afspiller styring"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10115"
 msgid "Seek bar"
-msgstr ""
+msgstr "Søgebar"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10116"
@@ -4876,7 +4898,7 @@ msgstr "Filbrowser"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#10127"
 msgid "channels"
-msgstr ""
+msgstr "kanaler"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4981,7 +5003,7 @@ msgstr "OSD CMS-indstillinger"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10159"
 msgid "Subtitle OSD settings"
-msgstr ""
+msgstr "Undertekst OSD indstillinger"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -5204,7 +5226,7 @@ msgstr "Videoindstillinger for spil"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
 msgid "Select dialog"
-msgstr ""
+msgstr "Vælg dialog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12001"
@@ -6866,7 +6888,7 @@ msgstr "Aktiver denne indstilling for at bruge hardware acceleration til HEVC co
 #: system/settings/settings.xml
 msgctxt "#13462"
 msgid "PRIME Render Method"
-msgstr ""
+msgstr "PRIME renderings metode"
 
 #. Description of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
@@ -6885,7 +6907,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#13465"
 msgid "EGL"
-msgstr ""
+msgstr "EGL"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7410,7 +7432,7 @@ msgstr "Sæt sange i kø ved valg"
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "Hvidlistning"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -11971,7 +11993,7 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr ""
+msgstr "Når intet lokalt album cover eksisterer anvendes online cover. Hvis begge ikke eksisterer anvendes billede fra musikfilen"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12767,7 +12789,7 @@ msgstr "Kan ikke forbinde til netværksserver"
 msgctxt "#20450"
 msgid ""
 "Unable to connect to remote server. Would you like to continue scanning?"
-msgstr "Kan ikke forbinde til fjernserver. VIl du fortsætte skanningen?"
+msgstr "Kunne ikke forbinde til fjernserver. Vil du fortsætte skanningen?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -12949,7 +12971,7 @@ msgstr "Hvis mp4- eller mkv-filer har mærkater, anvendes disse som metadata i b
 #: xbmc/view/GUIViewState.cpp
 msgctxt "#21345"
 msgid "Uncategorized"
-msgstr ""
+msgstr "Ukategoriseret"
 
 #: system/settings/settings.xml
 msgctxt "#21358"
@@ -13701,6 +13723,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "GPS-højde"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Retning"
@@ -14791,7 +14814,7 @@ msgstr "Ønsker du at skifte til dette sprog?"
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24133"
 msgid "Subtitle settings"
-msgstr "Indstillinger for undertekster"
+msgstr "Undertekstindstillinger"
 
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24134"
@@ -16890,39 +16913,42 @@ msgstr "Avancerede indstillinger"
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35227"
 msgid "Rotation"
-msgstr ""
+msgstr "Rotation"
 
 #. Label of the thumbnail for when the video is not rotated and is displayed
 #. normally
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 msgctxt "#35228"
 msgid "0°"
-msgstr ""
+msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
-msgstr ""
+msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
-msgstr ""
+msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
-msgstr ""
+msgstr "270°"
 
 #. Label of thumbnail in the in-game menu for stretching the video to
 #. fullscreen
 #: xbmc/games/dialogs/osd/DialogGameViewMode.h
 msgctxt "#35232"
 msgid "Fullscreen"
-msgstr ""
+msgstr "Fuldskærm"
 
 #. Label of the setting in the in-game menu for stretching the game to fit the
 #. monitor
@@ -16930,7 +16956,7 @@ msgstr ""
 #: xbmc/games/dialogs/osdDialogGameViewMode.cpp
 msgctxt "#35233"
 msgid "Stretch mode"
-msgstr ""
+msgstr "Strækket tilstand"
 
 #. Label of button in the in-game menu for configuring the game's controls
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -16952,6 +16978,18 @@ msgstr "Tilføj spil kilde"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Rediger spil kilde"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr ""
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18155,12 +18193,24 @@ msgid ""
 "recordings."
 msgstr "Skift til fuld skærm, når du starter afspilning af kanaler og optagelser."
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr "Indstil farven, som anvendes til undertekstbaggrunden"
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Vis information om signalkvalitet i codec informationsvinduet (hvis det understøttes af både backend og add-on)."
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr "Indstil dækkeevnen af undertekstbaggrunden"
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -18224,7 +18274,7 @@ msgid ""
 "Execute the wakeup command below when exiting this application or going into"
 " hibernation mode. The timestamp of the next scheduled recording is passed "
 "as parameter."
-msgstr ""
+msgstr "Eksekver wakeup kommandoen herunder når applikationen lukkes eller dvale aktiveres. Tidspunktet for næste optagelse sendes som parameter."
 
 #: system/settings/settings.xml
 msgctxt "#36242"
@@ -19285,7 +19335,7 @@ msgid ""
 "Here you can enable or disable master lock and define the PIN code used to "
 "unlock it. You can also specify which areas of the application would need a "
 "PIN to access them."
-msgstr ""
+msgstr "Her kan du aktivere eller deaktivere hovedlåsen og definerer PIN koden som anvendes. Du kan også vælge områder i KODI, som kræver kode for at blive til gået."
 
 #. Description of setting with label #20076 "Ask for master lock code on
 #. startup"
@@ -19883,7 +19933,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36560"
 msgid "Colour management"
-msgstr "Administration af farve"
+msgstr "Farveindstillinger"
 
 #. Description of setting "System -> Video output -> Colour management" with
 #. label #36560
@@ -19931,7 +19981,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36566"
 msgid "ICC display profile"
-msgstr ""
+msgstr "ICC display profil"
 
 #. Description of setting "System -> Video output -> ICC display profile" with
 #. label #36566
@@ -20807,6 +20857,7 @@ msgstr ""
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Videostrøm"
@@ -21146,7 +21197,7 @@ msgstr "Til bibliotekets mapper"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38304"
 msgid "Choose kind of export output"
-msgstr ""
+msgstr "Vælg eksport type"
 
 #. Folder path for export output file or files
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21163,18 +21214,18 @@ msgstr "Elementer der eksporteres"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
 msgid "Include art work such as thumbnails and fanart"
-msgstr ""
+msgstr "Inkluder grafik, som miniaturebilleder og fankunst"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
 msgid ""
 "Include items that have not been scraped (to create template NFO files)"
-msgstr ""
+msgstr "Inkluder emner som ikke har info endnu (til at oprette NFO filer)"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
 msgid "Output only artwork, not NFO files"
-msgstr ""
+msgstr "Eksporter kun grafik, ikke NFO filer."
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
@@ -21397,7 +21448,7 @@ msgctxt "#39017"
 msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
-msgstr ""
+msgstr "Aktiverer UPnP-serveren. Dette giver dig mulighed for at streame mediefiler i dine biblioteker til en UPnP-klient."
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#39018"
@@ -21466,7 +21517,7 @@ msgstr "Kilde"
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#39031"
 msgid "Sources"
-msgstr ""
+msgstr "Kilder"
 
 #: system/settings/settings.xml
 msgctxt "#39100"
@@ -21510,12 +21561,14 @@ msgstr "påtvunget"
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "undertekster"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr "Lydbeskrivelse"
@@ -21536,3 +21589,16 @@ msgstr "Vælg opløsning"
 msgctxt "#39111"
 msgid "original"
 msgstr "original"
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
+msgstr ""

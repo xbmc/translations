@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-09 07:53+0000\n"
-"Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -653,11 +653,6 @@ msgstr "Nėra jungties"
 msgctxt "#160"
 msgid "Free"
 msgstr "Laisva"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "Neprieinama"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1885,12 +1880,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "Atsiunčiama miniatiūrą..."
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "Neprieinama"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "Rodinys: Didelės piktogramos"
@@ -1977,7 +1966,7 @@ msgstr "Neaptiktas joks optinių diskų įrenginys"
 #: xbmc/Application.cpp
 msgctxt "#436"
 msgid "You need an optical disc drive to play this video"
-msgstr "Reikalingas optinių diskų įrenginys, norint atkurti šį video įrašą"
+msgstr "Reikalingas optinių diskų įrenginys, norint atkurti šį vaizdo įrašą"
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -2206,7 +2195,7 @@ msgstr "Bendras garso lygio rezervas"
 
 msgctxt "#495"
 msgid "Upscale videos to GUI resolution"
-msgstr "Pakelti video įrašų raišką, kad atitiktų GUI raišką"
+msgstr "Pakelti vaizdo įrašų raišką, kad atitiktų GUI raišką"
 
 msgctxt "#496"
 msgid "Calibration"
@@ -2269,7 +2258,7 @@ msgstr "Įjungti vizualizacijas"
 
 msgctxt "#511"
 msgid "Enable video mode switching"
-msgstr "Įjungti video režimo perjungimą"
+msgstr "Įjungti vaizdo režimo perjungimą"
 
 #: system/settings/settings.xml
 msgctxt "#512"
@@ -3032,7 +3021,7 @@ msgstr "Išsamus [B]duomenų bazės[/B] komponento žurnalo rašymas"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#683"
 msgid "Verbose logging of [B]audio/video timing information[/B]"
-msgstr "Išsamus [B]garso/video laikų[/B] žurnalo rašymas"
+msgstr "Išsamus [B]garso/vaizdo laikų informacijos[/B] žurnalo rašymas"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
@@ -3048,6 +3037,10 @@ msgstr "Išsamus [B]PVR[/B] komponento žurnalo rašymas"
 msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
 msgstr "Išsamus [B]EPG[/B] komponento žurnalo rašymas"
+
+msgctxt "#687"
+msgid "From metadata"
+msgstr ""
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -3158,6 +3151,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "Prievadas"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "Juodas ekranas"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Išsaugoti ir pritaikyti"
@@ -3218,6 +3216,15 @@ msgstr "Geltona"
 msgctxt "#744"
 msgid "Files"
 msgstr "Failai"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr "Fono spalva"
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr "Fono nepermatomumas"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4584,6 +4591,21 @@ msgctxt "#10004"
 msgid "Settings"
 msgstr "Nustatymai"
 
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "Neprieinama"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr "N/A"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
 msgid "System information"
@@ -4627,7 +4649,7 @@ msgstr "Pavadinimai"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10025"
 msgid "Videos"
-msgstr "Video"
+msgstr "Vaizdo įrašai"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10028"
@@ -4652,7 +4674,7 @@ msgstr "Nustatymai - Medija"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10032"
 msgid "Settings - Interface"
-msgstr "Nustatymai - Teminė sąsaja"
+msgstr "Nustatymai - Vartotojo sąsaja"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10034"
@@ -5053,7 +5075,7 @@ msgstr "Dabar atkuriama - Muzika"
 
 msgctxt "#10522"
 msgid "Now playing - Videos"
-msgstr "Dabar atkuriama - Video"
+msgstr "Dabar atkuriama - Vaizdo įrašai"
 
 #: xbmc/music/ContextMenus.h
 msgctxt "#10523"
@@ -5174,7 +5196,7 @@ msgstr "Radijas visame ekrane"
 
 msgctxt "#10820"
 msgid "Game video filter"
-msgstr "Žaidimų video filtras"
+msgstr "Žaidimų vaizdo filtras"
 
 msgctxt "#10821"
 msgid "Games"
@@ -5190,7 +5212,7 @@ msgstr "Žaidimų valdikliai"
 
 msgctxt "#10824"
 msgid "Game video settings"
-msgstr "Žaidimų video nustatymai"
+msgstr "Žaidimų vaizdo nustatymai"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12000"
@@ -5210,7 +5232,7 @@ msgstr "OK dialogas"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12003"
 msgid "Video info"
-msgstr "Video info."
+msgstr "Video info"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#12005"
@@ -5241,7 +5263,7 @@ msgstr "Grįžti į muzikos langą"
 #: unknown
 msgctxt "#12011"
 msgid "Return to videos window"
-msgstr "Grįžti į video langą"
+msgstr "Grįžti į vaizdo įrašų langą"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 msgctxt "#12012"
@@ -7653,7 +7675,7 @@ msgstr "PVR ir TV nustatymai"
 #: system/settings/settings.xml
 msgctxt "#14206"
 msgid "Interface"
-msgstr "Teminė sąsaja"
+msgstr "Vartotojo sąsaja"
 
 #: system/settings/settings.xml
 msgctxt "#14207"
@@ -13692,6 +13714,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "GPS aukštuma"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Orientacija"
@@ -16892,18 +16915,21 @@ msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
 msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
 msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
 msgstr "270°"
@@ -16943,6 +16969,18 @@ msgstr "Pridėti žaidimų šaltinį"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "Redaguoti žaidimų šaltinį"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr "Įjungti automatinį išsaugojimą, jei palaikomas"
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr "Išsaugoti žaidimą automatiškai žaidimo metu, jei tai palaikoma. Tęskite žaidimą nuo ten, kur palikote."
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18146,12 +18184,24 @@ msgid ""
 "recordings."
 msgstr "Perjungti į viso ekrano režimą, kai pradedamas kanalo ar įrašo atkūrimas."
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr "Nustatykite spalvą, kuri bus naudojama subtitrų fonui."
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "Atvaizduoti signalo kokybės informaciją kodeko informacijos lange (jei tai palaiko priedas ir posistemė)."
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr "Nustatykite subtitrų fono nepermatomumą."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20798,6 +20848,7 @@ msgstr "Ši parinktis naudoja kadrų pakavimą, kad išvestų pilnos raiškos 3D
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "Video srautas"
@@ -21501,12 +21552,14 @@ msgstr "priverstiniai"
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "antraštės"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr "garso aprašymas"
@@ -21527,3 +21580,16 @@ msgstr "Pasirinkti raišką"
 msgctxt "#39111"
 msgid "original"
 msgstr "originalus"
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
+msgstr ""

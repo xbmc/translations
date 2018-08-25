@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-07-13 03:39+0000\n"
-"Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
+"PO-Revision-Date: 2018-08-25 06:05+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -660,11 +660,6 @@ msgstr "未連接"
 msgctxt "#160"
 msgid "Free"
 msgstr "可用"
-
-#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-msgctxt "#161"
-msgid "Unavailable"
-msgstr "不可用"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -1892,12 +1887,6 @@ msgctxt "#415"
 msgid "Downloading thumbnail..."
 msgstr "正在下載縮略圖…"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
-msgctxt "#416"
-msgid "Not available"
-msgstr "無法使用"
-
 msgctxt "#417"
 msgid "View: Big icons"
 msgstr "顯示：大圖示"
@@ -3056,6 +3045,10 @@ msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
 msgstr "[B]電子節目表[/B]元件的詳細紀錄"
 
+msgctxt "#687"
+msgid "From metadata"
+msgstr ""
+
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -3165,6 +3158,11 @@ msgctxt "#730"
 msgid "Port"
 msgstr "連接埠"
 
+#: system/settings/settings.xml
+msgctxt "#731"
+msgid "Black"
+msgstr "全黑"
+
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "儲存 & 套用"
@@ -3225,6 +3223,15 @@ msgstr "黃色"
 msgctxt "#744"
 msgid "Files"
 msgstr "檔案"
+
+#: system/settings/settings.xml
+msgctxt "#745"
+msgid "Background colour"
+msgstr ""
+
+msgctxt "#746"
+msgid "Background opacity"
+msgstr ""
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4590,6 +4597,21 @@ msgstr "檔案管理員"
 msgctxt "#10004"
 msgid "Settings"
 msgstr "系統設定"
+
+#: addons/skin.estouchy/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml xbmc/LangInfo.cpp
+#: xbmc/addons/Scraper.cpp xbmc/addons/addons/GUIDialogAddonInfo.cpp
+#: xbmc/guilib/guiinfo/SystemGUIInfo.cpp xbmc/utils/SystemInfo.cpp
+msgctxt "#10005"
+msgid "Not available"
+msgstr "無法使用"
+
+#. Abbreviation of "Not Available"
+#: xbmc/utils/SystemInfo.cpp
+msgctxt "#10006"
+msgid "N/A"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
@@ -13699,6 +13721,7 @@ msgctxt "#21842"
 msgid "GPS altitude"
 msgstr "GPS 高度"
 
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "方位"
@@ -16899,18 +16922,21 @@ msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
 msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
 msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
 msgstr "270°"
@@ -16950,6 +16976,18 @@ msgstr "加入遊戲資源檔"
 msgctxt "#35252"
 msgid "Edit game source"
 msgstr "編輯遊戲資源檔"
+
+#: system/settings/settings.xml
+msgctxt "#35253"
+msgid "Enable autosave if supported"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#35254"
+msgid ""
+"Save the game automatically during game play, if supported. Resume playing "
+"where you left off."
+msgstr ""
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -18153,12 +18191,24 @@ msgid ""
 "recordings."
 msgstr "播放頻道或錄影檔時切換至全螢幕顯示。"
 
+#. Description of setting with label #745 "Background Colour"
+#: system/settings/settings.xml
+msgctxt "#36228"
+msgid "Set the colour to be used for the subtitle background."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36229"
 msgid ""
 "Display signal quality information in the codec information window (if "
 "supported by the add-on and backend)."
 msgstr "在編碼格式資料視窗中顯示訊號品質資訊(前提是附加元件及後端要支援)。"
+
+#. Description of setting with label #746 "Background Opacity"
+#: system/settings/settings.xml
+msgctxt "#36230"
+msgid "Set the the subtitle background opacity."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -20805,6 +20855,7 @@ msgstr "此選項使用幀封裝技術來輸出全解析的3D影像至HDMI。[CR
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+#: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
 msgstr "影像串流"
@@ -21508,12 +21559,14 @@ msgstr "強制"
 
 #. audio/video/subtitle flag - FLAG_HEARING_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
 msgstr "說明性字幕"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
 msgstr "聲音描述"
@@ -21534,3 +21587,16 @@ msgstr "選擇解析度"
 msgctxt "#39111"
 msgid "original"
 msgstr "原始"
+
+#. Used for a setting which allows centre channel (voice/speech) volume to be
+#. adjusted when downmixing.
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39112"
+msgid "Downmix: Center Mix Level"
+msgstr ""
+
+#. Help text for 39112
+#: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
+msgctxt "#39113"
+msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
+msgstr ""
