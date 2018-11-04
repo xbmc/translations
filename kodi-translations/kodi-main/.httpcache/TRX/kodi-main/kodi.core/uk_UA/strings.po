@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-08-25 06:05+0000\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/teamxbmc/kodi-main/language/uk_UA/)\n"
 "MIME-Version: 1.0\n"
@@ -781,9 +781,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Пошук альбому"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -996,11 +997,6 @@ msgstr "Швидкість"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "Вертикальний зсув"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "Тестові шаблони…"
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -3046,7 +3042,7 @@ msgstr "Докладний журнал компонента [B]EPG[/B]"
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr ""
+msgstr "Зі метаданих"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -4616,11 +4612,6 @@ msgstr "Н/Д"
 msgctxt "#10007"
 msgid "System information"
 msgstr "Відомості про систему"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "Налаштування - Тестові шаблони"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -6892,19 +6883,19 @@ msgstr "Метод обробки PRIME"
 msgctxt "#13463"
 msgid ""
 "This option switches between direct-to-plane and EGL rendering methods."
-msgstr ""
+msgstr "Це налаштування переключає методи виведення між direct-to-plane та EGL."
 
 #. String for options 1 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13464"
 msgid "Direct To Plane"
-msgstr ""
+msgstr "Direct To Plane"
 
 #. String for options 2 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13465"
 msgid "EGL"
-msgstr ""
+msgstr "EGL"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7429,7 +7420,7 @@ msgstr "Додавати треки до черги при виборі"
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "\"Білий\" список"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -8848,7 +8839,7 @@ msgstr "Розклад"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "Відомості"
@@ -9869,12 +9860,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Продовжити?"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "Операції клієнтів"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10151,8 +10136,8 @@ msgstr "Пріоритети клієнтів"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "Відомості про таймер"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10544,6 +10529,19 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
+msgstr "Записати вибрану програму чи переключитися на поточну програму?"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr "Використовувати простий OSD для зміщення часу."
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
 msgstr ""
 
 #. label for epg genre value
@@ -11982,7 +11980,7 @@ msgstr "Папка відомостей про виконавця"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "Використовувати картинки альбомів з Інтернету"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -11990,6 +11988,11 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
+msgstr "Якщо локальних обкладинок альбомів не знайдено, будуть використані картинки і Інтернету. Якщо жоден варіант недоступний, будут використані картинки обкладинок, включені в музичні файли."
+
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
 msgstr ""
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
@@ -12968,7 +12971,7 @@ msgstr "Якщо файли mp4 або mkv мають мітки, викорис
 #: xbmc/view/GUIViewState.cpp
 msgctxt "#21345"
 msgid "Uncategorized"
-msgstr ""
+msgstr "Без категорії"
 
 #: system/settings/settings.xml
 msgctxt "#21358"
@@ -13404,10 +13407,12 @@ msgid "Internet connection required."
 msgstr "Необхідне підключення до Інтернету."
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "Більше..."
@@ -13582,6 +13587,13 @@ msgstr "Кількість звукових потоків"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "Кількість потоків субтитрів"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "Перегляд"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14403,6 +14415,7 @@ msgstr "Останнє оновлення {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "Встановлення {0:s}..."
@@ -14549,6 +14562,7 @@ msgstr "Не вдалося встановити залежності"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "Встановлення надбудови..."
@@ -14636,7 +14650,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "У обкладинці бракує файлів"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "Надбудова несумісна через відсутні залежності."
@@ -15062,6 +15078,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Цей диск або файл Blu-ray зашифровано, і його неможливо відтворити."
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Відомості Radiotext Plus"
@@ -15516,8 +15534,8 @@ msgstr "Повідомлення про дорожній рух"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS повідомить вам про стан на дорогах"
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16323,6 +16341,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Натисніть усі аналогові кнопки зараз, щоб виявити їх:[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16343,6 +16375,7 @@ msgstr "Ігрові надбудови"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16407,6 +16440,7 @@ msgid ""
 msgstr "Скинути цей профіль контролера для всіх підключених пристроїв?"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16436,7 +16470,7 @@ msgstr "Гоночний руль"
 #. the controller mapping dialog.
 msgctxt "#35072"
 msgid "Paddles"
-msgstr ""
+msgstr "Важелі на рулі"
 
 #. Label for buttons that appear on a joystick for games. Used in the
 #. controller mapping dialog.
@@ -16801,7 +16835,8 @@ msgid "Game resources"
 msgstr "Ігрові ресурси"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "Не вдалося запустити гру"
@@ -16887,6 +16922,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "Вихід"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr "Відсутні: {0:s}"
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16904,48 +16946,48 @@ msgstr "Відеофільтр"
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35226"
 msgid "Advanced settings"
-msgstr ""
+msgstr "Розширені налаштування"
 
 #. Label of button in the in-game menu for changing the video rotation
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35227"
 msgid "Rotation"
-msgstr ""
+msgstr "Поворот"
 
 #. Label of the thumbnail for when the video is not rotated and is displayed
 #. normally
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 msgctxt "#35228"
 msgid "0°"
-msgstr ""
+msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
-msgstr ""
+msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
-msgstr ""
+msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
-msgstr ""
+msgstr "270°"
 
 #. Label of thumbnail in the in-game menu for stretching the video to
 #. fullscreen
 #: xbmc/games/dialogs/osd/DialogGameViewMode.h
 msgctxt "#35232"
 msgid "Fullscreen"
-msgstr ""
+msgstr "Повний екран"
 
 #. Label of the setting in the in-game menu for stretching the game to fit the
 #. monitor
@@ -16953,12 +16995,26 @@ msgstr ""
 #: xbmc/games/dialogs/osdDialogGameViewMode.cpp
 msgctxt "#35233"
 msgid "Stretch mode"
-msgstr ""
+msgstr "Режим розтягування"
 
 #. Label of button in the in-game menu for configuring the game's controls
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35234"
 msgid "Controls"
+msgstr "Керування"
+
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr "Натисніть {0:s}, щоб відкрити меню гри."
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
 msgstr ""
 
 #: xbmc/windows/GUIMediaWindow.cpp
@@ -16979,18 +17035,19 @@ msgstr "Змінити джерело ігор"
 #: system/settings/settings.xml
 msgctxt "#35253"
 msgid "Enable autosave if supported"
-msgstr ""
+msgstr "Увімкнути автозбереження, якщо підтримується"
 
 #: system/settings/settings.xml
 msgctxt "#35254"
 msgid ""
 "Save the game automatically during game play, if supported. Resume playing "
 "where you left off."
-msgstr ""
+msgstr "Автоматично зберігати хід гри, якщо ця функція підтримується. Дає змогу продовжити гру з місця, де ви її залишили."
 
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Не вдалося встановити надбудову."
@@ -17283,17 +17340,17 @@ msgstr "Пробуджувати ресівер при запуску Kodi"
 #: system/peripherals.xml
 msgctxt "#36047"
 msgid "Remote button press delay before repeating (ms)"
-msgstr ""
+msgstr "Затримка натискання кнопок на пульті дистанційного керування перед повтором (мс)."
 
 #: system/peripherals.xml
 msgctxt "#36048"
 msgid "Remote button press repeat rate (ms)"
-msgstr ""
+msgstr "Частота повтору натискань кнопок на пульті (мс)"
 
 #: system/peripherals.xml
 msgctxt "#36049"
 msgid "Remote button press release time (ms)"
-msgstr ""
+msgstr "Пауза відпускання кнопок пульту (мс)"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17669,7 +17726,7 @@ msgctxt "#36152"
 msgid ""
 "Enable automatic playback of the next file in the list for selected playlist"
 " types."
-msgstr ""
+msgstr "Автоматичне програвання наступного файла у списку для вибраних типів списків відтворення."
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -18194,7 +18251,7 @@ msgstr "Перемикатися на повний екран при увімк�
 #: system/settings/settings.xml
 msgctxt "#36228"
 msgid "Set the colour to be used for the subtitle background."
-msgstr ""
+msgstr "Вибір кольору для тла субтитрів."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18207,7 +18264,7 @@ msgstr "Показувати відомості про якість сигнал
 #: system/settings/settings.xml
 msgctxt "#36230"
 msgid "Set the the subtitle background opacity."
-msgstr ""
+msgstr "Вибір прозорості для тла субтитрів."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -18235,6 +18292,16 @@ msgid ""
 "Duration of instant recordings when pressing the record button. This value "
 "will be taken into account if \"Instant recording action\" is set to "
 "\"Record for a fixed period of time\""
+msgstr ""
+
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -18656,6 +18723,14 @@ msgid ""
 "saved in."
 msgstr "Вибрати папку для збереження відомостей про виконавців (файли NFO та картинки)."
 
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -19040,12 +19115,6 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Калібрування інтерфейсу для налаштування масштабу відображення. Скористайтеся цим засобом, якщо зображення виходить за межі дисплею або відображається із чорними полями."
-
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "Тестові шаблони для калібрування дисплею."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19580,6 +19649,12 @@ msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "Використовувати VideoPlayer для декодування відеофайлів із прискоренням за допомогою MMAL."
 
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
@@ -19761,7 +19836,7 @@ msgctxt "#36534"
 msgid ""
 "Specify additional libraries whose verbose messages are to be included in "
 "the debug log."
-msgstr ""
+msgstr "Вкажіть додаткові бібліотеки, повідомлення яких будуть включені в журнал налагодження."
 
 #. label of a setting, allowing to specify the stereoscopic 3D mode of a video
 #: guilib/StereoscopicsManager.cpp
@@ -20189,21 +20264,21 @@ msgstr ""
 msgctxt "#36600"
 msgid ""
 "This category contains the settings for how the music library is handled."
-msgstr ""
+msgstr "Налаштування музичної медіатеки."
 
 #. Description of settings category with label #14081 "File lists"
 #: system/settings/settings.xml
 msgctxt "#36601"
 msgid ""
 "This category contains the settings for how music file lists are handled."
-msgstr ""
+msgstr "Налаштування показу списків музичних файлів."
 
 #. Description of settings category with label #1273 "AirPlay"
 #: system/settings/settings.xml
 msgctxt "#36602"
 msgid ""
 "This category contains the settings for how the AirPlay service is handled."
-msgstr ""
+msgstr "Налаштування служби AirPlay."
 
 #. Description of settings category with label #14216 Display
 #: system/settings/settings.xml
@@ -20370,7 +20445,7 @@ msgstr "Клієнт"
 #: system/settings/settings.xml
 msgctxt "#36628"
 msgid "Minimum protocol version"
-msgstr ""
+msgstr "Мінімальна версія протоколу"
 
 #. Description of setting with label #36628 "Minimum protocol version"
 #: system/settings/settings.xml
@@ -21458,6 +21533,7 @@ msgid "installed"
 msgstr "Встановлено"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr ""

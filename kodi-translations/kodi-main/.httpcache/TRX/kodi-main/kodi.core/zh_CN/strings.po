@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-08-25 06:05+0000\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -787,9 +787,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "搜索专辑"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -1002,11 +1003,6 @@ msgstr "速度"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "纵向偏移"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "测试图案..."
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -4622,11 +4618,6 @@ msgstr "不可用"
 msgctxt "#10007"
 msgid "System information"
 msgstr "系统信息"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "设置 - 测试图"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -8854,7 +8845,7 @@ msgstr "时间轴"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "信息"
@@ -9875,12 +9866,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "继续吗？"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "客户端动作"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10157,8 +10142,8 @@ msgstr "客户端优先级"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "浏览定时器信息"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10551,6 +10536,19 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "录制已选择节目还是切换到当前节目？"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr ""
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11998,6 +11996,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "无本地专辑封面时，使用在线艺术图片。如本地和在线图片均不可用，则使用音乐文件内嵌封面图片"
 
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
+msgstr ""
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -13410,10 +13413,12 @@ msgid "Internet connection required."
 msgstr "需要访问互联网。"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "获取更多..."
@@ -13588,6 +13593,13 @@ msgstr "音轨数"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "字幕数"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "视图"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14409,6 +14421,7 @@ msgstr "最近更新 {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "正在安装 {0:s}..."
@@ -14555,6 +14568,7 @@ msgstr "安装依赖库失败"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "正在安装插件中..."
@@ -14642,7 +14656,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "皮肤缺少部分文件"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "插件因缺少依赖项不兼容。"
@@ -15068,6 +15084,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "此蓝光盘（或文件）已加密，无法播放。"
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Radiotext Plus 信息"
@@ -15522,8 +15540,8 @@ msgstr "交通咨询信息"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS 通知你有关交通咨询信息"
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16329,6 +16347,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "现在按下所有模拟按钮检测它们：[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16349,6 +16381,7 @@ msgstr "游戏插件"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16413,6 +16446,7 @@ msgid ""
 msgstr "您希望为所有已连接装置重置此控制器配置吗？"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16807,7 +16841,8 @@ msgid "Game resources"
 msgstr "游戏资源"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "游戏运行失败"
@@ -16893,6 +16928,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "退出"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr ""
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16967,6 +17009,20 @@ msgctxt "#35234"
 msgid "Controls"
 msgstr "控制"
 
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr ""
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -16997,6 +17053,7 @@ msgstr "如果支持则在游戏运行时自动保存。游戏可从退出时状
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "插件安装失败。"
@@ -18243,6 +18300,16 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "按下录像按钮时即时录像的时长。当“即时录像动作”设置为“录制固定时长”时，此值起作用。"
 
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
@@ -18662,6 +18729,14 @@ msgid ""
 "saved in."
 msgstr "选择保存歌手信息（nfo 文件和图片）的文件夹。"
 
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -19046,12 +19121,6 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "通过调整过扫描来校准用户界面。当图像在显示器中显示得过大或太小时使用这个工具。"
-
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "显示器硬件校准的测试图案。"
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19585,6 +19654,12 @@ msgstr "允许硬件加速 - MMAL"
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "使用 VideoPlayer 用 MMAL 加速解码视频文件。"
+
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -21464,6 +21539,7 @@ msgid "installed"
 msgstr "已安装"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr "以下附加插件将被安装"

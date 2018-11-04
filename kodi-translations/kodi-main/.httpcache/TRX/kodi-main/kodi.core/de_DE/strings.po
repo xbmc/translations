@@ -34,8 +34,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-09-26 18:29+0000\n"
-"Last-Translator: Alexander Scholz\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -801,9 +801,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Suche nach Album"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -1016,11 +1017,6 @@ msgstr "Geschwindigkeit"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "Vertikale Verschiebung"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "Testbilder..."
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -4636,11 +4632,6 @@ msgstr "N/A"
 msgctxt "#10007"
 msgid "System information"
 msgstr "Systeminformationen"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "Einstellungen->Testmuster"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -8868,7 +8859,7 @@ msgstr "Zeitlinie"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "Informationen"
@@ -9889,12 +9880,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Fortsetzen?"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "Client-Aktionen"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10171,8 +10156,8 @@ msgstr "Priorität der Clients"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "Timer-Informationen anzeigen"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10565,6 +10550,19 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "Die selektierte Sendung aufnehmen oder zum Sender wechseln?"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr "Einfache Timeshift UI"
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12012,6 +12010,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "Wenn kein lokales Album-Cover existiert, wird eine online Grafik benutzt. Wenn weder lokale noch online Grafiken verfügbar sind, werden Bilder, die in den Musikdateien eingebettet sind, verwendet."
 
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
+msgstr "Beim Sortieren nach Interpret, Sortiernamen verwenden"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -13424,10 +13427,12 @@ msgid "Internet connection required."
 msgstr "Internetverbindung benötigt."
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "Mehr..."
@@ -13602,6 +13607,13 @@ msgstr "Anzahl Tonspuren"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "Anzahl Untertitel"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "Ansicht"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14423,6 +14435,7 @@ msgstr "Zuletzt aktualisiert: {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "{0:s} wird installiert..."
@@ -14569,6 +14582,7 @@ msgstr "Installieren der Abhängigkeiten fehlgeschlagen"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "Addon wird installiert..."
@@ -14656,7 +14670,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Einige Dateien des Skins fehlen"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "Addon ist aufgrund unerfüllter Voraussetzungen nicht kompatibel."
@@ -15082,6 +15098,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Diese Blu-ray Disc (oder Datei) ist verschlüsselt und kann nicht abgespielt werden."
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Radiotext Plus Information"
@@ -15536,8 +15554,8 @@ msgstr "Verkehrsfunk"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS für Verkehrsinformationen"
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16343,6 +16361,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Alle analogen Buttons drücken, um sie zu erkennen:[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16363,6 +16395,7 @@ msgstr "Spiele-Addons"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16427,6 +16460,7 @@ msgid ""
 msgstr "Soll dieses Controller-Profil für alle angeschlossenen Geräte zurücksetzt werden?"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16609,7 +16643,7 @@ msgstr "Light gun"
 #. Used in the controller mapping dialog.
 msgctxt "#35106"
 msgid "Shoot offscreen"
-msgstr "Offscreen-Aufnahme"
+msgstr "Offscreen-Schießen"
 
 #. Heading for switches found on a game console, such as the Atari 2600. Used
 #. in the controller mapping dialog.
@@ -16821,7 +16855,8 @@ msgid "Game resources"
 msgstr "Spiele-Quellen"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "Spiel konnte nicht gestartet werden"
@@ -16907,6 +16942,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "Verlassen"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr "Es fehlt: {0:s}"
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16981,6 +17023,20 @@ msgctxt "#35234"
 msgid "Controls"
 msgstr "Steuerung"
 
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr "Zum Öffnen des In-Game Menüs, {0:s} drücken."
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -17011,6 +17067,7 @@ msgstr "Das Spiel automatisch während des Spielens speichern, falls unterstütz
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Die Installation des Addons ist fehlgeschlagen."
@@ -18257,6 +18314,16 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Länge von Sofortaufnahmen. Dieser Wert wird auch berücksichtigt, wenn \"Sofortaufnahme-Aktion\" auf \"Eine festgelegte Zeit lang aufnehmen\" eingestellt ist"
 
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
+msgstr "Die Timeshift UI stellt immer den kompletten Timeshift-Puffer gemeinsam mit der aktuellen Sendung dar Die einfache Timeshift UI stellt nur die gerade laufende Sendung dat, ohne Anzeige, wie weit man im Timeshift-Puffer vor oder zurück springen könnte."
+
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
@@ -18676,6 +18743,14 @@ msgid ""
 "saved in."
 msgstr "Auswahl des Ordners, in dem Interpreten-Infos (NFO-Dateien und Bilder) gespeichert werden sollen."
 
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr "Beim Sortieren von Musikstücken nach Interpret, den Sortiernamen, z.B. \"Parton, Dolly\", anstelle des Namens verwenden."
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -19060,12 +19135,6 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Kalibriert die Benutzeroberfläche durch das Einstellen des Overscan. Benutzen, wenn das angezeigte Bild zu groß oder zu klein für den Bildschirm ist."
-
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "Test-Muster zur Bildschirm-Hardware-Kalibrierung."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19600,6 +19669,12 @@ msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "VideoPlayer zum Dekodieren von Video-Dateien mit MMAL-Beschleunigung benutzen."
 
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
@@ -20061,7 +20136,7 @@ msgid ""
 "details. Absolute gamma does not account for display black at all and will "
 "clip the lowest levels to display black on any display with higher than zero"
 " black level."
-msgstr "Auswahl Gammakurvenformel. Verwendung von BT.1886 für die Gammakurve, die die Schwarz-Weiß-Werte der Anzeige berücksichtigt und Wahrnehmungsstörungen vermeidet. Der Eingangsoffset wird für eine ähnliche Kurve mit einem manuell festgelegten effektiven Gamma verwendet. Der Ausgabeoffset ermöglicht ein wahrnehmungsmäßiges Clipping, kann aber verwendet werden, um falsche Einstellungen des Hauptmonitors zu kompensieren, die zu aufgehellten dunklen Details führen. Absolutes Gamma berücksichtigt überhaupt nicht die Anzeige von Schwarz und schneidet die niedrigsten Pegel ab, um Schwarz auf jeder Anzeige mit einem höheren als dem Null-Schwarzpegel anzuzeigen.\n\nÜbersetzt mit www.DeepL.com/Translator"
+msgstr "Auswahl Gammakurvenformel. Verwendung von BT.1886 für die Gammakurve, die die Schwarz-Weiß-Werte der Anzeige berücksichtigt und Wahrnehmungsstörungen vermeidet. Der Eingangsoffset wird für eine ähnliche Kurve mit einem manuell festgelegten effektiven Gamma verwendet. Der Ausgabeoffset ermöglicht ein wahrnehmungsmäßiges Clipping, kann aber verwendet werden, um falsche Einstellungen des Hauptmonitors zu kompensieren, die zu aufgehellten dunklen Details führen. Absolutes Gamma berücksichtigt überhaupt nicht die Anzeige von Schwarz und schneidet die niedrigsten Pegel ab, um Schwarz auf jeder Anzeige mit einem höheren als dem Null-Schwarzpegel anzuzeigen."
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -20090,7 +20165,7 @@ msgid ""
 "quick preview and higher resolution for more accurate picture. Using a high "
 "resolution may take seconds to prepare when parameters are changed or a new "
 "video is started."
-msgstr "Geben Sie die Auflösung für die 3D-Lookup-Tabelle an. Verwenden einer niedrigeren Auflösung für eine schnelle Vorschau und eine höhere Auflösung für ein genaueres Bild. Die Verwendung einer hohen Auflösung kann unter Umständen Sekunden dauern, bis die Vorbereitung abgeschlossen ist, wenn Parameter geändert oder ein neues Video gestartet wird."
+msgstr "Auflösung für die 3D-Lookup-Tabelle. Verwenden einer niedrigeren Auflösung für eine schnelle Vorschau und eine höhere Auflösung für ein genaueres Bild. Die Verwendung einer hohen Auflösung kann unter Umständen Sekunden dauern, bis die Vorbereitung abgeschlossen ist, wenn Parameter geändert oder ein neues Video gestartet wird."
 
 #. primaries labels
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -21478,6 +21553,7 @@ msgid "installed"
 msgstr "Installiert"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr "Folgende Addons sollen installiert werden"

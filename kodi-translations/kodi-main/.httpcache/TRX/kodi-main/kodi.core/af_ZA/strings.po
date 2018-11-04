@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-09-27 12:39+0000\n"
-"Last-Translator: Heiko <berner.h@gmail.com>\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) (http://www.transifex.com/teamxbmc/kodi-main/language/af_ZA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -774,9 +774,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Soek album"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -989,11 +990,6 @@ msgstr "Spoed"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "Vertikale skuif"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "Toetspatrone..."
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -3716,7 +3712,7 @@ msgctxt "#1002"
 msgid ""
 "The connection to the network location couldn't be established. This could "
 "be due to the network not being connected. Would you like to add it anyway?"
-msgstr "Die konneksie aan die netwerk ligging kon nie bewerkstellig word nie. Dit kan wees weens dat die netwerk nie gekonnekteer is nie. Wil jy dit nogtans byvoeg?"
+msgstr "Die verbinding aan die netwerk ligging kon nie bewerkstellig word nie. Dit kan wees weens dat die netwerk nie gekonnekteer is nie. Wil jy dit nogtans byvoeg?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -4609,11 +4605,6 @@ msgstr "NVT"
 msgctxt "#10007"
 msgid "System information"
 msgstr "Stelsel inligting"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "Verstellings - Toets patrone"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -5935,7 +5926,7 @@ msgstr "Blanko vertone"
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#13140"
 msgid "Active connections detected!"
-msgstr "Aktiewe konneksies ontdek!"
+msgstr "Aktiewe verbindings ontdek!"
 
 #: xbmc/network/NetworkServices.cpp
 msgctxt "#13141"
@@ -7243,7 +7234,7 @@ msgstr "'n Oor begin is nodig om jou netwerk opstelling te verander. Wil jy nou 
 #: system/settings/settings.xml
 msgctxt "#14041"
 msgid "Internet connection bandwidth limitation"
-msgstr "Internet konneksie bandwydte beperking"
+msgstr "Internet verbinding bandwydte beperking"
 
 msgctxt "#14043"
 msgid "- Shutdown while playing"
@@ -8841,7 +8832,7 @@ msgstr "Tydlyn"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "Inligting"
@@ -9862,12 +9853,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Gaan voort?"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "Kliënt aksies"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10144,8 +10129,8 @@ msgstr "Kliënt prioriteite"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "Besigtig tydhouer inligting"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10538,6 +10523,19 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "Wil jy die geselekteerde program opneem of na die huidige program oorskakel?"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr "Gebruik eenvoudige tydskuif OSD"
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11985,6 +11983,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "Waar geen lokale album omslag bestaan, sal aanlyn kuns gebruik word. Waar nie een van die twee beskikbaar is nie, sal omslag beelde ingebed in musiek lêers gebruik word"
 
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
+msgstr "Gebruik kunstenaar sorteernaam wanneer volgens kunstenaar sorteer"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -13394,13 +13397,15 @@ msgstr "Redigeer"
 
 msgctxt "#21451"
 msgid "Internet connection required."
-msgstr "Internet konneksie vereis."
+msgstr "Internet verbinding vereis."
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "Kry meer..."
@@ -13575,6 +13580,13 @@ msgstr "Oudio snit telling"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "Onderskrif snit telling"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "Besigtig"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14396,6 +14408,7 @@ msgstr "Laas opgedateer {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "Installeer {0:s}..."
@@ -14542,6 +14555,7 @@ msgstr "Gefaal om 'n afhanklikheid te installeer"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "Installeer byvoegsel..."
@@ -14629,7 +14643,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Oortreksel kort paar lêers"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "Byvoegsel is onversoenbaar weens onvervulde afhanklikhede."
@@ -15055,6 +15071,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Hierdie Blu-ray skyf (of lêer) is geënkripteer en kan nie gespeel word nie."
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Radiotext Plus inligting"
@@ -15509,8 +15527,8 @@ msgstr "Verkeer adviserende boodskap"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS lig jou in oor verkeer adviserende boodskappe"
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -15911,7 +15929,7 @@ msgstr "Afgeleë kommunikasie bediener"
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
-msgstr "Nuwe konneksie bespeur"
+msgstr "Nuwe verbinding bespeur"
 
 #: system/settings/settings.xml
 msgctxt "#34000"
@@ -16316,6 +16334,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Druk alle analoog knoppies nou om hulle te ontdek:[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16336,6 +16368,7 @@ msgstr "Speletjie byvoegsels"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16400,6 +16433,7 @@ msgid ""
 msgstr "Wil jy hierdie beheerder profiel herstel vir alle gekoppelde toestelle?"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16794,7 +16828,8 @@ msgid "Game resources"
 msgstr "Speletjie bronne"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "Gefaal om speletjie te speel"
@@ -16880,6 +16915,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "Gaan Uit"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr "Ontbreek: {0:s}"
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16954,6 +16996,20 @@ msgctxt "#35234"
 msgid "Controls"
 msgstr "Kontroles"
 
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr "Druk {0:s} om die in-speletjie kieslys te open."
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -16984,6 +17040,7 @@ msgstr "Stoor die speletjie outomaties gedurende spel, indien ondersteun. Hervat
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Gefaal om byvoegsel te installeer."
@@ -17180,7 +17237,7 @@ msgstr "Wanneer die TV afgeskakel is"
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#36030"
 msgid "Connection lost"
-msgstr "Konneksie verloor"
+msgstr "Verbinding verloor"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36031"
@@ -18104,7 +18161,7 @@ msgid ""
 "be selected when opening a window or dialog containing a channel list. If "
 "disabled, the channel previously selected in a window or dialog will be "
 "selected when opening a window containing a channel list. "
-msgstr ""
+msgstr "Selekteer vooraf die spelende kanaal in vensters en dialoë wat kanaal lyste bevat. As in staat gestel en daar is 'n spelende kanaal, sal die spelende kanaal geselekteer word wanneer 'n venster of dialoog wat 'n kanaal lys bevat oop gemaak word. As nie in staat gestel, sal die kanaal wat voorheen geselekteer was in 'n venster of dialoog geselekteer word wanneer 'n venster wat 'n kanaal lys bevat oop gemaak word."
 
 #. Description of setting with label #14110 "Long date format"
 #: system/settings/settings.xml
@@ -18229,6 +18286,16 @@ msgid ""
 "will be taken into account if \"Instant recording action\" is set to "
 "\"Record for a fixed period of time\""
 msgstr "Duur van oombliklike opnames wanneer die opneem knoppie druk. Hierdie waarde sal in ag geneem word as \"Oombliklike opneem aksie\" gestel is op \"Neem vir 'n vaste periode op\""
+
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
+msgstr "Normale tydskuif OSD wys altyd die volledige tydskuif buffer saam met die huidiglik spelende vertoning, terwyl die eenvoudige tydskuif OSD net die huidiglik spelende vertoning wys met geen visuele terugvoer van hoe ver in die tydskuif buffer jy kan spring vanaf die huidiglik spelende posisie."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18649,6 +18716,14 @@ msgid ""
 "saved in."
 msgstr "Kies die gids waarin kunstenaar inligting (nfo lêers en beelde) gestoor moet word."
 
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr "Wanneer musiek items sorteer volgens kunstenaar, gebruik sorteer naam bv. Parton, Dolly eerder as naam."
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -19034,12 +19109,6 @@ msgid ""
 " image being displayed is too large or small for your display."
 msgstr "Kalibreer die gebruikers koppelvlak deur die oorskandering aan te pas. Gebruik hierdie hulpmiddel as die beeld wat vertoon word te groot of klein is vir jou vertoon."
 
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "Toets patrone vir vertoon hardeware kalibrasie."
-
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
 #: system/settings/settings.xml
@@ -19077,7 +19146,7 @@ msgid ""
 "number of speakers if connected by analogue connections. This setting does "
 "not apply to passthrough audio. Note: S/PDIF supports 2.0 channels only but "
 "can still output multichannel audio using a format supported by passthrough."
-msgstr "Kies die hoeveelheid kanale ondersteun deur die oudio konneksie, of die hoeveelheid luidsprekers wanneer gekonnekteer met analoog konneksies. Hierdie verstelling is nie van toepassing op deurgee oudio. Nota: S/PDIF ondersteun slegs 2.0 kanale, maar kan nog steeds multikanaal oudio uitsit deur 'n formaat ondersteun deur deurgee."
+msgstr "Kies die hoeveelheid kanale ondersteun deur die oudio verbinding, of die hoeveelheid luidsprekers wanneer gekonnekteer met analoog verbindings. Hierdie verstelling is nie van toepassing op deurgee oudio. Nota: S/PDIF ondersteun slegs 2.0 kanale, maar kan nog steeds multikanaal oudio uitsit deur 'n formaat ondersteun deur deurgee."
 
 #: system/settings/settings.xml
 msgctxt "#36363"
@@ -19214,7 +19283,7 @@ msgstr "Hierdie kategorie bevat die verstellings vir hoe Internet toegang hantee
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your Internet connection uses a proxy server, configure it here."
-msgstr "As jou Internet konneksie 'n instaanbediener gebruik, stel dit hier op."
+msgstr "As jou Internet verbinding 'n instaanbediener gebruik, stel dit hier op."
 
 #. Description of setting with label #1180 "Proxy type"
 #: system/settings/settings.xml
@@ -19253,7 +19322,7 @@ msgctxt "#36386"
 msgid ""
 "If your Internet connection has limited bandwidth available, use this "
 "setting to keep bandwidth usage by this application within defined limits."
-msgstr "As jou Internet konneksie beperkte bandwydte beskikbaar het, gebruik hierdie verstelling om bandwydte gebruik van hierdie program binne bepaalde perke te hou."
+msgstr "As jou Internet verbinding beperkte bandwydte beskikbaar het, gebruik hierdie verstelling om bandwydte gebruik van hierdie program binne bepaalde perke te hou."
 
 #. Description of settings category with label #14095 "Power saving"
 #: system/settings/settings.xml
@@ -19529,7 +19598,7 @@ msgid ""
 "Select this if the audio out connection only supports multichannel audio as "
 "Dolby Digital 5.1 (AC-3), such as a S/PDIF connection. If your system "
 "supports PCM multichannel audio via HDMI, leave this disabled."
-msgstr "Kies hierdie as die oudio uit konneksie net multi kanaal oudio ondersteun soos Dolby Digital 5.1 (AC-3), soos 'n S/PDIF konneksie. As jou stelsel PCM multikanaal oudio via HDMI ondersteun, los hierdie gedeaktiveer."
+msgstr "Kies hierdie as die oudio uit verbinding net multi kanaal oudio ondersteun soos Dolby Digital 5.1 (AC-3), soos 'n S/PDIF verbinding. As jou stelsel PCM multikanaal oudio via HDMI ondersteun, los hierdie gedeaktiveer."
 
 #. Description for setting category #14101: "Video Acceleration"
 #: system/settings/settings.xml
@@ -19572,6 +19641,12 @@ msgstr "Laat hardeware versnelling toe - MMAL"
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "Gebruik VideoSpeler vir dekodering van video lêers met MMAL versnelling."
+
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -19950,7 +20025,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr ""
+msgstr "Gebruik 'n vooraf berekende 3D opsoek tabel vir video kleur korreksie, of bereken die transformasie vir elke video vanaf 'n profiel van jou vertoon. 'n Vooraf berekende 3D opsoek tabel word verkies aangesien dit jou toelaat om van die gevorderde funksies en hoë presisie in ArgyllCMS gebruik te maak. Vertoon profiel gebasseerde korreksie is handig om verskillende parameters te toets, of vertoon verstellings te emuleer wat jy nie 'n 3D LUT vir voorberei het nie."
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -19966,7 +20041,7 @@ msgid ""
 "menu during video playback. This allows for multiple display profiles to "
 "account for different viewing environments and source materials, for example"
 " gamma 2.2 for daytime viewing and 2.4 for nighttime."
-msgstr ""
+msgstr "Selekteer die 3DLUT lêer om by verstek te gebruik. As jy verskeie 3DLUT lêers in dieselfde gids plaas, dan kan jy tussen hulle skakel in die OSD kieslys gedurende video terugspeel. Hierdie laat toe vir verskeie vertoon profiele om te voorsien vir verskillende besigtigings omgewings en bron materiale, byvoorbeeld gamma 2.2 vir bedags kyk en 2.4 vir snags."
 
 #: system/settings/settings.xml
 msgctxt "#36566"
@@ -19985,7 +20060,7 @@ msgid ""
 "towards display native black (causing raised black level) and white level "
 "scaling when a different whitepoint from display native is selected (as a "
 "workaround, adjust video brightness down to avoid clipping)."
-msgstr ""
+msgstr "Deur 'n vertoon profiel te verskaf, kan jy video parameters verander soos gamma, kleur primêres en witpunt gedurende terugspeel. 'n ICC bron profiel word geskep gebasseer op die parameters en gekoppel met die vertoon ICC profiel hier gestel. Hierdie ondersteuning is eksperimenteel en ontbreek naby swart aanpassing na vertoon se eie swart (wat verhoogde swart vlak veroorsaak) en wit vlak skalering wanneer 'n ander witpunt as vertoon se eie geselekteer word (as 'n oplossing, verstel video helderheid af om knip te vermy)."
 
 #: system/settings/settings.xml
 msgctxt "#36568"
@@ -20000,7 +20075,7 @@ msgid ""
 "Changing video whitepoint to D93 is mainly useful for older Japanese NTSC "
 "material which looks too red when played back on a D65 display. Adjust video"
 " brightness setting down to avoid clipping to display native whitepoint."
-msgstr ""
+msgstr "Verandering van video witpunt na D93 is hoofsaaklik handig vir ouer Japanese NTSC materiaal wat te rooi lyk wanneer terug gespeel word op 'n D65 vertoon. Verstel video helderheid verstelling af om knip na vertoon se eie witpunt te vermy."
 
 #: system/settings/settings.xml
 msgctxt "#36570"
@@ -20034,7 +20109,7 @@ msgid ""
 "details. Absolute gamma does not account for display black at all and will "
 "clip the lowest levels to display black on any display with higher than zero"
 " black level."
-msgstr ""
+msgstr "Selekteer die gamma kurwe formule. Gebruik BT.1886 vir gamma kurwe wat voorsiening maak vir vertoon swart en wit vlakke en bemerkbare knip vermy. Gebruik intree afset vir 'n soortgelyke kurwe met 'n handrolies gespesifiseerde effektiewe gamma. Uittree afset laat toe vir bemerkbare knip, maar kan gebruik word om te kompenseer vir inkorrekte meestering monitor verstellings wat lei tot te helder donker besonderhede. Absolute gamma maak glad nie voorsiening vir vertoon swart nie en sal die laagste vlakke knip om swart op enige vertoon met hoër as nul swart vlak te vertoon."
 
 #: system/settings/settings.xml
 msgctxt "#36574"
@@ -20163,7 +20238,7 @@ msgid ""
 "adding a small amount of noise to the picture. This can be disabled for "
 "slower systems, or when Kodi is set to limited range RGB output and no video"
 " processing is needed."
-msgstr ""
+msgstr "Elimineer banding veroorsaak deur RGB vlak omskakeling of ander verwerking deur 'n klein hoeveelheid geraas by die prent te voeg. Hierdie kan deaktiveer word vir stadiger stelsels, of wanneer Kodi gestel is tot beperkte bereik RGB uittree en geen video verwerking nodig is nie."
 
 #. Description of setting with label #36100 "Dither depth"
 #: system/settings/settings.xml
@@ -20175,7 +20250,7 @@ msgid ""
 " 7 or 6 bit setting may eliminate more banding. Lower settings are available"
 " for testing purposes only to make it easy to see whether dithering is "
 "applied and that the dither noise pixel size matches the display resolution."
-msgstr ""
+msgstr "Video versagtings uittree presisie in bisse. Gebruik die hoogste verstelling wat nie banding wys nie. Die verstek van 8 word aanbeveel vir meeste stelsels. As jou GPU gestel is om die uittree RGB vlakke te skaleer of jy gebruik 'n skootrekenaar, mag 'n verstelling van 7 of 6 meer banding elimineer. Laer verstellings is beskikbaar slegs vir toets doeleindes om dit maklik te maak om te sien of versagting toegepas word en dat die versagtings geraas pieksel grootte die vertoon resolusie pas."
 
 #. Description of settings category with label #14022 "Library"
 #: system/settings/settings.xml
@@ -20256,7 +20331,7 @@ msgid ""
 "Manage modules and support libraries that have been automatically installed "
 "as a dependency to other add-ons. Items listed as \"Orphaned\" are no longer"
 " required by any add-ons and are safe to uninstall."
-msgstr ""
+msgstr "Bestuur modules en ondersteunings biblioteke wat outomaties installeer is as 'n afhanklike vir ander byvoegsels. Items gelys as \"Wees\" word nie meer vereis deur enige byvoegsels nie en is veilig om te deïnstalleer."
 
 #. Description of setting with label #24994 "Running"
 #: system/settings/settings.xml
@@ -20292,7 +20367,7 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
-msgstr ""
+msgstr "Byvoegsels sal toegang gegee word tot persoonlike data gestoor op hierdie toestel. Deur toe te laat, stem jy in dat jy uitsluitlik verantwoordelik is vir enige verlies van data, ongewensde gedrag, of skade aan jou toestel. Gaan voort?"
 
 #. Label of a setting, allow the user to specify high quality downscaling of
 #. pictures
@@ -20323,7 +20398,7 @@ msgid ""
 "Set the maximum SMB protocol version to negotiate when making connections. "
 "Forcing SMBv2 or SMBv1 compatibility may be required with older NAS and "
 "Windows shares."
-msgstr ""
+msgstr "Stel die maksimum SMB protokol weergawe om te onderhandel wanneer verbindings maak. Forseer van SMBv2 of SMBv1 versoenbaarheid mag vereis word met ouer NAS en Windows gedeeldes."
 
 #. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
 #. version" - none means "no protocol version is forced"
@@ -20371,7 +20446,7 @@ msgctxt "#36629"
 msgid ""
 "Set the minimum SMB protocol version to negotiate when making connections. "
 "Forcing SMBv2 may be required to prevent SMBv1 use on some OS."
-msgstr ""
+msgstr "Stel die minimum SMB protokol weergawe om te onderhandel wanneer verbindings maak. Forseer van SMBv2 mag vereis word om SMBv1 te verhoed op sommige OSe."
 
 #. Label of a setting, sets additional config required for some proprietary
 #. SMBv1 implementations (mostly routers)
@@ -20386,7 +20461,7 @@ msgctxt "#36631"
 msgid ""
 "Force weak SMBv1 security for compatibility with the USB sharing features on"
 " some WiFi routers and NAS devices."
-msgstr ""
+msgstr "Forseer swak SMBv1 sekuriteit vir versoenbaarheid met die USB deel funksies op sommige WiFi routers en NAS toestelle."
 
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
@@ -20395,7 +20470,7 @@ msgid ""
 "Enables SSL encryption in the webserver. Certificate "
 "special://userdata/server.key and Key special://userdata/server.pem must be "
 "created manually"
-msgstr ""
+msgstr "Stel SSL enkripsie in staat in die webbediener. Certificate special://userdata/server.key en Key special://userdata/server.pem moet handrolies geskep word."
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"
@@ -20578,7 +20653,7 @@ msgid ""
 "Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
 "FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
 "Pi as this requires a lot of CPU."
-msgstr "Kies hierdie as die oudio uit konneksie net multi kanaal oudio ondersteun soos Dolby Digital 5.1 (AC3), dit laat toe om na multi kanaal oudio soos AAC 5.1 of FLAC 5.1 te luister in 5.1 omring klank. Nota: Word nie aanbeveel op Pi aangesien dit baie CPU vereis."
+msgstr "Kies hierdie as die oudio uit verbinding net multi kanaal oudio ondersteun soos Dolby Digital 5.1 (AC3), dit laat toe om na multi kanaal oudio soos AAC 5.1 of FLAC 5.1 te luister in 5.1 omring klank. Nota: Word nie aanbeveel op Pi aangesien dit baie CPU vereis."
 
 #: system/settings/settings.xml
 msgctxt "#37025"
@@ -20827,7 +20902,7 @@ msgid ""
 "be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
 "rays.[CR]Note: Processing of this data may reduce playback performance, so "
 "only enable if you require stereoscopic 3D support."
-msgstr ""
+msgstr "As in staat gestel, sal videos geskep in Multiview Video Coding (MVC) formaat ook in stereoskopiese 3D gekyk kan word. MVC formaat word tipies op 3D Blu-rays gevind.[CR]Nota: Prosessering van hierdie data mag terugspeel werkverrigting verlaag, so stel net in staat indien jy stereoskopiese 3D ondersteining vereis."
 
 #: system/settings/rbp.xml
 msgctxt "#38029"
@@ -20842,7 +20917,7 @@ msgid ""
 "This option uses frame-packing to output full resolution for 3D through "
 "HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
 "videos, but may not be supported by all displays."
-msgstr ""
+msgstr "Hierdie opsie gebruik raam-pakking om vol resolusie uit te gee vir 3D deur HDMI.[CR]In staat stel hiervan verbeter kwaliteit van Multiview Video Coding (MVC) videos, maar mag nie deur alle vertone ondersteun word nie."
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -21451,6 +21526,7 @@ msgid "installed"
 msgstr "geïnstalleer"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr "Die volgende addisionele byvoegsels sal installeer word"

@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-08-25 06:05+0000\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -784,9 +784,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Søger i album"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -999,11 +1000,6 @@ msgstr "Hastighed"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "Vertikalt skift"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "Testmønstre..."
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -3049,7 +3045,7 @@ msgstr "Verbose logning af [B]EPG[/B] komponent"
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr ""
+msgstr "Fra metadata"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -4619,11 +4615,6 @@ msgstr "N/A"
 msgctxt "#10007"
 msgid "System information"
 msgstr "Systeminformation"
-
-#: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "Indstillinger - Testmønstre"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -8851,7 +8842,7 @@ msgstr "Tidslinje"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "Information"
@@ -9872,12 +9863,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Fortsæt?"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "Klienthandlinger"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10154,8 +10139,8 @@ msgstr "Klientprioriteter"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "Vis information om timer"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10548,6 +10533,19 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "Vil du optage det valgte program eller skifte til det aktuelle program?"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr ""
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11995,6 +11993,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "Når intet lokalt album cover eksisterer anvendes online cover. Hvis begge ikke eksisterer anvendes billede fra musikfilen"
 
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
+msgstr "Anvend kunstnernavn ved sortering efter kunstner"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -13407,10 +13410,12 @@ msgid "Internet connection required."
 msgstr "Internetforbindelse krævet."
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "Hent flere..."
@@ -13585,6 +13590,13 @@ msgstr "Antal lydspor"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "Antal undertekstspor"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "Vis"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14406,6 +14418,7 @@ msgstr "Sidst opdateret {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "Installerer {0:s}..."
@@ -14552,6 +14565,7 @@ msgstr "Kunne ikke installere afhængighed"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "Installerer add-on..."
@@ -14639,7 +14653,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Skin'et mangler nogle filer"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "Add-on er ikke kompatibel grundet ikke-imødekommet afhængigheder."
@@ -15065,6 +15081,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Denne Blu-ray Disc (eller -fil) er krypteret og kan ikke afspilles."
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Radiotekst Plus information"
@@ -15519,8 +15537,8 @@ msgstr "Trafikrådgivende meddelelse"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS informerer dig omkring trafikrådgivende meddelelser"
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16326,6 +16344,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Tryk på alle analoge knapper nu for at registrere dem:[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16346,6 +16378,7 @@ msgstr "Add-ons til spil"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16410,6 +16443,7 @@ msgid ""
 msgstr "Vil du nulstille denne controllerprofil for alle tilsluttede enheder?"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16804,7 +16838,8 @@ msgid "Game resources"
 msgstr "Spil-kilder"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "Kunne ikke spille spil"
@@ -16890,6 +16925,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "Afslut"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr "Mangler: {0:s}"
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16964,6 +17006,20 @@ msgctxt "#35234"
 msgid "Controls"
 msgstr ""
 
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr ""
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -16994,6 +17050,7 @@ msgstr ""
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Kunne ikke installere add-on."
@@ -18240,6 +18297,16 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr ""
 
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
@@ -18659,6 +18726,14 @@ msgid ""
 "saved in."
 msgstr "Vælg mappen hvor kunstnerinformation (nfo-filer og billeder) skal gemmes."
 
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -19043,12 +19118,6 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Kalibrer brugerfladen ved at justere overskandering. Brug dette hvis skærmbilledet er for stort eller for lille til din skærm."
-
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "Test-mønstre for skærmens hardware kalibrering."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19583,6 +19652,12 @@ msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "Anvend videoafspiller til dekodning af videofiler med MMAL-accelleration."
 
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
@@ -19916,13 +19991,13 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36554"
 msgid "off"
-msgstr ""
+msgstr "fra"
 
 #. label of a setting, tone mapping method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36555"
 msgid "Reinhard"
-msgstr ""
+msgstr "Reinhard"
 
 #. label of a setting, allowing to specify tone mapping parameter
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -21461,6 +21536,7 @@ msgid "installed"
 msgstr "installeret"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr "Følgende ekstra add-ons bliver installeret"

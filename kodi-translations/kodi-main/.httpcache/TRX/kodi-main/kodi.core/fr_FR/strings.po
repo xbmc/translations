@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-09-12 18:46+0000\n"
-"Last-Translator: ryann\n"
+"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -786,9 +786,10 @@ msgctxt "#185"
 msgid "Searching album"
 msgstr "Recherche d'album"
 
+#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
 #: xbmc/dialogs/GUIDialogSelect.cpp
-#: addons/skin.estuary/xml/DialogPVRGroupManager.xml
+#: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#186"
 msgid "OK"
@@ -1001,11 +1002,6 @@ msgstr "Vitesse"
 msgctxt "#225"
 msgid "Vertical shift"
 msgstr "Décalage vertical"
-
-#: system/settings/settings.xml
-msgctxt "#226"
-msgid "Test patterns..."
-msgstr "Mires de test…"
 
 #: system/settings/settings.xml
 msgctxt "#227"
@@ -3639,7 +3635,7 @@ msgctxt "#840"
 msgid ""
 "Do you only want to delete this timer or also the timer rule that has "
 "scheduled it?"
-msgstr "Faut-il seulement supprimer cette programmation ou bien aussi la programmation répétée qui l'a créée ?"
+msgstr "Faut-il seulement supprimer cette programmation ou bien aussi la programmation répétée qui l'a planifiée ?"
 
 #. Label for No button in a dialog when a user wants to delete a timer that
 #. was scheduled by a timer rule
@@ -3666,7 +3662,7 @@ msgctxt "#845"
 msgid ""
 "Are you sure you want to delete this timer rule and all timers it has "
 "scheduled?"
-msgstr "Faut-il vraiment supprimer cette règle de programmation et toutes ses répétitions ?"
+msgstr "Faut-il vraiment supprimer cette règle de programmation et toutes les répétitions qu'elle a planifiées ?"
 
 #. Message in a dialog when a user wants to delete a timer
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -4623,11 +4619,6 @@ msgid "System information"
 msgstr "Informations sur le système"
 
 #: xbmc/guilib/WindowIDs.h
-msgctxt "#10008"
-msgid "Settings - Test patterns"
-msgstr "Paramètres - Motifs de test"
-
-#: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
 msgstr "Paramètres - Vidéos - Calibration d'écran"
@@ -4889,7 +4880,7 @@ msgstr "Paramètres d'incrustation à l'écran de l'Audio"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10125"
 msgid "Video bookmarks"
-msgstr "Marque-pages vidéo"
+msgstr "Signets vidéo"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10126"
@@ -8853,7 +8844,7 @@ msgstr "Chronologie"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 #: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
-#: addons/skin.estuary/xml/VideoOSD.xml
+#: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
 msgid "Information"
 msgstr "Informations"
@@ -9874,12 +9865,6 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Faut-il vraiment continuer ?"
 
-#. label for a context menu entry for pvr client specific actions
-#: xbmc/pvr/PVRContextMenus.cpp
-msgctxt "#19195"
-msgid "Client actions"
-msgstr "Actions du client"
-
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10058,7 +10043,7 @@ msgstr "Enregistrement annulé"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19225"
 msgid "Recording scheduled"
-msgstr "Enregistrement programmé"
+msgstr "Enregistrement planifié"
 
 #. Notification text to announce that a recording started
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -10156,8 +10141,8 @@ msgstr "Priorités du client"
 #. only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
-msgid "View timer information"
-msgstr "Voir infos programmation"
+msgid "View timer"
+msgstr ""
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10251,7 +10236,7 @@ msgstr "Échec de la mise à jour du guide pour cette chaîne"
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19255"
 msgid "{0:d} scheduled"
-msgstr "{0:d} prévu"
+msgstr "{0:d} planifié"
 
 #. for a timer rule or timer to indicate this item has completed the intended
 #. recordings. For use in "status" fields.
@@ -10550,6 +10535,19 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "Faut-il enregistrer le programme sélectionné ou bien basculer vers le programme actuel ?"
+
+#. pvr setting "Use simple timeshift OSD" value
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Use simple timeshift OSD"
+msgstr "Utiliser une incrustation à l'écran simple du décalage"
+
+#. Label for context menu entry to open settings dialog for a timer rule
+#. (read-only)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19304"
+msgid "View timer rule"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11997,6 +11995,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "Lorsqu'il n'existe pas localement de couverture d'album, une illustration en ligne sera utilisée. Si aucune n'est disponible, les images de couverture embarquées dans les fichiers musicaux seront utilisées."
 
+#: system/settings/settings.xml
+msgctxt "#20228"
+msgid "Use artist sortname when sorting by artist"
+msgstr "Utiliser le nom d'artiste pour trier par artiste"
+
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
 msgid "Android music"
@@ -13409,10 +13412,12 @@ msgid "Internet connection required."
 msgstr "Connexion Internet requise."
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
-#: xbmc/filesystem/AddonsDirectory.cpp addons/skin.estuary/xml/MyPrograms.xml
-#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyMusicNav.xml
-#: addons/skin.estuary/xml/MyGames.xml
+#: xbmc/filesystem/AddonsDirectory.cpp
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+#: addons/skin.estuary/xml/Includes.xml addons/skin.estuary/xml/MyGames.xml
+#: addons/skin.estuary/xml/MyMusicNav.xml addons/skin.estuary/xml/MyPics.xml
+#: addons/skin.estuary/xml/MyPrograms.xml
+#: addons/skin.estuary/xml/MyVideoNav.xml
 msgctxt "#21452"
 msgid "Get more..."
 msgstr "En obtenir plus…"
@@ -13587,6 +13592,13 @@ msgstr "Nombre de pistes audio"
 msgctxt "#21482"
 msgid "Subtitle track count"
 msgstr "Nombre de pistes de sous-titres"
+
+#. Label for controls used to view something (e.g. a context menu entry to
+#. open read-only timer settings dialog)
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#21483"
+msgid "View"
+msgstr "Vue"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -14408,6 +14420,7 @@ msgstr "Dernière mise à jour {0:s}"
 
 #. Used as a title in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24057"
 msgid "Installing {0:s}..."
 msgstr "Installation de {0:s}"
@@ -14554,6 +14567,7 @@ msgstr "Échec d'installation d'une dépendance"
 
 #. Used as a text in the progress dialog when installing an add-on
 #: xbmc/addons/AddonInstaller.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#24086"
 msgid "Installing add-on..."
 msgstr "Installation de l'extension…"
@@ -14641,7 +14655,9 @@ msgctxt "#24103"
 msgid "Skin is missing some files"
 msgstr "Des fichiers sont manquants dans l'habillage"
 
-#: xbmc/addons/Repository.cpp
+#. Error message shown when a game add-on can't be loaded due to missing
+#. dependencies
+#: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#24104"
 msgid "Add-on is incompatible due to unmet dependencies."
 msgstr "L'extension est incompatible à cause de dépendances non satisfaites."
@@ -15067,6 +15083,8 @@ msgid "This Blu-ray disc (or file) is encrypted and can't be played."
 msgstr "Ce disque (ou fichier) Blu-ray est chiffré et ne peut pas être lu."
 
 #. Header string on RDS Radiotext+ Info dialog
+#: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#29900"
 msgid "Radiotext Plus info"
 msgstr "Infos Radiotext Plus"
@@ -15521,8 +15539,8 @@ msgstr "Message de conseil de trafic"
 #. Help text of boolean on/off value
 #: system/settings/settings.xml
 msgctxt "#29983"
-msgid "RDS inform you about traffic advisory messages"
-msgstr "RDS diffuse des informations de trafic sous forme de messages de conseil."
+msgid "RDS informs you about traffic advisory messages"
+msgstr ""
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16328,6 +16346,20 @@ msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
 msgstr "Appuyer sur tous les boutons analogiques maintenant pour les détecter :[CR][CR]{0:s}"
 
+#. Button in the controller configuration dialog to install all controller
+#. profiles
+#: addons/skin.estuary/xml/DialogGameControllers.xml
+msgctxt "#35021"
+msgid "Get all"
+msgstr ""
+
+#. Message shown in the controller dialog when there is nothing to map, for
+#. example hubs (multitaps) have no buttons
+#: xbmc/games/controllers/windows/GUIFeatureList.cpp
+msgctxt "#35022"
+msgid "Nothing to map"
+msgstr ""
+
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
 msgctxt "#35047"
@@ -16348,6 +16380,7 @@ msgstr "Extensions Jeux"
 
 #. Name of controller add-ons
 #: addons/skin.estuary/xml/DialogGameControllers.xml xbmc/addons/Addon.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35050"
 msgid "Controller profiles"
@@ -16412,6 +16445,7 @@ msgid ""
 msgstr "Faut-il réinitialiser ce profil de manette pour tous les dispositifs connectés ?"
 
 #. Notice that all controller profiles are installed
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 #: xbmc/games/controllers/windows/GUIControllerWindow.cpp
 msgctxt "#35062"
 msgid "All available controller profiles are installed."
@@ -16806,7 +16840,8 @@ msgid "Game resources"
 msgstr "Ressources de jeu"
 
 #. Dialog title when gameplay fails
-#: xbmc/games/addons/GameClient.cpp xbmc/games/GameManager.cpp
+#: xbmc/games/addons/GameClient.cpp xbmc/games/addons/GameClientProperties.cpp
+#: xbmc/games/GameManager.cpp
 msgctxt "#35210"
 msgid "Failed to play game"
 msgstr "Impossible de jouer"
@@ -16892,6 +16927,13 @@ msgctxt "#35222"
 msgid "Exit"
 msgstr "Quitter"
 
+#. Help text shown when playaing a game with missing add-on dependencies.
+#. {0:s} - list of add-ons that are missing
+#: xbmc/games/addons/GameClientProperties.cpp
+msgctxt "#35223"
+msgid "Missing: {0:s}"
+msgstr "Manquant : {0:s}"
+
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35224"
@@ -16966,6 +17008,20 @@ msgctxt "#35234"
 msgid "Controls"
 msgstr "Commandes"
 
+#. Help text shown when the user first plays a game. {0:s} - Button combo to
+#. open the in-game menu
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35235"
+msgid "Press {0:s} to open the in-game menu."
+msgstr "Appuyer sur {0:s} pour ouvrir le menu interne du jeu."
+
+#. Additional help text shown when the user first plays a game. This will be
+#. removed in the future.
+#: addons/skin.estuary/xml/GameOSD.xml
+msgctxt "#35236"
+msgid "In this release, only controllers can be used to play games."
+msgstr ""
+
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
 msgid "Add games..."
@@ -16996,6 +17052,7 @@ msgstr "Enregistre automatiquement la partie du jeu, si pris en charge. Permet d
 #. Error message when a game client fails to install when a game is being
 #. launched
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#35256"
 msgid "Failed to install add-on."
 msgstr "Échec d'installation d'une extension."
@@ -18242,19 +18299,29 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Durée de l'enregistrement immédiat quand le bouton d'enregistrement est pressé. Cette valeur sera prise en compte si l'action « Enregistrement immédiat » est définie à « Enregistrer pendant une période de temps fixe »."
 
+#. help text for pvr setting "Use simple timeshift OSD"
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid ""
+"Normal timeshift OSD always shows the complete timeshift buffer along with "
+"with the currently playing show, whereas the simple timeshift OSD only shows"
+" the currently playing show with no visual feedback how far in the timeshift"
+" buffer you can jump from the currently playing position."
+msgstr "L'incrustation à l'écran normale du décalage affiche toujours le tampon de décalage total lors de la lecture, tandis que l'incrustation à l'écran simple du décalage affiche seulement la lecture sans retour visuel sur le temps qu'il est possible de sauter dans le tampon de décalage à partir de la position courante lue."
+
 #: system/settings/settings.xml
 msgctxt "#36237"
 msgid ""
 "Additional time to record before the scheduled start time to allow for minor"
 " broadcasting changes. Not supported by all add-ons and backends."
-msgstr "Temps d'enregistrement supplémentaire avant l'heure de début programmée pour tolérer des changements mineurs de diffusion. Toutes les extensions et tous les serveurs ne sont pas reconnus."
+msgstr "Temps d'enregistrement supplémentaire avant l'heure de début planifiée pour tolérer des changements mineurs de diffusion. Toutes les extensions et tous les serveurs ne sont pas reconnus."
 
 #: system/settings/settings.xml
 msgctxt "#36238"
 msgid ""
 "Additional time to record after the scheduled end time to allow for minor "
 "broadcasting changes. Not supported by all add-ons and backends."
-msgstr "Temps d'enregistrement supplémentaire après l'heure de fin programmée pour tolérer des changements mineurs de diffusion. Toutes les extensions et tous les serveurs ne sont pas reconnus."
+msgstr "Temps d'enregistrement supplémentaire après l'heure de fin planifiée pour tolérer des changements mineurs de diffusion. Toutes les extensions et tous les serveurs ne sont pas reconnus."
 
 #: system/settings/settings.xml
 msgctxt "#36239"
@@ -18367,7 +18434,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Action à exécuter quand le bouton d'enregistrement est pressé. [Enregistrer le programme actuel] enregistrera le programme en cours à partir de « maintenant » jusqu'à sa fin. S'il n'y a pas de données disponibles dans le guide des programmes TV, une durée fixe sera appliquée à partir de « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Enregistrer pendant une période de temps fixe] utilisera une valeur de temps fixe depuis « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Demander que faire] ouvrira une boîte de dialoque pour choisir parmi « Enregistrer le programme actuel », « Enregistrer le programme suivant » et quelques durées d'enregistrement préétablies."
+msgstr "Action à exécuter quand le bouton d'enregistrement est pressé. [Enregistrer le programme actuel] enregistrera le programme en cours à partir de « maintenant » jusqu'à sa fin. S'il n'y a pas de données disponibles dans le guide des programmes TV, une durée fixe sera planifiée à partir de « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Enregistrer pendant une période de temps fixe] utilisera une valeur de temps fixe depuis « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Demander que faire] ouvrira une boîte de dialogue pour choisir parmi « Enregistrer le programme actuel », « Enregistrer le programme suivant » et quelques durées d'enregistrement préétablies."
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -18660,6 +18727,14 @@ msgid ""
 "Select the folder where artist information (nfo files and images) should be "
 "saved in."
 msgstr "Sélectionne le dossier où les informations d'artistes (fichiers NFO et image) devraient être enregistrées."
+
+#. Description of setting with label #20228 "Use artist sortname"
+#: system/settings/settings.xml
+msgctxt "#36294"
+msgid ""
+"When sorting music items by artist use sortname e.g. Parton, Dolly rather "
+"than name."
+msgstr "Pour trier les éléments musicaux par artiste, le nom d'artiste sera utilisé, par ex. Parton, Dolly, plutôt que le prénom."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19045,12 +19120,6 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Calibre l'interface utilisateur en ajustant le suraffichage. Utiliser cet outil si l'image affichée est trop grande ou trop petite pour l'écran."
-
-#. Description of setting with label #226 "Test patterns..."
-#: system/settings/settings.xml
-msgctxt "#36358"
-msgid "Test patterns for display hardware calibration."
-msgstr "Affiche des mires de test pour calibrer l'affichage."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19584,6 +19653,12 @@ msgstr "Autorise l'accélération matérielle - MMAL"
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
 msgstr "Utilise le lecteur VideoPlayer pour décoder les fichiers vidéos avec l'accélération MMAL."
+
+#. Description for setting #310: "Keyboard layouts"
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Select OS keyboard layout."
+msgstr ""
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -21463,6 +21538,7 @@ msgid "installed"
 msgstr "installé"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
+#: xbmc/games/controllers/windows/ControllerInstaller.cpp
 msgctxt "#39020"
 msgid "The following additional add-ons will be installed"
 msgstr "Les extensions supplémentaires suivantes seront installées"
