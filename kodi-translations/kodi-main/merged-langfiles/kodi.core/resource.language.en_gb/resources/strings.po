@@ -1999,6 +1999,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr ""
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr ""
@@ -2540,6 +2541,7 @@ msgstr ""
 
 #: xbmc/filesystem/BlurayDirectory.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr ""
@@ -2560,6 +2562,7 @@ msgstr ""
 #: xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr ""
@@ -2569,6 +2572,7 @@ msgstr ""
 #: xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr ""
@@ -2591,6 +2595,7 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr ""
@@ -4813,7 +4818,13 @@ msgctxt "#10007"
 msgid "System information"
 msgstr ""
 
-#empty strings from id 10008 to 10010
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr ""
+
+#empty strings from id 10009 to 10010
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -6874,6 +6885,7 @@ msgctxt "#13390"
 msgid "There are no settings available\nfor this visualisation"
 msgstr ""
 
+#: xbmc/ContextMenus.h
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
@@ -7010,6 +7022,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr ""
 
+#: xbmc/ContextMenus.h
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
@@ -10270,7 +10283,11 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr ""
 
-#empty string with id 19195
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr ""
 
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10903,11 +10920,7 @@ msgctxt "#19302"
 msgid "Do you want to record the selected programme or to switch to the current programme?"
 msgstr ""
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr ""
+#empty string with id 19303
 
 #. Label for context menu entry to open settings dialog for a timer rule (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -12716,6 +12729,7 @@ msgstr ""
 #: xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml
 #: xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr ""
@@ -12727,6 +12741,7 @@ msgstr ""
 #: addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml
 #: xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr ""
@@ -12862,7 +12877,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
+msgid "Show information for unwatched items"
 msgstr ""
 
 msgctxt "#20370"
@@ -14854,7 +14869,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr ""
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr ""
@@ -14865,7 +14881,11 @@ msgctxt "#24043"
 msgid "Available updates"
 msgstr ""
 
-#empty string with id 24044
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr ""
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -18093,10 +18113,10 @@ msgctxt "#36140"
 msgid "Choose which temperature unit is used for displaying temperatures in the user interface."
 msgstr ""
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
+msgid "Show information for unwatched media in the video library or hide them if not selected to prevent spoilers. Available options are 'Movie plot', 'Episode plot' and 'Episode thumb'."
 msgstr ""
 
 #. Description of setting with label #14106 "Speed unit"
@@ -18621,13 +18641,12 @@ msgctxt "#36234"
 msgid "Duration of instant recordings when pressing the record button. This value will be taken into account if \"Instant recording action\" is set to \"Record for a fixed period of time\""
 msgstr ""
 
-#. help text for pvr setting "Use simple timeshift OSD"
-#: system/settings/settings.xml
-msgctxt "#36235"
-msgid "Normal timeshift OSD always shows the complete timeshift buffer along with with the currently playing show, whereas the simple timeshift OSD only shows the currently playing show with no visual feedback how far in the timeshift buffer you can jump from the currently playing position."
-msgstr ""
+#empty string with id 36235
 
-#empty string with id 36236
+#: system/settings/settings.xml
+msgctxt "#36236"
+msgid "If set to a value greater than zero last watched time of channels will be stored the given amount of time after start of channel playback. Otherwise the last watched time will be stored immediately at start of channel playback."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -19098,7 +19117,7 @@ msgstr ""
 #. Description of setting with label #21361 "Look for remote UPnP players"
 #: system/settings/settings.xml
 msgctxt "#36326"
-msgid "Enable the UPnP control point. This allows you to stream media to any UPnP client and control it's playback."
+msgid "Enable the UPnP control point. This allows you to stream media to any UPnP client and control its playback."
 msgstr ""
 
 #. Description of settings category with label #20187 "Control"
@@ -20639,6 +20658,7 @@ msgid "Configure audio encoder settings such as quality and compression level"
 msgstr ""
 
 #: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr ""
@@ -20649,6 +20669,7 @@ msgid "540"
 msgstr ""
 
 #: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr ""
@@ -20659,6 +20680,7 @@ msgid "900"
 msgstr ""
 
 #: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr ""
@@ -20753,7 +20775,12 @@ msgctxt "#37045"
 msgid "Extract chapter thumbnails for presentation in the chapters / bookmarks dialogue. This might increase CPU load."
 msgstr ""
 
-#empty strings from id 37046 to 38009
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr ""
+
+#empty strings from id 37047 to 38009
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21568,4 +21595,22 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
+msgstr ""
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr ""
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr ""
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
 msgstr ""

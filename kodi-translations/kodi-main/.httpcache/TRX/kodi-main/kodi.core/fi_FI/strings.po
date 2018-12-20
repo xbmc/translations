@@ -17,10 +17,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2018-11-28 22:33+0000\n"
+"Last-Translator: A B\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/teamxbmc/kodi-main/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1931,6 +1931,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "CD-tietoja ei löytynyt"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Levy"
@@ -2457,6 +2458,7 @@ msgid "Size"
 msgstr "Koko"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Raita"
@@ -2475,6 +2477,7 @@ msgstr "Nimi"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Esittäjä"
@@ -2483,6 +2486,7 @@ msgstr "Esittäjä"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Albumi"
@@ -2504,7 +2508,7 @@ msgstr "Tiedosto"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Vuosi"
@@ -4618,6 +4622,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Järjestelmätiedot"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Toista seuraavaksi"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6510,7 +6520,8 @@ msgid ""
 "for this visualisation"
 msgstr "Asetuksia ei ole saatavilla\ntälle visualisoinnille."
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Poista/Lataa"
@@ -6643,7 +6654,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Ohjelmallinen"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Poista turvallisesti"
@@ -9865,6 +9876,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Jatketaanko?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Viive katseluhistoriaan lisäämiselle"
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10142,7 +10159,7 @@ msgstr "Asiakasohjelmien tärkeysjärjestys"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Näytä ajastus"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10536,18 +10553,12 @@ msgid ""
 "programme?"
 msgstr "Haluatko tallentaa valitun ohjelman vai haluatko vaihtaa kanavalle?"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Yksinkertainen ajansiirron kuvaruutuvalikko"
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Näytä ajastussääntö"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12260,6 +12271,7 @@ msgstr "Haluatko poistaa kaikki kohteet tästä polusta kirjastostasi?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Elokuvat"
@@ -12269,6 +12281,7 @@ msgstr "Elokuvat"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Tv-sarjat"
@@ -13598,7 +13611,7 @@ msgstr "Tekstitysraitojen määrä"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#21483"
 msgid "View"
-msgstr "Näkymä"
+msgstr "Näytä"
 
 #: xbmc/Util.cpp
 msgctxt "#21602"
@@ -15540,7 +15553,7 @@ msgstr "Näytä liikennetiedotteet"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "Näyttää radiolähetyksen kautta tulevat liikennetiedotteet"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16351,14 +16364,14 @@ msgstr "Paina nyt kaikkia analogisia painikkeita niiden havaitsemiseksi:[CR][CR]
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Asenna kaikki"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Ei määritettävää"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -17020,7 +17033,7 @@ msgstr "Paina {0:s} avataksesi pelivalikon."
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "Tässä versiossa pelejä voi pelata vain peliohjaimilla."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17649,8 +17662,12 @@ msgstr "Valitse sovelluksessa käytettävä lämpötilayksikkö."
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Näyttää katsomattomien elokuvien ja jaksojen juonikuvaukset."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Määrittää näytetäänkö katsomattomien videoiden juonitiedot. Asetuksesta on hyötyä, jos haluat välttyä juonipaljastuksilta uusien jaksojen tai elokuvien kohdalla."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18299,15 +18316,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Tallennuspainikkeesta asetettujen pikatallennusten kesto. Tätä arvoa käytetään, jos \"Pikatallennuksen toiminto\"-asetuksena käytetään \"Tallenna tietty aika\"."
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr "Normaalissa kuvaruutuvalikossa näytetään aina koko ajansiirtopuskuri sekä nykyinen ohjelma. Yksinkertaisessa kuvaruutuvalikossa näytetään vain nykyinen ohjelma ilman tietoa siitä kuinka pitkälle eteenpäin puskurissa voi siirtyä."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Määrittää kuinka monta sekuntia kanavaa pitää katsoa ennen kuin se näkyy viimeksi katsottujen kanavien listassa."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18888,8 +18904,8 @@ msgstr "Kytkee UPnP-asiakkaan päälle. UPnP-asiakkaalle voi lähettää mediati
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Kytkee UPnP-ohjauspisteen päälle. UPnP-ohjauspiste voi lähettää mediatiedostoja UPnP-asiakkaille ja hallita asiakkaiden mediatoistoa."
+"client and control its playback."
+msgstr "Kytkee UPnP-ohjauspisteen päälle. Sen avulla voidaan lähettää mediaa UPnP-asiakkaille ja hallita niiden toistoa."
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19658,7 +19674,7 @@ msgstr "Käytä VideoPlayeriä videotiedostojen purkamiseen MMAL-kiihdytyksellä
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Valitse käyttöjärjestelmän näppäimistöasettelu."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302

@@ -2,6 +2,7 @@
 # Translators:
 # carlchina <carlchina@gmail.com>, 2015
 # Dongkai Xie, 2017
+# EvineDeng <evinedeng@foxmail.com>, 2018
 # Gong Wang <gongwan33@gmail.com>, 2015
 # Ice Lake, 2015
 # Root Sun <sunhuigen@gmail.com>, 2016
@@ -18,10 +19,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2018-12-05 08:04+0000\n"
+"Last-Translator: wwj402 <wwj402@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1932,6 +1933,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "未找到 CD 信息"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "光盘"
@@ -2458,6 +2460,7 @@ msgid "Size"
 msgstr "大小"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "音轨"
@@ -2476,6 +2479,7 @@ msgstr "标题"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "歌手"
@@ -2484,6 +2488,7 @@ msgstr "歌手"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "专辑"
@@ -2505,7 +2510,7 @@ msgstr "文件"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "年份"
@@ -3048,7 +3053,7 @@ msgstr "[B]电子节目单[/B]组件详细日志"
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr ""
+msgstr "来自元数据"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -4618,6 +4623,12 @@ msgstr "不可用"
 msgctxt "#10007"
 msgid "System information"
 msgstr "系统信息"
+
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "播放下一个"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -6511,7 +6522,8 @@ msgid ""
 "for this visualisation"
 msgstr "该可视化效果没有设置"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "弹出/载入"
@@ -6644,7 +6656,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "软件着色"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "安全移除"
@@ -9866,6 +9878,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "继续吗？"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "延迟标记最后观看的项目"
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10143,7 +10161,7 @@ msgstr "客户端优先级"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "浏览定时器"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10537,18 +10555,12 @@ msgid ""
 "programme?"
 msgstr "录制已选择节目还是切换到当前节目？"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr ""
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "浏览定时器规则"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11999,7 +12011,7 @@ msgstr "无本地专辑封面时，使用在线艺术图片。如本地和在线
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
-msgstr ""
+msgstr "按歌手排序时使用歌手排序名"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12261,6 +12273,7 @@ msgstr "是否从资料库中移除此目录的所有项目？"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "电影"
@@ -12270,6 +12283,7 @@ msgstr "电影"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "剧集"
@@ -15541,7 +15555,7 @@ msgstr "交通咨询信息"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "RDS 通知你交通信息"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -15553,7 +15567,7 @@ msgstr "提高交通咨询音量"
 #: system/settings/settings.xml
 msgctxt "#29985"
 msgid "If traffic advisory is send from RDS, volume is increased"
-msgstr "RDS 发送交通咨询时，音量增大"
+msgstr "RDS 发送交通信息时，音量增大"
 
 #. Node title for music artist role, plural of #38036
 #: system/library/music/musicroles/Remixers.xml
@@ -16352,14 +16366,14 @@ msgstr "现在按下所有模拟按钮检测它们：[CR][CR]{0:s}"
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "全部"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "无可映射项"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -16933,7 +16947,7 @@ msgstr "退出"
 #: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#35223"
 msgid "Missing: {0:s}"
-msgstr ""
+msgstr "缺失：{0:s}"
 
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -17014,14 +17028,14 @@ msgstr "控制"
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35235"
 msgid "Press {0:s} to open the in-game menu."
-msgstr ""
+msgstr "按 {0:s} 打开游戏内菜单。"
 
 #. Additional help text shown when the user first plays a game. This will be
 #. removed in the future.
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "此版本仅可使用控制器玩游戏。"
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17650,8 +17664,12 @@ msgstr "选择用户界面中显示温度使用的单位。"
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "显示视频资料库中未观看媒体的剧情信息。"
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "在视频库中显示未观看媒体的绘图信息。该图将显示您所选择的特定类别中。例如，如果选择“电影”，图将显示在电影库，但在电视节目和其他类别中将隐藏。"
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18300,15 +18318,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "按下录像按钮时即时录像的时长。当“即时录像动作”设置为“录制固定时长”时，此值起作用。"
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr ""
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "如果设置为大于零的值，最后一次观看的频道时间将在频道播放开始后给定的时间后存储。否则，最后观看的时间将在频道播放开始时立即存储。"
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18735,7 +18752,7 @@ msgctxt "#36294"
 msgid ""
 "When sorting music items by artist use sortname e.g. Parton, Dolly rather "
 "than name."
-msgstr ""
+msgstr "当以歌手排序音乐项时，使用排序名如 Parton、Dolly 而非全名。"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -18889,8 +18906,8 @@ msgstr "启用 UPnP 客户端。这将允许你通过一个控制点从任何 UP
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "启用 UPnP 控制点。这将允许你发送流媒体到任何 UPnP 客户端并控制它的播放。"
+"client and control its playback."
+msgstr "启用 UPnP 控制点。这允许您将媒体流式传输到任何 UPnP 客户端并控制其回放。"
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19659,7 +19676,7 @@ msgstr "使用 VideoPlayer 用 MMAL 加速解码视频文件。"
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "选择操作系统键盘布局。"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -21674,10 +21691,10 @@ msgstr "原始"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39112"
 msgid "Downmix: Center Mix Level"
-msgstr ""
+msgstr "混缩：中置混合级别"
 
 #. Help text for 39112
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
-msgstr ""
+msgstr "基于元数据或默认值（-3 dB）按 dB 中置混合级别"

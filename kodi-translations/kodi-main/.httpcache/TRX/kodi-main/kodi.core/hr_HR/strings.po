@@ -4,15 +4,16 @@
 # Doktor_X <doktorxnetwork@gmail.com>, 2016
 # Doktor_X <doktorxnetwork@gmail.com>, 2016-2018
 # gogo <trebelnik2@gmail.com>, 2015
+# Ivan Tišljar <hlloyge@gmail.com>, 2018
 # Stanislav Vlasic <svlasic@gmail.com>, 2015
 # gogo <trebelnik2@gmail.com>, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2018-12-02 15:43+0000\n"
+"Last-Translator: Ivan Tišljar <hlloyge@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/teamxbmc/kodi-main/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1366,7 +1367,7 @@ msgstr "Non-interleaved"
 #: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#307"
 msgid "Media default"
-msgstr ""
+msgstr "Medijski zadano"
 
 #. Select option for the setting "Preferred audio language".
 #. Will prefer the stream marked as "original" if available.
@@ -1923,6 +1924,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Nema pronađenih CD informacija."
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Disk"
@@ -2245,7 +2247,7 @@ msgstr "Učitavanje informacija medija iz datoteka..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr ""
+msgstr "Provjera medijskih datoteka..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -2449,6 +2451,7 @@ msgid "Size"
 msgstr "Veličina"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Pjesmi"
@@ -2467,6 +2470,7 @@ msgstr "Naslovu"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Izvođaču"
@@ -2475,6 +2479,7 @@ msgstr "Izvođaču"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Albumu"
@@ -2496,7 +2501,7 @@ msgstr "Datoteka"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Godina"
@@ -3025,21 +3030,21 @@ msgstr "Opširnije zapisivanje za [B]Video/Zvučne vremenske informacije[/B]"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#684"
 msgid "Verbose logging of [B]Windowing[/B] component"
-msgstr ""
+msgstr "Opširnije zapisivanje za [B]Zaslonske[/B] komponente"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#685"
 msgid "Verbose logging of [B]PVR[/B] component"
-msgstr ""
+msgstr "Opširnije zapisivanje za [B]PVR[/B] komponente"
 
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#686"
 msgid "Verbose logging of [B]EPG[/B] component"
-msgstr ""
+msgstr "Opširnije zapisivanje za [B]EPG[/B] komponente"
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr ""
+msgstr "Iz metapodataka"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -3219,11 +3224,11 @@ msgstr "Datoteke"
 #: system/settings/settings.xml
 msgctxt "#745"
 msgid "Background colour"
-msgstr ""
+msgstr "Pozadinska boja"
 
 msgctxt "#746"
 msgid "Background opacity"
-msgstr ""
+msgstr "Prozirnost pozadine"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -4603,12 +4608,18 @@ msgstr "Nije dostupno"
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#10006"
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10007"
 msgid "System information"
 msgstr "Informacije sustava"
+
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Reproduciraj slijedeće"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -4883,7 +4894,7 @@ msgstr "Preglednik datoteka"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#10127"
 msgid "channels"
-msgstr ""
+msgstr "programi"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10128"
@@ -4988,7 +4999,7 @@ msgstr "OSD CMS postavke"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10159"
 msgid "Subtitle OSD settings"
-msgstr ""
+msgstr "Postavke prikaza podnaslova"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -6502,7 +6513,8 @@ msgid ""
 "for this visualisation"
 msgstr "Nema dostupnih postavki\nza ovu vizualizaciju"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Izbaci/Ubaci"
@@ -6635,7 +6647,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Softver"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Sigurno ukloni"
@@ -6815,7 +6827,7 @@ msgstr "Omogući ovu mogućnost za korištenje hardverskog ubrzanja za VC-1 teme
 #: system/settings/settings.xml
 msgctxt "#13453"
 msgid "Use VP8 VAAPI"
-msgstr ""
+msgstr "Koristi VP8 VAAPI"
 
 #. Description of setting with label #13453 "Use VP8 VAAPI"
 #: system/settings/settings.xml
@@ -6823,12 +6835,12 @@ msgctxt "#13454"
 msgid ""
 "Enable this option to use hardware acceleration for the VP8 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Omogući ovu mogućnost za korištenje hardverskog ubrzanja za VP8 kôdeke. Ako je onemogućeno, koristit će se više CPU resursa."
 
 #: system/settings/settings.xml
 msgctxt "#13455"
 msgid "Use VP9 VAAPI"
-msgstr ""
+msgstr "Koristi VP9 VAAPI"
 
 #. Description of setting with label #13453 "Use VP9 VAAPI"
 #: system/settings/settings.xml
@@ -6836,7 +6848,7 @@ msgctxt "#13456"
 msgid ""
 "Enable this option to use hardware acceleration for the VP9 codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Omogući ovu mogućnost za korištenje hardverskog ubrzanja za VP9 kôdeke. Ako je onemogućeno, koristit će se više CPU resursa."
 
 #. Option for video related setting #13454: sw filter
 #: system/settings/settings.xml
@@ -6859,7 +6871,7 @@ msgstr "Koristi OMXPlayer za dekôdiranje video snimaka."
 #: system/settings/settings.xml
 msgctxt "#13460"
 msgid "Use HEVC VAAPI"
-msgstr ""
+msgstr "Koristi HEVC VAAPI"
 
 #. Description of setting with label #13460 "Use HEVC VAAPI"
 #: system/settings/settings.xml
@@ -6867,32 +6879,32 @@ msgctxt "#13461"
 msgid ""
 "Enable this option to use hardware acceleration for the HEVC codec. If "
 "disabled the CPU will be used instead."
-msgstr ""
+msgstr "Omogući ovu mogućnost za korištenje hardverskog ubrzanja za HEVC kôdeke. Ako je onemogućeno, koristit će se više CPU resursa."
 
 #. Option for setting the PRIME render method
 #: system/settings/settings.xml
 msgctxt "#13462"
 msgid "PRIME Render Method"
-msgstr ""
+msgstr "PRIME način prikazivanja"
 
 #. Description of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13463"
 msgid ""
 "This option switches between direct-to-plane and EGL rendering methods."
-msgstr ""
+msgstr "Ova opcija prebacuje između direct-to-plane i EGL prikazivanja."
 
 #. String for options 1 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13464"
 msgid "Direct To Plane"
-msgstr ""
+msgstr "Direct To Plane"
 
 #. String for options 2 of setting with label #13462 "PRIME Render Method"
 #: system/settings/settings.xml
 msgctxt "#13465"
 msgid "EGL"
-msgstr ""
+msgstr "EGL"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -6956,7 +6968,7 @@ msgstr "Nema slike omota"
 #: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13516"
 msgid "Add art type"
-msgstr ""
+msgstr "Dodaj vrstu omota"
 
 #: system/settings/settings.xml
 msgctxt "#13517"
@@ -6986,7 +6998,7 @@ msgstr "Ugrađen poster obožavatelja"
 #: xbmc/music/MusicUtils.cpp
 msgctxt "#13521"
 msgid "Choose art type"
-msgstr ""
+msgstr "Odaberi vrstu omota"
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -7417,7 +7429,7 @@ msgstr "Stavi u red čekanja pjesmu po odabiru "
 #: system/settings/settings.xml
 msgctxt "#14085"
 msgid "Whitelist"
-msgstr ""
+msgstr "Popis dopuštenih"
 
 #: system/settings/settings.xml
 msgctxt "#14086"
@@ -9857,6 +9869,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Želite li nastaviti?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Odgodi oznaku zadnjeg gledanja."
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10134,7 +10152,7 @@ msgstr "Prioriteti klijenta"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Vidi brojač"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10526,20 +10544,14 @@ msgctxt "#19302"
 msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
-msgstr ""
-
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr ""
+msgstr "Želite li snimiti odabranu emisiju ili se želite prebaciti na trenutnu emisiju?"
 
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Pregledaj pravilo zakazanog snimanja"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11977,7 +11989,7 @@ msgstr "Mapa informacija izvođača"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr ""
+msgstr "Preferiraj internetski omot"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -11985,12 +11997,12 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr ""
+msgstr "Ako nije dostupna lokalna slika omota, biti će upotrijebljena internetska. Ako obje nisu dostupne, biti će upotrijebljena slika omota ugrađena u datoteke."
 
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
-msgstr ""
+msgstr "Koristi sortiranje prema prezimenu kada se sortira prema izvođaču."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12252,6 +12264,7 @@ msgstr "Želite li ukloniti sve stavke ove putanje iz vaše zbirke?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Filmovi"
@@ -12261,6 +12274,7 @@ msgstr "Filmovi"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "TV serije"
@@ -12968,7 +12982,7 @@ msgstr "Ako mp4 ili mkv datoteke imaju oznake, koristi ih za metapodatke videote
 #: xbmc/view/GUIViewState.cpp
 msgctxt "#21345"
 msgid "Uncategorized"
-msgstr ""
+msgstr "Bez kategorije"
 
 #: system/settings/settings.xml
 msgctxt "#21358"
@@ -15532,7 +15546,7 @@ msgstr "Prometne radio poruke"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "RDS vas informira o stanju u prometu"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16343,14 +16357,14 @@ msgstr "Pritisnite sve analogne tipke kako bi bile otkrivene:[CR][CR]{0:s}"
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Dohvati sve"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Nema ničeg za mapiranje"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -16620,7 +16634,7 @@ msgstr "Svjetlosni pištolj"
 #. Used in the controller mapping dialog.
 msgctxt "#35106"
 msgid "Shoot offscreen"
-msgstr ""
+msgstr "Pucaj van ekrana"
 
 #. Heading for switches found on a game console, such as the Atari 2600. Used
 #. in the controller mapping dialog.
@@ -16924,7 +16938,7 @@ msgstr "Izlaz"
 #: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#35223"
 msgid "Missing: {0:s}"
-msgstr ""
+msgstr "Nedostaje: {0:s}"
 
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -16949,42 +16963,42 @@ msgstr "Napredne postavke"
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35227"
 msgid "Rotation"
-msgstr ""
+msgstr "Okretanje"
 
 #. Label of the thumbnail for when the video is not rotated and is displayed
 #. normally
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 msgctxt "#35228"
 msgid "0°"
-msgstr ""
+msgstr "0°"
 
 #. Label of the thumbnail for when the video is rotated to the right
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35229"
 msgid "90°"
-msgstr ""
+msgstr "90°"
 
 #. Label of the thumbnail for when the video is rotated upside down
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35230"
 msgid "180°"
-msgstr ""
+msgstr "180°"
 
 #. Label of the thumbnail for when the video is rotated to the left
 #: xbmc/games/dialogs/osd/DialogGameVideoRotation.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#35231"
 msgid "270°"
-msgstr ""
+msgstr "270°"
 
 #. Label of thumbnail in the in-game menu for stretching the video to
 #. fullscreen
 #: xbmc/games/dialogs/osd/DialogGameViewMode.h
 msgctxt "#35232"
 msgid "Fullscreen"
-msgstr ""
+msgstr "Cijeli zaslon"
 
 #. Label of the setting in the in-game menu for stretching the game to fit the
 #. monitor
@@ -16992,27 +17006,27 @@ msgstr ""
 #: xbmc/games/dialogs/osdDialogGameViewMode.cpp
 msgctxt "#35233"
 msgid "Stretch mode"
-msgstr ""
+msgstr "Način širenja slike"
 
 #. Label of button in the in-game menu for configuring the game's controls
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35234"
 msgid "Controls"
-msgstr ""
+msgstr "Kontrole"
 
 #. Help text shown when the user first plays a game. {0:s} - Button combo to
 #. open the in-game menu
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35235"
 msgid "Press {0:s} to open the in-game menu."
-msgstr ""
+msgstr "Stisni {0:s} za otvaranje menija igre."
 
 #. Additional help text shown when the user first plays a game. This will be
 #. removed in the future.
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "U ovom izdanju, za igranje igara mogu se koristiti samo kontroleri."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17032,14 +17046,14 @@ msgstr "Uredi izvor igre"
 #: system/settings/settings.xml
 msgctxt "#35253"
 msgid "Enable autosave if supported"
-msgstr ""
+msgstr "Omogući automatsko spremanje ako je podržano."
 
 #: system/settings/settings.xml
 msgctxt "#35254"
 msgid ""
 "Save the game automatically during game play, if supported. Resume playing "
 "where you left off."
-msgstr ""
+msgstr "Spremi igru automatski tijekom igranja, ako je podržano. Nastavite igrati od mjesta gdje ste stali."
 
 #. Error message when a game client fails to install when a game is being
 #. launched
@@ -17337,17 +17351,17 @@ msgstr "Prisili AV prijemnik da se probudi kada se Kodi aktivira"
 #: system/peripherals.xml
 msgctxt "#36047"
 msgid "Remote button press delay before repeating (ms)"
-msgstr ""
+msgstr "Odgoda ponavljanja pritiska dugmeta na daljinskom upravljaču (ms)"
 
 #: system/peripherals.xml
 msgctxt "#36048"
 msgid "Remote button press repeat rate (ms)"
-msgstr ""
+msgstr "Brzina ponavljanja pritiska dugmeta na daljinskom upravljaču (ms)"
 
 #: system/peripherals.xml
 msgctxt "#36049"
 msgid "Remote button press release time (ms)"
-msgstr ""
+msgstr "Vrijeme otpuštanja pritiska dugmeta daljinskog upravljača (ms)"
 
 #: system/settings/settings.xml
 msgctxt "#36099"
@@ -17641,8 +17655,12 @@ msgstr "Odaberite koja će se jedinica temperatue koristiti za prikaz tempetatur
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Prikaži kratak sadržaj za neodgledane medije u videoteci."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Prikaži informaciju o radnji nepogledanih naslova u video zbirci. Radnja će biti prikazana samo za odabranu kategoriju. Na primjer, ako ste odabrali 'Filmove', radnja će biti prikazana u filmskoj zbirci, no bit će skrivena za TV serije, i obratno."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -17723,7 +17741,7 @@ msgctxt "#36152"
 msgid ""
 "Enable automatic playback of the next file in the list for selected playlist"
 " types."
-msgstr ""
+msgstr "Omogući automatsku reprodukciju slijedeće datoteke na popisu za odabrane vrste popisa reprodukcije."
 
 #. Description of setting with label #13415 "Render method"
 #: system/settings/settings.xml
@@ -17879,7 +17897,7 @@ msgctxt "#36172"
 msgid ""
 "Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
 "is available."
-msgstr ""
+msgstr "Omogući PRIME hardversko dekôdiranje video datoteka, koristi se ako je omogućena ffmpeg PRIME hwaccel opcija."
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18248,7 +18266,7 @@ msgstr "Prebaci u cjelozaslonski prikaz pri pokretanju reprodukcije ili snimanja
 #: system/settings/settings.xml
 msgctxt "#36228"
 msgid "Set the colour to be used for the subtitle background."
-msgstr ""
+msgstr "Postavite boju pozadine podnaslova."
 
 #: system/settings/settings.xml
 msgctxt "#36229"
@@ -18261,7 +18279,7 @@ msgstr "Prikaži informacije kvalitete signala u prozoru informacija kôdeka (ak
 #: system/settings/settings.xml
 msgctxt "#36230"
 msgid "Set the the subtitle background opacity."
-msgstr ""
+msgstr "Postavite razinu prozirnosti pozadine podnaslova."
 
 #: system/settings/settings.xml
 msgctxt "#36231"
@@ -18291,15 +18309,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Trajanje trenutnog snimanja kada se pritisne tipka snimanja. Ova vrijednost će se uzeti u obzir ako je \"Radnja trenutnog snimanja\" postavljena na \"Snimi određeno vremensko razdoblje\""
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr ""
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Ako se postavi na vrijednost veću od nule, vrijeme kada ste zadnji puta gledali kanal će biti spremljeno nakon vremena definiranog vrijednošću. U protivnom, vrijeme kada ste zadnji puta gledali kanal biti će spremljeno odmah na početku gledanja kanala."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18726,7 +18743,7 @@ msgctxt "#36294"
 msgid ""
 "When sorting music items by artist use sortname e.g. Parton, Dolly rather "
 "than name."
-msgstr ""
+msgstr "Kada sortirate glazbu prema izvođaču, koristite sortiranje prema prezimenu, npr. Bačič, Lidija umjesto prema imenu."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -18880,8 +18897,8 @@ msgstr "Omogući UPnP klijent. To vam omogućuje stremanje medija s bilo kojeg U
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Omogući UPnP točku upravljanja. To će vam omogućiti stremanje medija na bilo koji UPnP klijent i upravljanje reprodukcijom."
+"client and control its playback."
+msgstr "Omogući UPnP točku upravljanja. To će vam omogućiti streamanje medija na bilo koji UPnP klijent i upravljanje reprodukcijom."
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19103,7 +19120,7 @@ msgctxt "#36356"
 msgid ""
 "Whitelisted modes are allowed to be switched to when changing resolution and"
 " refresh rate"
-msgstr ""
+msgstr "Popis modova koji su dopušteni prilikom izmjene razlučivosti i osvježavanja zaslona."
 
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
@@ -19650,7 +19667,7 @@ msgstr "Koristi video reproduktor za dekôdiranje video datoteka s MMAL ubrzanje
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Odaberi raspored tipkovnice operacijskog sustava."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -19979,25 +19996,25 @@ msgstr "Određuje broj međuspremnika prikaza koji koristi grafički upravljačk
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36553"
 msgid "Tone mapping"
-msgstr ""
+msgstr "Mapiranje tona slike"
 
 #. label of a setting, tone mapping method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36554"
 msgid "off"
-msgstr ""
+msgstr "isključeno"
 
 #. label of a setting, tone mapping method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36555"
 msgid "Reinhard"
-msgstr ""
+msgstr "Reinhard"
 
 #. label of a setting, allowing to specify tone mapping parameter
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36556"
 msgid "Tone mapping parameter"
-msgstr ""
+msgstr "Parametri mapiranja tona slike"
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -21587,7 +21604,7 @@ msgstr "Izvor"
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 msgctxt "#39031"
 msgid "Sources"
-msgstr ""
+msgstr "Izvori"
 
 #: system/settings/settings.xml
 msgctxt "#39100"
@@ -21651,24 +21668,24 @@ msgstr "Odaberi program"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39110"
 msgid "Select Resolution"
-msgstr ""
+msgstr "Odaberi razlučivost"
 
 #. audio flag - FLAG_ORIGINAL
 #. language prefix displayed in audio settings stream selection
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 msgctxt "#39111"
 msgid "original"
-msgstr ""
+msgstr "original"
 
 #. Used for a setting which allows centre channel (voice/speech) volume to be
 #. adjusted when downmixing.
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39112"
 msgid "Downmix: Center Mix Level"
-msgstr ""
+msgstr "Spajanje: glasnoća centralnog kanala"
 
 #. Help text for 39112
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
-msgstr ""
+msgstr "Razina centralnog kanala u dB u odnosu na metapodatke ili zadanu postavku (-3 dB)"

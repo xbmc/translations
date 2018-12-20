@@ -21,10 +21,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: Simone Grandi <gresy88@gmail.com>\n"
+"PO-Revision-Date: 2018-11-26 21:33+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/teamxbmc/kodi-main/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1935,6 +1935,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Non è stata trovata nessuna info sul CD"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Disco"
@@ -2461,6 +2462,7 @@ msgid "Size"
 msgstr "Dimensione"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Traccia"
@@ -2479,6 +2481,7 @@ msgstr "Titolo"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Artista"
@@ -2487,6 +2490,7 @@ msgstr "Artista"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
@@ -2508,7 +2512,7 @@ msgstr "File"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Anno"
@@ -4622,6 +4626,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Informazioni sistema"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr ""
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6514,7 +6524,8 @@ msgid ""
 "for this visualisation"
 msgstr "Nessun preset disponibile\nper questo effetto grafico"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Espelli / Carica"
@@ -6647,7 +6658,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Software"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Rimozione sicura"
@@ -9869,6 +9880,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Continuare?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr ""
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10539,12 +10556,6 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr ""
-
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Usa l'OSD del timeshift semplice"
 
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
@@ -12264,6 +12275,7 @@ msgstr "Vuoi rimuovere tutti gli elementi di questo percorso dalla libreria?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Film"
@@ -12273,6 +12285,7 @@ msgstr "Film"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Serie TV"
@@ -17653,8 +17666,12 @@ msgstr "Scegli quale unità di temperatura sarà usata per mostrare le temperatu
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Mostra informazioni trama per elementi non visti nella libreria video."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr ""
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18303,14 +18320,13 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Durata delle registrazioni istantanee quando premi il pulsante registra. Questo valore può essere preso in considerazione se \"Azione registrazione istantanea\" è impostata su \"Registra per un periodo di tempo fissato\""
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -18892,8 +18908,8 @@ msgstr "Abilita il client UPnP. Questo permette di ricevere uno stream di un med
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Abilita il punto di controllo UPnP. Questo ti permette di trasmettere elementi a ogni client UPnP e controllarne la riproduzione."
+"client and control its playback."
+msgstr ""
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml

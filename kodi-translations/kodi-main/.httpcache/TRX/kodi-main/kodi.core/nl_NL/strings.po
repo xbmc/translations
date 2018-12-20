@@ -23,10 +23,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2018-12-18 21:04+0000\n"
+"Last-Translator: Koos van Klojum\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/teamxbmc/kodi-main/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1937,6 +1937,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Geen CD-informatie gevonden."
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Schijf"
@@ -2463,6 +2464,7 @@ msgid "Size"
 msgstr "Grootte"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Nummer"
@@ -2481,6 +2483,7 @@ msgstr "Titel"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Artiest"
@@ -2489,6 +2492,7 @@ msgstr "Artiest"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
@@ -2510,7 +2514,7 @@ msgstr "Bestand"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Jaar"
@@ -3053,7 +3057,7 @@ msgstr "Geef loguitvoer van het [B]EPG[/B] component"
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr "Van meta gegevens"
+msgstr "Via metadata"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -4623,6 +4627,12 @@ msgstr "N/B"
 msgctxt "#10007"
 msgid "System information"
 msgstr "Systeeminformatie"
+
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Volgende afspelen"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
@@ -6516,7 +6526,8 @@ msgid ""
 "for this visualisation"
 msgstr "Er zijn geen voorinstellingen beschikbaar\nvoor deze visualisatie"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Open / Dicht"
@@ -6649,7 +6660,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Software"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Hardware veilig verwijderen"
@@ -9871,6 +9882,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Hervatten?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Vertraag markering van laatst bekeken "
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10148,7 +10165,7 @@ msgstr "cliëntprioriteiten"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Bekijk timer"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10542,18 +10559,12 @@ msgid ""
 "programme?"
 msgstr "Wil je het gekozen programma opnemen of naar het huidige programma schakelen?"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr ""
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Bekijk timer-regel"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12004,7 +12015,7 @@ msgstr "Waar geen albumcovers aanwezig zijn, zullen online-afbeeldingen gebruikt
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
-msgstr ""
+msgstr "Gebruik artiest-sorteernaam bij sortering op artiest"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12266,6 +12277,7 @@ msgstr "Wil je alle items op dit pad uit je bibliotheek verwijderen?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Speelfilms"
@@ -12275,6 +12287,7 @@ msgstr "Speelfilms"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Series"
@@ -14619,7 +14632,7 @@ msgstr "Add-on uitgeschakeld vanwege gemarkeerd als niet-werkend in de repositor
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24095"
 msgid "Local package cache"
-msgstr "Lokale pakketjes buffer"
+msgstr "Lokale pakkettenbuffer"
 
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24096"
@@ -14921,13 +14934,13 @@ msgstr "De volgende add-ons zijn niet compatibel met deze versie van Kodi en zij
 #: xbmc/Application.cpp
 msgctxt "#24150"
 msgid "Database migration in progress - please wait"
-msgstr "Database migratie bezig - even geduld"
+msgstr "Database-migratie bezig - even geduld a.u.b."
 
 #. Progress text on splash screen
 #: xbmc/Application.cpp
 msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
-msgstr "Bezig met add-on migratie - even geduld"
+msgstr "Bezig met add-on migratie - even geduld a.u.b."
 
 #. Inform about not supported addon if tried to enable
 #: xbmc/addons/AddonManager.cpp xbmc/addons/AddonDll.cpp
@@ -15546,7 +15559,7 @@ msgstr "Berichten verkeer advies"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "RDS informeert je met verkeersberichten"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16357,14 +16370,14 @@ msgstr "Druk nu op alle analoge knoppen om ze te herkennen:[CR][CR]{0:s}"
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Haal alles op"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Niets in te delen"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -16938,7 +16951,7 @@ msgstr "Afsluiten"
 #: xbmc/games/addons/GameClientProperties.cpp
 msgctxt "#35223"
 msgid "Missing: {0:s}"
-msgstr ""
+msgstr "Gemist: {0:s}"
 
 #. Label of button in the in-game menu for pausing and resuming playback
 #: addons/skin.estuary/xml/GameOSD.xml
@@ -17019,14 +17032,14 @@ msgstr "Bediening"
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35235"
 msgid "Press {0:s} to open the in-game menu."
-msgstr ""
+msgstr "Klik op {0:s} om het in-game menu te openen."
 
 #. Additional help text shown when the user first plays a game. This will be
 #. removed in the future.
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "In deze release kunnen controllers alleen gebruikt worden om spelletjes te spelen."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17655,8 +17668,12 @@ msgstr "Kies welke temperatuureenheid wordt gebruikt voor het tonen van temperat
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Toon plot informatie voor niet-bekeken media in de videobibliotheek"
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Toon het plot voor niet-bekeken video's in de bibliotheek. De plot zal getoond worden voor de specifieke categorie die je gekozen hebt. Bijvoorbeeld, als \"Films\" is geselecteerd, dan zal de plot in de filmbibliotheek getoond worden, maar deze zal verborgen blijven voor de TV-shows en eventuele andere opties."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18305,15 +18322,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Duur van directe opnamen bij het indrukken van de opnameknop. Deze waarde zal worden genomen, indien 'Instant opname actie' is ingesteld op 'Record voor een vaste tijdsperiode'"
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr ""
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Indien hoger dan '0' ingesteld zal de gegeven waarde als laatstbekeken tijdstip van kanalen opgeslagen worden nadat het kanaal gestart is. Anders zal het laatstbekeken tijdstip meteen opgeslagen worden bij het starten van het kanaal."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18740,7 +18756,7 @@ msgctxt "#36294"
 msgid ""
 "When sorting music items by artist use sortname e.g. Parton, Dolly rather "
 "than name."
-msgstr ""
+msgstr "Bij het sorteren van muziekitems, gebruik de sorteernaam. Bijvoorbeeld Parton, Dolly in plaats van de artiestnaam."
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -18894,8 +18910,8 @@ msgstr "Activeer de UPnP cliënt. Dit stelt je in staat om media te streamen van
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Activeer het UPnP-controlepunt. Hiermee kun je media streamen naar elke UPnP-cliënt, en het afspelen van media ernaar bepalen."
+"client and control its playback."
+msgstr "Schakel de UPnP-controle in. Hiermee kun je media naar elke UPnP-cliënt versturen en het afspelen bedienen."
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19664,7 +19680,7 @@ msgstr "VideoPlayer gebruiken voor het decoderen van videobestanden met MMAL-ver
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Kies de OS-toetsenbordindeling."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -21685,4 +21701,4 @@ msgstr "Downmix: centreer mengniveau"
 #: xbmc/video/dialogs/GUIDialogAudioSettings.cpp
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
-msgstr "centreer mengniveau in dB gerelativeerd naar meta gegevens of standaard (-3 dB)"
+msgstr "Centreer mengniveau in dB gerelativeerd naar meta gegevens of standaard (-3 dB)"

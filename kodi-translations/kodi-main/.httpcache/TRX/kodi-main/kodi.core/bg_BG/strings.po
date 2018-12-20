@@ -11,9 +11,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"PO-Revision-Date: 2018-11-27 07:21+0000\n"
 "Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -1925,6 +1925,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Не е открита информация за диска"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Диск"
@@ -2451,6 +2452,7 @@ msgid "Size"
 msgstr "Размер"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Запис№"
@@ -2469,6 +2471,7 @@ msgstr "Заглавие"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Изпълнител"
@@ -2477,6 +2480,7 @@ msgstr "Изпълнител"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Албум"
@@ -2498,7 +2502,7 @@ msgstr "Файл"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Година"
@@ -4612,6 +4616,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Информация за системата"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Възпроизвеждане на следващото"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6504,7 +6514,8 @@ msgid ""
 "for this visualisation"
 msgstr "Няма налични настройки за визуализацията"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Отвори/Затвори"
@@ -6637,7 +6648,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Софтуерно"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Безопасно премахване"
@@ -9859,6 +9870,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Продължаване?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Забавено отбелязване на последно гледаното"
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10136,7 +10153,7 @@ msgstr "Приоритети на клиента"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Преглед на брояча"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10530,18 +10547,12 @@ msgid ""
 "programme?"
 msgstr "Искате ли да запишете избраното предаване, или предпочитате да превключите към текущото предаване?"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Просто екранно меню за изместване във времето"
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Преглед на правилото на брояча"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12254,6 +12265,7 @@ msgstr "Желаете ли всички елементи от този път �
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Филми"
@@ -12263,6 +12275,7 @@ msgstr "Филми"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "ТВ Сериали"
@@ -15534,7 +15547,7 @@ msgstr "Съобщения за трафика"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "СПД Ви информира относно съобщения за трафика"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16345,14 +16358,14 @@ msgstr "Натиснете всеки аналогов бутон сега, за
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Вземане на всички"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Няма нищо за напасване"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -17014,7 +17027,7 @@ msgstr "Натиснете {0:s}, за да отворите игралното 
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "В тази версия за играене на игри може да се ползват само контролери."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17601,7 +17614,7 @@ msgctxt "#36134"
 msgid ""
 "Dim the display when media is paused. Not valid for the \"Dim\" screensaver "
 "mode."
-msgstr "Затъмняване на екрана при състояние \"На пауза\". Не когато сте избрали скрийсейвъра \"Dim\" като стандартен."
+msgstr "Затъмняване на екрана при състояние „На пауза“. Не важи, когато е избран скрийсейвърът „Затъмняване“."
 
 #: system/settings/settings.xml
 msgctxt "#36135"
@@ -17643,8 +17656,12 @@ msgstr "Изберете коя единица за температура да 
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Показва сюжета и за неизгледаните елементи в библиотеката."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Показване на информация за сюжета на неизгледаните неща в библиотеката с видеа. Сюетът ще се показва за избраната категория. Например: ако е избрано „Филми“, то сюжетът ще се показва в библиотеката с видеа, но ще бъде скрит за телевизионните предавания и другите категории."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18293,15 +18310,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Продължителност на моменталните записи при натискане на бутона за запис. Тази стойност ще се вземе предвид, ако за „Действие за моментален запис“ е зададено „Запис с фиксирана продължителност“."
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr "Нормалното екранно меню за изместване във времето винаги показва целия буфер за изместване във времето, заедно с текущо гледаното предаване, а опростеното екранно меню показва само текущо гледаното предаване, без да показва докъде в буфера можете да прескочите от текущото място."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Ако е зададена стойност по-голяма от нула, то времето на последно гледане на каналите ще се запазва след толкова време след пускане на канала. Иначе ще се запазва веднага при пускането на канала."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18882,8 +18898,8 @@ msgstr "Включва UPnP функционалността \"клиент\". �
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Включва UPnP функционалността \"контролна точка\". Позволява поточно предаване на мултимедийни файлове към UPnP клиент, като същевременно контролирате възпроизвеждането."
+"client and control its playback."
+msgstr "Включва UPnP функционалността „контролна точка“. Позволява поточно предаване на мултимедийни файлове към UPnP клиент, като същевременно контролирате възпроизвеждането."
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19652,7 +19668,7 @@ msgstr "Използване на „VideoPlayer“ за дешифриране 
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Изберете подредба на клавиатурата от операционната система."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302

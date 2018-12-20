@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"PO-Revision-Date: 2018-11-26 21:33+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) (http://www.transifex.com/teamxbmc/kodi-main/language/af_ZA/)\n"
 "MIME-Version: 1.0\n"
@@ -1919,6 +1919,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Geen CD inligting gevind"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Skyf"
@@ -2445,6 +2446,7 @@ msgid "Size"
 msgstr "Grootte"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Snit"
@@ -2463,6 +2465,7 @@ msgstr "Titel"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Kunstenaar"
@@ -2471,6 +2474,7 @@ msgstr "Kunstenaar"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Album"
@@ -2492,7 +2496,7 @@ msgstr "Lêer"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Jaar"
@@ -4606,6 +4610,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Stelsel inligting"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr ""
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6498,7 +6508,8 @@ msgid ""
 "for this visualisation"
 msgstr "Daar is geen verstellings beskikbaar\nvir hierdie visualisering"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Uitwerp / Inlaai"
@@ -6631,7 +6642,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Sagteware"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Verwyder veilig"
@@ -9853,6 +9864,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Gaan voort?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr ""
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10523,12 +10540,6 @@ msgid ""
 "Do you want to record the selected programme or to switch to the current "
 "programme?"
 msgstr "Wil jy die geselekteerde program opneem of na die huidige program oorskakel?"
-
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Gebruik eenvoudige tydskuif OSD"
 
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
@@ -12248,6 +12259,7 @@ msgstr "Wil jy alle items binne hierdie pad verwyder uit jou biblioteek?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Flieks"
@@ -12257,6 +12269,7 @@ msgstr "Flieks"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "TV vertonings"
@@ -17637,8 +17650,12 @@ msgstr "Kies watter temperatuur eenheid gebruik word om temperature in die gebru
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Wys plot inligting vir ongekykte media in die video biblioteek."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr ""
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18287,15 +18304,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Duur van oombliklike opnames wanneer die opneem knoppie druk. Hierdie waarde sal in ag geneem word as \"Oombliklike opneem aksie\" gestel is op \"Neem vir 'n vaste periode op\""
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr "Normale tydskuif OSD wys altyd die volledige tydskuif buffer saam met die huidiglik spelende vertoning, terwyl die eenvoudige tydskuif OSD net die huidiglik spelende vertoning wys met geen visuele terugvoer van hoe ver in die tydskuif buffer jy kan spring vanaf die huidiglik spelende posisie."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18876,8 +18892,8 @@ msgstr "Stel die UPnP bediener in staat. Dit laat jou toe om media te stroom van
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Stel die UPnP beheer punt in staat. Dit laat jou toe om media te stroom na enige UPnP kliënt en sy terugspeel te beheer."
+"client and control its playback."
+msgstr ""
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml

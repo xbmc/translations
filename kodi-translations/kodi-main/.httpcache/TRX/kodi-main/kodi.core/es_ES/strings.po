@@ -21,7 +21,7 @@
 # NetVicious <netvicious@gmail.com>, 2018
 # Ricardo González, 2015-2016
 # Ricardo González, 2015
-# Rafael Oliveros <roliverosc@gmail.com>, 2018
+# Rafa Oliveros <roliverosc@gmail.com>, 2018
 # Ricardo González, 2015-2016
 # Ricardo González, 2016
 # Rubén Trujillo <rubentrf@gmail.com>, 2016
@@ -33,10 +33,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2018-11-28 10:39+0000\n"
+"Last-Translator: alfonskunk <alfonskunk@gmail.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1947,6 +1947,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "No se encontró información del CD"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Disco"
@@ -2473,6 +2474,7 @@ msgid "Size"
 msgstr "Tamaño"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Pista"
@@ -2491,6 +2493,7 @@ msgstr "Título"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Intérprete"
@@ -2499,6 +2502,7 @@ msgstr "Intérprete"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Álbum"
@@ -2520,7 +2524,7 @@ msgstr "Archivo"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Año"
@@ -4634,6 +4638,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Información del sistema"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Reproducir siguiente"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6526,7 +6536,8 @@ msgid ""
 "for this visualisation"
 msgstr "No hay ajustes disponibles\npara esta visualización"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Expulsar/Cargar"
@@ -6659,7 +6670,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Software"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Expulsar"
@@ -9881,6 +9892,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "¿Continuar?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Retardo de marca de último visto"
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10158,7 +10175,7 @@ msgstr "Prioridades de cliente"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Ver programación"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10552,18 +10569,12 @@ msgid ""
 "programme?"
 msgstr "¿Desea grabar el programa seleccionado o cambiar al programa actual?"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Usar OSD simple en línea de tiempo"
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Ver regla de programación"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12276,6 +12287,7 @@ msgstr "¿Quiere eliminar todos los elementos de esta ruta de su colección?"
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Películas"
@@ -12285,6 +12297,7 @@ msgstr "Películas"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "Series"
@@ -15556,7 +15569,7 @@ msgstr "Mensaje de advertencia de tráfico"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "RDS informará sobre avisos de tráfico"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16367,14 +16380,14 @@ msgstr "Pulse todos los botones analógicos ahora para detectarlos:[CR][CR]{0:s}
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Instalar todos"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "No hay nada a mapear"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -17036,7 +17049,7 @@ msgstr "Pulse {0:s} para abrir el menú del juego."
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "En esta versión, solo se pueden usar mandos para jugar."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17665,8 +17678,12 @@ msgstr "Qué unidad de temperatura se usará para mostrar temperaturas en el int
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Muestra el argumento para el contenido no visto de la colección de vídeos."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Muestra el argumento del contenido no visto de la colección de video. Se mostrará el argumento de la categoría específica que haya elegido. Por ejemplo, si se elige 'Películas', los argumentos se mostrarán en la colección de películas, pero se ocultarán en las series de TV y al contrario."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18315,15 +18332,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Duración de la grabación inmediata cuando presiona el botón Grabar. Este valor se utilizará si la \"acción de grabación inmediata\" está configurada como \"Grabar un periodo fijo de tiempo\""
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr "El OSD Normal de la línea de tiempo siempre muestra la línea completa de duración del programa reproducido, mientras que el OSD simple solo muestra el programa actual sin indicar visualmente cuanto tiempo hay disponible para saltar en la línea de tiempo."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Si establece un valor mayor que cero, el tiempo de último visto de cada canal se guardará con el valor añadido despues de empezar a ver el canal. Si no, el tiempo de último visto que se guardará será el tiempo exacto en que empezó a ver el canal."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18904,8 +18920,8 @@ msgstr "Activa el cliente UPnP. Esto le permite transmitir contenido desde cualq
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
-msgstr "Activa el punto de control UPnP. Permite enviar contenido a un cliente UPnP y controlar la reproducción."
+"client and control its playback."
+msgstr "Activa el punto de control UPnP. Esto permite emitir contenido a cualquier cliente UPnP y controlar su reproducción."
 
 #. Description of settings category with label #20187 "Control"
 #: system/settings/settings.xml
@@ -19674,7 +19690,7 @@ msgstr "Usa VideoPlayer para decodificar archivos de vídeo con aceleración MMA
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Escoger distribución del teclado del SO."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302

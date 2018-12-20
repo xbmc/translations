@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-04 07:13+0000\n"
+"PO-Revision-Date: 2018-12-07 06:58+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -1920,6 +1920,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Nerasta CD duomenų"
 
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#427"
 msgid "Disc"
 msgstr "Diskas"
@@ -2446,6 +2447,7 @@ msgid "Size"
 msgstr "Dydis"
 
 #: xbmc/filesystem/BlurayDirectory.cpp xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#554"
 msgid "Track"
 msgstr "Takelis"
@@ -2464,6 +2466,7 @@ msgstr "Pavadinimas"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#557"
 msgid "Artist"
 msgstr "Atlikėjas"
@@ -2472,6 +2475,7 @@ msgstr "Atlikėjas"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 msgctxt "#558"
 msgid "Album"
 msgstr "Albumas"
@@ -2493,7 +2497,7 @@ msgstr "Failas"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#562"
 msgid "Year"
 msgstr "Metai"
@@ -4607,6 +4611,12 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Sistemos informacija"
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
+msgctxt "#10008"
+msgid "Play next"
+msgstr "Atkurti kitą"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -6499,7 +6509,8 @@ msgid ""
 "for this visualisation"
 msgstr "Ši vizualizacija\nneturi jokių nustatymų"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogPlayEject.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/dialogs/GUIDialogPlayEject.cpp
 msgctxt "#13391"
 msgid "Eject / Load"
 msgstr "Atidaryti / Uždaryti"
@@ -6632,7 +6643,7 @@ msgctxt "#13419"
 msgid "Software"
 msgstr "Programinė įranga"
 
-#: xbmc/dialogs/GUIDialogContextMenu.cpp
+#: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13420"
 msgid "Remove safely"
 msgstr "Saugiai atjungti"
@@ -9854,6 +9865,12 @@ msgctxt "#19194"
 msgid "Continue?"
 msgstr "Tęsti?"
 
+#. pvr settings "delay mark last watched" setting label
+#: system/settings/settings.xml
+msgctxt "#19195"
+msgid "Delay mark last watched"
+msgstr "Atidėti paskutinio žiūrėto pažymėjimą"
+
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19196"
@@ -10131,7 +10148,7 @@ msgstr "Kliento prioritetai"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19241"
 msgid "View timer"
-msgstr ""
+msgstr "Peržiūrėti laikmatį"
 
 #. Label for context menu entry to open settings dialog for a timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10525,18 +10542,12 @@ msgid ""
 "programme?"
 msgstr "Norite įrašyti pasirinktą programą ar perjungti į dabartinę programą?"
 
-#. pvr setting "Use simple timeshift OSD" value
-#: system/settings/settings.xml
-msgctxt "#19303"
-msgid "Use simple timeshift OSD"
-msgstr "Naudoti paprastą laiko poslinkio OSD"
-
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
-msgstr ""
+msgstr "Peržiūrėti laikmačio taisyklę"
 
 #. label for epg genre value
 #: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12249,6 +12260,7 @@ msgstr "Ar norite iš bibliotekos pašalinti visus elementus, esančius šiame k
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
 msgstr "Filmai"
@@ -12258,6 +12270,7 @@ msgstr "Filmai"
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeOverview.cpp
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
 #: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: system/settings/settings.xml
 msgctxt "#20343"
 msgid "TV shows"
 msgstr "TV laidos"
@@ -15529,7 +15542,7 @@ msgstr "Pranešti eismo patarimus"
 #: system/settings/settings.xml
 msgctxt "#29983"
 msgid "RDS informs you about traffic advisory messages"
-msgstr ""
+msgstr "RDS informuoja jus apie eismo patarimų žinutes"
 
 #. Boolean value on settings
 #: system/settings/settings.xml
@@ -16340,14 +16353,14 @@ msgstr "Paspauskite visus analoginius mygtukus dabar, kad būtų galima juos apt
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Gauti visus"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Nėra ko susieti"
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -17009,7 +17022,7 @@ msgstr "Paspauskite {0:s} norėdami atidaryti vidinį žaidimo meniu."
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "Šiame leidime žaidimams gali būti naudojami tik valdikliai."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17638,8 +17651,12 @@ msgstr "Pasirinkite, kurį temperatūros matavimo vienetą naudoti temperatūros
 #. Description of setting with label #20369 "Show plot for unwatched items"
 #: system/settings/settings.xml
 msgctxt "#36141"
-msgid "Show plot information for unwatched media in the video library."
-msgstr "Rodyti siužeto informaciją neperžiūrėtiems media įrašams video bibliotekoje."
+msgid ""
+"Show plot information for unwatched media in the video library. The plot "
+"will be shown for the specific category you have selected. For example if "
+"'Movies' is selected, the plot will be shown at the movie library, but will "
+"be hidden for TV shows and otherwise."
+msgstr "Rodyti siužeto informaciją neperžiūrėtiems media įrašams vaizdo įrašų bibliotekoje. Siužetas bus rodomas konkrečioms pasirinktoms kategorijoms. Pavyzdžiui, jei pasirinksite 'Filmus', siužetas bus rodomas filmų bibliotekoje, tačiau bus paslėptas TV laidoms ir atvirkščiai."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -18288,15 +18305,14 @@ msgid ""
 "\"Record for a fixed period of time\""
 msgstr "Momentinio įrašymo trukmė paspaudus įrašymo mygtuką. Į šią reikšmę bus atsižvelgta, jei \"Momentinio įrašymo veiksmas\" nustatytas į \"Įrašyti fiksuotą laiko periodą\""
 
-#. help text for pvr setting "Use simple timeshift OSD"
 #: system/settings/settings.xml
-msgctxt "#36235"
+msgctxt "#36236"
 msgid ""
-"Normal timeshift OSD always shows the complete timeshift buffer along with "
-"with the currently playing show, whereas the simple timeshift OSD only shows"
-" the currently playing show with no visual feedback how far in the timeshift"
-" buffer you can jump from the currently playing position."
-msgstr "Normalus laiko poslinkio OSD visada atvaizduoja pilną laiko poslinkio buferį kartu su šiuo metu rodoma laida, tuo metu kai paprastas laiko poslinkio OSD atvaizduoja tik šiuo metu rodomą laidą be jokios vizualinės informacijos kaip toli laiko poslinkio buferyje galite peršokti iš dabartinės atkūrimo pozicijos."
+"If set to a value greater than zero last watched time of channels will be "
+"stored the given amount of time after start of channel playback. Otherwise "
+"the last watched time will be stored immediately at start of channel "
+"playback."
+msgstr "Jei nustatyta reikšmė didesnė už nulį, paskutinio žiūrėjimo laikas kanalui bus išsaugotas praėjus nustatytam laiko tarpui po kanalo perjungimo. Kitu atveju paskutinio žiūrėjimo laikas bus išsaugotas iškart po kanalo perjungimo."
 
 #: system/settings/settings.xml
 msgctxt "#36237"
@@ -18877,7 +18893,7 @@ msgstr "Įjungti UPnP klientą. Tai leis jums priimti media srautą iš bet kuri
 msgctxt "#36326"
 msgid ""
 "Enable the UPnP control point. This allows you to stream media to any UPnP "
-"client and control it's playback."
+"client and control its playback."
 msgstr "Įjungti UPnP valdymo tašką. Tai leis perduoti media srautą į bet kurį UPnP klientą ir valdyti jo atkūrimą."
 
 #. Description of settings category with label #20187 "Control"
@@ -19647,7 +19663,7 @@ msgstr "Naudoti VideoPlayer video failų dekodavimui su MMAL spartinimu."
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
-msgstr ""
+msgstr "Pasirinkti OS klaviatūros išdėstymą."
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
