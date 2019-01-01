@@ -15,14 +15,14 @@
 # Wei Zhang <zwzhang250@sina.com>, 2018
 # wwj402 <wwj402@gmail.com>, 2018
 # XODI, 2017
-# 無情天 X <kofzhanganguo@126.com>, 2017
+# 無情天 X <kofzhanganguo@126.com>, 2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-12-05 08:04+0000\n"
-"Last-Translator: wwj402 <wwj402@gmail.com>\n"
+"PO-Revision-Date: 2018-12-26 18:30+0000\n"
+"Last-Translator: 無情天 X <kofzhanganguo@126.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12414,8 +12414,8 @@ msgstr "序列号"
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "显示未观看项的剧情介绍"
+msgid "Show information for unwatched items"
+msgstr "显示未观看项目的信息"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -14363,7 +14363,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "从 zip 文件安装"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "已下载 {0:d}%"
@@ -14373,6 +14374,12 @@ msgstr "已下载 {0:d}%"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "可更新项"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr "安装 {0:d}%"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -17661,15 +17668,15 @@ msgid ""
 "user interface."
 msgstr "选择用户界面中显示温度使用的单位。"
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
-msgstr "在视频库中显示未观看媒体的绘图信息。该图将显示您所选择的特定类别中。例如，如果选择“电影”，图将显示在电影库，但在电视节目和其他类别中将隐藏。"
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
+msgstr "显示视频资料库中未观看媒体的剧情信息，如果未选择则隐藏它们以防止剧透。可用选项包括“电影剧情”，“分集剧情”和“剧集缩略图”。"
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -20690,7 +20697,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "设置音频编码器参数，如质量和压缩级别"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "自动"
@@ -20700,7 +20707,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20710,7 +20717,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "无限制"
@@ -20826,6 +20833,11 @@ msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
 msgstr "提取章节缩略图用于章节/书签对话框显示。这会增加 CPU 负荷。"
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr "1080"
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21698,3 +21710,21 @@ msgstr "混缩：中置混合级别"
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr "基于元数据或默认值（-3 dB）按 dB 中置混合级别"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr "剧集缩略图"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "电影剧情"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "分集剧情"

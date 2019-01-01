@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-12-18 19:58+0000\n"
+"PO-Revision-Date: 2018-12-27 15:04+0000\n"
 "Last-Translator: Trottel <trottel09@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -12414,12 +12414,12 @@ msgstr "Kód produkce"
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "Zobrazovat děj pro nezhlédnuté položky"
+msgid "Show information for unwatched items"
+msgstr "Zobrazovat informace pro nezhlédnuté položky"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
-msgstr "* Skryto kvůli předejití vyzrazení děje *"
+msgstr "* Skryto, aby se zabránilo vyzrazení děje *"
 
 msgctxt "#20371"
 msgid "Set season thumb"
@@ -14363,7 +14363,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Instalovat ze souboru zip"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "Stahování {0:d} %"
@@ -14373,6 +14374,12 @@ msgstr "Stahování {0:d} %"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "Dostupné aktualizace"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr "Instalace {0:d} %"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -17661,15 +17668,15 @@ msgid ""
 "user interface."
 msgstr "Zvolte, která jednotka teploty bude použita pro zobrazení teplot v uživatelském rozhraní."
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
-msgstr "Zobrazovat popis děje pro neshlédnutá média v knihovně videí. Děj bude zobrazen pro konkrétní vybranou kategorii. Například pokud je vybráno „Filmy“, děj bude zobrazen pro knihovnu filmů, ale skrytý pro televizní pořady a obráceně."
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
+msgstr "Zobrazovat informace pro nezhlédnutá média v knihovně videí nebo je skrývat, pokud nejsou vybrány, aby se zabránilo vyzrazení děje. Dostupné možnosti jsou: 'Děj filmu', 'Děj epizody' a 'Náhled epizody'."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -20690,7 +20697,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Konfigurujte nastavení enkodéru zvuku, jako je kvalita a úroveň komprese"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automatická"
@@ -20700,7 +20707,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20710,7 +20717,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Neomezená"
@@ -20826,6 +20833,11 @@ msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
 msgstr "Extrahovat náhledy kapitol pro zobrazování v dialogu kapitoly / záložky. Toto může zvýšit zatížení procesoru."
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr "1080"
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21698,3 +21710,21 @@ msgstr "Sloučení: Úroveň středového kanálu"
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr "Úroveň středového kanálu v dB vztažená k metadatům nebo výchozí (-3 dB)"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr "Náhled epizody"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "Děj filmu"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "Děj epizody"

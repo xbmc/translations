@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-12-04 17:58+0000\n"
+"PO-Revision-Date: 2018-12-22 15:23+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -6234,7 +6234,7 @@ msgstr "Afficher les flux RSS"
 #: system/settings/settings.xml
 msgctxt "#13306"
 msgid "Show parent folder items"
-msgstr "Afficher l'accès au dossier parent"
+msgstr "Afficher les éléments du dossier parent"
 
 #: system/settings/settings.xml
 msgctxt "#13307"
@@ -12412,8 +12412,8 @@ msgstr "Code prod."
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "Afficher l'intrigue pour les éléments non vus"
+msgid "Show information for unwatched items"
+msgstr "Afficher les informations pour les éléments non vus"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -14361,7 +14361,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Installer depuis un fichier Zip"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "Téléchargement de {0:d}%"
@@ -14371,6 +14372,12 @@ msgstr "Téléchargement de {0:d}%"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "Mises à jour disponibles"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr "Installation {0:d}%"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -17659,15 +17666,15 @@ msgid ""
 "user interface."
 msgstr "Sélection de l'unité de mesure pour l'affichage des températures sur l'interface utilisateur."
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
-msgstr "Affiche l'intrigue des médias non vus de la vidéothèque. L'intrigue sera affichée pour la catégorie spécifiée. Par ex. si « Films » est sélectionné, l'intrigue de la bibliothèque de films sera affichée mais pas celle des séries TV ou autres."
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
+msgstr "Affiche les informations pour les médias non vus de la vidéothèque, ou les masque si non sélectionnés pour ne pas gâcher le suspens. Options disponibles : «  Intrigue du film », « Intrigue de l'épisode » et « Miniature de l'épisode »."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -20688,7 +20695,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Configure les paramètres d'encodage audio tels que la qualité et le niveau de compression."
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automatique"
@@ -20698,7 +20705,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20708,7 +20715,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Illimité"
@@ -20824,6 +20831,11 @@ msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
 msgstr "Extrait les miniatures de chapitre pour présentation dans la fenêtre de dialogue de chapitrage/signets. Ceci est susceptible d'augmenter la charge du processeur."
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr "1080"
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21696,3 +21708,21 @@ msgstr "Remixage : niveau du mixage au centre"
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr "Niveau du mixage au centre en dB relativement aux métadonnées ou à la prédéfinition (-3 dB)."
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr "Miniature de l'épisode"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "Intrigue du film"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "Intrigue de l'épisode"

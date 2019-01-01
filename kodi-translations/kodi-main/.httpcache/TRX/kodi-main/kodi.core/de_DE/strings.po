@@ -34,7 +34,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-12-17 12:00+0000\n"
+"PO-Revision-Date: 2018-12-30 10:00+0000\n"
 "Last-Translator: ksooo <kai.sommerfeld@gmx.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -6611,7 +6611,7 @@ msgstr "Fortsetzen"
 
 msgctxt "#13405"
 msgid "Get thumb"
-msgstr "Lade Vorschaubild"
+msgstr "Vorschaubild laden"
 
 msgctxt "#13406"
 msgid "Picture information"
@@ -8118,7 +8118,7 @@ msgstr "Ausgeglichene Audio/Video-Synchronisation verwenden"
 
 msgctxt "#15215"
 msgid "Hide file names in thumbs view"
-msgstr "Dateinamen in der Symbolansicht ausblenden"
+msgstr "Dateinamen in der Vorschaubild-Ansicht ausblenden"
 
 msgctxt "#15216"
 msgid "Play in party mode"
@@ -11224,26 +11224,26 @@ msgstr "Nach Wiedergabeliste"
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20015"
 msgid "Remote thumb"
-msgstr "Online-Cover"
+msgstr "Online-Vorschaubild"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20016"
 msgid "Current thumb"
-msgstr "Aktuelles Cover"
+msgstr "Aktuelles Vorschaubild"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: xbmc/music/dialogs/GUIDialogSongInfo.cpp
 msgctxt "#20017"
 msgid "Local thumb"
-msgstr "Lokales Cover"
+msgstr "Lokales Vorschaubild"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 msgctxt "#20018"
 msgid "No thumb"
-msgstr "Kein Cover"
+msgstr "Kein Vorschaubild"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp xbmc/dialogs/GUIDialogFavourites.cpp
 msgctxt "#20019"
@@ -12197,7 +12197,7 @@ msgstr "Inhalt-Scanning-Einstellungen"
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20323"
 msgid "Movie plot"
-msgstr "Handlung"
+msgstr "Film-Handlung"
 
 msgctxt "#20324"
 msgid "Play part..."
@@ -12408,7 +12408,7 @@ msgstr "Serie"
 
 msgctxt "#20365"
 msgid "Episode plot"
-msgstr "Handlung (Episode)"
+msgstr "Episoden-Handlung"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNode.cpp
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeSeasons.cpp
@@ -12427,8 +12427,8 @@ msgstr "Produktions-Code"
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "Handlung für ungesehene Filme anzeigen"
+msgid "Show information for unwatched items"
+msgstr "Informationen für ungesehene Filme anzeigen"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -12436,7 +12436,7 @@ msgstr "* Die Handlung wird nicht angezeigt. *"
 
 msgctxt "#20371"
 msgid "Set season thumb"
-msgstr "Staffel-Cover setzen"
+msgstr "Staffel-Vorschaubild setzen"
 
 msgctxt "#20372"
 msgid "Season image"
@@ -14376,7 +14376,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Aus ZIP-Datei installieren"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "Herunterladen: {0:d}%"
@@ -14386,6 +14387,12 @@ msgstr "Herunterladen: {0:d}%"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "Verfügbare Aktualisierungen"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr "Installieren: {0:d}%"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -16379,14 +16386,14 @@ msgstr "Alle analogen Buttons drücken, um sie zu erkennen:[CR][CR]{0:s}"
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35021"
 msgid "Get all"
-msgstr ""
+msgstr "Alle installieren"
 
 #. Message shown in the controller dialog when there is nothing to map, for
 #. example hubs (multitaps) have no buttons
 #: xbmc/games/controllers/windows/GUIFeatureList.cpp
 msgctxt "#35022"
 msgid "Nothing to map"
-msgstr ""
+msgstr "Keine Buttons zum Mappen verfügbar."
 
 #. Name of setting to configure peripheral add-ons
 #: system/settings/settings.xml
@@ -17048,7 +17055,7 @@ msgstr "Zum Öffnen des In-Game Menüs, {0:s} drücken."
 #: addons/skin.estuary/xml/GameOSD.xml
 msgctxt "#35236"
 msgid "In this release, only controllers can be used to play games."
-msgstr ""
+msgstr "In dieser Version können nur Controller zum Spielen verwendet werden."
 
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#35250"
@@ -17674,15 +17681,15 @@ msgid ""
 "user interface."
 msgstr "Auswahl der Maßeinheit, die für die Anzeige von Temperaturen in der Benutzeroberfläche verwendet werden soll."
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
-msgstr "Handlung für ungesehene Filme der Video-Bibliothek anzeigen. Die Handlung wird nur für die ausgewählten Kategorien angezeigt. Zum Beispiel, wenn \"Filme\" ausgewählt ist, wird die Handlung nur für Filme angezeigt und nicht für Serien und anderes."
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
+msgstr "Informationen für ungesehene Filme der Video-Bibliothek anzeigen oder verstecken, um Spoiler zu verhindern. Verfügbare Optionen sind \"Film-Handlung\", \"Episoden-Handlung\" und \"Episoden-Vorschaubild\"."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -17980,7 +17987,7 @@ msgstr "Wenn eine Datei in die Bibliothek aufgenommen wurde, wird statt des Date
 #: system/settings/settings.xml
 msgctxt "#36180"
 msgid "Extract thumbnails to display in library mode."
-msgstr "Thumbnails für Anzeige im Bibliotheks-Modus extrahieren."
+msgstr "Vorschaubilder für Anzeige im Bibliotheks-Modus extrahieren."
 
 #: system/settings/settings.xml
 msgctxt "#36181"
@@ -20703,7 +20710,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Konfiguration von Audio-Encoder-Einstellungen, wie beispielsweise Qualität und Komprimierungsstufe"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automatisch"
@@ -20713,7 +20720,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20723,7 +20730,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Unbeschränkt"
@@ -20830,7 +20837,7 @@ msgstr "Legt die Zeit fest, die auf weitere Tastendrücke gewartet wird, before 
 #: system/settings/settings.xml
 msgctxt "#37044"
 msgid "Extract chapter thumbnails"
-msgstr "Kapitelvorschaubilder extrahieren"
+msgstr "Kapitel-Vorschaubilder extrahieren"
 
 #. Description of setting #37044 Extract chapter thumbnails"
 #: system/settings/settings.xml
@@ -20838,7 +20845,12 @@ msgctxt "#37045"
 msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
-msgstr "Kapitelvorschaubilder zur Darstellung im Kapitel-/Lesenzeichendialog extrahieren. Dies kann  eine höhere CPU-Last zur Folge haben."
+msgstr "Kapitel-Vorschaubilder zur Darstellung im Kapitel-/Lesenzeichendialog extrahieren. Dies kann  eine höhere CPU-Last zur Folge haben."
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr "1080"
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21252,7 +21264,7 @@ msgstr "Kategorie mit weiteren Einstellungen für die grafische Benutzeroberflä
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"
-msgstr "Thumbnails aus Video-Dateien extrahieren"
+msgstr "Vorschaubilder aus Video-Dateien extrahieren"
 
 #. Description of setting "Pictures -> Show EXIF picture information" with
 #. label #38207
@@ -21322,7 +21334,7 @@ msgstr "Zu exportierende Einträge"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
 msgid "Include art work such as thumbnails and fanart"
-msgstr "Artwork, wie Thumbnails und Fanart, mit einbeziehen"
+msgstr "Artwork, wie Vorschaubilder und Fanart, mit einbeziehen"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
@@ -21711,3 +21723,21 @@ msgstr "Heruntermischen: Center Mix Pegel"
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr "Center Mix Pegel in dB, relative zu Metadaten or Standard (-3 dB)"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr "Episoden-Vorschaubild"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "Film-Handlung"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "Episoden-Handlung"

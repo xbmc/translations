@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-11-26 21:33+0000\n"
+"PO-Revision-Date: 2018-12-20 19:35+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Hebrew (Israel) (http://www.transifex.com/teamxbmc/kodi-main/language/he_IL/)\n"
 "MIME-Version: 1.0\n"
@@ -12412,8 +12412,8 @@ msgstr "קוד הפקה"
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "הצג עלילת פריטים שלא נצפו"
+msgid "Show information for unwatched items"
+msgstr ""
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -14361,7 +14361,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "התקנה מקובץ zip"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "מוריד {0:d}%"
@@ -14371,6 +14372,12 @@ msgstr "מוריד {0:d}%"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "עדכונים זמינים"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr ""
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -17659,14 +17666,14 @@ msgid ""
 "user interface."
 msgstr "קביעת יחידת טמפרטורה להצגת טמפרטורות בממשק המשתמש."
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
 msgstr ""
 
 #. Description of setting with label #14106 "Speed unit"
@@ -20688,7 +20695,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "קביעת הגדרות מקודד שמע כמו איכות ורמת דחיסה"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "אוטומטי"
@@ -20698,7 +20705,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20708,7 +20715,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "ללא הגבלה"
@@ -20824,6 +20831,11 @@ msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
 msgstr "יצירת תמונות פרקים ממוזערות להצגה במסך פרקים / סימניות.  תכונה זו יכולה להעמיס על המעבד."
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr ""
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21696,3 +21708,21 @@ msgstr ""
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr ""
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr ""
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "עלילת סרט"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "עלילת פרק"

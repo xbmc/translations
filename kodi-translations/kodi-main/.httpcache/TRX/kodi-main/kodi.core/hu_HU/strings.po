@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2018-12-18 20:35+0000\n"
+"PO-Revision-Date: 2018-12-31 09:16+0000\n"
 "Last-Translator: Attila Ilyés <ilyes3@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/teamxbmc/kodi-main/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -12424,8 +12424,8 @@ msgstr "Prod kód"
 
 #: system/settings/settings.xml
 msgctxt "#20369"
-msgid "Show plot for unwatched items"
-msgstr "Tartalom megjelenítése nem látott filmek esetén"
+msgid "Show information for unwatched items"
+msgstr "Meg nem nézett elemek információinak megjelenítése"
 
 msgctxt "#20370"
 msgid "* Hidden to prevent spoilers *"
@@ -14373,7 +14373,8 @@ msgctxt "#24041"
 msgid "Install from zip file"
 msgstr "Telepítés zip fájlból"
 
-#: xbmc/addons/GUIViewStateAddonBrowser.cpp
+#. Used to show on addon list the current download process
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
 msgstr "Letöltés: {0:d}%"
@@ -14383,6 +14384,12 @@ msgstr "Letöltés: {0:d}%"
 msgctxt "#24043"
 msgid "Available updates"
 msgstr "Elérhető frissítések"
+
+#. Used to show on addon list the current install process (shown after 24042)
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#24044"
+msgid "Installing {0:d}%"
+msgstr "Telepítés {0:d}%"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -17671,15 +17678,15 @@ msgid ""
 "user interface."
 msgstr "Válassza ki a hőmérsékleti egységet a hőmérséklet megjelenítéséhez a felhasználói felületen."
 
-#. Description of setting with label #20369 "Show plot for unwatched items"
+#. Description of setting with label #20369 "Show information for unwatched
+#. items"
 #: system/settings/settings.xml
 msgctxt "#36141"
 msgid ""
-"Show plot information for unwatched media in the video library. The plot "
-"will be shown for the specific category you have selected. For example if "
-"'Movies' is selected, the plot will be shown at the movie library, but will "
-"be hidden for TV shows and otherwise."
-msgstr "A videótárban lévő nemlátott média információinak mutatása. Az információk a kiválasztott kategóriához jelennek meg. Ha például a \"Filmek\" opciót választja, akkor az információ a filmkönyvtárban jelenik meg, de rejtve marad a TV-sorozatoknak és egyebeknek."
+"Show information for unwatched media in the video library or hide them if "
+"not selected to prevent spoilers. Available options are 'Movie plot', "
+"'Episode plot' and 'Episode thumb'."
+msgstr "A meg nem nézett tartalom információinak megjelenítése a videó könyvtárban vagy elrejtése ha nincs kiválasztva a spoilerek megakadályozása. A rendelkezésre álló lehetőségek a \"Filmelőzetes\", \"Epizód előzetes\" és \"Epizód bélyegkép\"."
 
 #. Description of setting with label #14106 "Speed unit"
 #: system/settings/settings.xml
@@ -20700,7 +20707,7 @@ msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Az audió kódoló beállítása úgymint minőség és tömörítés mértéke"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Auto"
@@ -20710,7 +20717,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20720,7 +20727,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/android.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Korlátlan"
@@ -20836,6 +20843,11 @@ msgid ""
 "Extract chapter thumbnails for presentation in the chapters / bookmarks "
 "dialogue. This might increase CPU load."
 msgstr "Bélyegképek kinyerése a fejezetekből a fejezetek / könyvjelzők párbeszédablakhoz. Ez növelheti a CPU terhelést."
+
+#: system/settings/android.xml
+msgctxt "#37046"
+msgid "1080"
+msgstr "1080"
 
 #: system/settings/rbp.xml
 msgctxt "#38010"
@@ -21319,7 +21331,7 @@ msgstr "Exportálandó elemek"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
 msgid "Include art work such as thumbnails and fanart"
-msgstr "Illusztrációk, mint a bélyegképek, bele vétele"
+msgstr "Tartalmazza az illusztrációkat, mint például a bélyegképeket és a fanartokat"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
@@ -21708,3 +21720,21 @@ msgstr "Lekeverés: Center keverési szint"
 msgctxt "#39113"
 msgid "Center Mix Level in dB relative to metadata or default (-3 dB)"
 msgstr "Center keverési szint dB-ben metaadatokhoz vagy alapértelmezetthez képest (-3 dB)"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39114"
+msgid "Episode thumb"
+msgstr "Epizód bélyegkép"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39115"
+msgid "Movie plot"
+msgstr "Filmelőzetes"
+
+#. Label for "show information for unwatched items" setting option
+#: system/settings/settings.xml
+msgctxt "#39116"
+msgid "Episode plot"
+msgstr "Epizód előzetes"
