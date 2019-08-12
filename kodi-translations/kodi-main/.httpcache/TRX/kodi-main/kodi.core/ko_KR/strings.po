@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-03-17 13:08+0000\n"
+"PO-Revision-Date: 2019-05-04 13:53+0000\n"
 "Last-Translator: Min Ho Park <parkmino@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/teamxbmc/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -535,6 +535,7 @@ msgstr "아티스트"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#134"
 msgid "Songs"
 msgstr "노래"
@@ -2860,12 +2861,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "비디오 라이브러리 가져오기"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#649"
 msgid "Importing"
 msgstr "가져오기"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#650"
 msgid "Exporting"
 msgstr "내보내기"
@@ -5080,7 +5081,7 @@ msgctxt "#10522"
 msgid "Now playing - Videos"
 msgstr "지금 재생 중 - 비디오"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/ContextMenus.h xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#10523"
 msgid "Album information"
 msgstr "앨범 정보"
@@ -7669,12 +7670,12 @@ msgstr "라이브러리 설정"
 #: system/settings/settings.xml
 msgctxt "#14204"
 msgid "PVR & Live TV"
-msgstr "PVR & Live TV"
+msgstr "PVR과 라이브 TV"
 
 #: system/settings/settings.xml
 msgctxt "#14205"
 msgid "PVR & Live TV settings"
-msgstr "PVR & Live TV 설정"
+msgstr "PVR과 라이브 TV 설정"
 
 #: system/settings/settings.xml
 msgctxt "#14206"
@@ -8641,7 +8642,7 @@ msgid "Find similar"
 msgstr "비슷한 프로그램 찾기"
 
 #. label for epg import progress control
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "클라이언트에서 가이드 가져오기"
@@ -8986,7 +8987,7 @@ msgstr "채널 숨김"
 #: addons/skin.estuary/xml/Includes_PVR.xml
 #: addons/skin.estuary/xml/MyGames.xml addons/skin.estuary/xml/MyMusicNav.xml
 #: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/View_50_List.xml xbmc/epg/EpgInfoTag.cpp
+#: addons/skin.estuary/xml/View_50_List.xml xbmc/pvr/epg/EpgInfoTag.cpp
 #: xbmc/FileItem.cpp xbmc/GUIInfoManager.cpp xbmc/pvr/PVRManager.cpp
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#19055"
@@ -10207,7 +10208,7 @@ msgid "Filter channels"
 msgstr "채널 필터링"
 
 #. label 'loading epg data from database' for progress dialog text
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
 msgstr "데이터베이스에서 편성표 불러오는 중"
@@ -10309,7 +10310,7 @@ msgstr "입력한 PIN이 틀립니다."
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19266"
 msgid "Parental locked"
 msgstr "자녀 보호 잠김"
@@ -10558,535 +10559,535 @@ msgid "View timer rule"
 msgstr "타이머 규정 보기"
 
 #. label for epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19499"
 msgid "Other / Unknown"
 msgstr "기타 / 알 수 없음"
 
 #. label for epg "movie/drama" genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19500"
 msgid "Movie / Drama"
 msgstr "영화 / 드라마"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective / Thriller"
 msgstr "탐정 / 스릴러"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure / Western / War"
 msgstr "모험 / 웨스턴 / 전쟁"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "SF / 판타지 / 공포"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19504"
 msgid "Comedy"
 msgstr "코미디"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "연속극 / 멜로드라마 / Folkloric"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19506"
 msgid "Romance"
 msgstr "로맨스"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious / Classical / Religious / Historical movie / drama"
 msgstr "고전 / 클래식 / 역사 영화 / 드라마"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
 msgstr "성인 영화 / 드라마"
 
 #. label for "news/current affairs" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
 msgstr "뉴스 / 시사"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News / Weather report"
 msgstr "뉴스 / 날씨"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19518"
 msgid "News magazine"
 msgstr "뉴스 매거진"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19519"
 msgid "Documentary"
 msgstr "다큐멘터리"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion / Interview / Debate"
 msgstr "토의 / 인터뷰 / 토론"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
 msgstr "쇼 / 게임쇼"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game show / Quiz / Contest"
 msgstr "게임쇼 / 퀴즈"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19534"
 msgid "Variety show"
 msgstr "버라이어티 쇼"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
 msgstr "토크쇼"
 
 #. label for "sports" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19548"
 msgid "Sports"
 msgstr "스포츠"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
 msgstr "스페셜 이벤트"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19550"
 msgid "Sport magazine"
 msgstr "스포츠 매거진"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19551"
 msgid "Football"
 msgstr "축구"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis / Squash"
 msgstr "테니스 / 스쿼시"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
 msgstr "단체 스포츠"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
 msgstr "운동경기"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19555"
 msgid "Motor sport"
 msgstr "모터 스포츠"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19556"
 msgid "Water sport"
 msgstr "수상 스포츠"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19557"
 msgid "Winter sports"
 msgstr "겨울 스포츠"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19558"
 msgid "Equestrian"
 msgstr "승마"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19559"
 msgid "Martial sports"
 msgstr "무술"
 
 #. label for "children's/youth programmes" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19564"
 msgid "Children's / Youth programmes"
 msgstr "어린이 / 청소년 프로그램"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19565"
 msgid "Pre-school children's programmes"
 msgstr "취학전 어린이 프로그램"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19566"
 msgid "Entertainment programmes for 6 to 14"
 msgstr "6-14세를 위한 예능 프로그램"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19567"
 msgid "Entertainment programmes for 10 to 16"
 msgstr "10-16세를 위한 예능 프로그램"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational / Educational / School programme"
 msgstr "정보 / 교육 / 학교 프로그램"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons / Puppets"
 msgstr "만화 / 인형극"
 
 #. label for "music/ballet/dance" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19580"
 msgid "Music / Ballet / Dance"
 msgstr "음악 / 발레 / 댄스"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock / Pop"
 msgstr "락 / 팝"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19582"
 msgid "Serious / Classical music"
 msgstr "고전 / 클래식 음악"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk / Traditional music"
 msgstr "포크 / 전통 음악"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical / Opera"
 msgstr "뮤지컬 / 오페라"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19585"
 msgid "Ballet"
 msgstr "발레"
 
 #. label for "arts/culture" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19596"
 msgid "Arts / Culture"
 msgstr "예술 / 문화"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19597"
 msgid "Performing arts"
 msgstr "공연 예술"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19598"
 msgid "Fine arts"
 msgstr "미술"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19599"
 msgid "Religion"
 msgstr "종교"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
 msgstr "대중문화 / 전통예술"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19601"
 msgid "Literature"
 msgstr "문학"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film / Cinema"
 msgstr "필름 / 시네마"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19603"
 msgid "Experimental film / video"
 msgstr "실험 영화 / 비디오"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
 msgstr "방송 / 언론"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19605"
 msgid "New media"
 msgstr "새 미디어"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts / Culture magazines"
 msgstr "예술 / 문화 매거진"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19607"
 msgid "Fashion"
 msgstr "패션"
 
 #. label for "social/political/economics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
 msgstr "정치 / 경제 / 사회"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines / Reports / Documentary"
 msgstr "매거진 / 보도 / 다큐멘터리"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics / Social advisory"
 msgstr "경제 / 사회 보도"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19615"
 msgid "Remarkable people"
 msgstr "화제의 인물"
 
 #. label for "education/science/factual" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19628"
 msgid "Education / Science / Factual"
 msgstr "교육 / 과학"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature / Animals / Environment"
 msgstr "자연 / 동물 / 환경"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology / Natural sciences"
 msgstr "기술 / 자연과학"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine / Physiology / Psychology"
 msgstr "의학 / 생리학 / 심리학"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign countries / Expeditions"
 msgstr "외국문화 / 탐사"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social / Spiritual sciences"
 msgstr "사회 / 심령 과학"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19634"
 msgid "Further education"
 msgstr "성인교육"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
 msgstr "언어"
 
 #. label for "leisure/hobbies" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19644"
 msgid "Leisure / Hobbies"
 msgstr "여가 / 취미"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism / Travel"
 msgstr "관광 / 여행"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19646"
 msgid "Handicraft"
 msgstr "수공"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19647"
 msgid "Motoring"
 msgstr "운전"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19648"
 msgid "Fitness & health"
 msgstr "피트니스와 건강"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19649"
 msgid "Cooking"
 msgstr "요리"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement / Shopping"
 msgstr "광고 / 쇼핑"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19651"
 msgid "Gardening"
 msgstr "원예"
 
 #. label for "special characteristics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19660"
 msgid "Special characteristics"
 msgstr "특성"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
 msgstr "원어"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19662"
 msgid "Black & white"
 msgstr "흑백"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19663"
 msgid "Unpublished"
 msgstr "미발표"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
 msgstr "생방송"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19676"
 msgid "Drama"
 msgstr "드라마"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective / Thriller"
 msgstr "탐정 / 스릴러"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure / Western / War"
 msgstr "모험 / 웨스턴 / 전쟁"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "SF / 판타지 / 공포"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "코미디"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "연속극 / 멜로드라마 / Folkloric"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19682"
 msgid "Romance"
 msgstr "로맨스"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
 msgstr "고전 / 클래식 / 종교 / 역사"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19684"
 msgid "Adult"
 msgstr "성인"
@@ -11949,7 +11950,7 @@ msgctxt "#20196"
 msgid "Export music library"
 msgstr "음악 라이브러리 내보내기"
 
-#: system/settings/settings.xml
+#: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
 msgstr "음악 라이브러리 가져오기"
@@ -12781,6 +12782,10 @@ msgctxt "#20445"
 msgid "Fanart"
 msgstr "팬아트"
 
+#. Ask user when refreshing music or video info if they want to use data from
+#. NFO file
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+#: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "로컬에 저장된 정보 찾음. 무시하고 인터넷에서 새로 고침 할까요?"
@@ -13908,7 +13913,8 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "아티스트 선택"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "아티스트 정보"
@@ -18108,12 +18114,12 @@ msgstr "기본 뮤직 비디오 정보 소스를 선택합니다. 애드온 관�
 #: system/settings/settings.xml
 msgctxt "#36201"
 msgid "Settings for PVR & Live TV."
-msgstr "PVR & TV 설정"
+msgstr "PVR과 TV 설정"
 
 #: system/settings/settings.xml
 msgctxt "#36202"
 msgid "This category contains the general settings for the PVR & Live TV."
-msgstr "PVR & TV 일반 설정 그룹입니다."
+msgstr "PVR과 TV 일반 설정 그룹입니다."
 
 #: system/settings/settings.xml
 msgctxt "#36203"
@@ -21042,8 +21048,9 @@ msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[빠짐]"
 
-#. Title album artists node
+#. Title album artists node, and music item to export output, see #38306
 #: system/library/music/musicroles/albumartists.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38043"
 msgid "Album artists"
 msgstr "앨범 아티스트"
@@ -21336,21 +21343,28 @@ msgstr "가져올 정보가 없는 항목 포함 (NFO 템플릿 파일을 만들
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
-msgid "Output only artwork, not NFO files"
-msgstr "NFO 파일이 아닌 아트워크만 출력"
+msgid "Output information to NFO files"
+msgstr "NFO 파일의 출력 정보"
 
+#. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
+msgid ""
+"Output information to NFO files (currently exporting artist folders only)"
+msgstr "NFO 파일의 출력 정보 (현재 아티스트 폴더만 내보냄)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38311"
 msgid "Overwrite existing files"
 msgstr "기존 파일 덮어쓰기"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38312"
 msgid "Song artists"
 msgstr "노래 정보"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38313"
 msgid "Other artists"
@@ -21385,6 +21399,40 @@ msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
 msgstr "가져올 로컬 아티스트 정보와 (NFO) 아트 파일이 있나요? 이 아티스트 폴더 위치를 설정합니다 "
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38321"
+msgid "Artist folders only"
+msgstr "아티스트 폴더만"
+
+#. Explanation of what export to library folders means see #38303 when albums
+#. and artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38322"
+msgid ""
+"Artists exported to Artist Information Folder and albums to music folders"
+msgstr "아티스트를 아티스트 정보 폴더로, 앨범을 음악 폴더로 내보냄"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. albums selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38323"
+msgid "Albums exported to music folders"
+msgstr "앨범을 음악 폴더로 내보냄"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38324"
+msgid "Artists exported to Artist Information Folder"
+msgstr "아티스트를 아티스트 정보 폴더로 내보냄"
+
+#. Explanation of what export artist folders only means see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38325"
+msgid "Artist subfolders created in Artist Information Folder"
+msgstr "아티스트 정보 폴더에 생성된 아티스트 서브폴더"
 
 #. Dialog heading when editing default settings for fetching additional music
 #. information
@@ -21449,6 +21497,39 @@ msgstr "설정을 적용하는 방법 선택"
 msgctxt "#38339"
 msgid "How to apply information provider settings"
 msgstr "정보 제공자 설정을 적용하는 방법"
+
+#. Progress statement when importing music library is processing song playback
+#. history data
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38350"
+msgid "Importing song playback history"
+msgstr "노래 재생 이력 불러오는 중"
+
+#. Progress statement when importing music library - data matching phase
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38351"
+msgid "Matching data"
+msgstr "데이터 맞추는 중"
+
+#. Progress statement when importing music library - song history being
+#. updated
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38352"
+msgid "Updating songs"
+msgstr "노래 업데이트 중"
+
+#. Notification of import success "Importing song history - <number of songs
+#. matched> updated out of <total songs in xml> imported songs"
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38353"
+msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
+msgstr "노래 이력 불러오는 중 - {0:d} 업데이트 됨 {0:d} 불러온 노래 중에"
+
+#. Message when reading the user specified XML for import to library fails
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38354"
+msgid "Unable to read xml file"
+msgstr "xml 파일을 읽을 수 없음"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

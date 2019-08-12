@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-01-10 13:22+0000\n"
+"PO-Revision-Date: 2019-06-02 12:16+0000\n"
 "Last-Translator: Heiko <berner.h@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) (http://www.transifex.com/teamxbmc/kodi-main/language/af_ZA/)\n"
 "MIME-Version: 1.0\n"
@@ -532,6 +532,7 @@ msgstr "Kunstenaars"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#134"
 msgid "Songs"
 msgstr "Liedjies"
@@ -2857,12 +2858,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "Voer video biblioteek in"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#649"
 msgid "Importing"
 msgstr "Voer in"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#650"
 msgid "Exporting"
 msgstr "Voer uit"
@@ -5077,7 +5078,7 @@ msgctxt "#10522"
 msgid "Now playing - Videos"
 msgstr "Speel nou - Videos"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/ContextMenus.h xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#10523"
 msgid "Album information"
 msgstr "Album inligting"
@@ -8638,7 +8639,7 @@ msgid "Find similar"
 msgstr "Vind soortgelyke"
 
 #. label for epg import progress control
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "Laai gids vanaf kliënte"
@@ -8983,7 +8984,7 @@ msgstr "Versteek kanaal"
 #: addons/skin.estuary/xml/Includes_PVR.xml
 #: addons/skin.estuary/xml/MyGames.xml addons/skin.estuary/xml/MyMusicNav.xml
 #: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/View_50_List.xml xbmc/epg/EpgInfoTag.cpp
+#: addons/skin.estuary/xml/View_50_List.xml xbmc/pvr/epg/EpgInfoTag.cpp
 #: xbmc/FileItem.cpp xbmc/GUIInfoManager.cpp xbmc/pvr/PVRManager.cpp
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#19055"
@@ -10204,7 +10205,7 @@ msgid "Filter channels"
 msgstr "Filter kanale"
 
 #. label 'loading epg data from database' for progress dialog text
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
 msgstr "Laai gids vanaf databasis"
@@ -10306,7 +10307,7 @@ msgstr "Die ingesleutelde PIN was verkeerd."
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19266"
 msgid "Parental locked"
 msgstr "Ouer gesluit"
@@ -10541,6 +10542,12 @@ msgid ""
 "programme?"
 msgstr "Wil jy die geselekteerde program opneem of na die huidige program oorskakel?"
 
+#. label for PVR settings close channel OSD after channel switch control
+#: system/settings/settings.xml
+msgctxt "#19303"
+msgid "Close channel OSD after switching channels"
+msgstr "Maak kanaal OSD toe na kanale verander het"
+
 #. Label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -10549,535 +10556,535 @@ msgid "View timer rule"
 msgstr "Besigtig tydhouer reël"
 
 #. label for epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19499"
 msgid "Other / Unknown"
 msgstr "Ander / Onbekend"
 
 #. label for epg "movie/drama" genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19500"
 msgid "Movie / Drama"
 msgstr "Fliek / Drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective / Thriller"
 msgstr "Speur / Riller"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure / Western / War"
 msgstr "Avontuur / Wilde Weste / Oorlog"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Wetenskap Fiksie / Fantasie / Gruwel"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19504"
 msgid "Comedy"
 msgstr "Komedie"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Sepie / Melodrama / Volklories"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19506"
 msgid "Romance"
 msgstr "Romanse"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious / Classical / Religious / Historical movie / drama"
 msgstr "Ernstig / Klassiek / Godsdienstig / Historiese fliek / drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
 msgstr "Volwasse fliek / drama"
 
 #. label for "news/current affairs" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
 msgstr "Nuus / Aktuele sake"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News / Weather report"
 msgstr "Nuus / Weerberig"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19518"
 msgid "News magazine"
 msgstr "Nuus tydskrif"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19519"
 msgid "Documentary"
 msgstr "Dokumentêr"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion / Interview / Debate"
 msgstr "Bespreking / Onderhoud / Debat"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
 msgstr "Skou / Speletjie skou"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game show / Quiz / Contest"
 msgstr "Speletjie skou / Vasvra / Wedstryd"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19534"
 msgid "Variety show"
 msgstr "Verskeidenheids skou"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
 msgstr "Klets skou"
 
 #. label for "sports" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19548"
 msgid "Sports"
 msgstr "Sport"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
 msgstr "Spesiale gebeurtenis"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19550"
 msgid "Sport magazine"
 msgstr "Sport tydskrif"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19551"
 msgid "Football"
 msgstr "Sokker"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis / Squash"
 msgstr "Tennis / Squash"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
 msgstr "Span sporte"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
 msgstr "Atletiek"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19555"
 msgid "Motor sport"
 msgstr "Motor sport"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19556"
 msgid "Water sport"
 msgstr "Water sport"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19557"
 msgid "Winter sports"
 msgstr "Winter sporte"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19558"
 msgid "Equestrian"
 msgstr "Perdry"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19559"
 msgid "Martial sports"
 msgstr "Vegkuns sporte"
 
 #. label for "children's/youth programmes" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19564"
 msgid "Children's / Youth programmes"
 msgstr "Kinder / Jeug programme"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19565"
 msgid "Pre-school children's programmes"
 msgstr "Voorskoolse kinder programme"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19566"
 msgid "Entertainment programmes for 6 to 14"
 msgstr "Vermaaklikheids programme vir 6 tot 14"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19567"
 msgid "Entertainment programmes for 10 to 16"
 msgstr "Vermaaklikheids programme vir 10 tot 16"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational / Educational / School programme"
 msgstr "Informatief / Opvoedkundig / Skool program"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons / Puppets"
 msgstr "Tekenprente / Poppe"
 
 #. label for "music/ballet/dance" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19580"
 msgid "Music / Ballet / Dance"
 msgstr "Musiek / Ballet / Dans"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock / Pop"
 msgstr "Rock / Pop"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19582"
 msgid "Serious / Classical music"
 msgstr "Ernstige / Klassieke musiek"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk / Traditional music"
 msgstr "Folk / Tradisionele musiek"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical / Opera"
 msgstr "Musiekblyspel / Opera"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19585"
 msgid "Ballet"
 msgstr "Ballet"
 
 #. label for "arts/culture" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19596"
 msgid "Arts / Culture"
 msgstr "Kuns / Kultuur"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19597"
 msgid "Performing arts"
 msgstr "Uitvoerende kunste"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19598"
 msgid "Fine arts"
 msgstr "Beeldende kunste"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19599"
 msgid "Religion"
 msgstr "Geloof"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
 msgstr "Gewilde kultuur / Tradisionele kunste"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19601"
 msgid "Literature"
 msgstr "Literatuur"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film / Cinema"
 msgstr "Film / Rolprent"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19603"
 msgid "Experimental film / video"
 msgstr "Eksperimentele film / video"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
 msgstr "Uitsending / Pers"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19605"
 msgid "New media"
 msgstr "Nuwe media"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts / Culture magazines"
 msgstr "Kuns / Kultuur tydskrifte"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19607"
 msgid "Fashion"
 msgstr "Mode"
 
 #. label for "social/political/economics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
 msgstr "Sosiaal / Polities / Ekonomie"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines / Reports / Documentary"
 msgstr "Tydskrifte / Verslae / Dokumentêr"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics / Social advisory"
 msgstr "Ekonomie / Sosiale advies"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19615"
 msgid "Remarkable people"
 msgstr "Merkwaardige mense"
 
 #. label for "education/science/factual" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19628"
 msgid "Education / Science / Factual"
 msgstr "Opvoedkunde / Wetenskap / Feitelik"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature / Animals / Environment"
 msgstr "Natuur / Diere / Omgewing"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology / Natural sciences"
 msgstr "Tegnologie / Natuur wetenskappe"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine / Physiology / Psychology"
 msgstr "Medisyne / Fisiologie / Sielkunde"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign countries / Expeditions"
 msgstr "Buitelandse lande / Ekspedisies"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social / Spiritual sciences"
 msgstr "Sosiaal / Geestens wetenskappe"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19634"
 msgid "Further education"
 msgstr "Verdere onderrig"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
 msgstr "Tale"
 
 #. label for "leisure/hobbies" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19644"
 msgid "Leisure / Hobbies"
 msgstr "Ontspanning / Stokperdjies"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism / Travel"
 msgstr "Toerisme / Reis"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19646"
 msgid "Handicraft"
 msgstr "Handwerk"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19647"
 msgid "Motoring"
 msgstr "Motorry"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19648"
 msgid "Fitness & health"
 msgstr "Fiksheid & gesondheid"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19649"
 msgid "Cooking"
 msgstr "Kook"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement / Shopping"
 msgstr "Advertensies / Inkopies"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19651"
 msgid "Gardening"
 msgstr "Tuinmaak"
 
 #. label for "special characteristics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19660"
 msgid "Special characteristics"
 msgstr "Spesiale karakestieke"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
 msgstr "Oorspronklike taal"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19662"
 msgid "Black & white"
 msgstr "Swart & wit"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19663"
 msgid "Unpublished"
 msgstr "Ongepubliseer"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
 msgstr "Lewendige uitsending"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19676"
 msgid "Drama"
 msgstr "Drama"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective / Thriller"
 msgstr "Speur / Riller"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure / Western / War"
 msgstr "Avontuur / Wilde Weste / Oorlog"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Wetenskap Fiksie / Fantasie / Gruwel"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "Komedie"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Sepie / Melodrama / Folklories"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19682"
 msgid "Romance"
 msgstr "Romanse"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
 msgstr "Ernstig / Klassiek / Godsdiens / Histories"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19684"
 msgid "Adult"
 msgstr "Volwasse"
@@ -11940,7 +11947,7 @@ msgctxt "#20196"
 msgid "Export music library"
 msgstr "Voer musiek biblioteek uit"
 
-#: system/settings/settings.xml
+#: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
 msgstr "Voer musiek biblioteek in"
@@ -12772,6 +12779,10 @@ msgctxt "#20445"
 msgid "Fanart"
 msgstr "Ondersteunerkuns"
 
+#. Ask user when refreshing music or video info if they want to use data from
+#. NFO file
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+#: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "Lokaal gestoorde inligting gevind. Ignoreer en verfris vanaf Internet?"
@@ -13899,7 +13910,8 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "Kies kunstenaar"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "Kunstenaar inligting"
@@ -17365,6 +17377,11 @@ msgctxt "#36049"
 msgid "Remote button press release time (ms)"
 msgstr "Afstandbeheer knoppie druk los tyd (ms)"
 
+#: system/settings.xml
+msgctxt "#36050"
+msgid "On start"
+msgstr "Met begin"
+
 #: system/settings/settings.xml
 msgctxt "#36099"
 msgid "Dithering"
@@ -18310,6 +18327,11 @@ msgid ""
 "will be taken into account if \"Instant recording action\" is set to "
 "\"Record for a fixed period of time\""
 msgstr "Duur van oombliklike opnames wanneer die opneem knoppie druk. Hierdie waarde sal in ag geneem word as \"Oombliklike opneem aksie\" gestel is op \"Neem vir 'n vaste periode op\""
+
+#: system/settings/settings.xml
+msgctxt "#36235"
+msgid "Close the on screen display controls after switching channels."
+msgstr "Maak op die skerm kontroles toe na kanale verander het."
 
 #: system/settings/settings.xml
 msgctxt "#36236"
@@ -21023,8 +21045,9 @@ msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[Ontbreek]"
 
-#. Title album artists node
+#. Title album artists node, and music item to export output, see #38306
 #: system/library/music/musicroles/albumartists.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38043"
 msgid "Album artists"
 msgstr "Album kunstenaars"
@@ -21317,21 +21340,28 @@ msgstr "Sluit items wat nie geskraap is nie in (om templaat NFO lêers te skep)"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
-msgid "Output only artwork, not NFO files"
-msgstr "Voer net kuns uit, nie NFO lêers"
+msgid "Output information to NFO files"
+msgstr "Voer inligting uit na NFO lêers"
 
+#. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
+msgid ""
+"Output information to NFO files (currently exporting artist folders only)"
+msgstr "Voer inligting uit na NFO lêers (voer huidiglik slegs kunstenaar gidse uit)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38311"
 msgid "Overwrite existing files"
 msgstr "Oorskryf bestaande lêers"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38312"
 msgid "Song artists"
 msgstr "Liedjie kunstenaars"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38313"
 msgid "Other artists"
@@ -21366,6 +21396,40 @@ msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
 msgstr "Het jy lokale kunstenaar inligting (NFO) en kuns lêers wat jy wil gaan haal? Stel die ligging van hierdie kunstenaar gidse nou"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38321"
+msgid "Artist folders only"
+msgstr "Slegs kunstenaar gidse"
+
+#. Explanation of what export to library folders means see #38303 when albums
+#. and artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38322"
+msgid ""
+"Artists exported to Artist Information Folder and albums to music folders"
+msgstr "Kunstenaars uitgevoer na Kunstenaar Inligting Gids en albums na musiek gidse"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. albums selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38323"
+msgid "Albums exported to music folders"
+msgstr "Albums uitgevoer na musiek gidse"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38324"
+msgid "Artists exported to Artist Information Folder"
+msgstr "Kunstenaars uitgevoer na Kunstenaar Inligting Gids"
+
+#. Explanation of what export artist folders only means see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38325"
+msgid "Artist subfolders created in Artist Information Folder"
+msgstr "Kunstenaar subgidse geskep in Kunstenaar Inligting Gids"
 
 #. Dialog heading when editing default settings for fetching additional music
 #. information
@@ -21430,6 +21494,39 @@ msgstr "Kies hoe om verstellings toe te pas"
 msgctxt "#38339"
 msgid "How to apply information provider settings"
 msgstr "Hoe om inligting verskaffer verstellings toe te pas"
+
+#. Progress statement when importing music library is processing song playback
+#. history data
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38350"
+msgid "Importing song playback history"
+msgstr "Voer liedjie terugspeel geskiedenis in"
+
+#. Progress statement when importing music library - data matching phase
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38351"
+msgid "Matching data"
+msgstr "Pas data"
+
+#. Progress statement when importing music library - song history being
+#. updated
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38352"
+msgid "Updating songs"
+msgstr "Opdateer liedjies"
+
+#. Notification of import success "Importing song history - <number of songs
+#. matched> updated out of <total songs in xml> imported songs"
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38353"
+msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
+msgstr "Voer liedjie geskiedenis in - {0:d} opgedateer uit {0:d} ingevoerde liedjies"
+
+#. Message when reading the user specified XML for import to library fails
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38354"
+msgid "Unable to read xml file"
+msgstr "Kan nie xml lêer lees nie"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-04-23 07:38+0000\n"
+"PO-Revision-Date: 2019-05-06 08:53+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -533,6 +533,7 @@ msgstr "Atlikėjai"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#134"
 msgid "Songs"
 msgstr "Dainos"
@@ -2858,12 +2859,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "Importuoti video biblioteką"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#649"
 msgid "Importing"
 msgstr "Importuojama"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#650"
 msgid "Exporting"
 msgstr "Eksportuojama"
@@ -4655,7 +4656,7 @@ msgstr "Vaizdo įrašai"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10028"
 msgid "Videos / Playlist"
-msgstr "Video / Grojaraštis"
+msgstr "Vaizdo įrašai / Grojaraštis"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10029"
@@ -5078,7 +5079,7 @@ msgctxt "#10522"
 msgid "Now playing - Videos"
 msgstr "Dabar atkuriama - Vaizdo įrašai"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/ContextMenus.h xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#10523"
 msgid "Album information"
 msgstr "Albumo informacija"
@@ -5847,7 +5848,7 @@ msgstr "Atjungta"
 #: system/settings/settings.xml
 msgctxt "#13107"
 msgid "Enabled during video playback"
-msgstr "Įjungta video atkūrimo metu"
+msgstr "Įjungta vaizdo atkūrimo metu"
 
 #: system/settings/settings.xml
 msgctxt "#13108"
@@ -6465,7 +6466,7 @@ msgstr "Standartinė gama"
 
 msgctxt "#13381"
 msgid "Resume video"
-msgstr "Pratęsti video įrašą"
+msgstr "Pratęsti vaizdo įrašą"
 
 msgctxt "#13382"
 msgid "Voice mask - Port 1"
@@ -7827,7 +7828,7 @@ msgstr "Metaduomenys"
 #: system/settings/settings.xml
 msgctxt "#14242"
 msgid "Videos..."
-msgstr "Video įrašai..."
+msgstr "Vaizdo įrašai..."
 
 #: system/settings/settings.xml
 msgctxt "#14243"
@@ -8301,7 +8302,7 @@ msgstr "Įjungta"
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#16100"
 msgid "All videos"
-msgstr "Visi video įrašai"
+msgstr "Visi vaizdo įrašai"
 
 msgctxt "#16101"
 msgid "Unwatched"
@@ -8416,7 +8417,7 @@ msgstr "Pašalinti dantytus pikselių kraštus tolygiai suliejant perėjimą tar
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16300"
 msgid "Video scaling method"
-msgstr "Video mastelio keitimas"
+msgstr "Vaizdo mastelio keitimas"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16301"
@@ -8639,7 +8640,7 @@ msgid "Find similar"
 msgstr "Surasti panašų"
 
 #. label for epg import progress control
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "Importuojamas TV gidas iš klientų"
@@ -8984,7 +8985,7 @@ msgstr "Nerodyti kanalo"
 #: addons/skin.estuary/xml/Includes_PVR.xml
 #: addons/skin.estuary/xml/MyGames.xml addons/skin.estuary/xml/MyMusicNav.xml
 #: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/View_50_List.xml xbmc/epg/EpgInfoTag.cpp
+#: addons/skin.estuary/xml/View_50_List.xml xbmc/pvr/epg/EpgInfoTag.cpp
 #: xbmc/FileItem.cpp xbmc/GUIInfoManager.cpp xbmc/pvr/PVRManager.cpp
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#19055"
@@ -10205,7 +10206,7 @@ msgid "Filter channels"
 msgstr "Filtruoti kanalus"
 
 #. label 'loading epg data from database' for progress dialog text
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
 msgstr "Įkeliamas TV gidas iš duomenų bazės"
@@ -10307,7 +10308,7 @@ msgstr "Įvestas PIN kodas neteisingas."
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19266"
 msgid "Parental locked"
 msgstr "Tėvų užraktas"
@@ -10556,535 +10557,535 @@ msgid "View timer rule"
 msgstr "Peržiūrėti laikmačio taisyklę"
 
 #. label for epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19499"
 msgid "Other / Unknown"
 msgstr "Kitas / Nežinomas"
 
 #. label for epg "movie/drama" genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19500"
 msgid "Movie / Drama"
 msgstr "Filmas / Drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective / Thriller"
 msgstr "Detektyvas / Trileris"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure / Western / War"
 msgstr "Nuotykinis / Vesternas / Karinis"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Mokslinė fantastika / Fantastika / Siaubo"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19504"
 msgid "Comedy"
 msgstr "Komedija"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Muilo opera / Melodrama / Folkloras"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19506"
 msgid "Romance"
 msgstr "Romantika"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious / Classical / Religious / Historical movie / drama"
 msgstr "Rimtas / Klasikinis / Religinis / Istorinis / Drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
 msgstr "Suaugusiems / Drama"
 
 #. label for "news/current affairs" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
 msgstr "Naujienos / Aktualijos"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News / Weather report"
 msgstr "Naujienos / Orų pranešimas"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19518"
 msgid "News magazine"
 msgstr "Naujienų žurnalas"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19519"
 msgid "Documentary"
 msgstr "Dokumentinis"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion / Interview / Debate"
 msgstr "Diskusijos / Interviu / Debatai"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
 msgstr "Šou / Žaidimų šou"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game show / Quiz / Contest"
 msgstr "Žaidimų šou / Viktorina / Konkursas"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19534"
 msgid "Variety show"
 msgstr "Varjetė"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
 msgstr "Pokalbių šou"
 
 #. label for "sports" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19548"
 msgid "Sports"
 msgstr "Sportas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
 msgstr "Specialus įvykis"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19550"
 msgid "Sport magazine"
 msgstr "Sporto žurnalas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19551"
 msgid "Football"
 msgstr "Futbolas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis / Squash"
 msgstr "Tenisas / Skvošas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
 msgstr "Komandinis sportas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
 msgstr "Lengvoji atletika"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19555"
 msgid "Motor sport"
 msgstr "Motosportas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19556"
 msgid "Water sport"
 msgstr "Vandens sportas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19557"
 msgid "Winter sports"
 msgstr "Žiemos sportas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19558"
 msgid "Equestrian"
 msgstr "Jojimas"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19559"
 msgid "Martial sports"
 msgstr "Kovinis sportas"
 
 #. label for "children's/youth programmes" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19564"
 msgid "Children's / Youth programmes"
 msgstr "Vaikų / Jaunimo programos"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19565"
 msgid "Pre-school children's programmes"
 msgstr "Ikimokyklinio amžiaus vaikų programos"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19566"
 msgid "Entertainment programmes for 6 to 14"
 msgstr "Pramoginės programos nuo 6 iki 14"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19567"
 msgid "Entertainment programmes for 10 to 16"
 msgstr "Pramoginės programos nuo 10 iki 16"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational / Educational / School programme"
 msgstr "Informacinė / Švietimo / Mokyklinė programa"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons / Puppets"
 msgstr "Animacinis / Lėlių teatras"
 
 #. label for "music/ballet/dance" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19580"
 msgid "Music / Ballet / Dance"
 msgstr "Muzika / Baletas / Šokiai"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock / Pop"
 msgstr "Rock / Pop"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19582"
 msgid "Serious / Classical music"
 msgstr "Rimta / Klasikinė muzika"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk / Traditional music"
 msgstr "Folklorinė / Tradicinė muzika"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical / Opera"
 msgstr "Miuziklas / Opera"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19585"
 msgid "Ballet"
 msgstr "Baletas"
 
 #. label for "arts/culture" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19596"
 msgid "Arts / Culture"
 msgstr "Menai / Kultūra"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19597"
 msgid "Performing arts"
 msgstr "Vaizduojamasis menas"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19598"
 msgid "Fine arts"
 msgstr "Vaizduojamoji dailė"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19599"
 msgid "Religion"
 msgstr "Religija"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
 msgstr "Populiarioji kultūra / Tradiciniai menai"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19601"
 msgid "Literature"
 msgstr "Literatūra"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film / Cinema"
 msgstr "Filmas / Kinas"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19603"
 msgid "Experimental film / video"
 msgstr "Eksperimentinis filmas / video įrašas"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
 msgstr "Transliacija / Spauda"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19605"
 msgid "New media"
 msgstr "Naujoji žiniasklaida"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts / Culture magazines"
 msgstr "Menai / Kultūros žurnalai"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19607"
 msgid "Fashion"
 msgstr "Mada"
 
 #. label for "social/political/economics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
 msgstr "Socialinis / Politinis / Ekonomika"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines / Reports / Documentary"
 msgstr "Žurnalai / Ataskaitos / Dokumentika"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics / Social advisory"
 msgstr "Ekonomika / Socialiniai patarimai"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19615"
 msgid "Remarkable people"
 msgstr "Įžymūs žmonės"
 
 #. label for "education/science/factual" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19628"
 msgid "Education / Science / Factual"
 msgstr "Švietimas / Mokslas / Faktai"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature / Animals / Environment"
 msgstr "Gamta / Gyvūnai / Aplinka"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology / Natural sciences"
 msgstr "Technologijos / Gamtos mokslai"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine / Physiology / Psychology"
 msgstr "Medicina / Fiziologija / Psichologija"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign countries / Expeditions"
 msgstr "Užsienio šalys / Ekspedicijos"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social / Spiritual sciences"
 msgstr "Socialiniai / Dvasiniai mokslai"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19634"
 msgid "Further education"
 msgstr "Profesinis mokymas"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
 msgstr "Kalbos"
 
 #. label for "leisure/hobbies" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19644"
 msgid "Leisure / Hobbies"
 msgstr "Laisvalaikis / Hobis"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism / Travel"
 msgstr "Turizmas / Kelionės"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19646"
 msgid "Handicraft"
 msgstr "Amatai"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19647"
 msgid "Motoring"
 msgstr "Automobiliai"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19648"
 msgid "Fitness & health"
 msgstr "Sportas ir sveikata"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19649"
 msgid "Cooking"
 msgstr "Maisto gaminimas"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement / Shopping"
 msgstr "Reklama / Apsipirkimas"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19651"
 msgid "Gardening"
 msgstr "Sodininkystė"
 
 #. label for "special characteristics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19660"
 msgid "Special characteristics"
 msgstr "Ypatingos savybės"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
 msgstr "Originali kalba"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19662"
 msgid "Black & white"
 msgstr "Juoda balta"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19663"
 msgid "Unpublished"
 msgstr "Neišleista"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
 msgstr "Tiesioginė transliacija"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19676"
 msgid "Drama"
 msgstr "Drama"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective / Thriller"
 msgstr "Detektyvas / Trileris"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure / Western / War"
 msgstr "Nuotykinis / Vesternas / Karinis"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Mokslinė fantastika / Fantastika / Siaubo"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "Komedija"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Muilo opera / Melodrama / Folkloras"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19682"
 msgid "Romance"
 msgstr "Romantika"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
 msgstr "Rimtas / Klasikinis / Religija / Istorinis"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19684"
 msgid "Adult"
 msgstr "Suaugusiems"
@@ -11947,7 +11948,7 @@ msgctxt "#20196"
 msgid "Export music library"
 msgstr "Eksportuoti muzikos biblioteką"
 
-#: system/settings/settings.xml
+#: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
 msgstr "Importuoti muzikos biblioteką"
@@ -12014,7 +12015,7 @@ msgstr "Android muzika"
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20241"
 msgid "Android videos"
-msgstr "Android video įrašai"
+msgstr "Android vaizdo įrašai"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20242"
@@ -12039,7 +12040,7 @@ msgstr "Windows muzikos biblioteka"
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20246"
 msgid "Windows videos library"
-msgstr "Windows video įrašų biblioteka"
+msgstr "Windows vaizdo įrašų biblioteka"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20247"
@@ -12058,15 +12059,15 @@ msgstr "Windows dokumentai"
 
 msgctxt "#20250"
 msgid "Party on! (videos)"
-msgstr "Vakarėlis prasidėjo! (video įrašai)"
+msgstr "Vakarėlis prasidėjo! (vaizdo įrašai)"
 
 msgctxt "#20251"
 msgid "Mixing drinks (videos)"
-msgstr "Maišomi gėrimai (video įrašai)"
+msgstr "Maišomi gėrimai (vaizdo įrašai)"
 
 msgctxt "#20252"
 msgid "Filling glasses (videos)"
-msgstr "Pildomos taurės (video įrašai)"
+msgstr "Pildomos taurės (vaizdo įrašai)"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20253"
@@ -12141,7 +12142,7 @@ msgstr "Nežinomas arba integruotas (apsaugotas)"
 
 msgctxt "#20314"
 msgid "Videos - Library"
-msgstr "Video - Biblioteka"
+msgstr "Vaizdo įrašai - Biblioteka"
 
 msgctxt "#20316"
 msgid "Sort by: ID"
@@ -12153,7 +12154,7 @@ msgstr "Nuskaitomi filmai naudojant {0:s}"
 
 msgctxt "#20318"
 msgid "Scanning music videos using {0:s}"
-msgstr "Nuskaitomi muzikiniai video klipai naudojant {0:s}"
+msgstr "Nuskaitomi muzikiniai vaizdo klipai naudojant {0:s}"
 
 msgctxt "#20319"
 msgid "Scanning TV shows using {0:s}"
@@ -12472,7 +12473,7 @@ msgstr "Neseniai pridėta"
 
 msgctxt "#20383"
 msgid "Selected folder contains a single video"
-msgstr "Pasirinktame aplanke yra atskiras video įrašas"
+msgstr "Pasirinktame aplanke yra atskiras vaizdo įrašas"
 
 msgctxt "#20384"
 msgid "Link to TV show"
@@ -12779,6 +12780,10 @@ msgctxt "#20445"
 msgid "Fanart"
 msgstr "Fanart"
 
+#. Ask user when refreshing music or video info if they want to use data from
+#. NFO file
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+#: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "Rasta lokaliai saugoma informacija. Ignoruoti ir atnaujinti iš interneto?"
@@ -13374,7 +13379,7 @@ msgstr "Epizodo pavadinimas"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21443"
 msgid "Video resolution"
-msgstr "Video raiška"
+msgstr "Vaizdo raiška"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/MusicVisualisation.xml
@@ -13906,7 +13911,8 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "Pasirinkti atlikėją"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "Atlikėjo duomenys"
@@ -14022,7 +14028,7 @@ msgstr "Profilio duomenys"
 #: system/settings/settings.xml
 msgctxt "#22014"
 msgid "Use dim if paused during video playback"
-msgstr "Pritemdyti ekraną, jei video įrašo atkūrimas pristabdytas"
+msgstr "Pritemdyti ekraną, jei vaizdo įrašo atkūrimas pristabdytas"
 
 msgctxt "#22015"
 msgid "All recordings"
@@ -14053,7 +14059,7 @@ msgstr "Minimizuoti juodas juostas"
 #: system/settings/settings.xml
 msgctxt "#22022"
 msgid "Show video files in listings"
-msgstr "Rodyti video failus sąrašuose"
+msgstr "Rodyti vaizdo failus sąrašuose"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#22024"
@@ -14680,7 +14686,7 @@ msgstr "Priedas nesuderinamas dėl nepatenkintų priklausomybių."
 #: system/settings/settings.xml
 msgctxt "#24105"
 msgid "Pause when searching for subtitles"
-msgstr "Pristabdyti video atkūrimą ieškant subtitrų"
+msgstr "Pristabdyti vaizdo įrašo atkūrimą ieškant subtitrų"
 
 #. Description of setting "Videos -> Subtitles -> Save subtitles to movie
 #. folder" with label #24115
@@ -14689,7 +14695,7 @@ msgctxt "#24106"
 msgid ""
 "Specify where downloaded subtitles should be saved, the same location as the"
 " video or a custom location."
-msgstr "Pasirinkite kur saugoti atsisiųstus subtitrus, ten pat kur ir video įrašas ar kitoje pasirinktoje vietoje."
+msgstr "Pasirinkite kur saugoti atsisiųstus subtitrus, ten pat kur ir vaizdo įrašas ar kitoje pasirinktoje vietoje."
 
 #: xbmc/dialogs/GUIDialogSubtitles.cpp
 msgctxt "#24107"
@@ -14790,12 +14796,12 @@ msgctxt "#24123"
 msgid ""
 "Pause the current video while searching for subtitles and resume once the "
 "subtitle is available."
-msgstr "Laikinai pristabdyti video atkūrimą ieškant subtitrų ir tęsti atkūrimą, kai tik subtitrai taps prieinami."
+msgstr "Laikinai pristabdyti vaizdo įrašo atkūrimą ieškant subtitrų ir tęsti atkūrimą, kai tik subtitrai taps prieinami."
 
 #: system/settings/settings.xml
 msgctxt "#24124"
 msgid "Next to the video"
-msgstr "Šalia video įrašo"
+msgstr "Šalia vaizdo įrašo"
 
 #: system/settings/settings.xml
 msgctxt "#24125"
@@ -15676,7 +15682,7 @@ msgstr "Naudoti DVD grotuvą vietoje įprasto grotuvo"
 
 msgctxt "#33015"
 msgid "Ask for download before playing video"
-msgstr "Klausti dėl atsiuntimo prieš pradedant video įrašo atkūrimą"
+msgstr "Klausti dėl atsiuntimo prieš pradedant vaizdo įrašo atkūrimą"
 
 msgctxt "#33016"
 msgid "Clips"
@@ -17649,7 +17655,7 @@ msgstr "Informacijos dar nėra."
 msgctxt "#36138"
 msgid ""
 "Section that contains settings related to videos and how they are handled."
-msgstr "Skyrius, kuriame yra su video įrašais ir jų tvarkymu susiję nustatymai."
+msgstr "Skyrius, kuriame yra su vaizdo įrašais ir jų tvarkymu susiję nustatymai."
 
 #. Description of settings category with label #14022 "Library"
 #: system/settings/settings.xml
@@ -17747,7 +17753,7 @@ msgstr "Importuoti XML failą į video bibliotekos duomenų bazę."
 #: system/settings/settings.xml
 msgctxt "#36151"
 msgid "This category contains the settings for how video playback is handled."
-msgstr "Šioje kategorijoje yra nustatymai, skirti video atkūrimo tvarkymui."
+msgstr "Šioje kategorijoje yra nustatymai, skirti vaizdo įrašo atkūrimo tvarkymui."
 
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
@@ -17761,7 +17767,7 @@ msgstr "Įjungti automatinį kito failo sąraše atkūrimą pasirinktiems grojar
 #: system/settings/settings.xml
 msgctxt "#36153"
 msgid "Adjust the method used to process and display video."
-msgstr "Pasirinkite metodą, kuris bus naudojamas video apdorojimui ir atvaizdavimui ekrane."
+msgstr "Pasirinkite metodą, kuris bus naudojamas vaizdo apdorojimui ir pateikimui ekrane."
 
 #. Description of setting with label #13435 "Enable HQ Scalers for scaling
 #. above"
@@ -17847,7 +17853,7 @@ msgctxt "#36164"
 msgid ""
 "Allow the refresh rate of the display to be changed so that it best matches "
 "the video frame rate. This may yield smoother video playback."
-msgstr "Leisti keisti ekrano skleistinės dažnį, kad jis geriausiai atitiktų video įrašo kadrų dažnį. Tai gali sukurti sklandesnį video atkūrimą."
+msgstr "Leisti keisti ekrano skleistinės dažnį, kad jis geriausiai atitiktų vaizdo įrašo kadrų dažnį. Tai gali sukurti sklandesnį vaizdo įrašo atkūrimą."
 
 #. Description of setting with label #13550 "Delay after change of refresh
 #. rate"
@@ -17948,7 +17954,7 @@ msgid ""
 "information].[CR][Choose] Will select an item, e.g. open a directory in "
 "files mode.[CR][Resume] Will automatically resume videos from the last "
 "position that you were viewing them, even after restarting the system."
-msgstr "Galite rinktis iš šių veiksmų: [Pasirinkti], [Atkurti] (numatytasis), [Pratęsti] ir [Rodyti informaciją].[CR][Pasirinkti] Parinkti elementą, pvz., atidaryti katalogą failų režime.[CR][Pratęsti] Automatiškai pratęsti video įrašų atkūrimą nuo paskutinės žiūrėtos pozicijos, net ir po pakartotinio sistemos paleidimo."
+msgstr "Galite rinktis iš šių veiksmų: [Pasirinkti], [Atkurti] (numatytasis), [Pratęsti] ir [Rodyti informaciją].[CR][Pasirinkti] Parinkti elementą, pvz., atidaryti katalogą failų režime.[CR][Pratęsti] Automatiškai pratęsti vaizdo įrašų atkūrimą nuo paskutinės žiūrėtos pozicijos, net ir po pakartotinio sistemos paleidimo."
 
 #. Description of setting with label #20433 "Extract thumbnails and video
 #. information"
@@ -17956,7 +17962,7 @@ msgstr "Galite rinktis iš šių veiksmų: [Pasirinkti], [Atkurti] (numatytasis)
 msgctxt "#36178"
 msgid ""
 "Extract metadata information such as codec and aspect ratio from videos."
-msgstr "Išgauti metaduomenis, tokius kaip kodekas ir kraštinių santykis, iš video įrašų."
+msgstr "Išgauti metaduomenis iš vaizdo įrašų, tokius kaip kodekas ar kraštinių santykis."
 
 #. Description of setting with label #20419 "Replace file names with library
 #. titles"
@@ -18800,7 +18806,7 @@ msgstr "Automatiškai generuoti nuotraukų miniatiūras atidarius nuotraukų apl
 #: system/settings/settings.xml
 msgctxt "#36309"
 msgid "Show videos in picture file lists."
-msgstr "Rodyti video įrašus nuotraukų failų sąrašuose."
+msgstr "Rodyti vaizdo įrašus nuotraukų failų sąrašuose."
 
 #. Description of setting with label #169 "Resolution"
 #: system/settings/settings.xml
@@ -19464,26 +19470,26 @@ msgstr "Šioje kategorijoje yra nustatymai, skirti podėlio funkcijos tvarkymui.
 #: system/settings/settings.xml
 msgctxt "#36400"
 msgid "Enable cache for playback of video, audio or DVDs from hard disk."
-msgstr "Įjungti podėlį video ir garso įrašų bei DVD atkūrimui iš kietojo disko."
+msgstr "Įjungti podėlį vaizdo ir garso įrašų bei DVD atkūrimui iš kietojo disko."
 
 #. Description of settings category with label #14026 "Video cache - DVD-ROM"
 #: system/settings/settings.xml
 msgctxt "#36401"
 msgid "Enable cache for playback of video from DVD-ROM."
-msgstr "Įjungti podėlį video įrašo atkūrimui iš DVD-ROM."
+msgstr "Įjungti podėlį vaizdo įrašo atkūrimui iš DVD-ROM."
 
 #. Description of settings category with label #14027 "Video cache - Local
 #. Network"
 #: system/settings/settings.xml
 msgctxt "#36402"
 msgid "Enable cache for video playback from local network."
-msgstr "Įjungti podėlį video įrašo atkūrimui iš vietinio tinklo."
+msgstr "Įjungti podėlį vaizdo įrašo atkūrimui iš vietinio tinklo."
 
 #. Description of settings category with label #14028 "Video cache - Internet"
 #: system/settings/settings.xml
 msgctxt "#36403"
 msgid "Enable cache for video playback from Internet."
-msgstr "Įjungti podėlį video įrašo atkūrimui iš interneto."
+msgstr "Įjungti podėlį vaizdo įrašo atkūrimui iš interneto."
 
 #. Description of settings category with label #14030 "Audio cache - DVD-ROM"
 #: system/settings/settings.xml
@@ -19582,7 +19588,7 @@ msgctxt "#36420"
 msgid ""
 "Look for external subtitles for videos provided by the UPnP server. This can"
 " cause extensive CPU, filesystem and network load."
-msgstr "Ieškoti išorinių subtitrų video įrašams pateiktiems naudojant UPnP serverį. Tai gali sukelti intensyvų CPU, failų sistemos ir tinklo apkrovimą."
+msgstr "Ieškoti išorinių subtitrų vaizdo įrašams pateiktiems naudojant UPnP serverį. Tai gali sukelti intensyvų CPU, failų sistemos ir tinklo apkrovimą."
 
 #. Description of setting with label #13437 "Prefer VDPAU Video Mixer"
 #: system/settings/settings.xml
@@ -19590,7 +19596,7 @@ msgctxt "#36421"
 msgid ""
 "Bypassing VDPAU mixer saves resources on low power systems but slightly "
 "reduces picture quality."
-msgstr "Aplenkiant VDPAU mikšerį taupomi ištekliai mažos galios sistemose, tačiau šiek tiek sumažinama video kokybė."
+msgstr "Aplenkiant VDPAU mikšerį taupomi ištekliai mažos galios sistemose, tačiau šiek tiek sumažinama vaizdo kokybė."
 
 #. Description of setting with label #13438 "Allow hardware acceleration
 #. (amcodec)"
@@ -19960,7 +19966,7 @@ msgctxt "#36546"
 msgid ""
 "Sets the visual depth of subtitles for stereoscopic 3D videos. The higher "
 "the value, the closer the subtitles will appear to the viewer."
-msgstr "Nustatyti vizualinį subtitrų gylį stereoskopiniams 3D video įrašams. Kuo didesnė vertė, tuo arčiau žiūrovų bus rodomi subtitrai."
+msgstr "Nustatyti vizualinį subtitrų gylį stereoskopiniams 3D vaizdo įrašams. Kuo didesnė vertė, tuo arčiau žiūrovų bus rodomi subtitrai."
 
 #: system/settings/rbp.xml
 msgctxt "#36547"
@@ -19972,7 +19978,7 @@ msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
 "Requires restart."
-msgstr "Apriboja GUI raišką, kad naudotų mažiau atminties. Tai neturi įtakos video atkūrimui. Reikia paleisti iš naujo."
+msgstr "Apriboja GUI raišką, kad naudotų mažiau atminties. Tai neturi įtakos vaizdo atkūrimui. Reikia paleisti iš naujo."
 
 #. Description of setting with label #1268 "iOS 8 compatibility mode"
 #: system/settings/settings.xml
@@ -19982,7 +19988,7 @@ msgid ""
 "needs to be disabled when using iOS 9 or later clients to restore music "
 "streaming via AirPlay. \"Videos\" and \"Pictures\" are only supported for "
 "iOS clients using iOS 8.x and older."
-msgstr "Įjungti \"Video\" ir \"Nuotraukų\" gavimo per AirPlay palaikymą. Tai turi būti išjungta naudojant iOS 9 ar naujesnius klientus, jei norite atstatyti muzikos srauto perdavimą naudojant AirPlay. Video įrašai ir nuotraukos palaikomi tik su IOS 8.x ir senesniais klientais."
+msgstr "Įjungti \"Vaizdo įrašų\" ir \"Nuotraukų\" gavimo per AirPlay palaikymą. Tai turi būti išjungta naudojant iOS 9 ar naujesnius klientus, jei norite atstatyti muzikos srauto perdavimą naudojant AirPlay. Vaizdo įrašai ir nuotraukos palaikomi tik su IOS 8.x ir senesniais klientais."
 
 #. Name of a setting
 #: system/settings/settings.xml
@@ -20047,7 +20053,7 @@ msgctxt "#36561"
 msgid ""
 "Reproduce video colours accurately using a display profile or a 3D lookup "
 "table."
-msgstr "Atkurti tikslias video įrašo spalvas naudojant ekrano profilį ar 3D peržvalgos lentelę."
+msgstr "Atkurti tikslias vaizdo įrašo spalvas naudojant ekrano profilį ar 3D peržvalgos lentelę."
 
 #: system/settings/settings.xml
 msgctxt "#36562"
@@ -20065,7 +20071,7 @@ msgid ""
 "advantage of the advanced features and high precision in ArgyllCMS. Display "
 "profile based correction is useful for testing different parameters, or "
 "emulating display settings that you don't have a 3D LUT prepared for."
-msgstr "Naudoti iš anksto sukurtą 3D peržvalgos lentelę video įrašo splavų korekcijai arba apskaičiuoti transformaciją kiekvienam video įrašui iš ekrano profilio. Rekomenduojama naudoti iš anksto apskaičiuotą 3D peržvalgos lentelę, kadangi ji leidžia išnaudoti ArgyllCMS pažangias funkcijas ir išgauti didelį tikslumą. Ekrano profiliu paremta korekcija naudinga testuojant skirtingus parametrus arba emuliuojant ekrano, kuris nėra paruoštas 3D LUT, nustatymus."
+msgstr "Naudoti iš anksto sukurtą 3D peržvalgos lentelę vaizdo įrašo spalvų korekcijai arba apskaičiuoti transformaciją kiekvienam vaizdo įrašui iš ekrano profilio. Rekomenduojama naudoti iš anksto apskaičiuotą 3D peržvalgos lentelę, kadangi ji leidžia išnaudoti ArgyllCMS pažangias funkcijas ir išgauti didelį tikslumą. Ekrano profiliu paremta korekcija naudinga testuojant skirtingus parametrus arba emuliuojant ekrano, kuris nėra paruoštas 3D LUT, nustatymus."
 
 #: system/settings/settings.xml
 msgctxt "#36564"
@@ -20745,7 +20751,7 @@ msgctxt "#37033"
 msgid ""
 "Video playback related accessibility settings, e.g. \"Prefer subtitles for "
 "the hearing impaired\"."
-msgstr "Su video atkūrimu susiję prieinamumo nustatymai, pvz., \"Pirmenybė subtitrams, kurie skirti turintiems klausos sutrikimų\"."
+msgstr "Su vaizdo atkurimu susiję prieinamumo nustatymai, pvz., \"Pirmenybė subtitrams, kurie skirti turintiems klausos sutrikimų\"."
 
 #. Setting #37034 Accessibility
 #: system/settings/settings.xml
@@ -20874,7 +20880,7 @@ msgctxt "#38014"
 msgid ""
 "Limits the speed (fps) used to update the GUI while playing videos. This can"
 " reduce CPU load and fix playback issues while the GUI is shown."
-msgstr "Riboja greitį (fps), naudojamą GUI atnaujinimui video įrašų atkūrimo metu. Tai gali sumažinti CPU apkrovimą ir ištaisyti atkūrimo problemas, kai rodomas GUI."
+msgstr "Riboja greitį (fps), naudojamą GUI atnaujinimui vaizdo įrašų atkūrimo metu. Tai gali sumažinti CPU apkrovimą ir ištaisyti atkūrimo problemas, kai rodomas GUI."
 
 #. Label of a settings value to indicate the "disabled" state of an otherwise
 #. limiting setting (like fps limit, bandwidth limit, etc.)
@@ -20947,7 +20953,7 @@ msgid ""
 "be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
 "rays.[CR]Note: Processing of this data may reduce playback performance, so "
 "only enable if you require stereoscopic 3D support."
-msgstr "Kai įjungta, video įrašai sukurti Multiview Video Coding (MVC) formatu taip pat gali būti peržiūrėti stereoskopiniu 3D režimu. MVC formatas paprastai sutinkamas 3D Blu-ray diskuose.[CR]Pastaba: šių duomenų apdorojimas gali sumažinti atkūrimo efektyvumą, todėl įjunkite tik jei jums reikalingas stereoskopinio 3D režimo palaikymas."
+msgstr "Kai įjungta, vaizdo įrašai sukurti Multiview Video Coding (MVC) formatu taip pat gali būti peržiūrėti stereoskopiniu 3D režimu. MVC formatas paprastai sutinkamas 3D Blu-ray diskuose.[CR]Pastaba: šių duomenų apdorojimas gali sumažinti atkūrimo efektyvumą, todėl įjunkite tik jei jums reikalingas stereoskopinio 3D režimo palaikymas."
 
 #: system/settings/rbp.xml
 msgctxt "#38029"
@@ -21040,8 +21046,9 @@ msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[Trūksta]"
 
-#. Title album artists node
+#. Title album artists node, and music item to export output, see #38306
 #: system/library/music/musicroles/albumartists.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38043"
 msgid "Album artists"
 msgstr "Albumo atlikėjai"
@@ -21195,7 +21202,7 @@ msgstr "Skyrius, kuriame yra nustatymai, turintys įtakos vartotojo sąsajos elg
 #: system/settings/settings.xml
 msgctxt "#38103"
 msgid "This category contains the settings for the playback of videos"
-msgstr "Šioje kategorijoje yra nustatymai, skirti video įrašų atkūrimui"
+msgstr "Šioje kategorijoje yra nustatymai, skirti vaizdo įrašų atkūrimui"
 
 #. Description of category #14211 "Music"
 #: system/settings/settings.xml
@@ -21222,7 +21229,7 @@ msgctxt "#38107"
 msgid ""
 "This category contains the settings for how information for videos is "
 "collected, stored, shown, and navigated"
-msgstr "Šioje kategorijoje yra nustatymai, skirti video įrašų informacijos surinkimui, saugojimui, atvaizdavimui ir naršymui"
+msgstr "Šioje kategorijoje yra nustatymai, skirti vaizdo įrašų informacijos surinkimui, saugojimui, atvaizdavimui ir naršymui"
 
 #. Description of category #14211 "Music"
 #: system/settings/settings.xml
@@ -21334,21 +21341,28 @@ msgstr "Įtraukti elementus, kurie nebuvo nuskaityti (kad sukurti NFO failų ša
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
-msgid "Output only artwork, not NFO files"
-msgstr "Išvesti tik iliustracijas, o ne NFO failus"
+msgid "Output information to NFO files"
+msgstr "Įrašyti informaciją į NFO failus"
 
+#. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
+msgid ""
+"Output information to NFO files (currently exporting artist folders only)"
+msgstr "Įrašyti informaciją į NFO failus (šiuo metu eksportuojami tik atlikėjų aplankai)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38311"
 msgid "Overwrite existing files"
 msgstr "Perrašyti egzistuojančius failus"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38312"
 msgid "Song artists"
 msgstr "Dainos atlikėjai"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38313"
 msgid "Other artists"
@@ -21383,6 +21397,40 @@ msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
 msgstr "Ar turite lokalios atlikėjo informacijos (NFO) ir iliustracijų failus, kuriuos norite sukelti? Nustatykite šių atlikėjo aplankų vieta dabar"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38321"
+msgid "Artist folders only"
+msgstr "Tik atlikėjų aplankai"
+
+#. Explanation of what export to library folders means see #38303 when albums
+#. and artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38322"
+msgid ""
+"Artists exported to Artist Information Folder and albums to music folders"
+msgstr "Atlikėjai eksportuojami į atlikėjo informacinį aplanką, o albumai į muzikos aplankus"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. albums selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38323"
+msgid "Albums exported to music folders"
+msgstr "Albumai eksportuojami į muzikos aplankus"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38324"
+msgid "Artists exported to Artist Information Folder"
+msgstr "Atlikėjai eksportuojami į atlikėjo informacinį aplanką"
+
+#. Explanation of what export artist folders only means see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38325"
+msgid "Artist subfolders created in Artist Information Folder"
+msgstr "Atlikėjo poaplankiai kuriami atlikėjo informaciniame aplanke"
 
 #. Dialog heading when editing default settings for fetching additional music
 #. information
@@ -21448,6 +21496,39 @@ msgctxt "#38339"
 msgid "How to apply information provider settings"
 msgstr "Kaip taikyti informacijos tiekėjo nustatymus"
 
+#. Progress statement when importing music library is processing song playback
+#. history data
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38350"
+msgid "Importing song playback history"
+msgstr "Importuojama dainų atkūrimo istorija"
+
+#. Progress statement when importing music library - data matching phase
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38351"
+msgid "Matching data"
+msgstr "Sutapatinami duomenys"
+
+#. Progress statement when importing music library - song history being
+#. updated
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38352"
+msgid "Updating songs"
+msgstr "Atnaujinamos dainos"
+
+#. Notification of import success "Importing song history - <number of songs
+#. matched> updated out of <total songs in xml> imported songs"
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38353"
+msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
+msgstr "Importuojama dainų istorija -  {0:d} atnaujinta iš {0:d} importuotų dainų"
+
+#. Message when reading the user specified XML for import to library fails
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38354"
+msgid "Unable to read xml file"
+msgstr "Neįmanoma nuskaityti xml failo"
+
 #: system/settings/settings.xml
 msgctxt "#39000"
 msgid "HD and up"
@@ -21482,7 +21563,7 @@ msgctxt "#39005"
 msgid ""
 "This provides access to where video sources can be added and otherwise "
 "managed."
-msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti video įrašų šaltinius."
+msgstr "Tai suteikia prieigą prie vietos, kur galima pridėti ir kitaip valdyti vaizdo įrašų šaltinius."
 
 #. Description of setting "Music... with label #14243
 #: system/settings/settings.xml

@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-04-11 08:27+0000\n"
+"PO-Revision-Date: 2019-06-02 06:14+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -547,6 +547,7 @@ msgstr "歌手"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#134"
 msgid "Songs"
 msgstr "歌曲"
@@ -2872,12 +2873,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "导入视频资料库"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#649"
 msgid "Importing"
 msgstr "导入中"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#650"
 msgid "Exporting"
 msgstr "导出中"
@@ -5092,7 +5093,7 @@ msgctxt "#10522"
 msgid "Now playing - Videos"
 msgstr "正在播放 - 视频"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/ContextMenus.h xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#10523"
 msgid "Album information"
 msgstr "专辑信息"
@@ -8653,7 +8654,7 @@ msgid "Find similar"
 msgstr "查找类似的"
 
 #. label for epg import progress control
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "从客户端导入指南"
@@ -8998,7 +8999,7 @@ msgstr "隐藏频道"
 #: addons/skin.estuary/xml/Includes_PVR.xml
 #: addons/skin.estuary/xml/MyGames.xml addons/skin.estuary/xml/MyMusicNav.xml
 #: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/View_50_List.xml xbmc/epg/EpgInfoTag.cpp
+#: addons/skin.estuary/xml/View_50_List.xml xbmc/pvr/epg/EpgInfoTag.cpp
 #: xbmc/FileItem.cpp xbmc/GUIInfoManager.cpp xbmc/pvr/PVRManager.cpp
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#19055"
@@ -10219,7 +10220,7 @@ msgid "Filter channels"
 msgstr "筛选频道"
 
 #. label 'loading epg data from database' for progress dialog text
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
 msgstr "从数据库载入指南"
@@ -10321,7 +10322,7 @@ msgstr "输入的 PIN 码不正确。"
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19266"
 msgid "Parental locked"
 msgstr "家长已锁定"
@@ -10570,535 +10571,535 @@ msgid "View timer rule"
 msgstr "浏览定时器规则"
 
 #. label for epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19499"
 msgid "Other / Unknown"
 msgstr "其他/未知"
 
 #. label for epg "movie/drama" genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19500"
 msgid "Movie / Drama"
 msgstr "电影/剧情"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective / Thriller"
 msgstr "侦探/惊悚"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure / Western / War"
 msgstr "冒险/西部/战争"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "科幻/奇幻/恐怖"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19504"
 msgid "Comedy"
 msgstr "喜剧"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "肥皂剧/文艺/民俗"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19506"
 msgid "Romance"
 msgstr "爱情"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious / Classical / Religious / Historical movie / drama"
 msgstr "严肃/古典/宗教/历史电影/剧情"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
 msgstr "成人电影/剧情"
 
 #. label for "news/current affairs" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
 msgstr "新闻/时事"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News / Weather report"
 msgstr "新闻/天气预报"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19518"
 msgid "News magazine"
 msgstr "新闻杂志"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19519"
 msgid "Documentary"
 msgstr "记录"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion / Interview / Debate"
 msgstr "讨论/采访/辩论"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
 msgstr "展会/游戏展会"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game show / Quiz / Contest"
 msgstr "游戏展会/知识竞赛/比赛"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19534"
 msgid "Variety show"
 msgstr "综艺节目"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
 msgstr "脱口秀"
 
 #. label for "sports" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19548"
 msgid "Sports"
 msgstr "体育"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
 msgstr "特殊事件"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19550"
 msgid "Sport magazine"
 msgstr "体育杂志"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19551"
 msgid "Football"
 msgstr "足球"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis / Squash"
 msgstr "网球/壁球"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
 msgstr "团体运动"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
 msgstr "田径运动"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19555"
 msgid "Motor sport"
 msgstr "汽车运动"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19556"
 msgid "Water sport"
 msgstr "水上运动"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19557"
 msgid "Winter sports"
 msgstr "冬季运动"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19558"
 msgid "Equestrian"
 msgstr "骑术"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19559"
 msgid "Martial sports"
 msgstr "武术"
 
 #. label for "children's/youth programmes" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19564"
 msgid "Children's / Youth programmes"
 msgstr "儿童/青少年节目"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19565"
 msgid "Pre-school children's programmes"
 msgstr "学龄前儿童节目"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19566"
 msgid "Entertainment programmes for 6 to 14"
 msgstr "6至14岁娱乐节目"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19567"
 msgid "Entertainment programmes for 10 to 16"
 msgstr "10至16岁娱乐节目"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational / Educational / School programme"
 msgstr "资讯/教育/讲座"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons / Puppets"
 msgstr "动画/木偶"
 
 #. label for "music/ballet/dance" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19580"
 msgid "Music / Ballet / Dance"
 msgstr "音乐/芭蕾/舞蹈"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock / Pop"
 msgstr "摇滚/流行"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19582"
 msgid "Serious / Classical music"
 msgstr "严肃/古典音乐"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk / Traditional music"
 msgstr "民谣/传统音乐"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical / Opera"
 msgstr "音乐/歌剧"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19585"
 msgid "Ballet"
 msgstr "芭蕾"
 
 #. label for "arts/culture" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19596"
 msgid "Arts / Culture"
 msgstr "艺术/文化"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19597"
 msgid "Performing arts"
 msgstr "演艺"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19598"
 msgid "Fine arts"
 msgstr "美术"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19599"
 msgid "Religion"
 msgstr "宗教"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
 msgstr "流行文化/传统艺术"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19601"
 msgid "Literature"
 msgstr "文学"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film / Cinema"
 msgstr "电影/影院"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19603"
 msgid "Experimental film / video"
 msgstr "实验电影/视频"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
 msgstr "广播/新闻"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19605"
 msgid "New media"
 msgstr "新媒体"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts / Culture magazines"
 msgstr "艺术/文化杂志"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19607"
 msgid "Fashion"
 msgstr "时尚"
 
 #. label for "social/political/economics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
 msgstr "社会/政治/经济"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines / Reports / Documentary"
 msgstr "杂志/报导/记录"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics / Social advisory"
 msgstr "经济/社会咨询"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19615"
 msgid "Remarkable people"
 msgstr "杰出人士"
 
 #. label for "education/science/factual" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19628"
 msgid "Education / Science / Factual"
 msgstr "教育/科学/真相"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature / Animals / Environment"
 msgstr "自然/动物/环境"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology / Natural sciences"
 msgstr "技术/自然科学"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine / Physiology / Psychology"
 msgstr "医学/生理学/心理学"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign countries / Expeditions"
 msgstr "外国/探险"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social / Spiritual sciences"
 msgstr "社会/精神科学"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19634"
 msgid "Further education"
 msgstr "继续教育"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
 msgstr "语言"
 
 #. label for "leisure/hobbies" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19644"
 msgid "Leisure / Hobbies"
 msgstr "休闲/爱好"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism / Travel"
 msgstr "旅游/旅行"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19646"
 msgid "Handicraft"
 msgstr "手工艺"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19647"
 msgid "Motoring"
 msgstr "驾驶"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19648"
 msgid "Fitness & health"
 msgstr "健身与健康"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19649"
 msgid "Cooking"
 msgstr "烹饪"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement / Shopping"
 msgstr "广告/购物"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19651"
 msgid "Gardening"
 msgstr "园艺"
 
 #. label for "special characteristics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19660"
 msgid "Special characteristics"
 msgstr "特殊特性"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
 msgstr "原始语言"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19662"
 msgid "Black & white"
 msgstr "黑 & 白"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19663"
 msgid "Unpublished"
 msgstr "未发行"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
 msgstr "现场直播"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19676"
 msgid "Drama"
 msgstr "剧情"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective / Thriller"
 msgstr "侦探/惊悚"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure / Western / War"
 msgstr "冒险/西部/战争"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "科幻/奇幻/恐怖"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "喜剧"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "肥皂剧/文艺/民俗"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19682"
 msgid "Romance"
 msgstr "爱情"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
 msgstr "正剧/古典/宗教/历史"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19684"
 msgid "Adult"
 msgstr "成人"
@@ -11961,7 +11962,7 @@ msgctxt "#20196"
 msgid "Export music library"
 msgstr "导出音乐资料库"
 
-#: system/settings/settings.xml
+#: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
 msgstr "导入音乐资料库"
@@ -12793,6 +12794,10 @@ msgctxt "#20445"
 msgid "Fanart"
 msgstr "同人画"
 
+#. Ask user when refreshing music or video info if they want to use data from
+#. NFO file
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+#: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "发现本地存储的信息。忽略并从互联网刷新吗？"
@@ -13920,7 +13925,8 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "选择歌手"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "歌手信息"
@@ -21054,8 +21060,9 @@ msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[缺失]"
 
-#. Title album artists node
+#. Title album artists node, and music item to export output, see #38306
 #: system/library/music/musicroles/albumartists.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38043"
 msgid "Album artists"
 msgstr "专辑歌手"
@@ -21348,21 +21355,28 @@ msgstr "包含未刮削的项目（创建 NFO 模板文件）"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
-msgid "Output only artwork, not NFO files"
-msgstr "仅导出艺术图片，无 NFO 文件"
+msgid "Output information to NFO files"
+msgstr "输出信息到 NFO 文件"
 
+#. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
+msgid ""
+"Output information to NFO files (currently exporting artist folders only)"
+msgstr "输出信息到 NFO 文件（仅当前导出歌手文件夹）"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38311"
 msgid "Overwrite existing files"
 msgstr "覆盖现有文件"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38312"
 msgid "Song artists"
 msgstr "歌曲歌手"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38313"
 msgid "Other artists"
@@ -21397,6 +21411,40 @@ msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
 msgstr "有本地歌手信息（NFO）和艺术图片要获取吗？现在设置这些歌手文件夹位置吧。"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38321"
+msgid "Artist folders only"
+msgstr "仅歌手文件夹"
+
+#. Explanation of what export to library folders means see #38303 when albums
+#. and artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38322"
+msgid ""
+"Artists exported to Artist Information Folder and albums to music folders"
+msgstr "歌手导出到歌手信息文件夹，专辑导出到音乐文件夹"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. albums selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38323"
+msgid "Albums exported to music folders"
+msgstr "专辑导出到音乐文件夹"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38324"
+msgid "Artists exported to Artist Information Folder"
+msgstr "歌手导出到歌手信息文件夹"
+
+#. Explanation of what export artist folders only means see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38325"
+msgid "Artist subfolders created in Artist Information Folder"
+msgstr "歌手信息文件夹中创建的歌手子文件夹"
 
 #. Dialog heading when editing default settings for fetching additional music
 #. information
@@ -21461,6 +21509,39 @@ msgstr "选择如何应用设置"
 msgctxt "#38339"
 msgid "How to apply information provider settings"
 msgstr "如何应用信息提供者设置"
+
+#. Progress statement when importing music library is processing song playback
+#. history data
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38350"
+msgid "Importing song playback history"
+msgstr "导入歌曲播放历史"
+
+#. Progress statement when importing music library - data matching phase
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38351"
+msgid "Matching data"
+msgstr "匹配数据"
+
+#. Progress statement when importing music library - song history being
+#. updated
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38352"
+msgid "Updating songs"
+msgstr "更新歌曲"
+
+#. Notification of import success "Importing song history - <number of songs
+#. matched> updated out of <total songs in xml> imported songs"
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38353"
+msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
+msgstr "导入歌曲历史 - {0:d} 已更新，共 {0:d} 个导入歌曲"
+
+#. Message when reading the user specified XML for import to library fails
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38354"
+msgid "Unable to read xml file"
+msgstr "无法读取 XML 文件"
 
 #: system/settings/settings.xml
 msgctxt "#39000"

@@ -13,7 +13,7 @@
 # Petr Šimáček <petr.simacek@gmail.com>, 2018
 # R3gi, 2018-2019
 # Roman Ondráček <ondracek.roman@centrum.cz>, 2016
-# Trottel <trottel09@gmail.com>, 2016-2018
+# Trottel <trottel09@gmail.com>, 2016-2019
 # Viktor Moravec <viki.moravec@gmail.com>, 2015
 # Vojtěch Uxa <vojtechuxa@gmail.com>, 2016
 # Zbyněk Fiala, 2015-2016
@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-03-31 17:37+0000\n"
-"Last-Translator: R3gi\n"
+"PO-Revision-Date: 2019-07-06 10:52+0000\n"
+"Last-Translator: Trottel <trottel09@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -548,6 +548,7 @@ msgstr "Interpreti"
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: xbmc/media/MediaTypes.cpp
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#134"
 msgid "Songs"
 msgstr "Skladby"
@@ -1159,7 +1160,7 @@ msgstr "Chyba"
 #: system/settings/settings.xml
 msgctxt "#258"
 msgid "Enable tag reading"
-msgstr "Povolit čtení značek"
+msgstr "Povolit čtení štítků"
 
 msgctxt "#259"
 msgid "Opening"
@@ -2873,12 +2874,12 @@ msgctxt "#648"
 msgid "Import video library"
 msgstr "Importovat knihovnu videí"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#649"
 msgid "Importing"
 msgstr "Importování"
 
-#: xbmc/music/MusicDatabase.cpp
+#. unused?
 msgctxt "#650"
 msgid "Exporting"
 msgstr "Exportování"
@@ -5093,7 +5094,7 @@ msgctxt "#10522"
 msgid "Now playing - Videos"
 msgstr "Přehrává se – Videa"
 
-#: xbmc/music/ContextMenus.h
+#: xbmc/music/ContextMenus.h xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#10523"
 msgid "Album information"
 msgstr "Informace o albu"
@@ -8654,7 +8655,7 @@ msgid "Find similar"
 msgstr "Najít podobné"
 
 #. label for epg import progress control
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19004"
 msgid "Importing guide from clients"
 msgstr "Importování televizního programu z klientů"
@@ -8999,7 +9000,7 @@ msgstr "Skrýt kanál"
 #: addons/skin.estuary/xml/Includes_PVR.xml
 #: addons/skin.estuary/xml/MyGames.xml addons/skin.estuary/xml/MyMusicNav.xml
 #: addons/skin.estuary/xml/MyPics.xml addons/skin.estuary/xml/MyVideoNav.xml
-#: addons/skin.estuary/xml/View_50_List.xml xbmc/epg/EpgInfoTag.cpp
+#: addons/skin.estuary/xml/View_50_List.xml xbmc/pvr/epg/EpgInfoTag.cpp
 #: xbmc/FileItem.cpp xbmc/GUIInfoManager.cpp xbmc/pvr/PVRManager.cpp
 #: xbmc/utils/SystemInfo.cpp
 msgctxt "#19055"
@@ -10220,7 +10221,7 @@ msgid "Filter channels"
 msgstr "Filtrovat kanály"
 
 #. label 'loading epg data from database' for progress dialog text
-#: xbmc/epg/EpgContainer.cpp
+#: xbmc/pvr/epg/EpgContainer.cpp
 msgctxt "#19250"
 msgid "Loading guide from database"
 msgstr "Načítání televizního programu z databáze"
@@ -10322,7 +10323,7 @@ msgstr "Zadané číslo PIN bylo nesprávné."
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
-#: xbmc/epg/EpgInfoTag.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19266"
 msgid "Parental locked"
 msgstr "Rodičovský zámek"
@@ -10571,535 +10572,535 @@ msgid "View timer rule"
 msgstr "Zobrazit pravidlo časovače"
 
 #. label for epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19499"
 msgid "Other / Unknown"
 msgstr "Jiné / Neznámé"
 
 #. label for epg "movie/drama" genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19500"
 msgid "Movie / Drama"
 msgstr "Film / Drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19501"
 msgid "Detective / Thriller"
 msgstr "Detektivní / Thriller"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19502"
 msgid "Adventure / Western / War"
 msgstr "Dobrodružný / Western / Válečný"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19503"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Sci-Fi / Fantasy / Horor"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19504"
 msgid "Comedy"
 msgstr "Komedie"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19505"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Telenovela / Melodrama / Folklór"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19506"
 msgid "Romance"
 msgstr "Romantický"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19507"
 msgid "Serious / Classical / Religious / Historical movie / drama"
 msgstr "Vážný / Klasický / Duchovní / Historický film / drama"
 
 #. label for epg "movie/drama" subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
 msgstr "Film pro dospělé / Drama"
 
 #. label for "news/current affairs" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
 msgstr "Zprávy / Aktuální události"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19517"
 msgid "News / Weather report"
 msgstr "Zprávy / Počasí"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19518"
 msgid "News magazine"
 msgstr "Zpravodajský magazín"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19519"
 msgid "Documentary"
 msgstr "Dokumentární"
 
 #. label for "news/current affairs" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19520"
 msgid "Discussion / Interview / Debate"
 msgstr "Diskuze / Rozhovor / Debata"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
 msgstr "Představení / Soutěž"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19533"
 msgid "Game show / Quiz / Contest"
 msgstr "Herní pořad / Kvíz / Soutěž"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19534"
 msgid "Variety show"
 msgstr "Estráda"
 
 #. label for "show/game show" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
 msgstr "Talk show"
 
 #. label for "sports" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19548"
 msgid "Sports"
 msgstr "Sport"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
 msgstr "Zvláštní událost"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19550"
 msgid "Sport magazine"
 msgstr "Sportovní magazín"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19551"
 msgid "Football"
 msgstr "Fotbal"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19552"
 msgid "Tennis / Squash"
 msgstr "Tenis / Squash"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
 msgstr "Týmové sporty"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
 msgstr "Atletika"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19555"
 msgid "Motor sport"
 msgstr "Automobilové sporty"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19556"
 msgid "Water sport"
 msgstr "Vodní sporty"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19557"
 msgid "Winter sports"
 msgstr "Zimní sporty"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19558"
 msgid "Equestrian"
 msgstr "Jezdectví"
 
 #. label for "sports" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19559"
 msgid "Martial sports"
 msgstr "Bojové sporty"
 
 #. label for "children's/youth programmes" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19564"
 msgid "Children's / Youth programmes"
 msgstr "Pořady pro děti / mládež"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19565"
 msgid "Pre-school children's programmes"
 msgstr "Pořady pro předškolní děti"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19566"
 msgid "Entertainment programmes for 6 to 14"
 msgstr "Zábavné pořady pro 6 až 14 let"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19567"
 msgid "Entertainment programmes for 10 to 16"
 msgstr "Zábavné pořady pro 10 až 16 let"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19568"
 msgid "Informational / Educational / School programme"
 msgstr "Naučné / Výukové / Školní pořady"
 
 #. label for "children's/youth programmes" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19569"
 msgid "Cartoons / Puppets"
 msgstr "Kreslený / Loutkový"
 
 #. label for "music/ballet/dance" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19580"
 msgid "Music / Ballet / Dance"
 msgstr "Hudba / Balet / Tanec"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19581"
 msgid "Rock / Pop"
 msgstr "Rock / Pop"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19582"
 msgid "Serious / Classical music"
 msgstr "Vážná / Klasická hudba"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19583"
 msgid "Folk / Traditional music"
 msgstr "Folková / Tradiční hudba"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19584"
 msgid "Musical / Opera"
 msgstr "Muzikál / Opera"
 
 #. label for "music/ballet/dance" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19585"
 msgid "Ballet"
 msgstr "Balet"
 
 #. label for "arts/culture" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19596"
 msgid "Arts / Culture"
 msgstr "Umění / Kultura"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19597"
 msgid "Performing arts"
 msgstr "Herecká umění"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19598"
 msgid "Fine arts"
 msgstr "Krásná umění"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19599"
 msgid "Religion"
 msgstr "Náboženský"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
 msgstr "Popkultura / Tradiční umění"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19601"
 msgid "Literature"
 msgstr "Literatura"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19602"
 msgid "Film / Cinema"
 msgstr "Film / Kino"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19603"
 msgid "Experimental film / video"
 msgstr "Experimentální film / Video"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
 msgstr "Vysílání / Zpravodajství"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19605"
 msgid "New media"
 msgstr "Nová média"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19606"
 msgid "Arts / Culture magazines"
 msgstr "Umělecké / Kulturní časopisy"
 
 #. label for "arts/culture" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19607"
 msgid "Fashion"
 msgstr "Móda"
 
 #. label for "social/political/economics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
 msgstr "Sociální / Politický / Ekonomický"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19613"
 msgid "Magazines / Reports / Documentary"
 msgstr "Bulvár / Zprávy / Dokumentární"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19614"
 msgid "Economics / Social advisory"
 msgstr "Ekonomické / Sociální poradenství"
 
 #. label for "social/political/economics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19615"
 msgid "Remarkable people"
 msgstr "Významné osobnosti"
 
 #. label for "education/science/factual" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19628"
 msgid "Education / Science / Factual"
 msgstr "Vzdělávací / Věda / Fakta"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19629"
 msgid "Nature / Animals / Environment"
 msgstr "Příroda / Zvířata / Životní prostředí"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19630"
 msgid "Technology / Natural sciences"
 msgstr "Technologie / Přírodní vědy"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19631"
 msgid "Medicine / Physiology / Psychology"
 msgstr "Lékařství / Fyziologie / Psychologie"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19632"
 msgid "Foreign countries / Expeditions"
 msgstr "Cizí země / Expedice"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19633"
 msgid "Social / Spiritual sciences"
 msgstr "Společenské / Duchovní vědy"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19634"
 msgid "Further education"
 msgstr "Další vzdělávání"
 
 #. label for "education/science/factual" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19635"
 msgid "Languages"
 msgstr "Jakyky"
 
 #. label for "leisure/hobbies" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19644"
 msgid "Leisure / Hobbies"
 msgstr "Volný čas / Hobby"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19645"
 msgid "Tourism / Travel"
 msgstr "Turistika / Cestování"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19646"
 msgid "Handicraft"
 msgstr "Řemeslo"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19647"
 msgid "Motoring"
 msgstr "Motorismus"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19648"
 msgid "Fitness & health"
 msgstr "Fitness a zdraví"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19649"
 msgid "Cooking"
 msgstr "Vaření"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19650"
 msgid "Advertisement / Shopping"
 msgstr "Reklama / Teleshopping"
 
 #. label for "leisure/hobbies" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19651"
 msgid "Gardening"
 msgstr "Zahradničení"
 
 #. label for "special characteristics" epg genre value
-#: xbmc/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
+#: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19660"
 msgid "Special characteristics"
 msgstr "Zvláštní vlastnosti"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
 msgstr "Původní jazyk"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19662"
 msgid "Black & white"
 msgstr "Černobílý"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19663"
 msgid "Unpublished"
 msgstr "Nepublikovaný"
 
 #. label for "special characteristics" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
 msgstr "Živé vysílání"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19676"
 msgid "Drama"
 msgstr "Drama"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19677"
 msgid "Detective / Thriller"
 msgstr "Detektivní / Thriller"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19678"
 msgid "Adventure / Western / War"
 msgstr "Dobrodružný / Western / Válečný"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19679"
 msgid "Science fiction / Fantasy / Horror"
 msgstr "Sci-Fi / Fantasy / Horor"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "Komedie"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19681"
 msgid "Soap / Melodrama / Folkloric"
 msgstr "Telenovela / Melodrama / Folklór"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19682"
 msgid "Romance"
 msgstr "Romantický"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19683"
 msgid "Serious / Classical / Religion / Historical"
 msgstr "Vážný / Klasický / Duchovní / Historický"
 
 #. label for "user defined" epg subgenre value
-#: xbmc/epg/Epg.cpp
+#: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19684"
 msgid "Adult"
 msgstr "Pro dospělé"
@@ -11962,7 +11963,7 @@ msgctxt "#20196"
 msgid "Export music library"
 msgstr "Exportovat hudební knihovnu"
 
-#: system/settings/settings.xml
+#: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
 msgstr "Importovat hudební knihovnu"
@@ -12794,6 +12795,10 @@ msgctxt "#20445"
 msgid "Fanart"
 msgstr "Fanart"
 
+#. Ask user when refreshing music or video info if they want to use data from
+#. NFO file
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp
+#: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "Nalezeny místně uložené informace. Ignorovat a aktualizovat z internetu?"
@@ -13921,7 +13926,8 @@ msgctxt "#21890"
 msgid "Select artist"
 msgstr "Vybrat interpreta"
 
-#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/music/ContextMenus.h
+#: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
+#: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
 msgstr "Informace o interpretovi"
@@ -18536,7 +18542,7 @@ msgctxt "#36262"
 msgid ""
 "Export parts of the music library to an XML file or NFO files. This will "
 "optionally overwrite your current NFO and artwork files."
-msgstr "Exportovat části databáze hudební knihovny do souborů XML nebo NFO. Toto volitelně přepíše vaše aktuální soubory NFO a uměleckých děl."
+msgstr "Exportovat části databáze hudební knihovny do souborů XML nebo NFO. Toto volitelně přepíše vaše aktuální soubory NFO a obrázků."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
@@ -18630,7 +18636,7 @@ msgctxt "#36274"
 msgid ""
 "Read the tag information from song files. For large directories this can "
 "increase read time, especially over a network."
-msgstr "Číst informace tagů ze souborů skladeb. Pro velké adresáře může toto zvýšit čas čtení, zvláště přes síť."
+msgstr "Číst informace štítků ze souborů skladeb. Pro velké adresáře může toto zvýšit čas čtení, zvláště přes síť."
 
 #. Description of setting with label #13307 "Track naming template"
 #: system/settings/settings.xml
@@ -18638,7 +18644,7 @@ msgctxt "#36275"
 msgid ""
 "Control the way that the names of songs are displayed in the user interface."
 " In order to function properly, tag reading needs to be enabled."
-msgstr "Ovládejte způsob, jakým jsou názvy skladeb zobrazeny v uživatelském rozhraní. Pro správnou funkčnost musí být povoleno čtení tagů."
+msgstr "Ovládejte způsob, jakým jsou názvy skladeb zobrazeny v uživatelském rozhraní. Pro správnou funkčnost musí být povoleno čtení štítků."
 
 #. Description of setting with label #13387 "Track naming template - right"
 #: system/settings/settings.xml
@@ -18722,7 +18728,7 @@ msgid ""
 "[B]%B[/B]: Album, [B]%G[/B]: Genre, [B]%Y[/B]: Year, [B]%F[/B]: FileName, "
 "[B]%D[/B]: Duration, [B]%J[/B]: Date, [B]%R[/B]: Rating, [B]%I[/B]: "
 "FileSize."
-msgstr "Ovládejte, jak je uložená hudba pojmenována z tagů. Tagy [B]%N[/B]: Číslo stopy, [B]%S[/B]: Číslo disku, [B]%A[/B]: Interpret, [B]%T[/B]: Název, [B]%B[/B]: Album, [B]%G[/B]: Styl, [B]%Y[/B]: Rok, [B]%F[/B]: Název souboru, [B]%D[/B]: Doba trvání, [B]%J[/B]: Datum, [B]%R[/B]: Hodnocení, [B]%I[/B]: Velikost souboru."
+msgstr "Ovládejte, jak je uložená hudba pojmenována ze štítků. Štítky [B]%N[/B]: Číslo stopy, [B]%S[/B]: Číslo disku, [B]%A[/B]: Interpret, [B]%T[/B]: Název, [B]%B[/B]: Album, [B]%G[/B]: Styl, [B]%Y[/B]: Rok, [B]%F[/B]: Název souboru, [B]%D[/B]: Doba trvání, [B]%J[/B]: Datum, [B]%R[/B]: Hodnocení, [B]%I[/B]: Velikost souboru."
 
 #. Description of setting with label #621 "Encoder"
 #: system/settings/settings.xml
@@ -20684,7 +20690,7 @@ msgstr "Zesílit středový kanál při sloučení"
 #: system/settings/rbp.xml
 msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
-msgstr "Povolit umělecké dílo s vyšší hloubkou barev"
+msgstr "Povolit obrázek s vyšší hloubkou barev"
 
 #: system/settings/rbp.xml
 msgctxt "#37021"
@@ -21055,8 +21061,9 @@ msgctxt "#38042"
 msgid "[Missing]"
 msgstr "[Chybějící]"
 
-#. Title album artists node
+#. Title album artists node, and music item to export output, see #38306
 #: system/library/music/musicroles/albumartists.xml
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38043"
 msgid "Album artists"
 msgstr "Interpret alba"
@@ -21086,7 +21093,7 @@ msgstr "Všechny role"
 msgctxt "#38060"
 msgid ""
 "Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "Hudební knihovna potřebuje prohledat znovu tagy ze souborů. Chcete prohledat nyní?"
+msgstr "Hudební knihovna potřebuje znovu prohledat štítky ze souborů. Chcete prohledat nyní?"
 
 #. Extra scraping question on upgrade from previous version
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
@@ -21101,7 +21108,7 @@ msgstr "Načíst dodatečné informace pro alba a interprety? Může to nějakou
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#38062"
 msgid "Do full tag scan even when music files are unchanged?"
-msgstr "Provést úplné prohledání tagů, i když jsou hudební soubory nezměněny?"
+msgstr "Provést úplné prohledání štítků, i když jsou hudební soubory nezměněny?"
 
 #. Item in selection list #38338. Settings will change the default addon used
 #. to fetch artist or album information, related to #20195, #20193 and #20194
@@ -21349,21 +21356,28 @@ msgstr "Zahrnout položky, pro které nebyly staženy informace (pro vytvoření
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
-msgid "Output only artwork, not NFO files"
-msgstr "Výstup pouze umělecká díla, ne soubory NFO"
+msgid "Output information to NFO files"
+msgstr "Výstup informací do souborů NFO"
 
+#. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
+msgid ""
+"Output information to NFO files (currently exporting artist folders only)"
+msgstr "Výstup informací do souborů NFO (aktuálně exportuje pouze složku interpretů)"
+
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38311"
 msgid "Overwrite existing files"
 msgstr "Přepsat existující soubory"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38312"
 msgid "Song artists"
 msgstr "Interpreti skladby"
 
-#. Music item to export output, see #38093
+#. Music item to export output, see #38306
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38313"
 msgid "Other artists"
@@ -21398,6 +21412,40 @@ msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
 msgstr "Máte místní soubory informací o interpretech (NFO) a uměleckých děl, které chcete načíst? Nastavte nyní umístění těchto složek interpretů"
+
+#. Kind of export output, see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38321"
+msgid "Artist folders only"
+msgstr "Pouze složku interpretů"
+
+#. Explanation of what export to library folders means see #38303 when albums
+#. and artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38322"
+msgid ""
+"Artists exported to Artist Information Folder and albums to music folders"
+msgstr "Interpreti exportováni do složky informací o interpretech a alba do složek hudby"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. albums selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38323"
+msgid "Albums exported to music folders"
+msgstr "Alba exportována do složek hudby"
+
+#. Explanation of what export to library folders means see #38303 when only
+#. artists selected
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38324"
+msgid "Artists exported to Artist Information Folder"
+msgstr "Interpreti exportováni do složky informací o interpretech"
+
+#. Explanation of what export artist folders only means see #38304
+#: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
+msgctxt "#38325"
+msgid "Artist subfolders created in Artist Information Folder"
+msgstr "Podsložky interpretů vytvořeny ve složce informací o interpretech"
 
 #. Dialog heading when editing default settings for fetching additional music
 #. information
@@ -21462,6 +21510,39 @@ msgstr "Zvolte, jak použít nastavení"
 msgctxt "#38339"
 msgid "How to apply information provider settings"
 msgstr "Jak použít nastavení poskytovatele informací"
+
+#. Progress statement when importing music library is processing song playback
+#. history data
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38350"
+msgid "Importing song playback history"
+msgstr "Importování historie přehrávání skladby"
+
+#. Progress statement when importing music library - data matching phase
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38351"
+msgid "Matching data"
+msgstr "Porovnávání dat"
+
+#. Progress statement when importing music library - song history being
+#. updated
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38352"
+msgid "Updating songs"
+msgstr "Aktualizace skladeb"
+
+#. Notification of import success "Importing song history - <number of songs
+#. matched> updated out of <total songs in xml> imported songs"
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38353"
+msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
+msgstr "Importování historie skladby - aktualizováno {0:d} z {0:d} importovaných skladeb"
+
+#. Message when reading the user specified XML for import to library fails
+#: xbmc/music/MusicDatabase.cpp
+msgctxt "#38354"
+msgid "Unable to read xml file"
+msgstr "Nelze přečíst soubor xml"
 
 #: system/settings/settings.xml
 msgctxt "#39000"
