@@ -45,7 +45,9 @@ msgctxt "#30006"
 msgid "Icons"
 msgstr ""
 
-#empty string with id 30007
+msgctxt "#30007"
+msgid "Program Streams"
+msgstr ""
 
 msgctxt "#30008"
 msgid "Icon path"
@@ -69,7 +71,9 @@ msgctxt "#30013"
 msgid "Zap before channelswitch (i.e. for single tuner boxes)"
 msgstr ""
 
-#empty string with id 30014
+msgctxt "#30014"
+msgid "Set program id for live channel or recorded streams"
+msgstr ""
 
 msgctxt "#30015"
 msgid "Update interval"
@@ -108,7 +112,7 @@ msgid "TV bouquet fetch mode"
 msgstr ""
 
 msgctxt "#30026"
-msgid "TV bouquet"
+msgid "TV bouquet 1"
 msgstr ""
 
 msgctxt "#30027"
@@ -240,7 +244,7 @@ msgid "Radio bouquet fetch mode"
 msgstr ""
 
 msgctxt "#30059"
-msgid "Radio bouquet"
+msgid "Radio bouquet 1"
 msgstr ""
 
 msgctxt "#30060"
@@ -304,7 +308,7 @@ msgid "All bouquets"
 msgstr ""
 
 msgctxt "#30075"
-msgid "Only one bouquet"
+msgid "Some bouquets"
 msgstr ""
 
 msgctxt "#30076"
@@ -316,7 +320,7 @@ msgid "As last bouquet"
 msgstr ""
 
 msgctxt "#30078"
-msgid "Favourites group"
+msgid "Favourites bouquet"
 msgstr ""
 
 msgctxt "#30079"
@@ -521,7 +525,63 @@ msgctxt "#30130"
 msgid "Kodi/E2 instances"
 msgstr ""
 
-#empty strings from id 30131 to 30409
+msgctxt "#30131"
+msgid "Custom bouquets"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Custom TV bouquets file"
+msgstr ""
+
+msgctxt "#30133"
+msgid "Custom Radio bouquets file"
+msgstr ""
+
+msgctxt "#30134"
+msgid "Number of TV bouquets"
+msgstr ""
+
+msgctxt "#30135"
+msgid "TV bouquet 2"
+msgstr ""
+
+msgctxt "#30136"
+msgid "TV bouquet 3"
+msgstr ""
+
+msgctxt "#30137"
+msgid "TV bouquet 4"
+msgstr ""
+
+msgctxt "#30138"
+msgid "TV bouquet 5"
+msgstr ""
+
+msgctxt "#30139"
+msgid "Number of radio bouquets"
+msgstr ""
+
+msgctxt "#30140"
+msgid "Radio bouquet 2"
+msgstr ""
+
+msgctxt "#30141"
+msgid "Radio bouquet 3"
+msgstr ""
+
+msgctxt "#30142"
+msgid "Radio bouquet 4"
+msgstr ""
+
+msgctxt "#30143"
+msgid "Radio bouquet 5"
+msgstr ""
+
+msgctxt "#30144"
+msgid "No addon debug logging in Kodi debug mode"
+msgstr ""
+
+#empty strings from id 30145 to 30409
 ###############
 ###############
 
@@ -651,11 +711,11 @@ msgid "Use the login username and password for streams."
 msgstr ""
 
 msgctxt "#30610"
-msgid "The value in seconds to wait for a connection check to complete before failure. Useful for tuning on older Enigma2 devices."
+msgid "The value in seconds to wait for a connection check to complete before failure. Useful for tuning on older Enigma2 devices. Note, this setting should rarely need to be changed. It's more likely the `Connection check interval` setting will have the desired effect. Default is 30 seconds."
 msgstr ""
 
 msgctxt "#30611"
-msgid "The value in seconds to wait between connection checks. Useful for tuning on older Enigma2 devices."
+msgid "The value in seconds to wait between connection checks. Useful for tuning on older Enigma2 devices. Default is 10 seconds."
 msgstr ""
 
 #empty strings from id 30612 to 30619
@@ -682,11 +742,11 @@ msgid "In order to have Kodi display channel logos you have to copy the picons f
 msgstr ""
 
 msgctxt "#30625"
-msgid "As the set-top box can also be used to modify timers, delete recordings etc. and the set-top box does not notify the Kodi installation, the addon needs to regularly check for updates (new channels, new/changed/deletes timers, deleted recordings, etc.) This property defines how often the addon checks for updates."
+msgid "As the set-top box can also be used to modify timers, delete recordings etc. and the set-top box does not notify the Kodi installation, the addon needs to regularly check for updates (new channels, new/changed/deletes timers, deleted recordings, etc.) This property defines how often the addon checks for updates. Please note that updating the recordings frequently can keep your receiver and it's harddisk from entering standby automatically."
 msgstr ""
 
 msgctxt "#30626"
-msgid "The mode used when the update interval is reached. Note that if there is any timer change detected a recordings update will always occur regardless of the update mode. Choose from one of the following two modes: [Timers and Recordings] Update all timers and recordings; [Timers only] Only update the timers."
+msgid "The mode used when the update interval is reached. Note that if there is any timer change detected a recordings update will always occur regardless of the update mode. Choose from one of the following two modes: [Timers and Recordings] Update all timers and recordings; [Timers only] Only update the timers. If it's important to not spin up the HDD on your STB use this option. The HDD should then only spin up when a timer event occurs."
 msgstr ""
 
 msgctxt "#30627"
@@ -697,7 +757,11 @@ msgctxt "#30628"
 msgid "The hour of the day when the check for new channels should occur. Default is 4h as the Auto Bouquet Maker (ABM) on the E2 device defaults to 3AM."
 msgstr ""
 
-#empty strings from id 30629 to 30639
+msgctxt "#30629"
+msgid "Some TV Providers (e.g. Nos - Portugal) using MPTS send extra program stream information. Setting the program id allows kodi to select the correct stream and therefore makes the channel/recording playable. Note that it takes approx 33% longer to open any stream with this option enabled."
+msgstr ""
+
+#empty strings from id 30630 to 30639
 #help info - Channels
 
 msgctxt "#30640"
@@ -713,15 +777,15 @@ msgid "When using the addon with a single tuner box it may be necessary that the
 msgstr ""
 
 msgctxt "#30643"
-msgid "Choose from one of the following three modes: [All bouquets] Fetch all TV bouquets from the set-top box; [Only one bouquet] Only fetch the bouquet specified in the next option; [Favourites group] Only fetch the system bouquet for TV favourites."
+msgid "Choose from one of the following three modes: [All bouquets] Fetch all TV bouquets from the set-top box; [Some bouquets] Only fetch the bouquets specified in the next options; [Favourites group] Only fetch the system bouquet for TV favourites; [Custom groups] Fetch a set of bouquets from the Set-top box whose names are loaded from an XML file."
 msgstr ""
 
 msgctxt "#30644"
-msgid "If the previous option has been has been set to 'Only one bouquet' you need to specify the TV bouquet to be fetched from the set-top box. Please not that this is the bouquet-name as shown on the set-top box (i.e. 'Favourites (TV)'). This setting is case-sensitive."
+msgid "If the previous option has been has been set to 'Some bouquets' you need to specify a TV bouquet to be fetched from the set-top box. Please not that this is the bouquet-name as shown on the set-top box (i.e. 'Favourites (TV)'). This setting is case-sensitive."
 msgstr ""
 
 msgctxt "#30645"
-msgid "If the fetch mode is 'All bouquets' or 'Only one bouquet' depending on your Enigma2 image you may need to explicitly fetch favourites if you require them. The options are: [Disabled] Don't explicitly fetch TV favourites; [As first bouquet] Explicitly fetch them as the first bouquet; [As last bouquet] Explicitly fetch them as the last bouquet."
+msgid "If the fetch mode is 'All bouquets' or 'Some bouquets' depending on your Enigma2 image you may need to explicitly fetch favourites if you require them. The options are: [Disabled] Don't explicitly fetch TV favourites; [As first bouquet] Explicitly fetch them as the first bouquet; [As last bouquet] Explicitly fetch them as the last bouquet."
 msgstr ""
 
 msgctxt "#30646"
@@ -729,22 +793,38 @@ msgid "Last scanned is a system bouquet containing all the TV and Radio channels
 msgstr ""
 
 msgctxt "#30647"
-msgid "Choose from one of the following three modes: [All bouquets] Fetch all Radio bouquets from the set-top box]; [Only one bouquet] Only fetch the bouquet specified in the next option; [Favourites group] Only fetch the system bouquet for Radio favourites."
+msgid "Choose from one of the following three modes: [All bouquets] Fetch all Radio bouquets from the set-top box]; [Some bouquets] Only fetch the bouquets specified in the next options; [Favourites group] Only fetch the system bouquet for Radio favourites; [Custom groups] Fetch a set of bouquets from the Set-top box whose names are loaded from an XML file."
 msgstr ""
 
 msgctxt "#30648"
-msgid "If the previous option has been has been set to 'Only one bouquet' you need to specify the Radio bouquet to be fetched from the set-top box. Please not that this is the bouquet-name as shown on the set-top box (i.e. 'Favourites (Radio)'). This setting is case-sensitive."
+msgid "If the previous option has been has been set to 'Some bouquets' you need to specify a Radio bouquet to be fetched from the set-top box. Please not that this is the bouquet-name as shown on the set-top box (i.e. 'Favourites (Radio)'). This setting is case-sensitive."
 msgstr ""
 
 msgctxt "#30649"
-msgid "If the fetch mode is 'All bouquets' or 'Only one bouquet' depending on your Enigma2 image you may need to explicitly fetch favourites if you require them. The options are: [Disabled] Don't explicitly fetch Radio favourites; [As first bouquet] Explicitly fetch them as the first bouquet; [As last bouquet] Explicitly fetch them as the last bouquet."
+msgid "If the fetch mode is 'All bouquets' or 'Some bouquets' depending on your Enigma2 image you may need to explicitly fetch favourites if you require them. The options are: [Disabled] Don't explicitly fetch Radio favourites; [As first bouquet] Explicitly fetch them as the first bouquet; [As last bouquet] Explicitly fetch them as the last bouquet."
 msgstr ""
 
 msgctxt "#30650"
 msgid "Last scanned is a system bouquet containing all the TV and Radio channels found in the last scan. Any Radio channels found in the Last Scanned bouquet can be displayed as a group called 'Last Scanned (Radio)' in Kodi. For Radio this group is excluded by default. Disable this option to show this group."
 msgstr ""
 
-#empty strings from id 30651 to 30659
+msgctxt "#30651"
+msgid "The file used to load the custom TV bouquets (groups). If no groups can be matched the channel list will default to 'Last Scanned (TV)'. The default file is `customTVGroups-example.xml`."
+msgstr ""
+
+msgctxt "#30652"
+msgid "The file used to load the custom Radio bouquets (groups). If no groups can be matched the channel list will default to 'Last Scanned (Radio)'. The default file is `customRadioGroups-example.xml`."
+msgstr ""
+
+msgctxt "#30653"
+msgid "The number of TV bouquets to load when `Some bouquets` is the selected fetch mode. Up to 5 can be chosen. If more than 5 are required the 'Custom bouquets' fetch mode should be used instead."
+msgstr ""
+
+msgctxt "#30654"
+msgid "The number of Radio bouquets to load when `Some bouquets` is the selected fetch mode. Up to 5 can be chosen. If more than 5 are required the 'Custom bouquets' fetch mode should be used instead."
+msgstr ""
+
+#empty strings from id 30655 to 30659
 #help info - EPG
 
 msgctxt "#30660"
@@ -903,7 +983,11 @@ msgctxt "#30746"
 msgid "Very detailed and verbose log statements will display in addition to standard debug statements. If enabled along with `Enable debug logging in normal mode` both trace and debug will display without debug logging enabled. In this case both debug and trace log statements will display at NOTICE level."
 msgstr ""
 
-#empty strings from id 30747 to 30759
+msgctxt "#30747"
+msgid "Debug log statements will not be displayed for the addon even though debug logging is enabled in Kodi. This can be useful when trying to debug an issue in Kodi which is not addon related."
+msgstr ""
+
+#empty strings from id 30748 to 30759
 #help info - Backend
 
 msgctxt "#30760"
