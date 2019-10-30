@@ -44,6 +44,10 @@ msgctxt "#30013"
 msgid "Start channel number"
 msgstr "채널 개수 시작"
 
+msgctxt "#30014"
+msgid "Only number by channel order in M3U"
+msgstr "M3U의 채널 순서에 따라서만 번호 매김"
+
 msgctxt "#30019"
 msgid "EPG Settings"
 msgstr "EPG 설정"
@@ -112,6 +116,18 @@ msgctxt "#30050"
 msgid "Genres"
 msgstr "장르"
 
+msgctxt "#30051"
+msgid "Use genre text from XMLTV when mapping genres"
+msgstr "장르를 지정할 때 XMLTV의 장르 문서 사용"
+
+msgctxt "#30052"
+msgid "Genres path"
+msgstr "장르 경로"
+
+msgctxt "#30053"
+msgid "Genres URL"
+msgstr "장르 URL"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "애드온 기능에 필요한 일반 설정입니다."
@@ -132,9 +148,9 @@ msgctxt "#30604"
 msgid "If location is [Remote path] select whether or not the the M3U file should be cached locally."
 msgstr "위치가 [원격 경로]이면, M3U 파일의 로컬 캐시를 선택합니다."
 
-msgctxt "#30605"
-msgid "The number to start numbering channels from."
-msgstr "채널에 번호를 매기기 시작할 숫자."
+msgctxt "#30606"
+msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
+msgstr "'tvg-chno' 모든 태그 무시하고 '채널 번호를 매길 때' M3U의 순서에 따라서만 번호 매김."
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -156,9 +172,17 @@ msgctxt "#30624"
 msgid "If location is [Remote path] select whether or not the the XMLTV file should be cached locally."
 msgstr "위치가 [원격 경로]이면, XMLTV 파일의 로컬 캐시를 선택합니다."
 
+msgctxt "#30625"
+msgid "Adjust the EPG times by this value in minutes, range is from -720 mins to +840 mins (- 12 hours to +14 hours)."
+msgstr "EPG를 조정할 분 시간으로, 범위는 -720분에서 +840분(-12시간에서 +14시간)입니다."
+
 msgctxt "#30626"
 msgid "Whether or not to override the time shift for all channels with `EPG time shift`. If not enabled `EPG time shift` plus the individual time shift per channel (if available) will be used."
 msgstr "모든 채널의 타임 시프트를 `EPG 타임 시프트`로 덮어쓸 지를 선택합니다. 선택하지 않으면 `EPG 타임 시프트`에 (사용 가능한)각 타임 시프트가 더해 집니다."
+
+msgctxt "#30640"
+msgid "Settings related to Channel Logos."
+msgstr "채널 로고에 관련된 설정."
 
 msgctxt "#30641"
 msgid "Select where to find the channel logos. The options are: [Local path] - A path to a folder whether it be on the device or the local network; [Remote path] - A base URL specifying the location of the logos."
@@ -175,6 +199,18 @@ msgstr "위치가 [원격 경로]이면, 이 설정은 유효한 기본 URL을 �
 msgctxt "#30644"
 msgid "Preference on how to handle channel logos. The options are: [Ignore] - Don't use channel logos from an XMLTV file; [Prefer M3U] - Use the channel logo from the M3U if available otherwise use the XMLTV logo; [Prefer XMLTV] - Use the channel logo from the XMLTV file if available otherwise use the M3U logo."
 msgstr "채널 로고를 관리할 방법. 옵션: [무시] - XMLTV 파일의 채널 로고를 사용하지 않음; [M3U 우선] - 가능하면 M3U 파일의 채널 로고 사용하고 아니면 XMLTV 로고 사용; [XMLTV 우선] - 가능하면 XMLTV 의 채널 로고 사용하고 아니면 M3U 로고 사용."
+
+msgctxt "#30660"
+msgid "Settings related to genres."
+msgstr "장르에 관련된 설정."
+
+msgctxt "#30661"
+msgid "If enabled, and a genre mapping file is used to get a genre type and sub type use the EPG's genre text (i.e. 'category' text) for the genre instead of the kodi default text."
+msgstr "사용하면,  기본 문서대신에 장르 지정 파일이 장르 종류에 사용되고 아래 종류는 EPG 장르 문서(예. '카테고리' 문서)가 장르에 사용됩니다."
+
+msgctxt "#30662"
+msgid "Select where to find the genres XML resource. The options are: [Local path] - A path to a genres XML file whether it be on the device or the local network; [Remote path] - A URL specifying the location of the genres XML file."
+msgstr "XML 정보를 찾을 곳을 선택합니다. 옵션: [로컬 경로] - 장치나 로컬 네트워크에서 XML 파일을 찾을 경로; [원격 경로] - XML 파일 위치를 지정할 URL."
 
 msgctxt "#30663"
 msgid "If location is [Local Path] this setting should contain a valid path."
