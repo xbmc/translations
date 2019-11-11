@@ -28,6 +28,18 @@ msgctxt "#30002"
 msgid "Remote path (Internet address)"
 msgstr "Chemin distant (adresse Internet)"
 
+msgctxt "#30003"
+msgid "Disabled"
+msgstr "Désactivé"
+
+msgctxt "#30004"
+msgid "Repeated refresh"
+msgstr "Rafraîchissement répété"
+
+msgctxt "#30005"
+msgid "Once per day"
+msgstr "Une fois par jour"
+
 msgctxt "#30010"
 msgid "General"
 msgstr "Général"
@@ -47,6 +59,18 @@ msgstr "Numéro de chaîne de départ"
 msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "Seulement la numérotation par ordre des chaînes en M3U"
+
+msgctxt "#30015"
+msgid "M3U auto refresh mode"
+msgstr "Mode de rafraîchissement auto pour M3U"
+
+msgctxt "#30016"
+msgid "Refresh interval"
+msgstr "Intervalle de rafraîchissement"
+
+msgctxt "#30017"
+msgid "Refresh hour (24h)"
+msgstr "Heure de rafraîchissement (24 h)"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -79,6 +103,10 @@ msgstr "Placer le M3U en cache sur le stockage local"
 msgctxt "#30026"
 msgid "Cache XMLTV at local storage"
 msgstr "Placer le XMLTV en cache sur le stockage local"
+
+msgctxt "#30027"
+msgid "{0:.1f} hours"
+msgstr "{0:.1f} heures"
 
 msgctxt "#30030"
 msgid "Channel Logos"
@@ -128,6 +156,26 @@ msgctxt "#30053"
 msgid "Genres URL"
 msgstr "URL des genres"
 
+msgctxt "#30060"
+msgid "Advanced"
+msgstr "Avancé"
+
+msgctxt "#30061"
+msgid "Multicast relay (udpxy)"
+msgstr "Relais multicast (udpxy)"
+
+msgctxt "#30062"
+msgid "Transform multicast stream URLs"
+msgstr "Transformer les URL de flux multicast"
+
+msgctxt "#30063"
+msgid "Relay hostname or IP address"
+msgstr "Nom d'hôte de relais ou adresse IP"
+
+msgctxt "#30064"
+msgid "Relay port"
+msgstr "Port du relais"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "Paramètres généraux requis pour le fonctionnement de l'extension"
@@ -148,9 +196,25 @@ msgctxt "#30604"
 msgid "If location is [Remote path] select whether or not the the M3U file should be cached locally."
 msgstr "Si l'emplacement est [Chemin distant], sélectionner si le fichier M3U devrait être caché localement ou pas."
 
+msgctxt "#30605"
+msgid "The number to start numbering channels from. Only used when [Use backend channel numbers] from PVR settings is enabled and a channel number is not supplied in the M3U file."
+msgstr "Le numéro de début de numérotation des chaînes. Seulement utilisé quand l'option [Utiliser les numéros de chaînes du serveur] des paramètres de l'enregistreur numérique est activée et qu'un numéro de chaîne n'est pas fourni dans le fichier M3U."
+
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "Ignorer toutes les balises « tvg-chno » et numéroter seulement les chaînes par ordre du M3U en débutant à « Numéro de chaîne de départ »."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U file. The options are: [Disabled] - Don't auto refresh the M3U file; [Repeated refresh] - Refresh the M3U on a minute based interval; [Once per day] - Refresh the M3U once per day."
+msgstr "Sélectionne le mode de rafraîchissement auto du fichier M3U. Les options sont : [Désactivé] - N'actualise pas le fichier M3U ; [Rafraîchissement répété] - Actualise M3U selon l'intervalle en minutes ; [Une fois par jour] - Actualise M3U une fois par jour."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the M3U every time this number of minutes passes. Max 120 minutes."
+msgstr "Si le mode de rafraîchissement auto de M3U est [Rafraîchissement répété], M3U est actualisé ce nombre de minutes. 120 minutes max."
+
+msgctxt "#30609"
+msgid "If M3U auto refresh mode is [Once per day] refresh the M3U every time this horu if the day is reached."
+msgstr "Si le mode de rafraîchissement auto de M3U est [Une fois par jour], M3U est actualisé à cette heure tous les jours."
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -219,3 +283,19 @@ msgstr "Si l'emplacement est [Chemin local], ce paramètre doit contenir un chem
 msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "Si l'emplacement est [Chemin distant], ce paramètre doit contenir une URL valide."
+
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays etc."
+msgstr "Paramètres avancés tels que relais multicast, etc."
+
+msgctxt "#30681"
+msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
+msgstr "Les flux multicast (UDP/RTP) ne fonctionnent pas bien en Wifi. Un relais multicast peut convertir un flux multicast UDP/RTP en HTTP. Activer cette option transformera les URL de flux multicast d'un fichier M3U en adresses HTTP accessibles via un relais « udpxy » sur le réseau local. Par ex. une URL de flux multicast UDP telle que « udp://@239.239.3.38:5239 » devrait être transformée en « http://192.168.1.1:4000/udp/239.239.3.38:5239 »."
+
+msgctxt "#30682"
+msgid "The hostname or ip address of the multicast relay (udpxy) on the local network."
+msgstr "Le nom d'hôte de relais ou l'adresse IP du relais multicast (udpxy) sur le réseau local."
+
+msgctxt "#30683"
+msgid "The port of the multicast relay (udpxy) on the local network."
+msgstr "Le port du relais multicast (udpxy) sur le réseau local."

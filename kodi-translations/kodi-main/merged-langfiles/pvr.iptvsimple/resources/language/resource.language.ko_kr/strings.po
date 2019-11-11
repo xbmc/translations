@@ -28,6 +28,18 @@ msgctxt "#30002"
 msgid "Remote path (Internet address)"
 msgstr "원격 경로 (인터넷 주소)"
 
+msgctxt "#30003"
+msgid "Disabled"
+msgstr "사용 안 함"
+
+msgctxt "#30004"
+msgid "Repeated refresh"
+msgstr "새로 고침 반복"
+
+msgctxt "#30005"
+msgid "Once per day"
+msgstr "하루에 한 번"
+
 msgctxt "#30010"
 msgid "General"
 msgstr "일반"
@@ -47,6 +59,18 @@ msgstr "채널 개수 시작"
 msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "M3U의 채널 순서에 따라서만 번호 매김"
+
+msgctxt "#30015"
+msgid "M3U auto refresh mode"
+msgstr "M3U 자동 새로 고침 모드"
+
+msgctxt "#30016"
+msgid "Refresh interval"
+msgstr "새로 고침 주기"
+
+msgctxt "#30017"
+msgid "Refresh hour (24h)"
+msgstr "새로 고침 시간 (24시)"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -79,6 +103,10 @@ msgstr "로컬 저장소에 m3u 캐시"
 msgctxt "#30026"
 msgid "Cache XMLTV at local storage"
 msgstr "로컬 저장소에 XMLTV 캐시"
+
+msgctxt "#30027"
+msgid "{0:.1f} hours"
+msgstr "{0:.1f} 시간"
 
 msgctxt "#30030"
 msgid "Channel Logos"
@@ -128,6 +156,26 @@ msgctxt "#30053"
 msgid "Genres URL"
 msgstr "장르 URL"
 
+msgctxt "#30060"
+msgid "Advanced"
+msgstr "고급"
+
+msgctxt "#30061"
+msgid "Multicast relay (udpxy)"
+msgstr "다중 방송 중계 (udpxy)"
+
+msgctxt "#30062"
+msgid "Transform multicast stream URLs"
+msgstr "다중 방송 스트림 URL 변경"
+
+msgctxt "#30063"
+msgid "Relay hostname or IP address"
+msgstr "호스트명이나 IP 주소 중계"
+
+msgctxt "#30064"
+msgid "Relay port"
+msgstr "중계 포트"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "애드온 기능에 필요한 일반 설정입니다."
@@ -148,9 +196,25 @@ msgctxt "#30604"
 msgid "If location is [Remote path] select whether or not the the M3U file should be cached locally."
 msgstr "위치가 [원격 경로]이면, M3U 파일의 로컬 캐시를 선택합니다."
 
+msgctxt "#30605"
+msgid "The number to start numbering channels from. Only used when [Use backend channel numbers] from PVR settings is enabled and a channel number is not supplied in the M3U file."
+msgstr "채널을 매기기 시작할 번호. M3U 파일이 없고 PVR 설정의 [백엔드 채널 번호 사용]에만 쓰입니다."
+
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "'tvg-chno' 모든 태그 무시하고 '채널 번호를 매길 때' M3U의 순서에 따라서만 번호 매김."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U file. The options are: [Disabled] - Don't auto refresh the M3U file; [Repeated refresh] - Refresh the M3U on a minute based interval; [Once per day] - Refresh the M3U once per day."
+msgstr "M3U 파일의 자동 새로 고침 모드를 선택합니다. 옵션: [사용 안 함] - M3U 파일 자동 새로 고침 사용 안 함; [새로 고침 반복] - 분 단위로 M3U 파일 새로 고침; [하루에 한 번] - 하루에 한 번 M3U 새로 고침."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the M3U every time this number of minutes passes. Max 120 minutes."
+msgstr "M3U 자동 새로 고침이 [새로 고침 반복]이면 이 숫자의 분 시간마다 매번 새로 고칩니다. 최대 120분."
+
+msgctxt "#30609"
+msgid "If M3U auto refresh mode is [Once per day] refresh the M3U every time this horu if the day is reached."
+msgstr "M3U 자동 새로 고침이 [하루에 한 번]이면 날짜가 오면 이 시간에 매번 새로 고칩니다."
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -219,3 +283,19 @@ msgstr "위치가 [로컬 경로]이면, 이 설정은 유효한 경로를 포�
 msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "위치가 [원격 경로]이면, 이 설정은 유효한 URL을 포함해야 합니다."
+
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays etc."
+msgstr "다중 방송 중계 등 상세한 설정. "
+
+msgctxt "#30681"
+msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
+msgstr "다중 방송 (UDP/RTP) 스트림은 무선 네트워크에서 제대로 동작하지 않습니다. 다중 방송 중계는 스트림을 UDP/RTP 다중 중계에서  HTTP로 바꿀 수 있습니다. 이 옵션은 다중 중계 URL을 M3U 파일에서 HTTP 주소로 바꾸어서 로컬 네트워크의 'udpxy' 중계로 접속할 수 있습니다. 예. UDP 다중 방송 중계 스트림 URL 'udp://@239.239.3.38:5239'는 'http://192.168.1.1:4000/udp/239.239.3.38:5239'처럼 바뀝니다."
+
+msgctxt "#30682"
+msgid "The hostname or ip address of the multicast relay (udpxy) on the local network."
+msgstr "로컬 네트워크의 다중 방송 중계 (udpxy) 호스트명이나 ip 주소."
+
+msgctxt "#30683"
+msgid "The port of the multicast relay (udpxy) on the local network."
+msgstr "로컬 네트워크의 다중 방송 중계 (udpxy) 포트."
