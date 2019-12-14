@@ -86,7 +86,7 @@ msgstr ""
 
 #label: General - m3uRefreshMode
 msgctxt "#30015"
-msgid "M3U auto refresh mode"
+msgid "Auto refresh mode"
 msgstr ""
 
 #label: General - m3uRefreshIntervalMins
@@ -99,7 +99,10 @@ msgctxt "#30017"
 msgid "Refresh hour (24h)"
 msgstr ""
 
-#empty string 30018
+#label-group: General - Refresh
+msgctxt "#30018"
+msgid "Refresh"
+msgstr ""
 
 #label-category: epgsettings
 msgctxt "#30019"
@@ -241,7 +244,22 @@ msgctxt "#30064"
 msgid "Relay port"
 msgstr ""
 
-#empty strings from id 30065 to 30599
+#label-group: Advanced - Streaming
+msgctxt "#30065"
+msgid "Streaming"
+msgstr ""
+
+#label: Advanced - useInputstreamAdaptiveforHls
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr ""
+
+#label: Advanced - useFFmpegReconnect
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
+msgstr ""
+
+#empty strings from id 30068 to 30599
 
 #############
 # help info #
@@ -286,17 +304,17 @@ msgstr ""
 
 #help: General - m3uRefreshMode
 msgctxt "#30607"
-msgid "Select the auto refresh mode for the M3U file. The options are: [Disabled] - Don't auto refresh the M3U file; [Repeated refresh] - Refresh the M3U on a minute based interval; [Once per day] - Refresh the M3U once per day."
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [Disabled] - Don't auto refresh the files; [Repeated refresh] - Refresh the files on a minute based interval; [Once per day] - Refresh the files once per day."
 msgstr ""
 
 #help: General - m3uRefreshIntervalMins
 msgctxt "#30608"
-msgid "If M3U auto refresh mode is [Repeated refresh] refresh the M3U every time this number of minutes passes. Max 120 minutes."
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the files every time this number of minutes passes. Max 120 minutes."
 msgstr ""
 
 #help: General - m3uRefreshHour
 msgctxt "#30609"
-msgid "If M3U auto refresh mode is [Once per day] refresh the M3U every time this horu if the day is reached."
+msgid "If auto refresh mode is [Once per day] refresh the files every time this hour of the day is reached"
 msgstr ""
 
 #empty strings from id 30610 to 30619
@@ -402,7 +420,7 @@ msgstr ""
 
 #help-category: Advanced
 msgctxt "#30680"
-msgid "Advanced settings including multicast relays etc."
+msgid "Advanced settings including multicast relays, streaming properties etc."
 msgstr ""
 
 #help: Advanced - transformMulticastStreamUrls
@@ -418,4 +436,14 @@ msgstr ""
 #help: Advanced - udpxyPort
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
+msgstr ""
+
+#help: Advanced - useInputstreamAdaptiveforHls
+msgctxt "#30684"
+msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
+msgstr ""
+
+#help: Advanced - useFFmpegReconnect
+msgctxt "#30685"
+msgid "Note this can only apply to http/https streams that are processed by libavformat (e.g. M3u8/HLS). Using libavformat can be specified in an M3U file by setting the property `inputstreamclass` as `inputstream.ffmpeg`. I.e. adding the line: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If this opton is not enabled it can still be enabled per stream/channel by adding a kodi property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr ""
