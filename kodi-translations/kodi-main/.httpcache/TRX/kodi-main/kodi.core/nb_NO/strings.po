@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-10-30 22:12+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-02-16 11:44+0000\n"
+"Last-Translator: takoi <thomas.amland@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/teamxbmc/kodi-main/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -759,8 +759,7 @@ msgstr "Låt"
 
 #. generic "duration" label used in different places
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/View_51_Poster.xml
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 msgctxt "#180"
@@ -989,6 +988,7 @@ msgstr "Ingen nettverkstilkobling"
 #: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
 #: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
 #: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
@@ -1183,7 +1183,7 @@ msgid "Allow remote control via HTTP"
 msgstr "Tillat fjernkontroll via HTTP"
 
 #. Label for a context menu entry / button to start/schedule a recording
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 #: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp xbmc/pvr/PVRContextMenus.cpp
 #: addons/skin.estuary/xml/Variables.xml
@@ -1935,7 +1935,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "Ingen CD-informasjon funnet"
 
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#427"
 msgid "Disc"
 msgstr "Plate"
@@ -2312,7 +2312,9 @@ msgctxt "#519"
 msgid "Launch in..."
 msgstr "Start som.."
 
+#. Node title for compilation albums, plural of #204
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: system/library/music/compilations.xml
 msgctxt "#521"
 msgid "Compilations"
 msgstr "Samlinger"
@@ -2433,7 +2435,7 @@ msgid "Downmix multichannel audio to stereo"
 msgstr "Nedmiks multikanals lyd til stereo"
 
 #. generic "number" label used in different places
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/xbmc/utils/SortUtils.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#549"
 msgid "Number"
 msgstr "Nummer"
@@ -2444,14 +2446,13 @@ msgid "Sort by: {0:s}"
 msgstr "Sorter etter: {0:s}"
 
 #. generic "name" label used in different places
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/view/GUIViewState.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/view/GUIViewState.cpp
 msgctxt "#551"
 msgid "Name"
 msgstr "Navn"
 
 #. generic "date" label used in different places
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#552"
 msgid "Date"
 msgstr "Dato"
@@ -2548,7 +2549,7 @@ msgstr "Antall avspillinger"
 
 #. generic "last played" label used in different places
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "Sist avspilt"
@@ -3263,6 +3264,10 @@ msgctxt "#751"
 msgid "Removing source"
 msgstr "Fjerner kilde"
 
+msgctxt "#752"
+msgid "Opacity"
+msgstr ""
+
 msgctxt "#754"
 msgid "Add program link"
 msgstr "Legg til programlenke"
@@ -3315,6 +3320,10 @@ msgctxt "#767"
 msgid "Grey"
 msgstr "Grå"
 
+msgctxt "#768"
+msgid "Dark Grey"
+msgstr ""
+
 msgctxt "#770"
 msgid "Error {0:d}: share not available"
 msgstr "Feil {0:d}: Delt ressurs ikke tilgjengelig"
@@ -3332,77 +3341,6 @@ msgstr "Søker"
 msgctxt "#774"
 msgid "Slideshow folder"
 msgstr "Mappe for lysbildefremvisning"
-
-#: system/settings/settings.xml
-msgctxt "#775"
-msgid "Network interface"
-msgstr "Nettverksenhet"
-
-#: system/settings/settings.xml
-msgctxt "#776"
-msgid "Wireless network name (ESSID)"
-msgstr "Trådløst nettverknavn (ESSID)"
-
-#: system/settings/settings.xml
-msgctxt "#777"
-msgid "Wireless password"
-msgstr "Trådløs-passord"
-
-#: system/settings/settings.xml
-msgctxt "#778"
-msgid "Wireless security"
-msgstr "Trådløs sikkerhet"
-
-#: system/settings/settings.xml
-msgctxt "#779"
-msgid "Save and apply network interface settings"
-msgstr "Lagre og bruk nettverksgrensesnittinnstillingene"
-
-#: system/settings/settings.xml
-msgctxt "#780"
-msgid "No encryption"
-msgstr "Ingen kryptering"
-
-#: system/settings/settings.xml
-msgctxt "#781"
-msgid "WEP"
-msgstr "WEP"
-
-#: system/settings/settings.xml
-msgctxt "#782"
-msgid "WPA"
-msgstr "WPA"
-
-#: system/settings/settings.xml
-msgctxt "#783"
-msgid "WPA2"
-msgstr "WPA2"
-
-msgctxt "#784"
-msgid "Applying network interface settings. Please wait."
-msgstr "Lagrer innstillingene for nettverksgrensesnittet. Vennligst vent."
-
-msgctxt "#785"
-msgid "Network interface restarted successfully."
-msgstr "Nettverksenheten startet på nytt uten feil."
-
-msgctxt "#786"
-msgid "Network interface did not start successfully."
-msgstr "Nettverksenheten startet ikke korrekt."
-
-#: system/settings/settings.xml
-msgctxt "#787"
-msgid "Interface disabled"
-msgstr "Enheten deaktivert"
-
-msgctxt "#788"
-msgid "Network interface disabled successfully."
-msgstr "Nettverksenheten deaktivert uten feil."
-
-#: xbmc/network/GUIDialogAccessPoints.cpp
-msgctxt "#789"
-msgid "Wireless network name (ESSID)"
-msgstr "Trådløst nettverknavn (ESSID)"
 
 #: system/settings/settings.xml
 msgctxt "#790"
@@ -3564,35 +3502,78 @@ msgctxt "#818"
 msgid "Max recordings"
 msgstr "Max antall opptak"
 
+#. Representation of a one-time timer which has been scheduled by a timer
+#. rule.
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#819"
+msgid "One time (Scheduled by timer rule)"
+msgstr ""
+
 #. Representation of a one-time timer.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#820"
 msgid "One time"
 msgstr "En gang"
 
 #. Representation of an epg-based one-time timer.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#821"
 msgid "One time (guide-based)"
 msgstr "Én gang (programguide-basert)"
 
 #. Representation of a timer rule
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#822"
 msgid "Timer rule"
 msgstr "Tidsursregel"
 
 #. Representation of an epg-based timer rule.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#823"
 msgid "Timer rule (guide-based)"
 msgstr "Tidsursregel (programguide-basert)"
+
+#. Complete prefixed representation of a reminder timer type.
+#: xbmc/pvr/timers/PVRTimerType.cpp
+msgctxt "#824"
+msgid "Reminder: {0:s}"
+msgstr ""
+
+#. Complete prefixed representation of a recording timer type.
+#: xbmc/pvr/timers/PVRTimerType.cpp
+msgctxt "#825"
+msgid "Recording: {0:s}"
+msgstr ""
+
+#. Label for a context menu entry to add a reminder timer
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#826"
+msgid "Set reminder"
+msgstr ""
+
+#. Label for a context menu entry to delete a reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#827"
+msgid "Delete reminder"
+msgstr ""
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#828"
 msgid "Timer rule deleted"
 msgstr "Tidsursregel slettet"
+
+#. Label for a context menu entry to view a read-only reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#829"
+msgid "View reminder"
+msgstr ""
+
+#. Label for a context menu entry to edit a reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#830"
+msgid "Edit reminder"
+msgstr ""
 
 #. Weekday representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3651,6 +3632,12 @@ msgstr "Vil du slette kun dette tidsuret eller også regelen som har satt den op
 msgctxt "#841"
 msgid "Only this"
 msgstr "Kun denne"
+
+#. Label for a first aired TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#842"
+msgid "New!"
+msgstr ""
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3918,11 +3905,6 @@ msgstr "Fastsett miniatyrutvidelse"
 msgctxt "#1046"
 msgid "Access points"
 msgstr "Aksesspunkt"
-
-#: xbmc/network/GUIDialogAccessPoints.cpp
-msgctxt "#1047"
-msgid "Other..."
-msgstr "Andre.."
 
 #: system/settings/settings.xml
 msgctxt "#1048"
@@ -5311,11 +5293,6 @@ msgctxt "#12022"
 msgid "Resume from {0:s}"
 msgstr "Fortsett fra {0:s}"
 
-#. unused?
-msgctxt "#12023"
-msgid "Play from beginning"
-msgstr "Spill av fra starten"
-
 #: addons/skin.estuary/xml/DialogNumeric.xml
 #: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12310"
@@ -5566,6 +5543,11 @@ msgstr "Vis hvert bilde i"
 msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "Bruk effekter med panorering og zooming"
+
+#: system/settings/settings.xml
+msgctxt "#12381"
+msgid "Switch to visualisation on playback"
+msgstr ""
 
 #. time format with meridiem (xx) e.g. "HH:mm:ss xx"
 #: xbmc/LangInfo.cpp
@@ -6388,6 +6370,7 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Filminformasjon"
 
+#: system/settings/settings.xml
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Legg i kø"
@@ -6734,14 +6717,14 @@ msgid "Enable HQ scalers for scaling above"
 msgstr "Aktiver HQ scalers for skalering over"
 
 #: system/settings/settings.xml
+msgctxt "#13436"
+msgid "Use display HDR capabilities"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "Foretrekk VDPAU videomikser"
-
-#: system/settings/settings.xml
-msgctxt "#13438"
-msgid "Allow hardware acceleration - amcodec"
-msgstr "Tillat maskinvareakselerasjon - amcodec"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6867,18 +6850,6 @@ msgstr "Aktiver dette alternativet for å bruke maskinvareakselerasjon for VP9-k
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
 msgstr "Foretrekk VAAPI gjengivelse"
-
-#: system/settings/settings.xml
-msgctxt "#13458"
-msgid "Allow hardware acceleration - OMXPlayer"
-msgstr "Tillat maskinvareakselerasjon - OMXPlayer"
-
-#. Description of setting with label #13457 "Allow hardware acceleration
-#. (OMXPlayer)"
-#: system/settings/settings.xml
-msgctxt "#13459"
-msgid "Use OMXPlayer for decoding of video files."
-msgstr "Bruk OMXPlayer for dekoding av videofiler."
 
 #: system/settings/settings.xml
 msgctxt "#13460"
@@ -7010,6 +6981,21 @@ msgstr "Innbygd fankunst"
 #: xbmc/music/MusicUtils.cpp
 msgctxt "#13521"
 msgid "Choose art type"
+msgstr ""
+
+#. label of a setting that allows splitting of albums into component discs
+#: system/settings/settings.xml
+msgctxt "#13522"
+msgid "Split albums into individual discs"
+msgstr ""
+
+#. Description of setting with label #13522 "Split albums into individual
+#. discs"
+#: system/settings/settings.xml
+msgctxt "#13523"
+msgid ""
+"When enabled, opening a multi-disc album shows the discs as individual items"
+" instead of all the songs. Opening a disc then shows the songs on that disc."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -7448,6 +7434,7 @@ msgctxt "#14086"
 msgid "Playback"
 msgstr "Avspilling"
 
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: system/settings/settings.xml
 msgctxt "#14087"
 msgid "Discs"
@@ -8027,16 +8014,17 @@ msgstr "Database"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNode.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeAlbum.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeCompilations.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRcentlyAdded.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRcentlyPlayed.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeYearAlbum.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeDisc.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRecentlyAdded.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRecentlyPlayed.cpp
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#15102"
 msgid "* All albums"
 msgstr "* Alle album"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNode.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeArtist.cpp
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#15103"
 msgid "* All artists"
 msgstr "* Alle artister"
@@ -8733,7 +8721,7 @@ msgstr "PVR-tjenerdel {0:d} - {1:s}"
 
 #. generic label for pvr recordings used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/Variables.xml
-#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/filesystem/PVRDirectory.cpp
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19017"
 msgid "Recordings"
 msgstr "Opptak"
@@ -8751,23 +8739,23 @@ msgstr "Mappe med kanalikoner"
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 #: addons/skin.estuary/xml/DialogPVRChannelsOSD.xml
 #: addons/skin.estuary/xml/Variables.xml addons/skin.estuary/xml/Home.xml
-#: xbmc/windows/GUIWindowSystemInfo.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19019"
 msgid "Channels"
 msgstr "Kanaler"
 
 #. generic label for 'Live TV' used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRGUIActions.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19020"
 msgid "TV"
 msgstr "TV"
 
 #. generic label for pvr-provided 'Radio' used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRGUIActions.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19021"
 msgid "Radio"
 msgstr "Radio"
@@ -8802,7 +8790,7 @@ msgid "Upcoming recordings"
 msgstr "Planlagte opptak"
 
 #. label for "add timer..." list item used in pvr timers / timer rules window
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19026"
 msgid "Add timer..."
 msgstr "Legg til tidsur…"
@@ -8829,24 +8817,20 @@ msgstr "Kanal"
 
 #. generic 'now' label used in different places
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-#: addons/skin.estuary/xml/MyWeather.xml
-#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19030"
 msgid "Now"
 msgstr "Nå"
 
 #. generic 'next' label used in different places in pvr context
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml
 #: addons/skin.estuary/xml/MyPVRChannels.xml
-#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19031"
 msgid "Next"
 msgstr "Neste"
 
 #. 'timeline' label used in pvr guide window
-#. xbmc/pvr/windows/GUIWindowPVRGuide.cpp
-#: addons/skin.estuary/xml/MyPVRGuide.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19032"
 msgid "Timeline"
 msgstr "Tidslinje"
@@ -8857,8 +8841,7 @@ msgstr "Tidslinje"
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
-#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
 #: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
@@ -9050,19 +9033,21 @@ msgctxt "#19062"
 msgid "Sort by: Channel"
 msgstr "Sorter etter: Kanal"
 
-#. Label for epg grid window "jump to grid start" (oldest available events)
-#. context menu entry
-#: /xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#. Label for epg grid window "jump to grid start" (oldest available programme)
+#. context menu entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19063"
-msgid "Go to beginning"
-msgstr "Gå til begynnelsen"
+msgid "First programme"
+msgstr ""
 
-#. Label for epg grid window "jump to grid end" (youngest available events)
-#. context menu entry
-#: /xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#. Label for epg grid window "jump to grid end" (youngest available programme)
+#. context menu entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19064"
-msgid "Go to end"
-msgstr "Gå til slutten"
+msgid "Last programme"
+msgstr ""
 
 #. Label for timer settings dialog header
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9094,24 +9079,19 @@ msgctxt "#19069"
 msgid "Guide"
 msgstr "Programguide"
 
-#. Label for epg grid window "jump to now" (current epg events) context menu
-#. entry
+#. Label for epg grid window "jump to now" (current programme) context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19070"
-msgid "Go to now"
-msgstr "Gå til nå"
+msgid "Current programme"
+msgstr ""
 
 #. pvr settings "epg update interval" setting label
 #: system/settings/settings.xml
 msgctxt "#19071"
 msgid "Update interval"
 msgstr "Oppdateringsintervall"
-
-#. pvr settings "do not store epg data in local database" setting label
-#: system/settings/settings.xml
-msgctxt "#19072"
-msgid "Don't cache in local database"
-msgstr "Ikke bruk mellomlagring i den lokale databasen"
 
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
@@ -9245,19 +9225,15 @@ msgstr "Øyeblikkelig opptak: {0:s}"
 #. epg-based timer type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19094"
-msgid ""
-"Timer creation failed. The PVR add-on does not support a suitable timer "
-"type."
-msgstr "Opprettelse av tidsur feilet. PVR-utvidelsen støtter ikke en passende tidsurtype."
+msgid "Timer creation failed. Unsupported timer type."
+msgstr ""
 
 #. error message displayed in case adding a timer rule failed because no
 #. suitable epg-based timer rule type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19095"
-msgid ""
-"Timer rule creation failed. The PVR add-on does not support a suitable timer"
-" rule type."
-msgstr "Opprettelse av tidsur-regel feilet. PVR-utvidelsen støtter ikke en passende regeltype."
+msgid "Timer rule creation failed. Unsupported timer type."
+msgstr ""
 
 #. label of a value for default epg event select action, where the action is
 #. choosen depending on whether the event is in the past, now or in the future
@@ -9324,14 +9300,16 @@ msgctxt "#19105"
 msgid "Please select a channel"
 msgstr "Vennligst velg en kanal"
 
-#. part of timer information text (e.g. "Next timer on 10/10/2016 at 9:00 AM")
-#: xbmc/pvr/PVRGUIInfo.cpp
+#. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
+#. AM")
+#: xbmc/pvr/PVRGUITimerInfo.cpp
 msgctxt "#19106"
-msgid "Next timer on"
-msgstr "Neste tidsur på"
+msgid "Next recording on"
+msgstr ""
 
-#. part of timer information text (e.g. "Next timer on 10/10/2016 at 9:00 AM")
-#: xbmc/pvr/PVRGUIInfo.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
+#. AM")
+#: xbmc/pvr/PVRGUITimerInfo.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19107"
 msgid "at"
 msgstr "på"
@@ -9533,10 +9511,10 @@ msgctxt "#19140"
 msgid "Search..."
 msgstr "Søk…"
 
-#. part of PVR window's active channel group label (e.g. "Group: HD Sports
-#. Channels")
-#: addons/skin.estuary/xml/Includes_MediaMenu.xml
+#. generic PVR channel 'group' label used in different places
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/Includes_MediaMenu.xml
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19141"
 msgid "Group"
@@ -9576,7 +9554,9 @@ msgid ""
 "Proceed anyway?"
 msgstr "Å sette levetiden for dette opptaket til {0:d} dager vil umiddelbart føre til at det utløper, som kan medføre sletting av opptaket. Fortsett uansett?"
 
+#. generic PVR 'channel' label used in different places
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
 msgid "Channel"
@@ -9688,7 +9668,7 @@ msgid ""
 msgstr "Kan ikke starte opptaket. Sjekk loggen, hvis du vil ha mer informasjon om denne meldingen."
 
 #. Label for "switch to channel" button""
-#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp
 msgctxt "#19165"
 msgid "Switch"
@@ -9812,7 +9792,7 @@ msgstr "Radio-kanaler"
 
 #. label for "deleted recordings" data source in media source window
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19184"
 msgid "Deleted recordings"
 msgstr "Slettede opptak"
@@ -9827,9 +9807,9 @@ msgstr "Slett data"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19186"
 msgid ""
-"All your TV related data (channels, groups, guide) will be cleared. Are you "
-"sure?"
-msgstr "Alle dine TV-relaterte data (kanaler, grupper, programguide) vil bli slettet. Er du sikker?"
+"All your TV related data (channels, groups, guide, timers, clients) will be "
+"cleared. Are you sure?"
+msgstr ""
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9998,12 +9978,11 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "Skriv inn gyldig URL for ny kanal"
 
-#. message box text stating that a pvr backend does not support timers
-#: xbmc/pvr/timers/PVRGUIActions.cpp
-#: xbmc/pvr/windows/GUIWindowsPVRTimersBase.cpp
+#. pvr settings "reminders" category label
+#: system/settings/settings.xml
 msgctxt "#19215"
-msgid "The PVR backend does not support timers."
-msgstr "PVR-tjenerdelen støtter ikke tidsur."
+msgid "Reminders"
+msgstr ""
 
 #. used by several skins
 msgctxt "#19216"
@@ -10219,12 +10198,6 @@ msgstr "Tidspunkt for daglig oppvåkning (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtrer kanaler"
-
-#. label 'loading epg data from database' for progress dialog text
-#: xbmc/pvr/epg/EpgContainer.cpp
-msgctxt "#19250"
-msgid "Loading guide from database"
-msgstr "Henter programguide fra database"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10459,10 +10432,11 @@ msgid "All channels"
 msgstr "Alle kanaler"
 
 #. Label for epg grid window "go to date" context menu entry
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19288"
-msgid "Go to date"
-msgstr "Gå til dato"
+msgid "Date selector"
+msgstr ""
 
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
@@ -10564,11 +10538,166 @@ msgctxt "#19303"
 msgid "Close channel OSD after switching channels"
 msgstr "Lukk kanal-OSD etter kanalbytte"
 
-#. Label for context menu entry to open settings dialog for a timer rule
+#. label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
+msgstr ""
+
+#. text for event log entry for logging auto deleted missed reminders
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#19305"
+msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto deleted missed reminders
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#19306"
+msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
+msgstr ""
+
+#. text for reminder announcement dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19307"
+msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
+msgstr ""
+
+#. text for reminder announcement dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19308"
+msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
+msgstr ""
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19309"
+msgid "(Auto-close of this reminder will schedule a recording...)"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19310"
+msgid ""
+"Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19311"
+msgid ""
+"Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
+msgstr ""
+
+#. heading for pvr reminder notification dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19312"
+msgid "PVR reminder"
+msgstr ""
+
+#. pvr settings "reminder auto close delay" setting label
+#: system/settings/settings.xml
+msgctxt "#19313"
+msgid "Automatically close reminder popup after"
+msgstr ""
+
+#. pvr settings "schedule recording on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19314"
+msgid "Schedule recording when auto-closing the reminder popup"
+msgstr ""
+
+#. generic 'backend order' label
+#: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
+msgctxt "#19315"
+msgid "Backend order"
+msgstr ""
+
+#. pvr settings "Start all group channel numbers from 1" setting label
+#: system/settings/settings.xml
+msgctxt "#19316"
+msgid "Start group channel numbers from 1"
+msgstr ""
+
+#. Label for epg grid window "Jump 12 hours back" context menu entry and epg
+#. grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19317"
+msgid "12 hours back"
+msgstr ""
+
+#. Label for epg grid window "Jump 12 hours forward" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19318"
+msgid "12 hours forward"
+msgstr ""
+
+#. Label for epg grid window "Activate previous channel group" context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19319"
+msgid "Previous group"
+msgstr ""
+
+#. Label for epg grid window "Activate next channel group" context menu entry
+#. and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19320"
+msgid "Next group"
+msgstr ""
+
+#. Label for epg grid window "Activate channel group selector" context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19321"
+msgid "Group selector"
+msgstr ""
+
+#. Label for epg grid window "Jump to first channel" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19322"
+msgid "First channel"
+msgstr ""
+
+#. Label for epg grid window "Jump to playing channel" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19323"
+msgid "Playing channel"
+msgstr ""
+
+#. Label for epg grid window "Jump to last channel" context menu entry and epg
+#. grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19324"
+msgid "Last channel"
+msgstr ""
+
+#. Label for epg grid controls "Programme" group header"
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
+msgctxt "#19325"
+msgid "Programme"
+msgstr ""
+
+#. Label for epg grid window "Navigate..." context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19326"
+msgid "Navigate..."
 msgstr ""
 
 #. label for epg genre value
@@ -11123,38 +11252,44 @@ msgctxt "#19687"
 msgid "Play recording"
 msgstr "Spill av opptak"
 
+#. Text for shutdown confirmation dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19690"
+msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
+msgstr ""
+
 #. Text for shutdown confirmation dialog.
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19691"
 msgid "PVR is currently recording '{0:s}' on channel '{1:s}'."
 msgstr "PVR tar nå opp \"{0:s}\" på kanal \"{1:s}\"."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19692"
 msgid "PVR will start recording '{0:s}' on channel '{1:s}' in {2:s}."
 msgstr "PVR vil starte opptak '{0:s}' på kanal '{1:s}' in {2:s}."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19693"
 msgid "Daily wakeup is due in {0:s}."
 msgstr "Daglig opptak er om {0:s}."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19694"
 msgid "{0:d} minutes"
 msgstr "{0:d} minutter"
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19695"
 msgid "about a minute"
 msgstr "omrent ett minutt"
 
 #. Yes button label for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19696"
 msgid "Shutdown anyway"
 msgstr "Avslutt likevel"
@@ -12017,6 +12152,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr ""
 
+#: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#20226"
+msgid "Movie set information folder"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
@@ -12281,7 +12421,8 @@ msgstr "Ønsker du å fjerne alle oppføringer fra denne stien fra ditt bibliote
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp xbmc/view/GUIViewState.cpp
 #: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
@@ -14875,6 +15016,16 @@ msgctxt "#24134"
 msgid "Download subtitle..."
 msgstr ""
 
+#: xbmc/interfaces/builtins/AddonBuiltins.cpp
+msgctxt "#24135"
+msgid "To use this feature you must enable an add-on:"
+msgstr ""
+
+#: xbmc/interfaces/builtins/AddonBuiltins.cpp
+msgctxt "#24136"
+msgid "Would you like to enable this add-on?"
+msgstr "Ønsker du å aktivere denne utvidelsen?"
+
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
 #: xbmc/events/AddonManagementEvent.cpp
@@ -14964,6 +15115,60 @@ msgstr "Migrering av utvidelser pågår - vennligst vent"
 msgctxt "#24152"
 msgid "The add-on is not compatible with this version of Kodi."
 msgstr "Denne utvidelsen er ikke kompatibelt med denne versjonen av Kodi."
+
+#: apple remote
+msgctxt "#24153"
+msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
+msgstr ""
+
+#: apple remote
+msgctxt "#24154"
+msgid "Idle remote handling after N seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24155"
+msgid "After remote idles, the first tap/swipe received will wake it"
+msgstr ""
+
+#: apple remote
+msgctxt "#24156"
+msgid "30 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24157"
+msgid "60 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24158"
+msgid "90 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24159"
+msgid "120 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24160"
+msgid "Enable Siri remote timeout"
+msgstr ""
+
+#: apple remote
+msgctxt "#24161"
+msgid "Enable remote input timeout for tap/swipe"
+msgstr ""
+
+msgctxt "#24162"
+msgid "Use Kodi virtual keyboard"
+msgstr ""
+
+#: apple remote
+msgctxt "#24163"
+msgid "Match Apple tvOS Standard (Siri remote)"
+msgstr ""
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -16814,7 +17019,7 @@ msgctxt "#35170"
 msgid "Press a key ({1:d})"
 msgstr ""
 
-#. Name of mouse connected to the computer
+#. Name of mouse connected to the device
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
 msgctxt "#35171"
 msgid "Mouse"
@@ -18151,16 +18356,16 @@ msgstr "Hent kanalgrupper fra PVR-tjenerdelen (hvis støttet). Dette vil slette 
 #: system/settings/settings.xml
 msgctxt "#36205"
 msgid ""
-"Sort the channels by channel number from the backend, but use own numbering "
-"for channels."
-msgstr "Sorter kanalene etter kanalnummer fra tjenerdelen, men bruk egen nummerering for kanaler."
+"Sort the channels by channel number from the backend, but use local "
+"numbering for channels."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid ""
-"Use the channel numbering from the backend, instead of configuring them "
-"manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr "Bruk kanal-nummerering fra tjenerdel i stedet for å sette dem opp manuelt i kanalbehandleren. Fungerer bare med en aktivert PVR-tjenerdel!"
+"Use the channel numbering from the backend. Only works with one enabled PVR "
+"add-on!"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18266,13 +18471,6 @@ msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "Ikke importer programguide data ved visning av TV for å minimere CPU bruk."
 
 #: system/settings/settings.xml
-msgctxt "#36223"
-msgid ""
-"By default, the guide data is cached in a local database to speed up "
-"importing on startup."
-msgstr "Som forvalg er data for programguide lagret i en lokal database for å øke hastigheten på import ved oppstart."
-
-#: system/settings/settings.xml
 msgctxt "#36224"
 msgid ""
 "Hide \"No information available\" labels when no guide data is available for"
@@ -18333,8 +18531,8 @@ msgstr "Forsinker kanalskiftet når «opp» eller «ned» trykkes i kanalvelger.
 
 #: system/settings/settings.xml
 msgctxt "#36233"
-msgid "This category contains the default recording duration settings."
-msgstr "Denne kategorien inneholder innstillinger for standard opptakslengde."
+msgid "This category contains settings for recordings."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -18785,6 +18983,53 @@ msgid ""
 "than name."
 msgstr ""
 
+#. Description of setting with label #752 "Opacity"
+#: system/settings/settings.xml
+msgctxt "#36295"
+msgid "Set the the subtitle opacity."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36296"
+msgid "This category contains settings for reminders."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36297"
+msgid ""
+"Choose a time in seconds after which PVR reminder popups will be "
+"automatically closed."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36298"
+msgid ""
+"If enabled, a recording for the programme to remind will be scheduled when "
+"auto-closing the reminder popup, if supported by the PVR add-on and backend."
+msgstr ""
+
+#. Description of setting with label #13436 "Use display HDR capabilities"
+#: system/settings/settings.xml
+msgctxt "#36299"
+msgid ""
+"Switch display into HDR mode if media with HDR information is played.\n"
+"If disabled, HDR information are applied using Kodi's internal HDR path."
+msgstr ""
+
+#. Description of setting with label #20226 "Movie set information folder"
+#: system/settings/settings.xml
+msgctxt "#36300"
+msgid ""
+"Select the folder where movie set information (images) are saved locally."
+msgstr ""
+
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+msgctxt "#36301"
+msgid ""
+"No 'Movie set information folder' is configured to store movie set images so"
+" they will not be exported. Do you want to proceed?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -18808,6 +19053,13 @@ msgctxt "#36305"
 msgid ""
 "This category contains the settings for how picture file lists are handled."
 msgstr "Denne kategorien inneholder innstillinger for hvordan bildelister håndteres."
+
+#: system/settings/settings.xml
+msgctxt "#36306"
+msgid ""
+"If not using backend channel numbers then start all groups channel numbers "
+"from 1."
+msgstr ""
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -18997,9 +19249,9 @@ msgstr "Denne kategorien inneholder innstillinger for hvordan fjernkontrolltjene
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this computer to control this application via the web "
+"Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr "Tillat programmer på denne datamaskinen for å kontrollere dette programmet via vevgrensesnitt eller JSON-RPC-grensesnittsprotokollen."
+msgstr ""
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -19612,13 +19864,6 @@ msgid ""
 "Bypassing VDPAU mixer saves resources on low power systems but slightly "
 "reduces picture quality."
 msgstr "Å gå utenom VDPAU-mikser sparer ressurser på svake systemer, men gjør bildekvaliteten litt dårligere."
-
-#. Description of setting with label #13438 "Allow hardware acceleration
-#. (amcodec)"
-#: system/settings/settings.xml
-msgctxt "#36422"
-msgid "Enable hardware video decode using Amlogic decoder."
-msgstr "Aktiver maskinvaredekoding ved å benytte AMLogic-dekoder."
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -20463,7 +20708,7 @@ msgstr "Sett høyest tillatte SMB-protokollversjon for å forhandle når tilkobl
 
 #. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
 #. version" - none means "no protocol version is forced"
-#: system/settings/settings.xml
+#: system/settings/settings.xml addons/skin.estuary/xml/View_50_List.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "Ingen"
@@ -20939,12 +21184,12 @@ msgctxt "#38023"
 msgid "Set my rating"
 msgstr "Angi min vurdering"
 
-#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
 msgstr "Informasjonstilbydervalg"
 
-#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38025"
 msgid "Choose information provider"
 msgstr "Velg informasjonstilbyder"
@@ -21191,6 +21436,26 @@ msgctxt "#38073"
 msgid "Do you want to refresh information for this item now?"
 msgstr "Ønsker du å oppdatere informasjonen for dette elementet nå?"
 
+#: system/library/music/boxsets.xml xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38074"
+msgid "Boxsets"
+msgstr ""
+
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
+msgctxt "#38075"
+msgid "* All discs"
+msgstr ""
+
+#: addons/skin.estuary/xml/Variables.xml
+msgctxt "#38076"
+msgid "Disc title"
+msgstr ""
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38077"
+msgid "Total discs"
+msgstr ""
+
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
 msgctxt "#38100"
@@ -21273,6 +21538,14 @@ msgstr "Denne kategorien inneholder innstillinger for bibliotekdatabaser"
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "Denne kategorien inneholder innstillinger for brukergrensesnittet"
+
+#. Description of setting with label #12381 "Switch to visualisation on
+#. playback"
+#: system/settings/settings.xml
+msgctxt "#38112"
+msgid ""
+"Automatically go to the visualisation window when audio playback starts"
+msgstr ""
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"
@@ -21544,26 +21817,6 @@ msgctxt "#38354"
 msgid "Unable to read xml file"
 msgstr ""
 
-#: system/settings/settings.xml
-msgctxt "#39000"
-msgid "HD and up"
-msgstr "HD og opp"
-
-#: system/settings/settings.xml
-msgctxt "#39001"
-msgid "Accelerate MPEG2"
-msgstr "Akselerasjon av MPEG2"
-
-#: system/settings/settings.xml
-msgctxt "#39002"
-msgid "Accelerate MPEG4"
-msgstr "Akselerasjon av MPEG4"
-
-#: system/settings/settings.xml
-msgctxt "#39003"
-msgid "Accelerate h264"
-msgstr "Akselerasjon av H.264"
-
 #. Description of category "Library" with label #14202
 #: system/settings/settings.xml
 msgctxt "#39004"
@@ -21638,7 +21891,7 @@ msgid ""
 "on?"
 msgstr "Ønsker å fjerne alle relaterte data (f.eks. innstillinger) til dette tillegget?"
 
-#: /xbmc/addons/Addon.cpp
+#: xbmc/addons/Addon.cpp
 msgctxt "#39015"
 msgid "Image decoder"
 msgstr "Bildedekoder"
@@ -21832,4 +22085,10 @@ msgstr "Episodeplott"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#39117"
 msgid "Verbose logging for the [B]Announcer[/B] component"
+msgstr ""
+
+#. Label for action to present native iOS sharing sheet
+#: system/settings/darwin_ios.xml
+msgctxt "#39118"
+msgid "Share debug log"
 msgstr ""

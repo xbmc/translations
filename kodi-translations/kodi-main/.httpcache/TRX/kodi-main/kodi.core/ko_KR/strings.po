@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-10-31 00:15+0000\n"
-"Last-Translator: Minho Park <parkmino@gmail.com>\n"
+"PO-Revision-Date: 2020-02-16 11:44+0000\n"
+"Last-Translator: piodio <piodio@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/teamxbmc/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -747,8 +747,7 @@ msgstr "노래"
 
 #. generic "duration" label used in different places
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
-#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp addons/skin.estuary/xml/Variables.xml
 #: addons/skin.estuary/xml/View_51_Poster.xml
 #: addons/skin.estuary/xml/DialogVideoInfo.xml
 msgctxt "#180"
@@ -977,6 +976,7 @@ msgstr "네트워크가 연결되지 않음"
 #: xbmc/peripherals/dialogs/GUIDialogPeripheralSettings.cpp
 #: xbmc/profiles/dialogs/GUIDialogLockSettings.cpp
 #: xbmc/profiles/dialogs/GUIDialogProfileSettings.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
@@ -1171,7 +1171,7 @@ msgid "Allow remote control via HTTP"
 msgstr "HTTP를 통한 원격 제어 허용"
 
 #. Label for a context menu entry / button to start/schedule a recording
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
 #: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp xbmc/pvr/PVRContextMenus.cpp
 #: addons/skin.estuary/xml/Variables.xml
@@ -1923,7 +1923,7 @@ msgctxt "#426"
 msgid "No CD information found"
 msgstr "CD 정보 찾지 못함"
 
-#: addons/skin.estuary/xml/Variables.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#427"
 msgid "Disc"
 msgstr "디스크"
@@ -2300,7 +2300,9 @@ msgctxt "#519"
 msgid "Launch in..."
 msgstr "실행..."
 
+#. Node title for compilation albums, plural of #204
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: system/library/music/compilations.xml
 msgctxt "#521"
 msgid "Compilations"
 msgstr "컴필레이션"
@@ -2421,7 +2423,7 @@ msgid "Downmix multichannel audio to stereo"
 msgstr "다채널 오디오를 스테레오로 다운믹스"
 
 #. generic "number" label used in different places
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/xbmc/utils/SortUtils.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#549"
 msgid "Number"
 msgstr "번호"
@@ -2432,14 +2434,13 @@ msgid "Sort by: {0:s}"
 msgstr "정렬: {0:s}"
 
 #. generic "name" label used in different places
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/view/GUIViewState.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp xbmc/view/GUIViewState.cpp
 msgctxt "#551"
 msgid "Name"
 msgstr "이름"
 
 #. generic "date" label used in different places
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#552"
 msgid "Date"
 msgstr "날짜"
@@ -2536,7 +2537,7 @@ msgstr "재생 횟수"
 
 #. generic "last played" label used in different places
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
-#: xbmc/xbmc/pvr/windows/GUIViewStatePVR.cpp
+#: xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#568"
 msgid "Last played"
 msgstr "마지막 재생"
@@ -3251,6 +3252,10 @@ msgctxt "#751"
 msgid "Removing source"
 msgstr "소스 제거"
 
+msgctxt "#752"
+msgid "Opacity"
+msgstr ""
+
 msgctxt "#754"
 msgid "Add program link"
 msgstr "프로그램 연결 추가"
@@ -3303,6 +3308,10 @@ msgctxt "#767"
 msgid "Grey"
 msgstr "회색"
 
+msgctxt "#768"
+msgid "Dark Grey"
+msgstr ""
+
 msgctxt "#770"
 msgid "Error {0:d}: share not available"
 msgstr "오류 {0:d}: 공유를 사용할 수 없음"
@@ -3320,77 +3329,6 @@ msgstr "검색"
 msgctxt "#774"
 msgid "Slideshow folder"
 msgstr "슬라이드쇼 폴더"
-
-#: system/settings/settings.xml
-msgctxt "#775"
-msgid "Network interface"
-msgstr "네트워크 인터페이스"
-
-#: system/settings/settings.xml
-msgctxt "#776"
-msgid "Wireless network name (ESSID)"
-msgstr "무선 네트워크 이름 (ESSID)"
-
-#: system/settings/settings.xml
-msgctxt "#777"
-msgid "Wireless password"
-msgstr "무선 비밀번호"
-
-#: system/settings/settings.xml
-msgctxt "#778"
-msgid "Wireless security"
-msgstr "무선 보안"
-
-#: system/settings/settings.xml
-msgctxt "#779"
-msgid "Save and apply network interface settings"
-msgstr "네트워크 인터페이스 설정 저장 및 적용"
-
-#: system/settings/settings.xml
-msgctxt "#780"
-msgid "No encryption"
-msgstr "암호화 없음"
-
-#: system/settings/settings.xml
-msgctxt "#781"
-msgid "WEP"
-msgstr "WEP"
-
-#: system/settings/settings.xml
-msgctxt "#782"
-msgid "WPA"
-msgstr "WPA"
-
-#: system/settings/settings.xml
-msgctxt "#783"
-msgid "WPA2"
-msgstr "WPA2"
-
-msgctxt "#784"
-msgid "Applying network interface settings. Please wait."
-msgstr "네트워크 인터페이스 설정 적용 중. 기다려 주세요."
-
-msgctxt "#785"
-msgid "Network interface restarted successfully."
-msgstr "네트워크 인터페이스가 정상적으로 재시작 되었습니다."
-
-msgctxt "#786"
-msgid "Network interface did not start successfully."
-msgstr "네트워크 인터페이스가 정상적으로 시작되지 않았습니다."
-
-#: system/settings/settings.xml
-msgctxt "#787"
-msgid "Interface disabled"
-msgstr "인터페이스 중지됨"
-
-msgctxt "#788"
-msgid "Network interface disabled successfully."
-msgstr "네트워크 인터페이스가 정상적으로 중지 되었습니다."
-
-#: xbmc/network/GUIDialogAccessPoints.cpp
-msgctxt "#789"
-msgid "Wireless network name (ESSID)"
-msgstr "무선 네트워크 이름 (ESSID)"
 
 #: system/settings/settings.xml
 msgctxt "#790"
@@ -3552,35 +3490,78 @@ msgctxt "#818"
 msgid "Max recordings"
 msgstr "최대 녹화"
 
+#. Representation of a one-time timer which has been scheduled by a timer
+#. rule.
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#819"
+msgid "One time (Scheduled by timer rule)"
+msgstr ""
+
 #. Representation of a one-time timer.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#820"
 msgid "One time"
 msgstr "한 번만"
 
 #. Representation of an epg-based one-time timer.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#821"
 msgid "One time (guide-based)"
 msgstr "한 번만 (편성표 기준)"
 
 #. Representation of a timer rule
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#822"
 msgid "Timer rule"
 msgstr "예약 규칙"
 
 #. Representation of an epg-based timer rule.
-#: xbmc/pvr/addons/PVRClient.cpp
+#: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#823"
 msgid "Timer rule (guide-based)"
 msgstr "한 번만 (편성표 기반)"
+
+#. Complete prefixed representation of a reminder timer type.
+#: xbmc/pvr/timers/PVRTimerType.cpp
+msgctxt "#824"
+msgid "Reminder: {0:s}"
+msgstr ""
+
+#. Complete prefixed representation of a recording timer type.
+#: xbmc/pvr/timers/PVRTimerType.cpp
+msgctxt "#825"
+msgid "Recording: {0:s}"
+msgstr ""
+
+#. Label for a context menu entry to add a reminder timer
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#826"
+msgid "Set reminder"
+msgstr ""
+
+#. Label for a context menu entry to delete a reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#827"
+msgid "Delete reminder"
+msgstr ""
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#828"
 msgid "Timer rule deleted"
 msgstr "예약 규칙 삭제됨"
+
+#. Label for a context menu entry to view a read-only reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#829"
+msgid "View reminder"
+msgstr ""
+
+#. Label for a context menu entry to edit a reminder timer
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#830"
+msgid "Edit reminder"
+msgstr ""
 
 #. Weekday representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3639,6 +3620,12 @@ msgstr "이 예약만 삭제할까요 아니면 예정된 예약 규칙도 함�
 msgctxt "#841"
 msgid "Only this"
 msgstr "이것만"
+
+#. Label for a first aired TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#842"
+msgid "New!"
+msgstr ""
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3906,11 +3893,6 @@ msgstr "플러그인 썸네일 설정"
 msgctxt "#1046"
 msgid "Access points"
 msgstr "액세스 포인트"
-
-#: xbmc/network/GUIDialogAccessPoints.cpp
-msgctxt "#1047"
-msgid "Other..."
-msgstr "기타..."
 
 #: system/settings/settings.xml
 msgctxt "#1048"
@@ -5299,11 +5281,6 @@ msgctxt "#12022"
 msgid "Resume from {0:s}"
 msgstr "{0:s}부터 다시 시작"
 
-#. unused?
-msgctxt "#12023"
-msgid "Play from beginning"
-msgstr "처음부터 재생"
-
 #: addons/skin.estuary/xml/DialogNumeric.xml
 #: addons/skin.estouchy/xml/DialogNumeric.xml
 msgctxt "#12310"
@@ -5554,6 +5531,11 @@ msgstr "각각의 이미지를 표시할 시간"
 msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "이동 및 확대/축소 효과 사용"
+
+#: system/settings/settings.xml
+msgctxt "#12381"
+msgid "Switch to visualisation on playback"
+msgstr ""
 
 #. time format with meridiem (xx) e.g. "HH:mm:ss xx"
 #: xbmc/LangInfo.cpp
@@ -6376,6 +6358,7 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "영화 정보"
 
+#: system/settings/settings.xml
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "대기열에 추가"
@@ -6722,14 +6705,14 @@ msgid "Enable HQ scalers for scaling above"
 msgstr "선택한 렌더링에 HQ 스케일러 사용"
 
 #: system/settings/settings.xml
+msgctxt "#13436"
+msgid "Use display HDR capabilities"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "VDPAU 비디오 믹서 우선"
-
-#: system/settings/settings.xml
-msgctxt "#13438"
-msgid "Allow hardware acceleration - amcodec"
-msgstr "하드웨어 가속 허용 - amcodec"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6855,18 +6838,6 @@ msgstr "이 옵션은 VP9 코덱을 위한 하드웨어 가속을 사용합니�
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
 msgstr "VAAPI 렌더링 방식 우선"
-
-#: system/settings/settings.xml
-msgctxt "#13458"
-msgid "Allow hardware acceleration - OMXPlayer"
-msgstr "하드웨어 가속 허용 - OMXPlayer"
-
-#. Description of setting with label #13457 "Allow hardware acceleration
-#. (OMXPlayer)"
-#: system/settings/settings.xml
-msgctxt "#13459"
-msgid "Use OMXPlayer for decoding of video files."
-msgstr "비디오 재생에  OMXPlayer 디코딩을 사용합니다."
 
 #: system/settings/settings.xml
 msgctxt "#13460"
@@ -6999,6 +6970,21 @@ msgstr "내장 팬아트"
 msgctxt "#13521"
 msgid "Choose art type"
 msgstr "아트 종류 선택"
+
+#. label of a setting that allows splitting of albums into component discs
+#: system/settings/settings.xml
+msgctxt "#13522"
+msgid "Split albums into individual discs"
+msgstr ""
+
+#. Description of setting with label #13522 "Split albums into individual
+#. discs"
+#: system/settings/settings.xml
+msgctxt "#13523"
+msgid ""
+"When enabled, opening a multi-disc album shows the discs as individual items"
+" instead of all the songs. Opening a disc then shows the songs on that disc."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -7436,6 +7422,7 @@ msgctxt "#14086"
 msgid "Playback"
 msgstr "재생"
 
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
 #: system/settings/settings.xml
 msgctxt "#14087"
 msgid "Discs"
@@ -8015,16 +8002,17 @@ msgstr "데이타베이스"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNode.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeAlbum.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeCompilations.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRcentlyAdded.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRcentlyPlayed.cpp
-#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeYearAlbum.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeDisc.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRecentlyAdded.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeRecentlyPlayed.cpp
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#15102"
 msgid "* All albums"
 msgstr "* 모든 앨범"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNode.cpp
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeArtist.cpp
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#15103"
 msgid "* All artists"
 msgstr "* 모든 아티스트"
@@ -8721,7 +8709,7 @@ msgstr "PVR 백엔드 {0:d} - {1:s}"
 
 #. generic label for pvr recordings used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/Variables.xml
-#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/filesystem/PVRDirectory.cpp
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19017"
 msgid "Recordings"
 msgstr "녹화"
@@ -8739,23 +8727,23 @@ msgstr "채널 아이콘 폴더"
 #: addons/skin.estuary/xml/DialogPVRChannelManager.xml
 #: addons/skin.estuary/xml/DialogPVRChannelsOSD.xml
 #: addons/skin.estuary/xml/Variables.xml addons/skin.estuary/xml/Home.xml
-#: xbmc/windows/GUIWindowSystemInfo.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#19019"
 msgid "Channels"
 msgstr "채널"
 
 #. generic label for 'Live TV' used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRGUIActions.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19020"
 msgid "TV"
 msgstr "TV"
 
 #. generic label for pvr-provided 'Radio' used in different places
 #: addons/skin.estuary/xml/Home.xml addons/skin.estuary/xml/SkinSettings.xml
-#: addons/skin.estuary/xml/Variables.xml
-#: xbmc/pvr/channels/PVRChannelGroupsContainer.cpp xbmc/pvr/PVRGUIActions.cpp
+#: addons/skin.estuary/xml/Variables.xml xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19021"
 msgid "Radio"
 msgstr "라디오"
@@ -8790,7 +8778,7 @@ msgid "Upcoming recordings"
 msgstr "예정된 녹화"
 
 #. label for "add timer..." list item used in pvr timers / timer rules window
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/timers/PVRTimers.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19026"
 msgid "Add timer..."
 msgstr "예약 추가..."
@@ -8817,24 +8805,20 @@ msgstr "채널"
 
 #. generic 'now' label used in different places
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
-#: addons/skin.estuary/xml/MyWeather.xml
-#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19030"
 msgid "Now"
 msgstr "현재 방송"
 
 #. generic 'next' label used in different places in pvr context
-#: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogSeekBar.xml
 #: addons/skin.estuary/xml/MyPVRChannels.xml
-#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19031"
 msgid "Next"
 msgstr "다음"
 
 #. 'timeline' label used in pvr guide window
-#. xbmc/pvr/windows/GUIWindowPVRGuide.cpp
-#: addons/skin.estuary/xml/MyPVRGuide.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19032"
 msgid "Timeline"
 msgstr "편성표"
@@ -8845,8 +8829,7 @@ msgstr "편성표"
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGroupManager.cpp
 #: xbmc/pvr/dialogs/GUIDialogPVRGuideInfo.cpp
-#: xbmc/pvr/timers/PVRTimerInfoTag.cpp
-#: xbmc/pvr/windows/GUIWindowPVRTimersBase.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/pvr/timers/PVRTimerInfoTag.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/PVRManager.cpp xbmc/video/windows/GUIWindowVideoBase.cpp
 #: addons/skin.estuary/xml/MusicOSD.xml addons/skin.estuary/xml/VideoOSD.xml
 msgctxt "#19033"
@@ -9038,19 +9021,21 @@ msgctxt "#19062"
 msgid "Sort by: Channel"
 msgstr "정렬기준: 채널"
 
-#. Label for epg grid window "jump to grid start" (oldest available events)
-#. context menu entry
-#: /xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#. Label for epg grid window "jump to grid start" (oldest available programme)
+#. context menu entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19063"
-msgid "Go to beginning"
-msgstr "처음으로 가기"
+msgid "First programme"
+msgstr ""
 
-#. Label for epg grid window "jump to grid end" (youngest available events)
-#. context menu entry
-#: /xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+#. Label for epg grid window "jump to grid end" (youngest available programme)
+#. context menu entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19064"
-msgid "Go to end"
-msgstr "끝으로 가기"
+msgid "Last programme"
+msgstr ""
 
 #. Label for timer settings dialog header
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9082,24 +9067,19 @@ msgctxt "#19069"
 msgid "Guide"
 msgstr "편성표"
 
-#. Label for epg grid window "jump to now" (current epg events) context menu
-#. entry
+#. Label for epg grid window "jump to now" (current programme) context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19070"
-msgid "Go to now"
-msgstr "재생 중인 위치로 이동"
+msgid "Current programme"
+msgstr ""
 
 #. pvr settings "epg update interval" setting label
 #: system/settings/settings.xml
 msgctxt "#19071"
 msgid "Update interval"
 msgstr "업데이트 주기"
-
-#. pvr settings "do not store epg data in local database" setting label
-#: system/settings/settings.xml
-msgctxt "#19072"
-msgid "Don't cache in local database"
-msgstr "로컬 데이터베이스에 캐시 저장하지 않음"
 
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
@@ -9233,19 +9213,15 @@ msgstr "바로 녹화: {0:s}"
 #. epg-based timer type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19094"
-msgid ""
-"Timer creation failed. The PVR add-on does not support a suitable timer "
-"type."
-msgstr "예약 만들기가 실패하였습니다. PVR 애드온이 적합한 형식을 지원하지 않습니다."
+msgid "Timer creation failed. Unsupported timer type."
+msgstr ""
 
 #. error message displayed in case adding a timer rule failed because no
 #. suitable epg-based timer rule type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19095"
-msgid ""
-"Timer rule creation failed. The PVR add-on does not support a suitable timer"
-" rule type."
-msgstr "예약 규칙 만들기가 실패하였습니다. PVR 애드온이 적합한 예약 규칙 형식을 지원하지 않습니다."
+msgid "Timer rule creation failed. Unsupported timer type."
+msgstr ""
 
 #. label of a value for default epg event select action, where the action is
 #. choosen depending on whether the event is in the past, now or in the future
@@ -9312,14 +9288,16 @@ msgctxt "#19105"
 msgid "Please select a channel"
 msgstr "채널을 선택하세요"
 
-#. part of timer information text (e.g. "Next timer on 10/10/2016 at 9:00 AM")
-#: xbmc/pvr/PVRGUIInfo.cpp
+#. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
+#. AM")
+#: xbmc/pvr/PVRGUITimerInfo.cpp
 msgctxt "#19106"
-msgid "Next timer on"
-msgstr "다음 예약 : "
+msgid "Next recording on"
+msgstr ""
 
-#. part of timer information text (e.g. "Next timer on 10/10/2016 at 9:00 AM")
-#: xbmc/pvr/PVRGUIInfo.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
+#. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
+#. AM")
+#: xbmc/pvr/PVRGUITimerInfo.cpp xbmc/pvr/timers/PVRTimerInfoTag.cpp
 msgctxt "#19107"
 msgid "at"
 msgstr ":"
@@ -9521,10 +9499,10 @@ msgctxt "#19140"
 msgid "Search..."
 msgstr "찾기..."
 
-#. part of PVR window's active channel group label (e.g. "Group: HD Sports
-#. Channels")
-#: addons/skin.estuary/xml/Includes_MediaMenu.xml
+#. generic PVR channel 'group' label used in different places
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
+#: addons/skin.estuary/xml/Includes_MediaMenu.xml
 #: xbmc/pvr/windows/GUIWindowPVRBase.cpp
 msgctxt "#19141"
 msgid "Group"
@@ -9564,7 +9542,9 @@ msgid ""
 "Proceed anyway?"
 msgstr "이 녹화를 {0:d}일까지 설정하면 바로 녹화가 종료되고, 이 녹화가 삭제될 수 있습니다. 그래도 진행할까요?"
 
+#. generic PVR 'channel' label used in different places
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19148"
 msgid "Channel"
@@ -9676,7 +9656,7 @@ msgid ""
 msgstr "녹화를 시작할 수 없습니다. 더 많은 정보는 로그를 확인하시기 바랍니다."
 
 #. Label for "switch to channel" button""
-#: addons/skin.estuary/xml/DialogPVRInfo.xml
+#: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/pvr/windows/GUIWIndowPVRGuide.cpp
 msgctxt "#19165"
 msgid "Switch"
@@ -9800,7 +9780,7 @@ msgstr "라디오 채널"
 
 #. label for "deleted recordings" data source in media source window
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
-#: xbmc/dialogs/GUIDialogMediaSource.cpp
+#: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19184"
 msgid "Deleted recordings"
 msgstr "삭제된 녹화"
@@ -9815,9 +9795,9 @@ msgstr "데이터 초기화"
 #: xbmc/pvr/PVRManager.cpp
 msgctxt "#19186"
 msgid ""
-"All your TV related data (channels, groups, guide) will be cleared. Are you "
-"sure?"
-msgstr "TV와 관련된 모든 데이터(채널, 그룹, 편성표)를 초기화합니다. 확실합니까?"
+"All your TV related data (channels, groups, guide, timers, clients) will be "
+"cleared. Are you sure?"
+msgstr ""
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9986,12 +9966,11 @@ msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
 msgstr "새 채널의 올바른 URL을 입력하세요"
 
-#. message box text stating that a pvr backend does not support timers
-#: xbmc/pvr/timers/PVRGUIActions.cpp
-#: xbmc/pvr/windows/GUIWindowsPVRTimersBase.cpp
+#. pvr settings "reminders" category label
+#: system/settings/settings.xml
 msgctxt "#19215"
-msgid "The PVR backend does not support timers."
-msgstr "PVR 백엔드가 녹화 예약을 지원하지 않습니다."
+msgid "Reminders"
+msgstr ""
 
 #. used by several skins
 msgctxt "#19216"
@@ -10207,12 +10186,6 @@ msgstr "자동 켜짐 시각 (시:분:초)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "채널 필터링"
-
-#. label 'loading epg data from database' for progress dialog text
-#: xbmc/pvr/epg/EpgContainer.cpp
-msgctxt "#19250"
-msgid "Loading guide from database"
-msgstr "데이터베이스에서 편성표 불러오는 중"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10447,10 +10420,11 @@ msgid "All channels"
 msgstr "모든 채널"
 
 #. Label for epg grid window "go to date" context menu entry
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19288"
-msgid "Go to date"
-msgstr "날짜로 가기"
+msgid "Date selector"
+msgstr ""
 
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
@@ -10552,12 +10526,167 @@ msgctxt "#19303"
 msgid "Close channel OSD after switching channels"
 msgstr "채널 변경 후 채널 OSD 닫기"
 
-#. Label for context menu entry to open settings dialog for a timer rule
+#. label for context menu entry to open settings dialog for a timer rule
 #. (read-only)
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19304"
 msgid "View timer rule"
 msgstr "타이머 규정 보기"
+
+#. text for event log entry for logging auto deleted missed reminders
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#19305"
+msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto deleted missed reminders
+#: xbmc/pvr/timers/PVRTimers.cpp
+msgctxt "#19306"
+msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
+msgstr ""
+
+#. text for reminder announcement dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19307"
+msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
+msgstr ""
+
+#. text for reminder announcement dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19308"
+msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
+msgstr ""
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19309"
+msgid "(Auto-close of this reminder will schedule a recording...)"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19310"
+msgid ""
+"Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19311"
+msgid ""
+"Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
+msgstr ""
+
+#. heading for pvr reminder notification dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19312"
+msgid "PVR reminder"
+msgstr ""
+
+#. pvr settings "reminder auto close delay" setting label
+#: system/settings/settings.xml
+msgctxt "#19313"
+msgid "Automatically close reminder popup after"
+msgstr ""
+
+#. pvr settings "schedule recording on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19314"
+msgid "Schedule recording when auto-closing the reminder popup"
+msgstr ""
+
+#. generic 'backend order' label
+#: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
+msgctxt "#19315"
+msgid "Backend order"
+msgstr ""
+
+#. pvr settings "Start all group channel numbers from 1" setting label
+#: system/settings/settings.xml
+msgctxt "#19316"
+msgid "Start group channel numbers from 1"
+msgstr ""
+
+#. Label for epg grid window "Jump 12 hours back" context menu entry and epg
+#. grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19317"
+msgid "12 hours back"
+msgstr ""
+
+#. Label for epg grid window "Jump 12 hours forward" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19318"
+msgid "12 hours forward"
+msgstr ""
+
+#. Label for epg grid window "Activate previous channel group" context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19319"
+msgid "Previous group"
+msgstr ""
+
+#. Label for epg grid window "Activate next channel group" context menu entry
+#. and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19320"
+msgid "Next group"
+msgstr ""
+
+#. Label for epg grid window "Activate channel group selector" context menu
+#. entry and epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19321"
+msgid "Group selector"
+msgstr ""
+
+#. Label for epg grid window "Jump to first channel" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19322"
+msgid "First channel"
+msgstr ""
+
+#. Label for epg grid window "Jump to playing channel" context menu entry and
+#. epg grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19323"
+msgid "Playing channel"
+msgstr ""
+
+#. Label for epg grid window "Jump to last channel" context menu entry and epg
+#. grid controls dialog help text
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19324"
+msgid "Last channel"
+msgstr ""
+
+#. Label for epg grid controls "Programme" group header"
+#: addons/skin.estuary/xml/DialogPVRGuideControls.xml
+msgctxt "#19325"
+msgid "Programme"
+msgstr ""
+
+#. Label for epg grid window "Navigate..." context menu entry
+#: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
+msgctxt "#19326"
+msgid "Navigate..."
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11111,38 +11240,44 @@ msgctxt "#19687"
 msgid "Play recording"
 msgstr "녹화 재생"
 
+#. Text for shutdown confirmation dialog
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19690"
+msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
+msgstr ""
+
 #. Text for shutdown confirmation dialog.
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19691"
 msgid "PVR is currently recording '{0:s}' on channel '{1:s}'."
 msgstr "PVR이 현재 '{1:s}' 채널의 '{0:s}' 녹화 중입니다."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19692"
 msgid "PVR will start recording '{0:s}' on channel '{1:s}' in {2:s}."
 msgstr "PVR이 현재 {2:s}의 '{1:s}' 채널의 '{0:s}' 녹화 중입니다."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19693"
 msgid "Daily wakeup is due in {0:s}."
 msgstr "{0:s}뒤에 매일 기상 알람 예정입니다."
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19694"
 msgid "{0:d} minutes"
 msgstr "{0:d} 분"
 
 #. Text for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19695"
 msgid "about a minute"
 msgstr "약 1분"
 
 #. Yes button label for shutdown confirmation dialog
-#: xbmc/pvr/PVRManager.cpp
+#: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19696"
 msgid "Shutdown anyway"
 msgstr "무조건 종료"
@@ -12005,6 +12140,11 @@ msgid ""
 " available, cover images embedded in music files will be used"
 msgstr "로컬 앨범표지가 없으면 온라인 아트가 대신 사용됩니다. 모두 사용할 수 없으면 음악 파일의 내장 표지가 쓰입니다."
 
+#: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
+msgctxt "#20226"
+msgid "Movie set information folder"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
@@ -12269,7 +12409,8 @@ msgstr "라이브러리에서 이 경로의 모든 항목을 제거하겠습니�
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp xbmc/media/MediaTypes.cpp
-#: addons/skin.estuary/xml/Variables.xml xbmc/view/GUIViewState.cpp
+#: addons/skin.estuary/xml/Variables.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp xbmc/view/GUIViewState.cpp
 #: system/settings/settings.xml
 msgctxt "#20342"
 msgid "Movies"
@@ -14863,6 +15004,16 @@ msgctxt "#24134"
 msgid "Download subtitle..."
 msgstr "자막 내려받는 중..."
 
+#: xbmc/interfaces/builtins/AddonBuiltins.cpp
+msgctxt "#24135"
+msgid "To use this feature you must enable an add-on:"
+msgstr ""
+
+#: xbmc/interfaces/builtins/AddonBuiltins.cpp
+msgctxt "#24136"
+msgid "Would you like to enable this add-on?"
+msgstr "이 애드온을 사용 하습니까?"
+
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
 #: xbmc/events/AddonManagementEvent.cpp
@@ -14952,6 +15103,60 @@ msgstr "애드온 마이그레이션 진행 중 - 잠시만 기다리세요"
 msgctxt "#24152"
 msgid "The add-on is not compatible with this version of Kodi."
 msgstr "애드온이 지금 버전의 Kodi와 호환되지 않습니다."
+
+#: apple remote
+msgctxt "#24153"
+msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
+msgstr ""
+
+#: apple remote
+msgctxt "#24154"
+msgid "Idle remote handling after N seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24155"
+msgid "After remote idles, the first tap/swipe received will wake it"
+msgstr ""
+
+#: apple remote
+msgctxt "#24156"
+msgid "30 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24157"
+msgid "60 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24158"
+msgid "90 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24159"
+msgid "120 Seconds"
+msgstr ""
+
+#: apple remote
+msgctxt "#24160"
+msgid "Enable Siri remote timeout"
+msgstr ""
+
+#: apple remote
+msgctxt "#24161"
+msgid "Enable remote input timeout for tap/swipe"
+msgstr ""
+
+msgctxt "#24162"
+msgid "Use Kodi virtual keyboard"
+msgstr ""
+
+#: apple remote
+msgctxt "#24163"
+msgid "Match Apple tvOS Standard (Siri remote)"
+msgstr ""
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -16802,7 +17007,7 @@ msgctxt "#35170"
 msgid "Press a key ({1:d})"
 msgstr "키 누르기 ({1:d})"
 
-#. Name of mouse connected to the computer
+#. Name of mouse connected to the device
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
 msgctxt "#35171"
 msgid "Mouse"
@@ -18139,16 +18344,16 @@ msgstr "PVR 백엔드에서 채널 그룹을 가져옵니다. 백엔드에서 �
 #: system/settings/settings.xml
 msgctxt "#36205"
 msgid ""
-"Sort the channels by channel number from the backend, but use own numbering "
-"for channels."
-msgstr "자체 채널 번호를 사용하지만 백엔드의 채널 번호 순서로 채널을 정렬합니다"
+"Sort the channels by channel number from the backend, but use local "
+"numbering for channels."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid ""
-"Use the channel numbering from the backend, instead of configuring them "
-"manually in the channel manager. Only works with one enabled PVR add-on!"
-msgstr "채널 관리자에서 수동으로 채널 번호를 설정하지 않고 백엔드의 채널 번호를 사용합니다. 한 개의 PVR 애드온만 사용할 때 작동합니다."
+"Use the channel numbering from the backend. Only works with one enabled PVR "
+"add-on!"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18254,13 +18459,6 @@ msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "TV 재생 중에는 CPU 사용을 최소화 하기 위해 편성표 데이터를 가져오지 않습니다."
 
 #: system/settings/settings.xml
-msgctxt "#36223"
-msgid ""
-"By default, the guide data is cached in a local database to speed up "
-"importing on startup."
-msgstr "기본적으로, 편성표 데이터를 로컬 데이터베이스에 캐시로 저장하여 시작할 때 데이터를 가져오는 속도를 향상시킵니다."
-
-#: system/settings/settings.xml
 msgctxt "#36224"
 msgid ""
 "Hide \"No information available\" labels when no guide data is available for"
@@ -18321,8 +18519,8 @@ msgstr "채널을 옮길 때, 사용자가 기다리지 않고 채널 번호를 
 
 #: system/settings/settings.xml
 msgctxt "#36233"
-msgid "This category contains the default recording duration settings."
-msgstr "기본 녹화 시간 관련 설정 그룹입니다."
+msgid "This category contains settings for recordings."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -18773,6 +18971,53 @@ msgid ""
 "than name."
 msgstr "음악 항목을 아티스트로 정렬할 때 name 대신 sortname을 사용합니다. 예. Parton, Dolly"
 
+#. Description of setting with label #752 "Opacity"
+#: system/settings/settings.xml
+msgctxt "#36295"
+msgid "Set the the subtitle opacity."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36296"
+msgid "This category contains settings for reminders."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36297"
+msgid ""
+"Choose a time in seconds after which PVR reminder popups will be "
+"automatically closed."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#36298"
+msgid ""
+"If enabled, a recording for the programme to remind will be scheduled when "
+"auto-closing the reminder popup, if supported by the PVR add-on and backend."
+msgstr ""
+
+#. Description of setting with label #13436 "Use display HDR capabilities"
+#: system/settings/settings.xml
+msgctxt "#36299"
+msgid ""
+"Switch display into HDR mode if media with HDR information is played.\n"
+"If disabled, HDR information are applied using Kodi's internal HDR path."
+msgstr ""
+
+#. Description of setting with label #20226 "Movie set information folder"
+#: system/settings/settings.xml
+msgctxt "#36300"
+msgid ""
+"Select the folder where movie set information (images) are saved locally."
+msgstr ""
+
+#: xbmc/interfaces/builtins/LibraryBuiltins.cpp
+msgctxt "#36301"
+msgid ""
+"No 'Movie set information folder' is configured to store movie set images so"
+" they will not be exported. Do you want to proceed?"
+msgstr ""
+
 #: system/settings/settings.xml
 msgctxt "#36302"
 msgid "No info available yet."
@@ -18796,6 +19041,13 @@ msgctxt "#36305"
 msgid ""
 "This category contains the settings for how picture file lists are handled."
 msgstr "사진 목록 관련 설정 그룹입니다."
+
+#: system/settings/settings.xml
+msgctxt "#36306"
+msgid ""
+"If not using backend channel numbers then start all groups channel numbers "
+"from 1."
+msgstr ""
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -18985,9 +19237,9 @@ msgstr "원격 제어 서비스 관련 설정 그룹입니다."
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this computer to control this application via the web "
+"Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr "이 컴퓨터의 프로그램이 웹 인터페이스 또는 JSON-RPC 인터페이스 프로토콜을 통해 이 애플리케이션을 제어하는 것을 허용합니다."
+msgstr ""
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -19600,13 +19852,6 @@ msgid ""
 "Bypassing VDPAU mixer saves resources on low power systems but slightly "
 "reduces picture quality."
 msgstr "VDPAU 믹서를 우회하면 낮은 사양의 시스템에서 자원을 절약할 수 았으나 약간의 화질 감소가 있습니다."
-
-#. Description of setting with label #13438 "Allow hardware acceleration
-#. (amcodec)"
-#: system/settings/settings.xml
-msgctxt "#36422"
-msgid "Enable hardware video decode using Amlogic decoder."
-msgstr "Amlogic 디코더를 사용하여 비디오를 하드웨어 디코드합니다."
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -20451,7 +20696,7 @@ msgstr "연결할 때 최소 SMB 프로토콜 버전으로 설정합니다. SMBv
 
 #. Values for setting with label #36621 and #36628 "Minimum/Maximum protocol
 #. version" - none means "no protocol version is forced"
-#: system/settings/settings.xml
+#: system/settings/settings.xml addons/skin.estuary/xml/View_50_List.xml
 msgctxt "#36623"
 msgid "None"
 msgstr "사용 안 함"
@@ -20927,12 +21172,12 @@ msgctxt "#38023"
 msgid "Set my rating"
 msgstr "내 평점 설정"
 
-#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38024"
 msgid "Information provider selection"
 msgstr "정보 제공자 선택"
 
-#: /xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38025"
 msgid "Choose information provider"
 msgstr "사용할 정보 제공자"
@@ -21179,6 +21424,26 @@ msgctxt "#38073"
 msgid "Do you want to refresh information for this item now?"
 msgstr "이 항목에 대한 정보를 지금 다시 읽을까요?"
 
+#: system/library/music/boxsets.xml xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38074"
+msgid "Boxsets"
+msgstr ""
+
+#: xbmc/music/windows/MusicFileItemListModifier.cpp
+msgctxt "#38075"
+msgid "* All discs"
+msgstr ""
+
+#: addons/skin.estuary/xml/Variables.xml
+msgctxt "#38076"
+msgid "Disc title"
+msgstr ""
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38077"
+msgid "Total discs"
+msgstr ""
+
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
 msgctxt "#38100"
@@ -21261,6 +21526,14 @@ msgstr "라이브러리 데이터베이스 관련 설정 그룹입니다."
 msgctxt "#38111"
 msgid "This category contains other settings for the GUI interface"
 msgstr "GUI 관련 설정 그룹입니다."
+
+#. Description of setting with label #12381 "Switch to visualisation on
+#. playback"
+#: system/settings/settings.xml
+msgctxt "#38112"
+msgid ""
+"Automatically go to the visualisation window when audio playback starts"
+msgstr ""
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"
@@ -21532,26 +21805,6 @@ msgctxt "#38354"
 msgid "Unable to read xml file"
 msgstr "xml 파일을 읽을 수 없음"
 
-#: system/settings/settings.xml
-msgctxt "#39000"
-msgid "HD and up"
-msgstr "HD 이상"
-
-#: system/settings/settings.xml
-msgctxt "#39001"
-msgid "Accelerate MPEG2"
-msgstr "MPEG2 가속"
-
-#: system/settings/settings.xml
-msgctxt "#39002"
-msgid "Accelerate MPEG4"
-msgstr "MPEG4 가속"
-
-#: system/settings/settings.xml
-msgctxt "#39003"
-msgid "Accelerate h264"
-msgstr "h264 가속"
-
 #. Description of category "Library" with label #14202
 #: system/settings/settings.xml
 msgctxt "#39004"
@@ -21626,7 +21879,7 @@ msgid ""
 "on?"
 msgstr "이 애드온과 관련된 모든 데이터를 (예. 설정) 지울까요?"
 
-#: /xbmc/addons/Addon.cpp
+#: xbmc/addons/Addon.cpp
 msgctxt "#39015"
 msgid "Image decoder"
 msgstr "이미지 디코더"
@@ -21821,3 +22074,9 @@ msgstr "에피소드 줄거리"
 msgctxt "#39117"
 msgid "Verbose logging for the [B]Announcer[/B] component"
 msgstr "[B]진행자[/B] 항목의 상세한 로그"
+
+#. Label for action to present native iOS sharing sheet
+#: system/settings/darwin_ios.xml
+msgctxt "#39118"
+msgid "Share debug log"
+msgstr ""
