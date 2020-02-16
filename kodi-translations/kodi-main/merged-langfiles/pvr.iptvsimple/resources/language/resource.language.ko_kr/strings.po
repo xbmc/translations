@@ -60,6 +60,10 @@ msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "M3U의 채널 순서에 따라서만 번호 매김"
 
+msgctxt "#30015"
+msgid "Auto refresh mode"
+msgstr "자동 새로 고침 모드"
+
 msgctxt "#30016"
 msgid "Refresh interval"
 msgstr "새로 고침 주기"
@@ -67,6 +71,10 @@ msgstr "새로 고침 주기"
 msgctxt "#30017"
 msgid "Refresh hour (24h)"
 msgstr "새로 고침 시간 (24시)"
+
+msgctxt "#30018"
+msgid "Refresh"
+msgstr "새로 고침"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -172,6 +180,18 @@ msgctxt "#30064"
 msgid "Relay port"
 msgstr "중계 포트"
 
+msgctxt "#30065"
+msgid "Streaming"
+msgstr "스트리밍"
+
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr "m3u8 (HLS) 스트림에 inputstream.adaptive 사용"
+
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
+msgstr "가능하면 FFMPEG http 다시 연결 옵션 사용"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "애드온 기능에 필요한 일반 설정입니다."
@@ -199,6 +219,18 @@ msgstr "채널을 매기기 시작할 번호. M3U 파일이 없고 PVR 설정의
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "'tvg-chno' 모든 태그 무시하고 '채널 번호를 매길 때' M3U의 순서에 따라서만 번호 매김."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [Disabled] - Don't auto refresh the files; [Repeated refresh] - Refresh the files on a minute based interval; [Once per day] - Refresh the files once per day."
+msgstr "M3U/XMLTV 파일의 자동 새로 고침 모드를 선택합니다. 자동 새로 고침을 사용하면 캐시는 사용할 수 없습니다. 옵션: [사용 안 함] - 파일 자동 새로 고침 사용 안 함; [새로 고침 반복] - 분 단위로  파일 새로 고침; [하루에 한 번] - 하루에 한 번 새로 고침."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the files every time this number of minutes passes. Max 120 minutes."
+msgstr "M3U 자동 새로 고침이 [새로 고침 반복]이면 이 숫자의 분 시간마다 매번 새로 고칩니다. 최대 120분."
+
+msgctxt "#30609"
+msgid "If auto refresh mode is [Once per day] refresh the files every time this hour of the day is reached"
+msgstr "자동 새로 고침이 [하루에 한 번]이면 날짜가 오면 이 시간에 매번 새로 고칩니다."
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -268,6 +300,10 @@ msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "위치가 [원격 경로]이면, 이 설정은 유효한 URL을 포함해야 합니다."
 
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays, streaming properties etc."
+msgstr "다중 방송 중계, 스트림 속성 등 상세한 설정. "
+
 msgctxt "#30681"
 msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
 msgstr "다중 방송 (UDP/RTP) 스트림은 무선 네트워크에서 제대로 동작하지 않습니다. 다중 방송 중계는 스트림을 UDP/RTP 다중 중계에서  HTTP로 바꿀 수 있습니다. 이 옵션은 다중 중계 URL을 M3U 파일에서 HTTP 주소로 바꾸어서 로컬 네트워크의 'udpxy' 중계로 접속할 수 있습니다. 예. UDP 다중 방송 중계 스트림 URL 'udp://@239.239.3.38:5239'는 'http://192.168.1.1:4000/udp/239.239.3.38:5239'처럼 바뀝니다."
@@ -279,3 +315,7 @@ msgstr "로컬 네트워크의 다중 방송 중계 (udpxy) 호스트명이나 i
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
 msgstr "로컬 네트워크의 다중 방송 중계 (udpxy) 포트."
+
+msgctxt "#30684"
+msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
+msgstr "m3u8 (HLS) 스트림에 ffmpeg의 libavformat 대신 inputstream.adaptive 사용"

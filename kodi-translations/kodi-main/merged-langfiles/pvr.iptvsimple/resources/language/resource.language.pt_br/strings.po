@@ -60,6 +60,10 @@ msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "Somente número por ordem de canal no M3U"
 
+msgctxt "#30015"
+msgid "Auto refresh mode"
+msgstr "Modo auto atualizar"
+
 msgctxt "#30016"
 msgid "Refresh interval"
 msgstr "Intervalo de atualização"
@@ -67,6 +71,10 @@ msgstr "Intervalo de atualização"
 msgctxt "#30017"
 msgid "Refresh hour (24h)"
 msgstr "Hora de atualização (24h)"
+
+msgctxt "#30018"
+msgid "Refresh"
+msgstr "Atualizar"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -172,6 +180,18 @@ msgctxt "#30064"
 msgid "Relay port"
 msgstr "Porta de relé"
 
+msgctxt "#30065"
+msgid "Streaming"
+msgstr "Transmissão"
+
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr "Usar inputstream.adaptive para streams m3u8 (HLS)"
+
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
+msgstr "Use as opções de reconexão do FFMpeg http, se possível"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "Ajustes gerais necessárias para o complemento funcionar."
@@ -199,6 +219,18 @@ msgstr "O número para iniciar a numeração dos canais. Usado apenas quando [Us
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "Ignore as tags 'tvg-chno' e apenas os canais numéricos pela ordem no M3U, começando em 'Iniciar número do canal'."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [Disabled] - Don't auto refresh the files; [Repeated refresh] - Refresh the files on a minute based interval; [Once per day] - Refresh the files once per day."
+msgstr "Selecione o modo de atualização automática para os arquivos M3U/XMLTV. Observe que o armazenamento em cache será desativado se a atualização automática for usada. As opções são: [Desativado] - Não atualize automaticamente os arquivos; [Atualização repetida] - Atualize os arquivos baseado em um intervalo de minuto; [Uma vez por dia] - Atualize os arquivos uma vez por dia."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the files every time this number of minutes passes. Max 120 minutes."
+msgstr "Se o modo de atualização automática do M3U for [Atualização repetida], atualize os arquivos toda vez que esse número de minutos passar. Max 120 minutos."
+
+msgctxt "#30609"
+msgid "If auto refresh mode is [Once per day] refresh the files every time this hour of the day is reached"
+msgstr "Se o modo de atualização automática for [Uma vez por dia], atualize os arquivos toda vez que essa hora do dia for atingida"
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -268,6 +300,10 @@ msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "Se o local for [Caminho remoto], esse ajuste deverá conter um caminho válido."
 
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays, streaming properties etc."
+msgstr "Ajustes avançados, incluindo relés multicast, propriedades do streaming etc..."
+
 msgctxt "#30681"
 msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
 msgstr "Os fluxos de difusão seletiva (UDP / RTP) não funcionam bem em redes Wi-Fi. Um relé multicast pode converter o fluxo de multicast UDP / RTP para HTTP. A ativação dessa opção transformará os URLs de fluxo multicast do arquivo M3U em endereços HTTP, para que possam ser acessados ​​por meio de um relé 'udpxy' na rede local. Por exemplo. um URL de fluxo UDP multicast como 'udp: //@239.239.3.38: 5239' seria transformado em algo como 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
@@ -279,3 +315,7 @@ msgstr "O nome do host ou o endereço IP do relé multicast (udpxy) na rede loca
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
 msgstr "A porta do relé multicast (udpxy) na rede local."
+
+msgctxt "#30684"
+msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
+msgstr "Use inputstream.adaptive em vez do libavformat do ffmpeg para fluxos m3u8 (HLS)."

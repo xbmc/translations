@@ -5,13 +5,14 @@
 # Translators:
 # Oguz Hans <oguzhanyildizoglu@gmail.com>, 2015
 # Özgür BASKIN, 2015,2019
+# Serdar Sağlam <teknomobil@msn.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2019-10-30 22:13+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-02-11 00:04+0000\n"
+"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/teamxbmc/kodi-main/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "Kodi PVR addon for IPTV support."
-msgstr "IPTV desteği için Kodi PVR eklentisi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home"
+msgstr "IPTV desteği için Kodi PVR eklentisi."
 
 msgctxt "Addon Description"
 msgid ""
@@ -29,7 +30,7 @@ msgid ""
 "    \n"
 "For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md\n"
 "    "
-msgstr "IPTV Basit PVR İstemcisi m3u çalma listeleri, multicast/unicast kaynaklar için Canlı TV akışı, radyo kanallarını dinleme ve EPG destekler."
+msgstr "IPTV Basit PVR İstemcisi m3u çalma listeleri, multicast/unicast kaynaklar için Canlı TV akışı, radyo kanallarını dinleme ve EPG destekler.\n    \nDokümantasyon için: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md\n    "
 
 msgctxt "Addon Disclaimer"
 msgid ""
@@ -56,11 +57,11 @@ msgstr "Devre dışı"
 
 msgctxt "#30004"
 msgid "Repeated refresh"
-msgstr ""
+msgstr "Tekrarlanan yenileme"
 
 msgctxt "#30005"
 msgid "Once per day"
-msgstr ""
+msgstr "Günde bir kez"
 
 msgctxt "#30010"
 msgid "General"
@@ -80,19 +81,23 @@ msgstr "Başlangıç kanalı numarası"
 
 msgctxt "#30014"
 msgid "Only number by channel order in M3U"
-msgstr ""
+msgstr "M3U'da yalnızca kanal sırasına göre numara"
 
 msgctxt "#30015"
-msgid "M3U auto refresh mode"
-msgstr ""
+msgid "Auto refresh mode"
+msgstr "Otomatik yenileme kipi"
 
 msgctxt "#30016"
 msgid "Refresh interval"
-msgstr ""
+msgstr "Yenileme aralığı"
 
 msgctxt "#30017"
 msgid "Refresh hour (24h)"
-msgstr ""
+msgstr "Yenileme saati (24s)"
+
+msgctxt "#30018"
+msgid "Refresh"
+msgstr "Yenile"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -128,7 +133,7 @@ msgstr "XMLTV'yi yerel depoda önbelleğe al"
 
 msgctxt "#30027"
 msgid "{0:.1f} hours"
-msgstr ""
+msgstr "{0:.1f} saat"
 
 msgctxt "#30030"
 msgid "Channel Logos"
@@ -168,15 +173,15 @@ msgstr "Türler"
 
 msgctxt "#30051"
 msgid "Use genre text from XMLTV when mapping genres"
-msgstr ""
+msgstr "Türleri eşlerken XMLTV'den tür metni kullan"
 
 msgctxt "#30052"
 msgid "Genres path"
-msgstr ""
+msgstr "Türler yolu"
 
 msgctxt "#30053"
 msgid "Genres URL"
-msgstr ""
+msgstr "Türler URL'si"
 
 msgctxt "#30060"
 msgid "Advanced"
@@ -184,7 +189,7 @@ msgstr "Gelişmiş"
 
 msgctxt "#30061"
 msgid "Multicast relay (udpxy)"
-msgstr ""
+msgstr "Çok noktaya yayın rölesi (udpxy)"
 
 msgctxt "#30062"
 msgid "Transform multicast stream URLs"
@@ -192,10 +197,22 @@ msgstr ""
 
 msgctxt "#30063"
 msgid "Relay hostname or IP address"
-msgstr ""
+msgstr "Röle ana bilgisayar adı veya IP adresi"
 
 msgctxt "#30064"
 msgid "Relay port"
+msgstr "Röle portu"
+
+msgctxt "#30065"
+msgid "Streaming"
+msgstr "Akış"
+
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
 msgstr ""
 
 msgctxt "#30600"
@@ -242,21 +259,22 @@ msgstr ""
 
 msgctxt "#30607"
 msgid ""
-"Select the auto refresh mode for the M3U file. The options are: [Disabled] -"
-" Don't auto refresh the M3U file; [Repeated refresh] - Refresh the M3U on a "
-"minute based interval; [Once per day] - Refresh the M3U once per day."
+"Select the auto refresh mode for the M3U/XMLTV files. Note that caching is "
+"disabled if auto refresh is used. The options are: [Disabled] - Don't auto "
+"refresh the files; [Repeated refresh] - Refresh the files on a minute based "
+"interval; [Once per day] - Refresh the files once per day."
 msgstr ""
 
 msgctxt "#30608"
 msgid ""
-"If M3U auto refresh mode is [Repeated refresh] refresh the M3U every time "
+"If M3U auto refresh mode is [Repeated refresh] refresh the files every time "
 "this number of minutes passes. Max 120 minutes."
 msgstr ""
 
 msgctxt "#30609"
 msgid ""
-"If M3U auto refresh mode is [Once per day] refresh the M3U every time this "
-"horu if the day is reached."
+"If auto refresh mode is [Once per day] refresh the files every time this "
+"hour of the day is reached"
 msgstr ""
 
 msgctxt "#30620"
@@ -355,7 +373,8 @@ msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr ""
 
 msgctxt "#30680"
-msgid "Advanced settings including multicast relays etc."
+msgid ""
+"Advanced settings including multicast relays, streaming properties etc."
 msgstr ""
 
 msgctxt "#30681"
@@ -377,4 +396,20 @@ msgstr ""
 
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
+msgstr ""
+
+msgctxt "#30684"
+msgid ""
+"Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) "
+"streams."
+msgstr ""
+
+msgctxt "#30685"
+msgid ""
+"Note this can only apply to http/https streams that are processed by "
+"libavformat (e.g. M3u8/HLS). Using libavformat can be specified in an M3U "
+"file by setting the property `inputstreamclass` as `inputstream.ffmpeg`. "
+"I.e. adding the line: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If "
+"this opton is not enabled it can still be enabled per stream/channel by "
+"adding a kodi property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr ""

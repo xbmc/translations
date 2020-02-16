@@ -60,6 +60,10 @@ msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "Solo numerar por orden de canales en M3U"
 
+msgctxt "#30015"
+msgid "Auto refresh mode"
+msgstr "Modo refresco automático"
+
 msgctxt "#30016"
 msgid "Refresh interval"
 msgstr "Intervalo de actualización"
@@ -67,6 +71,10 @@ msgstr "Intervalo de actualización"
 msgctxt "#30017"
 msgid "Refresh hour (24h)"
 msgstr "Hora de actualización (24h)"
+
+msgctxt "#30018"
+msgid "Refresh"
+msgstr "Actualizar"
 
 msgctxt "#30019"
 msgid "EPG Settings"
@@ -172,6 +180,18 @@ msgctxt "#30064"
 msgid "Relay port"
 msgstr "Puerto de retransmisión"
 
+msgctxt "#30065"
+msgid "Streaming"
+msgstr "Streaming"
+
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr "Usar inputstream.adaptive para emisiones m3u8 (HLS)"
+
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
+msgstr "Usar opciones de reconexión http de FFMpeg cuando sea posible"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "Se requieren ajustes generales para que el add-on funcione."
@@ -199,6 +219,18 @@ msgstr "Número por el que empezar a numerar canales. Solo se usa cuando la opci
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "Ignorar cualquier etiqueta 'tvg-chno' y numerar los canales solo por el orden en el M3U empezando por el 'Número inicial de canal'."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [Disabled] - Don't auto refresh the files; [Repeated refresh] - Refresh the files on a minute based interval; [Once per day] - Refresh the files once per day."
+msgstr "Elige el modo de refresco automático para los archivos M3U/XMLTV. Si se usa el auto refresco, la cache se desactivará. Las opciones son: [Desactivado] - No refresca automáticamente; [Refresco repetido] - Refresca los archivos en intervalos basados en minutos; [Una vez al día] - Refresca los archivos una vez al día."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the files every time this number of minutes passes. Max 120 minutes."
+msgstr "Si el modo de refresco automático de M3U es [Refresco repetido] refrescará los archivos cada vez que pasen estos minutos. 120 minutos máximo."
+
+msgctxt "#30609"
+msgid "If auto refresh mode is [Once per day] refresh the files every time this hour of the day is reached"
+msgstr "Si el modo de refresco automático es [Una vez al día] se refrescaran los archivos siempre que se alcance esta hora del día"
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -268,6 +300,10 @@ msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "Si la ubicación es [Ruta remota] este ajuste debe contener una URL válida."
 
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays, streaming properties etc."
+msgstr "Ajustes avanzados incluyendo retransmisión multicast, propiedades de la emisión, etc."
+
 msgctxt "#30681"
 msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
 msgstr "Las emisiones Multicast (UDP/RTP) no funcionan bien en redes WiFi. En retransmisor multicast puede convertir de multicast UDP/RTP a HTTP. Activando esta opcion transformará una URL de emisión multicast definida en un archivo M3U a una dirección HTTP que puede ser accedida vía un retransmisor 'udpxy' en la red local. P.e. Una emisión 'udp://@239.239.3.35:5239'  se transformará en algo 'http://192.168.1.1:4000/udp/239.239.3.35:5239'."
@@ -279,3 +315,7 @@ msgstr "El nombre o dirección IP del retransmisor multicast (udpxy) en la red l
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
 msgstr "El puerto del retransmisor multicast (udpxy) en la red local."
+
+msgctxt "#30684"
+msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
+msgstr "Usa inputstream.adaptive en lugar de libavformat de ffmpeg para las emisiones m3u8 (HLS)."
