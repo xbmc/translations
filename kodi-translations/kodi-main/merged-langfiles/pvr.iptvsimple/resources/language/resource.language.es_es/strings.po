@@ -192,6 +192,50 @@ msgctxt "#30067"
 msgid "Use FFMpeg http reconnect options if possible"
 msgstr "Usar opciones de reconexión http de FFMpeg cuando sea posible"
 
+msgctxt "#30100"
+msgid "Catchup"
+msgstr "Catchup"
+
+msgctxt "#30101"
+msgid "Enable catchup"
+msgstr "Activar catchup"
+
+msgctxt "#30102"
+msgid "Query format string"
+msgstr "Formato de cadena de pregunta"
+
+msgctxt "#30103"
+msgid "Catchup window"
+msgstr "Ventana de catchup"
+
+msgctxt "#30105"
+msgid "Watch From EPG"
+msgstr "Ver Desde EPG"
+
+msgctxt "#30106"
+msgid "Play from EPG in Live TV mode (using timeshift)"
+msgstr "Reproducir desde EPG en modo TV en directo (usando timeshift)"
+
+msgctxt "#30107"
+msgid "Buffer before program start"
+msgstr "Intervalo antes del principio de programa"
+
+msgctxt "#30108"
+msgid "Buffer after program end"
+msgstr "Intervalo después del fin de programa"
+
+msgctxt "#30109"
+msgid "Catchup only available on finished programmes"
+msgstr "Catchup solo disponible en programas terminados"
+
+msgctxt "#30110"
+msgid "Disabled"
+msgstr "Deshabilitado"
+
+msgctxt "#30111"
+msgid "Default"
+msgstr "Por defecto"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "Se requieren ajustes generales para que el add-on funcione."
@@ -319,3 +363,39 @@ msgstr "El puerto del retransmisor multicast (udpxy) en la red local."
 msgctxt "#30684"
 msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
 msgstr "Usa inputstream.adaptive en lugar de libavformat de ffmpeg para las emisiones m3u8 (HLS)."
+
+msgctxt "#30685"
+msgid "Note this can only apply to http/https streams that are processed by libavformat (e.g. M3u8/HLS). Using libavformat can be specified in an M3U file by setting the property `inputstreamclass` as `inputstream.ffmpeg` for kodi's internal implementation or `inputstream.ffmpegdirect` for addon version. I.e. adding the line: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If this option is not enabled it can still be enabled per stream/channel by adding a kodi property, i.e.: `#KODIPROP:http-reconnect=true`."
+msgstr "Nota: Esto solo aplica a flujos http/https que se procesen con libavformat (p.ej. m3u8/HLS). El uso de libavformat se puede especificar en un archivo M3U poniendo la propiedad 'inputstreamclass' como 'inputstream.ffmpeg' en la implementación interna de Kodi, o 'inputstream.ffmpegdirect' para la versión addon. P.ej. añadiendo la linea '#KODIPROP:inputstreamclass=inputstream.ffmpeg'. Si esta opción no esta activada, se puede activar para cada flujo/canal añadiendo la propiedad Kodi. P.ej. '#KODIPROP:http-reconnect=true'."
+
+msgctxt "#30700"
+msgid "Catchup settings for viewing archived live programmes. Allows the option of 'Play programme' when viewing EPG entry info."
+msgstr "Ajustes de catchup para ver programas en directo archivados. Permite la opcion 'Ver Programa' cuando se ve la información de EPG."
+
+msgctxt "#30701"
+msgid "Should be enabled if there are channels supporting catchup in your M3U list."
+msgstr "Debe estar activado si hay canales que soporten catchup en la lista M3U."
+
+msgctxt "#30702"
+msgid "A query format string (provider dependent) allowing timestamp information to be appended to a URL to denote when to catchup from. E.g. `&cutv={Y}-{m}-{d}T{H}:{M}:{S}`, which allows year, month, day, hour minute and second to be inserted to give: `&cutv=2019-11-26T22:00:32`. If the M3U entry using has a catchup mode of 'default' or 'append' and a 'catchup-source' tag is provided in the M3U entry this setting will be ignored."
+msgstr "El formato de cadena de pregunta (depende del proveedor) permite que las marcas de tiempo se añadan a la URL para indicar desde cuando se puede hacer catchup. P.ej. '&cutv={Y}-{m}-{d}T{H}:{M}:{S}' permite indicar año, mes, día, hora, minuto y segundo para obtener '&cutv=2019-11-26T22:00:32'. Si la entrada en la M3U usada tiene un modo catchup 'default' o 'append' y la etiqueta 'catchup-source' se indica en la entrada M3U este ajuste se ignora."
+
+msgctxt "#30703"
+msgid "A number of days into the past in which it is possible to catchup on a programme. Can be overidden in an M3U entry using a 'catchup-days' tag."
+msgstr "Número de días pasados en los que es posible recoger un programa. Se puede sobreescribir en la entrada M3U usando la etiqueta 'catchup-days'."
+
+msgctxt "#30705"
+msgid "When disabled any catchup programme from the past will be played like a video (bounded by start and end times). If enabled, it will instead act like a live stream with timeshift, also allowing the ability to skip back and forward programmes."
+msgstr "Cuando se desactiva cualquier programa catchup del pasado se reproducirá como cualquier vídeo (delimitado por tiempo de inicio y final). Si se activa, se verá como un evento en directo con timeshift, permitiendo rebobinar y avanzar en el programa."
+
+msgctxt "#30706"
+msgid "The amount of buffer to give before the playback start point of an EPG entry that will be watched as a video."
+msgstr "La cantidad de tiempo antes del punto de inicio del programa en EPG que puede verse el vídeo."
+
+msgctxt "#30707"
+msgid "The amount of buffer to give after the playback end point of an EPG entry that will be watched as a video."
+msgstr "La cantidad de tiempo después del punto de final del programa en EPG que puede verse el vídeo."
+
+msgctxt "#30708"
+msgid "When selected from the EPG the current live programme cannot be watched as catchup until finished."
+msgstr "Cuando se elige desde la EPG el programa actual no se puede ver como catchup hasta que termine."

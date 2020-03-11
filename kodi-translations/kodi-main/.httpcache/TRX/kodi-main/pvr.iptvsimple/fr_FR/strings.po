@@ -3,15 +3,15 @@
 # Addon id: pvr.iptvsimple
 # Addon Provider: nightik
 # Translators:
-# tmtisfree <tmtisfree@free.fr>, 2015-2016,2019
+# tmtisfree <tmtisfree@free.fr>, 2015-2016,2019-2020
 # ryann, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-02-16 11:14+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-03-09 08:28+0000\n"
+"Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -269,56 +269,91 @@ msgctxt "#30067"
 msgid "Use FFMpeg http reconnect options if possible"
 msgstr "Utiliser si possible les options de reconnexion HTTP de FFMpeg"
 
+#. label: Advanced - userAgent
+msgctxt "#30068"
+msgid "User-Agent"
+msgstr "Agent utilisateur"
+
 #. label-category: catchup
 #. label-group: Catchup - Catchup
 msgctxt "#30100"
 msgid "Catchup"
-msgstr ""
+msgstr "Rattrapage"
 
 #. label: Catchup - enableCatchup
 msgctxt "#30101"
 msgid "Enable catchup"
-msgstr ""
+msgstr "Activer le rattrapage"
 
 #. label: Catchup - catchupQueryFormat
 msgctxt "#30102"
 msgid "Query format string"
-msgstr ""
+msgstr "Chaîne de format de requête"
 
 #. label: Catchup - catchupDays
 msgctxt "#30103"
 msgid "Catchup window"
-msgstr ""
+msgstr "Fenêtre de rattrapage"
 
-#. label: Catchup - allChannelsSupportCatchup
+#. label: Catchup - allChannelsCatchupMode
 msgctxt "#30104"
-msgid "All channels support catchup"
-msgstr ""
+msgid "All channels support catchup using mode"
+msgstr "Toutes les chaînes gèrent le rattrapage en mode"
 
 #. label-group: Catchup - Watch From EPG
 msgctxt "#30105"
 msgid "Watch From EPG"
-msgstr ""
+msgstr "Regarder depuis le guide des programmes (EPG)"
 
 #. label: Catchup - catchupPlayEpgAsLive
 msgctxt "#30106"
 msgid "Play from EPG in Live TV mode (using timeshift)"
-msgstr ""
+msgstr "Lire depuis le guide en mode TV directe (en décalage)"
 
 #. label: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30107"
 msgid "Buffer before program start"
-msgstr ""
+msgstr "Tampon avant que le programme commence"
 
 #. label: Catchup - catchupWatchEpgEndBuffer
 msgctxt "#30108"
 msgid "Buffer after program end"
-msgstr ""
+msgstr "Tampon après que le programme termine"
 
 #. label: Catchup - catchupOnlyOnFinishedProgrammes
 msgctxt "#30109"
 msgid "Catchup only available on finished programmes"
-msgstr ""
+msgstr "Rattrapage seulement disponible pour les programmes terminés"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30110"
+msgid "Disabled"
+msgstr "Désactivé"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30111"
+msgid "Default"
+msgstr "Prédéfinie"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30112"
+msgid "Append"
+msgstr "Ajouter"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30113"
+msgid "Shift (SIPTV)"
+msgstr "Shift (SIPTV)"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30114"
+msgid "Flussonic"
+msgstr "Flussonic"
+
+#. label-option: Catchup - allChannelsCatchupMode
+msgctxt "#30115"
+msgid "Xtream codes"
+msgstr "Codes Xtream"
 
 #. help-category: General
 msgctxt "#30600"
@@ -552,20 +587,27 @@ msgid ""
 "`#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If this option is not "
 "enabled it can still be enabled per stream/channel by adding a kodi "
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
-msgstr ""
+msgstr "NB : ceci ne s'applique qu'à des flux http/https opérés par libavformat (par ex. M3u8/HLS). L'utilisation de libavformat peut être spécifiée dans un fichier M3U en définissant la propriété `inputstreamclass` à `inputstream.ffmpeg` pour l'implementation interne de Kodi ou `inputstream.ffmpegdirect` pour une extension. Par ex. en ajoutant la ligne `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. Si cette option n'est pas activée, elle peut l'être par flux/chaîne en ajoutant une propriété Kodi, par ex. : `#KODIPROP:http-reconnect=true`."
+
+#. help: Advanced - userAgent
+msgctxt "#30686"
+msgid ""
+"Use this User-Agent if there is not one supplied as a property or as part of"
+" the channel stream URL."
+msgstr "Utilise cet agent utilisateur. si aucun n'a été fourni comme propriété ou fragment de l'URL du flux de la chaîne."
 
 #. help-category: Catchup
 msgctxt "#30700"
 msgid ""
 "Catchup settings for viewing archived live programmes. Allows the option of "
 "'Play programme' when viewing EPG entry info."
-msgstr ""
+msgstr "Paramètres de rattrapage pour lire les programmes en direct archivés. Permet l'option « Lire le programme » en regardant les infos d'entrées du guide des programmes."
 
 #. help: Catchup - enableCatchup
 msgctxt "#30701"
 msgid ""
 "Should be enabled if there are channels supporting catchup in your M3U list."
-msgstr ""
+msgstr "Ceci devrait être activé s'il existe des chaînes prenant en charge le rattrapage dans la liste M3U."
 
 #. help: Catchup - catchupQueryFormat
 msgctxt "#30702"
@@ -576,25 +618,31 @@ msgid ""
 "and second to be inserted to give: `&cutv=2019-11-26T22:00:32`. If the M3U "
 "entry using has a catchup mode of 'default' or 'append' and a 'catchup-"
 "source' tag is provided in the M3U entry this setting will be ignored."
-msgstr ""
+msgstr "Une chaîne de format de requête (dépendant du fournisseur) permettant à l'information d'horodatage d'être ajoutée à une URL pour spécifier le début du rattrapage. Par ex. `&cutv={Y}-{m}-{d}T{H}:{M}:{S}` insérera année, mois, jour, heure, minute et seconde en `&cutv=2019-11-26T22:00:32`. Si l'entrée M3U possède un mode de rattrapage « default » ou « append » et qu'une balise « catchup-source » est fournie dans l'entrée M3U, ce paramètre sera ignoré."
 
 #. help: Catchup - catchupDays
 msgctxt "#30703"
 msgid ""
 "A number of days into the past in which it is possible to catchup on a "
 "programme. Can be overidden in an M3U entry using a 'catchup-days' tag."
-msgstr ""
+msgstr "Spécifie un nombre de jours passés au cours duquel il est possible de rattraper un programme. Il peut être écrasé avec une entrée M3U utilisant une balise « catchup-days »."
 
-#. help: Catchup - allChannelsSupportCatchup
+#. help: Catchup - allChannelsCatchupMode
 msgctxt "#30704"
 msgid ""
-"If enabled it is assumed that all channels support catchup. If there are no "
-"catchup specific tags in the M3U entries then the stream URL will be used as"
-" the source, and the 'Query format string' and 'Catchup window' number of "
-"days will come from the addon settings. If this option is disabled then a "
-"M3U entry must have at least a 'catchup=\"default\"' or 'catchup=\"append\"'"
-" tag to enable catchup."
-msgstr ""
+"If enabled it is assumed that all channels support catchup using the "
+"selected mode if they do not have catchup tags. In this case the 'Query "
+"format string' and 'Catchup window' number of days will come from the addon "
+"settings if needed. If this option is disabled then an M3U entry must have "
+"at least a 'catchup=' tag to enable catchup. The options for how to build "
+"the catch URL are: [Disabled] - Do not assume all channel support catchup; "
+"[Default] - Use catchup source as the full catchup URL, if there is no "
+"catchup source use Append mode; [Append] - Append the catchup source to the "
+"channel URL, if there is no catchup source using the 'Query format string'; "
+"[Shift (SIPTV)] - Append the standard SIPTV catchup string to the channel "
+"URL; [Flussonic] - Build a flussonic URL from the channel URL; [Xtream "
+"codes] - Build an Xtream codes URL from the channel URL."
+msgstr "Si activé, toutes les chaînes sont supposées gérer le rattrapage avec le mode sélectionné si elles n'ont pas de balises de rattrapage. Dans ce cas la « Chaîne de format de requête » et le nombre de jours de la « Fenêtre de rattrapage » proviendront des paramètres de l'extension (si nécessaire). Si désactivé, une entrée M3U devra au moins posséder la balise « catchup= » pour activer le rattrapage. Les options pour former l'URL de rattrapage sont :\n[Désactivé] : ne suppose pas que toutes les chaînes gèrent le rattrapage. [Par défaut] : utilise la source de rattrapage comme URL complète de rattrapage si aucune source n'utilise le mode Ajouter. [Ajouter] : ajoute la source de rattrapage à l'URL de rattrapage de la chaîne si aucune source n'utilise le mode « Chaîne de format de requête ». [Shift (SIPTV)] : ajoute le fragment standard de rattrapage SIPTV à l'URL de la chaîne. [Flussonic] : construit une URL Flussonic à partir de l'URL de la chaîne. [Codes Xtream] : construit une URL à codes Xtream à partir de l'URL de la chaîne."
 
 #. help: Catchup - catchupPlayEpgAsLive
 msgctxt "#30705"
@@ -603,25 +651,25 @@ msgid ""
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
 "forward programmes."
-msgstr ""
+msgstr "Si désactivé, tout programme de rattrapage passé sera lu comme une vidéo (entre ses temps de début et fin). Si activé, il se comportera comme un flux direct en décalage, avec la possibilité d'avancer et reculer dans les programmes."
 
 #. help: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30706"
 msgid ""
 "The amount of buffer to give before the playback start point of an EPG entry"
 " that will be watched as a video."
-msgstr ""
+msgstr "La valeur de tampon à donner avant le commencement de la lecture d'une entrée du guide qui sera regardée comme une vidéo."
 
 #. help: Catchup - catchupWatchEpgEndBuffer
 msgctxt "#30707"
 msgid ""
 "The amount of buffer to give after the playback end point of an EPG entry "
 "that will be watched as a video."
-msgstr ""
+msgstr "La valeur de tampon à donner à la fin de la lecture d'une entrée du guide qui sera regardée comme une vidéo."
 
 #. help: Catchup - catchupOnlyOnFinishedProgrammes
 msgctxt "#30708"
 msgid ""
 "When selected from the EPG the current live programme cannot be watched as "
 "catchup until finished."
-msgstr ""
+msgstr "Quand il est sélectionné depuis le guide, le programme en direct actuel ne peut pas être regardé en rattrapage avant d'être terminé."

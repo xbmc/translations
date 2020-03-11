@@ -60,6 +60,10 @@ msgctxt "#30014"
 msgid "Only number by channel order in M3U"
 msgstr "Да се номерира само по реда на каналите във файла M3U"
 
+msgctxt "#30015"
+msgid "Auto refresh mode"
+msgstr "Режим на авт. опресняване"
+
 msgctxt "#30016"
 msgid "Refresh interval"
 msgstr "Интервал на опресняване"
@@ -180,6 +184,58 @@ msgctxt "#30065"
 msgid "Streaming"
 msgstr "Поточно излъчване"
 
+msgctxt "#30066"
+msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
+msgstr "Ползване на „inputstream.adaptive“ за потоци от вида m3u8 (HLS)"
+
+msgctxt "#30067"
+msgid "Use FFMpeg http reconnect options if possible"
+msgstr "Използване на опциите за повторно свързване чрез HTTP на FFMpeg, ако това е възможно"
+
+msgctxt "#30100"
+msgid "Catchup"
+msgstr "Catchup"
+
+msgctxt "#30101"
+msgid "Enable catchup"
+msgstr "Включване на catchup"
+
+msgctxt "#30102"
+msgid "Query format string"
+msgstr "Низ с формата на заявката"
+
+msgctxt "#30103"
+msgid "Catchup window"
+msgstr "Прозорец на Catchup"
+
+msgctxt "#30105"
+msgid "Watch From EPG"
+msgstr "Гледане от справочника"
+
+msgctxt "#30106"
+msgid "Play from EPG in Live TV mode (using timeshift)"
+msgstr "Възпроизвеждане от справочника в режим на ТВ на живо (с ползване на времево отместване)"
+
+msgctxt "#30107"
+msgid "Buffer before program start"
+msgstr "Буфериране преди началото на предаването"
+
+msgctxt "#30108"
+msgid "Buffer after program end"
+msgstr "Буфериране след края на предаването"
+
+msgctxt "#30109"
+msgid "Catchup only available on finished programmes"
+msgstr "Catchup може да се ползва само за приключили предавания"
+
+msgctxt "#30110"
+msgid "Disabled"
+msgstr "Изключено"
+
+msgctxt "#30111"
+msgid "Default"
+msgstr "Стандартен"
+
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
 msgstr "Общи настройки, необходими за работата на добавката."
@@ -207,6 +263,18 @@ msgstr "Число, от което да започне номерирането
 msgctxt "#30606"
 msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
 msgstr "Пренебрегване на всякакви етикети от вида „tvg-chno“; каналите да се номерират по реда във файла M3U, започвайки с „Началния номер на канал“."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [Disabled] - Don't auto refresh the files; [Repeated refresh] - Refresh the files on a minute based interval; [Once per day] - Refresh the files once per day."
+msgstr "Избор на режим на автоматично опресняване за файловете M3U/XMLTV. Имайте предвид, че кеширането се изключва, ако се ползва автоматично опресняване. Възможностите са: [Изключено] – файловете да не се опресняват автоматично; [Периодично опресняване] – файловете се опресняват през някакъв интервал от минути; [Веднъж дневно] – опресняване на файловете веднъж дневно."
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [Repeated refresh] refresh the files every time this number of minutes passes. Max 120 minutes."
+msgstr "Ако режимът на опресняване на файловете M3U е [Периодично опресняване], файловете ще се опресняват през зададения брой минути. Максимална стойност: 120 минути."
+
+msgctxt "#30609"
+msgid "If auto refresh mode is [Once per day] refresh the files every time this hour of the day is reached"
+msgstr "Ако режимът на автоматично опресняване е [Веднъж дневно], файловете ще се опресняват всеки ден в определения час."
 
 msgctxt "#30620"
 msgid "Settings related to the EPG."
@@ -276,6 +344,10 @@ msgctxt "#30664"
 msgid "If location is [Remote Path] this setting should contain a valid URL."
 msgstr "Ако е избран [Отдалечен път], то тази настройка трябва да съдържа реален адрес."
 
+msgctxt "#30680"
+msgid "Advanced settings including multicast relays, streaming properties etc."
+msgstr "Разширени настройки (за мултикастови препредавания, свойства на потоците и др.)"
+
 msgctxt "#30681"
 msgid "Multicast (UDP/RTP) streams do not work well on Wifi networks. A multicast relay can convert the stream from UDP/RTP multicast to HTTP. Enabling this option will transform multicast stream URLs from the M3U file to HTTP addresses so they can be accesssed via a 'udpxy' relay on the local network. E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get transformed to something like 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
 msgstr "Мултикастовите потоци (UDP/RTP) не работят добре при ползване на безжична мрежа. Мултикастовото препредаване може да преобразува потока от мултикаст UDP/RTP до HTTP. Включването на тази възможност ще преобразува адресите за мултикастови потоци от файла M3U в адреси по протокола HTTP, така че да могат да бъдат достъпни чрез препредаване с „udpxy“ в локалната мрежа. Например: мултикастов поток през UDP с адрес от вида „udp://@239.239.3.38:5239“ ще бъде преобразуван до нещо като „http://192.168.1.1:4000/udp/239.239.3.38:5239“."
@@ -287,3 +359,7 @@ msgstr "Името на сървъра или IP адреса за мултик�
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
 msgstr "Порта за мултикастово препредаване (udpxy) в локалната мрежа."
+
+msgctxt "#30684"
+msgid "Use inputstream.adaptive instead of ffmpeg's libavformat for m3u8 (HLS) streams."
+msgstr "ИЗползване на „inputstream.adaptive“ вместо „libavformat“ на ffmpeg за потоци от вида m3u8 (HLS)"
