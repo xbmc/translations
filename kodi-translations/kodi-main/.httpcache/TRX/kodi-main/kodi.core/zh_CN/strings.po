@@ -11,7 +11,7 @@
 # San <github@zhujunsan.net>, 2015
 # suwakowww <495599914@qq.com>, 2017
 # Tao Guo <gt945@163.com>, 2016
-# taxigps <taxigps@sina.com>, 2015-2019
+# taxigps <taxigps@sina.com>, 2015-2020
 # Wamdy <wamdy@live.cn>, 2017
 # Wei Zhang <zwzhang250@sina.com>, 2018
 # wwj402 <wwj402@gmail.com>, 2018
@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-02-19 21:43+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-04-19 05:33+0000\n"
+"Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2542,13 +2542,16 @@ msgid "Album artist"
 msgstr "专辑歌手"
 
 #. generic "play count" label used in different places
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "播放次数"
 
 #. generic "last played" label used in different places
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 #: xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#568"
@@ -3267,7 +3270,7 @@ msgstr "正在移除源"
 
 msgctxt "#752"
 msgid "Opacity"
-msgstr ""
+msgstr "不透明度"
 
 msgctxt "#754"
 msgid "Add program link"
@@ -3323,7 +3326,7 @@ msgstr "灰色"
 
 msgctxt "#768"
 msgid "Dark Grey"
-msgstr ""
+msgstr "深灰色"
 
 msgctxt "#770"
 msgid "Error {0:d}: share not available"
@@ -3508,7 +3511,7 @@ msgstr "最多录像"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#819"
 msgid "One time (Scheduled by timer rule)"
-msgstr ""
+msgstr "单次（由定时器规则计划）"
 
 #. Representation of a one-time timer.
 #: xbmc/pvr/timers/PVRTimerType.cpp
@@ -3538,25 +3541,25 @@ msgstr "定时器规则（基于指南）"
 #: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#824"
 msgid "Reminder: {0:s}"
-msgstr ""
+msgstr "提醒：{0:s}"
 
 #. Complete prefixed representation of a recording timer type.
 #: xbmc/pvr/timers/PVRTimerType.cpp
 msgctxt "#825"
 msgid "Recording: {0:s}"
-msgstr ""
+msgstr "录像：{0:s}"
 
 #. Label for a context menu entry to add a reminder timer
 #: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#826"
 msgid "Set reminder"
-msgstr ""
+msgstr "设置提醒"
 
 #. Label for a context menu entry to delete a reminder timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#827"
 msgid "Delete reminder"
-msgstr ""
+msgstr "删除提醒"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3568,13 +3571,13 @@ msgstr "定时器规则已删除"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#829"
 msgid "View reminder"
-msgstr ""
+msgstr "查看提醒"
 
 #. Label for a context menu entry to edit a reminder timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#830"
 msgid "Edit reminder"
-msgstr ""
+msgstr "编辑提醒"
 
 #. Weekday representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3638,7 +3641,7 @@ msgstr "仅本次"
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
 msgid "New!"
-msgstr ""
+msgstr "新的！"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -5455,7 +5458,7 @@ msgstr "密码不正确，"
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
 msgctxt "#12343"
 msgid "retries left"
-msgstr ""
+msgstr "剩余重试次数"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp xbmc/dialogs/GUIDialogNumeric.cpp
 #: xbmc/guilib/GUIKeyboardFactory.cpp
@@ -5548,7 +5551,7 @@ msgstr "使用移动和缩放特效"
 #: system/settings/settings.xml
 msgctxt "#12381"
 msgid "Switch to visualisation on playback"
-msgstr ""
+msgstr "播放时切换到可视化效果"
 
 #. time format with meridiem (xx) e.g. "HH:mm:ss xx"
 #: xbmc/LangInfo.cpp
@@ -6500,13 +6503,13 @@ msgstr "预置"
 #: xbmc/music/dialogs/GUIDialogVisualisationPresetList.cpp
 msgctxt "#13389"
 msgid "There are no presets available for this visualisation"
-msgstr "该可视化效果无可用设置"
+msgstr "该可视化效果无可用预置"
 
 msgctxt "#13390"
 msgid ""
 "There are no settings available\n"
 "for this visualisation"
-msgstr "该可视化效果没有设置"
+msgstr "该可视化效果没有可用设置"
 
 #: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
@@ -6720,7 +6723,7 @@ msgstr "启用高品质缩放器当缩放比大于"
 #: system/settings/settings.xml
 msgctxt "#13436"
 msgid "Use display HDR capabilities"
-msgstr ""
+msgstr "使用显示 HDR 功能"
 
 #: system/settings/settings.xml
 msgctxt "#13437"
@@ -6988,7 +6991,7 @@ msgstr "选择艺术图片类型"
 #: system/settings/settings.xml
 msgctxt "#13522"
 msgid "Split albums into individual discs"
-msgstr ""
+msgstr "将专辑拆分为单独的光盘"
 
 #. Description of setting with label #13522 "Split albums into individual
 #. discs"
@@ -6997,7 +7000,22 @@ msgctxt "#13523"
 msgid ""
 "When enabled, opening a multi-disc album shows the discs as individual items"
 " instead of all the songs. Opening a disc then shows the songs on that disc."
-msgstr ""
+msgstr "启用后，打开多碟专辑将会显示光盘项，而不是所有歌曲。打开光盘，才会显示该光盘上的歌曲。"
+
+#. Label of a setting that allows original release dates to be used instead of
+#. album release date
+#: system/settings/settings.xml
+msgctxt "#13524"
+msgid "Use original release date of albums for year"
+msgstr "年代使用专辑初始发行日期"
+
+#. Description of setting with label #13524
+#: system/settings/settings.xml
+msgctxt "#13525"
+msgid ""
+"When enabled, use the original year of release rather than the album release"
+" year (if available)."
+msgstr "启用后，使用初始发行年份，而不是专辑发行年份（如果可用）。"
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9040,7 +9058,7 @@ msgstr "排序：频道"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19063"
 msgid "First programme"
-msgstr ""
+msgstr "第一个节目"
 
 #. Label for epg grid window "jump to grid end" (youngest available programme)
 #. context menu entry and epg grid controls dialog help text
@@ -9048,7 +9066,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19064"
 msgid "Last programme"
-msgstr ""
+msgstr "最后的节目"
 
 #. Label for timer settings dialog header
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9086,7 +9104,7 @@ msgstr "指南"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19070"
 msgid "Current programme"
-msgstr ""
+msgstr "当前节目"
 
 #. pvr settings "epg update interval" setting label
 #: system/settings/settings.xml
@@ -9227,14 +9245,14 @@ msgstr "即时录像：{0:s}"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19094"
 msgid "Timer creation failed. Unsupported timer type."
-msgstr ""
+msgstr "定时器创建失败。不支持的定时器类型。"
 
 #. error message displayed in case adding a timer rule failed because no
 #. suitable epg-based timer rule type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19095"
 msgid "Timer rule creation failed. Unsupported timer type."
-msgstr ""
+msgstr "定时器规则创建失败。不支持的定时器类型。"
 
 #. label of a value for default epg event select action, where the action is
 #. choosen depending on whether the event is in the past, now or in the future
@@ -9306,7 +9324,7 @@ msgstr "请选择频道"
 #: xbmc/pvr/PVRGUITimerInfo.cpp
 msgctxt "#19106"
 msgid "Next recording on"
-msgstr ""
+msgstr "下次录制时间"
 
 #. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
 #. AM")
@@ -9810,7 +9828,7 @@ msgctxt "#19186"
 msgid ""
 "All your TV related data (channels, groups, guide, timers, clients) will be "
 "cleared. Are you sure?"
-msgstr ""
+msgstr "所有电视相关的数据（频道、组、节目指南、定时器、客户端）将被清除。确定吗？"
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9983,7 +10001,7 @@ msgstr "输入新频道的有效 URL"
 #: system/settings/settings.xml
 msgctxt "#19215"
 msgid "Reminders"
-msgstr ""
+msgstr "提醒"
 
 #. used by several skins
 msgctxt "#19216"
@@ -10437,7 +10455,7 @@ msgstr "全部频道"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19288"
 msgid "Date selector"
-msgstr ""
+msgstr "日期选择器"
 
 #. Label for button to hide a group in the group manager
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
@@ -10550,32 +10568,32 @@ msgstr "浏览定时器规则"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19305"
 msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "已删除定于“{2:s}”在频道“{1:s}”的“{0:s}”的错过的 PVR 提醒"
 
 #. text for event log entry for logging auto deleted missed reminders
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19306"
 msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
-msgstr ""
+msgstr "已删除定于“{1:s}”在频道“{0:s}”的错过的 PVR 提醒"
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19307"
 msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
-msgstr ""
+msgstr "定于 [B]{2:s}[/B] 在频道 [B]{1:s}[/B] 的 [B]{0:s}[/B] 的提醒"
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19308"
 msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
-msgstr ""
+msgstr "定于 [B]{1:s}[/B] 在频道 [B]{0:s}[/B] 的提醒"
 
 #. additional text for reminder announcement dialog, used if a recording can
 #. be scheduled
 #: xbmc/pvr/timers/PVRGUIActions.cpp
 msgctxt "#19309"
 msgid "(Auto-close of this reminder will schedule a recording...)"
-msgstr ""
+msgstr "（自动关闭此提醒将安排录像…）"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10584,7 +10602,7 @@ msgctxt "#19310"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
 "'{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "为自动关闭定于“{2:s}”在频道“{1:s}”的“{0:s}”的 PVR 提醒安排录像"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10593,37 +10611,37 @@ msgctxt "#19311"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
 "'{1:s}'"
-msgstr ""
+msgstr "为自动关闭定于“{1:s}”在频道“{0:s}”的 PVR 提醒安排录像"
 
 #. heading for pvr reminder notification dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19312"
 msgid "PVR reminder"
-msgstr ""
+msgstr "PVR 提醒"
 
 #. pvr settings "reminder auto close delay" setting label
 #: system/settings/settings.xml
 msgctxt "#19313"
 msgid "Automatically close reminder popup after"
-msgstr ""
+msgstr "之后自动关闭提醒弹出窗口"
 
 #. pvr settings "schedule recording on reminder auto-close" setting label
 #: system/settings/settings.xml
 msgctxt "#19314"
 msgid "Schedule recording when auto-closing the reminder popup"
-msgstr ""
+msgstr "自动关闭提醒弹出窗口时安排录像"
 
 #. generic 'backend order' label
 #: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#19315"
 msgid "Backend order"
-msgstr ""
+msgstr "后端顺序"
 
 #. pvr settings "Start all group channel numbers from 1" setting label
 #: system/settings/settings.xml
 msgctxt "#19316"
 msgid "Start group channel numbers from 1"
-msgstr ""
+msgstr "组频道号从 1 开始"
 
 #. Label for epg grid window "Jump 12 hours back" context menu entry and epg
 #. grid controls dialog help text
@@ -10631,7 +10649,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19317"
 msgid "12 hours back"
-msgstr ""
+msgstr "12小时前"
 
 #. Label for epg grid window "Jump 12 hours forward" context menu entry and
 #. epg grid controls dialog help text
@@ -10639,7 +10657,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19318"
 msgid "12 hours forward"
-msgstr ""
+msgstr "12小时后"
 
 #. Label for epg grid window "Activate previous channel group" context menu
 #. entry and epg grid controls dialog help text
@@ -10647,7 +10665,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19319"
 msgid "Previous group"
-msgstr ""
+msgstr "上一组"
 
 #. Label for epg grid window "Activate next channel group" context menu entry
 #. and epg grid controls dialog help text
@@ -10655,7 +10673,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19320"
 msgid "Next group"
-msgstr ""
+msgstr "下一组"
 
 #. Label for epg grid window "Activate channel group selector" context menu
 #. entry and epg grid controls dialog help text
@@ -10663,7 +10681,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19321"
 msgid "Group selector"
-msgstr ""
+msgstr "组选择器"
 
 #. Label for epg grid window "Jump to first channel" context menu entry and
 #. epg grid controls dialog help text
@@ -10671,7 +10689,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19322"
 msgid "First channel"
-msgstr ""
+msgstr "第一个频道"
 
 #. Label for epg grid window "Jump to playing channel" context menu entry and
 #. epg grid controls dialog help text
@@ -10679,7 +10697,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19323"
 msgid "Playing channel"
-msgstr ""
+msgstr "正播放频道"
 
 #. Label for epg grid window "Jump to last channel" context menu entry and epg
 #. grid controls dialog help text
@@ -10687,19 +10705,19 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19324"
 msgid "Last channel"
-msgstr ""
+msgstr "最后的频道"
 
 #. Label for epg grid controls "Programme" group header"
 #: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 msgctxt "#19325"
 msgid "Programme"
-msgstr ""
+msgstr "节目"
 
 #. Label for epg grid window "Navigate..." context menu entry
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19326"
 msgid "Navigate..."
-msgstr ""
+msgstr "导航..."
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11257,7 +11275,7 @@ msgstr "播放录像"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19690"
 msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
-msgstr ""
+msgstr "已预约定于“{2:s}”在频道“{1:s}”的“{0:s}”的 PVR 提醒"
 
 #. Text for shutdown confirmation dialog.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -12156,7 +12174,7 @@ msgstr "无本地专辑封面时，使用在线艺术图片。如本地和在线
 #: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#20226"
 msgid "Movie set information folder"
-msgstr ""
+msgstr "电影集信息文件夹"
 
 #: system/settings/settings.xml
 msgctxt "#20228"
@@ -15020,7 +15038,7 @@ msgstr "下载字幕..."
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24135"
 msgid "To use this feature you must enable an add-on:"
-msgstr ""
+msgstr "使用此功能需要启用插件："
 
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24136"
@@ -15120,56 +15138,56 @@ msgstr "插件与此版本的 Kodi 不兼容。"
 #: apple remote
 msgctxt "#24153"
 msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
-msgstr ""
+msgstr "启用以使 Siri 遥控器符合正常的 Apple tvOS 行为"
 
 #: apple remote
 msgctxt "#24154"
 msgid "Idle remote handling after N seconds"
-msgstr ""
+msgstr "N秒后空闲遥控器处理"
 
 #: apple remote
 msgctxt "#24155"
 msgid "After remote idles, the first tap/swipe received will wake it"
-msgstr ""
+msgstr "遥控器空闲后，收到第一次点击将唤醒它"
 
 #: apple remote
 msgctxt "#24156"
 msgid "30 Seconds"
-msgstr ""
+msgstr "30 秒"
 
 #: apple remote
 msgctxt "#24157"
 msgid "60 Seconds"
-msgstr ""
+msgstr "60 秒"
 
 #: apple remote
 msgctxt "#24158"
 msgid "90 Seconds"
-msgstr ""
+msgstr "90 秒"
 
 #: apple remote
 msgctxt "#24159"
 msgid "120 Seconds"
-msgstr ""
+msgstr "120 秒"
 
 #: apple remote
 msgctxt "#24160"
 msgid "Enable Siri remote timeout"
-msgstr ""
+msgstr "启用 Siri 遥控器超时"
 
 #: apple remote
 msgctxt "#24161"
 msgid "Enable remote input timeout for tap/swipe"
-msgstr ""
+msgstr "启用点击的遥控器输入超时"
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
-msgstr ""
+msgstr "使用 Kodi 虚拟键盘"
 
 #: apple remote
 msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
-msgstr ""
+msgstr "匹配 Apple tvOS 标准（Siri 遥控器）"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -18359,14 +18377,14 @@ msgctxt "#36205"
 msgid ""
 "Sort the channels by channel number from the backend, but use local "
 "numbering for channels."
-msgstr ""
+msgstr "按后端频道号排序频道，但使用本地的频道号。"
 
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend. Only works with one enabled PVR "
 "add-on!"
-msgstr ""
+msgstr "使用后端频道编号。仅对一个已启用 PVR 插件有效！"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18533,7 +18551,7 @@ msgstr "当向前后翻频道时，延迟真实频道切换。这使你不用等
 #: system/settings/settings.xml
 msgctxt "#36233"
 msgid "This category contains settings for recordings."
-msgstr ""
+msgstr "此功能区包含录像相关设置。"
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -18988,26 +19006,26 @@ msgstr "当以歌手排序音乐项时，使用排序名如 Parton、Dolly 而�
 #: system/settings/settings.xml
 msgctxt "#36295"
 msgid "Set the the subtitle opacity."
-msgstr ""
+msgstr "设置字幕不透明度。"
 
 #: system/settings/settings.xml
 msgctxt "#36296"
 msgid "This category contains settings for reminders."
-msgstr ""
+msgstr "此功能区包含提醒相关设置。"
 
 #: system/settings/settings.xml
 msgctxt "#36297"
 msgid ""
 "Choose a time in seconds after which PVR reminder popups will be "
 "automatically closed."
-msgstr ""
+msgstr "选择一个以秒为单位的时间，在此时间之后 PVR 提醒弹出窗口将自动关闭。"
 
 #: system/settings/settings.xml
 msgctxt "#36298"
 msgid ""
 "If enabled, a recording for the programme to remind will be scheduled when "
 "auto-closing the reminder popup, if supported by the PVR add-on and backend."
-msgstr ""
+msgstr "如果启用，则在自动关闭提醒弹出窗口时，如果 PVR 插件和后端支持，将安排要提醒的节目的录制。"
 
 #. Description of setting with label #13436 "Use display HDR capabilities"
 #: system/settings/settings.xml
@@ -19015,21 +19033,21 @@ msgctxt "#36299"
 msgid ""
 "Switch display into HDR mode if media with HDR information is played.\n"
 "If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr ""
+msgstr "如果播放包含 HDR 信息的媒体，则将显示切换到 HDR 模式。\n如果禁用，HDR 信息将用于 Kodi 的内部 HDR 路线。"
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
 msgctxt "#36300"
 msgid ""
 "Select the folder where movie set information (images) are saved locally."
-msgstr ""
+msgstr "选择保存电影集信息（图片）的文件夹。"
 
 #: xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#36301"
 msgid ""
 "No 'Movie set information folder' is configured to store movie set images so"
 " they will not be exported. Do you want to proceed?"
-msgstr ""
+msgstr "未设置用于存储电影集图片的“电影集信息文件夹”，因此不会导出它们。继续吗？"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19060,7 +19078,7 @@ msgctxt "#36306"
 msgid ""
 "If not using backend channel numbers then start all groups channel numbers "
 "from 1."
-msgstr ""
+msgstr "如果未使用后端频道号，则所有组频道号从 1 开始。"
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -19252,7 +19270,7 @@ msgctxt "#36334"
 msgid ""
 "Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr ""
+msgstr "允许本机程序通过 Web 接口或 JSON-RPC 接口协议控制此应用。"
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -21440,22 +21458,42 @@ msgstr "现在刷新此项目的信息吗？"
 #: system/library/music/boxsets.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38074"
 msgid "Boxsets"
-msgstr ""
+msgstr "套装合辑"
 
 #: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#38075"
 msgid "* All discs"
-msgstr ""
+msgstr "* 所有碟片"
 
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#38076"
 msgid "Disc title"
-msgstr ""
+msgstr "光盘标题"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38077"
 msgid "Total discs"
-msgstr ""
+msgstr "碟片总计"
+
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/music/GUIViewStateMusic.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38078"
+msgid "Original year"
+msgstr "初始年份"
+
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+msgctxt "#38079"
+msgid "Original date"
+msgstr "初始日期"
+
+#. Music property - Beats Per Minute
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38080"
+msgid "BPM"
+msgstr "每分节拍"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -21546,7 +21584,7 @@ msgstr "此功能区包含图形用户界面的其他设置"
 msgctxt "#38112"
 msgid ""
 "Automatically go to the visualisation window when audio playback starts"
-msgstr ""
+msgstr "音频播放开始时自动转到可视化效果窗口"
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"
@@ -22086,10 +22124,10 @@ msgstr "分集剧情"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#39117"
 msgid "Verbose logging for the [B]Announcer[/B] component"
-msgstr ""
+msgstr "[B]播报员[/B]组件详细日志"
 
 #. Label for action to present native iOS sharing sheet
 #: system/settings/darwin_ios.xml
 msgctxt "#39118"
 msgid "Share debug log"
-msgstr ""
+msgstr "分享调试日志"

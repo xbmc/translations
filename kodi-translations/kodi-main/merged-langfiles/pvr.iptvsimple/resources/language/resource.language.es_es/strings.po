@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -188,9 +188,9 @@ msgctxt "#30066"
 msgid "Use inputstream.adaptive for m3u8 (HLS) streams"
 msgstr "Usar inputstream.adaptive para emisiones m3u8 (HLS)"
 
-msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "Usar opciones de reconexión http de FFMpeg cuando sea posible"
+msgctxt "#30068"
+msgid "User-Agent"
+msgstr "User-Agent"
 
 msgctxt "#30100"
 msgid "Catchup"
@@ -207,6 +207,10 @@ msgstr "Formato de cadena de pregunta"
 msgctxt "#30103"
 msgid "Catchup window"
 msgstr "Ventana de catchup"
+
+msgctxt "#30104"
+msgid "All channels support catchup using mode"
+msgstr "Todos los canales soportan este modo de catchup"
 
 msgctxt "#30105"
 msgid "Watch From EPG"
@@ -235,6 +239,22 @@ msgstr "Deshabilitado"
 msgctxt "#30111"
 msgid "Default"
 msgstr "Por defecto"
+
+msgctxt "#30112"
+msgid "Append"
+msgstr "Añadir"
+
+msgctxt "#30113"
+msgid "Shift (SIPTV)"
+msgstr "Shift (SIPTV)"
+
+msgctxt "#30114"
+msgid "Flussonic"
+msgstr "Flussonic"
+
+msgctxt "#30115"
+msgid "Xtream codes"
+msgstr "Códigos Xtream"
 
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
@@ -368,6 +388,10 @@ msgctxt "#30685"
 msgid "Note this can only apply to http/https streams that are processed by libavformat (e.g. M3u8/HLS). Using libavformat can be specified in an M3U file by setting the property `inputstreamclass` as `inputstream.ffmpeg` for kodi's internal implementation or `inputstream.ffmpegdirect` for addon version. I.e. adding the line: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If this option is not enabled it can still be enabled per stream/channel by adding a kodi property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr "Nota: Esto solo aplica a flujos http/https que se procesen con libavformat (p.ej. m3u8/HLS). El uso de libavformat se puede especificar en un archivo M3U poniendo la propiedad 'inputstreamclass' como 'inputstream.ffmpeg' en la implementación interna de Kodi, o 'inputstream.ffmpegdirect' para la versión addon. P.ej. añadiendo la linea '#KODIPROP:inputstreamclass=inputstream.ffmpeg'. Si esta opción no esta activada, se puede activar para cada flujo/canal añadiendo la propiedad Kodi. P.ej. '#KODIPROP:http-reconnect=true'."
 
+msgctxt "#30686"
+msgid "Use this User-Agent if there is not one supplied as a property or as part of the channel stream URL."
+msgstr "Usa este User-Agent si no viene ninguno definido como parte de la URL de emisión."
+
 msgctxt "#30700"
 msgid "Catchup settings for viewing archived live programmes. Allows the option of 'Play programme' when viewing EPG entry info."
 msgstr "Ajustes de catchup para ver programas en directo archivados. Permite la opcion 'Ver Programa' cuando se ve la información de EPG."
@@ -384,9 +408,9 @@ msgctxt "#30703"
 msgid "A number of days into the past in which it is possible to catchup on a programme. Can be overidden in an M3U entry using a 'catchup-days' tag."
 msgstr "Número de días pasados en los que es posible recoger un programa. Se puede sobreescribir en la entrada M3U usando la etiqueta 'catchup-days'."
 
-msgctxt "#30705"
-msgid "When disabled any catchup programme from the past will be played like a video (bounded by start and end times). If enabled, it will instead act like a live stream with timeshift, also allowing the ability to skip back and forward programmes."
-msgstr "Cuando se desactiva cualquier programa catchup del pasado se reproducirá como cualquier vídeo (delimitado por tiempo de inicio y final). Si se activa, se verá como un evento en directo con timeshift, permitiendo rebobinar y avanzar en el programa."
+msgctxt "#30704"
+msgid "If enabled it is assumed that all channels support catchup using the selected mode if they do not have catchup tags. In this case the 'Query format string' and 'Catchup window' number of days will come from the addon settings if needed. If this option is disabled then an M3U entry must have at least a 'catchup=' tag to enable catchup. The options for how to build the catch URL are: [Disabled] - Do not assume all channel support catchup; [Default] - Use catchup source as the full catchup URL, if there is no catchup source use Append mode; [Append] - Append the catchup source to the channel URL, if there is no catchup source using the 'Query format string'; [Shift (SIPTV)] - Append the standard SIPTV catchup string to the channel URL; [Flussonic] - Build a flussonic URL from the channel URL; [Xtream codes] - Build an Xtream codes URL from the channel URL."
+msgstr "Si se activa se asume que todos los canales soportan el modo de catchup seleccionado si no hay ninguna etiqueta de catchup. En este caso, el 'Formato de cadena de búsqueda' y la 'Ventana de catchup' serán los del ajuste del addon si se necesitaran. Si esta opción esta desactivada, entonces la entrada M3U deberá tener al menos una etiqueta 'catchup=' para que haga catchup. Las opciones para construir la URL de catch son: [Desactivado] - No asumir que todos los canales lo soportan; [Por defecto] - Usa el origen de catchup como URL completa de catchup. [Añadir] Añade el origen de catchup a la URL del canal. Si no hay origen de canal definido en 'Formato de cadena de búsqueda'; [Shift (SIPTV)] - Añade la cadena estándar de SIPTV a la URL del canal; [Flussonic] - Construye una URL flussonic a partir de la URL de canal; [Códigos Xtream] - Construye URL de códigos Xtream a partir de la URL de canal."
 
 msgctxt "#30706"
 msgid "The amount of buffer to give before the playback start point of an EPG entry that will be watched as a video."

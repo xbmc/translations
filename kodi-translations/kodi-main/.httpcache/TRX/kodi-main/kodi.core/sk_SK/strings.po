@@ -10,19 +10,19 @@
 # Michal Paulovic <bbaron@bbaron.sk>, 2017
 # mmichalik <mmichalik@gmail.com>, 2016
 # mmichalik <mmichalik@gmail.com>, 2016
-# nextlooper42, 2017-2019
+# nextlooper42, 2017-2020
 # Patrik Špaňo <pa4k.xyon@gmail.com>, 2019
 # Peter Durovic <durovic.p@gmail.com>, 2018
 # Tibor Repček <tiborepcek@gmail.com>, 2019
 # Tomáš Tomovčík <tomovcik.tomas@gmail.com>, 2016
-# Vladimír Záhradník <vladimir.zahradnik@protonmail.com>, 2015-2018
+# Vladimír Záhradník <vladimir@zahradnik.io>, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-02-19 21:43+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-04-10 15:10+0000\n"
+"Last-Translator: nextlooper42\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/teamxbmc/kodi-main/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2540,13 +2540,16 @@ msgid "Album artist"
 msgstr "Autor albumu"
 
 #. generic "play count" label used in different places
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Počet prehratí"
 
 #. generic "last played" label used in different places
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 #: xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#568"
@@ -3321,7 +3324,7 @@ msgstr "Sivá"
 
 msgctxt "#768"
 msgid "Dark Grey"
-msgstr ""
+msgstr "Tmavo šedá"
 
 msgctxt "#770"
 msgid "Error {0:d}: share not available"
@@ -3548,13 +3551,13 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogPVRInfo.xml xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#826"
 msgid "Set reminder"
-msgstr ""
+msgstr "Nastaviť pripomienku"
 
 #. Label for a context menu entry to delete a reminder timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#827"
 msgid "Delete reminder"
-msgstr ""
+msgstr "Odstrániť pripomienku"
 
 #. Text for notification that a timer rule has been deleted
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3566,13 +3569,13 @@ msgstr "Pravidlo časovača bolo odstránené"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#829"
 msgid "View reminder"
-msgstr ""
+msgstr "Zobraziť pripomienku"
 
 #. Label for a context menu entry to edit a reminder timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#830"
 msgid "Edit reminder"
-msgstr ""
+msgstr "Upraviť pripomienku"
 
 #. Weekday representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3636,7 +3639,7 @@ msgstr "Iba tento"
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
 msgid "New!"
-msgstr ""
+msgstr "Nové!"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -6995,6 +6998,21 @@ msgctxt "#13523"
 msgid ""
 "When enabled, opening a multi-disc album shows the discs as individual items"
 " instead of all the songs. Opening a disc then shows the songs on that disc."
+msgstr ""
+
+#. Label of a setting that allows original release dates to be used instead of
+#. album release date
+#: system/settings/settings.xml
+msgctxt "#13524"
+msgid "Use original release date of albums for year"
+msgstr ""
+
+#. Description of setting with label #13524
+#: system/settings/settings.xml
+msgctxt "#13525"
+msgid ""
+"When enabled, use the original year of release rather than the album release"
+" year (if available)."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -21453,6 +21471,26 @@ msgstr ""
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38077"
 msgid "Total discs"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/music/GUIViewStateMusic.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38078"
+msgid "Original year"
+msgstr ""
+
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+msgctxt "#38079"
+msgid "Original date"
+msgstr ""
+
+#. Music property - Beats Per Minute
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38080"
+msgid "BPM"
 msgstr ""
 
 #. Description of section #14200 "Player""

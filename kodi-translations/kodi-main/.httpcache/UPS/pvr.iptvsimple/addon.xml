@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="pvr.iptvsimple"
-  version="4.11.1"
+  version="4.14.2"
   name="PVR IPTV Simple Client"
-  provider-name="nightik">
-  <requires>@ADDON_DEPENDS@</requires>
+  provider-name="nightik and Ross Nicholson">
+  <requires>@ADDON_DEPENDS@
+    <import addon="inputstream.ffmpegdirect" minversion="1.9.2" optional="true"/>
+    <import addon="inputstream.adaptive" minversion="2.5.5" optional="true"/>
+    <import addon="inputstream.rtmp" minversion="3.0.3" optional="true"/>
+  </requires>
   <extension
     point="xbmc.pvrclient"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
@@ -158,7 +162,82 @@
     <disclaimer lang="zh_CN">这是不稳定版的软件！作者不对录像失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
     <disclaimer lang="zh_TW">這是測試中的軟體！原創作者無法針對以下情況負責：包括播放失敗，不正確的電子節目表，多餘的時數，或任何不可預期的不良影響。</disclaimer>
     <platform>@PLATFORM@</platform>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/kodi-pvr/pvr.hts</source>
+    <forum>https://forum.kodi.tv/forumdisplay.php?fid=215</forum>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <news>
+v4.14.2
+- Check to make sure catchup streams support timeshifting before letting them do so
+- Fix catchup streams for fs, xc and shift being passed URL with possible protocol options
+
+v4.14.1
+- Fixed: Send manifest type property to ffmpegdirect so it can recognise Smooth Streaming
+
+v4.14.0
+- Added: Stream Manager for runtime caching of stream/mime types for speeding up channel switches
+- Added: Deprecate use of inputstream.ffmpegdirect.mime_type and use mimetype property instead
+- Added: Support advanced setting to set a default inputstream and/or MIME type for channels without them
+- Fixed: Fix full timeshift calc not being applied to catchup streams
+- Added: Suppport catchup-correction value in M3U file for catchup streams geo mismatched to wrong time
+
+v4.13.6
+- Update: PVR API 6.5.0
+
+v4.13.5
+- Fixed: Fix plugin URLs for channels by disabling stream type URL tests
+- Update: Update readme concerning terminating catchup streams
+
+v4.13.4
+- Fixed: Only allow timeshifting catchup from EPG if channel supports it
+
+v4.13.3
+- Update: PVR API 6.4.0
+- Update: Minor cleanups
+
+v4.13.2
+- Fixed: Install all inputstream dependencies by default.
+- Fixed: Debian control files for run-time dependencies.
+
+v4.13.1
+- Fixed: Install ffmpegdirect dependency by default.
+
+v4.13.0
+- Added: Add support for catchup stream granularity property for ffmpegdirect
+- Fixed: Terminating catchup stream check missing use case
+
+v4.12.0
+- Added: Add support for terminating catchup streams property for ffmpegdirect
+- Update: Convert kodiprop names inputstreamaddon and inputstreamclass to inputstream on load
+
+v4.11.7
+- Fixed: stream media headers not set when inputstream.adaptive is used for HLS streams
+
+v4.11.6
+- Fixed: Fix incorrect live URL selection and inputstream for standard (no timeshift) catchup streams
+- Fixed: Correctly cache mime_type for streams
+
+v4.11.5
+- Fixed: Typo in date regex, caused failure to load EPG on some platforms
+
+v4.11.4
+- Fixed: EPG performance
+- Update: PVR API 6.3.0
+- Added: GPLv2+ badge on README
+- Update: SPDX in copyright header for for GPLv2 or later
+
+v4.11.3
+- Add: GPL2 license file and show GPL2 on README.md
+- Update: Add source url, forum url and license name to addon.xml
+- Update: Copyright year to 2020 and use Kodi / kodi.tv
+- Update: Debian build code
+- Update: Some minor cleanups
+
+v4.11.2
+- Update: PVR API 6.2.0
+
 v4.11.1
 - Fixed: Also check for ffmpegdirect mime type when checking stream type
 - Fixed: Pass mime type to ffmpegdirect if available

@@ -1,6 +1,7 @@
 # Kodi Media Center language file
 # Translators:
 # Aisac <raspberrypi@aisac.de>, 2015
+# Altay Aydın <aaltay734@gmail.com>, 2020
 # Jack Elliott <eomuris@gmail.com>, 2017
 # Erhan ERSÖZ <3rhan3rsoz@gmail.com>, 2015
 # Mucahid Zeyrek <mucahid.zeyrek@dhl.com>, 2017
@@ -13,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-02-20 11:37+0000\n"
+"PO-Revision-Date: 2020-04-15 12:12+0000\n"
 "Last-Translator: Özgür BASKIN\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/teamxbmc/kodi-main/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -1376,7 +1377,7 @@ msgstr "Medya varsayılanı"
 #: xbmc/LangInfo.cpp xbmc/cores/VideoPlayer/VideoPlayer.cpp
 msgctxt "#308"
 msgid "Original language"
-msgstr "Orjinal dil"
+msgstr "Özgün dil"
 
 #: xbmc/LangInfo.cpp
 msgctxt "#309"
@@ -2532,13 +2533,16 @@ msgid "Album artist"
 msgstr "Albüm sanatçısı"
 
 #. generic "play count" label used in different places
-#: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
+#: xbmc/playlists/SmartPlaylist.cpp
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
+#: addons/skin.estuary/xml/Variables.xml
 #: xbmc/pvr/dialogs/GUIDialogPVRRecordingSettings.cpp
 msgctxt "#567"
 msgid "Play count"
 msgstr "Çalma sayısı"
 
 #. generic "last played" label used in different places
+#: addons/skin.estuary/xml/Includes_MusicInfo.xml
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 #: xbmc/pvr/windows/GUIViewStatePVR.cpp
 msgctxt "#568"
@@ -6989,6 +6993,21 @@ msgid ""
 " instead of all the songs. Opening a disc then shows the songs on that disc."
 msgstr "Etkinleştirildiğinde, çok diskli bir albümün açılması diskleri tüm şarkılar yerine ayrı ayrı öğeler olarak gösterir. Bir disk açıldığında, o diskteki şarkıları gösterir."
 
+#. Label of a setting that allows original release dates to be used instead of
+#. album release date
+#: system/settings/settings.xml
+msgctxt "#13524"
+msgid "Use original release date of albums for year"
+msgstr "Yıl için albümlerin orijinal çıkış tarihini kullanın"
+
+#. Description of setting with label #13524
+#: system/settings/settings.xml
+msgctxt "#13525"
+msgid ""
+"When enabled, use the original year of release rather than the album release"
+" year (if available)."
+msgstr "Aktifleştirildiğinde, albüm çıkış tarihi yerine orijinal çıkış tarihini kullanır (eğer varsa)."
+
 #: system/settings/settings.xml
 msgctxt "#13550"
 msgid "Delay after change of refresh rate"
@@ -10540,32 +10559,32 @@ msgstr "Zamanlayıcı kuralını göster"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19305"
 msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "'{2:s}' tarihinde '{1:s}' kanalındaki '{0:s}' programı için kaçırılan anımsatıcı silindi."
 
 #. text for event log entry for logging auto deleted missed reminders
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19306"
 msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
-msgstr ""
+msgstr "'{1:s}' tarihinde '{0:s}' kanalı için kaçırılan PVR anımsatıcı silindi"
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19307"
 msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
-msgstr ""
+msgstr "[B]{2:s}[/B] tarihinde [B]{1:s}[/B] kanalındaki [B]{0:s}[/B] programı için anımsatıcı."
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19308"
 msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
-msgstr ""
+msgstr "[B]{1:s}[/B] tarihinde [B]{0:s}[/B] kanalı için anımsatıcı."
 
 #. additional text for reminder announcement dialog, used if a recording can
 #. be scheduled
 #: xbmc/pvr/timers/PVRGUIActions.cpp
 msgctxt "#19309"
 msgid "(Auto-close of this reminder will schedule a recording...)"
-msgstr ""
+msgstr "(Bu anımsatıcının otomatik kapanışı bir kayıt planlayacaktır...)"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10574,7 +10593,7 @@ msgctxt "#19310"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
 "'{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "'{2:s}' tarihinde '{1:s}' kanalındaki '{0:s}' programı için, otomatik kapanan PVR anımsatıcısı ile zamanlanmış kayıt"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10583,7 +10602,7 @@ msgctxt "#19311"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
 "'{1:s}'"
-msgstr ""
+msgstr "'{1:s}' tarihinde '{0:s}' kanalı için, otomatik kapanan PVR anımsatıcısı ile zamanlanmış kayıt"
 
 #. heading for pvr reminder notification dialog
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10601,7 +10620,7 @@ msgstr "Anımsatıcı açılır pencereyi otomatik olarak kapat:"
 #: system/settings/settings.xml
 msgctxt "#19314"
 msgid "Schedule recording when auto-closing the reminder popup"
-msgstr ""
+msgstr "Anımsatıcı açılır penceresini otomatik olarak kapatırken kayıt zamanla"
 
 #. generic 'backend order' label
 #: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
@@ -10613,7 +10632,7 @@ msgstr "Arka uç sırası"
 #: system/settings/settings.xml
 msgctxt "#19316"
 msgid "Start group channel numbers from 1"
-msgstr ""
+msgstr "Grup kanal numaralarını 1'den başlat"
 
 #. Label for epg grid window "Jump 12 hours back" context menu entry and epg
 #. grid controls dialog help text
@@ -11151,7 +11170,7 @@ msgstr "Özellikler"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19661"
 msgid "Original language"
-msgstr "Orjinal dil"
+msgstr "Özgün dil"
 
 #. label for "special characteristics" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11247,7 +11266,7 @@ msgstr "Kaydı oynat"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19690"
 msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
-msgstr ""
+msgstr "PVR, {2:s} içinde '{1:s}' kanalındaki '{0:s}' programı için bir anımsatıcı planladı"
 
 #. Text for shutdown confirmation dialog.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -11259,7 +11278,7 @@ msgstr "PVR şu anda '{1:s}' kanalındaki '{0:s}' programını kaydediyor."
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19692"
 msgid "PVR will start recording '{0:s}' on channel '{1:s}' in {2:s}."
-msgstr "PVR {2:s} dakika içinde '{1:s}' kanalındaki '{0:s}' programının kaydına başlayacak."
+msgstr "PVR {2:s} içinde '{1:s}' kanalındaki '{0:s}' programının kaydına başlayacak."
 
 #. Text for shutdown confirmation dialog
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -12146,7 +12165,7 @@ msgstr "Yerel bir albüm kapağının olmadığı yerlerde, çevrimiçi resim ku
 #: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#20226"
 msgid "Movie set information folder"
-msgstr ""
+msgstr "Film kümesi bilgi klasörü"
 
 #: system/settings/settings.xml
 msgctxt "#20228"
@@ -15115,12 +15134,12 @@ msgstr "Siri kumandasının normal Apple tvOS davranışıyla eşleşmesini sağ
 #: apple remote
 msgctxt "#24154"
 msgid "Idle remote handling after N seconds"
-msgstr ""
+msgstr "N saniye sonra uzaktan kumandayı devre dışı bırak"
 
 #: apple remote
 msgctxt "#24155"
 msgid "After remote idles, the first tap/swipe received will wake it"
-msgstr ""
+msgstr "Kumanda devre dışı kaldıktan sonra ilk tıklama/kaydırma aktifleştirir"
 
 #: apple remote
 msgctxt "#24156"
@@ -15150,7 +15169,7 @@ msgstr "Siri kumandası zaman aşımını etkinleştir"
 #: apple remote
 msgctxt "#24161"
 msgid "Enable remote input timeout for tap/swipe"
-msgstr ""
+msgstr "Kumanda zaman aşımını tıklama/kaydırma olarak aktifleştir"
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
@@ -18990,14 +19009,14 @@ msgctxt "#36297"
 msgid ""
 "Choose a time in seconds after which PVR reminder popups will be "
 "automatically closed."
-msgstr ""
+msgstr "PVR anımsatıcı açılır pencerelerinin otomatik olarak kapanması için saniye olarak süre belirleyin."
 
 #: system/settings/settings.xml
 msgctxt "#36298"
 msgid ""
 "If enabled, a recording for the programme to remind will be scheduled when "
 "auto-closing the reminder popup, if supported by the PVR add-on and backend."
-msgstr ""
+msgstr "Etkinleştirilirse ve PVR eklentisi ve arka uç tarafından destekleniyorsa, anımsatıcı açılır penceresi otomatik olarak kapanarak programın anımsatılması için bir kayıt planlanır."
 
 #. Description of setting with label #13436 "Use display HDR capabilities"
 #: system/settings/settings.xml
@@ -19005,21 +19024,21 @@ msgctxt "#36299"
 msgid ""
 "Switch display into HDR mode if media with HDR information is played.\n"
 "If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr ""
+msgstr "HDR bilgisi içeren bir medya oynatılıyorsa ekranınızı HDR moduna getirin. Devre dışı bırakılmışsa Kodi'nin dahili HDR yolu kullanılır."
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
 msgctxt "#36300"
 msgid ""
 "Select the folder where movie set information (images) are saved locally."
-msgstr ""
+msgstr "Film bilgilerinin (resimler) kaydedildiği dosyayı seçin."
 
 #: xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#36301"
 msgid ""
 "No 'Movie set information folder' is configured to store movie set images so"
 " they will not be exported. Do you want to proceed?"
-msgstr ""
+msgstr "Film resimlerinin depolanacağı hiçbir dosya seçilmedi, dışa aktarılmayacaklar. Devam etmek istiyor musunuz?"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19050,7 +19069,7 @@ msgctxt "#36306"
 msgid ""
 "If not using backend channel numbers then start all groups channel numbers "
 "from 1."
-msgstr ""
+msgstr "Arka uç kanal numaralarını kullanmıyorsanız bütün grupları kanal numaraları 1'den itibaren başlatın."
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -19242,7 +19261,7 @@ msgctxt "#36334"
 msgid ""
 "Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr ""
+msgstr "Bu cihazdaki programların bu uygulamayı ağ arayüzü veya JSON-RPC arayüzü protokolü ile kontrol etmesine izin ver."
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -21430,7 +21449,7 @@ msgstr "Bu öğenin bilgilerini şimdi yenilemek istiyor musunuz?"
 #: system/library/music/boxsets.xml xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38074"
 msgid "Boxsets"
-msgstr ""
+msgstr "Boxsetler"
 
 #: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#38075"
@@ -21446,6 +21465,26 @@ msgstr "Disk başlığı"
 msgctxt "#38077"
 msgid "Total discs"
 msgstr "Toplam diskler"
+
+#: xbmc/dialogs/GUIDialogMediaFilter.cpp
+#: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
+#: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNodeOverview.cpp
+#: xbmc/music/GUIViewStateMusic.cpp xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38078"
+msgid "Original year"
+msgstr "Orijinal yıl"
+
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+msgctxt "#38079"
+msgid "Original date"
+msgstr "Orijinal tarih"
+
+#. Music property - Beats Per Minute
+#: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38080"
+msgid "BPM"
+msgstr "BPM"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -21786,7 +21825,7 @@ msgstr "Şarkı çalma geçmişi içeri aktarılıyor"
 #: xbmc/music/MusicDatabase.cpp
 msgctxt "#38351"
 msgid "Matching data"
-msgstr "Veri eşleşiyor"
+msgstr "Eşleşen veri"
 
 #. Progress statement when importing music library - song history being
 #. updated
@@ -22022,7 +22061,7 @@ msgstr "captions"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
-msgstr "ses açıklaması"
+msgstr "sesli açıklama"
 
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39109"
