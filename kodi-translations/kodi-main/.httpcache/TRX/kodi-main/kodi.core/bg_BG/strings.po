@@ -7,6 +7,7 @@
 # tonywoolf <tonywoolf@gmail.com>, 2019
 # Любомир Василев, 2015,2018
 # Любомир Василев, 2018-2020
+# Любомир Василев, 2020
 # Пламен Петков, 2017
 # Пламен Петков, 2017
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-10 23:29+0000\n"
+"PO-Revision-Date: 2020-05-17 11:59+0000\n"
 "Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -3612,6 +3613,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "недели"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Премиера"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "На живо"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3631,8 +3644,8 @@ msgstr "Само този"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Ново!"
+msgid "New"
+msgstr "Ново"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3671,6 +3684,12 @@ msgstr "Потвърждаване на спирането на записа"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Наистина ли желаете да спрете записа?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Финал"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4603,7 +4622,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Информация за системата"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6365,7 +6384,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Информация за филма"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Сложи на опашката"
@@ -6883,6 +6903,16 @@ msgstr "Директно върху равнина"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Неограничено / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9777,6 +9807,7 @@ msgid "Deleted"
 msgstr "Изтрит"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9795,6 +9826,7 @@ msgid "Future days to display"
 msgstr "Дни за показване в бъдещето"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10208,6 +10240,12 @@ msgstr "Всеки ден в (ЧЧ:ММ:СС) часа"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Филтриране на канали"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "ТВ и радио канали"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12815,6 +12853,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Заменяй имената на файловете със заглавията от библиотеката"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -18500,10 +18539,8 @@ msgstr "Категорията съдържа настройки за ПВР и 
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Превключване на цял екран при пускане на канали и записи."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "Превключване на цял екран при пускане на канали."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20243,7 +20280,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Ползвай висококачествени текстури за обложките и фен-арта (ползва повече памет)."
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20947,7 +20984,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Позволи по-голяма дълбочина на цветовете за изображенията"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Ограничи резолюцията на потребителския интерфейс"
@@ -20986,7 +21023,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20996,7 +21033,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Неограничен"
@@ -21113,7 +21150,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Извлича миниатюри за представяне в прозореца за глави / отметки."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"

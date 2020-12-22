@@ -5,11 +5,11 @@
 # Adrián Fülöp <adrian.fulop@t-email.hu>, 2017
 # Adrián Fülöp <adrian.fulop@t-email.hu>, 2017
 # Ákos Szommer <aszommer@gmail.com>, 2015
-# Attila Ilyés <ilyes3@gmail.com>, 2018-2019
+# Attila Ilyés <ilyes3@gmail.com>, 2018-2020
 # alanwww1 <attila.jakosa@gmail.com>, 2015
 # Attila Zsigus <>, 2015
 # Balázs Bárdosi <bakus0003@gmail.com>, 2020
-# Balázs Meskó <mesko.balazs@fsf.hu>, 2015-2018
+# Balázs Meskó <meskobalazs@mailbox.org>, 2015-2018
 # benewfy <benewfy@gmail.com>, 2015
 # frodo <bilbohu@gmail.com>, 2016,2019
 # Daniel Uhrinyi <daniel.uhrinyi@gmail.com>, 2015
@@ -21,7 +21,7 @@
 # lacko835 <szalai-laszlo@freemail.hu>, 2015
 # Lock Punk <lockpunk@gmail.com>, 2016
 # Márk Kökény <oregapamgroup@gmail.com>, 2016,2018
-# Martijn Kaijser <machine.sanctum@gmail.com>, 2018
+# 87df3cd22d6f9f8005bb222ed4c11d66_5501021 <4a668c97a68a4bbdcb2d40da2ea4029e_22817>, 2018
 # Mátyás Demeter <mathias.demeter@gmail.com>, 2015
 # miles teg <varota@gmail.com>, 2017-2018
 # Adrián Fülöp <adrian.fulop@t-email.hu>, 2016-2017
@@ -33,8 +33,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-28 21:57+0000\n"
-"Last-Translator: Balázs Bárdosi <bakus0003@gmail.com>\n"
+"PO-Revision-Date: 2020-05-25 15:01+0000\n"
+"Last-Translator: Attila Ilyés <ilyes3@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/teamxbmc/kodi-main/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3631,6 +3631,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "vasárnaponként"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Bemutató"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Élő"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3650,8 +3662,8 @@ msgstr "Csak ezt"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Új!"
+msgid "New"
+msgstr "Új"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3690,6 +3702,12 @@ msgstr "Felvétel megállításának megerősítése"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Biztosan meg akarja állítani ezt a felvételt?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Finálé"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4622,7 +4640,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Rendszerinfó"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6384,7 +6402,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Film információ"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Lejátszási sorba tesz"
@@ -6903,6 +6922,16 @@ msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
 
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Korlátlan / 1080 (>30Hz)"
+
 #: system/settings/settings.xml
 msgctxt "#13505"
 msgid "Resample quality"
@@ -7010,7 +7039,7 @@ msgctxt "#13523"
 msgid ""
 "When enabled, opening a multi-disc album shows the discs as individual items"
 " instead of all the songs. Opening a disc then shows the songs on that disc."
-msgstr ""
+msgstr "Ha engedélyezve van, akkor a többlemezes album megnyitásakor a lemezeket különálló elemként jeleníti meg. Ha megnyit egy lemezt akkor megjelennek a lemezen lévő dalok."
 
 #. Label of a setting that allows original release dates to be used instead of
 #. album release date
@@ -9796,6 +9825,7 @@ msgid "Deleted"
 msgstr "Törölve"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9814,6 +9844,7 @@ msgid "Future days to display"
 msgstr "Megjelenítendő napok"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -9838,7 +9869,7 @@ msgctxt "#19186"
 msgid ""
 "All your TV related data (channels, groups, guide, timers, clients) will be "
 "cleared. Are you sure?"
-msgstr ""
+msgstr "A TV-vel kapcsolatos összes adat (csatornák, csoportok, útmutató, időzítők, ügyfelek) törlődik. Biztos, hogy törli?"
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -10228,6 +10259,12 @@ msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Csatornák szűrése"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "TV és rádió csatornák"
+
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
@@ -10578,32 +10615,32 @@ msgstr "Időzítő szabály megtekintése"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19305"
 msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "Törölt elfelejtett PVR emlékeztető a(z) '{0:s}' csatornáról a(z) '{1:s}' csatornán a(z) '{2:s}' alatt"
 
 #. text for event log entry for logging auto deleted missed reminders
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19306"
 msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
-msgstr ""
+msgstr "Törölt elfelejtett PVR emlékeztető a(z) '{0:s}' csatorna számára a(z) '{1:s}'"
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19307"
 msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
-msgstr ""
+msgstr "Emlékeztető a [B]{0:s}[/ B] számára a [B]{1:s}[/ B] csatornán a [B]{2:s}[/ B] alatt."
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19308"
 msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
-msgstr ""
+msgstr "Emlékeztető a [B]{0:s}[/B] csatornásn a [B]{1:s}[/B] alatt."
 
 #. additional text for reminder announcement dialog, used if a recording can
 #. be scheduled
 #: xbmc/pvr/timers/PVRGUIActions.cpp
 msgctxt "#19309"
 msgid "(Auto-close of this reminder will schedule a recording...)"
-msgstr ""
+msgstr "(Az emlékeztető automatikus bezárása ütemezni fogja a felvételt ...)"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10612,7 +10649,7 @@ msgctxt "#19310"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
 "'{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "Ütemezett felvétel az automatikusan zárt PVR emlékeztető számára a(z) '{0:s}' az '{1:s}' csatornán '{2:s}' alatt"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10621,7 +10658,7 @@ msgctxt "#19311"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
 "'{1:s}'"
-msgstr ""
+msgstr "Ütemezett felvétel automatikusan zárt PVR emlékeztető számára a(z) '{0:s}' csatornán a(z) '{1:s}' alatt"
 
 #. heading for pvr reminder notification dialog
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10651,7 +10688,7 @@ msgstr "Háttérkiszolgáló rendelés"
 #: system/settings/settings.xml
 msgctxt "#19316"
 msgid "Start group channel numbers from 1"
-msgstr ""
+msgstr "A csoportos csatornaszámok indítása az 1-től"
 
 #. Label for epg grid window "Jump 12 hours back" context menu entry and epg
 #. grid controls dialog help text
@@ -11285,7 +11322,7 @@ msgstr "Rögzítés lejátszása"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19690"
 msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
-msgstr ""
+msgstr "A PVR emlékeztetőt tervezett a(z) {0:s} csatornára a(z) {1:s} csatornán a(z) {2:s} alatt."
 
 #. Text for shutdown confirmation dialog.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -12834,6 +12871,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Fájlnevek helyett a médiatár címek mutatása"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -15048,7 +15086,7 @@ msgstr "Felirat letöltése..."
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24135"
 msgid "To use this feature you must enable an add-on:"
-msgstr ""
+msgstr "A szolgáltatás használatához engedélyeznie kell a kiegészítőt:"
 
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24136"
@@ -15148,17 +15186,17 @@ msgstr "A kiegészítő nem kompatibilis ezzel a Kodi verzióval"
 #: apple remote
 msgctxt "#24153"
 msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
-msgstr ""
+msgstr "Engedélyezheti, hogy a Siri távirányító megfeleljen az Apple tvOS normál viselkedésének"
 
 #: apple remote
 msgctxt "#24154"
 msgid "Idle remote handling after N seconds"
-msgstr ""
+msgstr "Tétlen távirányítás N másodperc után"
 
 #: apple remote
 msgctxt "#24155"
 msgid "After remote idles, the first tap/swipe received will wake it"
-msgstr ""
+msgstr "Tétlen távirányítás üzemmód után az első érintés/csúsztatás felébreszti"
 
 #: apple remote
 msgctxt "#24156"
@@ -15188,7 +15226,7 @@ msgstr "Siri távirányító időtúllépés engedélyezni"
 #: apple remote
 msgctxt "#24161"
 msgid "Enable remote input timeout for tap/swipe"
-msgstr ""
+msgstr "A távvezérlés időtúllépés engedélyezése a érintéshez/csúsztatáshoz"
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
@@ -15197,7 +15235,7 @@ msgstr "Kodi virtuális billentyűzetet használni"
 #: apple remote
 msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
-msgstr ""
+msgstr "Az Apple tvOS sztendernek megfelelő (Siri távirányító)"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -18387,14 +18425,14 @@ msgctxt "#36205"
 msgid ""
 "Sort the channels by channel number from the backend, but use local "
 "numbering for channels."
-msgstr ""
+msgstr "Csatornák rendezése a csatornák száma alapjá,n a háttérrendszerből, de a csatornákhoz használja a helyi számozást."
 
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend. Only works with one enabled PVR "
 "add-on!"
-msgstr ""
+msgstr "Használja a háttérkiszolgáló csatornájának számozását. Csak egy engedélyezett PVR-kiegészítővel működik!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18519,10 +18557,8 @@ msgstr "A kategória tartalmazza a PVR lejátszás és a csatornaváltási beál
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Teljes képernyőre váltás a csatornák és felvételek visszajátszásának elindításakor."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "A csatornák lejátszásának megkezdésekor váltson teljes képernyőre."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -18561,7 +18597,7 @@ msgstr "Amikor a csatornaváltás le/föl billentyűk megnyomásra kerülnek, a 
 #: system/settings/settings.xml
 msgctxt "#36233"
 msgid "This category contains settings for recordings."
-msgstr ""
+msgstr "Ez a kategória a felvételek beállításait tartalmazza."
 
 #: system/settings/settings.xml
 msgctxt "#36234"
@@ -19021,21 +19057,21 @@ msgstr "A felirat átlátszóságát beállítani"
 #: system/settings/settings.xml
 msgctxt "#36296"
 msgid "This category contains settings for reminders."
-msgstr ""
+msgstr "Ez a kategória az emlékeztetők beállításait tartalmazza."
 
 #: system/settings/settings.xml
 msgctxt "#36297"
 msgid ""
 "Choose a time in seconds after which PVR reminder popups will be "
 "automatically closed."
-msgstr ""
+msgstr "Válasszon egy, másodpercben megadott időtartamot, amely után a PVR emlékeztető felugró ablakok automatikusan bezáródnak."
 
 #: system/settings/settings.xml
 msgctxt "#36298"
 msgid ""
 "If enabled, a recording for the programme to remind will be scheduled when "
 "auto-closing the reminder popup, if supported by the PVR add-on and backend."
-msgstr ""
+msgstr "Ha engedélyezve van, akkor az emlékeztető program felvételét ütemezni kell az emlékeztető felugró ablak automatikus bezárásakor, ha a PVR kiegészítő és a háttérkiszolgáló támogatja."
 
 #. Description of setting with label #13436 "Use display HDR capabilities"
 #: system/settings/settings.xml
@@ -19043,21 +19079,21 @@ msgctxt "#36299"
 msgid ""
 "Switch display into HDR mode if media with HDR information is played.\n"
 "If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr ""
+msgstr "Váltás HDR módba, ha a HDR információval rendelkező média lejátszásra kerül.\nHa le van tiltva, akkor a HDR információkat a Kodi belső HDR útvonalán alkalmazzák."
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
 msgctxt "#36300"
 msgid ""
 "Select the folder where movie set information (images) are saved locally."
-msgstr ""
+msgstr "Válassza ki a mappát, ahová a filmek információit (képeket) helyileg menti."
 
 #: xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#36301"
 msgid ""
 "No 'Movie set information folder' is configured to store movie set images so"
 " they will not be exported. Do you want to proceed?"
-msgstr ""
+msgstr "A „Film-információs mappa” nincs beállítva a filmek képeinek tárolására, így azokat nem exportálják. Folytatja?"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19088,7 +19124,7 @@ msgctxt "#36306"
 msgid ""
 "If not using backend channel numbers then start all groups channel numbers "
 "from 1."
-msgstr ""
+msgstr "Ha nem használja a háttérkiszolgáló-csatorna számát, akkor kezdje 1-től az összes csoport csatornaszámát."
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -19280,7 +19316,7 @@ msgctxt "#36334"
 msgid ""
 "Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr ""
+msgstr "Hagyja, hogy az eszköz programjai ellenőrizzék ezt az alkalmazást a webes felületen vagy a JSON-RPC interfész protokollon keresztül."
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -20262,7 +20298,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Nagyobb felbontású képek használata a borítókhoz és a fanartokhoz (magasabb memóriahasználat)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20966,7 +21002,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Nagyobb színmélységű képek használata"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "GUI felbontás korlátozása"
@@ -21005,7 +21041,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -21015,7 +21051,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Korlátlan"
@@ -21132,7 +21168,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Bélyegképek kinyerése a fejezetekből a fejezetek / könyvjelzők párbeszédablakhoz. Ez növelheti a CPU terhelést."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -22134,10 +22170,10 @@ msgstr "Epizód előzetes"
 #: xbmc/settings/AdvancedSettings.cpp
 msgctxt "#39117"
 msgid "Verbose logging for the [B]Announcer[/B] component"
-msgstr ""
+msgstr "A [B]Bejelentő[/B] komponens naplózása"
 
 #. Label for action to present native iOS sharing sheet
 #: system/settings/darwin_ios.xml
 msgctxt "#39118"
 msgid "Share debug log"
-msgstr ""
+msgstr "Naplózás megosztása"

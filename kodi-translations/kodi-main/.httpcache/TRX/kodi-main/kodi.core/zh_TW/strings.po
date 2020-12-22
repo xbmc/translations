@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Translators:
 # BrLi <rainman59118@gmail.com>, 2015
-# 洪嘉鴻 <jerry9030@gmail.com>, 2015
+# Chiahong <jerry9030@gmail.com>, 2015
 # Chinian Wang <chinian.wang@gmail.com>, 2017
 # David Vukovic <davu@kodi.tv>, 2019
 # sushiboy <frank@sushiboy.com>, 2015
@@ -9,6 +9,7 @@
 # 陳小昭 <jeremyx@ms9.hinet.net>, 2015-2016
 # Julian Lai <laichiaheng@outlook.com>, 2016
 # L ouies <louies0623@gmail.com>, 2019
+# peter_ng, 2020
 # Samuel Lin <mubiesam@gmail.com>, 2015
 # Ji Hao Yu <yuhoward1206@outlook.com>, 2015
 # 陳小昭 <jeremyx@ms9.hinet.net>, 2016-2020
@@ -17,8 +18,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-07 04:53+0000\n"
-"Last-Translator: 陳小昭 <jeremyx@ms9.hinet.net>\n"
+"PO-Revision-Date: 2020-09-09 02:17+0000\n"
+"Last-Translator: peter_ng\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3615,6 +3616,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "每週日"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "首映"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "直播"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3634,8 +3647,8 @@ msgstr "僅本次"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "新上架!"
+msgid "New"
+msgstr "新番"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3674,6 +3687,12 @@ msgstr "確認停止錄影"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "您確定要停止這段錄影嗎？"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "完結篇"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4606,7 +4625,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "系統資訊"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6368,7 +6387,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "電影資訊"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "佇列項目"
@@ -6886,6 +6906,16 @@ msgstr "Direct To Plane"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "無限制 / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -8737,7 +8767,7 @@ msgstr "PVR 後端{0:d} - {1:s}"
 #: xbmc/dialogs/GUIDialogMediaSource.cpp xbmc/pvr/PVRGUIDirectory.cpp
 msgctxt "#19017"
 msgid "Recordings"
-msgstr "錄音"
+msgstr "錄影"
 
 #. Name of a setting, asking to enter the path to a folder that contains icons
 #. for TV channels
@@ -9780,6 +9810,7 @@ msgid "Deleted"
 msgstr "已刪除"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9798,6 +9829,7 @@ msgid "Future days to display"
 msgstr "顯示未來天數"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10211,6 +10243,12 @@ msgstr "每日喚醒時間 (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "過濾頻道"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "電視與廣播頻道"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12818,6 +12856,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "在檔案檢視中顯示媒體資訊"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -18503,10 +18542,8 @@ msgstr "此分類包含 PVR 播放和頻道切換的設定。"
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "播放頻道或錄影檔時切換至全螢幕顯示。"
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "以全螢幕播放頻道"
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20246,7 +20283,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "使用較高品質的封面與劇照(使用較多記憶體)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20950,7 +20987,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "啟用更高顏色深度圖像"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "設定使用者介面的解析度限制"
@@ -20989,7 +21026,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20999,7 +21036,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "無限制的"
@@ -21116,7 +21153,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "將章節中的縮圖粹取出來顯示在章節 / 書籤對話框中，這可能會增加CPU的負擔。"
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"

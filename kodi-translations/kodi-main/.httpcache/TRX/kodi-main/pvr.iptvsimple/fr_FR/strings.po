@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
 # tmtisfree <tmtisfree@free.fr>, 2015-2016,2019-2020
 # ryann, 2015
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-11 18:17+0000\n"
+"PO-Revision-Date: 2020-05-17 08:56+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -266,13 +266,28 @@ msgstr "Utiliser « inputstream.adaptive » pour les flux M3U8 (HLS)"
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "Utiliser si possible les options de reconnexion HTTP de FFMpeg"
+msgid "Use FFmpeg http reconnect options if possible"
+msgstr "Utiliser les options de reconnexion http de FFmpeg si possible"
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
 msgstr "Agent utilisateur"
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr "Nom du flux entrant"
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr "Type MIME"
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
+msgstr "Prédéfinitions de chaîne"
 
 #. label-category: catchup
 #. label-group: Catchup - Catchup
@@ -308,7 +323,7 @@ msgstr "Regarder depuis le guide des programmes (EPG)"
 #. label: Catchup - catchupPlayEpgAsLive
 msgctxt "#30106"
 msgid "Play from EPG in Live TV mode (using timeshift)"
-msgstr "Lire depuis le guide en mode TV directe (en décalage)"
+msgstr "Lire depuis le guide en mode TV en direct (avec différé)"
 
 #. label: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30107"
@@ -358,7 +373,7 @@ msgstr "Codes Xtream"
 #. help-category: General
 msgctxt "#30600"
 msgid "General settings required for the addon to function."
-msgstr "Paramètres généraux requis pour le fonctionnement de l'extension"
+msgstr "Paramètres généraux requis pour le fonctionnement de l'extension."
 
 #. help: General - m3uPathType
 msgctxt "#30601"
@@ -475,7 +490,7 @@ msgstr "Permet d'écraser ou non le décalage pour toutes les chaînes avec le �
 #. help-category: Channel Logos
 msgctxt "#30640"
 msgid "Settings related to Channel Logos."
-msgstr "Paramètres relatifs aux logos de chaînes"
+msgstr "Paramètres relatifs aux logos de chaînes."
 
 #. help: Channel Logos - logoPathType
 msgctxt "#30641"
@@ -510,7 +525,7 @@ msgstr "Comment gérer les logos de chaînes. Les options sont : [Ignorer] - N'u
 #. help-category: Genres
 msgctxt "#30660"
 msgid "Settings related to genres."
-msgstr "Paramètres relatifs aux genres"
+msgstr "Paramètres relatifs aux genres."
 
 #. help: Genres - useEpgGenreText
 msgctxt "#30661"
@@ -589,12 +604,28 @@ msgid ""
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr "NB : ceci ne s'applique qu'à des flux http/https opérés par libavformat (par ex. M3u8/HLS). L'utilisation de libavformat peut être spécifiée dans un fichier M3U en définissant la propriété `inputstreamclass` à `inputstream.ffmpeg` pour l'implementation interne de Kodi ou `inputstream.ffmpegdirect` pour une extension. Par ex. en ajoutant la ligne `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. Si cette option n'est pas activée, elle peut l'être par flux/chaîne en ajoutant une propriété Kodi, par ex. : `#KODIPROP:http-reconnect=true`."
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
 msgstr "Utilise cet agent utilisateur. si aucun n'a été fourni comme propriété ou fragment de l'URL du flux de la chaîne."
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr "Utilise ce flux entrant comme prédéfinition si aucun n'est fourni comme propriété (KODIPROP) de la chaîne. À utiliser avec précaution car ceci désactivera tout usage du comportement par défaut d'analyse de chaînes de l'extension."
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
+msgstr "Utilise ce type MIME comme prédéfinition si aucun n'est fourni comme propriété (KODIPROP) de la chaîne. À utiliser avec précaution car ceci désactivera tout usage du comportement par défaut d'analyse de chaînes de l'extension."
 
 #. help-category: Catchup
 msgctxt "#30700"
@@ -650,8 +681,10 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
-msgstr "Si désactivé, tout programme de rattrapage passé sera lu comme une vidéo (entre ses temps de début et fin). Si activé, il se comportera comme un flux direct en décalage, avec la possibilité d'avancer et reculer dans les programmes."
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
+msgstr "Si désactivé, tout programme de rattrapage passé sera lu comme une vidéo (entre ses temps de début et fin). Si activé, il se comportera comme un flux direct en différé, avec la possibilité d'avancer et reculer dans les programmes. Noter que le seul effet que cette option a sur les flux ne prenant pas en charge le différé est d'appliquer ou pas le tampon avant/après."
 
 #. help: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30706"

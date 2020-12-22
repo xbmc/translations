@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-10 20:39+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-11-15 12:29+0000\n"
+"Last-Translator: yohru <yohru7@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/teamxbmc/kodi-main/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3615,6 +3615,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "毎週日曜"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "プレミア"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "ライブ"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3634,8 +3646,8 @@ msgstr "この予約のみ"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "新しい！"
+msgid "New"
+msgstr "ニュース"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3674,6 +3686,12 @@ msgstr "録画停止の確認"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "この録画を停止してもよろしいですか？"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "フィナーレ"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4606,7 +4624,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "システム情報"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -5545,7 +5563,7 @@ msgstr "パンおよびズームエフェクトを使用する"
 #: system/settings/settings.xml
 msgctxt "#12381"
 msgid "Switch to visualisation on playback"
-msgstr ""
+msgstr "再生時にビジュアライザに切り替える"
 
 #. time format with meridiem (xx) e.g. "HH:mm:ss xx"
 #: xbmc/LangInfo.cpp
@@ -6368,7 +6386,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "ムービー情報"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "キュー アイテム"
@@ -6887,6 +6906,16 @@ msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
 
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "制限なし / 1080 (>30Hz)"
+
 #: system/settings/settings.xml
 msgctxt "#13505"
 msgid "Resample quality"
@@ -7001,7 +7030,7 @@ msgstr "有効にすると、マルチディスクアルバムを開いたとき
 #: system/settings/settings.xml
 msgctxt "#13524"
 msgid "Use original release date of albums for year"
-msgstr ""
+msgstr "リリース日時にオリジナルアルバムのものを使用する"
 
 #. Description of setting with label #13524
 #: system/settings/settings.xml
@@ -7009,7 +7038,7 @@ msgctxt "#13525"
 msgid ""
 "When enabled, use the original year of release rather than the album release"
 " year (if available)."
-msgstr ""
+msgstr "有効にすると、アルバムのリリース年ではなく、オリジナルのリリース年を使用します。(利用可能な場合)"
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9780,6 +9809,7 @@ msgid "Deleted"
 msgstr "削除しました"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9798,6 +9828,7 @@ msgid "Future days to display"
 msgstr "先の表示日数"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10211,6 +10242,12 @@ msgstr "毎日のウェイクアップ時間 (時:分:秒)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "チャンネルをフィルター"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "TVとラジオのチャンネル"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10629,7 +10666,7 @@ msgstr ""
 #: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#19315"
 msgid "Backend order"
-msgstr ""
+msgstr "バックエンドオーダー"
 
 #. pvr settings "Start all group channel numbers from 1" setting label
 #: system/settings/settings.xml
@@ -12818,6 +12855,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "ファイル名をライブラリのタイトルに置き換える"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -15137,7 +15175,7 @@ msgstr ""
 #: apple remote
 msgctxt "#24154"
 msgid "Idle remote handling after N seconds"
-msgstr ""
+msgstr "N秒後にアイドルリモート処理"
 
 #: apple remote
 msgctxt "#24155"
@@ -18503,10 +18541,8 @@ msgstr "このカテゴリーには、PVRの再生とチャンネル切り替え
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "チャンネルと録画の再生を開始するときにフルスクリーン表示に切り替えます。"
+msgid "Switch to full screen display when starting playback of channels."
+msgstr ""
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20246,7 +20282,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "カバーやファンアートに高品質のテクスチャを使用する(より多くのメモリが必要)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20950,7 +20986,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "色深度の高いアートワークを有効にする"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "GUIの解像度に制限をセット"
@@ -20989,7 +21025,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20999,7 +21035,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "制限なし"
@@ -21116,7 +21152,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "チャプター / ブックマークダイアログの表現用にチャプターのサムネイルを抽出。これはCPU負荷を増やすかもしれません。"
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -21475,19 +21511,19 @@ msgstr "合計ディスク"
 #: xbmc/music/GUIViewStateMusic.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38078"
 msgid "Original year"
-msgstr ""
+msgstr "オリジナル年"
 
 #: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
 msgctxt "#38079"
 msgid "Original date"
-msgstr ""
+msgstr "オリジナル日時"
 
 #. Music property - Beats Per Minute
 #: xbmc/utils/SortUtils.cpp xbmc/music/GUIViewStateMusic.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38080"
 msgid "BPM"
-msgstr ""
+msgstr "BPM"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml

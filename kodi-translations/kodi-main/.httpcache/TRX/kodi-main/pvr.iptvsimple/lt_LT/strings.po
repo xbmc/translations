@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
 # ArtX38 <ArtX38@gmail.com>, 2012
 # Zapata11 <raimondas.duzinskas@gmail.com>, 2015,2019-2020
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-08 12:51+0000\n"
+"PO-Revision-Date: 2020-07-06 08:07+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -238,12 +238,12 @@ msgstr "Išplėstiniai"
 #. label-group: Advanced - Multicast relay
 msgctxt "#30061"
 msgid "Multicast relay (udpxy)"
-msgstr ""
+msgstr "Daugialypė retransliacija (udpxy)"
 
 #. label: Advanced - transformMulticastStreamUrls
 msgctxt "#30062"
 msgid "Transform multicast stream URLs"
-msgstr ""
+msgstr "Transformuoti daugialypės retransliacijos URL adresus"
 
 #. label: Advanced - udpxyHost
 msgctxt "#30063"
@@ -267,19 +267,34 @@ msgstr "Naudoti inputstream.adaptive m3u8 (HLS) srautams"
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "Naudoti FFMpeg http pakartotinio prisijungimo parinktį, jei įmanoma"
+msgid "Use FFmpeg http reconnect options if possible"
+msgstr "Naudoti FFmpeg http pakartotinio prisijungimo parinktis kai įmanoma"
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
-msgstr "Naudotojo agentas"
+msgstr "Vartotojo agentas"
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr "Įvesties srauto vardas"
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr "MIME tipas"
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
+msgstr "Numatytieji kanalo nustatymai"
 
 #. label-category: catchup
 #. label-group: Catchup - Catchup
 msgctxt "#30100"
 msgid "Catchup"
-msgstr "Archyvas"
+msgstr "Laidų archyvas"
 
 #. label: Catchup - enableCatchup
 msgctxt "#30101"
@@ -339,7 +354,7 @@ msgstr "Numatytas"
 #. label-option: Catchup - allChannelsCatchupMode
 msgctxt "#30112"
 msgid "Append"
-msgstr "Pridėti pabaigoje"
+msgstr "Pridėti"
 
 #. label-option: Catchup - allChannelsCatchupMode
 msgctxt "#30113"
@@ -544,7 +559,7 @@ msgstr "Jei vieta yra [Nuotolinis kelias], šio nustatymo reikšmė privalo būt
 msgctxt "#30680"
 msgid ""
 "Advanced settings including multicast relays, streaming properties etc."
-msgstr ""
+msgstr "Išplėstiniai nustatymai, įskaitant daugialypes retransliacijas, transliacijos ypatybes ir kt."
 
 #. help: Advanced - transformMulticastStreamUrls
 msgctxt "#30681"
@@ -556,19 +571,19 @@ msgid ""
 " E.g. a UDP multicast stream URL like 'udp://@239.239.3.38:5239' would get "
 "transformed to something like "
 "'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
-msgstr ""
+msgstr "Daugialypiai (UDP/RTP) srautai blogai veikia Wifi tinkluose. Daugialypė retransliacija gali konvertuoti srautą iš UDP/RTP į HTTP. Įjungus šią parinktį, daugialypių srautų URL adresai iš  M3U failo bus transformuoti į HTTP adresus, kad juos būtų galima pasiekti per 'udpxy' retransliaciją vietiniame tinkle. Pvz., UDP daugialypio srauto URL adresas 'udp://@239.239.3.38:5239' bus trasformuotas į kažką panašaus į 'http://192.168.1.1:4000/udp/239.239.3.38:5239'."
 
 #. help: Advanced - udpxyHost
 msgctxt "#30682"
 msgid ""
 "The hostname or ip address of the multicast relay (udpxy) on the local "
 "network."
-msgstr ""
+msgstr "Daugialypės retransliacijos („udpxy“) kompiuterio vardas arba IP adresas vietinaime tinkle."
 
 #. help: Advanced - udpxyPort
 msgctxt "#30683"
 msgid "The port of the multicast relay (udpxy) on the local network."
-msgstr ""
+msgstr "Daugialypės retransliacijos („udpxy“) prievadas vietinaime tinkle."
 
 #. help: Advanced - useInputstreamAdaptiveforHls
 msgctxt "#30684"
@@ -588,21 +603,37 @@ msgid ""
 "`#KODIPROP:inputstreamclass=inputstream.ffmpeg`. If this option is not "
 "enabled it can still be enabled per stream/channel by adding a kodi "
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
-msgstr ""
+msgstr "Atminkite, kad tai taikoma http/https srautams, kurie yra padorojami 'libavformat' (e.g. M3u8/HLS). 'libavformat' naudojimas gali būti nurodytas M3U faile, nustatant savybės `inputstreamclass` reikšmę į `inputstream.ffmpeg` vidiniam KODI vykdymui arba į `inputstream.ffmpegdirect` priedo versijai. Pvz., pridėjus eilutę: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. Jei ši parinktis nėra įgalinta, ji vis dar gali būti įjungta kiekvienam srautui/kanalui atskirai, pridėjus KODI savybę, kaip pvz.: `#KODIPROP:http-reconnect=true`."
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
-msgstr ""
+msgstr "Naudokite šį vartotojo agentą, jei jis nėra pateiktas nustatymuose arba kaip kanalo srauto URL dalis."
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr "Naudoti šį įvesties srautą kaip numatytąjį, jei jis nėra nurodytas kanalo savybėse (KODIPROP). Naudokite atsargiai, nes tai neleis naudoti jokio priedo numatytojo srauto tikrinimo elgesio."
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
+msgstr "Naudoti šį MIME tipą kaip numatytąjį, jei jis nėra nurodytas kanalo savybėse (KODIPROP). Naudokite atsargiai, nes tai neleis naudoti jokio priedo numatytojo srauto tikrinimo elgesio."
 
 #. help-category: Catchup
 msgctxt "#30700"
 msgid ""
 "Catchup settings for viewing archived live programmes. Allows the option of "
 "'Play programme' when viewing EPG entry info."
-msgstr ""
+msgstr "Laidų archyvo nustatymai programų įrašų peržiūrėjimui. Leidžia naudoti \"Atkurti programą\" parinkti peržiūrint EPG įrašo informaciją."
 
 #. help: Catchup - enableCatchup
 msgctxt "#30701"
@@ -619,14 +650,14 @@ msgid ""
 "and second to be inserted to give: `&cutv=2019-11-26T22:00:32`. If the M3U "
 "entry using has a catchup mode of 'default' or 'append' and a 'catchup-"
 "source' tag is provided in the M3U entry this setting will be ignored."
-msgstr ""
+msgstr "Užklausos eilutės formatas (priklauso nuo tiekėjo), leidžiantis prie URL pridėti laiko žymos informaciją, nurodančią iki kada reikia atsukti programą. Pvz., `&cutv={Y}-{m}-{d}T{H}:{M}:{S}`, kuris leidžia įterpti metus, mėnesį, dieną, valandą, minutę ir sekundę, kad pridėtų: `&cutv=2019-11-26T22:00:32`. Jei naudojamas archyvo režimas 'Numatytasis' arba 'Pridėti', o M3U įraše yra žyma 'catchup-source', šis nustatymas bus ignoruojamas."
 
 #. help: Catchup - catchupDays
 msgctxt "#30703"
 msgid ""
 "A number of days into the past in which it is possible to catchup on a "
 "programme. Can be overidden in an M3U entry using a 'catchup-days' tag."
-msgstr ""
+msgstr "Dienų skaičius į praeitį, kurioms gaimas laidų archyvas. Galima perrašyti M3U įraše naudojant 'catchup-days' žymą."
 
 #. help: Catchup - allChannelsCatchupMode
 msgctxt "#30704"
@@ -643,7 +674,7 @@ msgid ""
 "[Shift (SIPTV)] - Append the standard SIPTV catchup string to the channel "
 "URL; [Flussonic] - Build a flussonic URL from the channel URL; [Xtream "
 "codes] - Build an Xtream codes URL from the channel URL."
-msgstr ""
+msgstr "Jei įjungta, laikoma kad visi kanalai palaiko laidų archyvą pasirinktu režimu, jei jie neturi archyvo žymų. Tokiu atveju 'Užklausos formato eilutė' ir 'Archyvo lango' dienų skaičių bus paimti iš priedo nustatymų, jei to reikės. Jei ši parinktis išjungta, M3U įraše turi būti bent jau žyma 'catchup=', kad būtų įjungtas archyvo palaikymas. Archyvo URL sudarymo parinktys yra: [Išjungta] - netraktuoti, kad visi kanalai palaiko archyvą; [Numatytasis] - naudoti archyvo šaltinį kaip pilną archyvo URL, jei archyvo šaltinio nėra, naudoti režimą 'Pridėti'; [Pridėti] - pridėti archyvo šaltinį prie kanalo URL, jei nėra archyvo šaltinio naudojant 'Užklausos formato eilutę'; [Poslinkis (SIPTV)] - pridėti standartinę SIPTV archyvo eilutę prie kanalo URL; [Flussonic] - sudaryti flussonic URL iš kanalo URL; [Xtream kodai] - sudaryti Xtream kodų URL iš kanalo URL."
 
 #. help: Catchup - catchupPlayEpgAsLive
 msgctxt "#30705"
@@ -651,26 +682,28 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
-msgstr ""
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
+msgstr "Kai išjungta, bet kuri archyvo programa iš praeities bus atkuriama kaip vaizdo įrašas (apribota pradžios ir pabaigos laikais). Jei įjungta, ji veiks kaip tiesioginė transliacija su laiko poslinkiu, įgalinant laidų prasukimą pirmyn ir atgal. Atminkite, kad vienintelis šios parinkties poveikis srautams, nepalaikantiems laiko poslinkio, yra tai, taikyti ar ne prieš/po buferį."
 
 #. help: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30706"
 msgid ""
 "The amount of buffer to give before the playback start point of an EPG entry"
 " that will be watched as a video."
-msgstr ""
+msgstr "Buferio dydis, kuris bus suteiktas prieš EPG įrašo, kuris bus žiūrimas kaip vaizdo įrašas, atkūrimo pradžios tašką."
 
 #. help: Catchup - catchupWatchEpgEndBuffer
 msgctxt "#30707"
 msgid ""
 "The amount of buffer to give after the playback end point of an EPG entry "
 "that will be watched as a video."
-msgstr ""
+msgstr "Buferio dydis, kuris bus suteiktas po EPG įrašo, kuris bus žiūrimas kaip vaizdo įrašas, atkūrimo pabaigos taško."
 
 #. help: Catchup - catchupOnlyOnFinishedProgrammes
 msgctxt "#30708"
 msgid ""
 "When selected from the EPG the current live programme cannot be watched as "
 "catchup until finished."
-msgstr ""
+msgstr "Pasirinkus iš EPG, dabartinė tiesioginė programa negali būti peržiūrima iš archyvo, kol ji nepasibaigs."

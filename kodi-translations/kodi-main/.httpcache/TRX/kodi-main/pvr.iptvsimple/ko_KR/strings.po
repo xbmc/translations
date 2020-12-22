@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
 # Jin Yang <redus891@gmail.com>, 2016
 # Minho Park <parkmino@gmail.com>, 2019-2020
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-09 09:44+0000\n"
+"PO-Revision-Date: 2020-05-17 09:25+0000\n"
 "Last-Translator: Minho Park <parkmino@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/teamxbmc/kodi-main/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -267,13 +267,28 @@ msgstr "m3u8 (HLS) 스트림에 inputstream.adaptive 사용"
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "가능하면 FFMPEG http 다시 연결 옵션 사용"
+msgid "Use FFmpeg http reconnect options if possible"
+msgstr "가능하면 FFmpeg http 다시 연결 사용"
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
 msgstr "사용자-에이전트"
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr "입력 스트림 이름"
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr "MIME 형식"
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
+msgstr "기본 채널"
 
 #. label-category: catchup
 #. label-group: Catchup - Catchup
@@ -590,12 +605,28 @@ msgid ""
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr "이것은 libavformat (예. M3u8/HLS) 처리된 http/https 스트림에만 사용됩니다. libavformat 사용은 M3U 파일의 `inputstreamclass` 속성을 내장된 `inputstream.ffmpeg`이나 애드온 버전의 `inputstream.ffmpegdirect`로 설정할 수 있습니다. 예. 줄 추가: `#KODIPROP:inputstreamclass=inputstream.ffmpeg`. 이 옵션을 사용하지 않더라도 코디 속성을 추가해서 각 스트림/채널에 사용할 수 있습니다, 즉: `#KODIPROP:http-reconnect=true`."
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
 msgstr "등록 정보나 채널 스트림 URL이 없으면 사용자-에이전트를 사용합니다."
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr "채널의 속성(KODIPROP)이 제공되지 않으면 이 기본 채널을 기본 값으로 사용함. 이는 기본 스트림 검사를 하지 않으므로 주의해서 사용해야 합니다."
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
+msgstr "채널의 속성(KODIPROP)이 제공되지 않으면 이 MIME 형식을 기본 값으로 사용함. 이는 기본 스트림 검사를 하지 않으므로 주의해서 사용해야 합니다."
 
 #. help-category: Catchup
 msgctxt "#30700"
@@ -651,8 +682,10 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
-msgstr "사용하지 않으면 지난 모든 따라잡기 프로그램이 (시작과 마지막 횟수가 정해진) 비디오처럼 재생됩니다. 사용하면 시간차 시청의 라이브 스트림처럼 이전이나 이후 프로그램을 건너뛸 수 있습니다."
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
+msgstr "사용하지 않으면 이전의 따라잡기 프로그램이 (시작과 끝 시간으로 경계가 있는) 비디오처럼 재생됩니다. 사용하면 타임시프트를 가진 라이브 스트림처럼 동작하고, 이전과 다음으로 건너뛸 수 있습니다. 이 옵션은 버퍼 이전과 다음에 적용하는 지에 상관없이 타임 시프트를 지원하지 않는 스트림에 적용됩니다."
 
 #. help: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30706"

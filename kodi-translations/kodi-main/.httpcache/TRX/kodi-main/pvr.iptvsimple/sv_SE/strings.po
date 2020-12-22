@@ -1,9 +1,10 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
-# andbo467 <andbo467@student.liu.se>, 2017
+# Andreas Bolin <andbo467@student.liu.se>, 2017
+# namob <boman.d@gmail.com>, 2020
 # Jonatan Nyberg <jonatan.nyberg.karl@gmail.com>, 2020
 # Prahlis <prahl.tobias@gmail.com>, 2015
 msgid ""
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-17 19:19+0000\n"
-"Last-Translator: Jonatan Nyberg <jonatan.nyberg.karl@gmail.com>\n"
+"PO-Revision-Date: 2020-05-28 22:44+0000\n"
+"Last-Translator: namob <boman.d@gmail.com>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/teamxbmc/kodi-main/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +53,7 @@ msgstr "Plats"
 #. label-option: General - genresPathType
 msgctxt "#30001"
 msgid "Local path (include local network)"
-msgstr ""
+msgstr "Lokal sökväg (inklusive lokalt nätverk)"
 
 #. label-option: General - m3uPathType
 #. label-option: General - epgPathType
@@ -60,22 +61,22 @@ msgstr ""
 #. label-option: General - genresPathType
 msgctxt "#30002"
 msgid "Remote path (Internet address)"
-msgstr ""
+msgstr "Fjärrsökväg (internetadress)"
 
 #. label-option: General - m3uRefreshMode
 msgctxt "#30003"
 msgid "Disabled"
-msgstr "Avaktiverad"
+msgstr "Inaktiverad"
 
 #. label-option: General - m3uRefreshMode
 msgctxt "#30004"
 msgid "Repeated refresh"
-msgstr ""
+msgstr "Upprepad uppdatering"
 
 #. label-option: General - m3uRefreshMode
 msgctxt "#30005"
 msgid "Once per day"
-msgstr ""
+msgstr "En gång per dag"
 
 #. label-category: general
 #. label-group: General - General
@@ -86,12 +87,12 @@ msgstr "Allmänt"
 #. label: General - m3uPath
 msgctxt "#30011"
 msgid "M3U playlist path"
-msgstr ""
+msgstr "Sökväg till M3U-spellista"
 
 #. label: General - m3uUrl
 msgctxt "#30012"
 msgid "M3U playlist URL"
-msgstr ""
+msgstr "URL till M3U-spellista"
 
 #. label: General - startNum
 msgctxt "#30013"
@@ -267,12 +268,27 @@ msgstr ""
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
+msgid "Use FFmpeg http reconnect options if possible"
 msgstr ""
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
+msgstr ""
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr ""
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr ""
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
 msgstr ""
 
 #. label-category: catchup
@@ -590,11 +606,27 @@ msgid ""
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr ""
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
+msgstr ""
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr ""
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
 msgstr ""
 
 #. help-category: Catchup
@@ -651,7 +683,9 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
 msgstr ""
 
 #. help: Catchup - catchupWatchEpgBeginBuffer

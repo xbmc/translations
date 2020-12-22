@@ -1,18 +1,19 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
 # Kiril <neohidra@gmail.com>, 2015-2016,2020
 # Любомир Василев, 2018-2020
+# Любомир Василев, 2020
 # Пламен Петков, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-08 21:46+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-05-17 12:00+0000\n"
+"Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -267,12 +268,27 @@ msgstr "Ползване на „inputstream.adaptive“ за потоци от 
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "Използване на опциите за повторно свързване чрез HTTP на FFMpeg, ако това е възможно"
+msgid "Use FFmpeg http reconnect options if possible"
+msgstr "Използване на опциите за повторно свързване чрез HTTP на FFmpeg, ако това е възможно"
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
+msgstr "User-Agent"
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr "Име на входящия поток"
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr "Тип MIME"
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
 msgstr ""
 
 #. label-category: catchup
@@ -590,11 +606,27 @@ msgid ""
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr ""
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
+msgstr ""
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr ""
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
 msgstr ""
 
 #. help-category: Catchup
@@ -651,7 +683,9 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
 msgstr ""
 
 #. help: Catchup - catchupWatchEpgBeginBuffer

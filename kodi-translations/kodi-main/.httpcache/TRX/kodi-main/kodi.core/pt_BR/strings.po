@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-16 02:53+0000\n"
+"PO-Revision-Date: 2020-05-17 15:14+0000\n"
 "Last-Translator: Wanilton Campos <campos.wanilton@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/teamxbmc/kodi-main/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -3618,6 +3618,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Domingos"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Pré Estréia"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Ao Vivo"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3637,8 +3649,8 @@ msgstr "Somente este"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Novo!"
+msgid "New"
+msgstr "Novo"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3677,6 +3689,12 @@ msgstr "Confirmar parar de gravar"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Deseja realmente interromper esta gravação?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Final"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4609,7 +4627,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Dados do sistema"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6371,7 +6389,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Informações de filmes"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Adicionar à fila"
@@ -6889,6 +6908,16 @@ msgstr "Direto para Plano"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Ilimitado / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9783,6 +9812,7 @@ msgid "Deleted"
 msgstr "Deletado"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9801,6 +9831,7 @@ msgid "Future days to display"
 msgstr "Dias Posteriores por apresentar"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10214,6 +10245,12 @@ msgstr "horário despertar diariamente (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtrar Canais"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "Canais de Rádio e TV"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12821,6 +12858,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Substituir nome do arquivo pelo título da biblioteca"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -18506,10 +18544,8 @@ msgstr "Esta categoria contém os ajustes para reprodução de TV ao vivo e troc
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Ir para tela cheia no display quando inicializar reprodução dos canais e gravações."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "Alterne para a exibição em tela cheia ao iniciar a reprodução de canais."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20249,7 +20285,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Usar texturas de maior qualidade para as capas e fanart (usa mais memória)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20953,7 +20989,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Ativar maior profundidade nas cores dos artworks"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Setar o limite para resolução da interface gráfica"
@@ -20992,7 +21028,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -21002,7 +21038,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Ilimitado"
@@ -21119,7 +21155,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Extrair miniaturas dos capítulos para serem apresentadas em capítulos / marcadores. Isto pode incrementar o uso da CPU."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -21581,7 +21617,7 @@ msgstr "Esta categoria contém outros ajustes para interface gráfica"
 msgctxt "#38112"
 msgid ""
 "Automatically go to the visualisation window when audio playback starts"
-msgstr "Automaticamente vai para a janela de visualização quando a reprodução de áudio inicia"
+msgstr "Automaticamente vá para a janela de visualização quando a reprodução de áudio inicia"
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"

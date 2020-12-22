@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-10 20:39+0000\n"
+"PO-Revision-Date: 2020-05-16 21:01+0000\n"
 "Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/teamxbmc/kodi-main/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
@@ -3612,6 +3612,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Domingos"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr ""
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr ""
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3631,7 +3643,7 @@ msgstr "Sólo este"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
+msgid "New"
 msgstr ""
 
 #. Label for a context menu entry to activate a currently inactive timer
@@ -3671,6 +3683,12 @@ msgstr "Confirmación de detención de grabación"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "¿Está seguro de que desea detener esta grabación?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr ""
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4603,7 +4621,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Información del sistema"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6365,7 +6383,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Información de la película"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Añadir elemento a la cola"
@@ -6882,6 +6901,16 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#13465"
 msgid "EGL"
+msgstr ""
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr ""
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -9777,6 +9806,7 @@ msgid "Deleted"
 msgstr "Eliminado"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9795,6 +9825,7 @@ msgid "Future days to display"
 msgstr ""
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10208,6 +10239,12 @@ msgstr "Hora para despertar cada día (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtrar canales"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr ""
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12815,6 +12852,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Reemplazar nombres de archivo con títulos de la Colección"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -18500,9 +18538,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
+msgid "Switch to full screen display when starting playback of channels."
 msgstr ""
 
 #. Description of setting with label #745 "Background Colour"
@@ -20243,7 +20279,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Usar texturas de mayor calidad para cubiertas y fanart (usa más memoria)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20947,7 +20983,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Habilitar mayor profundidad de color en artwork"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Establecer límite de resolución de la interfaz de usuario"
@@ -20986,7 +21022,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20996,7 +21032,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Ilimitado"
@@ -21113,7 +21149,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Extrae las miniaturas de capítulos para presentación en el diálogo de capítulos / marcadores. Esto podría aumentar la carga de la CPU."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr ""

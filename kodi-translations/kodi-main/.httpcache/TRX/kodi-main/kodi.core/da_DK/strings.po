@@ -5,7 +5,7 @@
 # Christian <christian_gade@hotmail.com>, 2016-2020
 # Christian <christian_gade@hotmail.com>, 2016
 # David Vukovic <davu@kodi.tv>, 2019
-# jan iversen <inactive+janTheViking@transifex.com>, 2016
+# 746ee4fe8a2ca6c2a01ae8773f802d48_a52fe31 <9c78ea5207584fd9dbcd0e3b1dbaaab1_463556>, 2016
 # Kenneth Andersen <kennethandersen69.ka@gmail.com>, 2015
 # Fernor <nikolajdt@gmail.com>, 2015
 # Peter Dyhr, 2015
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-02 19:15+0000\n"
+"PO-Revision-Date: 2020-07-27 23:49+0000\n"
 "Last-Translator: Christian <christian_gade@hotmail.com>\n"
 "Language-Team: Danish (Denmark) (http://www.transifex.com/teamxbmc/kodi-main/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
@@ -3567,13 +3567,13 @@ msgstr "Regel for timeroptagelse slettet"
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#829"
 msgid "View reminder"
-msgstr "Vis påmindelser"
+msgstr "Vis påmindelse"
 
 #. Label for a context menu entry to edit a reminder timer
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#830"
 msgid "Edit reminder"
-msgstr "Rediger påmindelser"
+msgstr "Rediger påmindelse"
 
 #. Weekday representation
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3617,6 +3617,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Søndage"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Premiere"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Direkte"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3636,8 +3648,8 @@ msgstr "Kun denne"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Ny!"
+msgid "New"
+msgstr "Ny"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3676,6 +3688,12 @@ msgstr "Bekræft stop af optagelse"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Er du sikker på, at du vil stoppe denne optagelse?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Finale"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4608,7 +4626,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Systeminformation"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6370,7 +6388,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Filminformation"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Føj til kø"
@@ -6889,6 +6908,16 @@ msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
 
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Ubegrænset / 1080 (>30Hz)"
+
 #: system/settings/settings.xml
 msgctxt "#13505"
 msgid "Resample quality"
@@ -7003,7 +7032,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#13524"
 msgid "Use original release date of albums for year"
-msgstr ""
+msgstr "Anvend albummets originale udgivelsesdato som årstal"
 
 #. Description of setting with label #13524
 #: system/settings/settings.xml
@@ -7011,7 +7040,7 @@ msgctxt "#13525"
 msgid ""
 "When enabled, use the original year of release rather than the album release"
 " year (if available)."
-msgstr ""
+msgstr "Ved aktivering, anvend det originale udgivelsesår i stedet for albummets udgivelsesår (hvis tilgængeligt)."
 
 #: system/settings/settings.xml
 msgctxt "#13550"
@@ -9241,14 +9270,14 @@ msgstr "Øjeblikkelig optagelse: {0:s}"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19094"
 msgid "Timer creation failed. Unsupported timer type."
-msgstr ""
+msgstr "Oprettelse af timeroptagelse mislykkedes. Timerens type er ikke understøttet."
 
 #. error message displayed in case adding a timer rule failed because no
 #. suitable epg-based timer rule type could be found.
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19095"
 msgid "Timer rule creation failed. Unsupported timer type."
-msgstr ""
+msgstr "Oprettelse af regel for timeroptagelse mislykkedes. Timerens type er ikke understøttet."
 
 #. label of a value for default epg event select action, where the action is
 #. choosen depending on whether the event is in the past, now or in the future
@@ -9320,7 +9349,7 @@ msgstr "Vælg venligst en kanal"
 #: xbmc/pvr/PVRGUITimerInfo.cpp
 msgctxt "#19106"
 msgid "Next recording on"
-msgstr ""
+msgstr "Næste optagelse d. "
 
 #. part of timer information text (e.g. "Next recording on 10/10/2016 at 9:00
 #. AM")
@@ -9782,6 +9811,7 @@ msgid "Deleted"
 msgstr "Slettet"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9800,6 +9830,7 @@ msgid "Future days to display"
 msgstr "Fremtidige dage der vises"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -9824,7 +9855,7 @@ msgctxt "#19186"
 msgid ""
 "All your TV related data (channels, groups, guide, timers, clients) will be "
 "cleared. Are you sure?"
-msgstr ""
+msgstr "Alt tv-relateret data (kanaler, grupper, timeroptagelser og klienter) vil blive nulstillet. Er du sikker?"
 
 #. progress dialog text shown while purging pvr data
 #: xbmc/pvr/PVRManager.cpp
@@ -9880,7 +9911,7 @@ msgstr "Fortsæt?"
 #: system/settings/settings.xml
 msgctxt "#19195"
 msgid "Delay mark last watched"
-msgstr ""
+msgstr "Forsink marker som set"
 
 #. value for "pvr client specific actions" dialog headers
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10213,6 +10244,12 @@ msgstr "Daglig vækningstid (TT:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtrer kanaler"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "Tv- og radiokanaler"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10613,7 +10650,7 @@ msgstr ""
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19312"
 msgid "PVR reminder"
-msgstr "PVR påmindelser"
+msgstr "PVR påmindelse"
 
 #. pvr settings "reminder auto close delay" setting label
 #: system/settings/settings.xml
@@ -10631,7 +10668,7 @@ msgstr ""
 #: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#19315"
 msgid "Backend order"
-msgstr ""
+msgstr "Rækkefølge for backend"
 
 #. pvr settings "Start all group channel numbers from 1" setting label
 #: system/settings/settings.xml
@@ -10693,7 +10730,7 @@ msgstr "Første kanal"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19323"
 msgid "Playing channel"
-msgstr ""
+msgstr "Afspillende kanal"
 
 #. Label for epg grid window "Jump to last channel" context menu entry and epg
 #. grid controls dialog help text
@@ -10707,13 +10744,13 @@ msgstr "Sidste kanal"
 #: addons/skin.estuary/xml/DialogPVRGuideControls.xml
 msgctxt "#19325"
 msgid "Programme"
-msgstr ""
+msgstr "Program"
 
 #. Label for epg grid window "Navigate..." context menu entry
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19326"
 msgid "Navigate..."
-msgstr ""
+msgstr "Naviger..."
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -12170,7 +12207,7 @@ msgstr "Når intet lokalt albumcover eksisterer, anvendes online cover. Hvis beg
 #: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#20226"
 msgid "Movie set information folder"
-msgstr ""
+msgstr "Mappe til filmsæt-information"
 
 #: system/settings/settings.xml
 msgctxt "#20228"
@@ -12820,6 +12857,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Erstat filnavne med bibliotekets titler"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -15034,7 +15072,7 @@ msgstr "Hent undertekst..."
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24135"
 msgid "To use this feature you must enable an add-on:"
-msgstr ""
+msgstr "For at benytte denne funktion må du aktivere et add-on:"
 
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24136"
@@ -15178,7 +15216,7 @@ msgstr ""
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
-msgstr ""
+msgstr "Benyt Kodi virtuelt tastatur"
 
 #: apple remote
 msgctxt "#24163"
@@ -18505,10 +18543,8 @@ msgstr "Kategori indeholdende indstillinger for PVR-afspilning og -kanalskifte."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Skift til fuld skærm, når du starter afspilning af kanaler og optagelser."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr ""
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -19955,7 +19991,7 @@ msgstr "Ved aktivering vil VAAPI renderings-metoder være foretrukket og CPU-bel
 #: system/settings/settings.xml
 msgctxt "#36434"
 msgid "Allow hardware acceleration - MMAL"
-msgstr "Tillad hardwareacceleration (MMAL)"
+msgstr "Tillad hardwareacceleration - MMAL"
 
 #. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
@@ -19974,7 +20010,7 @@ msgstr "Vælg OS tastaturlayout."
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
-msgstr "Indstil antallet af trin for lydstyrkekontrol"
+msgstr "Indstil antallet af trin for lydstyrkekontrol."
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -20248,7 +20284,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Brug højere kvalitet teksturer for covers og fankunst (bruger mere hukommelse)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20952,7 +20988,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Aktiver højere farvedybde artwork"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Sæt grænsen for opløsning af den grafiske brugerflade"
@@ -20991,7 +21027,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -21001,7 +21037,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Ubegrænset"
@@ -21118,7 +21154,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Uddrag kapitel miniaturebilleder til præsentation i dialogen for kapitler og bogmærker. Dette kan øge CPU-belastningen."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"

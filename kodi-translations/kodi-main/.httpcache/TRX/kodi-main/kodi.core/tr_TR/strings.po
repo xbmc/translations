@@ -2,6 +2,7 @@
 # Translators:
 # Aisac <raspberrypi@aisac.de>, 2015
 # Altay Aydın <aaltay734@gmail.com>, 2020
+# BouRock, 2020
 # Jack Elliott <eomuris@gmail.com>, 2017
 # Erhan ERSÖZ <3rhan3rsoz@gmail.com>, 2015
 # Mucahid Zeyrek <mucahid.zeyrek@dhl.com>, 2017
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-15 12:12+0000\n"
+"PO-Revision-Date: 2020-10-16 10:14+0000\n"
 "Last-Translator: Özgür BASKIN\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/teamxbmc/kodi-main/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -3612,6 +3613,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Pazarları"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Prömiyer"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Canlı"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3631,8 +3644,8 @@ msgstr "Sadece bunu"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Yeni!"
+msgid "New"
+msgstr "Yeni"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3671,6 +3684,12 @@ msgstr "Kaydı durdurmayı onayla"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Bu kayıdı durdurmak istediğinizden emin misiniz?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Final"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4603,7 +4622,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Sistem bilgisi"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6365,7 +6384,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Film bilgisi"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Sıraya al"
@@ -6883,6 +6903,16 @@ msgstr "Direct To Plane"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Sınırsız / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9777,6 +9807,7 @@ msgid "Deleted"
 msgstr "Silindi"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9795,6 +9826,7 @@ msgid "Future days to display"
 msgstr "Görüntülenecek gelecek günler"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10209,6 +10241,12 @@ msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Kanalları filtrele"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "TV ve radyo kanalları"
+
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
 #: xbmc/pvr/windows/GUIWindowPVRChannels.cpp
@@ -10517,7 +10555,7 @@ msgstr "Yatay kanallar"
 #: addons/skin.estuary/xml/MyPVRRecordings.xml
 msgctxt "#19299"
 msgid "Expires"
-msgstr "Saklama ömrü"
+msgstr "Süre sonu"
 
 #. 'Viewtype' label for vertical channel layout without channel group selctor,
 #. used in pvr guide window
@@ -12815,6 +12853,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Dosya adlarını kitaplık başlıkları ile değiştir"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -17471,7 +17510,7 @@ msgstr "Yeni yapılandırma değeri ayarlanamadı. Lütfen ayarlarınızı denet
 #: system/peripherals.xml
 msgctxt "#36025"
 msgid "Send \"Inactive source\" command on shutdown"
-msgstr "Kapatma sırasında \"Etkin olmaya kaynak\" komutu gönder"
+msgstr "Kapatma sırasında \"Etkin olmayan kaynak\" komutu gönder"
 
 #: system/peripherals.xml
 msgctxt "#36026"
@@ -18500,10 +18539,8 @@ msgstr "Bu kategori PVR oynatımı ve kanal değiştirme ayarlarını içerir."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Kanalların ve kayıtların oynatımını başlatırken tam ekran görüntüsüne geçin."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "Kanalları oynatmaya başlarken tam ekran görüntüsüne geçin."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20243,7 +20280,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Fanart ve kapaklar için daha yüksek kaliteli dokular kullan (daha fazla bellek kullanır)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20947,7 +20984,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Daha yüksek çizim renk derinliğini etkinleştir"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "GUI çözünürlük sınırını ayarla"
@@ -20986,7 +21023,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20996,7 +21033,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Limitsiz"
@@ -21113,7 +21150,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Bölümler / yer işaretleri iletişim kutusunda görüntülemek için bölüm küçük resimlerini ayıkla. Bu CPU yükünü arttırabilir."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"

@@ -3,6 +3,7 @@
 # Nguyen Van Dai <daivietpda@gmail.com>, 2015
 # Daniel PHAM <anhem2012@gmail.com>, 2016
 # David Vukovic <davu@kodi.tv>, 2019
+# Hiếu Trịnh <kakahoho30@gmail.com>, 2020
 # ligerv <liikeriv@gmail.com>, 2015
 # Nguyen Thanh Tai <thanhtai2009@outlook.com>, 2015
 # Nguyễn Trung Hậu <trunghau1712@gmail.com>, 2020
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-08 10:10+0000\n"
-"Last-Translator: Nguyễn Trung Hậu <trunghau1712@gmail.com>\n"
+"PO-Revision-Date: 2020-07-14 10:00+0000\n"
+"Last-Translator: Hiếu Trịnh <kakahoho30@gmail.com>\n"
 "Language-Team: Vietnamese (Viet Nam) (http://www.transifex.com/teamxbmc/kodi-main/language/vi_VN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3611,6 +3612,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Chủ Nhật"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Công chiếu"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Đang chiếu"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3630,8 +3643,8 @@ msgstr "Chỉ cái này"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Mới!"
+msgid "New"
+msgstr "Mới"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3670,6 +3683,12 @@ msgstr "Xác nhận dừng ghi âm"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Bạn có chắc chắn muốn dừng ghi âm này?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Tập cuối"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4602,7 +4621,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Thông tin hệ thống"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6364,7 +6383,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Thông tin phim"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Mục chờ"
@@ -6882,6 +6902,16 @@ msgstr ""
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr ""
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9147,12 +9177,12 @@ msgstr ""
 #. used by several skins
 msgctxt "#19080"
 msgid "Begin"
-msgstr ""
+msgstr "Bắt đầu"
 
 #. used by several skins
 msgctxt "#19081"
 msgid "End"
-msgstr ""
+msgstr "Kết thúc"
 
 #. Label of priority spinner in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
@@ -9171,7 +9201,7 @@ msgstr ""
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#19084"
 msgid "First day"
-msgstr ""
+msgstr "Ngày đầu tiên"
 
 #. default for channels without a name. place holder will be filled with
 #. channel number.
@@ -9484,7 +9514,7 @@ msgstr "Tìm kiếm chuỗi"
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19134"
 msgid "Include description"
-msgstr ""
+msgstr "Bao gồm mô tả"
 
 #: addons/skin.estuary/xml/DialogPVRGuideSearch.xml
 msgctxt "#19135"
@@ -9776,6 +9806,7 @@ msgid "Deleted"
 msgstr "Đã xóa"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9794,6 +9825,7 @@ msgid "Future days to display"
 msgstr ""
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10207,6 +10239,12 @@ msgstr "Thời gian thức dậy hàng ngày (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Lọc kênh"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr ""
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10639,7 +10677,7 @@ msgstr "Bắt đầu số kênh nhóm từ 1"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19317"
 msgid "12 hours back"
-msgstr ""
+msgstr "Lùi 12h"
 
 #. Label for epg grid window "Jump 12 hours forward" context menu entry and
 #. epg grid controls dialog help text
@@ -10647,7 +10685,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19318"
 msgid "12 hours forward"
-msgstr ""
+msgstr "Tiến 12h"
 
 #. Label for epg grid window "Activate previous channel group" context menu
 #. entry and epg grid controls dialog help text
@@ -10767,13 +10805,13 @@ msgstr ""
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19508"
 msgid "Adult movie / drama"
-msgstr ""
+msgstr "Phim / Kịch người lớn"
 
 #. label for "news/current affairs" epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19516"
 msgid "News / Current affairs"
-msgstr ""
+msgstr "Tin tức / Thời sự"
 
 #. label for "news/current affairs" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -10803,7 +10841,7 @@ msgstr "Thảo luận/Phỏng vấn/Tranh luận"
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19532"
 msgid "Show / Game show"
-msgstr ""
+msgstr "Chương trình / Chương trình giải trí"
 
 #. label for "show/game show" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -10821,7 +10859,7 @@ msgstr "Chương trình tạp kỹ"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19535"
 msgid "Talk show"
-msgstr ""
+msgstr "Buổi trò chuyện"
 
 #. label for "sports" epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -10833,7 +10871,7 @@ msgstr "Thể thao"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19549"
 msgid "Special event"
-msgstr ""
+msgstr "Sự kiện đặc biệt"
 
 #. label for "sports" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -10857,13 +10895,13 @@ msgstr ""
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19553"
 msgid "Team sports"
-msgstr ""
+msgstr "Đội thể thao"
 
 #. label for "sports" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19554"
 msgid "Athletics"
-msgstr ""
+msgstr "Điền kinh"
 
 #. label for "sports" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11187,7 +11225,7 @@ msgstr "Chưa phát hành"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
-msgstr ""
+msgstr "Phát sóng trực tiếp"
 
 #. label for "user defined" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11994,7 +12032,7 @@ msgstr "Mạng Windows (SMB)"
 
 msgctxt "#20172"
 msgid "XBMSP server"
-msgstr ""
+msgstr "Máy chủ XBMSP"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20173"
@@ -12004,12 +12042,12 @@ msgstr "FTP server"
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20174"
 msgid "FTPS server"
-msgstr ""
+msgstr "Máy chủ FTPS"
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
 msgid "UPnP server"
-msgstr ""
+msgstr "Máy chủ UPnP"
 
 msgctxt "#20176"
 msgid "Show video information"
@@ -12033,7 +12071,7 @@ msgstr ""
 
 msgctxt "#20180"
 msgid "Symbols"
-msgstr ""
+msgstr "Biểu tượng"
 
 #: addons/skin.estuary/xml/DialogKeyboard.xml
 #: addons/skin.estuary/xml/DialogNumeric.xml
@@ -12814,6 +12852,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Thay thế tên tập tin bằng tiêu đề thư viện"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -12951,7 +12990,7 @@ msgstr "Fanart"
 #: xbmc/video/jobs/VideoLibraryRefreshingJob.cpp
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
-msgstr ""
+msgstr "Tìm thấy thông tin được lưu trong cục bộ. Bỏ qua và làm mới từ Intetnet?"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20447"
@@ -12966,13 +13005,13 @@ msgstr "Không thể tải xuống thông tin"
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
-msgstr ""
+msgstr "Không thể kết nối đến máy chủ từ xa"
 
 #: xbmc/video/VideoInfoScanner.cpp
 msgctxt "#20450"
 msgid ""
 "Unable to connect to remote server. Would you like to continue scanning?"
-msgstr ""
+msgstr "Không thể kết nối đến máy chủ từ xa. Bạn có muốn tiếp tục quét?"
 
 #: xbmc/filesystem/VideoDatabaseDirectory/DirectoryNodeMoviesOverview.cpp
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -13001,7 +13040,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#20456"
 msgid "Flatten hierarchy"
-msgstr ""
+msgstr "Phân cấp phẳng"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20457"
@@ -13037,7 +13076,7 @@ msgstr "Thẻ mới..."
 
 msgctxt "#20463"
 msgid "A tag with the name '{0:s}' already exists."
-msgstr ""
+msgstr "Tag '{0:s}' đã tổn tại."
 
 msgctxt "#20464"
 msgid "Select {0:s}"
@@ -13173,7 +13212,7 @@ msgstr "Chia sẻ thư viện của tôi"
 
 msgctxt "#21361"
 msgid "Look for remote UPnP players"
-msgstr ""
+msgstr "Tìm trình chơi UPnP từ xa"
 
 #: xbmc/video/dialogs/GUIDialogVideoBookmarks.cpp
 msgctxt "#21362"
@@ -13188,12 +13227,12 @@ msgstr "Tập đã được đánh dấu"
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21364"
 msgid "Edit media share"
-msgstr ""
+msgstr "Hiệu chỉnh chia sẻ đa phương tiện"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21365"
 msgid "Remove media share"
-msgstr ""
+msgstr "Xóa chia sẻ đa phương tiện"
 
 #: system/settings/settings.xml
 msgctxt "#21366"
@@ -13238,7 +13277,7 @@ msgstr "Hiển thị"
 
 msgctxt "#21374"
 msgid "Video aspect"
-msgstr ""
+msgstr "Tỉ lệ khung hình"
 
 msgctxt "#21375"
 msgid "Normal"
@@ -13430,7 +13469,7 @@ msgstr "Cài đặt"
 
 msgctxt "#21418"
 msgid "Multilingual"
-msgstr ""
+msgstr "Đa ngôn ngữ"
 
 msgctxt "#21419"
 msgid "No information providers present"
@@ -13523,7 +13562,7 @@ msgstr "Danh sách thông minh mới..."
 
 msgctxt "#21438"
 msgid "{0:c} Drive"
-msgstr ""
+msgstr "Ổ đĩa {0:c}"
 
 msgctxt "#21439"
 msgid "Edit party mode rules"
@@ -13535,7 +13574,7 @@ msgstr "Thư mục chủ"
 
 msgctxt "#21441"
 msgid "Watched count"
-msgstr ""
+msgstr "Số lần xem"
 
 msgctxt "#21442"
 msgid "Episode title"
@@ -13678,19 +13717,19 @@ msgstr ""
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#21467"
 msgid "{0:.1f} to {1:.1f}"
-msgstr ""
+msgstr "{0:.1f} đến {1:.1f}"
 
 #. Filter (media data) from int value to int value
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#21468"
 msgid "{0:d} to {1:d}"
-msgstr ""
+msgstr "{0:d} đến {1:d}"
 
 #. Filter (media data) from string value to string value
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/settings/SettingControl.cpp
 msgctxt "#21469"
 msgid "{0:s} to {1:s}"
-msgstr ""
+msgstr "{0:s} đến {1:s}"
 
 #. Field (e.g. "Genre") [count]
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
@@ -13737,14 +13776,14 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#21476"
 msgid "Just \"All seasons\""
-msgstr ""
+msgstr "Chỉ \"Tất cả các Mùa\""
 
 #. One of the values valid for settings #21472 "Include All Seasons and
 #. Specials"
 #: system/settings/settings.xml
 msgctxt "#21477"
 msgid "Just \"Specials\""
-msgstr ""
+msgstr "Chỉ \"Tập đặc biệt\""
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21478"
@@ -13881,7 +13920,7 @@ msgstr ""
 
 msgctxt "#21834"
 msgid "White-balance"
-msgstr ""
+msgstr "Cân bằng trắng"
 
 msgctxt "#21835"
 msgid "Light source"
@@ -13889,7 +13928,7 @@ msgstr "Nguồn sáng"
 
 msgctxt "#21836"
 msgid "Metering mode"
-msgstr ""
+msgstr "Chế độ đo sáng"
 
 msgctxt "#21837"
 msgid "ISO"
@@ -13901,7 +13940,7 @@ msgstr "Thu phóng kĩ thuật số"
 
 msgctxt "#21839"
 msgid "CCD width"
-msgstr ""
+msgstr "Độ rộng CCD"
 
 msgctxt "#21840"
 msgid "GPS latitude"
@@ -13940,7 +13979,7 @@ msgstr "Kiểu hình ảnh"
 
 msgctxt "#21859"
 msgid "Time created"
-msgstr ""
+msgstr "Ngày tạo"
 
 msgctxt "#21860"
 msgid "Supplemental categories"
@@ -13948,7 +13987,7 @@ msgstr "Danh mục bổ sung"
 
 msgctxt "#21861"
 msgid "Keywords"
-msgstr ""
+msgstr "Từ khóa"
 
 msgctxt "#21862"
 msgid "Caption"
@@ -13964,7 +14003,7 @@ msgstr ""
 
 msgctxt "#21865"
 msgid "Special instructions"
-msgstr ""
+msgstr "Chỉ dẫn đặc biệt"
 
 msgctxt "#21866"
 msgid "Category"
@@ -14139,7 +14178,7 @@ msgstr "Ẩn tiến trình cập nhật thư viện"
 #: system/settings/settings.xml
 msgctxt "#22002"
 msgid "DNS suffix"
-msgstr ""
+msgstr "Tiền tố DNS"
 
 msgctxt "#22003"
 msgid "{0:2.3f}s"
@@ -16473,13 +16512,13 @@ msgstr ""
 #: system/settings/settings.xml xbmc/peripherals/Peripherals.cpp
 msgctxt "#35000"
 msgid "Peripherals"
-msgstr ""
+msgstr "Ngoại vi"
 
 #: xbmc/peripherals/devices/PeripheralHID.cpp
 #: xbmc/peripherals/devices/Peripheralmon.cpp
 msgctxt "#35001"
 msgid "Generic HID device"
-msgstr ""
+msgstr "Thiết bị HID chung"
 
 #: xbmc/peripherals/devices/PeripheralNIC.cpp
 msgctxt "#35002"
@@ -16489,7 +16528,7 @@ msgstr ""
 #: xbmc/peripherals/devices/PeripheralDisk.cpp
 msgctxt "#35003"
 msgid "Generic disk"
-msgstr ""
+msgstr "Ổ đĩa chung"
 
 #: xbmc/peripherals/Peripherals.cpp
 msgctxt "#35004"
@@ -16532,7 +16571,7 @@ msgstr ""
 #: xbmc/input/joysticks/dialogs/GUIDialogNewJoystick.cpp
 msgctxt "#35011"
 msgid "New controller detected"
-msgstr ""
+msgstr "Phát hiện bộ điều khiển mới"
 
 #. Text of dialog to ask users if they would like to configure a new
 #. controller
@@ -16587,7 +16626,7 @@ msgstr "Cấu hình bộ điều khiển phụ trợ trên một tiện ích đ�
 #: xbmc/games/controllers/dialogs/GUIDialogButtonCapture.cpp
 msgctxt "#35019"
 msgid "Ignore input"
-msgstr ""
+msgstr "Bỏ qua đầu vào"
 
 #. Help text of the dialog to detect analog buttons on controllers. {0:s} -
 #. list of detected axes
@@ -16640,7 +16679,7 @@ msgstr "Hồ sơ điều khiển"
 #: system/settings/settings.xml
 msgctxt "#35051"
 msgid "Test rumble"
-msgstr ""
+msgstr "Thử rung"
 
 #. Description of setting to test rumble
 #: system/settings/settings.xml
@@ -16673,7 +16712,7 @@ msgstr ""
 #: addons/skin.estuary/xml/DialogGameControllers.xml
 msgctxt "#35058"
 msgid "Controller Configuration"
-msgstr ""
+msgstr "Cấu hình bộ điều khiển"
 
 #. Heading for controller buttons list in controller configuration window
 #: addons/skin.estuary/xml/DialogGameControllers.xml
@@ -16719,7 +16758,7 @@ msgstr "Ghép nối bộ điều khiển của bạn với thiết bị đầu v
 #. controller mapping dialog.
 msgctxt "#35071"
 msgid "Racing wheel"
-msgstr ""
+msgstr "Vô lăng"
 
 #. Label for paddle buttons that appear on a racing wheel for games. Used in
 #. the controller mapping dialog.
@@ -17520,7 +17559,7 @@ msgstr "Hành động khi chuyển sang nguồn khác"
 #: xbmc/pvr/addons/PVRClients.cpp
 msgctxt "#36034"
 msgid "Connection established"
-msgstr ""
+msgstr "Đã thiết lập kết nối"
 
 #. adjust refreshrate
 #: system/settings/settings.xml
@@ -17542,7 +17581,7 @@ msgstr "TV"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36038"
 msgid "Amplifier / AVR device"
-msgstr ""
+msgstr "Thiết bị Amplifier / AVR"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36039"
@@ -17554,7 +17593,7 @@ msgctxt "#36040"
 msgid ""
 "Detected version of libCEC interface ({0:x}) is lower than the supported "
 "version {1:x}."
-msgstr ""
+msgstr "Đã phát hiện phiên bản của giao diện libCEC ({0:x}) thấp hơn phiên bản hỗ trợ {1:x}."
 
 #: xbmc/video/dialogs/guidialogvideoinfo.cpp
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
@@ -17590,7 +17629,7 @@ msgstr "Tạm dừng phát"
 #: system/peripherals.xml
 msgctxt "#36046"
 msgid "Force AVR to wake up when Kodi is activated"
-msgstr ""
+msgstr "Bắt buộc đánh thức AVR khi Kodi được kích hoạt"
 
 #: system/peripherals.xml
 msgctxt "#36047"
@@ -18499,10 +18538,8 @@ msgstr "Danh mục này chứa các cài đặt chuyển đổi kênh và phát 
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Chuyển sang hiển thị toàn màn hình khi bắt đầu phát kênh và bản ghi."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr ""
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -19504,7 +19541,7 @@ msgctxt "#36367"
 msgid ""
 "Select the maximum number of audio channels / speakers available for decoded"
 " audio. If optical / coax digital outputs are used, this must be set to 2.0"
-msgstr ""
+msgstr "Chọn số kênh âm thanh /loa tối đa cho việc giải mã âm thanh. Nếu đầu vào quang / đồng trục điện từ đang được dùng, phải đặt về 2.0"
 
 #. Description of setting with label #348 "Enable passthrough"
 #: system/settings/settings.xml
@@ -19545,7 +19582,7 @@ msgctxt "#36372"
 msgid ""
 "Select the device to be used for playback of encoded formats, these are any "
 "of the formats below in the capable receiver options."
-msgstr ""
+msgstr "Chọn thiết bị được dùng cho phát lại các định dạng đã mã hóa, dưới đây là các định dạng trong khả năng hỗ trợ của bộ thu."
 
 #. Description of setting with label #34120 "Play GUI sounds"
 #: system/settings/settings.xml
@@ -19574,7 +19611,7 @@ msgctxt "#36376"
 msgid ""
 "When activated, your keyboard arrows will move the selection on the virtual "
 "keyboard. When deactivated, they will move the cursor from your text."
-msgstr ""
+msgstr "Nếu được kích hoạt, phím mũi tên sẽ di chuyển các lựa chọn trên bàn phím ảo. Còn không, chúng chỉ di chuyển con trỏ từ ký tự của bạn."
 
 #. Description of setting with label #21369 "Enable mouse and Touch Screen
 #. support"
@@ -19617,19 +19654,19 @@ msgstr "Cấu hình loại proxy được sử dụng."
 #: system/settings/settings.xml
 msgctxt "#36382"
 msgid "Configure the proxy server address."
-msgstr ""
+msgstr "Cấu hình địa chỉ máy chủ proxy."
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
 msgctxt "#36383"
 msgid "Configure the proxy server port."
-msgstr ""
+msgstr "Cấu hình cổng máy chủ proxy."
 
 #. Description of setting with label #1048 "Username"
 #: system/settings/settings.xml
 msgctxt "#36384"
 msgid "Configure the proxy server username."
-msgstr ""
+msgstr "Cấu hình tên đăng nhập máy chủ proxy."
 
 #. Description of setting with label #733 "Password"
 #: system/settings/settings.xml
@@ -19935,7 +19972,7 @@ msgstr "Hiển thị tất cả sự kiện trong nhật ký sự kiện cho c�
 #: system/settings/settings.xml
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
-msgstr ""
+msgstr "Chọn bố trí bàn phím ảo."
 
 #. Description for video related setting #13457: "vaapi sw filter"
 #: system/settings/settings.xml
@@ -19955,7 +19992,7 @@ msgstr "Cho phép tăng tốc phần cứng - MMAL"
 #: system/settings/settings.xml
 msgctxt "#36435"
 msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr ""
+msgstr "Dùng VideoPlayer để giải mã các tập tin video bằng bộ tăng tốc MMAL."
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
@@ -20242,7 +20279,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Sử dụng độ phân giải cao hơn cho bìa và fanart (sử dụng nhiều bộ nhớ hơn)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20380,7 +20417,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36568"
 msgid "Whitepoint"
-msgstr ""
+msgstr "Điểm trắng"
 
 #. Description of setting "System -> Video output -> Whitepoint" with label
 #. #36568
@@ -20944,12 +20981,12 @@ msgstr "Tăng cường kênh trung tâm khi downmix"
 #: system/settings/rbp.xml
 msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
-msgstr ""
+msgstr "Cho phép artwork có dải màu rộng hơn"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
-msgstr ""
+msgstr "Giới hạn độ phân giải GUI"
 
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37022"
@@ -20985,7 +21022,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20995,7 +21032,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Không giới hạn"
@@ -21112,7 +21149,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Trích xuất hình thu nhỏ của chương để hiển thị trong mở đầu chương/dấu trang. Điều này có thể làm tăng tải CPU."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -21140,7 +21177,7 @@ msgstr "Hiển thị mục \"Tất cả mục\" trong thư mục, ví dụ: \"T�
 #: system/settings/settings.xml
 msgctxt "#38013"
 msgid "Limit GUI updates during playback"
-msgstr ""
+msgstr "Giới hạn việc cập nhật GUI trong khi phát lại"
 
 #. Description for the setting with label #38013 "Limit GUI updates when
 #. playing video"
@@ -21201,7 +21238,7 @@ msgstr "Lựa chọn nhà cung cấp thông tin"
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#38025"
 msgid "Choose information provider"
-msgstr ""
+msgstr "Chọn nhà cung cấp thông tin"
 
 #: xbmc/view/GUIViewStateVideo.cpp
 msgctxt "#38026"
@@ -21376,7 +21413,7 @@ msgstr "Đặt nhà cung cấp thông tin mặc định"
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
-msgstr ""
+msgstr "Đặt cho nghệ sỹ này"
 
 #. Item in selection list #38338 to change the information provider for all
 #. artists in node, related to #20195
@@ -21390,14 +21427,14 @@ msgstr "Đặt hiển thị tất cả ca sĩ"
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38066"
 msgid "Set for this album"
-msgstr ""
+msgstr "Đặt cho album này"
 
 #. Item in selection list #38338 to change the information provider for all
 #. albums in node, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38067"
 msgid "Set for all albums shown"
-msgstr ""
+msgstr "Đặt cho tất cả album hiển thị"
 
 #. Dialog message asking for confirmation of change the information provider
 #. for all artists shown in node, after #38065
@@ -21631,7 +21668,7 @@ msgstr ""
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38304"
 msgid "Choose kind of export output"
-msgstr ""
+msgstr "Chọn kiểu xuất đầu ra"
 
 #. Folder path for export output file or files
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21648,25 +21685,25 @@ msgstr "Mục để xuất"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
 msgid "Include art work such as thumbnails and fanart"
-msgstr ""
+msgstr "Bao gồm art work như ảnh thu nhỏ và fanart"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
 msgid ""
 "Include items that have not been scraped (to create template NFO files)"
-msgstr ""
+msgstr "Bao gồm các mục không thể thu thập được (để tạo các tập tin NFO mẫu)"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38309"
 msgid "Output information to NFO files"
-msgstr ""
+msgstr "Xuất thông tin ra tập tin NFO."
 
 #. See #38309 when NFO and art export disabled so only artist folders
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38310"
 msgid ""
 "Output information to NFO files (currently exporting artist folders only)"
-msgstr ""
+msgstr "Xuất thông tin ra tập tin NFO (hiện tại chỉ xuất các thư mục nghệ sỹ)"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38311"
@@ -21713,7 +21750,7 @@ msgctxt "#38320"
 msgid ""
 "Do you have local artist information (NFO) and art files that you want to "
 "fetch? Set the location of these artist folders now"
-msgstr ""
+msgstr "Bạn có thông tin nghệ sĩ cục bộ (NFO) và tập tin ảnh mà bạn muốn thu thập? Thiết lập vị trí các thư mục nghệ sĩ."
 
 #. Kind of export output, see #38304
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21754,38 +21791,38 @@ msgstr ""
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38330"
 msgid "Set Music Information Providers"
-msgstr ""
+msgstr "Thiết lập bộ cung cấp thông tin Nhạc"
 
 #. Dialog heading when editing album information provider
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38331"
 msgid "Set Album Information Provider"
-msgstr ""
+msgstr "Thiết lập bộ cung cấp thông tin Album"
 
 #. Dialog heading when editing artist information provider
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38332"
 msgid "Set Artist Information Provider"
-msgstr ""
+msgstr "Thiết lập bộ cung cấp thông tin Nghệ sĩ"
 
 #. Use scrapers to fetch additional album and artist information and art
 #. during scan
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38333"
 msgid "Fetch additional information and art during scan"
-msgstr ""
+msgstr "Thu thập các thông tin bổ sung và ảnh trong khi quét"
 
 #. Scraper to use for additional album information. See #20193
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38334"
 msgid "Album information provider"
-msgstr ""
+msgstr "Bộ cung cấp thông tin Album"
 
 #. Scraper to use for additional artist information. See #20194
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38335"
 msgid "Artist information provider"
-msgstr ""
+msgstr "Bộ cung cấp thông tin Nghệ sĩ"
 
 #. Location of folder where local art and nfo files can be found for artists.
 #. See #20223
@@ -21798,20 +21835,20 @@ msgstr "Thư mục thông tin nghệ sĩ nội bộ"
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38337"
 msgid "Options for fetching additional information"
-msgstr ""
+msgstr "Cài đặt thu thập các thông tin bổ sung"
 
 #. Selecting what items the settings will be used for, selecting from #38064
 #. to 38067
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38338"
 msgid "Choose how to apply settings"
-msgstr ""
+msgstr "Chọn cách áp dụng các cài đặt"
 
 #. Heading when selecting from list for #38338
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38339"
 msgid "How to apply information provider settings"
-msgstr ""
+msgstr "Cách áp dụng cài đặt nhà cung cấp thông tin"
 
 #. Progress statement when importing music library is processing song playback
 #. history data
@@ -21824,7 +21861,7 @@ msgstr "Đang nhập lịch sử phát bài hát"
 #: xbmc/music/MusicDatabase.cpp
 msgctxt "#38351"
 msgid "Matching data"
-msgstr ""
+msgstr "Đang khớp dữ liệu"
 
 #. Progress statement when importing music library - song history being
 #. updated
@@ -21838,7 +21875,7 @@ msgstr "Đang cập nhật bài hát"
 #: xbmc/music/MusicDatabase.cpp
 msgctxt "#38353"
 msgid "Importing song history - {0:d} updated out of {0:d} imported songs"
-msgstr ""
+msgstr "Đang nhập lịch sử bài hát - {0:d} đã cập nhật trên {0:d} bài hát đã nhập"
 
 #. Message when reading the user specified XML for import to library fails
 #: xbmc/music/MusicDatabase.cpp
@@ -21909,7 +21946,7 @@ msgstr "Đặt thời gian tối đa để chờ mạng xuất hiện sau khi b�
 #: xbmc/addons/Addon.cpp
 msgctxt "#39013"
 msgid "Virtual filesystems"
-msgstr ""
+msgstr "Tập tin hệ thống ảo"
 
 #. Message of a dialog, asking if related data of an add-on should also be
 #. removed on uninstall
@@ -21941,7 +21978,7 @@ msgstr "Cho phép UPnP. Điều này cho phép bạn truyền phát phương ti�
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#39018"
 msgid "optional"
-msgstr ""
+msgstr "tùy chọn"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#39019"
@@ -21986,7 +22023,7 @@ msgstr "Giới tính"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39026"
 msgid "Disambiguation"
-msgstr ""
+msgstr "Định hướng"
 
 #. Sort name of artist (e.g. Jackson, Michael)
 msgctxt "#39027"
@@ -22053,14 +22090,14 @@ msgstr "bắt buộc"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39107"
 msgid "captions"
-msgstr ""
+msgstr "thuyết minh"
 
 #. audio/video/subtitle flag - FLAG_VISUAL_IMPAIRED
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39108"
 msgid "audio description"
-msgstr ""
+msgstr "mô tả âm thanh"
 
 #: xbmc/video/PlayerController.cpp
 msgctxt "#39109"

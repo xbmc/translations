@@ -13,13 +13,13 @@
 # ozolli <ozolli@gmail.com>, 2017
 # tmtisfree <tmtisfree@free.fr>, 2015-2020
 # Totogros Miyazaki <jdescelliers@yahoo.fr>, 2016
-# ryann, 2015-2018
+# ryann, 2015-2018,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-11 18:20+0000\n"
+"PO-Revision-Date: 2020-12-15 14:42+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -730,12 +730,12 @@ msgstr "Compilée le :"
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#175"
 msgid "Moods"
-msgstr "Humeurs"
+msgstr "Ambiances "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#176"
 msgid "Styles"
-msgstr "Styles"
+msgstr "Styles "
 
 #. <application name> successfully started
 #: xbmc/Application.cpp
@@ -872,7 +872,7 @@ msgstr "Accroche "
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#203"
 msgid "Plot outline"
-msgstr "Résumé de l'intrigue "
+msgstr "Résumé "
 
 #. label of a smartplaylist filter option to filter for albums on compilations
 #: xbmc/playlists/SmartPlaylist.cpp
@@ -1007,7 +1007,7 @@ msgstr "Décalage vertical"
 #: system/settings/settings.xml
 msgctxt "#227"
 msgid "Load audio CD information from online service"
-msgstr "Récupérer les informations des CD Audio depuis un service en ligne"
+msgstr "Récupérer les informations des CD depuis un service en ligne"
 
 msgctxt "#228"
 msgid "Shuffle playlist on load"
@@ -2348,7 +2348,7 @@ msgstr "Saisir le titre"
 
 msgctxt "#529"
 msgid "Error: Duplicate title"
-msgstr "Erreur : doublon"
+msgstr "Erreur : fichier en doublon"
 
 msgctxt "#530"
 msgid "Select genre"
@@ -3056,7 +3056,7 @@ msgstr "Journalisation détaillée pour le composant [B]guide électronique des 
 
 msgctxt "#687"
 msgid "From metadata"
-msgstr "Depuis les métadonnées"
+msgstr "Selon les métadonnées"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/MusicDatabase.cpp
 msgctxt "#700"
@@ -3468,13 +3468,13 @@ msgstr "Éviter les doublons d'épisodes"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#813"
 msgid "Start padding time"
-msgstr "Heure de début de remplissage"
+msgstr "Ajustement du temps de début"
 
 #. Label of end padding time list control in PVR timer settings dialog
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#814"
 msgid "End padding time"
-msgstr "Heure de fin de remplissage"
+msgstr "Ajustement du temps de fin"
 
 #. Value of prevent duplicate episodes list control in PVR timer settings
 #. dialog
@@ -3617,6 +3617,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Dimanches"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Première"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "En direct"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3636,8 +3648,8 @@ msgstr "Seulement ceci"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Nouveau !"
+msgid "New"
+msgstr "Nouveau"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3676,6 +3688,12 @@ msgstr "Confirmation de stopper l'enregistrement"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Faut-il vraiment stopper cet enregistrement ?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Finale"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4544,7 +4562,7 @@ msgstr "Version plus récente nécessaire. Consulter le journal pour plus d'info
 #: xbmc/interfaces/python/PythonInvoker.cpp
 msgctxt "#2102"
 msgid "{0:s} error"
-msgstr "{0:s} erreur"
+msgstr "Erreur de {0:s}"
 
 #. Fallback message indicating an add-on error.
 #: xbmc/interfaces/python/PythonInvoker.cpp
@@ -4608,7 +4626,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Informations sur le système"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6370,7 +6388,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Informations du film"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Placer en file d'attente"
@@ -6888,6 +6907,16 @@ msgstr "Direct"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Sans limite / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -7830,7 +7859,7 @@ msgstr "Vidéos - Médiathèque"
 #: system/settings/settings.xml
 msgctxt "#14237"
 msgid "Music Library"
-msgstr "Musithèque"
+msgstr "Musicothèque"
 
 #: system/settings/settings.xml
 msgctxt "#14240"
@@ -8796,7 +8825,7 @@ msgstr "Chaînes TV"
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#19024"
 msgid "Radio channels"
-msgstr "Chaînes radio"
+msgstr "Chaînes Radio"
 
 #. label for PVR backend number of timers in system information's PVR section
 #: xbmc/windows/GUIWindowSystemInfo.cpp
@@ -8842,7 +8871,7 @@ msgstr "Maintenant"
 #: addons/skin.estuary/xml/MyPVRChannels.xml
 msgctxt "#19031"
 msgid "Next"
-msgstr "Suivant "
+msgstr "Suivant"
 
 #. 'timeline' label used in pvr guide window
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
@@ -9754,14 +9783,14 @@ msgstr "Groupes de chaînes radio"
 #: system/settings/settings.xml
 msgctxt "#19175"
 msgid "Default start padding time"
-msgstr "Écart de remplissage de début prédéfini"
+msgstr "Ajustement du temps de début prédéfini"
 
 #. pvr settings "default time to add after the end of an event to record
 #. (according to epg its data)" setting label
 #: system/settings/settings.xml
 msgctxt "#19176"
 msgid "Default end padding time"
-msgstr "Écart de remplissage de fin prédéfini"
+msgstr "Ajustement du temps de fin prédéfini"
 
 #. pvr settings category and group label
 #: system/settings/settings.xml
@@ -9782,6 +9811,7 @@ msgid "Deleted"
 msgstr "Supprimé"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9800,6 +9830,7 @@ msgid "Future days to display"
 msgstr "Prochains jours à afficher"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10213,6 +10244,12 @@ msgstr "Heure de réveil quotidien (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtrer les chaînes"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "Chaînes TV et radio"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12111,12 +12148,12 @@ msgstr "Changer le fournisseur d'informations"
 #: system/settings/settings.xml xbmc/music/MusicDatabase.cpp
 msgctxt "#20196"
 msgid "Export music library"
-msgstr "Exporter la musithèque"
+msgstr "Exporter la musicothèque"
 
 #: xbmc/music/MusicDatabase.cpp system/settings/settings.xml
 msgctxt "#20197"
 msgid "Import music library"
-msgstr "Importer une musithèque"
+msgstr "Importer une musicothèque"
 
 msgctxt "#20198"
 msgid "No artist found!"
@@ -12205,7 +12242,7 @@ msgstr "Applications Android"
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20245"
 msgid "Windows music library"
-msgstr "Musithèque Windows"
+msgstr "Musicothèque Windows"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20246"
@@ -12547,11 +12584,11 @@ msgstr "Chargement des détails des épisodes"
 
 msgctxt "#20362"
 msgid "Remove episode from library"
-msgstr "Retirer l'épisode"
+msgstr "Retirer l'épisode de la médiathèque"
 
 msgctxt "#20363"
 msgid "Remove TV show from library"
-msgstr "Retirer la série TV"
+msgstr "Retirer la série TV de la médiathèque"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20364"
@@ -12820,6 +12857,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Remplacer les noms de fichiers par les titres en médiathèque"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -13335,7 +13373,7 @@ msgstr "Impossible de mettre en cache des fichiers supérieurs à 4 Go"
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#21396"
 msgid "Chapter"
-msgstr "Chapitre"
+msgstr "Chapitre "
 
 msgctxt "#21397"
 msgid "High quality pixel shader v2"
@@ -14086,37 +14124,37 @@ msgstr "Sélectionner l'artiste"
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
-msgstr "Informations sur l'artiste"
+msgstr "Informations sur l'artiste "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
 msgid "Instruments"
-msgstr "Instruments"
+msgstr "Instruments "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21893"
 msgid "Born"
-msgstr "Naissance"
+msgstr "Naissance "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21894"
 msgid "Formed"
-msgstr "Créé"
+msgstr "Formation "
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21895"
 msgid "Themes"
-msgstr "Thèmes"
+msgstr "Thèmes "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21896"
 msgid "Disbanded"
-msgstr "Dissous"
+msgstr "Dissolution "
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21897"
 msgid "Died"
-msgstr "Décédé"
+msgstr "Décès "
 
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#21898"
@@ -14126,11 +14164,11 @@ msgstr "Années actives "
 #: xbmc/playlists/SmartPlaylist.cpp addons/skin.estuary/xml/Variables.xml
 msgctxt "#21899"
 msgid "Label"
-msgstr "Libellé"
+msgstr "Label "
 
 msgctxt "#21900"
 msgid "Born / Formed"
-msgstr "Naissance / Création"
+msgstr "Naissance / Formation"
 
 #: system/settings/settings.xml
 msgctxt "#22000"
@@ -14537,7 +14575,7 @@ msgstr "Installer depuis un fichier Zip"
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24042"
 msgid "Downloading {0:d}%"
-msgstr "Téléchargement de {0:d}%"
+msgstr "Téléchargement {0:d} %"
 
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -14549,7 +14587,7 @@ msgstr "Mises à jour disponibles"
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
 msgctxt "#24044"
 msgid "Installing {0:d}%"
-msgstr "Installation {0:d}%"
+msgstr "Installation {0:d} %"
 
 #. Used as an event log description for add-ons failed to install from zip
 #: xbmc/addons/AddonInstaller.cpp
@@ -15093,7 +15131,7 @@ msgstr "Analyseur de vidéothèque"
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#24146"
 msgid "Music library scanner"
-msgstr "Analyseur de la musithèque"
+msgstr "Analyseur de la musicothèque"
 
 #. Used as an event log description for files that failed to be processed by
 #. the library scanner
@@ -15362,7 +15400,7 @@ msgstr "Style "
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
 msgctxt "#29903"
 msgid "Composer"
-msgstr "Compositeur"
+msgstr "Compositeur "
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
@@ -15778,7 +15816,7 @@ msgstr "Nostalgie"
 #: system/settings/settings.xml
 msgctxt "#29980"
 msgid "Enable RDS for radio channels"
-msgstr "Activer RDS pour les canaux radio"
+msgstr "Activer le RDS pour les chaînes radio"
 
 #. Help text for RDS enable/disable
 #: system/settings/settings.xml
@@ -18012,7 +18050,7 @@ msgid ""
 "Use high quality scalers when upscaling a video by at least this percentage."
 " A value below 5% makes little sense as video is processed with high GPU "
 "load without any visible picture quality improvements."
-msgstr "Utilise des redimensionnements de haute qualité (HQ) avec ce % minimum lors de la mise à l'échelle d'une vidéo. Une valeur inférieure à 5% n'a pas beaucoup d'intérêt car la vidéo sera traitée avec une charge GPU importante sans augmentation visible de la qualité d'image."
+msgstr "Utilise des redimensionnements de haute qualité (HQ) avec ce % minimum lors de la mise à l'échelle d'une vidéo. Une valeur inférieure à 5 % n'a pas beaucoup d'intérêt car la vidéo sera traitée avec une charge GPU importante sans augmentation visible de la qualité d'image."
 
 #. Description of setting with label #13425 "Allow hardware acceleration
 #. (VDPAU)"
@@ -18456,7 +18494,7 @@ msgstr "Dossier où se trouvent les icônes des chaînes."
 #: system/settings/settings.xml
 msgctxt "#36217"
 msgid "Scan for missing channel icons."
-msgstr "Rechercher les icônes manquantes des chaînes."
+msgstr "Recherche les icônes manquantes des chaînes."
 
 #: system/settings/settings.xml
 msgctxt "#36218"
@@ -18505,10 +18543,8 @@ msgstr "Cette catégorie contient les paramètres de lecture de l'enregistreur v
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Bascule en affichage plein écran au démarrage de la lecture des chaînes et des enregistrements."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "Bascule en affichage plein écran au démarrage de la lecture des chaînes."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -18755,13 +18791,13 @@ msgctxt "#36262"
 msgid ""
 "Export parts of the music library to an XML file or NFO files. This will "
 "optionally overwrite your current NFO and artwork files."
-msgstr "Exporte des parties de la musithèque vers des fichiers XML ou NFO. Cela écrasera optionnellement les fichiers NFO et d'illustration existants."
+msgstr "Exporte des parties de la musicothèque vers des fichiers XML ou NFO. Cela écrasera optionnellement les fichiers NFO et d'illustration existants."
 
 #. Description of setting with label #20197 "Import music library"
 #: system/settings/settings.xml
 msgctxt "#36263"
 msgid "Import an XML file into the music library database."
-msgstr "Importe un fichier XML dans la base de données de la musithèque."
+msgstr "Importe un fichier XML dans la base de données de la musicothèque."
 
 #. Description of settings category with label #14086 "Playback"
 #: system/settings/settings.xml
@@ -20248,7 +20284,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Utilise des textures de plus haute qualité pour les jaquettes et les FanArts (consomme plus de mémoire)."
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20443,7 +20479,7 @@ msgctxt "#36575"
 msgid ""
 "Gamma for selected gamma curve type. For input and output offset, the result"
 " at 50% will match an absolute gamma curve with this gamma value."
-msgstr "Gamma pour le type de courbe gamma sélectionné. Pour le décalage en entrée et sortie, le résultat à 50% va faire correspondre une courbe gamma absolue avec cette valeur gamma."
+msgstr "Gamma pour le type de courbe gamma sélectionné. Pour le décalage en entrée et sortie, le résultat à 50 % va faire correspondre une courbe gamma absolue avec cette valeur gamma."
 
 #: system/settings/settings.xml
 msgctxt "#36576"
@@ -20578,7 +20614,7 @@ msgstr "Précision de sortie du tramage vidéo en bits. Utiliser le plus haut pa
 msgctxt "#36600"
 msgid ""
 "This category contains the settings for how the music library is handled."
-msgstr "Cette catégorie contient les paramètres relatifs à la gestion de la musithèque."
+msgstr "Cette catégorie contient les paramètres relatifs à la gestion de la musicothèque."
 
 #. Description of settings category with label #14081 "File lists"
 #: system/settings/settings.xml
@@ -20952,7 +20988,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Activer l'imagerie avec plus de couleurs"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Définir la résolution limite de l'interface"
@@ -20991,7 +21027,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -21001,7 +21037,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Illimité"
@@ -21118,7 +21154,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Extrait les miniatures de chapitre pour présentation dans la fenêtre de dialogue de chapitrage/signets. Ceci est susceptible d'augmenter la charge du processeur."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -21353,7 +21389,7 @@ msgstr "Tous les rôles"
 msgctxt "#38060"
 msgid ""
 "Music library needs to rescan tags from files. Would you like to scan now?"
-msgstr "La musithèque doit effectuer une réanalyse des balises de fichiers.\nFaut-il l'effectuer maintenant ?"
+msgstr "La musicothèque doit effectuer une réanalyse des balises de fichiers.\nFaut-il l'effectuer maintenant ?"
 
 #. Extra scraping question on upgrade from previous version
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
@@ -21612,7 +21648,7 @@ msgstr "Réinitialiser la position de reprise"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38300"
 msgid "Export Music Library"
-msgstr "Exporter la musithèque"
+msgstr "Exporter la musicothèque"
 
 #. Kind of export output, see #38304
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21887,12 +21923,12 @@ msgstr "Ceci fournit l'accès aux emplacements où les sources d'images peuvent 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39008"
 msgid "Zoom - 120% width"
-msgstr "Zoom - Largeur 120%"
+msgstr "Zoom - Largeur 120 %"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#39009"
 msgid "Zoom - 110% width"
-msgstr "Zoom - Largeur 110%"
+msgstr "Zoom - Largeur 110 %"
 
 #: view/GUIViewState.cpp
 msgctxt "#39010"
@@ -21985,19 +22021,19 @@ msgstr "Dépendances"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39025"
 msgid "Gender"
-msgstr "Genre"
+msgstr "Sexe "
 
 #. Brief comment to distinguish artists with the same name e.g "former bassist
 #. with Journey"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39026"
 msgid "Disambiguation"
-msgstr "Désambiguïsation"
+msgstr "Résumé "
 
 #. Sort name of artist (e.g. Jackson, Michael)
 msgctxt "#39027"
 msgid "Sortname"
-msgstr "Nom de tri"
+msgstr "Nom de tri "
 
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp

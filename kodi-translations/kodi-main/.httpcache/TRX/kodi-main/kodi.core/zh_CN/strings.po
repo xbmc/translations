@@ -10,7 +10,7 @@
 # Ryan_gou <gzf9@163.com>, 2015
 # San <github@zhujunsan.net>, 2015
 # suwakowww <495599914@qq.com>, 2017
-# Tao Guo <gt945@163.com>, 2016
+# Tao Guo <gt945@163.com>, 2016,2020
 # taxigps <taxigps@sina.com>, 2015-2020
 # Wamdy <wamdy@live.cn>, 2017
 # Wei Zhang <zwzhang250@sina.com>, 2018
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-19 05:33+0000\n"
+"PO-Revision-Date: 2020-08-18 01:01+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -3621,6 +3621,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "每周日"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "首播"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "直播"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3640,8 +3652,8 @@ msgstr "仅本次"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "新的！"
+msgid "New"
+msgstr "新的"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3680,6 +3692,12 @@ msgstr "确认停止录像"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "确定停止此录像吗？"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "结局"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4612,7 +4630,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "系统信息"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6374,7 +6392,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "电影信息"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "加入播放列表"
@@ -6892,6 +6911,16 @@ msgstr "直接平面"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "无限制 / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9786,6 +9815,7 @@ msgid "Deleted"
 msgstr "已删除"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9804,6 +9834,7 @@ msgid "Future days to display"
 msgstr "显示的未来日数"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10217,6 +10248,12 @@ msgstr "每日唤醒时间（HH:MM:SS）"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "筛选频道"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "电视和电台频道"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -12824,6 +12861,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "用资料库标题替换文件名"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -18509,10 +18547,8 @@ msgstr "此功能区包含 PVR 播放和频道切换设置。"
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "开始播放频道和录像时切换到全屏显示。"
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "开始播放频道时切换到全屏显示。"
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -20252,7 +20288,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "封面和同人画使用高质量贴图（占用更多内存）"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20956,7 +20992,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "启用高色深艺术图片"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "设置用户界面分辨率限制"
@@ -20995,7 +21031,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -21005,7 +21041,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "无限制"
@@ -21122,7 +21158,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "提取章节缩略图用于章节/书签对话框显示。这会增加 CPU 负荷。"
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"

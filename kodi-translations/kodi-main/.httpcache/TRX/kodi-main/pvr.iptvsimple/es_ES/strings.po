@@ -1,18 +1,19 @@
 # Kodi Media Center language file
 # Addon Name: PVR IPTV Simple Client
 # Addon id: pvr.iptvsimple
-# Addon Provider: nightik
+# Addon Provider: nightik and Ross Nicholson
 # Translators:
 # alfonskunk <alfonskunk@gmail.com>, 2019-2020
 # el buve, 2015
 # Paul Uriarte <pauluriarte2@gmail.com>, 2015
+# Rafa Oliveros, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-03-13 13:55+0000\n"
-"Last-Translator: alfonskunk <alfonskunk@gmail.com>\n"
+"PO-Revision-Date: 2020-05-17 02:03+0000\n"
+"Last-Translator: Rafa Oliveros\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/teamxbmc/kodi-main/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "Kodi PVR addon for IPTV support."
-msgstr "Kodi PVR addon para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home"
+msgstr "Complemento Kodi PVR para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home"
 
 msgctxt "Addon Description"
 msgid ""
@@ -30,7 +31,7 @@ msgid ""
 "    \n"
 "For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md\n"
 "    "
-msgstr "El cliente PVR IPTV Simple soporta listas M3U, reproducción de TV en Vivo para origenes multicast/unicast, escucha de canales de radio y EPG"
+msgstr "Cliente PVR IPTV Simple compatible con listas M3U, reproducción de TV en Directo para fuentes multicast/unicast, escucha de canales de Radio y EPG"
 
 msgctxt "Addon Disclaimer"
 msgid ""
@@ -60,7 +61,7 @@ msgstr "Ruta local (incluida red local)"
 #. label-option: General - genresPathType
 msgctxt "#30002"
 msgid "Remote path (Internet address)"
-msgstr "Ruta remota (dirección de internet)"
+msgstr "Ruta remota (dirección de Internet)"
 
 #. label-option: General - m3uRefreshMode
 msgctxt "#30003"
@@ -172,17 +173,17 @@ msgstr "{0:.1f} horas"
 #. label-group: Channel Logos - Channel Logos
 msgctxt "#30030"
 msgid "Channel Logos"
-msgstr "Logotipos de Canales"
+msgstr "Logotipos de canales"
 
 #. label: Channel Logos - logoPath
 msgctxt "#30031"
 msgid "Channel logos folder"
-msgstr "Carpeta de Logotipos de Canales"
+msgstr "Carpeta de logotipos de canales"
 
 #. label: Channel Logos - logoBaseUrl
 msgctxt "#30032"
 msgid "Channel logos base URL"
-msgstr "URL base de Logotipos de Canales"
+msgstr "URL base de logotipos de canales"
 
 #. label-group: Channel Logos - XMLTV Logos Options
 msgctxt "#30040"
@@ -218,7 +219,7 @@ msgstr "Géneros"
 #. label: Genres - useEpgGenreText
 msgctxt "#30051"
 msgid "Use genre text from XMLTV when mapping genres"
-msgstr "Usar texto género de XMLTV cuando se mapean géneros"
+msgstr "Usar texto de género de XMLTV al mapear géneros"
 
 #. label: Genres - genresPath
 msgctxt "#30052"
@@ -238,7 +239,7 @@ msgstr "Avanzado"
 #. label-group: Advanced - Multicast relay
 msgctxt "#30061"
 msgid "Multicast relay (udpxy)"
-msgstr "Retransmisión Multicast (udpxy)"
+msgstr "Retransmisión multicast (udpxy)"
 
 #. label: Advanced - transformMulticastStreamUrls
 msgctxt "#30062"
@@ -267,13 +268,28 @@ msgstr "Usar inputstream.adaptive para emisiones m3u8 (HLS)"
 
 #. label: Advanced - useFFmpegReconnect
 msgctxt "#30067"
-msgid "Use FFMpeg http reconnect options if possible"
-msgstr "Usar opciones de reconexión http de FFMpeg cuando sea posible"
+msgid "Use FFmpeg http reconnect options if possible"
+msgstr "Usar opciones de reconexión HTTP FFmpeg si es posible"
 
-#. label: Advanced - userAgent
+#. label: Advanced - defaultUserAgent
 msgctxt "#30068"
 msgid "User-Agent"
 msgstr "User-Agent"
+
+#. label: Advanced - defaultInputstream
+msgctxt "#30069"
+msgid "Inputstream name"
+msgstr "Nombre del flujo de entrada"
+
+#. label: Advanced - defaultMimeType
+msgctxt "#30070"
+msgid "MIME type"
+msgstr "Tipo MIME"
+
+#. label-group: Advanced - Channel defaults
+msgctxt "#30071"
+msgid "Channel defaults"
+msgstr "Canales predeterminados"
 
 #. label-category: catchup
 #. label-group: Catchup - Catchup
@@ -289,7 +305,7 @@ msgstr "Activar catchup"
 #. label: Catchup - catchupQueryFormat
 msgctxt "#30102"
 msgid "Query format string"
-msgstr "Formato de cadena de pregunta"
+msgstr "Formato de cadena de consulta"
 
 #. label: Catchup - catchupDays
 msgctxt "#30103"
@@ -304,7 +320,7 @@ msgstr "Todos los canales soportan este modo de catchup"
 #. label-group: Catchup - Watch From EPG
 msgctxt "#30105"
 msgid "Watch From EPG"
-msgstr "Ver Desde EPG"
+msgstr "Ver desde EPG"
 
 #. label: Catchup - catchupPlayEpgAsLive
 msgctxt "#30106"
@@ -314,12 +330,12 @@ msgstr "Reproducir desde EPG en modo TV en directo (usando timeshift)"
 #. label: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30107"
 msgid "Buffer before program start"
-msgstr "Intervalo antes del principio de programa"
+msgstr "Buffer antes del inicio del programa"
 
 #. label: Catchup - catchupWatchEpgEndBuffer
 msgctxt "#30108"
 msgid "Buffer after program end"
-msgstr "Intervalo después del fin de programa"
+msgstr "Buffer después del fin de programa"
 
 #. label: Catchup - catchupOnlyOnFinishedProgrammes
 msgctxt "#30109"
@@ -388,7 +404,7 @@ msgctxt "#30604"
 msgid ""
 "If location is [Remote path] select whether or not the the M3U file should "
 "be cached locally."
-msgstr "Si la ubicación es [Ruta remota] se debe decidir si el archivo M3U se cachea localmente."
+msgstr "Si la ubicación es [Ruta remota] seleccione si el archivo M3U se debe almacenar en caché localmente o no."
 
 #. help: General - startNum
 msgctxt "#30605"
@@ -590,12 +606,28 @@ msgid ""
 "property, i.e.: `#KODIPROP:http-reconnect=true`."
 msgstr "Nota: Esto solo aplica a flujos http/https que se procesen con libavformat (p.ej. m3u8/HLS). El uso de libavformat se puede especificar en un archivo M3U poniendo la propiedad 'inputstreamclass' como 'inputstream.ffmpeg' en la implementación interna de Kodi, o 'inputstream.ffmpegdirect' para la versión addon. P.ej. añadiendo la linea '#KODIPROP:inputstreamclass=inputstream.ffmpeg'. Si esta opción no esta activada, se puede activar para cada flujo/canal añadiendo la propiedad Kodi. P.ej. '#KODIPROP:http-reconnect=true'."
 
-#. help: Advanced - userAgent
+#. help: Advanced - defaultUserAgent
 msgctxt "#30686"
 msgid ""
 "Use this User-Agent if there is not one supplied as a property or as part of"
 " the channel stream URL."
 msgstr "Usa este User-Agent si no viene ninguno definido como parte de la URL de emisión."
+
+#. help: Advanced - defaultInputstream
+msgctxt "#30687"
+msgid ""
+"Use this inputsream as the default if there is not one supplied as a "
+"property (KODIPROP) of the channel. Use with care as this will disable any "
+"use of the addon's default stream inspection behaviour."
+msgstr "Use este inputstream como predeterminado si no se proporciona uno como propiedad (KODIPROP) del canal. Úselo con cuidado ya que esto deshabilitará cualquier uso del comportamiento de inspección de flujo predeterminado del complemento."
+
+#. help: Advanced - defaultMimeType
+msgctxt "#30688"
+msgid ""
+"Use this MIME type as the default if there is not one supplied as a property"
+" (KODIPROP) of the channel. Use with care as this will disable any use of "
+"the addon's default stream inspection behaviour."
+msgstr "Utilice este tipo MIME como predeterminado si no se proporciona uno como propiedad (KODIPROP) del canal. Úselo con cuidado ya que esto deshabilitará cualquier uso del comportamiento de inspección de flujo predeterminado del complemento."
 
 #. help-category: Catchup
 msgctxt "#30700"
@@ -651,8 +683,10 @@ msgid ""
 "When disabled any catchup programme from the past will be played like a "
 "video (bounded by start and end times). If enabled, it will instead act like"
 " a live stream with timeshift, also allowing the ability to skip back and "
-"forward programmes."
-msgstr "Cuando se desactiva cualquier programa catchup del pasado se reproducirá como cualquier vídeo (delimitado por tiempo de inicio y final). Si se activa, se verá como un evento en directo con timeshift, permitiendo rebobinar y avanzar en el programa."
+"forward programmes. Note that the only effect this option has on streams "
+"that do not support timeshifting is whether or not to apply the before/after"
+" buffer."
+msgstr "Cuando se deshabilita, cualquier programa de recuperación del pasado se reproducirá como un vídeo (limitado por las horas de inicio y finalización). Si está habilitado, actuará como una transmisión en directo con Timeshift, lo que también permite la capacidad de saltar y retroceder programas. Tenga en cuenta que el único efecto que tiene esta opción en las secuencias que no admiten el cambio de hora es si se aplica o no el búffer antes/después."
 
 #. help: Catchup - catchupWatchEpgBeginBuffer
 msgctxt "#30706"

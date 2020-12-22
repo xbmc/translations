@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-08 12:40+0000\n"
+"PO-Revision-Date: 2020-06-29 20:21+0000\n"
 "Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/teamxbmc/kodi-main/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -3606,6 +3606,18 @@ msgctxt "#837"
 msgid "Sundays"
 msgstr "Sekmadieniais"
 
+#. Label for a TV show Premiere
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#838"
+msgid "Première"
+msgstr "Premjera"
+
+#. Label for a Live TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#839"
+msgid "Live"
+msgstr "Tiesiogiai"
+
 #. Message in a dialog when a user wants to delete a timer that was scheduled
 #. by a timer rule
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -3625,8 +3637,8 @@ msgstr "Tik šį"
 #. Label for a first aired TV show
 #: addons/skin.estuary/xml/DialogPVRInfo.xml
 msgctxt "#842"
-msgid "New!"
-msgstr "Nauja!"
+msgid "New"
+msgstr "Naujiena"
 
 #. Label for a context menu entry to activate a currently inactive timer
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -3665,6 +3677,12 @@ msgstr "Patvirtinti įrašymo sustabdymą"
 msgctxt "#848"
 msgid "Are you sure you want to stop this recording?"
 msgstr "Ar tikrai norite sustabdyti šį įrašymą?"
+
+#. Label for a finale of a TV show
+#: addons/skin.estuary/xml/DialogPVRInfo.xml
+msgctxt "#849"
+msgid "Finale"
+msgstr "Finalas"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -4597,7 +4615,7 @@ msgctxt "#10007"
 msgid "System information"
 msgstr "Sistemos informacija"
 
-#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/video/ContextMenus.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#10008"
 msgid "Play next"
@@ -6359,7 +6377,8 @@ msgctxt "#13346"
 msgid "Movie information"
 msgstr "Filmo informacija"
 
-#: system/settings/settings.xml
+#: system/settings/settings.xml xbmc/video/ContextMenus.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
 msgstr "Įtraukti elementą į eilę"
@@ -6877,6 +6896,16 @@ msgstr "Direct-To-Plane"
 msgctxt "#13465"
 msgid "EGL"
 msgstr "EGL"
+
+#: system/settings/gbm.xml
+msgctxt "#13466"
+msgid "1080 / 720 (>30Hz)"
+msgstr "1080 / 720 (>30Hz)"
+
+#: system/settings/gbm.xml
+msgctxt "#13467"
+msgid "Unlimited / 1080 (>30Hz)"
+msgstr "Neribotai / 1080 (>30Hz)"
 
 #: system/settings/settings.xml
 msgctxt "#13505"
@@ -9771,6 +9800,7 @@ msgid "Deleted"
 msgstr "Pašalintas"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19180"
 msgid "TV channels"
@@ -9789,6 +9819,7 @@ msgid "Future days to display"
 msgstr "Rodyti dienų į ateitį"
 
 #. Settings -> Interface -> Other -> Startup window value
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#19183"
 msgid "Radio channels"
@@ -10202,6 +10233,12 @@ msgstr "Kasdienis žadinimo laikas (HH:MM:SS)"
 msgctxt "#19249"
 msgid "Filter channels"
 msgstr "Filtruoti kanalus"
+
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
+#: system/settings/settings.xml
+msgctxt "#19250"
+msgid "TV and radio channels"
+msgstr "Televizijos ir radijo kanalai"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -11260,7 +11297,7 @@ msgstr "Atkurti įrašą"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19690"
 msgid "PVR has scheduled a reminder for '{0:s}' on channel '{1:s}' in {2:s}."
-msgstr ""
+msgstr "PVR suplanavo '{0:s}' įrašymą kanale '{1:s}' po {2:s}."
 
 #. Text for shutdown confirmation dialog.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -12809,6 +12846,7 @@ msgctxt "#20419"
 msgid "Replace file names with library titles"
 msgstr "Pakeisti failų vardus bibliotekos pavadinimais"
 
+#. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
 msgctxt "#20420"
 msgid "Never"
@@ -13154,7 +13192,7 @@ msgstr "Nekategorizuotas"
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
-msgstr "Įjungti UPnPpalaikymą"
+msgstr "Įjungti UPnP palaikymą"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21359"
@@ -15123,17 +15161,17 @@ msgstr "Priedas yra nesuderinamas su šia Kodi versija."
 #: apple remote
 msgctxt "#24153"
 msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
-msgstr ""
+msgstr "Įjunkite, jei norite kad Siri nuotolinio valdymo pultas atitiktų normalią Apple tvOS elgseną"
 
 #: apple remote
 msgctxt "#24154"
 msgid "Idle remote handling after N seconds"
-msgstr ""
+msgstr "Užmigdyti nuotolinio valdymo pulto signalo apdorojimą po N sekundžių"
 
 #: apple remote
 msgctxt "#24155"
 msgid "After remote idles, the first tap/swipe received will wake it"
-msgstr ""
+msgstr "Kai nuotolinio valdymo pulto signalo apdorojimas užmigdytas, pirmasis gautas signalas jį pažadins"
 
 #: apple remote
 msgctxt "#24156"
@@ -15163,7 +15201,7 @@ msgstr "Įgalinti Siri nuotolinio valdymo pulto laukimo laiką"
 #: apple remote
 msgctxt "#24161"
 msgid "Enable remote input timeout for tap/swipe"
-msgstr ""
+msgstr "Įgalinti nuotolinio valdymo pulto įvesties laukimo laiką bakstelėjimui/perbraukimui"
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
@@ -15172,7 +15210,7 @@ msgstr "Naudoti virtualią Kodi klaviatūrą"
 #: apple remote
 msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
-msgstr ""
+msgstr "Atitikti Apple tvOS standartą (Siri nuotolinio valdymo pultas)"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -18362,14 +18400,14 @@ msgctxt "#36205"
 msgid ""
 "Sort the channels by channel number from the backend, but use local "
 "numbering for channels."
-msgstr ""
+msgstr "Rūšiuoti kanalus pagal kanalo numerį iš posistemės, tačiau naudoti lokalią kanalų numeraciją."
 
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid ""
 "Use the channel numbering from the backend. Only works with one enabled PVR "
 "add-on!"
-msgstr ""
+msgstr "Naudoti kanalų numeraciją iš posistemės. Veikia tik kai įjungtas vienas PVR priedas!"
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18494,10 +18532,8 @@ msgstr "Šioje kategorijoje yra PVR atkūrimo ir kanalų perjungimo nustatymai."
 
 #: system/settings/settings.xml
 msgctxt "#36227"
-msgid ""
-"Switch to full screen display when starting playback of channels and "
-"recordings."
-msgstr "Perjungti į viso ekrano režimą, kai pradedamas kanalo ar įrašo atkūrimas."
+msgid "Switch to full screen display when starting playback of channels."
+msgstr "Perjungti į viso ekrano režimą, kai pradedamas kanalo atkūrimas."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -19003,7 +19039,7 @@ msgctxt "#36297"
 msgid ""
 "Choose a time in seconds after which PVR reminder popups will be "
 "automatically closed."
-msgstr ""
+msgstr "Pasirinkite laiką sekundėmis, kuriam praėjus iššokantis PVR priminimo langas bus automatiškai uždarytas."
 
 #: system/settings/settings.xml
 msgctxt "#36298"
@@ -19018,21 +19054,21 @@ msgctxt "#36299"
 msgid ""
 "Switch display into HDR mode if media with HDR information is played.\n"
 "If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr ""
+msgstr "Perjungti ekraną į HDR režimą, jei atkuriamas medija įrašas su HDR infomacija. Jei išjungta, HDR informacija bus pritaikoma naudojant vidinį Kodi HDR kelią."
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
 msgctxt "#36300"
 msgid ""
 "Select the folder where movie set information (images) are saved locally."
-msgstr ""
+msgstr "Pasirinkite aplanką, kuriame yra lokaliai išsaugota filmų rinkinio informacija (atvaizdai)."
 
 #: xbmc/interfaces/builtins/LibraryBuiltins.cpp
 msgctxt "#36301"
 msgid ""
 "No 'Movie set information folder' is configured to store movie set images so"
 " they will not be exported. Do you want to proceed?"
-msgstr ""
+msgstr "'Filmų rinkinio informacijos aplankas' nėra sukonfigūruotas filmų rinkinių vaizdams saugoti, todėl jie nebus eksportuojami. Ar norite tęsti?"
 
 #: system/settings/settings.xml
 msgctxt "#36302"
@@ -19063,7 +19099,7 @@ msgctxt "#36306"
 msgid ""
 "If not using backend channel numbers then start all groups channel numbers "
 "from 1."
-msgstr ""
+msgstr "Jei nenaudojama posistemės kanalų numeracija, tada pradėti visų grupių numeraciją nuo 1."
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -19255,7 +19291,7 @@ msgctxt "#36334"
 msgid ""
 "Allow programs on this device to control this application via the web "
 "interface or the JSON-RPC interface protocol."
-msgstr ""
+msgstr "Leisti programoms, esančioms šiame įrenginyje, valdyti šią programą naudojant žiniatinklio sąsajos ar JSON-RPC sąsajos protokolą."
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -20237,7 +20273,7 @@ msgctxt "#36547"
 msgid "Use higher quality textures for covers and fanart (uses more memory)"
 msgstr "Naudoti aukštesnės kokybės tekstūras viršeliams ir Fanart (naudoja daugiau atminties)"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20941,7 +20977,7 @@ msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
 msgstr "Įjungti didesnio spalvų gylio iliustracijas"
 
-#: system/settings/rbp.xml
+#: system/settings/rbp.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Nustatyti GUI raiškos ribą"
@@ -20980,7 +21016,7 @@ msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
@@ -20990,7 +21026,7 @@ msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Neribotas"
@@ -21107,7 +21143,7 @@ msgid ""
 "dialogue. This might increase CPU load."
 msgstr "Generuoti skyrių miniatiūras tam, kad atvaizduoti jas skyrių / žymių dialoge. Tai gali padidinti CPU apkrovimą."
 
-#: system/settings/android.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
@@ -21569,7 +21605,7 @@ msgstr "Šioje kategorijoje yra kiti vartotojo sąsajos nustatymai"
 msgctxt "#38112"
 msgid ""
 "Automatically go to the visualisation window when audio playback starts"
-msgstr ""
+msgstr "Automatiškai atidaryti vizualizacijos langą pradėjus garso įrašo atkūrimą."
 
 msgctxt "#38190"
 msgid "Extract thumbnails from video files"
