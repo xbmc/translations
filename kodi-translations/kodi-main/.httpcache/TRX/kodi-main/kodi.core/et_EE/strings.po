@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-12-17 05:15+0000\n"
+"PO-Revision-Date: 2020-12-26 11:46+0000\n"
 "Last-Translator: rimas <riks_12@hot.ee>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/teamxbmc/kodi-main/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
@@ -1137,7 +1137,8 @@ msgid "Fetching CD information"
 msgstr "CD andmete hankimine"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/network/NetworkServices.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2486,7 +2487,8 @@ msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp xbmc/PlayListPlayer.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Esitusloend"
@@ -3935,6 +3937,19 @@ msgid "Enter web address"
 msgstr "Sisesta veebiaadress"
 
 #: system/settings/settings.xml
+msgctxt "#1052"
+msgid "Require authentication"
+msgstr "Nõua autentimist"
+
+#: system/settings/settings.xml
+msgctxt "#1053"
+msgid ""
+"Choose whether requests to the web server require a username and a password,"
+" which must be set below if enabled. It is recommended to always leave this "
+"setting enabled."
+msgstr "Vali, kas veebiserver nõuab kasutajanime ja parooli. Need tuleb lubamise korral allpool määrata. Soovitatav on jätta see säte alati lubatuks."
+
+#: system/settings/settings.xml
 msgctxt "#1180"
 msgid "Proxy type"
 msgstr "Puhverserveri tüüp"
@@ -4797,6 +4812,11 @@ msgstr "Muuda programmi allikat"
 msgctxt "#10057"
 msgid "Edit file source"
 msgstr "Muuda faili allikat"
+
+#: xbmc/video/dialogs/CGUIDialogVideoInfo.cpp
+msgctxt "#10058"
+msgid "Remove tag from library"
+msgstr "Eemalda silt teegist"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10099"
@@ -5767,14 +5787,6 @@ msgctxt "#13023"
 msgid "Successfully removed storage device"
 msgstr "Kettaseade edukalt eemaldatud"
 
-msgctxt "#13024"
-msgid "Joystick plugged"
-msgstr "Juhtkang ühendatud"
-
-msgctxt "#13025"
-msgid "Joystick unplugged"
-msgstr "Juhtkang lahti ühendatud"
-
 #: system/settings/settings.xml
 msgctxt "#13026"
 msgid "Try to wakeup remote servers on access"
@@ -6497,7 +6509,7 @@ msgctxt "#13386"
 msgid "Use time based seeking"
 msgstr "Kasuta ajapõhist otsimist"
 
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#13387"
 msgid "Track naming template - right"
 msgstr "Lugude failinime mall - parem"
@@ -6513,10 +6525,8 @@ msgid "There are no presets available for this visualisation"
 msgstr "Visuaalile ei ole eelhäälestust"
 
 msgctxt "#13390"
-msgid ""
-"There are no settings available\n"
-"for this visualisation"
-msgstr "Visualitsioonile ei ole\nseaded saadaval"
+msgid "There are no settings available[CR]for this visualisation"
+msgstr "Sellel visuaalil[CR]pole sätteid"
 
 #: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
@@ -6697,8 +6707,8 @@ msgstr "Luba riistvaraline kiirendus - VTBDecoder"
 
 #: system/settings/settings.xml
 msgctxt "#13430"
-msgid "Allow hardware acceleration - PRIME"
-msgstr "Luba riistvaraline kiirendus - PRIME"
+msgid "Allow using DRM PRIME decoder"
+msgstr "Luba DRM PRIME dekoodri kasutamine"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6736,6 +6746,11 @@ msgstr "Kasuta ekraani HDR võimekust"
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "Eelista VDPAU videomikserit"
+
+#: system/settings/settings.xml
+msgctxt "#13438"
+msgid "Allow hardware acceleration with DRM PRIME"
+msgstr "Luba riistvaraline kiirendus - DRM PRIME"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6970,6 +6985,7 @@ msgstr "Pilt puudub"
 
 #. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
 #: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: system/settings/settings.xml
 msgctxt "#13516"
 msgid "Add art type"
 msgstr "Lisa pildi liik"
@@ -7461,11 +7477,6 @@ msgid "Queue songs on selection"
 msgstr "Lisa valitud lood mängukavva"
 
 #: system/settings/settings.xml
-msgctxt "#14085"
-msgid "Whitelist"
-msgstr "Valge loend"
-
-#: system/settings/settings.xml
 msgctxt "#14086"
 msgid "Playback"
 msgstr "Taasesitus"
@@ -7682,6 +7693,21 @@ msgstr "Regioon C"
 msgctxt "#14125"
 msgid "Input"
 msgstr "Sisend"
+
+#: system/settings/settings.xml
+msgctxt "#14126"
+msgid "Whitelist"
+msgstr "Valge loend"
+
+#: system/settings/settings.xml
+msgctxt "#14127"
+msgid "Allow 3:2 pulldown refresh rates"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#14128"
+msgid "Allow double refresh rates"
+msgstr "Lubage kahekordsed tvärskendussagedused"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -8309,6 +8335,8 @@ msgctxt "#16034"
 msgid "Couldn't get songs from database."
 msgstr "Laulude hankimine andmebaasist ebaõnnestus."
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#16035"
 msgid "Party mode playlist"
@@ -8339,6 +8367,7 @@ msgid "On"
 msgstr "Sees"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
+#: xbmc/video/windows/VideoFileItemListModifier.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Kõik videod"
@@ -8470,8 +8499,8 @@ msgstr "Bilineaarne"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
-msgid "Bicubic"
-msgstr "Bicubic"
+msgid "Bicubic (B-Spline)"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8524,6 +8553,11 @@ msgid "VDPAU - Sharpness"
 msgstr "VDPAU - Teravus"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16314"
+msgid "Bicubic (Mitchell)"
+msgstr "Bicubic (Mitchell)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Optimeeritud"
@@ -8555,6 +8589,11 @@ msgid "DXVA"
 msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16321"
+msgid "Bicubic (Catmull-Rom)"
+msgstr "Bicubic (Catmull-Rom)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
@@ -8575,6 +8614,11 @@ msgid "VDPAU - Bob"
 msgstr "VDPAU - sünk. paaritud"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16326"
+msgid "Bicubic (0,0.75)"
+msgstr "Bicubic (0,0.75)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI - Bob"
 msgstr "VAAPI - segatud"
@@ -8589,29 +8633,10 @@ msgctxt "#16329"
 msgid "VAAPI - Motion compensated"
 msgstr "VAAPI - liikumise kompenseerimisega"
 
-#. Description of OSD video settings for deinterlace method with label #16330
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16330"
-msgid "MMAL - Advanced"
-msgstr "MMAL - täpsem"
-
-#. Description of OSD video settings for deinterlace method with label #16331
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16331"
-msgid "MMAL - Advanced (half)"
-msgstr "MMAL - täpsem (pool)"
-
-#. Description of OSD video settings for deinterlace method with label #16332
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16332"
-msgid "MMAL - Bob"
-msgstr "MMAL - segatud"
-
-#. Description of OSD video settings for deinterlace method with label #16333
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16333"
-msgid "MMAL - Bob (half)"
-msgstr "MMAL - segatud (pool)"
+msgid "Bicubic (0,1.)"
+msgstr "Bicubic (0,1.)"
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -8929,18 +8954,6 @@ msgstr "Kas oled kindel, et soovid seda kanalit peita?"
 msgctxt "#19040"
 msgid "Timers"
 msgstr "Taimerid"
-
-#. label for "rename recording" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19041"
-msgid "Are you sure you want to rename this recording?"
-msgstr "Kas oled kindel, et soovid salvestust ümber nimetada?"
-
-#. label for "rename timer" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19042"
-msgid "Are you sure you want to rename this timer?"
-msgstr "Kas oled kindel, et soovid taimeri ümber nimetada?"
 
 #. pvr settings "recording" category label
 #: system/settings/settings.xml
@@ -9287,7 +9300,7 @@ msgid "Enter the name for the timer"
 msgstr "Sisesta taimerile nimi"
 
 #. generic warning label used at several places
-#: xbmc/addons/AddonSystemSettings.cpp
+#: xbmc/addons/AddonSystemSettings.cpp xbmc/network/NetworkServices.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
@@ -9372,7 +9385,7 @@ msgid ""
 "message."
 msgstr "Taimeri kustutamine ebaõnnestus. Rohkem infot saab logifailist."
 
-#. message box text stating that a PVR backend error occured
+#. message box text stating that a PVR backend error occurred
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
@@ -10743,6 +10756,56 @@ msgstr "Saade"
 msgctxt "#19326"
 msgid "Navigate..."
 msgstr "Navigeeri"
+
+#. Label for a context menu entry to delete alle watched recordings contained
+#. in a folder
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19327"
+msgid "Delete watched"
+msgstr "Kustuta vaadatud"
+
+#. delete multiple recordings confirmation message box text
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19328"
+msgid "Delete all watched recordings in this folder?"
+msgstr "Kas kustutada kõik vaadatud salvestused selles kaustas?"
+
+#. label for PVR settings use backend channel numbers always
+#: system/settings/settings.xml
+msgctxt "#19329"
+msgid "Allow backend channel numbers with more than one PVR add-on"
+msgstr "Luba kaugvastuvõtja enam kui ühel PVR lisamoodulil"
+
+#. pvr settings "switch to channel on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19330"
+msgid "Switch to channel when auto-closing the reminder popup"
+msgstr "Meeldetuletuse hüpikakna automaatsel sulgumisel lülitu kanalile"
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19331"
+msgid "(Auto-close of this reminder will switch to channel...)"
+msgstr "(Selle meeldetuletuse automaatsel sulgumisel lülitutakse kanalile...)"
+
+#. text for event log entry for logging auto channel switch for auto-closed
+#. reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19332"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr "PVR meeldetuletuse '{0:s}' tõttu kanalile '{1:s}' kell '{2:s}' toimus kanalivahetus"
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19333"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
+msgstr "PVR meeldetuletuse tõttu kanalile '{0:s}' kell '{1:s}' toimus kanalivahetus"
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -13110,6 +13173,11 @@ msgid "Show empty TV shows"
 msgstr "Kuva tühjad seriaalid"
 
 #: system/settings/settings.xml
+msgctxt "#20472"
+msgid "Show all performers for music videos"
+msgstr "Kuva kõik esitajad muusikavideotes"
+
+#: system/settings/settings.xml
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Kuva peidetud failid ja kataloogid"
@@ -13173,8 +13241,8 @@ msgstr "Uuendusi ei ole"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21342"
-msgid "There are currently no updates available for this add-on."
-msgstr "Sellele lisale ei ole praegu ühtegi uuendust saadaval."
+msgid "There are currently no versions available for this add-on."
+msgstr "Selle lisamooduli jaoks pole praegu ühtegi versiooni saadaval."
 
 #: system/settings.xml
 msgctxt "#21343"
@@ -14047,6 +14115,7 @@ msgctxt "#21876"
 msgid "Original TX reference"
 msgstr "Algupärane TX-viide"
 
+#: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21877"
 msgid "Date created"
 msgstr "Loomise kuupäev"
@@ -14602,6 +14671,13 @@ msgctxt "#24048"
 msgid "VideoPlayer InputStream"
 msgstr "Videopleieri sisendvoog"
 
+#. To show addon as deprecated over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#24049"
+msgid "Add-on has been marked deprecated in repository."
+msgstr "Lisamoodul on märgitud hoidlas aegunuks."
+
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
@@ -14704,8 +14780,8 @@ msgid "Update available"
 msgstr "Uuendus saadaval"
 
 msgctxt "#24069"
-msgid "Update"
-msgstr "Uuenda"
+msgid "Versions"
+msgstr "Versioonid"
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
@@ -14800,6 +14876,12 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Kõik hoidlad"
 
+#. Used as a text in the progress dialog when install of a repo fails
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24088"
+msgid "Failed to install repository"
+msgstr "Hoidla paigaldamine nurjus"
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Lisamoodul taaskäivitub"
@@ -14837,6 +14919,8 @@ msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Kohalik paketi vahemälu"
 
+#. To show addon as broken over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24096"
 msgid "Add-on has been marked broken in repository."
@@ -14987,8 +15071,8 @@ msgstr "Sisesta otsingusõna"
 #. auto-updating is off.
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
-msgid "Update all"
-msgstr "Uuenda kõik"
+msgid "Install all updates"
+msgstr "Paigalda kõik uuendused"
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15070,6 +15154,19 @@ msgstr "Selle funktsiooni kasutamiseks pead lubama lisamooduli:"
 msgctxt "#24136"
 msgid "Would you like to enable this add-on?"
 msgstr "Kas lubad lisamooduli?"
+
+#. Button in Add-on Manager -> Available Updates for updating all possible
+#. add-ons when auto-updating is off.
+#: xbmc/filesystem/AddonDirectory.cpp
+msgctxt "#24137"
+msgid "Install auto updates only"
+msgstr "Paigalda ainult automaatsed uuendused"
+
+#. Button caption in DialogAddoninfo
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24138"
+msgid "Update"
+msgstr "Uuenda"
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -15215,6 +15312,108 @@ msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
 msgstr "Vasta Apple tvOS standardile (Siri pult)"
 
+#. Header text for yes/no dialog about enable of broken addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24164"
+msgid "Addon \"{0:s}\" broken"
+msgstr "Lisamoodul \"{0:s}\" on vigane"
+
+#. Yes/no dialog text with addon broken string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24165"
+msgid ""
+"Addon marked as broken with following note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do"
+" you want to enable?"
+msgstr "Lisamoodul märgiti vigaseks järgmise teatega:[CR][B][I]{0:s}[/I][/B][CR][CR]Kas soovid selle lubada?"
+
+#. Header text for yes/no dialog about enable of deprecated addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24166"
+msgid "Addon \"{0:s}\" deprecated"
+msgstr "Lisamoodul \"{0:s}\" on aegunud"
+
+#. Yes/no dialog text with addon deprecated string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24167"
+msgid ""
+"Addon marked as deprecated with following "
+"note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do you want to enable?"
+msgstr "Lisamoodul märgiti aegunuks järgmise teatega:[CR][B][I]{0:s}[/I][/B][CR][CR]Kas soovid selle lubada?"
+
+#. Notification event to show addon marked as deprecated.
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24168"
+msgid "Deprecated: {0:s}"
+msgstr "Aegunud: {0:s}"
+
+#. Lifecycle state name, for normal addons (no special). Used also on skin to
+#. compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24169"
+msgid "Normal"
+msgstr "Tavaline"
+
+#. Lifecycle state name, for deprecated addons. Used also on skin to compare
+#. and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/filesystem/AddonsDirectory.cpp
+#: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24170"
+msgid "Deprecated"
+msgstr "Aegunud"
+
+#. Lifecycle state name, for broken and not usable addons. Used also on skin
+#. to compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24171"
+msgid "Broken"
+msgstr "Vigane"
+
+#. The minimum version a dependency must meet. This is set in the <requires>
+#. tag of the dependee
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#24180"
+msgid "Minimum: {0:s}{3:s}"
+msgstr "Väikseim: {0:s}{3:s}"
+
+#. The minimum version, plus the version going to be installed
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24181"
+msgid "Minimum: {0:s} => Install: {2:s}{3:s}"
+msgstr "Väikseim: {0:s} => paigalda: {2:s}{3:s}"
+
+#. The minimum version, plus the currently installed version
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24182"
+msgid "Minimum: {0:s} / Installed: {1:s}{3:s}"
+msgstr "Väikseim: {0:s} / paigaldatud: {1:s}{3:s}"
+
+#. The minimum version, the currently installed, plus the updated version
+#. we're going to install
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24183"
+msgid "Minimum: {0:s} / Installed: {1:s} => Update to: {2:s}{3:s}"
+msgstr "Väikseim: {0:s} / paigaldatud: {1:s} => uuenda versioonile: {2:s}{3:s}"
+
+#. used in #24180 - #24183 as {3:s}
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24184"
+msgid " (optional)"
+msgstr " (valikuline)"
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15338,6 +15537,12 @@ msgctxt "#25013"
 msgid "Auto-skip on"
 msgstr "Autom. vahele jätmine sees"
 
+#. Used to tell addon origin type
+#. xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#25014"
+msgid "Manual"
+msgstr "Käsitsi"
+
 #: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
@@ -15396,6 +15601,7 @@ msgstr "Helilooja"
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#29904"
 msgid "Artist"
 msgstr "Esitaja"
@@ -16224,6 +16430,14 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Kaugsuhtluse server"
 
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#33104"
+msgid ""
+"You have previously enabled the web interface without setting up a password."
+" The web server has been disabled until you either explicitly allow this or "
+"set up authentication. Please review your settings."
+msgstr "Oled varem lubanud veebiliidese parooli määramata. Veebiserver on keelatud seni, kuni lubad selle otseselt või seadistad autentimise. Vaata oma seaded üle."
+
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
@@ -16435,6 +16649,31 @@ msgstr "Järgmist üksust esitamiseks ei leitud"
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Eelmist üksust esitamiseks ei leitud"
+
+#: xbmc/Application.cpp
+msgctxt "#34220"
+msgid "HDR is OFF"
+msgstr "HDR on VÄLJAS"
+
+#: xbmc/Application.cpp
+msgctxt "#34221"
+msgid "Display HDR is Off"
+msgstr "Ekraani HDR on VÄLJAS"
+
+#: xbmc/Application.cpp
+msgctxt "#34222"
+msgid "HDR is ON"
+msgstr "HDR on SEES"
+
+#: xbmc/Application.cpp
+msgctxt "#34223"
+msgid "Display HDR is On"
+msgstr "Ekraani HDR on SEES"
+
+#: xbmc/Application.cpp
+msgctxt "#34224"
+msgid "Tone map method is:"
+msgstr ""
 
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
@@ -16885,13 +17124,13 @@ msgstr "Liiguta {0:s} vasakule ({1:d})"
 
 #: system/settings/settings.xml
 msgctxt "#35100"
-msgid "Enable joystick and gamepad support"
-msgstr "Luba juhtkangi ja puldi tugi"
+msgid "Enable controller support"
+msgstr "Luba juhtseadme tugi"
 
 #: system/peripherals.xml
 msgctxt "#35102"
-msgid "Disable joystick when this device is present"
-msgstr "Keela juhtkang selle seadme puhul"
+msgid "Disable controllers when this device is present"
+msgstr "Keela juhtseadmed kui see seade on ühendatud"
 
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
@@ -17358,6 +17597,7 @@ msgstr "Vali faili {0:s} jaoks emulaator"
 
 #. Label on emulators with a savestate in the emulator selection dialog
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#35259"
 msgid "Saved"
 msgstr "Salvestatud"
@@ -18159,7 +18399,7 @@ msgid ""
 "be at a different sampling rate from that used by the source.[CR][Low] Is "
 "fast and will have minimal impact on system resources such as the use of the"
 " CPU.[CR][Medium] & [High] Will use progressively more system resources."
-msgstr ""
+msgstr "Vali ümbersämplimise kvaliteet juhtumite jaoks, kus heli väljund peab olema erineva diskreetimissagedusega kui see, mida allikas kasutab. [CR][Madal] on kiire ja mõjutab süsteemi ressursse, näiteks protsessori kasutust minimaalselt. [CR][Keskmine] ja [Kõrge] kasutavad järk-järgult rohkem süsteemiressursse."
 
 #. Description of setting with label #22021 "Minimise black bars"
 #: system/settings/settings.xml
@@ -18179,10 +18419,8 @@ msgstr "Vali 4:3 videote suurendusaste laiekraanil näitamisel."
 #. PRIME"
 #: system/settings/settings.xml
 msgctxt "#36172"
-msgid ""
-"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
-"is available."
-msgstr "Luba videofailide riistvaraline dekodeerimine PRIME abil, kui ffmpeg PRIME hwaccel on saadaval."
+msgid "Enable PRIME decoding of video files"
+msgstr "Luba videofailide PRIME dekodeerimine."
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18407,10 +18645,8 @@ msgstr "Järjesta kanalid kaugvastuvõtja kanalinumbri järgi, kuid kanalite jao
 
 #: system/settings/settings.xml
 msgctxt "#36206"
-msgid ""
-"Use the channel numbering from the backend. Only works with one enabled PVR "
-"add-on!"
-msgstr "Kasuta kaugvastuvõtja kanalinumeratsiooni. Töötab ainult ühe lubatud PVR lisamooduliga!"
+msgid "Use the channel numbering from the backend."
+msgstr "Kasuta kaugvastuvõtja kanalinumbreid."
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18514,6 +18750,15 @@ msgstr "Kaugtuuneritest saatekava andmete hankimise ajavahemik."
 msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "Protsessori kasutuse vähendamiseks telekanalite vaatamise ajal EPG andmeid ei impordita."
+
+#. Description of setting with label #13438 "Allow Hardware Accelleration with
+#. DRM PRIME"
+#: system/settings/settings.xml
+msgctxt "#36223"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr "Luba videofailide riistvaraline dekodeerimine PRIME abil, kui ffmpeg PRIME hwaccel on saadaval."
 
 #: system/settings/settings.xml
 msgctxt "#36224"
@@ -18645,7 +18890,7 @@ msgstr "Käsku ei täideta, kui selle ajavahemiku sees alustatakse salvestamist.
 #: system/settings/settings.xml
 msgctxt "#36243"
 msgid "The command to execute (cmd [timestamp])."
-msgstr ""
+msgstr "Täidetav käsk (cmd [timestamp])."
 
 #: system/settings/settings.xml
 msgctxt "#36244"
@@ -18871,15 +19116,17 @@ msgid ""
 "Select the visualisation that will be displayed while listening to music."
 msgstr "Vali muusika kuulamisel kuvatav visuaal."
 
-#. Description of setting with label #258 "Enable tag reading"
+#. Description of setting with label #39125 "Enable tag reading in file view"
 #: system/settings/settings.xml
 msgctxt "#36274"
 msgid ""
-"Read the tag information from song files. For large directories this can "
-"increase read time, especially over a network."
-msgstr "Loe silte muusikafailidest. Suurte kataloogide puhul võib see pikendada lugemisaega, eriti võrgu kaudu."
+"When browsing music files in file view read the tags of those not in the "
+"music library as you go. This can make large directories slow to display, "
+"especially over a network."
+msgstr "Sirvides muusikafaile failihalduris, loe ka muusikakogus mitteolevate failide silte. See võib muuta suurte kataloogide kuvamise aeglaseks, eriti võrgu kaudu."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" for
+#. musicfiles.trackformat
 #: system/settings/settings.xml
 msgctxt "#36275"
 msgid ""
@@ -18887,14 +19134,13 @@ msgid ""
 " In order to function properly, tag reading needs to be enabled."
 msgstr "Määra, kuidas lugude nimed kuvatakse kasutajaliideses. Korralikuks toimimiseks peab olema lubatud siltide lugemine."
 
-#. Description of setting with label #13387 "Track naming template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36276"
 msgid "Used for formatting the second column in file lists."
 msgstr "Kasutatakse faililoendite teise veeru vormindamiseks."
 
-#. Description of setting with label #13307 "Now Playing - Track naming
-#. template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.nowplayingtrackformat
 #: system/settings/settings.xml
 msgctxt "#36277"
 msgid ""
@@ -18902,23 +19148,20 @@ msgid ""
 "list."
 msgstr "Määra, kuidas lugude nimed praegu esitatavas loendis kuvatakse."
 
-#. Description of setting with label #13387 "Now Playing - Track naming
-#. template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36278"
 msgid "Used for formatting the second column in the now playing list."
 msgstr "Kasutatakse praegu esitatava loendi teise veeru vormindamiseks."
 
-#. Description of setting with label #13307 "Library - Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.librarytrackformat
 #: system/settings/settings.xml
 msgctxt "#36279"
 msgid ""
 "Control the way that the names of songs are displayed in library lists."
 msgstr "Määra, kuidas lugude nimed meediakogu loendites kuvatakse."
 
-#. Description of setting with label #13387 "Library - Track naming template -
-#. right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36280"
 msgid "Used for formatting the second column in library lists."
 msgstr "Kasutatakse meediakogu loendite teise veeru vormindamiseks."
@@ -18960,7 +19203,8 @@ msgid ""
 "Select the location on your hard drive where ripped tracks will be saved to."
 msgstr "Vali kõvakettal ripitud lugude salvestuskoht."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. audiocds.trackpathformat
 #: system/settings/settings.xml
 msgctxt "#36286"
 msgid ""
@@ -19055,9 +19299,9 @@ msgstr "Kui säte on lubatud ja PVR lisamoodul seda toetab, salvestatakse saade 
 #: system/settings/settings.xml
 msgctxt "#36299"
 msgid ""
-"Switch display into HDR mode if media with HDR information is played.\n"
-"If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr "Lülita ekraan HDR-režiimi, kui mängitakse HDR infoga faile.\nKui see on keelatud, rakendatakse HDR info Kodi sisemise HDR raja abil."
+"Switch display into HDR mode if media with HDR information is played.[CR]If "
+"disabled, HDR information are applied using Kodi's internal HDR path."
+msgstr "Lülita ekraan HDR-režiimi, kui mängitakse HDR infoga faile.[CR]Kui see on keelatud, rakendatakse HDR info Kodi sisemise HDR raja abil."
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
@@ -19111,6 +19355,15 @@ msgctxt "#36307"
 msgid ""
 "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Piltide kausta sisenedes genereeri automaatselt pisipildid."
+
+#. Description of setting with label #20472 "Show all performers for music
+#. videos"
+#: system/settings/settings.xml
+msgctxt "#36308"
+msgid ""
+"When enabled, shows all performers in the artist list for music videos, not "
+"just the main artist"
+msgstr "Kui lubatud, kuvatakse muusikavideote loendis kõik esinejad, mitte ainult peamine esitaja"
 
 #. Description of setting with label #22022 "Show video files in listings"
 #: system/settings/settings.xml
@@ -19248,8 +19501,8 @@ msgstr "See kategooria sisaldab seadeid, kuidas veebiserveriteenust ja rakendust
 msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
-"server."
-msgstr "Luba kaugkasutajatel seda rakendust sisseehitatud veebiserveri kaudu juhtida."
+"server. Never expose the web server port to the Internet."
+msgstr "Luba kaugkasutajatel seda rakendust sisseehitatud veebiserveri kaudu juhtida. Ärge ava kunagi veebiserveri porti internetis."
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -19261,17 +19514,15 @@ msgstr "Määra veebiserveri port."
 #: system/settings/settings.xml
 msgctxt "#36330"
 msgid ""
-"Define the web server username. This only takes effect when both the "
-"username and the password are set."
-msgstr "Määra veebiserveri kasutajanimi. See jõustub ainult siis, kui on määratud nii kasutajanimi kui ka parool."
+"Define the web server username. Must be set when authentication is enabled."
+msgstr "Määra veebiserveri kasutajanimi. Nõutav, kui autentimine on lubatud."
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
-"Define the web server password. This only takes effect when both the "
-"username and the password are set."
-msgstr "Määra veebiserveri parool. See jõustub ainult siis, kui on määratud nii kasutajanimi kui ka parool."
+"Define the web server password. Must be set when authentication is enabled."
+msgstr "Määra veebiserveri parool. Nõutav, kui autentimine on lubatud."
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19292,8 +19543,9 @@ msgstr "See kategooria sisaldab kaugjuhtimise teenuse käsitsemise seadeid."
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this device to control this application via the web "
-"interface or the JSON-RPC interface protocol."
+"Allow programs on this device to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication."
 msgstr ""
 
 #. Description of setting with label #792 "Port"
@@ -19318,8 +19570,13 @@ msgstr "Määra maksimaalne arv kliente, kes saavad ühendust luua."
 #. on other systems"
 #: system/settings/settings.xml
 msgctxt "#36338"
-msgid "Allow programs on the network to control this application."
-msgstr "Luba võrgus olevatel programmidel seda rakendust juhtida."
+msgid ""
+"Allow programs on the network to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication. It allows anyone with access to the network to completely "
+"control this application and, therefore, this device. Never expose these "
+"interfaces to the Internet."
+msgstr ""
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19339,7 +19596,7 @@ msgctxt "#36341"
 msgid ""
 "This category contains the settings for how the Zeroconf network discovery "
 "service is handled, required for AirPlay."
-msgstr ""
+msgstr "See kategooria sisaldab AirPlay jaoks vajalikke seadeid Zeroconfi võrgu avastamise teenuse käsitsemiseks."
 
 #. Description of setting with label #1260 "Announce services to other
 #. systems"
@@ -19348,7 +19605,7 @@ msgctxt "#36342"
 msgid ""
 "Allows applications on the network to discover enabled services via "
 "Zeroconf."
-msgstr ""
+msgstr "Võimaldab võrgus olevatel rakendustel lubatud teenuseid avastada Zeroconfi kaudu."
 
 #. Description of setting with label #1270 "Enable AirPlay support"
 #: system/settings/settings.xml
@@ -19356,7 +19613,7 @@ msgctxt "#36343"
 msgid ""
 "If enabled, the content from other AirPlay devices or applications can be "
 "received."
-msgstr ""
+msgstr "Kui lubatud, saab teistelt AirPlay seadmetelt või rakendustelt sisu vastu võtta."
 
 #. Description of setting with label #1272 "Use password protection"
 #: system/settings/settings.xml
@@ -19449,14 +19706,6 @@ msgid ""
 " are blacked out."
 msgstr "Mitme ekraaniga seadistuses on ekraanid, millel seda rakendust ei kuvata, pimendatud."
 
-#. Description of setting with label #14085 "Whitelist"
-#: system/settings/settings.xml
-msgctxt "#36356"
-msgid ""
-"Whitelisted modes are allowed to be switched to when changing resolution and"
-" refresh rate"
-msgstr "Valgesse loendisse määratakse need eraldusvõimed ja värskendussagedused, mida soovitakse kasutada"
-
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19464,6 +19713,15 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Kalibreeri kasutajaliides, reguleerides liighälvitust. Kasuta seda tööriista, kui kuvatav pilt on ekraani jaoks liiga suur või väike."
+
+#: system/settings/settings.xml
+msgctxt "#36358"
+msgid ""
+"Allow using channel numbering from multiple backends. Note that the All "
+"channels group can contain multiple of the same channel number if using this"
+" option. This means that jump to channel number may not work correctly for "
+"the All channels group."
+msgstr "Luba kasutada kanalinumeratsiooni mitmest kaugvastuvõtjast. Selle sätte lubamisel võib loendis 'Kõik kanalid' olla mitu sama numbrit kasutavat kanalit. See tähendab, et kanalivahetus numbrinuppudega ei pruugi loendis 'Kõik kanalid' korralikult töötada."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19492,7 +19750,7 @@ msgid ""
 "match to the source properties as possible; [Optimized] Output properties "
 "are set at the start of playback and will not change if the properties of "
 "the source change."
-msgstr ""
+msgstr "Vali heliväljundi seaded: [Määratud] Väljundile seatakse alati määratud diskreetimissagedus ja kõlari konfiguratsioon; [Parim vaste] Väljundi sätted seatakse alati võimalikult lähedased lähteomadustele; [Optimeeritud] Väljundi sätted määratakse taasesituse alguses ja need ei muutu, kui allika omadused muutuvad."
 
 #. Description of setting with label #34100 "Number of channels"
 #: system/settings/settings.xml
@@ -19620,12 +19878,11 @@ msgid ""
 "remote is present."
 msgstr "Kasuta liidese juhtimiseks hiirt või puuteekraaniga seadet. Märkus. Selle keelamisel kaob selle rakenduse üle kontrolli, kui klaviatuuri või kaugjuhtimispulti pole."
 
-#. Description of setting with label #35100 "Enable joystick and gamepad
-#. support"
+#. Description of setting with label #35100 "Enable controller support"
 #: system/settings/settings.xml
 msgctxt "#36378"
-msgid "Use a joystick to control the interface."
-msgstr "Kasuta liidese juhtimiseks juhtnuppu."
+msgid "Use a game controller to control the interface."
+msgstr "Kasuta liidese juhtimiseks mängu juhtseadet."
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -19906,7 +20163,23 @@ msgctxt "#36421"
 msgid ""
 "Bypassing VDPAU mixer saves resources on low power systems but slightly "
 "reduces picture quality."
-msgstr ""
+msgstr "Möödaminek VDPAU mikserist vähendab vähendab nõrgematel seadmetel koormust, kuid halvendab veidi pildikvaliteeti."
+
+#: system/settings/settings.xml
+msgctxt "#36422"
+msgid "Update official add-ons from"
+msgstr "Uuenda ametlik lisamoodul hoidlast"
+
+#. Description of setting with label #36422 "Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"By default, add-ons from official repositories will be prevented from being "
+"auto-updated from private repositories. For cases such as updating from an "
+"add-ons beta repository this option can be switched to [Any repositories] "
+"(bear in mind this is a less secure option and enabling it could cause "
+"incompatibility and crashes)."
+msgstr "Vaikimisi välditakse ametlike hoidlate lisandmoodulite automaatset värskendamist privaatsetest hoidlatest. Sellistel juhtudel, nagu lisandmoodulite beeta-hoidlast värskendamine, võib valida [Kõik hoidlad] (see on vähem turvaline valik ja selle lubamine võib põhjustada ühildumatust ja krahhi)."
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -19977,19 +20250,14 @@ msgctxt "#36433"
 msgid ""
 "When enabled, VAAPI render method is preferred and the CPU has less load. If"
 " you experience hangs, disable this option."
-msgstr ""
+msgstr "Kui lubatud, eelistatakse VAAPI renderdamismeetodit ja protsessori koormus on väiksem. Kui  tekib hangumisi, keela see valik."
 
-#. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36434"
-msgid "Allow hardware acceleration - MMAL"
-msgstr "Luba riistvaraline kiirendus - MMAL"
-
-#. Description of setting "Enable MMAL hardware decoding of video files"
-#: system/settings/settings.xml
-msgctxt "#36435"
-msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr ""
+msgid ""
+"If enabled, switch to the channel with the programme to remind when auto-"
+"closing the reminder popup."
+msgstr "Kui lubatud, lülitu meeldetuletuse hüpikakna sulgudes saadet edastavale kanalile"
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
@@ -19997,12 +20265,52 @@ msgctxt "#36436"
 msgid "Select OS keyboard layout."
 msgstr "Vali operatsioonisüsteemi klaviatuuri paigutus."
 
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36437"
+msgid "Official repositories only (default)"
+msgstr "Ainult ametlikud hoidlad (vaikimisi)"
+
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36438"
+msgid "Any repositories"
+msgstr "Kõik hoidlad"
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
 msgstr "Määra helitaseme astmete arv"
+
+#. Description of setting with label #14126 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36443"
+msgid ""
+"Whitelisted modes give the user the control to choose which display modes "
+"are allowed or not allowed to be used"
+msgstr "Valges loendis olevad režiimid võimaldavad kasutajal valida, millised kuvarežiimid on lubatud või mitte"
+
+#. Description of setting with label #14127 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36444"
+msgid ""
+"Select this option to allow using 3:2 pulldown refresh rates (playing 23.976"
+" FPS video on a 59.94 Hz monitor or playing 24 FPS video on a 60 Hz "
+"monitor). You may want to use this option if your monitor doesn't have a "
+"23.976 Hz or 24 Hz mode."
+msgstr ""
+
+#. Description of setting with label #14128 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36445"
+msgid ""
+"Select this option to allow using double refresh rates (playing 29.97 FPS "
+"video on a 59.94 Hz monitor or playing 30 FPS video on a 60 Hz monitor). You"
+" may want to use this option if your monitor doesn't have a 29.97 Hz or 30 "
+"Hz mode."
+msgstr ""
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -20231,25 +20539,13 @@ msgctxt "#36540"
 msgid ""
 "The preferred mode in which stereoscopic 3D media such as videos should be "
 "played."
-msgstr ""
+msgstr "Eelistatud režiim, milles tuleks esitada stereoskoopilisi 3D-meediafaile."
 
 #. Description of setting with label #1269 "Allow volume control"
 #: system/settings/settings.xml
 msgctxt "#36541"
 msgid "Allows volume control from AirPlay clients."
 msgstr "Helitaseme muutmine AirPlay toega seadmetest"
-
-#: system/settings/rbp.xml
-msgctxt "#36542"
-msgid "Output to both analogue (headphones) and HDMI"
-msgstr "Väljund nii analoog (kõrvaklapid) kui ka HDMI"
-
-#: system/settings/rbp.xml
-msgctxt "#36543"
-msgid ""
-"Enable this to make dialogue louder compared to background sounds when "
-"downmixing multichannel audio"
-msgstr "Luba see, et muuta mitmekanalilise heli taandamisel kõne võrreldes taustahelidega valjemaks"
 
 #: system/settings/settings.xml
 msgctxt "#36544"
@@ -20271,12 +20567,8 @@ msgid ""
 "the value, the closer the subtitles will appear to the viewer."
 msgstr "Määrab stereoskoopiliste 3D videote subtiitrite visuaalse sügavuse. Mida suurem on väärtus, seda lähemale subtiitrid vaatajale ilmuvad."
 
-#: system/settings/rbp.xml
-msgctxt "#36547"
-msgid "Use higher quality textures for covers and fanart (uses more memory)"
-msgstr "Kasuta kaane- ja taustapiltide jaoks kvaliteetsemaid tekstuure (kulub rohkem mälu)"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#. Description of setting with label #37021 "Set GUI resolution limit"
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20318,7 +20610,7 @@ msgctxt "#36552"
 msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
-msgstr ""
+msgstr "Määrab graafikadraiveri kasutatavate esitluspuhvrite arvu. Vali 2, kui draiver kasutab kahekordset puhverdust, või 3 kolmekordse puhverduse jaoks."
 
 #. label of a setting, allowing to specify tonemap method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -20343,6 +20635,18 @@ msgstr "Reinhard"
 msgctxt "#36556"
 msgid "Tone mapping parameter"
 msgstr "Tooni kaardistamise parameeter"
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36557"
+msgid "ACES Filmic"
+msgstr "ACES Filmic"
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36558"
+msgid "Hable"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20622,7 +20926,7 @@ msgid ""
 "This category contains the settings for how the AirPlay service is handled."
 msgstr "See kategooria sisaldab AirPlay teenuse käitlemise seadeid."
 
-#. Description of settings category with label #14216 Display
+#. Description of settings category with label #14220 Display
 #: system/settings/settings.xml
 msgctxt "#36603"
 msgid "This category contains the settings for displays."
@@ -20812,6 +21116,62 @@ msgid ""
 " some WiFi routers and NAS devices."
 msgstr "Sunni nõrk SMBv1 turvalisus ühilduvuse tagamiseks USB jagamisega mõnel WiFi ruuteril ja NAS seadmel."
 
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control via HTTP"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36632"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should never be "
+"exposed on the Internet. A password should be set below. Proceed?"
+msgstr "Igaüks, kellel on juurdepääs veebiliidesele, saab seda rakendust ja seega ka seadet täielikult juhtida, nii et seda ei tohiks kunagi internetis paljastada. Parool tuleks määrata allpool. Kas jätkata?"
+
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control from applications on other systems"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36633"
+msgid ""
+"These services offer neither authentication nor encryption. Anyone who can "
+"connect to them will be able to completely control this application and, "
+"therefore, this device, so they should never be exposed to the Internet. "
+"Proceed?"
+msgstr "Need teenused ei paku autentimist ega krüpteerimist. Kõik, kes saavad nendega ühendust luua, saavad seda rakendust ja seega ka seadet täielikult juhtida, nii neid ei tohiks kunagi internatis paljastada. Kas jätkata?"
+
+#. Text in confirm dialog when disabling setting "Services -> Control ->
+#. Require authentication"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36634"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should be "
+"secured by a password. Are you sure you want to disable authentication?"
+msgstr "Igaüks, kellel on juurdepääs veebiliidesele, saab seda rakendust ja seega ka seadet täielikult juhtida, seega peaks see olema turvatud parooliga. Kas soovid kindlasti autentimise keelata?"
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36635"
+msgid ""
+"If web server authentication is enabled, a password must be entered as well."
+msgstr "Kui veebiserveri autentimine on lubatud, tuleb sisestada ka parool."
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration by enabling authentication without a password set
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36636"
+msgid ""
+"You must first enter a password before web server authentication can be "
+"enabled."
+msgstr "Enne veebiserveri autentimise lubamist tuleb esmalt sisestada parooli."
+
+#. Text in confirm dialog when installing addon from zip
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#36637"
+msgid ""
+"Note that add-ons installed from zip (excluding served repositories) will "
+"not auto-update and must be manually updated. Would you like to proceed?"
+msgstr "Tea, et zip failist paigaldatud lisamoodulid (välja arvatud hoidlad) ei uuendu automaatselt ja neid tuleb käsitsi värskendada. Kas jätkata?"
+
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
 msgctxt "#36899"
@@ -20911,7 +21271,7 @@ msgctxt "#36917"
 msgid "artists"
 msgstr "esitajat"
 
-#: xbmc/media/MediaType.cpp
+#: xbmc/media/MediaType.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#36918"
 msgid "album"
 msgstr "Album"
@@ -20965,22 +21325,7 @@ msgid ""
 "Plus (E-AC3) streams."
 msgstr "Vali see suvand, kui vastuvõtja suudab dekodeerida Dolby Digital Plus (E-AC3) vooge."
 
-#: system/settings/rbp.xml
-msgctxt "#37017"
-msgid "Dual audio output"
-msgstr "Duaalne heliväljund"
-
-#: system/settings/rbp.xml
-msgctxt "#37018"
-msgid "Boost centre channel when downmixing"
-msgstr "Võimenda keskmist kanalit heli taandamisel"
-
-#: system/settings/rbp.xml
-msgctxt "#37020"
-msgid "Enable higher colour depth artwork"
-msgstr "Luba suurema värvisügavusega taustapildid"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Määra kasutajaliidese eraldusvõime piir"
@@ -20995,41 +21340,32 @@ msgctxt "#37023"
 msgid "Do you wish to stop playback on the remote device?"
 msgstr "Kas soovid kaugseadmes taasesituse peatada?"
 
-#: system/settings/rbp.xml
-msgctxt "#37024"
-msgid ""
-"Select this if the audio out connection only supports multichannel audio as "
-"Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
-"FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
-"Pi as this requires a lot of CPU."
-msgstr "Vali see juhul, kui heli väljundühendus toetab ainult mitmekanalilist heli nagu Dolby Digital 5.1 (AC3). See võimaldab mitmekanalilist heli, näiteks AAC 5.1 või FLAC 5.1, kuulata 5.1 ruumilise heli abil. Märkus. Pi jaoks pole soovitatav, kuna see nõuab palju protsessorit."
-
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Seadista helikodeerija sätted, näiteks kvaliteet ja tihendustase"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automaatne"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Piiramatu"
@@ -21151,11 +21487,6 @@ msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
 
-#: system/settings/rbp.xml
-msgctxt "#38010"
-msgid "GPU accelerated"
-msgstr "GPU kiirendusega"
-
 #. Setting #38011 "Show All Items entry"
 #: system/settings/settings.xml
 msgctxt "#38011"
@@ -21241,37 +21572,6 @@ msgstr "Vali infotarnija"
 msgctxt "#38026"
 msgid "Appearances"
 msgstr "Esinemisi"
-
-#: system/settings/rbp.xml
-msgctxt "#38027"
-msgid "Decode the stereo stream from 3D files"
-msgstr "Dekodeer 3D failidest stereovoog"
-
-#. Description of setting with label #38027 "Decode the stereo stream from 3D
-#. files"
-#: system/settings/rbp.xml
-msgctxt "#38028"
-msgid ""
-"If enabled, videos created in Multiview Video Coding (MVC) format can also "
-"be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
-"rays.[CR]Note: Processing of this data may reduce playback performance, so "
-"only enable if you require stereoscopic 3D support."
-msgstr ""
-
-#: system/settings/rbp.xml
-msgctxt "#38029"
-msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Luba stereoskoopilise 3D jaoks Full HD HDMI režiimid"
-
-#. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
-#. label #38029
-#: system/settings/rbp.xml
-msgctxt "#38030"
-msgid ""
-"This option uses frame-packing to output full resolution for 3D through "
-"HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
-"videos, but may not be supported by all displays."
-msgstr ""
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -21519,6 +21819,12 @@ msgctxt "#38080"
 msgid "BPM"
 msgstr "BPM"
 
+#. Music property - Album release status
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38081"
+msgid "Release status"
+msgstr "Väljaande olek"
+
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
 msgctxt "#38100"
@@ -21681,7 +21987,7 @@ msgstr "Eksporditavad elemendid"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
-msgid "Include art work such as thumbnails and fanart"
+msgid "Include artwork such as thumbnails and fanart"
 msgstr "Kaasa pildid nagu pisipildid ja fännipildid"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21884,9 +22190,9 @@ msgstr "xml-faili lugemine nurjus"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category provides access to the windows for source management and the "
-"Library settings for the databases"
-msgstr "See kategooria sisaldab meedia allikate ja meediakoguga seotud sätteid."
+"This category provides access to the windows for source management and "
+"library management facilities"
+msgstr "See kategooria annab juurdepääsu allikahalduse ja meediakogu haldamise aknadele"
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -22027,6 +22333,14 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr "Sortimisnimi"
 
+#. Text for yes/no dialog when silently uninstalling an addon
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#39028"
+msgid ""
+"Addon \"{0:s}\"[CR]Origin \"{1:s}\"[CR]Version \"{2:s}\"[CR]- will uninstall"
+" and be replaced. Would you like to proceed?"
+msgstr "Lisamoodul \"{0:s}\"[CR]päritolu \"{1:s}\"[CR]versioon \"{2:s}\"[CR]- eemaldatakse ja asendatakse. Kas jätkata?"
+
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -22155,3 +22469,206 @@ msgstr "[B]Announcer[/B] komponendi detailne logimine"
 msgctxt "#39118"
 msgid "Share debug log"
 msgstr "Jaga silumise logifaili"
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39119"
+msgid "Last modified"
+msgstr "Viimati muudetud"
+
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+msgctxt "#39120"
+msgid "Skip filename matching for external audio tracks"
+msgstr "Jäta väliste muusikapalade failinime sobivus vahele"
+
+#. Label for section of settings controling what is shown on the library
+#. windows
+#: system/settings/settings.xml
+msgctxt "#39121"
+msgid "Library Display and Navigation"
+msgstr "Meediakogu kuvamine ja navigeerimine"
+
+#. Label for section of settings controling how library is populated
+#: system/settings/settings.xml
+msgctxt "#39122"
+msgid "Library Information Sources"
+msgstr "Meediakogu andmeallikad"
+
+#. Label for section of settings
+#: system/settings/settings.xml
+msgctxt "#39123"
+msgid "Artwork"
+msgstr "Joonistus"
+
+#: system/settings/settings.xml
+msgctxt "#39125"
+msgid "Enable tag reading in file view"
+msgstr "Luba siltide lugemine failihalduris"
+
+#: system/settings/settings.xml
+msgctxt "#39127"
+msgid "Use all local image files as artwork"
+msgstr "Kasuta kohalikku pilti taustana"
+
+#. Description of setting with label #39127 "Use all local image files as
+#. artwork"
+#: system/settings/settings.xml
+msgctxt "#39128"
+msgid ""
+"All image files located alongside the media files are picked up as artwork "
+"during library scan, with the file name as the art type."
+msgstr "Kõik meediafailide kõrval asuvad pildifailid kaasatakse meediakogu skaneerimisel taustapildina, kusjuures faili nimi on pildi liik."
+
+#: system/settings/settings.xml
+msgctxt "#39129"
+msgid "Use all remote artwork fetched by scrapers"
+msgstr "Kasuta kõiki kaabitsate toodud pildifaile"
+
+#. Description of setting with label #39129 "Use all remote artwork fetched by
+#. scrapers"
+#: system/settings/settings.xml
+msgctxt "#39130"
+msgid ""
+"Use the first of each art type of the remote artwork in scraper results to "
+"fill any missing art not populated with local art."
+msgstr "Kasuta igast kaabitsa hangitud pilditüübist esimest, et täita kohalikust meediakogust puuduvad pildid."
+
+#: system/settings/settings.xml
+msgctxt "#39131"
+msgid "Artist art types whitelist"
+msgstr "Esitaja taustapiltide valge loend"
+
+#. Description of setting with label #39131 "Artist art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39132"
+msgid ""
+"Limit the artist artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr "Kasuta esitaja taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#: system/settings/settings.xml
+msgctxt "#39133"
+msgid "Album art types whitelist"
+msgstr "Albumi taustapiltide valge loend"
+
+#. Description of setting with label #39133 "Album art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39134"
+msgid ""
+"Limit the album artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr "Kasuta allbumi taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#: system/settings/settings.xml
+msgctxt "#39135"
+msgid "Thumbnail image files"
+msgstr "Pisipildi failid"
+
+#. Description of setting with label #39135 "Thumbnail image files"
+#: system/settings/settings.xml
+msgctxt "#39136"
+msgid ""
+"The names of files that contain primary artwork (thumbnails), generally "
+"square and used both full and in reduced size to visually identify a folder,"
+" artist, album or song"
+msgstr "Failide nimed, mis sisaldavad peamiseid taustapilte. (Need on kasutuses nii täissuuruses kui vähendatuna.) Eesmärk on visuaalselt eraldada kaust, esitaja, album või laul"
+
+#: system/settings/settings.xml
+msgctxt "#39137"
+msgid "Artwork level"
+msgstr "Taustapiltide kuvamine"
+
+#. Description of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39138"
+msgid ""
+"The amount of artwork automatically selected - [Maximum] all local images "
+"and remote art; [Basic] save space on limited devices or when using a simple"
+" skin; [Custom] configured by user for detailed control; [None] no art"
+msgstr "Automaatselt valitud taustapiltide hulk - [Suurim] kõik kohalikud pildid ja kaugkunst; [Põhiline] võimaldab säästa ruumi piiratud seadmetel või lihtsa rüü kasutamisel; [Kohandatud] on kasutaja poolt üksikasjalikult seatud; [Pole] taustapilte pole"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39140"
+msgid "Maximum"
+msgstr "Maksimaalne"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39141"
+msgid "Basic"
+msgstr "Lihtne"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39142"
+msgid "Custom"
+msgstr "Kohandatud"
+
+#: system/settings/settings.xml
+msgctxt "#39143"
+msgid "Movie art types whitelist"
+msgstr "Filmi taustapiltide valge loend"
+
+#. Description of setting with label #39150 "Movie art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39144"
+msgid ""
+"Limit the movie and movie set artwork fetched locally or applied from "
+"scraper remote art results to just those art types in the whitelist"
+msgstr "Kasuta filmi ja filmikomplekti taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#: system/settings/settings.xml
+msgctxt "#39145"
+msgid "TV show art types whitelist"
+msgstr "Seriaali taustapiltide valge loend"
+
+#. Description of setting with label #39152 "TV show art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39146"
+msgid ""
+"Limit the TV show and season artwork fetched locally or applied from scraper"
+" remote art results to just those art types in the whitelist"
+msgstr "Kasuta seriaali taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#: system/settings/settings.xml
+msgctxt "#39147"
+msgid "Episode art types whitelist"
+msgstr "Episoodi taustapiltide valge loend"
+
+#. Description of setting with label #39154 "Episode art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39148"
+msgid ""
+"Limit the episode artwork fetched locally or applied from scraper remote art"
+" results to just those art types in the whitelist"
+msgstr "Kasuta episoodi taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#: system/settings/settings.xml
+msgctxt "#39149"
+msgid "Music video art types whitelist"
+msgstr "Muusikavideo taustapiltide valge loend"
+
+#. Description of setting with label #39156 "Music video art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39150"
+msgid ""
+"Limit the music video artwork fetched locally or applied from scraper remote"
+" art results to just those art types in the whitelist"
+msgstr "Kasuta muusikavideo taustapildideks ainult kohalikke või kaabitsa toodud pilditüüpe, mis on lubatud valges loendis"
+
+#. Display Hardware scaling filter setting toggle
+msgctxt "#39151"
+msgid "Display hardware scaling filter"
+msgstr "Kuva tarkvaralise skaleerimise filter"
+
+#. Description
+msgctxt "#39152"
+msgid ""
+"Integer scaling (IS) is a Nearest-Neighbor(NN) upscaling technique using "
+"Display Engine"
+msgstr ""
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#39153"
+msgid "Windowing system:"
+msgstr ""

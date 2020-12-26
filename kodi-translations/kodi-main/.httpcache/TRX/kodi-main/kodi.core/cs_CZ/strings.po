@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-08-31 20:16+0000\n"
-"Last-Translator: Trottel <trottel09@gmail.com>\n"
+"PO-Revision-Date: 2020-12-22 15:20+0000\n"
+"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/teamxbmc/kodi-main/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1150,7 +1150,8 @@ msgid "Fetching CD information"
 msgstr "Načítání informací o CD"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/network/NetworkServices.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2499,7 +2500,8 @@ msgid "Album"
 msgstr "Album"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp xbmc/PlayListPlayer.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Seznam stop"
@@ -3948,6 +3950,19 @@ msgid "Enter web address"
 msgstr "Zadejte webovou adresu"
 
 #: system/settings/settings.xml
+msgctxt "#1052"
+msgid "Require authentication"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#1053"
+msgid ""
+"Choose whether requests to the web server require a username and a password,"
+" which must be set below if enabled. It is recommended to always leave this "
+"setting enabled."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#1180"
 msgid "Proxy type"
 msgstr "Typ proxy"
@@ -4810,6 +4825,11 @@ msgstr "Upravit zdroj programů"
 msgctxt "#10057"
 msgid "Edit file source"
 msgstr "Upravit zdroj souborů"
+
+#: xbmc/video/dialogs/CGUIDialogVideoInfo.cpp
+msgctxt "#10058"
+msgid "Remove tag from library"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10099"
@@ -5780,14 +5800,6 @@ msgctxt "#13023"
 msgid "Successfully removed storage device"
 msgstr "Úložné zařízení úspěšně odebráno"
 
-msgctxt "#13024"
-msgid "Joystick plugged"
-msgstr "Joystick připojen"
-
-msgctxt "#13025"
-msgid "Joystick unplugged"
-msgstr "Joystick odpojen"
-
 #: system/settings/settings.xml
 msgctxt "#13026"
 msgid "Try to wakeup remote servers on access"
@@ -6510,7 +6522,7 @@ msgctxt "#13386"
 msgid "Use time based seeking"
 msgstr "Použít vyhledávání na základě času"
 
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#13387"
 msgid "Track naming template - right"
 msgstr "Šablona pojmenování stopy – vpravo"
@@ -6526,10 +6538,8 @@ msgid "There are no presets available for this visualisation"
 msgstr "Pro tuto vizualizaci nejsou dostupné žádné předvolby"
 
 msgctxt "#13390"
-msgid ""
-"There are no settings available\n"
-"for this visualisation"
-msgstr "Pro tuto vizualizaci nejsou\ndostupná žádná nastavení"
+msgid "There are no settings available[CR]for this visualisation"
+msgstr ""
 
 #: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
@@ -6710,8 +6720,8 @@ msgstr "Povolit hardwarovou akceleraci – VTBDecoder"
 
 #: system/settings/settings.xml
 msgctxt "#13430"
-msgid "Allow hardware acceleration - PRIME"
-msgstr "Povolit hardwarovou akceleraci – PRIME"
+msgid "Allow using DRM PRIME decoder"
+msgstr ""
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6749,6 +6759,11 @@ msgstr "Použít HDR schopnosti displeje"
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "Upřednostňovat video mixer VDPAU"
+
+#: system/settings/settings.xml
+msgctxt "#13438"
+msgid "Allow hardware acceleration with DRM PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6983,6 +6998,7 @@ msgstr "Žádný obrázek"
 
 #. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
 #: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: system/settings/settings.xml
 msgctxt "#13516"
 msgid "Add art type"
 msgstr "Přidat typ obrázku"
@@ -7474,11 +7490,6 @@ msgid "Queue songs on selection"
 msgstr "Zařadit skladby do fronty při výběru"
 
 #: system/settings/settings.xml
-msgctxt "#14085"
-msgid "Whitelist"
-msgstr "Seznam povolených"
-
-#: system/settings/settings.xml
 msgctxt "#14086"
 msgid "Playback"
 msgstr "Přehrávání"
@@ -7695,6 +7706,21 @@ msgstr "Region C"
 msgctxt "#14125"
 msgid "Input"
 msgstr "Vstup"
+
+#: system/settings/settings.xml
+msgctxt "#14126"
+msgid "Whitelist"
+msgstr "Seznam povolených"
+
+#: system/settings/settings.xml
+msgctxt "#14127"
+msgid "Allow 3:2 pulldown refresh rates"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#14128"
+msgid "Allow double refresh rates"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -8322,6 +8348,8 @@ msgctxt "#16034"
 msgid "Couldn't get songs from database."
 msgstr "Nelze načíst skladby z databáze."
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#16035"
 msgid "Party mode playlist"
@@ -8352,6 +8380,7 @@ msgid "On"
 msgstr "Zapnout"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
+#: xbmc/video/windows/VideoFileItemListModifier.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Všechna videa"
@@ -8483,8 +8512,8 @@ msgstr "Bilineární"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
-msgid "Bicubic"
-msgstr "Bikubická"
+msgid "Bicubic (B-Spline)"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8537,6 +8566,11 @@ msgid "VDPAU - Sharpness"
 msgstr "VDPAU – Ostrost"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16314"
+msgid "Bicubic (Mitchell)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 – Optimalizovaný"
@@ -8568,6 +8602,11 @@ msgid "DXVA"
 msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16321"
+msgid "Bicubic (Catmull-Rom)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
@@ -8588,6 +8627,11 @@ msgid "VDPAU - Bob"
 msgstr "VDPAU – Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16326"
+msgid "Bicubic (0,0.75)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI - Bob"
 msgstr "VAAPI – Bob"
@@ -8602,29 +8646,10 @@ msgctxt "#16329"
 msgid "VAAPI - Motion compensated"
 msgstr "VAAPI – Pohyb kompenzovaný"
 
-#. Description of OSD video settings for deinterlace method with label #16330
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16330"
-msgid "MMAL - Advanced"
-msgstr "MMAL – Pokročilé"
-
-#. Description of OSD video settings for deinterlace method with label #16331
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16331"
-msgid "MMAL - Advanced (half)"
-msgstr "MMAL – Pokročilé (poloviční)"
-
-#. Description of OSD video settings for deinterlace method with label #16332
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16332"
-msgid "MMAL - Bob"
-msgstr "MMAL – Bob"
-
-#. Description of OSD video settings for deinterlace method with label #16333
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16333"
-msgid "MMAL - Bob (half)"
-msgstr "MMAL – Bob (poloviční)"
+msgid "Bicubic (0,1.)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -8942,18 +8967,6 @@ msgstr "Opravdu chcete skrýt tento kanál?"
 msgctxt "#19040"
 msgid "Timers"
 msgstr "Časovače"
-
-#. label for "rename recording" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19041"
-msgid "Are you sure you want to rename this recording?"
-msgstr "Opravdu chcete přejmenovat tuto nahrávku?"
-
-#. label for "rename timer" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19042"
-msgid "Are you sure you want to rename this timer?"
-msgstr "Opravdu chcete přejmenovat tento časovač?"
 
 #. pvr settings "recording" category label
 #: system/settings/settings.xml
@@ -9300,7 +9313,7 @@ msgid "Enter the name for the timer"
 msgstr "Zadejte název pro časovač"
 
 #. generic warning label used at several places
-#: xbmc/addons/AddonSystemSettings.cpp
+#: xbmc/addons/AddonSystemSettings.cpp xbmc/network/NetworkServices.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
@@ -9385,7 +9398,7 @@ msgid ""
 "message."
 msgstr "Nelze odstranit časovač. Více informací o této zprávě naleznete v protokolu."
 
-#. message box text stating that a PVR backend error occured
+#. message box text stating that a PVR backend error occurred
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
@@ -10756,6 +10769,56 @@ msgstr "Program"
 msgctxt "#19326"
 msgid "Navigate..."
 msgstr "Přejdi..."
+
+#. Label for a context menu entry to delete alle watched recordings contained
+#. in a folder
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19327"
+msgid "Delete watched"
+msgstr ""
+
+#. delete multiple recordings confirmation message box text
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19328"
+msgid "Delete all watched recordings in this folder?"
+msgstr ""
+
+#. label for PVR settings use backend channel numbers always
+#: system/settings/settings.xml
+msgctxt "#19329"
+msgid "Allow backend channel numbers with more than one PVR add-on"
+msgstr ""
+
+#. pvr settings "switch to channel on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19330"
+msgid "Switch to channel when auto-closing the reminder popup"
+msgstr ""
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19331"
+msgid "(Auto-close of this reminder will switch to channel...)"
+msgstr ""
+
+#. text for event log entry for logging auto channel switch for auto-closed
+#. reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19332"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19333"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
+msgstr ""
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -13123,6 +13186,11 @@ msgid "Show empty TV shows"
 msgstr "Zobrazit prázdné seriály"
 
 #: system/settings/settings.xml
+msgctxt "#20472"
+msgid "Show all performers for music videos"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Zobrazovat skryté soubory a adresáře"
@@ -13186,8 +13254,8 @@ msgstr "Nejsou dostupné žádné aktualizace"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21342"
-msgid "There are currently no updates available for this add-on."
-msgstr "Pro tento doplněk nejsou aktuálně dostupné žádné aktualizace."
+msgid "There are currently no versions available for this add-on."
+msgstr ""
 
 #: system/settings.xml
 msgctxt "#21343"
@@ -14060,6 +14128,7 @@ msgctxt "#21876"
 msgid "Original TX reference"
 msgstr "Původní reference TX"
 
+#: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21877"
 msgid "Date created"
 msgstr "Datum vytvoření"
@@ -14615,6 +14684,13 @@ msgctxt "#24048"
 msgid "VideoPlayer InputStream"
 msgstr "InputStream VideoPlayeru"
 
+#. To show addon as deprecated over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#24049"
+msgid "Add-on has been marked deprecated in repository."
+msgstr ""
+
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
@@ -14717,8 +14793,8 @@ msgid "Update available"
 msgstr "Dostupné aktualizace"
 
 msgctxt "#24069"
-msgid "Update"
-msgstr "Aktualizovat"
+msgid "Versions"
+msgstr ""
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
@@ -14813,6 +14889,12 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Všechna úložiště"
 
+#. Used as a text in the progress dialog when install of a repo fails
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24088"
+msgid "Failed to install repository"
+msgstr ""
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Doplněk se restartuje"
@@ -14850,6 +14932,8 @@ msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Místní mezipaměť balíčků"
 
+#. To show addon as broken over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24096"
 msgid "Add-on has been marked broken in repository."
@@ -15000,8 +15084,8 @@ msgstr "Zadejte vyhledávací řetězec"
 #. auto-updating is off.
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
-msgid "Update all"
-msgstr "Aktualizovat vše"
+msgid "Install all updates"
+msgstr ""
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15083,6 +15167,19 @@ msgstr "K využití této funkce musíte povolit doplněk:"
 msgctxt "#24136"
 msgid "Would you like to enable this add-on?"
 msgstr "Chcete povolit tento doplněk?"
+
+#. Button in Add-on Manager -> Available Updates for updating all possible
+#. add-ons when auto-updating is off.
+#: xbmc/filesystem/AddonDirectory.cpp
+msgctxt "#24137"
+msgid "Install auto updates only"
+msgstr ""
+
+#. Button caption in DialogAddoninfo
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24138"
+msgid "Update"
+msgstr "Aktualizovat"
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -15228,6 +15325,108 @@ msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
 msgstr "Shoda s Apple tvOS Standard (Siri dálkové ovládání)"
 
+#. Header text for yes/no dialog about enable of broken addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24164"
+msgid "Addon \"{0:s}\" broken"
+msgstr ""
+
+#. Yes/no dialog text with addon broken string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24165"
+msgid ""
+"Addon marked as broken with following note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do"
+" you want to enable?"
+msgstr ""
+
+#. Header text for yes/no dialog about enable of deprecated addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24166"
+msgid "Addon \"{0:s}\" deprecated"
+msgstr ""
+
+#. Yes/no dialog text with addon deprecated string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24167"
+msgid ""
+"Addon marked as deprecated with following "
+"note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do you want to enable?"
+msgstr ""
+
+#. Notification event to show addon marked as deprecated.
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24168"
+msgid "Deprecated: {0:s}"
+msgstr ""
+
+#. Lifecycle state name, for normal addons (no special). Used also on skin to
+#. compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24169"
+msgid "Normal"
+msgstr "Normální"
+
+#. Lifecycle state name, for deprecated addons. Used also on skin to compare
+#. and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/filesystem/AddonsDirectory.cpp
+#: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24170"
+msgid "Deprecated"
+msgstr ""
+
+#. Lifecycle state name, for broken and not usable addons. Used also on skin
+#. to compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24171"
+msgid "Broken"
+msgstr "Protrhaná"
+
+#. The minimum version a dependency must meet. This is set in the <requires>
+#. tag of the dependee
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#24180"
+msgid "Minimum: {0:s}{3:s}"
+msgstr ""
+
+#. The minimum version, plus the version going to be installed
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24181"
+msgid "Minimum: {0:s} => Install: {2:s}{3:s}"
+msgstr ""
+
+#. The minimum version, plus the currently installed version
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24182"
+msgid "Minimum: {0:s} / Installed: {1:s}{3:s}"
+msgstr ""
+
+#. The minimum version, the currently installed, plus the updated version
+#. we're going to install
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24183"
+msgid "Minimum: {0:s} / Installed: {1:s} => Update to: {2:s}{3:s}"
+msgstr ""
+
+#. used in #24180 - #24183 as {3:s}
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24184"
+msgid " (optional)"
+msgstr ""
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15351,6 +15550,12 @@ msgctxt "#25013"
 msgid "Auto-skip on"
 msgstr "Automatické přeskakování zapnuto"
 
+#. Used to tell addon origin type
+#. xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#25014"
+msgid "Manual"
+msgstr "Ručně"
+
 #: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
@@ -15409,6 +15614,7 @@ msgstr "Skladatel"
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#29904"
 msgid "Artist"
 msgstr "Interpret"
@@ -16237,6 +16443,14 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Vzdálený server pro komunikaci"
 
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#33104"
+msgid ""
+"You have previously enabled the web interface without setting up a password."
+" The web server has been disabled until you either explicitly allow this or "
+"set up authentication. Please review your settings."
+msgstr ""
+
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
@@ -16448,6 +16662,31 @@ msgstr "Nelze najít další položku pro přehrání"
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Nelze najít předchozí položku pro přehrání"
+
+#: xbmc/Application.cpp
+msgctxt "#34220"
+msgid "HDR is OFF"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34221"
+msgid "Display HDR is Off"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34222"
+msgid "HDR is ON"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34223"
+msgid "Display HDR is On"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34224"
+msgid "Tone map method is:"
+msgstr ""
 
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
@@ -16898,13 +17137,13 @@ msgstr "Pohněte {0:s} vlevo ({1:d})"
 
 #: system/settings/settings.xml
 msgctxt "#35100"
-msgid "Enable joystick and gamepad support"
-msgstr "Povolit podporu joysticku a gamepadu"
+msgid "Enable controller support"
+msgstr ""
 
 #: system/peripherals.xml
 msgctxt "#35102"
-msgid "Disable joystick when this device is present"
-msgstr "Zakázat joystick, když je přítomno toto zařízení"
+msgid "Disable controllers when this device is present"
+msgstr ""
 
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
@@ -17371,6 +17610,7 @@ msgstr "Vyberte emulátor pro soubor {0:s}"
 
 #. Label on emulators with a savestate in the emulator selection dialog
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#35259"
 msgid "Saved"
 msgstr "Uloženo"
@@ -18192,10 +18432,8 @@ msgstr "Vyberte úroveň přiblížení, pomocí které budou videa 4:3 zobrazov
 #. PRIME"
 #: system/settings/settings.xml
 msgctxt "#36172"
-msgid ""
-"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
-"is available."
-msgstr "Povolit hardwarové dekódování PRIME pro soubory videa, které se používá, pokud je dostupná hardwarová akcelerace ffmpeg PRIME."
+msgid "Enable PRIME decoding of video files"
+msgstr ""
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18420,10 +18658,8 @@ msgstr "Seřadit kanály podle čísel kanálů z backendu, ale použít místn�
 
 #: system/settings/settings.xml
 msgctxt "#36206"
-msgid ""
-"Use the channel numbering from the backend. Only works with one enabled PVR "
-"add-on!"
-msgstr "Použít číslování kanálů z backendu. Funguje pouze s povoleným doplňkem PVR!"
+msgid "Use the channel numbering from the backend."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18527,6 +18763,15 @@ msgstr "Doba mezi importy televizního programu z backendů."
 msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "Neimportovat data televizního programu při přehrávání TV kvůli minimalizaci využití procesoru."
+
+#. Description of setting with label #13438 "Allow Hardware Accelleration with
+#. DRM PRIME"
+#: system/settings/settings.xml
+msgctxt "#36223"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr "Povolit hardwarové dekódování PRIME pro soubory videa, které se používá, pokud je dostupná hardwarová akcelerace ffmpeg PRIME."
 
 #: system/settings/settings.xml
 msgctxt "#36224"
@@ -18884,15 +19129,17 @@ msgid ""
 "Select the visualisation that will be displayed while listening to music."
 msgstr "Vyberte vizualizaci, která bude zobrazena při poslouchání hudby."
 
-#. Description of setting with label #258 "Enable tag reading"
+#. Description of setting with label #39125 "Enable tag reading in file view"
 #: system/settings/settings.xml
 msgctxt "#36274"
 msgid ""
-"Read the tag information from song files. For large directories this can "
-"increase read time, especially over a network."
-msgstr "Číst informace štítků ze souborů skladeb. Pro velké adresáře může toto zvýšit čas čtení, zvláště přes síť."
+"When browsing music files in file view read the tags of those not in the "
+"music library as you go. This can make large directories slow to display, "
+"especially over a network."
+msgstr ""
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" for
+#. musicfiles.trackformat
 #: system/settings/settings.xml
 msgctxt "#36275"
 msgid ""
@@ -18900,14 +19147,13 @@ msgid ""
 " In order to function properly, tag reading needs to be enabled."
 msgstr "Ovládejte způsob, jakým jsou názvy skladeb zobrazeny v uživatelském rozhraní. Pro správnou funkčnost musí být povoleno čtení štítků."
 
-#. Description of setting with label #13387 "Track naming template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36276"
 msgid "Used for formatting the second column in file lists."
 msgstr "Použito pro formátování druhého sloupce v seznamu souborů."
 
-#. Description of setting with label #13307 "Now Playing - Track naming
-#. template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.nowplayingtrackformat
 #: system/settings/settings.xml
 msgctxt "#36277"
 msgid ""
@@ -18915,23 +19161,20 @@ msgid ""
 "list."
 msgstr "Ovládejte způsob, jakým jsou názvy skladeb zobrazeny v seznamu přehrávání."
 
-#. Description of setting with label #13387 "Now Playing - Track naming
-#. template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36278"
 msgid "Used for formatting the second column in the now playing list."
 msgstr "Použito pro formátování druhého sloupce v seznamu právě přehrávaných."
 
-#. Description of setting with label #13307 "Library - Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.librarytrackformat
 #: system/settings/settings.xml
 msgctxt "#36279"
 msgid ""
 "Control the way that the names of songs are displayed in library lists."
 msgstr "Ovládejte způsob, jakým jsou názvy skladeb zobrazeny v seznamech knihoven."
 
-#. Description of setting with label #13387 "Library - Track naming template -
-#. right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36280"
 msgid "Used for formatting the second column in library lists."
 msgstr "Použito pro formátování druhého sloupce v seznamech knihoven."
@@ -18973,7 +19216,8 @@ msgid ""
 "Select the location on your hard drive where ripped tracks will be saved to."
 msgstr "Vyberte umístění na vašem pevném disku, kam budou uloženy zkopírované stopy."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. audiocds.trackpathformat
 #: system/settings/settings.xml
 msgctxt "#36286"
 msgid ""
@@ -19068,9 +19312,9 @@ msgstr "Pokud je povoleno, bude naplánováno připomenutí nahrávání pro po�
 #: system/settings/settings.xml
 msgctxt "#36299"
 msgid ""
-"Switch display into HDR mode if media with HDR information is played.\n"
-"If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr "Přepnout displej do režimu HDR, pokud jsou přehrávána média s informací HDR. Pokud je zakázáno, informace HDR jsou použity pomocí vnitřní cesty HDR Kodi."
+"Switch display into HDR mode if media with HDR information is played.[CR]If "
+"disabled, HDR information are applied using Kodi's internal HDR path."
+msgstr ""
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
@@ -19124,6 +19368,15 @@ msgctxt "#36307"
 msgid ""
 "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Automaticky generovat náhledy obrázků při vstupu do složky obrázků."
+
+#. Description of setting with label #20472 "Show all performers for music
+#. videos"
+#: system/settings/settings.xml
+msgctxt "#36308"
+msgid ""
+"When enabled, shows all performers in the artist list for music videos, not "
+"just the main artist"
+msgstr ""
 
 #. Description of setting with label #22022 "Show video files in listings"
 #: system/settings/settings.xml
@@ -19261,8 +19514,8 @@ msgstr "Tato kategorie obsahuje nastavení jak zacházet se službou webového s
 msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
-"server."
-msgstr "Povolí vzdáleným uživatelům, aby ovládali tuto aplikaci prostřednictvím vestavěného webového serveru."
+"server. Never expose the web server port to the Internet."
+msgstr ""
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -19274,17 +19527,15 @@ msgstr "Definujte port webového serveru."
 #: system/settings/settings.xml
 msgctxt "#36330"
 msgid ""
-"Define the web server username. This only takes effect when both the "
-"username and the password are set."
-msgstr "Definujte uživatelské jméno webového serveru. Toto má vliv, pouze pokud je nastaveno jak uživatelské jméno, tak heslo."
+"Define the web server username. Must be set when authentication is enabled."
+msgstr ""
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
-"Define the web server password. This only takes effect when both the "
-"username and the password are set."
-msgstr "Definujte heslo webového serveru. Toto má vliv, pouze pokud je nastaveno jak uživatelské jméno, tak heslo."
+"Define the web server password. Must be set when authentication is enabled."
+msgstr ""
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19305,9 +19556,10 @@ msgstr "Tato kategorie obsahuje nastavení jak zacházet se službou vzdálenéh
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this device to control this application via the web "
-"interface or the JSON-RPC interface protocol."
-msgstr "Povolit programům v tomto zařízení ovládat tuto aplikaci prostřednictvím webového rozhraní nebo protokolu rozhraní JSON-RPC."
+"Allow programs on this device to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication."
+msgstr ""
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -19331,8 +19583,13 @@ msgstr "Definujte maximální počet klientů, kteří mohou být připojeni."
 #. on other systems"
 #: system/settings/settings.xml
 msgctxt "#36338"
-msgid "Allow programs on the network to control this application."
-msgstr "Povolit programům v síti ovládat tuto aplikaci."
+msgid ""
+"Allow programs on the network to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication. It allows anyone with access to the network to completely "
+"control this application and, therefore, this device. Never expose these "
+"interfaces to the Internet."
+msgstr ""
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19462,14 +19719,6 @@ msgid ""
 " are blacked out."
 msgstr "Ve víceobrazovkové konfiguraci jsou obrazovky, které nezobrazují tuto aplikaci, černé."
 
-#. Description of setting with label #14085 "Whitelist"
-#: system/settings/settings.xml
-msgctxt "#36356"
-msgid ""
-"Whitelisted modes are allowed to be switched to when changing resolution and"
-" refresh rate"
-msgstr "Na režimy seznamů povolených je povoleno přepnout při změně rozlišení a obnovovací frekvence"
-
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19477,6 +19726,15 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Kalibrovat uživatelské rozhraní pomocí úpravy okrajů obrazovky. Použijte tento nástroj, pokud je zobrazený obraz příliš velký nebo malý pro vaši obrazovku."
+
+#: system/settings/settings.xml
+msgctxt "#36358"
+msgid ""
+"Allow using channel numbering from multiple backends. Note that the All "
+"channels group can contain multiple of the same channel number if using this"
+" option. This means that jump to channel number may not work correctly for "
+"the All channels group."
+msgstr ""
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19633,12 +19891,11 @@ msgid ""
 "remote is present."
 msgstr "Použít myš nebo zařízení s dotykovou obrazovkou pro ovládání rozhraní. Poznámka: Zakázáním ztratíte kontrolu nad touto aplikací, když nebude připojena žádná klávesnice nebo dálkové ovládání."
 
-#. Description of setting with label #35100 "Enable joystick and gamepad
-#. support"
+#. Description of setting with label #35100 "Enable controller support"
 #: system/settings/settings.xml
 msgctxt "#36378"
-msgid "Use a joystick to control the interface."
-msgstr "Použít joystick pro ovládání rozhraní."
+msgid "Use a game controller to control the interface."
+msgstr ""
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -19922,6 +20179,22 @@ msgid ""
 msgstr "Obcházení mixéru VDPAU šetří systémové zdroje na méně výkonných systémech, ale mírně snížuje kvalitu obrazu."
 
 #: system/settings/settings.xml
+msgctxt "#36422"
+msgid "Update official add-ons from"
+msgstr ""
+
+#. Description of setting with label #36422 "Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"By default, add-ons from official repositories will be prevented from being "
+"auto-updated from private repositories. For cases such as updating from an "
+"add-ons beta repository this option can be switched to [Any repositories] "
+"(bear in mind this is a less secure option and enabling it could cause "
+"incompatibility and crashes)."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
 "Select what will happen when an item is selected in the guide: [Show context"
@@ -19992,17 +20265,12 @@ msgid ""
 " you experience hangs, disable this option."
 msgstr "Když je povolen, je upřednostňována metoda vykreslení VAAPI a procesor je méně zatížen. Pokud pozorujete zadrhávání, zakažte tuto volbu."
 
-#. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36434"
-msgid "Allow hardware acceleration - MMAL"
-msgstr "Povolit hardwarovou akceleraci – MMAL"
-
-#. Description of setting "Enable MMAL hardware decoding of video files"
-#: system/settings/settings.xml
-msgctxt "#36435"
-msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Použít VideoPlayer pro dekódování souborů videa s akcelerací MMAL."
+msgid ""
+"If enabled, switch to the channel with the programme to remind when auto-"
+"closing the reminder popup."
+msgstr ""
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
@@ -20010,12 +20278,52 @@ msgctxt "#36436"
 msgid "Select OS keyboard layout."
 msgstr "Vyberte rozložení klávesnice OS."
 
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36437"
+msgid "Official repositories only (default)"
+msgstr ""
+
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36438"
+msgid "Any repositories"
+msgstr ""
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
 msgstr "Nastavte počet kroků pro nastavení hlasitosti."
+
+#. Description of setting with label #14126 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36443"
+msgid ""
+"Whitelisted modes give the user the control to choose which display modes "
+"are allowed or not allowed to be used"
+msgstr ""
+
+#. Description of setting with label #14127 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36444"
+msgid ""
+"Select this option to allow using 3:2 pulldown refresh rates (playing 23.976"
+" FPS video on a 59.94 Hz monitor or playing 24 FPS video on a 60 Hz "
+"monitor). You may want to use this option if your monitor doesn't have a "
+"23.976 Hz or 24 Hz mode."
+msgstr ""
+
+#. Description of setting with label #14128 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36445"
+msgid ""
+"Select this option to allow using double refresh rates (playing 29.97 FPS "
+"video on a 59.94 Hz monitor or playing 30 FPS video on a 60 Hz monitor). You"
+" may want to use this option if your monitor doesn't have a 29.97 Hz or 30 "
+"Hz mode."
+msgstr ""
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -20252,18 +20560,6 @@ msgctxt "#36541"
 msgid "Allows volume control from AirPlay clients."
 msgstr "Povolí nastavení hlasitosti z klientů AirPlay."
 
-#: system/settings/rbp.xml
-msgctxt "#36542"
-msgid "Output to both analogue (headphones) and HDMI"
-msgstr "Výstup jak analogový (sluchátka), tak HDMI"
-
-#: system/settings/rbp.xml
-msgctxt "#36543"
-msgid ""
-"Enable this to make dialogue louder compared to background sounds when "
-"downmixing multichannel audio"
-msgstr "Povolit toto pro zvýšení hlasitosti dialogů ve srovnání se zvuky na pozadí při sloučení vícekanálového zvuku."
-
 #: system/settings/settings.xml
 msgctxt "#36544"
 msgid "Enable hardware decoding of video files."
@@ -20284,12 +20580,8 @@ msgid ""
 "the value, the closer the subtitles will appear to the viewer."
 msgstr "Nastaví vizuální hloubku titulků pro stereoskopické 3D video. Čím vyšší hodnota, tím blíže se titulky zobrazí divákovi."
 
-#: system/settings/rbp.xml
-msgctxt "#36547"
-msgid "Use higher quality textures for covers and fanart (uses more memory)"
-msgstr "Použít kvalitnější textury pro obálky a fanart (využívá více paměti)"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#. Description of setting with label #37021 "Set GUI resolution limit"
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20356,6 +20648,18 @@ msgstr "Reinhard"
 msgctxt "#36556"
 msgid "Tone mapping parameter"
 msgstr "Parametr mapování tónu"
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36557"
+msgid "ACES Filmic"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36558"
+msgid "Hable"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20635,7 +20939,7 @@ msgid ""
 "This category contains the settings for how the AirPlay service is handled."
 msgstr "Tato kategorie obsahuje nastavení jak zacházet se službou AirPlay."
 
-#. Description of settings category with label #14216 Display
+#. Description of settings category with label #14220 Display
 #: system/settings/settings.xml
 msgctxt "#36603"
 msgid "This category contains the settings for displays."
@@ -20825,6 +21129,62 @@ msgid ""
 " some WiFi routers and NAS devices."
 msgstr "Vynutit slabé zabezpečení SMBv1 pro kompatibilitu s funkcemi sdílení USB v některých směrovačích WiFi a zařízeních NAS."
 
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control via HTTP"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36632"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should never be "
+"exposed on the Internet. A password should be set below. Proceed?"
+msgstr ""
+
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control from applications on other systems"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36633"
+msgid ""
+"These services offer neither authentication nor encryption. Anyone who can "
+"connect to them will be able to completely control this application and, "
+"therefore, this device, so they should never be exposed to the Internet. "
+"Proceed?"
+msgstr ""
+
+#. Text in confirm dialog when disabling setting "Services -> Control ->
+#. Require authentication"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36634"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should be "
+"secured by a password. Are you sure you want to disable authentication?"
+msgstr ""
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36635"
+msgid ""
+"If web server authentication is enabled, a password must be entered as well."
+msgstr ""
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration by enabling authentication without a password set
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36636"
+msgid ""
+"You must first enter a password before web server authentication can be "
+"enabled."
+msgstr ""
+
+#. Text in confirm dialog when installing addon from zip
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#36637"
+msgid ""
+"Note that add-ons installed from zip (excluding served repositories) will "
+"not auto-update and must be manually updated. Would you like to proceed?"
+msgstr ""
+
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
 msgctxt "#36899"
@@ -20924,7 +21284,7 @@ msgctxt "#36917"
 msgid "artists"
 msgstr "interpreti"
 
-#: xbmc/media/MediaType.cpp
+#: xbmc/media/MediaType.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#36918"
 msgid "album"
 msgstr "album"
@@ -20978,22 +21338,7 @@ msgid ""
 "Plus (E-AC3) streams."
 msgstr "Vyberte tuto volbu, pokud je váš přijímač schopný dekódovat stopy Dolby Digital Plus (E-AC3)."
 
-#: system/settings/rbp.xml
-msgctxt "#37017"
-msgid "Dual audio output"
-msgstr "Duální zvukový výstup"
-
-#: system/settings/rbp.xml
-msgctxt "#37018"
-msgid "Boost centre channel when downmixing"
-msgstr "Zesílit středový kanál při sloučení"
-
-#: system/settings/rbp.xml
-msgctxt "#37020"
-msgid "Enable higher colour depth artwork"
-msgstr "Povolit obrázek s vyšší hloubkou barev"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Nastavit omezení rozlišení grafického rozhraní"
@@ -21008,41 +21353,32 @@ msgctxt "#37023"
 msgid "Do you wish to stop playback on the remote device?"
 msgstr "Přejete si zastavit přehrávání na vzdáleném zařízení?"
 
-#: system/settings/rbp.xml
-msgctxt "#37024"
-msgid ""
-"Select this if the audio out connection only supports multichannel audio as "
-"Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
-"FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
-"Pi as this requires a lot of CPU."
-msgstr "Vyberte toto, pokud je připojeno zvukové zařízení podporující pouze vícekanálový zvuk jako Dolby Digital 5.1 (AC-3), toto umožní, aby byl vícekanálový zvuk jako je AAC 5.1 nebo FLAC 5.1 poslouchán v prostorovém zvuku 5.1. Poznámka: Není doporučeno na Pi, protože to hodně zatěžuje procesor."
-
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Konfigurujte nastavení enkodéru zvuku, jako je kvalita a úroveň komprese"
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automatická"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Neomezená"
@@ -21164,11 +21500,6 @@ msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
 
-#: system/settings/rbp.xml
-msgctxt "#38010"
-msgid "GPU accelerated"
-msgstr "Akcelorované GPU"
-
 #. Setting #38011 "Show All Items entry"
 #: system/settings/settings.xml
 msgctxt "#38011"
@@ -21254,37 +21585,6 @@ msgstr "Zvolte poskytovatele informací"
 msgctxt "#38026"
 msgid "Appearances"
 msgstr "Vzhledy"
-
-#: system/settings/rbp.xml
-msgctxt "#38027"
-msgid "Decode the stereo stream from 3D files"
-msgstr "Dekódovat stereo stopu ze souborů 3D"
-
-#. Description of setting with label #38027 "Decode the stereo stream from 3D
-#. files"
-#: system/settings/rbp.xml
-msgctxt "#38028"
-msgid ""
-"If enabled, videos created in Multiview Video Coding (MVC) format can also "
-"be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
-"rays.[CR]Note: Processing of this data may reduce playback performance, so "
-"only enable if you require stereoscopic 3D support."
-msgstr "Pokud je povoleno, videa vytvořená ve formátu MVC (MultiView Video Coding) mohou být také sledována ve stereoskopickém 3D. Formát MVC se obvykle nachází na 3D Blu-ray.[CR]Poznámka: Zpracování těchto dat může snížit výkon přehrávání, takže to povolte pouze tehdy, pokud vyžadujete podporu stereoskopického 3D."
-
-#: system/settings/rbp.xml
-msgctxt "#38029"
-msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Povolit Full HD režimy HDMI pro stereoskopické 3D"
-
-#. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
-#. label #38029
-#: system/settings/rbp.xml
-msgctxt "#38030"
-msgid ""
-"This option uses frame-packing to output full resolution for 3D through "
-"HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
-"videos, but may not be supported by all displays."
-msgstr "Tato možnost používá frame-packing pro výstup v plném rozlišení pro 3D přes HDMI.[CR]Povolením se zlepší kvalita videí MVC (MultiView Video Coding), ale nemusí být podporováno všemi displeji."
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -21532,6 +21832,12 @@ msgctxt "#38080"
 msgid "BPM"
 msgstr "BPM"
 
+#. Music property - Album release status
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38081"
+msgid "Release status"
+msgstr ""
+
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
 msgctxt "#38100"
@@ -21694,8 +22000,8 @@ msgstr "Položky k exportu"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
-msgid "Include art work such as thumbnails and fanart"
-msgstr "Zahrnout umělecká díla, jako jsou náhledy a fanart"
+msgid "Include artwork such as thumbnails and fanart"
+msgstr ""
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
@@ -21897,9 +22203,9 @@ msgstr "Nelze přečíst soubor xml"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category provides access to the windows for source management and the "
-"Library settings for the databases"
-msgstr "Tato kategorie poskytuje přístup do oken pro správu zdrojů a nastavení knihovny pro databáze"
+"This category provides access to the windows for source management and "
+"library management facilities"
+msgstr ""
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -22040,6 +22346,14 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr "Název řazení"
 
+#. Text for yes/no dialog when silently uninstalling an addon
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#39028"
+msgid ""
+"Addon \"{0:s}\"[CR]Origin \"{1:s}\"[CR]Version \"{2:s}\"[CR]- will uninstall"
+" and be replaced. Would you like to proceed?"
+msgstr ""
+
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -22168,3 +22482,206 @@ msgstr "Podrobné protokolování pro komponentu [B]Announcer[/B]"
 msgctxt "#39118"
 msgid "Share debug log"
 msgstr "Sdílet protokol ladění"
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39119"
+msgid "Last modified"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+msgctxt "#39120"
+msgid "Skip filename matching for external audio tracks"
+msgstr ""
+
+#. Label for section of settings controling what is shown on the library
+#. windows
+#: system/settings/settings.xml
+msgctxt "#39121"
+msgid "Library Display and Navigation"
+msgstr ""
+
+#. Label for section of settings controling how library is populated
+#: system/settings/settings.xml
+msgctxt "#39122"
+msgid "Library Information Sources"
+msgstr ""
+
+#. Label for section of settings
+#: system/settings/settings.xml
+msgctxt "#39123"
+msgid "Artwork"
+msgstr "Obrázek"
+
+#: system/settings/settings.xml
+msgctxt "#39125"
+msgid "Enable tag reading in file view"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39127"
+msgid "Use all local image files as artwork"
+msgstr ""
+
+#. Description of setting with label #39127 "Use all local image files as
+#. artwork"
+#: system/settings/settings.xml
+msgctxt "#39128"
+msgid ""
+"All image files located alongside the media files are picked up as artwork "
+"during library scan, with the file name as the art type."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39129"
+msgid "Use all remote artwork fetched by scrapers"
+msgstr ""
+
+#. Description of setting with label #39129 "Use all remote artwork fetched by
+#. scrapers"
+#: system/settings/settings.xml
+msgctxt "#39130"
+msgid ""
+"Use the first of each art type of the remote artwork in scraper results to "
+"fill any missing art not populated with local art."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39131"
+msgid "Artist art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39131 "Artist art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39132"
+msgid ""
+"Limit the artist artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39133"
+msgid "Album art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39133 "Album art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39134"
+msgid ""
+"Limit the album artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39135"
+msgid "Thumbnail image files"
+msgstr ""
+
+#. Description of setting with label #39135 "Thumbnail image files"
+#: system/settings/settings.xml
+msgctxt "#39136"
+msgid ""
+"The names of files that contain primary artwork (thumbnails), generally "
+"square and used both full and in reduced size to visually identify a folder,"
+" artist, album or song"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39137"
+msgid "Artwork level"
+msgstr ""
+
+#. Description of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39138"
+msgid ""
+"The amount of artwork automatically selected - [Maximum] all local images "
+"and remote art; [Basic] save space on limited devices or when using a simple"
+" skin; [Custom] configured by user for detailed control; [None] no art"
+msgstr ""
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39140"
+msgid "Maximum"
+msgstr "Nejvyšší"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39141"
+msgid "Basic"
+msgstr "Základní"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39142"
+msgid "Custom"
+msgstr "Vlastní"
+
+#: system/settings/settings.xml
+msgctxt "#39143"
+msgid "Movie art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39150 "Movie art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39144"
+msgid ""
+"Limit the movie and movie set artwork fetched locally or applied from "
+"scraper remote art results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39145"
+msgid "TV show art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39152 "TV show art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39146"
+msgid ""
+"Limit the TV show and season artwork fetched locally or applied from scraper"
+" remote art results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39147"
+msgid "Episode art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39154 "Episode art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39148"
+msgid ""
+"Limit the episode artwork fetched locally or applied from scraper remote art"
+" results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39149"
+msgid "Music video art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39156 "Music video art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39150"
+msgid ""
+"Limit the music video artwork fetched locally or applied from scraper remote"
+" art results to just those art types in the whitelist"
+msgstr ""
+
+#. Display Hardware scaling filter setting toggle
+msgctxt "#39151"
+msgid "Display hardware scaling filter"
+msgstr ""
+
+#. Description
+msgctxt "#39152"
+msgid ""
+"Integer scaling (IS) is a Nearest-Neighbor(NN) upscaling technique using "
+"Display Engine"
+msgstr ""
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#39153"
+msgid "Windowing system:"
+msgstr ""

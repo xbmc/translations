@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-16 21:01+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2020-12-22 15:20+0000\n"
+"Last-Translator: Vojislav Vlasic <vlasic.vojislav@gmail.com>\n"
 "Language-Team: Serbian (Serbia) (http://www.transifex.com/teamxbmc/kodi-main/language/sr_RS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1139,7 +1139,8 @@ msgid "Fetching CD information"
 msgstr "Преузимање CD података"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/network/NetworkServices.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2488,7 +2489,8 @@ msgid "Album"
 msgstr "Албум"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp xbmc/PlayListPlayer.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Листа за репродукцију"
@@ -3937,6 +3939,19 @@ msgid "Enter web address"
 msgstr "Унесите web адресу"
 
 #: system/settings/settings.xml
+msgctxt "#1052"
+msgid "Require authentication"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#1053"
+msgid ""
+"Choose whether requests to the web server require a username and a password,"
+" which must be set below if enabled. It is recommended to always leave this "
+"setting enabled."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#1180"
 msgid "Proxy type"
 msgstr "Врста proxya"
@@ -4799,6 +4814,11 @@ msgstr "Уреди извор програма"
 msgctxt "#10057"
 msgid "Edit file source"
 msgstr "Уреди извор датотека"
+
+#: xbmc/video/dialogs/CGUIDialogVideoInfo.cpp
+msgctxt "#10058"
+msgid "Remove tag from library"
+msgstr ""
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10099"
@@ -5769,14 +5789,6 @@ msgctxt "#13023"
 msgid "Successfully removed storage device"
 msgstr "Успешно уклоњен уређај за складиштење"
 
-msgctxt "#13024"
-msgid "Joystick plugged"
-msgstr "Џојстик је прикључен"
-
-msgctxt "#13025"
-msgid "Joystick unplugged"
-msgstr "Џојстик је раскачен"
-
 #: system/settings/settings.xml
 msgctxt "#13026"
 msgid "Try to wakeup remote servers on access"
@@ -6499,7 +6511,7 @@ msgctxt "#13386"
 msgid "Use time based seeking"
 msgstr "Користи тражење засновано на времену"
 
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#13387"
 msgid "Track naming template - right"
 msgstr "Шаблон именовања нумера - десно"
@@ -6515,10 +6527,8 @@ msgid "There are no presets available for this visualisation"
 msgstr ""
 
 msgctxt "#13390"
-msgid ""
-"There are no settings available\n"
-"for this visualisation"
-msgstr "Не постоје доступна подешавања\nза ову визуелизацију"
+msgid "There are no settings available[CR]for this visualisation"
+msgstr ""
 
 #: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
@@ -6699,7 +6709,7 @@ msgstr "Допусти хардверско убрзање - VTBDecoder"
 
 #: system/settings/settings.xml
 msgctxt "#13430"
-msgid "Allow hardware acceleration - PRIME"
+msgid "Allow using DRM PRIME decoder"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -6738,6 +6748,11 @@ msgstr ""
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "Дати предност VDPAU видео миксеру"
+
+#: system/settings/settings.xml
+msgctxt "#13438"
+msgid "Allow hardware acceleration with DRM PRIME"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6972,6 +6987,7 @@ msgstr "Без уметности"
 
 #. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
 #: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: system/settings/settings.xml
 msgctxt "#13516"
 msgid "Add art type"
 msgstr ""
@@ -7463,11 +7479,6 @@ msgid "Queue songs on selection"
 msgstr "Стави песму у ред приликом избора"
 
 #: system/settings/settings.xml
-msgctxt "#14085"
-msgid "Whitelist"
-msgstr ""
-
-#: system/settings/settings.xml
 msgctxt "#14086"
 msgid "Playback"
 msgstr "Репродукција"
@@ -7684,6 +7695,21 @@ msgstr "Регион Ц"
 msgctxt "#14125"
 msgid "Input"
 msgstr "Улаз"
+
+#: system/settings/settings.xml
+msgctxt "#14126"
+msgid "Whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#14127"
+msgid "Allow 3:2 pulldown refresh rates"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#14128"
+msgid "Allow double refresh rates"
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -8311,6 +8337,8 @@ msgctxt "#16034"
 msgid "Couldn't get songs from database."
 msgstr "Није могуће добити песме из базе података."
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#16035"
 msgid "Party mode playlist"
@@ -8341,6 +8369,7 @@ msgid "On"
 msgstr "Укључи"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
+#: xbmc/video/windows/VideoFileItemListModifier.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Сви видеи"
@@ -8472,8 +8501,8 @@ msgstr "Bilinear"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
-msgid "Bicubic"
-msgstr "Bicubic"
+msgid "Bicubic (B-Spline)"
+msgstr ""
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8526,6 +8555,11 @@ msgid "VDPAU - Sharpness"
 msgstr "VDPAU - Оштрина"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16314"
+msgid "Bicubic (Mitchell)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Оптимизован"
@@ -8557,6 +8591,11 @@ msgid "DXVA"
 msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16321"
+msgid "Bicubic (Catmull-Rom)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
@@ -8577,6 +8616,11 @@ msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16326"
+msgid "Bicubic (0,0.75)"
+msgstr ""
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI - Bob"
 msgstr "VAAPI - Bob"
@@ -8591,29 +8635,10 @@ msgctxt "#16329"
 msgid "VAAPI - Motion compensated"
 msgstr "VAAPI - Компензован кретању"
 
-#. Description of OSD video settings for deinterlace method with label #16330
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16330"
-msgid "MMAL - Advanced"
-msgstr "MMAL - Напредно"
-
-#. Description of OSD video settings for deinterlace method with label #16331
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16331"
-msgid "MMAL - Advanced (half)"
-msgstr "MMAL - Напредни (половично)"
-
-#. Description of OSD video settings for deinterlace method with label #16332
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16332"
-msgid "MMAL - Bob"
-msgstr "MMAL - Bob"
-
-#. Description of OSD video settings for deinterlace method with label #16333
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16333"
-msgid "MMAL - Bob (half)"
-msgstr "MMAL - Bob (половично)"
+msgid "Bicubic (0,1.)"
+msgstr ""
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -8931,18 +8956,6 @@ msgstr "Да ли сте сигурни да желите да сакријет�
 msgctxt "#19040"
 msgid "Timers"
 msgstr "Тајмери"
-
-#. label for "rename recording" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19041"
-msgid "Are you sure you want to rename this recording?"
-msgstr "Да ли сте сигурни да желите да преименујете овај снимак?"
-
-#. label for "rename timer" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19042"
-msgid "Are you sure you want to rename this timer?"
-msgstr "Да ли сте сигурни да желите да преименујете овај тајмер?"
 
 #. pvr settings "recording" category label
 #: system/settings/settings.xml
@@ -9289,7 +9302,7 @@ msgid "Enter the name for the timer"
 msgstr ""
 
 #. generic warning label used at several places
-#: xbmc/addons/AddonSystemSettings.cpp
+#: xbmc/addons/AddonSystemSettings.cpp xbmc/network/NetworkServices.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
@@ -9374,7 +9387,7 @@ msgid ""
 "message."
 msgstr ""
 
-#. message box text stating that a PVR backend error occured
+#. message box text stating that a PVR backend error occurred
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
@@ -10744,6 +10757,56 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19326"
 msgid "Navigate..."
+msgstr ""
+
+#. Label for a context menu entry to delete alle watched recordings contained
+#. in a folder
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19327"
+msgid "Delete watched"
+msgstr ""
+
+#. delete multiple recordings confirmation message box text
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19328"
+msgid "Delete all watched recordings in this folder?"
+msgstr ""
+
+#. label for PVR settings use backend channel numbers always
+#: system/settings/settings.xml
+msgctxt "#19329"
+msgid "Allow backend channel numbers with more than one PVR add-on"
+msgstr ""
+
+#. pvr settings "switch to channel on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19330"
+msgid "Switch to channel when auto-closing the reminder popup"
+msgstr ""
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19331"
+msgid "(Auto-close of this reminder will switch to channel...)"
+msgstr ""
+
+#. text for event log entry for logging auto channel switch for auto-closed
+#. reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19332"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr ""
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19333"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
 msgstr ""
 
 #. label for epg genre value
@@ -13112,6 +13175,11 @@ msgid "Show empty TV shows"
 msgstr "Прикажи празне ТВ серије"
 
 #: system/settings/settings.xml
+msgctxt "#20472"
+msgid "Show all performers for music videos"
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Прикажи скривене датотеке и фасцикле"
@@ -13175,8 +13243,8 @@ msgstr "Нове верзије нису доступне"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21342"
-msgid "There are currently no updates available for this add-on."
-msgstr "Тренутно не постоје нове верзије за овај додатни програм."
+msgid "There are currently no versions available for this add-on."
+msgstr ""
 
 #: system/settings.xml
 msgctxt "#21343"
@@ -14049,6 +14117,7 @@ msgctxt "#21876"
 msgid "Original TX reference"
 msgstr "Оригинална TX референца"
 
+#: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21877"
 msgid "Date created"
 msgstr "Датум прављења"
@@ -14604,6 +14673,13 @@ msgctxt "#24048"
 msgid "VideoPlayer InputStream"
 msgstr "VideoPlayer УлазниЗапис"
 
+#. To show addon as deprecated over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#24049"
+msgid "Add-on has been marked deprecated in repository."
+msgstr ""
+
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
@@ -14706,8 +14782,8 @@ msgid "Update available"
 msgstr "Нова верзија је доступна"
 
 msgctxt "#24069"
-msgid "Update"
-msgstr "Ажурирај"
+msgid "Versions"
+msgstr ""
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
@@ -14802,6 +14878,12 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Сва спремишта"
 
+#. Used as a text in the progress dialog when install of a repo fails
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24088"
+msgid "Failed to install repository"
+msgstr ""
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Додатни програм се поновно покреће"
@@ -14839,6 +14921,8 @@ msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Кеш локалних пакета"
 
+#. To show addon as broken over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24096"
 msgid "Add-on has been marked broken in repository."
@@ -14989,8 +15073,8 @@ msgstr "Унесите реч за претрагу"
 #. auto-updating is off.
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
-msgid "Update all"
-msgstr "Ажурирај све"
+msgid "Install all updates"
+msgstr ""
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15072,6 +15156,19 @@ msgstr ""
 msgctxt "#24136"
 msgid "Would you like to enable this add-on?"
 msgstr "Да ли бисте желели да омогућите овај додатни програм?"
+
+#. Button in Add-on Manager -> Available Updates for updating all possible
+#. add-ons when auto-updating is off.
+#: xbmc/filesystem/AddonDirectory.cpp
+msgctxt "#24137"
+msgid "Install auto updates only"
+msgstr ""
+
+#. Button caption in DialogAddoninfo
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24138"
+msgid "Update"
+msgstr "Ажурирај"
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -15217,6 +15314,108 @@ msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
 msgstr ""
 
+#. Header text for yes/no dialog about enable of broken addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24164"
+msgid "Addon \"{0:s}\" broken"
+msgstr ""
+
+#. Yes/no dialog text with addon broken string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24165"
+msgid ""
+"Addon marked as broken with following note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do"
+" you want to enable?"
+msgstr ""
+
+#. Header text for yes/no dialog about enable of deprecated addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24166"
+msgid "Addon \"{0:s}\" deprecated"
+msgstr ""
+
+#. Yes/no dialog text with addon deprecated string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24167"
+msgid ""
+"Addon marked as deprecated with following "
+"note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do you want to enable?"
+msgstr ""
+
+#. Notification event to show addon marked as deprecated.
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24168"
+msgid "Deprecated: {0:s}"
+msgstr ""
+
+#. Lifecycle state name, for normal addons (no special). Used also on skin to
+#. compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24169"
+msgid "Normal"
+msgstr "Нормална"
+
+#. Lifecycle state name, for deprecated addons. Used also on skin to compare
+#. and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/filesystem/AddonsDirectory.cpp
+#: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24170"
+msgid "Deprecated"
+msgstr ""
+
+#. Lifecycle state name, for broken and not usable addons. Used also on skin
+#. to compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24171"
+msgid "Broken"
+msgstr "Покварен"
+
+#. The minimum version a dependency must meet. This is set in the <requires>
+#. tag of the dependee
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#24180"
+msgid "Minimum: {0:s}{3:s}"
+msgstr ""
+
+#. The minimum version, plus the version going to be installed
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24181"
+msgid "Minimum: {0:s} => Install: {2:s}{3:s}"
+msgstr ""
+
+#. The minimum version, plus the currently installed version
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24182"
+msgid "Minimum: {0:s} / Installed: {1:s}{3:s}"
+msgstr ""
+
+#. The minimum version, the currently installed, plus the updated version
+#. we're going to install
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24183"
+msgid "Minimum: {0:s} / Installed: {1:s} => Update to: {2:s}{3:s}"
+msgstr ""
+
+#. used in #24180 - #24183 as {3:s}
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24184"
+msgid " (optional)"
+msgstr ""
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15340,6 +15539,12 @@ msgctxt "#25013"
 msgid "Auto-skip on"
 msgstr "Ауто-прескакање укључено"
 
+#. Used to tell addon origin type
+#. xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#25014"
+msgid "Manual"
+msgstr "Ручно"
+
 #: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
@@ -15398,6 +15603,7 @@ msgstr "Композитор"
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#29904"
 msgid "Artist"
 msgstr "Извођач"
@@ -16226,6 +16432,14 @@ msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Удаљени сервер за комуникацију"
 
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#33104"
+msgid ""
+"You have previously enabled the web interface without setting up a password."
+" The web server has been disabled until you either explicitly allow this or "
+"set up authentication. Please review your settings."
+msgstr ""
+
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
 msgid "Detected new connection"
@@ -16437,6 +16651,31 @@ msgstr "Није пронађена следећа ставка за репро�
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Није пронађена претходна ставка за репродукцију"
+
+#: xbmc/Application.cpp
+msgctxt "#34220"
+msgid "HDR is OFF"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34221"
+msgid "Display HDR is Off"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34222"
+msgid "HDR is ON"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34223"
+msgid "Display HDR is On"
+msgstr ""
+
+#: xbmc/Application.cpp
+msgctxt "#34224"
+msgid "Tone map method is:"
+msgstr ""
 
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
@@ -16887,13 +17126,13 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#35100"
-msgid "Enable joystick and gamepad support"
-msgstr "Омогући подршку за џојстик и гејмпед"
+msgid "Enable controller support"
+msgstr ""
 
 #: system/peripherals.xml
 msgctxt "#35102"
-msgid "Disable joystick when this device is present"
-msgstr "Онемогући џојстик када је овај уређај присутан"
+msgid "Disable controllers when this device is present"
+msgstr ""
 
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
@@ -17360,6 +17599,7 @@ msgstr ""
 
 #. Label on emulators with a savestate in the emulator selection dialog
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#35259"
 msgid "Saved"
 msgstr "Сачуван"
@@ -18181,9 +18421,7 @@ msgstr "Одаберите ниво увећања тако да су 4:3 вид
 #. PRIME"
 #: system/settings/settings.xml
 msgctxt "#36172"
-msgid ""
-"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
-"is available."
+msgid "Enable PRIME decoding of video files"
 msgstr ""
 
 #. Description of setting with label #14109 "Short date format"
@@ -18409,9 +18647,7 @@ msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36206"
-msgid ""
-"Use the channel numbering from the backend. Only works with one enabled PVR "
-"add-on!"
+msgid "Use the channel numbering from the backend."
 msgstr ""
 
 #: system/settings/settings.xml
@@ -18516,6 +18752,15 @@ msgstr "Време између увожења података водича и�
 msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "Немој увозити податке водича док се пушта ТВ да би се умањило коришћење CPU-а."
+
+#. Description of setting with label #13438 "Allow Hardware Accelleration with
+#. DRM PRIME"
+#: system/settings/settings.xml
+msgctxt "#36223"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36224"
@@ -18873,15 +19118,17 @@ msgid ""
 "Select the visualisation that will be displayed while listening to music."
 msgstr "Одаберите визуелизацију која ће бити коришћена током слушања музике."
 
-#. Description of setting with label #258 "Enable tag reading"
+#. Description of setting with label #39125 "Enable tag reading in file view"
 #: system/settings/settings.xml
 msgctxt "#36274"
 msgid ""
-"Read the tag information from song files. For large directories this can "
-"increase read time, especially over a network."
-msgstr "Прочитај податке ознака из датотека песама. За веће фасцикле ово може продужити време читања, нарочито преко мреже."
+"When browsing music files in file view read the tags of those not in the "
+"music library as you go. This can make large directories slow to display, "
+"especially over a network."
+msgstr ""
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" for
+#. musicfiles.trackformat
 #: system/settings/settings.xml
 msgctxt "#36275"
 msgid ""
@@ -18889,14 +19136,13 @@ msgid ""
 " In order to function properly, tag reading needs to be enabled."
 msgstr "Контролишите начин на који су имена песама приказана у корисничком интерфејсу. Да би правилно радило, читање ознака мора бити омогућено."
 
-#. Description of setting with label #13387 "Track naming template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36276"
 msgid "Used for formatting the second column in file lists."
 msgstr "Коришћено за обликовање друге колоне у листи датотека."
 
-#. Description of setting with label #13307 "Now Playing - Track naming
-#. template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.nowplayingtrackformat
 #: system/settings/settings.xml
 msgctxt "#36277"
 msgid ""
@@ -18904,23 +19150,20 @@ msgid ""
 "list."
 msgstr "Контролишите начин на који су имена песама приказана у сада пуштеној листи."
 
-#. Description of setting with label #13387 "Now Playing - Track naming
-#. template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36278"
 msgid "Used for formatting the second column in the now playing list."
 msgstr "Коришћено за обликовање друге колоне у сада пуштеној листи."
 
-#. Description of setting with label #13307 "Library - Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.librarytrackformat
 #: system/settings/settings.xml
 msgctxt "#36279"
 msgid ""
 "Control the way that the names of songs are displayed in library lists."
 msgstr "Контролишите начин на који су имена песама приказана у листама библиотеке."
 
-#. Description of setting with label #13387 "Library - Track naming template -
-#. right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36280"
 msgid "Used for formatting the second column in library lists."
 msgstr "Коришћено за обликовање друге колоне у листама библиотеке."
@@ -18962,7 +19205,8 @@ msgid ""
 "Select the location on your hard drive where ripped tracks will be saved to."
 msgstr "Одаберите локацију на вашем хард диску где ће риповане нумере бити сачуване."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. audiocds.trackpathformat
 #: system/settings/settings.xml
 msgctxt "#36286"
 msgid ""
@@ -19057,8 +19301,8 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#36299"
 msgid ""
-"Switch display into HDR mode if media with HDR information is played.\n"
-"If disabled, HDR information are applied using Kodi's internal HDR path."
+"Switch display into HDR mode if media with HDR information is played.[CR]If "
+"disabled, HDR information are applied using Kodi's internal HDR path."
 msgstr ""
 
 #. Description of setting with label #20226 "Movie set information folder"
@@ -19113,6 +19357,15 @@ msgctxt "#36307"
 msgid ""
 "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Аутоматски направи сличице слика приликом уласка у фасциклу слика."
+
+#. Description of setting with label #20472 "Show all performers for music
+#. videos"
+#: system/settings/settings.xml
+msgctxt "#36308"
+msgid ""
+"When enabled, shows all performers in the artist list for music videos, not "
+"just the main artist"
+msgstr ""
 
 #. Description of setting with label #22022 "Show video files in listings"
 #: system/settings/settings.xml
@@ -19250,8 +19503,8 @@ msgstr "Ова категорија садржи подешавања како �
 msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
-"server."
-msgstr "Омогући удаљеним корисницима да управљају овом апликацијом кроз уграђени web сервер."
+"server. Never expose the web server port to the Internet."
+msgstr ""
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -19263,17 +19516,15 @@ msgstr "Дефинишите прикључак web порта."
 #: system/settings/settings.xml
 msgctxt "#36330"
 msgid ""
-"Define the web server username. This only takes effect when both the "
-"username and the password are set."
-msgstr "Дефинишите корисничко име web сервера. Ово ступа на снагу само онда када су и корисничко име и лозинка постављени."
+"Define the web server username. Must be set when authentication is enabled."
+msgstr ""
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
-"Define the web server password. This only takes effect when both the "
-"username and the password are set."
-msgstr "Дефинишите лозинку web сервера. Ово ступа на снагу само онда када су и корисничко име и лозинка постављени."
+"Define the web server password. Must be set when authentication is enabled."
+msgstr ""
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19294,8 +19545,9 @@ msgstr "Ова категорија садржи подешавања како �
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this device to control this application via the web "
-"interface or the JSON-RPC interface protocol."
+"Allow programs on this device to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication."
 msgstr ""
 
 #. Description of setting with label #792 "Port"
@@ -19320,8 +19572,13 @@ msgstr "Дефинишите максималан број број клијен
 #. on other systems"
 #: system/settings/settings.xml
 msgctxt "#36338"
-msgid "Allow programs on the network to control this application."
-msgstr "Допусти програмима на мрежи да управљају овом апликацијом."
+msgid ""
+"Allow programs on the network to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication. It allows anyone with access to the network to completely "
+"control this application and, therefore, this device. Never expose these "
+"interfaces to the Internet."
+msgstr ""
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19451,14 +19708,6 @@ msgid ""
 " are blacked out."
 msgstr "У конфигурацији са више екрана, екрани који не приказују ову апликацију биће замрачени."
 
-#. Description of setting with label #14085 "Whitelist"
-#: system/settings/settings.xml
-msgctxt "#36356"
-msgid ""
-"Whitelisted modes are allowed to be switched to when changing resolution and"
-" refresh rate"
-msgstr ""
-
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19466,6 +19715,15 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Прилагодите кориснички интерфејс подешавањем уклапања екрана. Користите ову алатку ако је приказана слика превише велика или мала за ваш екран."
+
+#: system/settings/settings.xml
+msgctxt "#36358"
+msgid ""
+"Allow using channel numbering from multiple backends. Note that the All "
+"channels group can contain multiple of the same channel number if using this"
+" option. This means that jump to channel number may not work correctly for "
+"the All channels group."
+msgstr ""
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19622,12 +19880,11 @@ msgid ""
 "remote is present."
 msgstr "Користите миш или уређај са екраном осетљивим на додир ради управљања интерфејсом. Напомена: Онемогућавање ће проузроковати губитак ваше контроле над овом апликацијом ако тастатура или даљински управљач нису присутни."
 
-#. Description of setting with label #35100 "Enable joystick and gamepad
-#. support"
+#. Description of setting with label #35100 "Enable controller support"
 #: system/settings/settings.xml
 msgctxt "#36378"
-msgid "Use a joystick to control the interface."
-msgstr "Користите џојстик ради контроле интерфејса."
+msgid "Use a game controller to control the interface."
+msgstr ""
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -19911,6 +20168,22 @@ msgid ""
 msgstr "Заобилажење VDPAU миксера штеди ресурсе на системима са мало снаге али благо смањује квалитет слике."
 
 #: system/settings/settings.xml
+msgctxt "#36422"
+msgid "Update official add-ons from"
+msgstr ""
+
+#. Description of setting with label #36422 "Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"By default, add-ons from official repositories will be prevented from being "
+"auto-updated from private repositories. For cases such as updating from an "
+"add-ons beta repository this option can be switched to [Any repositories] "
+"(bear in mind this is a less secure option and enabling it could cause "
+"incompatibility and crashes)."
+msgstr ""
+
+#: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
 "Select what will happen when an item is selected in the guide: [Show context"
@@ -19981,22 +20254,29 @@ msgid ""
 " you experience hangs, disable this option."
 msgstr "Када је омогућено, VAAPI методи приказивања је дата предност и CPU има мање оптерећења. Ако приметите замрзавања, онемогућите ову опцију."
 
-#. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36434"
-msgid "Allow hardware acceleration - MMAL"
-msgstr "Допусти хардверско убрзање - MMAL"
-
-#. Description of setting "Enable MMAL hardware decoding of video files"
-#: system/settings/settings.xml
-msgctxt "#36435"
-msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Користи VideoPlayer за декодирање видео датотека са MMAL убрзањем."
+msgid ""
+"If enabled, switch to the channel with the programme to remind when auto-"
+"closing the reminder popup."
+msgstr ""
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
 msgctxt "#36436"
 msgid "Select OS keyboard layout."
+msgstr ""
+
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36437"
+msgid "Official repositories only (default)"
+msgstr ""
+
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36438"
+msgid "Any repositories"
 msgstr ""
 
 #. Description of setting "System -> Audio output -> Volume control steps"
@@ -20005,6 +20285,34 @@ msgstr ""
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
 msgstr "Подесите број корака подешавања јачине звука."
+
+#. Description of setting with label #14126 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36443"
+msgid ""
+"Whitelisted modes give the user the control to choose which display modes "
+"are allowed or not allowed to be used"
+msgstr ""
+
+#. Description of setting with label #14127 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36444"
+msgid ""
+"Select this option to allow using 3:2 pulldown refresh rates (playing 23.976"
+" FPS video on a 59.94 Hz monitor or playing 24 FPS video on a 60 Hz "
+"monitor). You may want to use this option if your monitor doesn't have a "
+"23.976 Hz or 24 Hz mode."
+msgstr ""
+
+#. Description of setting with label #14128 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36445"
+msgid ""
+"Select this option to allow using double refresh rates (playing 29.97 FPS "
+"video on a 59.94 Hz monitor or playing 30 FPS video on a 60 Hz monitor). You"
+" may want to use this option if your monitor doesn't have a 29.97 Hz or 30 "
+"Hz mode."
+msgstr ""
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -20241,18 +20549,6 @@ msgctxt "#36541"
 msgid "Allows volume control from AirPlay clients."
 msgstr "Допушта подешавање јачине тона од стране AirPlay клијената"
 
-#: system/settings/rbp.xml
-msgctxt "#36542"
-msgid "Output to both analogue (headphones) and HDMI"
-msgstr "Произведи за аналогни излаз (слушалице) и HDMI"
-
-#: system/settings/rbp.xml
-msgctxt "#36543"
-msgid ""
-"Enable this to make dialogue louder compared to background sounds when "
-"downmixing multichannel audio"
-msgstr "Омогућите ово да би дијалог био гласнији у односу на звукове позадине током смањивања броја канала вишеканалног звука."
-
 #: system/settings/settings.xml
 msgctxt "#36544"
 msgid "Enable hardware decoding of video files."
@@ -20273,12 +20569,8 @@ msgid ""
 "the value, the closer the subtitles will appear to the viewer."
 msgstr "Поставља визуелну дубину титла за стереоскопске 3D видее. Што је виша вредност, то се титл чини ближим гледаоцу."
 
-#: system/settings/rbp.xml
-msgctxt "#36547"
-msgid "Use higher quality textures for covers and fanart (uses more memory)"
-msgstr "Користи текстуре високог квалитета за омоте и уметност љубитеља (користи више меморије)"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#. Description of setting with label #37021 "Set GUI resolution limit"
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20344,6 +20636,18 @@ msgstr ""
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#36556"
 msgid "Tone mapping parameter"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36557"
+msgid "ACES Filmic"
+msgstr ""
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36558"
+msgid "Hable"
 msgstr ""
 
 #: system/settings/settings.xml
@@ -20624,7 +20928,7 @@ msgid ""
 "This category contains the settings for how the AirPlay service is handled."
 msgstr "Ова категорија садржи подешавања како ће се поступати према сервису AirPlay."
 
-#. Description of settings category with label #14216 Display
+#. Description of settings category with label #14220 Display
 #: system/settings/settings.xml
 msgctxt "#36603"
 msgid "This category contains the settings for displays."
@@ -20814,6 +21118,62 @@ msgid ""
 " some WiFi routers and NAS devices."
 msgstr ""
 
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control via HTTP"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36632"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should never be "
+"exposed on the Internet. A password should be set below. Proceed?"
+msgstr ""
+
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control from applications on other systems"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36633"
+msgid ""
+"These services offer neither authentication nor encryption. Anyone who can "
+"connect to them will be able to completely control this application and, "
+"therefore, this device, so they should never be exposed to the Internet. "
+"Proceed?"
+msgstr ""
+
+#. Text in confirm dialog when disabling setting "Services -> Control ->
+#. Require authentication"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36634"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should be "
+"secured by a password. Are you sure you want to disable authentication?"
+msgstr ""
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36635"
+msgid ""
+"If web server authentication is enabled, a password must be entered as well."
+msgstr ""
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration by enabling authentication without a password set
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36636"
+msgid ""
+"You must first enter a password before web server authentication can be "
+"enabled."
+msgstr ""
+
+#. Text in confirm dialog when installing addon from zip
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#36637"
+msgid ""
+"Note that add-ons installed from zip (excluding served repositories) will "
+"not auto-update and must be manually updated. Would you like to proceed?"
+msgstr ""
+
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
 msgctxt "#36899"
@@ -20913,7 +21273,7 @@ msgctxt "#36917"
 msgid "artists"
 msgstr "извођачи"
 
-#: xbmc/media/MediaType.cpp
+#: xbmc/media/MediaType.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#36918"
 msgid "album"
 msgstr "албум"
@@ -20967,22 +21327,7 @@ msgid ""
 "Plus (E-AC3) streams."
 msgstr "Одаберите ову опцију ако је ваш пријемник способан да декодира Dolby Digital Plus (E-AC3) записе."
 
-#: system/settings/rbp.xml
-msgctxt "#37017"
-msgid "Dual audio output"
-msgstr "Двоструки аудио излаз"
-
-#: system/settings/rbp.xml
-msgctxt "#37018"
-msgid "Boost centre channel when downmixing"
-msgstr "Појачати централни канал током смањивања броја канала"
-
-#: system/settings/rbp.xml
-msgctxt "#37020"
-msgid "Enable higher colour depth artwork"
-msgstr "Омогући илустрације са већом дубином боја"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Поставите ограничење GUI резолуције"
@@ -20997,41 +21342,32 @@ msgctxt "#37023"
 msgid "Do you wish to stop playback on the remote device?"
 msgstr "Да ли желите да зауставите репродукцију на удаљеном уређају?"
 
-#: system/settings/rbp.xml
-msgctxt "#37024"
-msgid ""
-"Select this if the audio out connection only supports multichannel audio as "
-"Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
-"FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
-"Pi as this requires a lot of CPU."
-msgstr "Одаберите ово ако веза аудио излаза подржава само вишеканални звук као Dolby Digital 5.1 (AC3), ово допушта вишеканалном звуку као што је AAC 5.1 или FLAC 5.1 да буде слушан у 5.1 окружујућем звуку. Напомена: Није препоручено на Pi јер ово захтева доста CPU."
-
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Подесите подешавања кодера звука као што су квалитет и ниво компримовања."
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Аутоматски"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Без ограничења"
@@ -21153,11 +21489,6 @@ msgctxt "#37046"
 msgid "1080"
 msgstr ""
 
-#: system/settings/rbp.xml
-msgctxt "#38010"
-msgid "GPU accelerated"
-msgstr "Убрзано GPU-ом"
-
 #. Setting #38011 "Show All Items entry"
 #: system/settings/settings.xml
 msgctxt "#38011"
@@ -21243,37 +21574,6 @@ msgstr "Изаберите добављача информација"
 msgctxt "#38026"
 msgid "Appearances"
 msgstr "Изгледи"
-
-#: system/settings/rbp.xml
-msgctxt "#38027"
-msgid "Decode the stereo stream from 3D files"
-msgstr "Декодирај стерео запис из 3D датотека"
-
-#. Description of setting with label #38027 "Decode the stereo stream from 3D
-#. files"
-#: system/settings/rbp.xml
-msgctxt "#38028"
-msgid ""
-"If enabled, videos created in Multiview Video Coding (MVC) format can also "
-"be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
-"rays.[CR]Note: Processing of this data may reduce playback performance, so "
-"only enable if you require stereoscopic 3D support."
-msgstr "Ако је омогућено, видеи направљени у Multiview Video Coding (MVC) формату могу такође бити гледани у стереоскопском 3D. MVC формат се обично налази на 3D Blu-ray-евима.[CR]Напомена: Обрада ових података може умањити перформансе репродукције, омогућите само ако вам је потребна подршка стереоскопског 3D."
-
-#: system/settings/rbp.xml
-msgctxt "#38029"
-msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Омогући Потпуне HD HDMI режиме за стереоскопски 3D"
-
-#. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
-#. label #38029
-#: system/settings/rbp.xml
-msgctxt "#38030"
-msgid ""
-"This option uses frame-packing to output full resolution for 3D through "
-"HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
-"videos, but may not be supported by all displays."
-msgstr "Ова опција користи паковање фрејмова за производњу излаза пуне резолуције за 3D кроз HDMI. [CR] Омогућавањем овога побољшава квалитет Multiview Video Coding (MVC) видеа, али можда није подржано од свих екрана."
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -21521,6 +21821,12 @@ msgctxt "#38080"
 msgid "BPM"
 msgstr ""
 
+#. Music property - Album release status
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38081"
+msgid "Release status"
+msgstr ""
+
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
 msgctxt "#38100"
@@ -21683,7 +21989,7 @@ msgstr ""
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
-msgid "Include art work such as thumbnails and fanart"
+msgid "Include artwork such as thumbnails and fanart"
 msgstr ""
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21886,8 +22192,8 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category provides access to the windows for source management and the "
-"Library settings for the databases"
+"This category provides access to the windows for source management and "
+"library management facilities"
 msgstr ""
 
 #. Description of setting "Videos... with label #14242
@@ -22029,6 +22335,14 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr ""
 
+#. Text for yes/no dialog when silently uninstalling an addon
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#39028"
+msgid ""
+"Addon \"{0:s}\"[CR]Origin \"{1:s}\"[CR]Version \"{2:s}\"[CR]- will uninstall"
+" and be replaced. Would you like to proceed?"
+msgstr ""
+
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -22156,4 +22470,207 @@ msgstr ""
 #: system/settings/darwin_ios.xml
 msgctxt "#39118"
 msgid "Share debug log"
+msgstr ""
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39119"
+msgid "Last modified"
+msgstr ""
+
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+msgctxt "#39120"
+msgid "Skip filename matching for external audio tracks"
+msgstr ""
+
+#. Label for section of settings controling what is shown on the library
+#. windows
+#: system/settings/settings.xml
+msgctxt "#39121"
+msgid "Library Display and Navigation"
+msgstr ""
+
+#. Label for section of settings controling how library is populated
+#: system/settings/settings.xml
+msgctxt "#39122"
+msgid "Library Information Sources"
+msgstr ""
+
+#. Label for section of settings
+#: system/settings/settings.xml
+msgctxt "#39123"
+msgid "Artwork"
+msgstr "Илустрације"
+
+#: system/settings/settings.xml
+msgctxt "#39125"
+msgid "Enable tag reading in file view"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39127"
+msgid "Use all local image files as artwork"
+msgstr ""
+
+#. Description of setting with label #39127 "Use all local image files as
+#. artwork"
+#: system/settings/settings.xml
+msgctxt "#39128"
+msgid ""
+"All image files located alongside the media files are picked up as artwork "
+"during library scan, with the file name as the art type."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39129"
+msgid "Use all remote artwork fetched by scrapers"
+msgstr ""
+
+#. Description of setting with label #39129 "Use all remote artwork fetched by
+#. scrapers"
+#: system/settings/settings.xml
+msgctxt "#39130"
+msgid ""
+"Use the first of each art type of the remote artwork in scraper results to "
+"fill any missing art not populated with local art."
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39131"
+msgid "Artist art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39131 "Artist art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39132"
+msgid ""
+"Limit the artist artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39133"
+msgid "Album art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39133 "Album art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39134"
+msgid ""
+"Limit the album artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39135"
+msgid "Thumbnail image files"
+msgstr ""
+
+#. Description of setting with label #39135 "Thumbnail image files"
+#: system/settings/settings.xml
+msgctxt "#39136"
+msgid ""
+"The names of files that contain primary artwork (thumbnails), generally "
+"square and used both full and in reduced size to visually identify a folder,"
+" artist, album or song"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39137"
+msgid "Artwork level"
+msgstr ""
+
+#. Description of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39138"
+msgid ""
+"The amount of artwork automatically selected - [Maximum] all local images "
+"and remote art; [Basic] save space on limited devices or when using a simple"
+" skin; [Custom] configured by user for detailed control; [None] no art"
+msgstr ""
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39140"
+msgid "Maximum"
+msgstr "Максималан"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39141"
+msgid "Basic"
+msgstr "Основно"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39142"
+msgid "Custom"
+msgstr "Прилагођено"
+
+#: system/settings/settings.xml
+msgctxt "#39143"
+msgid "Movie art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39150 "Movie art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39144"
+msgid ""
+"Limit the movie and movie set artwork fetched locally or applied from "
+"scraper remote art results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39145"
+msgid "TV show art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39152 "TV show art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39146"
+msgid ""
+"Limit the TV show and season artwork fetched locally or applied from scraper"
+" remote art results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39147"
+msgid "Episode art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39154 "Episode art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39148"
+msgid ""
+"Limit the episode artwork fetched locally or applied from scraper remote art"
+" results to just those art types in the whitelist"
+msgstr ""
+
+#: system/settings/settings.xml
+msgctxt "#39149"
+msgid "Music video art types whitelist"
+msgstr ""
+
+#. Description of setting with label #39156 "Music video art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39150"
+msgid ""
+"Limit the music video artwork fetched locally or applied from scraper remote"
+" art results to just those art types in the whitelist"
+msgstr ""
+
+#. Display Hardware scaling filter setting toggle
+msgctxt "#39151"
+msgid "Display hardware scaling filter"
+msgstr ""
+
+#. Description
+msgctxt "#39152"
+msgid ""
+"Integer scaling (IS) is a Nearest-Neighbor(NN) upscaling technique using "
+"Display Engine"
+msgstr ""
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#39153"
+msgid "Windowing system:"
 msgstr ""

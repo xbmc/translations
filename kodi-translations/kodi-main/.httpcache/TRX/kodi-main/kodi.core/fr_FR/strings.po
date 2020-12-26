@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-12-15 14:42+0000\n"
+"PO-Revision-Date: 2020-12-23 18:12+0000\n"
 "Last-Translator: tmtisfree <tmtisfree@free.fr>\n"
 "Language-Team: French (France) (http://www.transifex.com/teamxbmc/kodi-main/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,7 @@ msgstr "Météo"
 #: Unknown
 msgctxt "#9"
 msgid "Kodi media center"
-msgstr "Média center Kodi"
+msgstr "Centre média Kodi"
 
 #. Weather token
 msgctxt "#11"
@@ -579,7 +579,7 @@ msgstr "Températures :"
 
 msgctxt "#140"
 msgid "CPU:"
-msgstr "Processeur :"
+msgstr "Processeur :"
 
 msgctxt "#141"
 msgid "GPU:"
@@ -1145,7 +1145,8 @@ msgid "Fetching CD information"
 msgstr "Récupération des informations du CD"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
-#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp xbmc/pvr/PVRGUIActions.cpp
+#: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/network/NetworkServices.cpp xbmc/pvr/PVRGUIActions.cpp
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
@@ -2494,7 +2495,8 @@ msgid "Album"
 msgstr "Album "
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
-#: xbmc/playlists/SmartPlaylist.cpp
+#: xbmc/playlists/SmartPlaylist.cpp xbmc/PlayListPlayer.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#559"
 msgid "Playlist"
 msgstr "Liste de lecture"
@@ -3943,6 +3945,19 @@ msgid "Enter web address"
 msgstr "Saisir l'adresse Web"
 
 #: system/settings/settings.xml
+msgctxt "#1052"
+msgid "Require authentication"
+msgstr "Nécessite une authentification"
+
+#: system/settings/settings.xml
+msgctxt "#1053"
+msgid ""
+"Choose whether requests to the web server require a username and a password,"
+" which must be set below if enabled. It is recommended to always leave this "
+"setting enabled."
+msgstr "Détermine si les requêtes au serveur Web requièrent un nom d'utilisateur et un mot de passe (qui doivent être définis si cette option est activée). Il est recommandé de toujours la laisser activée."
+
+#: system/settings/settings.xml
 msgctxt "#1180"
 msgid "Proxy type"
 msgstr "Type de proxy"
@@ -4806,6 +4821,11 @@ msgctxt "#10057"
 msgid "Edit file source"
 msgstr "Éditer la source de fichiers"
 
+#: xbmc/video/dialogs/CGUIDialogVideoInfo.cpp
+msgctxt "#10058"
+msgid "Remove tag from library"
+msgstr "Retirer les balises de la médiathèque"
+
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10099"
 msgid "Pointer"
@@ -5408,7 +5428,7 @@ msgstr "Saisir le code de déverrouillage"
 #: unknown
 msgctxt "#12329"
 msgid "or press \"C\" to cancel"
-msgstr "ou appuyer sur « C » pour annuler"
+msgstr "ou appuyer sur « C » pour annuler"
 
 #: xbmc/dialogs/GUIDialogGamepad.cpp
 msgctxt "#12330"
@@ -5418,7 +5438,7 @@ msgstr "Saisir la combinaison de touches de la manette et"
 #: xbmc/dialogs/GUIDialogGamepad.cpp
 msgctxt "#12331"
 msgid "press \"OK\", or \"Back\" to cancel"
-msgstr "appuyer sur « OK », ou « Retour » pour annuler"
+msgstr "appuyer sur OK, ou « Retour » pour annuler"
 
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#12332"
@@ -5775,14 +5795,6 @@ msgctxt "#13023"
 msgid "Successfully removed storage device"
 msgstr "Retrait du dispositif de stockage réussi"
 
-msgctxt "#13024"
-msgid "Joystick plugged"
-msgstr "Joystick connecté"
-
-msgctxt "#13025"
-msgid "Joystick unplugged"
-msgstr "Joystick déconnecté"
-
 #: system/settings/settings.xml
 msgctxt "#13026"
 msgid "Try to wakeup remote servers on access"
@@ -5836,7 +5848,7 @@ msgstr "Trouvé pour {0:s}"
 #: xbmc/network/WakeOnAccess.cpp
 msgctxt "#13036"
 msgid "Failed for {0:s}"
-msgstr "Échoué pour {0:s}"
+msgstr "Échec pour {0:s}"
 
 #: xbmc/powermanagement/PowerManager.cpp
 msgctxt "#13050"
@@ -6128,7 +6140,7 @@ msgstr "Matériel :"
 #: addons/skin.estuary/xml/SettingsSystemInfo.xml
 msgctxt "#13271"
 msgid "System CPU usage:"
-msgstr "Usage CPU  du système :"
+msgstr "Usage CPU du système :"
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -6174,7 +6186,7 @@ msgstr "Système d'exploitation :"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13284"
 msgid "CPU speed:"
-msgstr "Vitesse du processeur :"
+msgstr "Vitesse du processeur :"
 
 msgctxt "#13286"
 msgid "Video encoder:"
@@ -6196,7 +6208,7 @@ msgstr "Région DVD :"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#13295"
 msgid "Internet:"
-msgstr "Internet :"
+msgstr "Internet :"
 
 msgctxt "#13296"
 msgid "Connected"
@@ -6457,7 +6469,7 @@ msgstr "Activer la voix"
 
 msgctxt "#13375"
 msgid "Enable device"
-msgstr "Activer le périphérique"
+msgstr "Activer le dispositif"
 
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 #: xbmc/games/dialogs/osd/DialogGameVolume.cpp
@@ -6505,7 +6517,7 @@ msgctxt "#13386"
 msgid "Use time based seeking"
 msgstr "Utiliser le déplacement sur la base temps"
 
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#13387"
 msgid "Track naming template - right"
 msgstr "Modèle de nom de piste (à droite)"
@@ -6521,10 +6533,8 @@ msgid "There are no presets available for this visualisation"
 msgstr "Il n'existe pas de présélections disponibles pour cette visualisation"
 
 msgctxt "#13390"
-msgid ""
-"There are no settings available\n"
-"for this visualisation"
-msgstr "Il n'y a pas de paramètres disponibles\npour cette visualisation."
+msgid "There are no settings available[CR]for this visualisation"
+msgstr "Il n'y a aucun paramètre disponible[CR]pour cette visualisation."
 
 #: xbmc/ContextMenus.h xbmc/dialogs/GUIDialogContextMenu.cpp
 #: xbmc/dialogs/GUIDialogPlayEject.cpp
@@ -6705,8 +6715,8 @@ msgstr "Autoriser l'accélération matérielle - VTBDecoder"
 
 #: system/settings/settings.xml
 msgctxt "#13430"
-msgid "Allow hardware acceleration - PRIME"
-msgstr "Autoriser l'accélération matérielle - PRIME"
+msgid "Allow using DRM PRIME decoder"
+msgstr "Autoriser l'utilisation du décodeur DRM PRIME"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6744,6 +6754,11 @@ msgstr "Utiliser les possibilités d'affichage HDR"
 msgctxt "#13437"
 msgid "Prefer VDPAU video mixer"
 msgstr "Préférer le mélangeur vidéo VDPAU"
+
+#: system/settings/settings.xml
+msgctxt "#13438"
+msgid "Allow hardware acceleration with DRM PRIME"
+msgstr "Autoriser l'accélération matérielle avec le DRM PRIME"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -6978,6 +6993,7 @@ msgstr "Pas d'illustration"
 
 #. Button to add a new type of art e.g. "thumb", "poster", "fanart" etc.
 #: xbmc/music/MusicUtils.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
+#: system/settings/settings.xml
 msgctxt "#13516"
 msgid "Add art type"
 msgstr "Ajouter un type d'illustration"
@@ -7469,11 +7485,6 @@ msgid "Queue songs on selection"
 msgstr "Placer en file d'attente les chansons sélectionnées"
 
 #: system/settings/settings.xml
-msgctxt "#14085"
-msgid "Whitelist"
-msgstr "Liste blanche"
-
-#: system/settings/settings.xml
 msgctxt "#14086"
 msgid "Playback"
 msgstr "Lecture"
@@ -7690,6 +7701,21 @@ msgstr "Région C"
 msgctxt "#14125"
 msgid "Input"
 msgstr "Entrée"
+
+#: system/settings/settings.xml
+msgctxt "#14126"
+msgid "Whitelist"
+msgstr "Liste blanche"
+
+#: system/settings/settings.xml
+msgctxt "#14127"
+msgid "Allow 3:2 pulldown refresh rates"
+msgstr "Autoriser des taux de rafraîchissement 3:2 Pulldown"
+
+#: system/settings/settings.xml
+msgctxt "#14128"
+msgid "Allow double refresh rates"
+msgstr "Autoriser des taux de rafraîchissement doublés"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -8180,7 +8206,7 @@ msgstr "Général"
 
 msgctxt "#16002"
 msgid "Internet lookup"
-msgstr "Concordance internet"
+msgstr "Concordance Internet"
 
 msgctxt "#16003"
 msgid "Player"
@@ -8317,6 +8343,8 @@ msgctxt "#16034"
 msgid "Couldn't get songs from database."
 msgstr "Impossible de récupérer les chansons depuis la base de données."
 
+#: xbmc/music/windows/GUIWindowMusicBase.cpp
+#: xbmc/video/windows/GUIWindowVideoBase.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#16035"
 msgid "Party mode playlist"
@@ -8347,6 +8375,7 @@ msgid "On"
 msgstr "Oui"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
+#: xbmc/video/windows/VideoFileItemListModifier.cpp
 msgctxt "#16100"
 msgid "All videos"
 msgstr "Toutes les vidéos"
@@ -8478,8 +8507,8 @@ msgstr "Bilinéaire"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
-msgid "Bicubic"
-msgstr "Bicubique"
+msgid "Bicubic (B-Spline)"
+msgstr "Bicubique (B-spline)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8532,6 +8561,11 @@ msgid "VDPAU - Sharpness"
 msgstr "VDPAU - Netteté"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16314"
+msgid "Bicubic (Mitchell)"
+msgstr "Bicubique (Mitchell)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
 msgid "Lanczos3 - Optimised"
 msgstr "Lanczos3 - Optimisé"
@@ -8563,6 +8597,11 @@ msgid "DXVA"
 msgstr "DXVA"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16321"
+msgid "Bicubic (Catmull-Rom)"
+msgstr "Bicubique (Catmull-Rom)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
@@ -8583,6 +8622,11 @@ msgid "VDPAU - Bob"
 msgstr "VDPAU - Bob"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#16326"
+msgid "Bicubic (0,0.75)"
+msgstr "Bicubique (0, 0,75)"
+
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
 msgid "VAAPI - Bob"
 msgstr "VAAPI - Bob"
@@ -8597,29 +8641,10 @@ msgctxt "#16329"
 msgid "VAAPI - Motion compensated"
 msgstr "VAAPI - Compensation de mouvement"
 
-#. Description of OSD video settings for deinterlace method with label #16330
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16330"
-msgid "MMAL - Advanced"
-msgstr "MMAL - Avancé"
-
-#. Description of OSD video settings for deinterlace method with label #16331
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16331"
-msgid "MMAL - Advanced (half)"
-msgstr "MMAL - Avancé (moitié)"
-
-#. Description of OSD video settings for deinterlace method with label #16332
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16332"
-msgid "MMAL - Bob"
-msgstr "MMAL - Bob"
-
-#. Description of OSD video settings for deinterlace method with label #16333
-#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
-msgctxt "#16333"
-msgid "MMAL - Bob (half)"
-msgstr "MMAL - Bob (moitié)"
+msgid "Bicubic (0,1.)"
+msgstr "Bicubique (0, 1)"
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -8937,18 +8962,6 @@ msgstr "Faut-il vraiment masquer cette chaîne ?"
 msgctxt "#19040"
 msgid "Timers"
 msgstr "Programmations"
-
-#. label for "rename recording" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19041"
-msgid "Are you sure you want to rename this recording?"
-msgstr "Faut-il vraiment renommer cet enregistrement ?"
-
-#. label for "rename timer" confirmation input dialog
-#: xbmc/pvr/PVRGUIActions.cpp
-msgctxt "#19042"
-msgid "Are you sure you want to rename this timer?"
-msgstr "Faut-il vraiment renommer cette programmation ?"
 
 #. pvr settings "recording" category label
 #: system/settings/settings.xml
@@ -9295,7 +9308,7 @@ msgid "Enter the name for the timer"
 msgstr "Saisir le nom pour cette programmation"
 
 #. generic warning label used at several places
-#: xbmc/addons/AddonSystemSettings.cpp
+#: xbmc/addons/AddonSystemSettings.cpp xbmc/network/NetworkServices.cpp
 #: xbmc/pvr/channels/PVRChannelGroupInternal.cpp xbmc/pvr/PVRManager.cpp
 msgctxt "#19098"
 msgid "Warning!"
@@ -9380,7 +9393,7 @@ msgid ""
 "message."
 msgstr "Impossible de supprimer la programmation. Vérifier le journal pour plus d'informations à propos de ce message."
 
-#. message box text stating that a PVR backend error occured
+#. message box text stating that a PVR backend error occurred
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19111"
 msgid ""
@@ -10444,7 +10457,7 @@ msgstr "Paramètres spécifiques au client"
 #: system/settings/settings.xml
 msgctxt "#19281"
 msgid "Confirm channel switches by pressing \"OK\""
-msgstr "Confirmer les changements de chaîne en appuyant sur « OK »"
+msgstr "Confirmer les changements de chaîne en appuyant sur OK"
 
 #. Label for a select option or list item, representing an icon graphic (like
 #. a TV channel icon)
@@ -10751,6 +10764,56 @@ msgstr "Programme"
 msgctxt "#19326"
 msgid "Navigate..."
 msgstr "Naviguer…"
+
+#. Label for a context menu entry to delete alle watched recordings contained
+#. in a folder
+#: xbmc/pvr/PVRContextMenus.cpp
+msgctxt "#19327"
+msgid "Delete watched"
+msgstr "Supprimer ce qui est lu"
+
+#. delete multiple recordings confirmation message box text
+#: xbmc/pvr/PVRGUIActions.cpp
+msgctxt "#19328"
+msgid "Delete all watched recordings in this folder?"
+msgstr "Faut-il vraiment supprimer tous les enregistrements lus de ce dossier ?"
+
+#. label for PVR settings use backend channel numbers always
+#: system/settings/settings.xml
+msgctxt "#19329"
+msgid "Allow backend channel numbers with more than one PVR add-on"
+msgstr "Autoriser les n° de chaînes de serveur avec plus d'une extension PVR"
+
+#. pvr settings "switch to channel on reminder auto-close" setting label
+#: system/settings/settings.xml
+msgctxt "#19330"
+msgid "Switch to channel when auto-closing the reminder popup"
+msgstr "Afficher la chaîne à la fermeture auto. de la fenêtre de rappel"
+
+#. additional text for reminder announcement dialog, used if a recording can
+#. be scheduled
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19331"
+msgid "(Auto-close of this reminder will switch to channel...)"
+msgstr "(La fermeture auto. de ce rappel affichera la chaîne…)"
+
+#. text for event log entry for logging auto channel switch for auto-closed
+#. reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19332"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for '{0:s}' on channel "
+"'{1:s}' at '{2:s}'"
+msgstr "Affichage de la chaîne selon le rappel PVR à fermeture automatique pour « {0:s} » sur la chaîne « {1:s} » à « {2:s} »"
+
+#. text for event log entry for logging auto scheduled recordings for auto-
+#. closed reminders
+#: xbmc/pvr/timers/PVRGUIActions.cpp
+msgctxt "#19333"
+msgid ""
+"Switched to channel for auto-closed PVR reminder for channel '{0:s}' at "
+"'{1:s}'"
+msgstr "Affichage de la chaîne pour le rappel PVR à fermeture automatique pour la chaîne « {0:s} » à « {1:s} »"
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -11062,7 +11125,7 @@ msgstr "Film et vidéo expérimentaux"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19604"
 msgid "Broadcasting / Press"
-msgstr "Radio / Presse"
+msgstr "Diffusion / Presse"
 
 #. label for "arts/culture" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11230,7 +11293,7 @@ msgstr "Non publié"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19664"
 msgid "Live broadcast"
-msgstr "Émission en direct"
+msgstr "Diffusion en direct"
 
 #. label for "user defined" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -12095,7 +12158,7 @@ msgstr "Recharger l'habillage"
 
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
-msgstr "Utiliser la vue en affiche pour les séries TV"
+msgstr "Utiliser la vue affiche pour les séries TV"
 
 msgctxt "#20186"
 msgid "Please wait"
@@ -13118,6 +13181,11 @@ msgid "Show empty TV shows"
 msgstr "Afficher les séries TV vides"
 
 #: system/settings/settings.xml
+msgctxt "#20472"
+msgid "Show all performers for music videos"
+msgstr "Afficher tous les interprètes pour les vidéos musicales"
+
+#: system/settings/settings.xml
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Afficher les dossiers et les fichiers cachés"
@@ -13181,8 +13249,8 @@ msgstr "Aucune mise à jour disponible"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21342"
-msgid "There are currently no updates available for this add-on."
-msgstr "Il n'y a actuellement pas de mise à jour disponible pour cette extension."
+msgid "There are currently no versions available for this add-on."
+msgstr "Il n'y a pas actuellement de versions disponibles pour cette extension."
 
 #: system/settings.xml
 msgctxt "#21343"
@@ -13716,7 +13784,7 @@ msgid ""
 "item will be selected only when a view is entered for the first "
 "time.[CR][Always] The first unwatched item will be selected every time a "
 "view is entered."
-msgstr "En accédant à une vue de saisons ou d'épisodes de série TV, sélectionne automatiquement la première saison ou épisode non vu.[CR][Au premier accès] sélectionne le premier élément non vu lors du premier accès à la vue.[CR][Toujours] sélectionne le premier élément non vu à chaque accès à la vue."
+msgstr "En accédant à une vue saison ou épisode de série TV, sélectionne automatiquement la première saison ou épisode non vu.[CR][Au premier accès] Sélectionne le premier élément non vu lors du premier accès à la vue.[CR][Toujours] Sélectionne le premier élément non vu à chaque accès à la vue."
 
 #. Filter (media data) from float value to float value
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
@@ -14055,6 +14123,7 @@ msgctxt "#21876"
 msgid "Original TX reference"
 msgstr "Référence TX d'origine"
 
+#: xbmc/playlist/SmartPlayList.cpp
 msgctxt "#21877"
 msgid "Date created"
 msgstr "Date de création"
@@ -14223,7 +14292,7 @@ msgstr "Température du GPU :"
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#22011"
 msgid "CPU temperature:"
-msgstr "Température du processeur :"
+msgstr "Température du processeur :"
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#22012"
@@ -14354,11 +14423,11 @@ msgstr "Lecteur externe actif"
 
 msgctxt "#23101"
 msgid "Click \"OK\" to terminate the player"
-msgstr "Cliquer sur « OK » pour arrêter le lecteur"
+msgstr "Cliquer sur OK pour arrêter le lecteur"
 
 msgctxt "#23104"
 msgid "Click \"OK\" when playback has ended"
-msgstr "Cliquer sur « OK » en fin de lecture"
+msgstr "Cliquer sur OK en fin de lecture"
 
 #: xbmc/addons/GUIDialogAddonSettings.cpp
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp
@@ -14610,6 +14679,13 @@ msgctxt "#24048"
 msgid "VideoPlayer InputStream"
 msgstr "Flux d'entrée du lecteur VideoPlayer"
 
+#. To show addon as deprecated over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+msgctxt "#24049"
+msgid "Add-on has been marked deprecated in repository."
+msgstr "L'extension a été marquée comme obsolète dans le dépôt."
+
 #: unknown
 msgctxt "#24050"
 msgid "Available add-ons"
@@ -14712,8 +14788,8 @@ msgid "Update available"
 msgstr "Mise à jour disponible"
 
 msgctxt "#24069"
-msgid "Update"
-msgstr "Mettre à jour"
+msgid "Versions"
+msgstr "Versions"
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
@@ -14808,6 +14884,12 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Tous les dépôts"
 
+#. Used as a text in the progress dialog when install of a repo fails
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24088"
+msgid "Failed to install repository"
+msgstr "Échec de l'installation du dépôt"
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Redémarrage de l'extension"
@@ -14845,6 +14927,8 @@ msgctxt "#24095"
 msgid "Local package cache"
 msgstr "Cache local des paquets"
 
+#. To show addon as broken over icon
+#: addons/skin.estuary/xml/AddonBrowser.xml
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24096"
 msgid "Add-on has been marked broken in repository."
@@ -14995,8 +15079,8 @@ msgstr "Saisir le texte à rechercher"
 #. auto-updating is off.
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
-msgid "Update all"
-msgstr "Tout mettre à jour"
+msgid "Install all updates"
+msgstr "Installer toutes les mises à jour"
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15078,6 +15162,19 @@ msgstr "Pour utiliser cette fonctionnalité, une extension doit être activée :
 msgctxt "#24136"
 msgid "Would you like to enable this add-on?"
 msgstr "Faut-il activer cette extension ?"
+
+#. Button in Add-on Manager -> Available Updates for updating all possible
+#. add-ons when auto-updating is off.
+#: xbmc/filesystem/AddonDirectory.cpp
+msgctxt "#24137"
+msgid "Install auto updates only"
+msgstr "Installer seulement les mises à jour automatiques"
+
+#. Button caption in DialogAddoninfo
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24138"
+msgid "Update"
+msgstr "Mettre à jour"
 
 #. Label for the action provided by addon management events to jump to a
 #. specific Add-on
@@ -15223,6 +15320,108 @@ msgctxt "#24163"
 msgid "Match Apple tvOS Standard (Siri remote)"
 msgstr "Copier le standard Apple tvOS (Siri à distance)"
 
+#. Header text for yes/no dialog about enable of broken addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24164"
+msgid "Addon \"{0:s}\" broken"
+msgstr "Extension « {0:s} » défectueuse"
+
+#. Yes/no dialog text with addon broken string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24165"
+msgid ""
+"Addon marked as broken with following note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do"
+" you want to enable?"
+msgstr "Extension marquée comme défectueuse avec cette note :[CR][B][I]{0:s}[/I][/B][CR][CR]Faut-il l'activer ?"
+
+#. Header text for yes/no dialog about enable of deprecated addon
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24166"
+msgid "Addon \"{0:s}\" deprecated"
+msgstr "Extension « {0:s} » obsolète"
+
+#. Yes/no dialog text with addon deprecated string value and to ask for use
+#: xbmc/addons/gui/GUIHelpers.cpp
+msgctxt "#24167"
+msgid ""
+"Addon marked as deprecated with following "
+"note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do you want to enable?"
+msgstr "Extension marquée comme obsolète avec cette note :[CR][B][I]{0:s}[/I][/B][CR][CR]Faut-il l'activer ?"
+
+#. Notification event to show addon marked as deprecated.
+#: xbmc/addons/AddonInstaller.cpp
+msgctxt "#24168"
+msgid "Deprecated: {0:s}"
+msgstr "Obsolète : {0:s}"
+
+#. Lifecycle state name, for normal addons (no special). Used also on skin to
+#. compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24169"
+msgid "Normal"
+msgstr "Normale"
+
+#. Lifecycle state name, for deprecated addons. Used also on skin to compare
+#. and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/filesystem/AddonsDirectory.cpp
+#: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24170"
+msgid "Deprecated"
+msgstr "Obsolète"
+
+#. Lifecycle state name, for broken and not usable addons. Used also on skin
+#. to compare and identify related state.
+#: addons/skin.estuary/xml/AddonBrowser.xml
+#: addons/skin.estuary/xml/DialogAddonInfo.xml
+#: addons/skin.estuary/xml/Variables.xml xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#24171"
+msgid "Broken"
+msgstr "Inexploitable"
+
+#. The minimum version a dependency must meet. This is set in the <requires>
+#. tag of the dependee
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/GUIDialogAddonInfo.cpp
+msgctxt "#24180"
+msgid "Minimum: {0:s}{3:s}"
+msgstr "Minimale : {0:s}{3:s}"
+
+#. The minimum version, plus the version going to be installed
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24181"
+msgid "Minimum: {0:s} => Install: {2:s}{3:s}"
+msgstr "Minimale : {0:s} => À installer : {2:s}{3:s}"
+
+#. The minimum version, plus the currently installed version
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24182"
+msgid "Minimum: {0:s} / Installed: {1:s}{3:s}"
+msgstr "Minimale : {0:s} / Installée : {1:s}{3:s}"
+
+#. The minimum version, the currently installed, plus the updated version
+#. we're going to install
+#. {3:s} reserved for an empty string or the " (optional)" optional string.
+#. see #24184
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24183"
+msgid "Minimum: {0:s} / Installed: {1:s} => Update to: {2:s}{3:s}"
+msgstr "Minimum : {0:s} / Installée : {1:s} => Mettre à jour en : {2:s}{3:s}"
+
+#. used in #24180 - #24183 as {3:s}
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#24184"
+msgid " (optional)"
+msgstr " (optionel)"
+
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp
@@ -15346,6 +15545,12 @@ msgctxt "#25013"
 msgid "Auto-skip on"
 msgstr "Saut auto. activé"
 
+#. Used to tell addon origin type
+#. xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
+msgctxt "#25014"
+msgid "Manual"
+msgstr "Manuel"
+
 #: unused
 msgctxt "#29801"
 msgid "QWERTY keyboard"
@@ -15404,6 +15609,7 @@ msgstr "Compositeur "
 
 #. Artists which sing the music (if present)
 #: addons/skin.estuary/xml/DialogPVRRadioRDSInfo.xml
+#: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#29904"
 msgid "Artist"
 msgstr "Artiste "
@@ -16209,7 +16415,7 @@ msgstr "Activer le bouton de script personnalisé"
 
 msgctxt "#33084"
 msgid "Auto login"
-msgstr "Identification auto."
+msgstr "Identification automatique"
 
 #: xbmc/network/network.cpp xbmc/network/NetworkServices.cpp
 msgctxt "#33100"
@@ -16231,6 +16437,14 @@ msgstr "Serveur d'évènements"
 msgctxt "#33103"
 msgid "Remote communication server"
 msgstr "Serveur de communication à distance"
+
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#33104"
+msgid ""
+"You have previously enabled the web interface without setting up a password."
+" The web server has been disabled until you either explicitly allow this or "
+"set up authentication. Please review your settings."
+msgstr "L'interface Web a été activée auparavant sans définir de mot de passe. Le serveur Web a été désactivé tant que cette situation n'est pas explicitement autorisée ou qu'une authentification n'est pas définie. Merci de contrôler le paramétrage."
 
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
@@ -16444,6 +16658,31 @@ msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Aucun élément précédent à lire"
 
+#: xbmc/Application.cpp
+msgctxt "#34220"
+msgid "HDR is OFF"
+msgstr "HDR inactif"
+
+#: xbmc/Application.cpp
+msgctxt "#34221"
+msgid "Display HDR is Off"
+msgstr "L'affichage HDR est inactif"
+
+#: xbmc/Application.cpp
+msgctxt "#34222"
+msgid "HDR is ON"
+msgstr "HDR actif"
+
+#: xbmc/Application.cpp
+msgctxt "#34223"
+msgid "Display HDR is On"
+msgstr "L'affichage HDR est actif"
+
+#: xbmc/Application.cpp
+msgctxt "#34224"
+msgid "Tone map method is:"
+msgstr "La méthode de tonalité est :"
+
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
 msgid "Failed to start Zeroconf"
@@ -16502,7 +16741,7 @@ msgstr "Glisser avec un doigt à gauche, à droite, en haut ou en bas pour le cu
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34406"
 msgid "Two finger swipe left for backspace"
-msgstr "Glisser avec 2 doigts vers la gauche pour la touche « Retour »"
+msgstr "Glisser avec 2 doigts vers la gauche pour la touche « Retour »"
 
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34407"
@@ -16512,7 +16751,7 @@ msgstr "Taper avec 1 seul doigt pour la touche « Entrée »"
 #: xbmc/osx/IOSExternalTouchController.mm
 msgctxt "#34408"
 msgid "Two finger single tap or one finger long press for contextmenu"
-msgstr "Taper avec 2 doigts, ou pression longue à 1 seul doigt pour le menu contextuel"
+msgstr "Taper avec 2 doigts, ou appui long à 1 seul doigt pour le menu contextuel"
 
 #: system/settings/settings.xml xbmc/peripherals/Peripherals.cpp
 msgctxt "#35000"
@@ -16595,7 +16834,7 @@ msgctxt "#35014"
 msgid ""
 "Some controllers have buttons and axes that interfere with mapping. Press "
 "these now to disable them:[CR]{0:s}"
-msgstr "Quelques manettes ont des boutons et contrôles multidirectionnels qui interfèrent avec le mappage. Appuyer sur ceux-ci maintenant pour les désactiver :[CR]{0:s}"
+msgstr "Quelques manettes ont des boutons et contrôles multidirectionnels qui interfèrent avec le mappage. Appuyer sur ceux-ci maintenant pour les désactiver :[CR]{0:s}"
 
 #. Name of a controller button, e.g. Button 1. {0:d} - button index
 #: xbmc/input/joysticks/JoystickTranslator.cpp
@@ -16638,7 +16877,7 @@ msgstr "Ignorer l'entrée"
 #: xbmc/games/controllers/dialogs/GUIDialogAxisDetection.cpp
 msgctxt "#35020"
 msgid "Press all analog buttons now to detect them:[CR][CR]{0:s}"
-msgstr "Appuyer sur tous les boutons analogiques maintenant pour les détecter :[CR][CR]{0:s}"
+msgstr "Appuyer sur tous les boutons analogiques maintenant pour les détecter :[CR][CR]{0:s}"
 
 #. Button in the controller configuration dialog to install all controller
 #. profiles
@@ -16893,13 +17132,13 @@ msgstr "Déplacer {0:s} vers la gauche ({1:d})"
 
 #: system/settings/settings.xml
 msgctxt "#35100"
-msgid "Enable joystick and gamepad support"
-msgstr "Activer la gestion du joystick et du gamepad"
+msgid "Enable controller support"
+msgstr "Activer le support de manettes"
 
 #: system/peripherals.xml
 msgctxt "#35102"
-msgid "Disable joystick when this device is present"
-msgstr "Désactiver le joystick quand ce dispositif est connecté"
+msgid "Disable controllers when this device is present"
+msgstr "Désactiver les manettes quand cet appareil est présent"
 
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
@@ -17064,13 +17303,13 @@ msgstr "Sélectionner une touche"
 #. Keyboard prompt without a timeout. Used in the controller mapping dialog.
 msgctxt "#35169"
 msgid "Press a key"
-msgstr "Presser une touche"
+msgstr "Appuyer sur une touche"
 
 #. Keyboard prompt with timeout. {1:d} - seconds left in prompt. Used in the
 #. controller mapping dialog.
 msgctxt "#35170"
 msgid "Press a key ({1:d})"
-msgstr "Presser une touche ({1:d})"
+msgstr "Appuyer sur une touche ({1:d})"
 
 #. Name of mouse connected to the device
 #: xbmc/peripherals/bus/virtual/PeripheralBusApplication.cpp
@@ -17167,7 +17406,7 @@ msgctxt "#35214"
 msgid ""
 "This game can only be played directly from a hard drive or partition. "
 "Compressed files must be extracted."
-msgstr "Ce jeu peut seulement être joué depuis un disque dur ou une  partition. Les fichiers compressés doivent être extraits."
+msgstr "Ce jeu peut seulement être joué depuis un disque dur ou une partition. Les fichiers compressés doivent être extraits."
 
 #. Error dialog text when libretro support is disabled
 #: xbmc/games/addons/GameClientProperties.cpp
@@ -17366,6 +17605,7 @@ msgstr "Sélectionner l'émulateur pour le fichier {0:s}"
 
 #. Label on emulators with a savestate in the emulator selection dialog
 #: xbmc/games/dialogs/GUIDialogSelectGameClient.cpp
+#: xbmc/music/windows/GUIWindowMusicPlaylistEditor.cpp
 msgctxt "#35259"
 msgid "Saved"
 msgstr "Enregistré"
@@ -17424,7 +17664,7 @@ msgstr "Basculer en mode contrôle télécommande"
 #: system/peripherals.xml
 msgctxt "#36004"
 msgid "Press \"user\" button command"
-msgstr "Appuyer sur le bouton de commande « Utilisateur »"
+msgstr "Appuyer sur le bouton de commande « Utilisateur »"
 
 #: system/peripherals.xml
 msgctxt "#36005"
@@ -17443,7 +17683,7 @@ msgstr "Appareils à allumer au démarrage de l'application"
 #: system/peripherals.xml
 msgctxt "#36008"
 msgid "Devices to power off during shutdown"
-msgstr "Appareils à éteindre à l'arrêt de l'application"
+msgstr "Dispositifs à éteindre à l'arrêt de l'application"
 
 #: system/peripherals.xml
 msgctxt "#36009"
@@ -17509,7 +17749,7 @@ msgstr "Configuration mise à jour"
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36024"
 msgid "Failed to set the new configuration. Please check your settings."
-msgstr "Impossible d'appliquer la nouvelle configuration. Merci de vérifier les paramètres."
+msgstr "Échec de l'appliquer de la nouvelle configuration. Merci de vérifier les paramètres."
 
 #: system/peripherals.xml
 msgctxt "#36025"
@@ -17519,7 +17759,7 @@ msgstr "Envoyer la commande « Source inactive » durant l'arrêt"
 #: system/peripherals.xml
 msgctxt "#36026"
 msgid "Devices to also put in standby mode"
-msgstr "Appareils à mettre également en veille"
+msgstr "Dispositifs à mettre également en veille"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 msgctxt "#36027"
@@ -17586,12 +17826,12 @@ msgstr "TV"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36038"
 msgid "Amplifier / AVR device"
-msgstr "Amplificateur / Amplificateur Home Cinéma"
+msgstr "Amplificateur / Receveur audio vidéo"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36039"
 msgid "TV and AVR device (explicit)"
-msgstr "TV et amplificateur Home Cinéma (explicite)"
+msgstr "TV et receveur audio vidéo (explicite)"
 
 #: xbmc/peripherals/devices/peripheralcecadapter.cpp
 msgctxt "#36040"
@@ -17827,7 +18067,7 @@ msgctxt "#36124"
 msgid ""
 "Ignore certain tokens, e.g. \"The\", during sort operations. \"The "
 "Simpsons\" would for example be sorted as \"Simpsons\"."
-msgstr "Ignore certains déterminants, comme « Les », lors des opérations de tri. Par exemple, « Les Simpsons » sera classé en tant que « Simpsons »."
+msgstr "Ignore certains déterminants, comme « Les », lors des opérations de tri. Par exemple, « Les Simpsons » sera classé en tant que « Simpsons »."
 
 #. Description of setting with label #14071 "Allow file renaming and deletion"
 #: system/settings/settings.xml
@@ -17835,7 +18075,7 @@ msgctxt "#36125"
 msgid ""
 "Allow files to be deleted and renamed through the user interface, via the "
 "context menu, e.g. press \"C\" on a keyboard to bring up this menu."
-msgstr "Autorise le renommage et la suppression de fichiers depuis le menu contextuel de l'interface. Avec un clavier, la touche « C » permet d'afficher ce menu."
+msgstr "Autorise le renommage et la suppression de fichiers depuis le menu contextuel de l'interface. Avec un clavier, la touche « C » permet d'afficher ce menu."
 
 #. Description of setting with label #21382 Show "Add source" buttons in files
 #. lists"
@@ -18187,10 +18427,8 @@ msgstr "Sélection du niveau de zoom pour les vidéos 4:3 affichées sur les éc
 #. PRIME"
 #: system/settings/settings.xml
 msgctxt "#36172"
-msgid ""
-"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
-"is available."
-msgstr "Active le décodage matériel PRIME pour les fichiers vidéos. Utilisé si l'accélération matérielle ffmpeg PRIME est disponible. "
+msgid "Enable PRIME decoding of video files"
+msgstr "Activer le décodage PRIME des fichiers vidéo"
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18415,10 +18653,8 @@ msgstr "Trie les chaînes par numéro de chaîne du serveur mais utilise une num
 
 #: system/settings/settings.xml
 msgctxt "#36206"
-msgid ""
-"Use the channel numbering from the backend. Only works with one enabled PVR "
-"add-on!"
-msgstr "Utilise la numérotation des chaînes du serveur. Cela ne fonctionne qu'avec une extension enregistreur vidéo (PVR) active."
+msgid "Use the channel numbering from the backend."
+msgstr "Utilise la numérotation de chaînes du serveur."
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -18523,6 +18759,15 @@ msgctxt "#36222"
 msgid "Don't import the guide data while playing TV to minimise CPU usage."
 msgstr "N'importe pas les données du guide lors de l'affichage d'une chaîne TV afin de minimiser la charge du processeur."
 
+#. Description of setting with label #13438 "Allow Hardware Accelleration with
+#. DRM PRIME"
+#: system/settings/settings.xml
+msgctxt "#36223"
+msgid ""
+"Enable PRIME hardware decoding of video files, used if ffmpeg PRIME hwaccel "
+"is available."
+msgstr "Active le décodage matériel PRIME pour les fichiers vidéo. Utilisé si l'accélération matérielle ffmpeg PRIME est disponible. "
+
 #: system/settings/settings.xml
 msgctxt "#36224"
 msgid ""
@@ -18578,7 +18823,7 @@ msgid ""
 "When pressing channel up or down, the actual channel switch is delayed, "
 "allowing the user to flip to a channel number without waiting for each "
 "channel switch."
-msgstr "Quand la touche de changement de chaîne « + » ou « - » est utilisée, le passage effectif à la nouvelle chaîne est retardé, permettant à l'utilisateur d'atteindre une chaîne numérotée sans attendre le changement de chaque chaîne."
+msgstr "Quand la touche de changement de chaîne « + » ou « - » est utilisée, le passage effectif à la nouvelle chaîne est retardé, permettant à l'utilisateur d'atteindre une chaîne numérotée sans attendre le changement de chaque chaîne."
 
 #: system/settings/settings.xml
 msgctxt "#36233"
@@ -18591,7 +18836,7 @@ msgid ""
 "Duration of instant recordings when pressing the record button. This value "
 "will be taken into account if \"Instant recording action\" is set to "
 "\"Record for a fixed period of time\""
-msgstr "Durée de l'enregistrement immédiat quand le bouton d'enregistrement est pressé. Cette valeur sera prise en compte si l'action « Enregistrement immédiat » est définie à « Enregistrer pendant une période de temps fixe »."
+msgstr "Durée de l'enregistrement immédiat quand le bouton d'enregistrement est pressé. Cette valeur sera prise en compte si l'action « Enregistrement immédiat » est définie à [Enregistrer pendant une période de temps fixe]."
 
 #: system/settings/settings.xml
 msgctxt "#36235"
@@ -18732,7 +18977,7 @@ msgid ""
 "[Ask what to do] will open a dialogue containing different recording actions"
 " to choose from, like \"Record current show\", \"Record next show\" and some"
 " fixed duration recordings."
-msgstr "Action à exécuter quand le bouton d'enregistrement est pressé. [Enregistrer le programme actuel] enregistrera le programme en cours à partir de « maintenant » jusqu'à sa fin. S'il n'y a pas de données disponibles dans le guide des programmes TV, une durée fixe sera planifiée à partir de « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Enregistrer pendant une période de temps fixe] utilisera une valeur de temps fixe depuis « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ». [Demander que faire] ouvrira une boîte de dialogue pour choisir parmi « Enregistrer le programme actuel », « Enregistrer le programme suivant » et quelques durées d'enregistrement préétablies."
+msgstr "Action à exécuter en appuyant sur le bouton d'enregistrement :[CR][Enregistrer le programme actuel] Enregistre le programme en cours à partir de « maintenant » jusqu'à sa fin. S'il n'y a pas de données disponibles dans le guide des programmes TV, une durée fixe sera planifiée à partir de « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ».[CR][Enregistrer pendant une période de temps fixe] Utilise une valeur de temps fixe depuis « maintenant » jusqu'à la valeur de « Durée d'enregistrement immédiat ».[CR][Demander que faire] Ouvre une boîte de dialogue pour choisir parmi « Enregistrer le programme actuel », « Enregistrer le programme suivant » et quelques durées d'enregistrement préétablies."
 
 #. Description of setting with label #13414 "Show song and album artists"
 #: system/settings/settings.xml
@@ -18879,15 +19124,17 @@ msgid ""
 "Select the visualisation that will be displayed while listening to music."
 msgstr "Sélectionne la visualisation qui sera affichée durant l'écoute de musique."
 
-#. Description of setting with label #258 "Enable tag reading"
+#. Description of setting with label #39125 "Enable tag reading in file view"
 #: system/settings/settings.xml
 msgctxt "#36274"
 msgid ""
-"Read the tag information from song files. For large directories this can "
-"increase read time, especially over a network."
-msgstr "Lit les informations additionnelles (balises) depuis les fichiers de chansons. Pour un gros dossier, cela peut ralentir la vitesse de lecture, en particulier sur un réseau."
+"When browsing music files in file view read the tags of those not in the "
+"music library as you go. This can make large directories slow to display, "
+"especially over a network."
+msgstr "Lors du parcours de fichiers de musique en vue fichier, ceci lira les balises de celles ne figurant pas actuellement en médiathèque. L'affichage de larges dossiers peut être ralenti, en particulier sur un réseau."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" for
+#. musicfiles.trackformat
 #: system/settings/settings.xml
 msgctxt "#36275"
 msgid ""
@@ -18895,14 +19142,13 @@ msgid ""
 " In order to function properly, tag reading needs to be enabled."
 msgstr "Contrôle la manière dont les noms de chansons sont affichés sur l'interface utilisateur. Afin de fonctionner correctement, les balises doivent être activées."
 
-#. Description of setting with label #13387 "Track naming template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36276"
 msgid "Used for formatting the second column in file lists."
 msgstr "Utilisé pour formater la deuxième colonne dans les listes de fichiers."
 
-#. Description of setting with label #13307 "Now Playing - Track naming
-#. template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.nowplayingtrackformat
 #: system/settings/settings.xml
 msgctxt "#36277"
 msgid ""
@@ -18910,23 +19156,20 @@ msgid ""
 "list."
 msgstr "Définit la manière dont les noms des chansons sont affichés dans la liste en cours de lecture."
 
-#. Description of setting with label #13387 "Now Playing - Track naming
-#. template - right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36278"
 msgid "Used for formatting the second column in the now playing list."
 msgstr "Utilisé pour formater la deuxième colonne dans les listes en cours de lecture."
 
-#. Description of setting with label #13307 "Library - Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. musicfiles.librarytrackformat
 #: system/settings/settings.xml
 msgctxt "#36279"
 msgid ""
 "Control the way that the names of songs are displayed in library lists."
 msgstr "Définit la manière dont les noms des chansons sont affichés dans la médiathèque."
 
-#. Description of setting with label #13387 "Library - Track naming template -
-#. right"
-#: system/settings/settings.xml
+#. unused?
 msgctxt "#36280"
 msgid "Used for formatting the second column in library lists."
 msgstr "Utilisé pour formater la deuxième colonne dans la médiathèque."
@@ -18968,7 +19211,8 @@ msgid ""
 "Select the location on your hard drive where ripped tracks will be saved to."
 msgstr "Sélectionne l'emplacement du dispositif de stockage où seront enregistrées les pistes copiées."
 
-#. Description of setting with label #13307 "Track naming template"
+#. Description of setting with label #13307 "Track naming template" in
+#. audiocds.trackpathformat
 #: system/settings/settings.xml
 msgctxt "#36286"
 msgid ""
@@ -19063,9 +19307,9 @@ msgstr "Si activé, un enregistrement du programme sera prévu à la fermeture a
 #: system/settings/settings.xml
 msgctxt "#36299"
 msgid ""
-"Switch display into HDR mode if media with HDR information is played.\n"
-"If disabled, HDR information are applied using Kodi's internal HDR path."
-msgstr "Bascule l'affichage en mode HDR si un média avec des informations HDR est lu. Si désactivé, les informations HDR sont appliquées en utilisant le système interne de Kodi."
+"Switch display into HDR mode if media with HDR information is played.[CR]If "
+"disabled, HDR information are applied using Kodi's internal HDR path."
+msgstr "Commute l'affichage en mode HDR si un média avec des informations HDR est lu.[CR]Si désactivé, les informations HDR sont appliquées avec la fonctionnalité HDR interne de Kodi."
 
 #. Description of setting with label #20226 "Movie set information folder"
 #: system/settings/settings.xml
@@ -19119,6 +19363,15 @@ msgctxt "#36307"
 msgid ""
 "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Génère automatiquement les miniatures d'images lors de l'accès à un dossier d'images."
+
+#. Description of setting with label #20472 "Show all performers for music
+#. videos"
+#: system/settings/settings.xml
+msgctxt "#36308"
+msgid ""
+"When enabled, shows all performers in the artist list for music videos, not "
+"just the main artist"
+msgstr "Si activé, affiche tous les interprètes dans la listes des artistes pour les vidéos musicales, et pas seulement l'interprète principal."
 
 #. Description of setting with label #22022 "Show video files in listings"
 #: system/settings/settings.xml
@@ -19184,7 +19437,7 @@ msgctxt "#36318"
 msgid ""
 "Specify the default weather information source. See the add-ons manager for "
 "options."
-msgstr "Spécifie la source d'informations météo par défaut. Voir le gestionnaire d'extensions pour les options."
+msgstr "Spécifie la source d'informations météo prédéfinie. Voir le gestionnaire d'extensions pour les options."
 
 #. Description of settings section with label #14036  "Services"
 #: system/settings/settings.xml
@@ -19256,8 +19509,8 @@ msgstr "Cette catégorie contient les paramètres relatifs à la gestion du serv
 msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
-"server."
-msgstr "Permet à des utilisateurs distants de contrôler cette application en passant par le serveur Web intégré."
+"server. Never expose the web server port to the Internet."
+msgstr "Permet aux utilisateurs distants de contrôler cette application par son serveur Web. Ne jamais exposer le port du serveur Web à Internet."
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -19269,17 +19522,15 @@ msgstr "Définit le port du serveur Web."
 #: system/settings/settings.xml
 msgctxt "#36330"
 msgid ""
-"Define the web server username. This only takes effect when both the "
-"username and the password are set."
-msgstr "Définit le nom d'utilisateur du serveur Web. Cela ne prend effet que lorsque le nom d'utilisateur et le mot de passe sont renseignés."
+"Define the web server username. Must be set when authentication is enabled."
+msgstr "Permet de définir le nom d'utilisateur du serveur Web. Il doit être défini quand l'authentification est activée."
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
-"Define the web server password. This only takes effect when both the "
-"username and the password are set."
-msgstr "Définit le mot de passe du serveur Web. Cela ne prend effet que lorsque le nom d'utilisateur et le mot de passe sont renseignés."
+"Define the web server password. Must be set when authentication is enabled."
+msgstr "Définit le mot de passe du serveur Web. Il doit être défini quand l'authentification est activée."
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19300,9 +19551,10 @@ msgstr "Cette catégorie contient les paramètres de gestion du service de contr
 #: system/settings/settings.xml
 msgctxt "#36334"
 msgid ""
-"Allow programs on this device to control this application via the web "
-"interface or the JSON-RPC interface protocol."
-msgstr "Permet aux programmes de cet appareil de contrôler cette application via l'interface Web ou le protocole de l'interface JSON-RPC."
+"Allow programs on this device to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication."
+msgstr "Permet à des programmes sur cet appareil de contrôler cette application sans authentification via le protocole JSON-RPC sur WebSocket, JSON-RPC sur TCP ou EventServer. "
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -19326,8 +19578,13 @@ msgstr "Définit le nombre maximum de clients pouvant se connecter."
 #. on other systems"
 #: system/settings/settings.xml
 msgctxt "#36338"
-msgid "Allow programs on the network to control this application."
-msgstr "Autorise les programmes sur le réseau à contrôler l'application."
+msgid ""
+"Allow programs on the network to control this application via the JSON-RPC "
+"over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
+"authentication. It allows anyone with access to the network to completely "
+"control this application and, therefore, this device. Never expose these "
+"interfaces to the Internet."
+msgstr "Permet à des programmes sur le réseau de contrôler cette application sans authentification via le protocole JSON-RPC sur WebSocket, JSON-RPC sur TCP ou EventServer. Quiconque ayant accès au réseau aura un contrôle total de cette application et, par conséquent, de cet appareil. Ne jamais exposer ces interfaces à Internet."
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19457,14 +19714,6 @@ msgid ""
 " are blacked out."
 msgstr "Dans une configuration multiécrans, ceux n'affichant pas cette application seront noircis."
 
-#. Description of setting with label #14085 "Whitelist"
-#: system/settings/settings.xml
-msgctxt "#36356"
-msgid ""
-"Whitelisted modes are allowed to be switched to when changing resolution and"
-" refresh rate"
-msgstr "Des modes en liste blanche peuvent être acceptés quand la résolution et le taux de rafraîchissement sont modifiés."
-
 #. Description of setting with label #214 "Video calibration..."
 #: system/settings/settings.xml
 msgctxt "#36357"
@@ -19472,6 +19721,15 @@ msgid ""
 "Calibrate the user interface by adjusting the overscan. Use this tool if the"
 " image being displayed is too large or small for your display."
 msgstr "Calibre l'interface utilisateur en ajustant le suraffichage. Utiliser cet outil si l'image affichée est trop grande ou trop petite pour l'écran."
+
+#: system/settings/settings.xml
+msgctxt "#36358"
+msgid ""
+"Allow using channel numbering from multiple backends. Note that the All "
+"channels group can contain multiple of the same channel number if using this"
+" option. This means that jump to channel number may not work correctly for "
+"the All channels group."
+msgstr "Permet d'utiliser la numérotation de chaînes depuis plusieurs serveurs. Avec cette option, le groupe « Toutes les chaînes » peut comprendre plusieurs fois le même n° de chaîne, et le passage d'une chaîne à l'autre pourrait ne pas fonctionner correctement pour ce groupe."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -19557,7 +19815,7 @@ msgid ""
 "Videoplayer, might decide to decode the audio stream under certain "
 "conditions. In Videoplayer case, passthrough won't be used for live streams "
 "and when you sync playback to display."
-msgstr "À sélectionner pour permettre le mode laisser-passer audio (Passthrough) pour jouer de l'audio compressé tel que Dolby Digital (AC3), DTS, etc. Le client de l'AudioEngine, par ex. Videoplayer, pourrait décider de décoder le flux audio sous certaines conditions. Dans le cas de Videoplayer, le mode laisser-passer ne sera pas utilisé pour les flux en direct et lors de la synchronisation de la lecture à l'affichage."
+msgstr "À sélectionner pour permettre le mode laisser-passer audio (Passthrough) pour jouer de l'audio compressé tel que Dolby Digital (AC-3), DTS, etc. Le client de l'AudioEngine, par ex. Videoplayer, pourrait décider de décoder le flux audio sous certaines conditions. Dans le cas de Videoplayer, le mode laisser-passer ne sera pas utilisé pour les flux en direct et lors de la synchronisation de la lecture à l'affichage."
 
 #. Description of setting with label #349 "TrueHD capable receiver"
 #: system/settings/settings.xml
@@ -19628,12 +19886,11 @@ msgid ""
 "remote is present."
 msgstr "Permet d'utiliser une souris ou un écran tactile pour contrôler l'interface.[CR]NB : le contrôle de l'application sera perdu en cas de désactivation de ce paramètre sans la présence d'un clavier ou d'une télécommande."
 
-#. Description of setting with label #35100 "Enable joystick and gamepad
-#. support"
+#. Description of setting with label #35100 "Enable controller support"
 #: system/settings/settings.xml
 msgctxt "#36378"
-msgid "Use a joystick to control the interface."
-msgstr "Utilise un joystick pour contrôler l'interface."
+msgid "Use a game controller to control the interface."
+msgstr "Permet d'utiliser une manette de jeu pour contrôler l'interface."
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -19647,7 +19904,7 @@ msgstr "Cette catégorie contient les paramètres relatif à l'accès Internet. 
 #: system/settings/settings.xml
 msgctxt "#36380"
 msgid "If your Internet connection uses a proxy server, configure it here."
-msgstr "Si la connexion internet nécessite un serveur proxy, le configurer ici."
+msgstr "Si la connexion Internet nécessite un serveur proxy, le configurer ici."
 
 #. Description of setting with label #1180 "Proxy type"
 #: system/settings/settings.xml
@@ -19917,6 +20174,22 @@ msgid ""
 msgstr "N'utilise pas le mélangeur VDPAU, ce qui libère des ressources sur les configurations de faible puissance mais réduit légèrement la qualité de l'image."
 
 #: system/settings/settings.xml
+msgctxt "#36422"
+msgid "Update official add-ons from"
+msgstr "Mettre à jour les extensions officielles depuis"
+
+#. Description of setting with label #36422 "Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36423"
+msgid ""
+"By default, add-ons from official repositories will be prevented from being "
+"auto-updated from private repositories. For cases such as updating from an "
+"add-ons beta repository this option can be switched to [Any repositories] "
+"(bear in mind this is a less secure option and enabling it could cause "
+"incompatibility and crashes)."
+msgstr "De manière prédéfinie, les extensions des dépôts officiels ne sont pas mises à jour automatiquement depuis des dépôts privés. Pour des cas tels que la mise à jour en version bêta, cette option peut être changée en [N'importe quels dépôts]. Noter que cette option est moins sécurisée et que son activation pourrait causer des incompatibilités et des plantages."
+
+#: system/settings/settings.xml
 msgctxt "#36424"
 msgid ""
 "Select what will happen when an item is selected in the guide: [Show context"
@@ -19987,17 +20260,12 @@ msgid ""
 " you experience hangs, disable this option."
 msgstr "Si activé, la méthode de rendu VAAPI sera préférée et le processeur moins sollicité. En cas de blocages, désactiver cette option."
 
-#. Description of setting "Enable MMAL hardware decoding of video files"
 #: system/settings/settings.xml
 msgctxt "#36434"
-msgid "Allow hardware acceleration - MMAL"
-msgstr "Autorise l'accélération matérielle - MMAL"
-
-#. Description of setting "Enable MMAL hardware decoding of video files"
-#: system/settings/settings.xml
-msgctxt "#36435"
-msgid "Use VideoPlayer for decoding of video files with MMAL acceleration."
-msgstr "Utilise le lecteur VideoPlayer pour décoder les fichiers vidéos avec l'accélération MMAL."
+msgid ""
+"If enabled, switch to the channel with the programme to remind when auto-"
+"closing the reminder popup."
+msgstr "Si activée, sélectionne la chaîne du programme prévu à la fermeture automatique de la fenêtre de rappel."
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
@@ -20005,12 +20273,52 @@ msgctxt "#36436"
 msgid "Select OS keyboard layout."
 msgstr "Sélection de la disposition du clavier de l'OS."
 
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36437"
+msgid "Official repositories only (default)"
+msgstr "Dépôts officiels seulement (prédéfinition)"
+
+#. Option for setting "System -> Add-ons -> Update official add-ons from"
+#: system/settings/settings.xml
+msgctxt "#36438"
+msgid "Any repositories"
+msgstr "N'importe quels dépôts"
+
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
 #: system/settings/settings.xml
 msgctxt "#36442"
 msgid "Set the number of volume control steps."
 msgstr "Définit le nombre de pas pour le contrôle de volume."
+
+#. Description of setting with label #14126 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36443"
+msgid ""
+"Whitelisted modes give the user the control to choose which display modes "
+"are allowed or not allowed to be used"
+msgstr "Les modes en liste blanche permettent à l'utilisateur de contrôler le choix des modes d'affichage permis ou non à utiliser."
+
+#. Description of setting with label #14127 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36444"
+msgid ""
+"Select this option to allow using 3:2 pulldown refresh rates (playing 23.976"
+" FPS video on a 59.94 Hz monitor or playing 24 FPS video on a 60 Hz "
+"monitor). You may want to use this option if your monitor doesn't have a "
+"23.976 Hz or 24 Hz mode."
+msgstr "Sélectionner cette option pour autoriser des taux de rafraîchissement 3:2 Pulldown (lecture vidéo à 23,976 TPS sur un écran à 59,94 Hz ou à 24 TPS sur un écran à 60 Hz). À utiliser si l'écran ne possède pas de modes 23,976 Hz ou 24 Hz."
+
+#. Description of setting with label #14128 "Whitelist"
+#: system/settings/settings.xml
+msgctxt "#36445"
+msgid ""
+"Select this option to allow using double refresh rates (playing 29.97 FPS "
+"video on a 59.94 Hz monitor or playing 30 FPS video on a 60 Hz monitor). You"
+" may want to use this option if your monitor doesn't have a 29.97 Hz or 30 "
+"Hz mode."
+msgstr "Sélectionner cette option pour autoriser des taux de rafraîchissement doublés (lecture vidéo à 29,97 TPS sur un écran à 59,94 Hz ou à 30 TPS sur un écran à 60 Hz). À utiliser si l'écran ne possède pas de modes 29,97 Hz ou 30 Hz."
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -20247,18 +20555,6 @@ msgctxt "#36541"
 msgid "Allows volume control from AirPlay clients."
 msgstr "Autorise le contrôle du volume par les clients AirPlay."
 
-#: system/settings/rbp.xml
-msgctxt "#36542"
-msgid "Output to both analogue (headphones) and HDMI"
-msgstr "Sortie simultanée en analogique (écouteurs) et HDMI"
-
-#: system/settings/rbp.xml
-msgctxt "#36543"
-msgid ""
-"Enable this to make dialogue louder compared to background sounds when "
-"downmixing multichannel audio"
-msgstr "Activer ceci pour renforcer les dialogues comparativement au bruit de fond, lors du remixage à partir de l'audio multicanal."
-
 #: system/settings/settings.xml
 msgctxt "#36544"
 msgid "Enable hardware decoding of video files."
@@ -20279,12 +20575,8 @@ msgid ""
 "the value, the closer the subtitles will appear to the viewer."
 msgstr "Règle la profondeur visuelle des sous-titres pour les vidéos 3D stéréoscopiques. Plus grande sera la valeur, plus proches apparaîtront les sous-titres pour le téléspectateur."
 
-#: system/settings/rbp.xml
-msgctxt "#36547"
-msgid "Use higher quality textures for covers and fanart (uses more memory)"
-msgstr "Utilise des textures de plus haute qualité pour les jaquettes et les FanArts (consomme plus de mémoire)."
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#. Description of setting with label #37021 "Set GUI resolution limit"
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#36548"
 msgid ""
 "Limits resolution of GUI to save memory. Does not affect video playback. "
@@ -20351,6 +20643,18 @@ msgstr "Reinhard"
 msgctxt "#36556"
 msgid "Tone mapping parameter"
 msgstr "Paramètre de tonalité"
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36557"
+msgid "ACES Filmic"
+msgstr "Tonalité ACES"
+
+#. label of a setting, tone mapping method
+#: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
+msgctxt "#36558"
+msgid "Hable"
+msgstr "Hable"
 
 #: system/settings/settings.xml
 msgctxt "#36560"
@@ -20630,7 +20934,7 @@ msgid ""
 "This category contains the settings for how the AirPlay service is handled."
 msgstr "Cette catégorie contient les paramètres du service AirPlay."
 
-#. Description of settings category with label #14216 Display
+#. Description of settings category with label #14220 Display
 #: system/settings/settings.xml
 msgctxt "#36603"
 msgid "This category contains the settings for displays."
@@ -20724,7 +21028,7 @@ msgid ""
 "Add-ons will be given access to personal data stored on this device. By "
 "allowing, you agree that you are solely responsible for any loss of data, "
 "unwanted behaviour, or damage to your device. Proceed?"
-msgstr "Les extensions vont pouvoir  accéder aux données personnelles stockées sur cet appareil. En acceptant cet accès, l'utilisateur est seul responsable des pertes de données, comportements non souhaités et dommages à l'appareil qui pourraient survenir. Faut-il continuer ?"
+msgstr "Les extensions vont pouvoir accéder aux données personnelles stockées sur cet appareil. En acceptant cet accès, l'utilisateur est seul responsable des pertes de données, comportements non souhaités et dommages à l'appareil qui pourraient survenir. Faut-il continuer ?"
 
 #. Label of a setting, allow the user to specify high quality downscaling of
 #. pictures
@@ -20818,7 +21122,63 @@ msgctxt "#36631"
 msgid ""
 "Force weak SMBv1 security for compatibility with the USB sharing features on"
 " some WiFi routers and NAS devices."
-msgstr "Force la sécurité SMBv1 faible pour des raisons de compatibilité avec les fonctionnalités de partage USB sur quelques routeurs et NAS WiFi."
+msgstr "Force la sécurité SMBv1 faible pour des raisons de compatibilité avec les fonctionnalités de partage USB sur quelques routeurs Wi-Fi et NAS."
+
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control via HTTP"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36632"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should never be "
+"exposed on the Internet. A password should be set below. Proceed?"
+msgstr "Quiconque ayant accès à l'interface Web aura un contrôle total de cette application et, par conséquent, de cet appareil. Elle ne devrait jamais être exposée à Internet. Un mot de passe devrait être défini ci-dessous. Faut-il continuer ?"
+
+#. Text in confirm dialog when enabling setting "Services -> Control -> Allow
+#. remote control from applications on other systems"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36633"
+msgid ""
+"These services offer neither authentication nor encryption. Anyone who can "
+"connect to them will be able to completely control this application and, "
+"therefore, this device, so they should never be exposed to the Internet. "
+"Proceed?"
+msgstr "Ces services n'offrent aucune authentification ou chiffrement. Quiconque pouvant d'y connecter aura un contrôle total de cette application et, par conséquent, de cet appareil. Ils ne devraient jamais être exposés à Internet. Faut-il continuer ?"
+
+#. Text in confirm dialog when disabling setting "Services -> Control ->
+#. Require authentication"
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36634"
+msgid ""
+"Anyone who has access to the web interface will be able to completely "
+"control this application and, therefore, this device, so it should be "
+"secured by a password. Are you sure you want to disable authentication?"
+msgstr "Quiconque ayant accès à l'interface Web aura un contrôle total de cette application et, par conséquent, de cet appareil. Elle devrait être sécurisée par un mot de passe. Faut-il vraiment désactiver l'authentification ?"
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36635"
+msgid ""
+"If web server authentication is enabled, a password must be entered as well."
+msgstr "Si l'authentification du serveur Web est activée, un mot de passe doit être aussi saisi."
+
+#. Text in error dialog when trying to enter an invalid web server
+#. configuration by enabling authentication without a password set
+#: xbmc/network/NetworkServices.cpp
+msgctxt "#36636"
+msgid ""
+"You must first enter a password before web server authentication can be "
+"enabled."
+msgstr "Il faut d'abord saisir un mot de passe avant de pouvoir activer l'authentification du serveur Web."
+
+#. Text in confirm dialog when installing addon from zip
+#: xbmc/addons/GUIWindowAddonBrowser.cpp
+msgctxt "#36637"
+msgid ""
+"Note that add-ons installed from zip (excluding served repositories) will "
+"not auto-update and must be manually updated. Would you like to proceed?"
+msgstr "Noter que les extensions Zip installées (exceptées les dépôts servis) ne seront pas mises à jour automatiquement et qu'elles doivent l'être manuellement. Faut-il continuer ?"
 
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
@@ -20919,7 +21279,7 @@ msgctxt "#36917"
 msgid "artists"
 msgstr "artistes"
 
-#: xbmc/media/MediaType.cpp
+#: xbmc/media/MediaType.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#36918"
 msgid "album"
 msgstr "album"
@@ -20973,22 +21333,7 @@ msgid ""
 "Plus (E-AC3) streams."
 msgstr "Sélectionner cette option si le matériel est capable de décoder les flux Dolby Digital Plus (EAC-3)."
 
-#: system/settings/rbp.xml
-msgctxt "#37017"
-msgid "Dual audio output"
-msgstr "Double sortie audio"
-
-#: system/settings/rbp.xml
-msgctxt "#37018"
-msgid "Boost centre channel when downmixing"
-msgstr "Augmenter la voie centrale lors du remixage vers stéréo"
-
-#: system/settings/rbp.xml
-msgctxt "#37020"
-msgid "Enable higher colour depth artwork"
-msgstr "Activer l'imagerie avec plus de couleurs"
-
-#: system/settings/rbp.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
 msgstr "Définir la résolution limite de l'interface"
@@ -21001,43 +21346,34 @@ msgstr "Lecteur UPnP"
 #: xbmc/network/upnp/UPnPPlayer.cpp
 msgctxt "#37023"
 msgid "Do you wish to stop playback on the remote device?"
-msgstr "Faut-il stopper la lecture sur le périphérique distant ?"
-
-#: system/settings/rbp.xml
-msgctxt "#37024"
-msgid ""
-"Select this if the audio out connection only supports multichannel audio as "
-"Dolby Digital 5.1 (AC3), this allows multichannel audio such as AAC 5.1 or "
-"FLAC 5.1 to be listened to in 5.1 surround sound. Note: Not recommended on "
-"Pi as this requires a lot of CPU."
-msgstr "Choisir cette option si la sortie audio ne gère que le multicanal comme le Dolby Digital 5.1 (AC-3). Cela permet aux flux audio multicanal comme le AAC 5.1 ou le FLAC 5.1 d'être écoutés en 5.1.[CR]NB : non recommandé sur Raspberry Pi en raison de la charge du processeur élevée nécessaire."
+msgstr "Faut-il stopper la lecture sur le dispositif distant ?"
 
 #: system/settings/settings.xml
 msgctxt "#37025"
 msgid "Configure audio encoder settings such as quality and compression level"
 msgstr "Configure les paramètres d'encodage audio tels que la qualité et le niveau de compression."
 
-#: system/settings/rbp.xml system/settings/android.xml
+#: system/settings/android.xml
 msgctxt "#37026"
 msgid "Auto"
 msgstr "Automatique"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37027"
 msgid "540"
 msgstr "540"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37028"
 msgid "720"
 msgstr "720"
 
-#: system/settings/rbp.xml
+#: system/settings/android.xml
 msgctxt "#37029"
 msgid "900"
 msgstr "900"
 
-#: system/settings/rbp.xml system/settings/android.xml system/settings/gbm.xml
+#: system/settings/android.xml system/settings/gbm.xml
 msgctxt "#37030"
 msgid "Unlimited"
 msgstr "Illimité"
@@ -21159,11 +21495,6 @@ msgctxt "#37046"
 msgid "1080"
 msgstr "1080"
 
-#: system/settings/rbp.xml
-msgctxt "#38010"
-msgid "GPU accelerated"
-msgstr "Accéléré matériellement"
-
 #. Setting #38011 "Show All Items entry"
 #: system/settings/settings.xml
 msgctxt "#38011"
@@ -21249,37 +21580,6 @@ msgstr "Changer le fournisseur d'informations"
 msgctxt "#38026"
 msgid "Appearances"
 msgstr "Apparences"
-
-#: system/settings/rbp.xml
-msgctxt "#38027"
-msgid "Decode the stereo stream from 3D files"
-msgstr "Décoder le flux stéréo des fichiers 3D"
-
-#. Description of setting with label #38027 "Decode the stereo stream from 3D
-#. files"
-#: system/settings/rbp.xml
-msgctxt "#38028"
-msgid ""
-"If enabled, videos created in Multiview Video Coding (MVC) format can also "
-"be watched in stereoscopic 3D. MVC format is typically found on 3D Blu-"
-"rays.[CR]Note: Processing of this data may reduce playback performance, so "
-"only enable if you require stereoscopic 3D support."
-msgstr "Si activé, les vidéos créées en format Multiview Video Coding (MVC) pourront aussi être vues en stéréoscopie 3D. Le format MVC est typique des Blu-rays 3D.[CR]NB : le traitement de ces données pourrait affecter les performances en lecture, donc ne l'activer que si la stéréoscopie 3D est nécessaire."
-
-#: system/settings/rbp.xml
-msgctxt "#38029"
-msgid "Enable Full HD HDMI modes for stereoscopic 3D"
-msgstr "Activer les modes HDMI Full HD pour la stéréoscopie 3D"
-
-#. Description of setting "Enable Full HD HDMI modes for stereoscopic 3D" with
-#. label #38029
-#: system/settings/rbp.xml
-msgctxt "#38030"
-msgid ""
-"This option uses frame-packing to output full resolution for 3D through "
-"HDMI.[CR]Enabling this improves quality of Multiview Video Coding (MVC) "
-"videos, but may not be supported by all displays."
-msgstr "Cette option utilise le groupage de trames pour une sortie HDMI en résolution complète 3D.[CR]Elle améliore la qualité des vidéos Multiview Video Coding (MVC), mais n'est pas prise en charge par tous les affichages."
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -21411,7 +21711,7 @@ msgstr "Faut-il réaliser une réanalyse complète des balises même si les fich
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38063"
 msgid "Set default information provider"
-msgstr "Définir le fournisseur d'informations par défaut"
+msgstr "Définir le fournisseur d'informations prédéfini"
 
 #. Item in selection list #38338 to change the information provider for a
 #. specific artist, related to #20195
@@ -21526,6 +21826,12 @@ msgstr "Date d'origine"
 msgctxt "#38080"
 msgid "BPM"
 msgstr "BPM"
+
+#. Music property - Album release status
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#38081"
+msgid "Release status"
+msgstr "État de la sortie"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -21689,7 +21995,7 @@ msgstr "Éléments à exporter"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
-msgid "Include art work such as thumbnails and fanart"
+msgid "Include artwork such as thumbnails and fanart"
 msgstr "Inclure les illustrations telles que miniatures et FanArt"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
@@ -21892,9 +22198,9 @@ msgstr "Impossible de lire un fichier XML"
 #: system/settings/settings.xml
 msgctxt "#39004"
 msgid ""
-"This category provides access to the windows for source management and the "
-"Library settings for the databases"
-msgstr "Cette catégorie donne accès aux fenêtres pour la gestion des sources et les paramètres de médiathèques pour les bases de données."
+"This category provides access to the windows for source management and "
+"library management facilities"
+msgstr "Cette catégorie fournit un accès aux fenêtres de gestion des emplacements des sources et des médiathèques."
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -22035,6 +22341,14 @@ msgctxt "#39027"
 msgid "Sortname"
 msgstr "Nom de tri "
 
+#. Text for yes/no dialog when silently uninstalling an addon
+#: xbmc/addons/gui/GUIDialogAddonInfo.cpp
+msgctxt "#39028"
+msgid ""
+"Addon \"{0:s}\"[CR]Origin \"{1:s}\"[CR]Version \"{2:s}\"[CR]- will uninstall"
+" and be replaced. Would you like to proceed?"
+msgstr "L'extension « {0:s} »[CR]Origine « {1:s} »[CR]Version « {2:s} »[CR]sera désinstallée et remplacée. Faut-il continuer ?"
+
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistRule.cpp
@@ -22163,3 +22477,206 @@ msgstr "Journalisation verbeuse pour le composant [B]Annonceur[/B]"
 msgctxt "#39118"
 msgid "Share debug log"
 msgstr "Partager le journal de débogage"
+
+#: xbmc/playlists/SmartPlaylist.cpp
+msgctxt "#39119"
+msgid "Last modified"
+msgstr "Dernier modifié"
+
+#: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
+msgctxt "#39120"
+msgid "Skip filename matching for external audio tracks"
+msgstr "Sauter le nom de fichier en correspondance pour les pistes audio externes"
+
+#. Label for section of settings controling what is shown on the library
+#. windows
+#: system/settings/settings.xml
+msgctxt "#39121"
+msgid "Library Display and Navigation"
+msgstr "Parcours et affichage de médiathèque"
+
+#. Label for section of settings controling how library is populated
+#: system/settings/settings.xml
+msgctxt "#39122"
+msgid "Library Information Sources"
+msgstr "Sources d'informations de médiathèque"
+
+#. Label for section of settings
+#: system/settings/settings.xml
+msgctxt "#39123"
+msgid "Artwork"
+msgstr "Illustration"
+
+#: system/settings/settings.xml
+msgctxt "#39125"
+msgid "Enable tag reading in file view"
+msgstr "Activer la lecture de balises en vue fichier"
+
+#: system/settings/settings.xml
+msgctxt "#39127"
+msgid "Use all local image files as artwork"
+msgstr "Utiliser tous les fichiers image locaux comme illustration"
+
+#. Description of setting with label #39127 "Use all local image files as
+#. artwork"
+#: system/settings/settings.xml
+msgctxt "#39128"
+msgid ""
+"All image files located alongside the media files are picked up as artwork "
+"during library scan, with the file name as the art type."
+msgstr "Tous les fichiers image localisés au côté des fichiers média sont utilisés en illustration lors de l'analyse de la médiathèque, avec le nom de fichier comme type d'illustration."
+
+#: system/settings/settings.xml
+msgctxt "#39129"
+msgid "Use all remote artwork fetched by scrapers"
+msgstr "Utiliser toutes les illustrations distantes récupérées par collecteurs"
+
+#. Description of setting with label #39129 "Use all remote artwork fetched by
+#. scrapers"
+#: system/settings/settings.xml
+msgctxt "#39130"
+msgid ""
+"Use the first of each art type of the remote artwork in scraper results to "
+"fill any missing art not populated with local art."
+msgstr "Utilise le premier de chaque type d'illustration distante des résultats du collecteur pour remplir toute illustration manquante non peuplée par une illustration locale."
+
+#: system/settings/settings.xml
+msgctxt "#39131"
+msgid "Artist art types whitelist"
+msgstr "Liste blanche des types d'illustration d'artiste"
+
+#. Description of setting with label #39131 "Artist art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39132"
+msgid ""
+"Limit the artist artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr "Limite les illustrations d'artiste récupérées localement ou appliquées depuis les résultats distants d'un collecteur aux seuls types en liste blanche."
+
+#: system/settings/settings.xml
+msgctxt "#39133"
+msgid "Album art types whitelist"
+msgstr "Liste blanche des types d'illustration d'album"
+
+#. Description of setting with label #39133 "Album art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39134"
+msgid ""
+"Limit the album artwork fetched locally or applied from scraper remote art "
+"results to just those art types in the whitelist"
+msgstr "Limite les illustrations d'album récupérées localement ou appliquées depuis les résultats distants d'un collecteur aux seuls types en liste blanche."
+
+#: system/settings/settings.xml
+msgctxt "#39135"
+msgid "Thumbnail image files"
+msgstr "Fichiers de miniatures d'images"
+
+#. Description of setting with label #39135 "Thumbnail image files"
+#: system/settings/settings.xml
+msgctxt "#39136"
+msgid ""
+"The names of files that contain primary artwork (thumbnails), generally "
+"square and used both full and in reduced size to visually identify a folder,"
+" artist, album or song"
+msgstr "Les noms des fichiers qui contiennent l'illustration primaire (miniatures), généralement carrée et utilisée à la fois en taille normale et réduite pour identifier visuellement un dossier, un artiste, un album ou une chanson."
+
+#: system/settings/settings.xml
+msgctxt "#39137"
+msgid "Artwork level"
+msgstr "Niveau d'illustration"
+
+#. Description of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39138"
+msgid ""
+"The amount of artwork automatically selected - [Maximum] all local images "
+"and remote art; [Basic] save space on limited devices or when using a simple"
+" skin; [Custom] configured by user for detailed control; [None] no art"
+msgstr "La quantité d'illustrations automatiquement sélectionnée :[CR][Maximale] Toutes les image locales et illustrations distantes[CR][Basique] Espace restreint sur les appareils limités ou en utilisant un habillage simple[CR][Personnalisée] Configuration de l'utilisateur pour un contrôle en détail[CR][Aucune] Pas d'illustration"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39140"
+msgid "Maximum"
+msgstr "Maximal"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39141"
+msgid "Basic"
+msgstr "Base"
+
+#. Value of setting with label #39137 "Artwork level"
+#: system/settings/settings.xml
+msgctxt "#39142"
+msgid "Custom"
+msgstr "Personnalisation"
+
+#: system/settings/settings.xml
+msgctxt "#39143"
+msgid "Movie art types whitelist"
+msgstr "Liste blanche des types d'illustration de film"
+
+#. Description of setting with label #39150 "Movie art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39144"
+msgid ""
+"Limit the movie and movie set artwork fetched locally or applied from "
+"scraper remote art results to just those art types in the whitelist"
+msgstr "Limite les illustrations de film et de saga récupérées localement ou appliquées depuis les résultats distants d'un collecteur aux seuls types en liste blanche."
+
+#: system/settings/settings.xml
+msgctxt "#39145"
+msgid "TV show art types whitelist"
+msgstr "Liste blanche des types d'illustration de série TV"
+
+#. Description of setting with label #39152 "TV show art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39146"
+msgid ""
+"Limit the TV show and season artwork fetched locally or applied from scraper"
+" remote art results to just those art types in the whitelist"
+msgstr "Limite les illustrations de série TV et de saisons récupérées localement ou appliquées depuis les résultats distants d'un collecteur aux seuls types en liste blanche."
+
+#: system/settings/settings.xml
+msgctxt "#39147"
+msgid "Episode art types whitelist"
+msgstr "Liste blanche des types d'illustration d'épisode"
+
+#. Description of setting with label #39154 "Episode art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39148"
+msgid ""
+"Limit the episode artwork fetched locally or applied from scraper remote art"
+" results to just those art types in the whitelist"
+msgstr "Limite les illustrations d'épisode rapatriées localement ou appliquées depuis les résultats distants d'un scraper aux seuls types en liste blanche."
+
+#: system/settings/settings.xml
+msgctxt "#39149"
+msgid "Music video art types whitelist"
+msgstr "Liste blanche des types d'illustration de vidéo musicale"
+
+#. Description of setting with label #39156 "Music video art types whitelist"
+#: system/settings/settings.xml
+msgctxt "#39150"
+msgid ""
+"Limit the music video artwork fetched locally or applied from scraper remote"
+" art results to just those art types in the whitelist"
+msgstr "Limite les illustrations de vidéo musicale récupérées localement ou appliquées depuis les résultats distants d'un collecteur aux seuls types en liste blanche."
+
+#. Display Hardware scaling filter setting toggle
+msgctxt "#39151"
+msgid "Display hardware scaling filter"
+msgstr "Afficher le filtre matériel de mise à l'échelle"
+
+#. Description
+msgctxt "#39152"
+msgid ""
+"Integer scaling (IS) is a Nearest-Neighbor(NN) upscaling technique using "
+"Display Engine"
+msgstr "La mise à l'échelle à l'entier est une technique d'augmentation d'échelle à l'entier le plus proche utilisant le moteur d'affichage."
+
+#: xbmc/windows/GUIWindowSystemInfo.cpp
+msgctxt "#39153"
+msgid "Windowing system:"
+msgstr "Système de fenêtrage :"
