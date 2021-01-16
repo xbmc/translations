@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-08 12:54+0000\n"
+"PO-Revision-Date: 2021-01-15 09:27+0000\n"
 "Last-Translator: 4d1m <silviu.dimulete@gmail.com>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/teamxbmc/kodi-main/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
@@ -9146,6 +9146,14 @@ msgctxt "#19071"
 msgid "Update interval"
 msgstr "Interval actualizare"
 
+#. Dialog warning text for invalid timer setting
+#: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
+msgctxt "#19072"
+msgid ""
+"In order to add/update a timer the end date and time must be greater than "
+"the start date and time."
+msgstr "Pentru a adăuga / actualiza un cronometru, data și ora de încheiere trebuie să fie mai mari decât data și ora de începere."
+
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
 msgctxt "#19073"
@@ -10610,32 +10618,32 @@ msgstr "Vizualizați regula cronometrului"
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19305"
 msgid "Deleted missed PVR reminder for '{0:s}' on channel '{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "Memento PVR ratat șters pentru „{0:s}” de pe canalul „{1:s}” la „{2:s}”"
 
 #. text for event log entry for logging auto deleted missed reminders
 #: xbmc/pvr/timers/PVRTimers.cpp
 msgctxt "#19306"
 msgid "Deleted missed PVR reminder for channel '{0:s}' at '{1:s}'"
-msgstr ""
+msgstr "Memento PVR ratat șters pentru canalul „{0:s}” la „{1:s}”"
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19307"
 msgid "Reminder for [B]{0:s}[/B] on channel [B]{1:s}[/B] at [B]{2:s}[/B]."
-msgstr ""
+msgstr "Memento pentru [B]{0: s}[/B] pe canalul [B] {1:s} [/B] la [B] {2:s} [/B]."
 
 #. text for reminder announcement dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19308"
 msgid "Reminder for channel [B]{0:s}[/B] at [B]{1:s}[/B]."
-msgstr ""
+msgstr "Memento pentru canalul [B] {0:s} [/B] la [B] {1:s} [/B]."
 
 #. additional text for reminder announcement dialog, used if a recording can
 #. be scheduled
 #: xbmc/pvr/timers/PVRGUIActions.cpp
 msgctxt "#19309"
 msgid "(Auto-close of this reminder will schedule a recording...)"
-msgstr ""
+msgstr "(Închiderea automată a acestui memento va programa o înregistrare...)"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10644,7 +10652,7 @@ msgctxt "#19310"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for '{0:s}' on channel "
 "'{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "Înregistrare programată pentru memento PVR închis automat pentru „{0:s}” pe canalul „{1:s}” la „{2:s}”"
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10653,37 +10661,37 @@ msgctxt "#19311"
 msgid ""
 "Scheduled recording for auto-closed PVR reminder for channel '{0:s}' at "
 "'{1:s}'"
-msgstr ""
+msgstr "Înregistrare programată pentru memento PVR închis automat pentru canalul „{0:s}” la „{1:s}”"
 
 #. heading for pvr reminder notification dialog
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19312"
 msgid "PVR reminder"
-msgstr ""
+msgstr "Memento PVR"
 
 #. pvr settings "reminder auto close delay" setting label
 #: system/settings/settings.xml
 msgctxt "#19313"
 msgid "Automatically close reminder popup after"
-msgstr ""
+msgstr "Închide automat fereastra pop-up de memento după"
 
 #. pvr settings "schedule recording on reminder auto-close" setting label
 #: system/settings/settings.xml
 msgctxt "#19314"
 msgid "Schedule recording when auto-closing the reminder popup"
-msgstr ""
+msgstr "Programați înregistrarea la închiderea automată a ferestrei pop-up de memento"
 
 #. generic 'backend order' label
 #: xbmc/pvr/channels/PVRChannel.cpp xbmc/utils/SortUtils.cpp
 msgctxt "#19315"
 msgid "Backend order"
-msgstr ""
+msgstr "Comandă backend"
 
 #. pvr settings "Start all group channel numbers from 1" setting label
 #: system/settings/settings.xml
 msgctxt "#19316"
 msgid "Start group channel numbers from 1"
-msgstr ""
+msgstr "Porniți numerele canalelor de grup de la 1"
 
 #. Label for epg grid window "Jump 12 hours back" context menu entry and epg
 #. grid controls dialog help text
@@ -10691,7 +10699,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19317"
 msgid "12 hours back"
-msgstr ""
+msgstr "12 ore în urmă"
 
 #. Label for epg grid window "Jump 12 hours forward" context menu entry and
 #. epg grid controls dialog help text
@@ -10699,7 +10707,7 @@ msgstr ""
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19318"
 msgid "12 hours forward"
-msgstr ""
+msgstr "12 ore înainte"
 
 #. Label for epg grid window "Activate previous channel group" context menu
 #. entry and epg grid controls dialog help text
@@ -10723,7 +10731,7 @@ msgstr "Următorul grup"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19321"
 msgid "Group selector"
-msgstr ""
+msgstr "Selector de grup"
 
 #. Label for epg grid window "Jump to first channel" context menu entry and
 #. epg grid controls dialog help text
@@ -10739,7 +10747,7 @@ msgstr "Primul canal"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19323"
 msgid "Playing channel"
-msgstr ""
+msgstr "Redare canal"
 
 #. Label for epg grid window "Jump to last channel" context menu entry and epg
 #. grid controls dialog help text
@@ -10759,26 +10767,26 @@ msgstr "Program"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19326"
 msgid "Navigate..."
-msgstr ""
+msgstr "Navigați..."
 
 #. Label for a context menu entry to delete alle watched recordings contained
 #. in a folder
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19327"
 msgid "Delete watched"
-msgstr ""
+msgstr "Ștergeți vizionate"
 
 #. delete multiple recordings confirmation message box text
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19328"
 msgid "Delete all watched recordings in this folder?"
-msgstr ""
+msgstr "Ștergeți toate înregistrările vizionate din acest dosar?"
 
 #. label for PVR settings use backend channel numbers always
 #: system/settings/settings.xml
 msgctxt "#19329"
 msgid "Allow backend channel numbers with more than one PVR add-on"
-msgstr ""
+msgstr "Permiteți numerele de canale backend cu mai mult de un addon PVR"
 
 #. pvr settings "switch to channel on reminder auto-close" setting label
 #: system/settings/settings.xml
@@ -15076,7 +15084,7 @@ msgstr "Introduceți text de căutat"
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
 msgid "Install all updates"
-msgstr ""
+msgstr "Instalați toate actualizările"
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15152,7 +15160,7 @@ msgstr "Descărcare subtitlu..."
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24135"
 msgid "To use this feature you must enable an add-on:"
-msgstr ""
+msgstr "Pentru a utiliza această caracteristică trebuie să activați un addon:"
 
 #: xbmc/interfaces/builtins/AddonBuiltins.cpp
 msgctxt "#24136"
@@ -15164,7 +15172,7 @@ msgstr "Doriți să activați acest supliment?"
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24137"
 msgid "Install auto updates only"
-msgstr ""
+msgstr "Instalați numai actualizări automate"
 
 #. Button caption in DialogAddoninfo
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
@@ -15309,7 +15317,7 @@ msgstr ""
 
 msgctxt "#24162"
 msgid "Use Kodi virtual keyboard"
-msgstr ""
+msgstr "Utilizați tastatura virtuală Kodi"
 
 #: apple remote
 msgctxt "#24163"
@@ -15320,7 +15328,7 @@ msgstr ""
 #: xbmc/addons/gui/GUIHelpers.cpp
 msgctxt "#24164"
 msgid "Addon \"{0:s}\" broken"
-msgstr ""
+msgstr "Addon „{0:s}” este stricat"
 
 #. Yes/no dialog text with addon broken string value and to ask for use
 #: xbmc/addons/gui/GUIHelpers.cpp
@@ -15348,7 +15356,7 @@ msgstr ""
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24168"
 msgid "Deprecated: {0:s}"
-msgstr ""
+msgstr "Învechit: {0:s}"
 
 #. Lifecycle state name, for normal addons (no special). Used also on skin to
 #. compare and identify related state.
@@ -15367,7 +15375,7 @@ msgstr "Normal"
 #: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
 msgctxt "#24170"
 msgid "Deprecated"
-msgstr ""
+msgstr "Învechit"
 
 #. Lifecycle state name, for broken and not usable addons. Used also on skin
 #. to compare and identify related state.
@@ -15416,7 +15424,7 @@ msgstr ""
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
 msgctxt "#24184"
 msgid " (optional)"
-msgstr ""
+msgstr "(opțional)"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -16657,22 +16665,22 @@ msgstr "Elementul anterior de redat nu poate fi găsit"
 #: xbmc/Application.cpp
 msgctxt "#34220"
 msgid "HDR is OFF"
-msgstr ""
+msgstr "HDR este OPRIT"
 
 #: xbmc/Application.cpp
 msgctxt "#34221"
 msgid "Display HDR is Off"
-msgstr ""
+msgstr "Afișajul HDR este oprit"
 
 #: xbmc/Application.cpp
 msgctxt "#34222"
 msgid "HDR is ON"
-msgstr ""
+msgstr "HDR este PORNIT"
 
 #: xbmc/Application.cpp
 msgctxt "#34223"
 msgid "Display HDR is On"
-msgstr ""
+msgstr "Afișajul HDR este pornit"
 
 #: xbmc/Application.cpp
 msgctxt "#34224"
