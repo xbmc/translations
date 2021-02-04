@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Translators:
-# A B, 2016-2020
+# A B, 2016-2021
 # Ahto Simakuutio <simakuutio@gmail.com>, 2016-2017
 # Ari Rantalainen <ari.rantalainen@gmail.com>, 2020
 # Harri P <harri.peramaki@gmail.com>, 2016
@@ -10,10 +10,10 @@
 # Levyk, 2015-2016
 # Marko <marko.sahakangas@gmail.com>, 2015-2016
 # Miko-Matias Grönvall <matias.gronvall@gmail.com>, 2015-2016
-# Dis90 <suominen90@gmail.com>, 2016
+# Olli, 2016
 # Oskari Lavinto, 2020-2021
 # Riku Viitanen <riisseli4@gmail.com>, 2015-2016
-# Dis90 <suominen90@gmail.com>, 2016
+# Olli, 2016
 # tnygren, 2015
 # WsQ <vsalminen@gmail.com>, 2015
 msgid ""
@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-14 18:00+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2021-01-27 02:02+0000\n"
+"Last-Translator: A B\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/teamxbmc/kodi-main/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1970,15 +1970,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "{0:s} {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Optista levyasemaa ei löytynyt"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Tarvitset optisen levyaseman toistaaksesi tämän videon"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr "Tämä video on tallennettu optiselle levylle (DVD tai Blu-ray) eikä sitä voida toistaa, koska laitteestasi puuttuu sopiva asema."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -4175,6 +4183,11 @@ msgstr "Mukautettu pakatun äänen laite"
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "Äänenvoimakkuussäätimen asteikko"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr "tuulinen"
 
 #. Weather token
 msgctxt "#1375"
@@ -6718,7 +6731,7 @@ msgstr "Salli laitteistokiihdytys - VTBDecoder"
 #: system/settings/settings.xml
 msgctxt "#13430"
 msgid "Allow using DRM PRIME decoder"
-msgstr ""
+msgstr "Salli DRM PRIME -purkajan käyttö"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -7712,7 +7725,7 @@ msgstr "Valkoinen lista"
 #: system/settings/settings.xml
 msgctxt "#14127"
 msgid "Allow 3:2 pulldown refresh rates"
-msgstr ""
+msgstr "Salli 3:2 pulldown -virkistystaajuudet"
 
 #: system/settings/settings.xml
 msgctxt "#14128"
@@ -9158,7 +9171,7 @@ msgctxt "#19072"
 msgid ""
 "In order to add/update a timer the end date and time must be greater than "
 "the start date and time."
-msgstr ""
+msgstr "Ajastuksen päättymisajan ja -päivän tulee olla alkamisaikaa ja -päivää suurempia."
 
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
@@ -10272,7 +10285,7 @@ msgstr "Suodata kanavia"
 #: system/settings/settings.xml
 msgctxt "#19250"
 msgid "TV and radio channels"
-msgstr "TV ja radiokanavat"
+msgstr "Tv- ja radiokanavat"
 
 #. label for 'update epg' context menu item and 'update epg' confirmation
 #. dialog header
@@ -10786,26 +10799,26 @@ msgstr "Poista katsotut"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19328"
 msgid "Delete all watched recordings in this folder?"
-msgstr "Poista kaikki katsotut nauhoitukset tästä kansiosta?"
+msgstr "Poistetaanko kaikki katsotut tallenteet tästä kansiosta?"
 
 #. label for PVR settings use backend channel numbers always
 #: system/settings/settings.xml
 msgctxt "#19329"
 msgid "Allow backend channel numbers with more than one PVR add-on"
-msgstr ""
+msgstr "Käytä taustaosien kanavanumerointia, kun käytössä on useita PVR-palveluita"
 
 #. pvr settings "switch to channel on reminder auto-close" setting label
 #: system/settings/settings.xml
 msgctxt "#19330"
 msgid "Switch to channel when auto-closing the reminder popup"
-msgstr ""
+msgstr "Vaihda kanavalle, kun muistutus sulkeutuu automaattisesti"
 
 #. additional text for reminder announcement dialog, used if a recording can
 #. be scheduled
 #: xbmc/pvr/timers/PVRGUIActions.cpp
 msgctxt "#19331"
 msgid "(Auto-close of this reminder will switch to channel...)"
-msgstr ""
+msgstr "(Kanava vaihtuu automaattisesti muistutuksen sulkeutuessa...)"
 
 #. text for event log entry for logging auto channel switch for auto-closed
 #. reminders
@@ -10814,7 +10827,7 @@ msgctxt "#19332"
 msgid ""
 "Switched to channel for auto-closed PVR reminder for '{0:s}' on channel "
 "'{1:s}' at '{2:s}'"
-msgstr ""
+msgstr "Kanavaa vaihdettiin automaattisesti muistutuksen sulkeutuessa. Ohjelman nimi: '{0:s}', kanava '{1:s}' aika '{2:s}'."
 
 #. text for event log entry for logging auto scheduled recordings for auto-
 #. closed reminders
@@ -10823,7 +10836,7 @@ msgctxt "#19333"
 msgid ""
 "Switched to channel for auto-closed PVR reminder for channel '{0:s}' at "
 "'{1:s}'"
-msgstr ""
+msgstr "Kanavaa vaihdettiin automaattisesti muistutuksen sulkeutuessa. Kanavan nimi: '{0:s}', aika '{1:s}'."
 
 #. label for epg genre value
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
@@ -15348,7 +15361,7 @@ msgstr "Lisäosa on merkitty vialliseksi seuraavalla perusteella:[CR][B][I]{0:s}
 #: xbmc/addons/gui/GUIHelpers.cpp
 msgctxt "#24166"
 msgid "Addon \"{0:s}\" deprecated"
-msgstr "Lisäosa \"{0:s}\" on vanhuntunut"
+msgstr "Lisäosa \"{0:s}\" on vanhentunut"
 
 #. Yes/no dialog text with addon deprecated string value and to ask for use
 #: xbmc/addons/gui/GUIHelpers.cpp
@@ -16691,7 +16704,7 @@ msgstr "Näytön HDR päällä"
 #: xbmc/Application.cpp
 msgctxt "#34224"
 msgid "Tone map method is:"
-msgstr "Äänensävyn kartoitustapa:"
+msgstr "Sävykartoitustapa:"
 
 #: xbmc/network/windows/ZeroconfWIN.cpp
 msgctxt "#34300"
@@ -18438,7 +18451,7 @@ msgstr "Valitse mitä tehdään, kun 4:3-kuvasuhteen videota katsotaan laajakuva
 #: system/settings/settings.xml
 msgctxt "#36172"
 msgid "Enable PRIME decoding of video files"
-msgstr ""
+msgstr "Käytä PRIME-laitteistopurkua videotiedostoihin."
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18664,7 +18677,7 @@ msgstr "Järjestä kanavat taustaosan numeroinnin mukaan, mutta käytä itse mä
 #: system/settings/settings.xml
 msgctxt "#36206"
 msgid "Use the channel numbering from the backend."
-msgstr ""
+msgstr "Käyttää taustaosassa määritettyä kanavanumerointia."
 
 #: system/settings/settings.xml
 msgctxt "#36207"
@@ -19594,7 +19607,7 @@ msgid ""
 "authentication. It allows anyone with access to the network to completely "
 "control this application and, therefore, this device. Never expose these "
 "interfaces to the Internet."
-msgstr ""
+msgstr "Sallii samassa verkossa toimivien ohjelmien hallita tätä laitetta ilman tunnistautumista JSON-RPC:llä WebSocketin kautta, JSON-RPC:llä TCP:n kautta tai EventServer-protokollan kautta. Se mahdollistaa kenelle tahansa samassa verkossa olevalle sovelluksen ja laitteen täyden hallinnan. Älä koskaan avaa näitä rajapintoja internetiin."
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19739,7 +19752,7 @@ msgid ""
 "channels group can contain multiple of the same channel number if using this"
 " option. This means that jump to channel number may not work correctly for "
 "the All channels group."
-msgstr ""
+msgstr "Käyttää taustaosien kanavanumerointia, jos käytössä on useita PVR-palveluita samanaikaisesti. Voi johtaa päällekkäisyyksiin kanavanumeroinnissa ja sitä kautta siirtyminen oikealle kanavalle ei välttämättä onnistu."
 
 #. Description of setting with label #36042 "Use limited colour range
 #. (16-235)"
@@ -20186,7 +20199,7 @@ msgstr "VDPAU-mikserin ohittaminen vähentää kuormitusta vähätehoisilla lait
 #: system/settings/settings.xml
 msgctxt "#36422"
 msgid "Update official add-ons from"
-msgstr "Päivitä viralliset laajennukset lähteestä"
+msgstr "Päivitä viralliset lisäosat lähteestä"
 
 #. Description of setting with label #36422 "Update official add-ons from"
 #: system/settings/settings.xml
@@ -20275,7 +20288,7 @@ msgctxt "#36434"
 msgid ""
 "If enabled, switch to the channel with the programme to remind when auto-"
 "closing the reminder popup."
-msgstr ""
+msgstr "Vaihtaa kanavaa muistutuksessa näkyvälle kanavalle automaattisesti, kun ilmoitus sulkeutuu."
 
 #. Description for setting #310: "Keyboard layouts"
 #: system/settings/settings.xml
@@ -20308,7 +20321,7 @@ msgctxt "#36443"
 msgid ""
 "Whitelisted modes give the user the control to choose which display modes "
 "are allowed or not allowed to be used"
-msgstr ""
+msgstr "Valkoisella listalla määritetään mitä näyttötiloja sovellus saa ja ei saa käyttää."
 
 #. Description of setting with label #14127 "Whitelist"
 #: system/settings/settings.xml
@@ -20318,7 +20331,7 @@ msgid ""
 " FPS video on a 59.94 Hz monitor or playing 24 FPS video on a 60 Hz "
 "monitor). You may want to use this option if your monitor doesn't have a "
 "23.976 Hz or 24 Hz mode."
-msgstr ""
+msgstr "Sallii 3:2 pulldown -virkistystaajuuksien käytön (23,976 fps videon toisto 59,94 Hz:n monitorilla tai 24 fps videon toisto 60 Hz:n monitorilla). Asetuksesta on hyötyä, jos näyttölaite ei tue 23,976 Hz:n tai 24 Hz:n tiloja."
 
 #. Description of setting with label #14128 "Whitelist"
 #: system/settings/settings.xml
@@ -20328,7 +20341,7 @@ msgid ""
 "video on a 59.94 Hz monitor or playing 30 FPS video on a 60 Hz monitor). You"
 " may want to use this option if your monitor doesn't have a 29.97 Hz or 30 "
 "Hz mode."
-msgstr ""
+msgstr "Sallii virkistystaajuuden tuplaamisen (29,97 fps videon toisto 59,94 Hz:n monitorilla tai 30 fps videon toisto 60 Hz:n monitorilla). Asetuksesta on hyötyä, jos näyttölaite ei tue 29,97 Hz:n tai 30 Hz:n tiloja."
 
 #. Description of settings with label #14112 "Enable event logging"
 #: system/settings/settings.xml
@@ -21142,7 +21155,7 @@ msgid ""
 "Anyone who has access to the web interface will be able to completely "
 "control this application and, therefore, this device, so it should never be "
 "exposed on the Internet. A password should be set below. Proceed?"
-msgstr ""
+msgstr "Kuka tahansa, jolla on pääsy verkkokäyttöliittymään voi hallita täysin tätä sovellusta ja laitetta. Siksi sitä ei tulisi koskaan avata internetiin. Toiminnolle tulisi asettaa salasana. Jatketaanko?"
 
 #. Text in confirm dialog when enabling setting "Services -> Control -> Allow
 #. remote control from applications on other systems"
@@ -21153,7 +21166,7 @@ msgid ""
 "connect to them will be able to completely control this application and, "
 "therefore, this device, so they should never be exposed to the Internet. "
 "Proceed?"
-msgstr ""
+msgstr "Nämä palvelut eivät tarjoa tunnistautumista eikä salausta. Kuka tahansa, jolla on pääsy niihin voi hallita täysin tätä sovellusta ja laitetta. Siksi niitä ei tulisi koskaan avata internetiin. Jatketaanko?"
 
 #. Text in confirm dialog when disabling setting "Services -> Control ->
 #. Require authentication"
@@ -21163,7 +21176,7 @@ msgid ""
 "Anyone who has access to the web interface will be able to completely "
 "control this application and, therefore, this device, so it should be "
 "secured by a password. Are you sure you want to disable authentication?"
-msgstr ""
+msgstr "Kuka tahansa, jolla on pääsy verkkokäyttöliittymään voi hallita täysin tätä sovellusta ja laitetta. Siksi sille tulisi asettaa salasana. Haluatko varmasti poistaa tunnistautumisen?"
 
 #. Text in error dialog when trying to enter an invalid web server
 #. configuration
@@ -21589,7 +21602,7 @@ msgstr "Valite tietojen tarjoaja"
 #: xbmc/view/GUIViewStateVideo.cpp
 msgctxt "#38026"
 msgid "Appearances"
-msgstr "Käyttöliittymät"
+msgstr "Esiintymiset"
 
 #. Label for an option to select the video stream to play if current video has
 #. more than one video stream
@@ -22548,7 +22561,7 @@ msgctxt "#39130"
 msgid ""
 "Use the first of each art type of the remote artwork in scraper results to "
 "fill any missing art not populated with local art."
-msgstr ""
+msgstr "Täydentää paikallisten kuvitusten puutteet noutamalla puuttuvat kuvat internetistä."
 
 #: system/settings/settings.xml
 msgctxt "#39131"
@@ -22561,7 +22574,7 @@ msgctxt "#39132"
 msgid ""
 "Limit the artist artwork fetched locally or applied from scraper remote art "
 "results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee esittäjille."
 
 #: system/settings/settings.xml
 msgctxt "#39133"
@@ -22574,7 +22587,7 @@ msgctxt "#39134"
 msgid ""
 "Limit the album artwork fetched locally or applied from scraper remote art "
 "results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee levyille."
 
 #: system/settings/settings.xml
 msgctxt "#39135"
@@ -22588,7 +22601,7 @@ msgid ""
 "The names of files that contain primary artwork (thumbnails), generally "
 "square and used both full and in reduced size to visually identify a folder,"
 " artist, album or song"
-msgstr ""
+msgstr "Tiedostonimet, joita kuvitustiedostot käyttävät. Kansioilla, esittäjillä, levyillä ja kappaleilla on omat kuva- ja tiedostotyyppinsä."
 
 #: system/settings/settings.xml
 msgctxt "#39137"
@@ -22602,7 +22615,7 @@ msgid ""
 "The amount of artwork automatically selected - [Maximum] all local images "
 "and remote art; [Basic] save space on limited devices or when using a simple"
 " skin; [Custom] configured by user for detailed control; [None] no art"
-msgstr ""
+msgstr "Automaattisesti valitun kuvituksen määrä - [Maksimi] kaikki paikalliset ja kuvapalveluiden kuvat; [Perus] säästää tilaa hitailla laitteilla tai yksinkertaisilla ulkoasuilla; [Mukautus] käyttäjän itse määrittelemät asetukset; [Ei käytössä] ei kuvitusta."
 
 #. Value of setting with label #39137 "Artwork level"
 #: system/settings/settings.xml
@@ -22633,7 +22646,7 @@ msgctxt "#39144"
 msgid ""
 "Limit the movie and movie set artwork fetched locally or applied from "
 "scraper remote art results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee elokuville ja elokuvaryhmille."
 
 #: system/settings/settings.xml
 msgctxt "#39145"
@@ -22646,7 +22659,7 @@ msgctxt "#39146"
 msgid ""
 "Limit the TV show and season artwork fetched locally or applied from scraper"
 " remote art results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee sarjoille ja tuotantokausille."
 
 #: system/settings/settings.xml
 msgctxt "#39147"
@@ -22659,7 +22672,7 @@ msgctxt "#39148"
 msgid ""
 "Limit the episode artwork fetched locally or applied from scraper remote art"
 " results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee jaksoille."
 
 #: system/settings/settings.xml
 msgctxt "#39149"
@@ -22672,7 +22685,7 @@ msgctxt "#39150"
 msgid ""
 "Limit the music video artwork fetched locally or applied from scraper remote"
 " art results to just those art types in the whitelist"
-msgstr ""
+msgstr "Määritä mitä kuvatyyppejä sovellus hakee musiikkivideoille."
 
 #. Display Hardware scaling filter setting toggle
 msgctxt "#39151"
@@ -22684,7 +22697,7 @@ msgctxt "#39152"
 msgid ""
 "Integer scaling (IS) is a Nearest-Neighbor(NN) upscaling technique using "
 "Display Engine"
-msgstr ""
+msgstr "Kokonaislukuskaalaus (IS) on lähin viereinen (NN) -tyyppinen ylösskaalaustekniikka, jota Display Engine käyttää."
 
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#39153"

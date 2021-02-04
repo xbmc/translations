@@ -12,7 +12,7 @@
 # mmichalik <mmichalik@gmail.com>, 2016
 # mmichalik <mmichalik@gmail.com>, 2016
 # nextlooper42, 2017-2020
-# Patrik Špaňo <pa4k.xyon@gmail.com>, 2019
+# Patrik Špaňo <pa4k.xyon@gmail.com>, 2019,2021
 # Peter Durovic <durovic.p@gmail.com>, 2018
 # Tibor Repček <tiborepcek@gmail.com>, 2019
 # Tomáš Tomovčík <tomovcik.tomas@gmail.com>, 2016
@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-14 18:00+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2021-02-02 00:11+0000\n"
+"Last-Translator: Patrik Špaňo <pa4k.xyon@gmail.com>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/teamxbmc/kodi-main/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1971,15 +1971,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "Z {0:s} na {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Nenašla sa žiadna optická mechanika"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Na prehratie tohto videa je potrebná optická mechanika"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr ""
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -4176,6 +4184,11 @@ msgstr "Vlastné zariadenie na preposielanie signálu"
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "Kroky pre ovládanie hlasitosti"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr ""
 
 #. Weather token
 msgctxt "#1375"
@@ -6459,7 +6472,7 @@ msgstr "Prehrať položku"
 
 msgctxt "#13359"
 msgid "Set artist thumb"
-msgstr "Nastaviť náhľad pre umelca"
+msgstr "Nastaviť náhľad pre interpreta"
 
 #: system/settings/settings.xml
 msgctxt "#13360"
@@ -6655,7 +6668,7 @@ msgstr "Preberá sa"
 #: system/settings/settings.xml
 msgctxt "#13414"
 msgid "Show song and album artists"
-msgstr "Zobraziť skladbu a umelcov albumu"
+msgstr "Zobraziť interpretov sklady a albumu"
 
 #: system/settings/settings.xml
 msgctxt "#13415"
@@ -8100,7 +8113,7 @@ msgstr "* Všetky albumy"
 #: xbmc/music/windows/MusicFileItemListModifier.cpp
 msgctxt "#15103"
 msgid "* All artists"
-msgstr "* Všetci umelci"
+msgstr "* Všetci interpreti"
 
 #: xbmc/filesystem/MusicDatabaseDirectory/DirectoryNode.cpp
 msgctxt "#15104"
@@ -8303,7 +8316,7 @@ msgstr "Prebieha rušenie..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#16025"
 msgid "Enter the artist name"
-msgstr "Zadajte meno umelca"
+msgstr "Zadajte meno interpreta"
 
 msgctxt "#16026"
 msgid "Playback failed"
@@ -12169,7 +12182,7 @@ msgstr "Znovu načítať vzhľad"
 
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
-msgstr "Použiť zobrazenie 'Plagáty' pre TV seriály"
+msgstr "Použiť štýl zobrazenia 'Plagáty' pre TV seriály"
 
 msgctxt "#20186"
 msgid "Please wait"
@@ -12212,7 +12225,7 @@ msgstr "Predvolený poskytovateľ informácií o albume"
 #: system/settings/settings.xml
 msgctxt "#20194"
 msgid "Default provider for artist information"
-msgstr "Predvolený poskytovateľ informácií o umelcoch"
+msgstr "Predvolený poskytovateľ informácií o interpretoch"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20195"
@@ -12231,12 +12244,12 @@ msgstr "Importovať hudbonú knižnicu"
 
 msgctxt "#20198"
 msgid "No artist found!"
-msgstr "Nenašiel sa žiadny umelec!"
+msgstr "Nenašiel sa žiadny interpret!"
 
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20199"
 msgid "Downloading artist information failed"
-msgstr "Preberanie informácií o umelcovi zlyhalo"
+msgstr "Preberanie informácií o interpretovi zlyhalo"
 
 #: system/settings/settings.xml
 msgctxt "#20220"
@@ -12251,7 +12264,7 @@ msgid ""
 " will override anything you have set in your song tags, such as genres, "
 "year, song artists etc. Useful if you have MusicBrainz identifiers in your "
 "song tags."
-msgstr "Ak je táto voľba zapnutá, akékoľvek informácie, ktoré sa prevezmú pre albumy a umelcov, nahradia všetko, čo máte nastavené v tagoch vašich skladieb, ako napr. žánre, rok, umelci skladby atď. Je to užitočné v prípade, že máte v tagoch vašich skladieb identifikátory MusicBrainz."
+msgstr "Ak je táto voľba zapnutá, akékoľvek informácie, ktoré sa prevezmú pre albumy a interpretov, nahradia všetko, čo máte nastavené v tagoch vašich skladieb, ako napr. žánre, rok, interpreti skladby atď. Je to užitočné v prípade, že máte v tagoch vašich skladieb identifikátory MusicBrainz."
 
 #: system/settings/settings.xml
 msgctxt "#20222"
@@ -12444,7 +12457,7 @@ msgstr "Prehľadávajú sa TV seriály pomocou {0:s}"
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20320"
 msgid "Scanning artists using {0:s}"
-msgstr "Prehľadávajú sa umelci pomocou {0:s}"
+msgstr "Prehľadávajú sa interpreti pomocou {0:s}"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20321"
@@ -12824,7 +12837,7 @@ msgstr "Zmiešané"
 
 msgctxt "#20396"
 msgid "Go to albums by artist"
-msgstr "Prejsť na albumy podľa umelca"
+msgstr "Prejsť na albumy podľa interpreta"
 
 msgctxt "#20397"
 msgid "Go to album"
@@ -12840,7 +12853,7 @@ msgstr "Prejsť na videoklipy z albumu"
 
 msgctxt "#20400"
 msgid "Go to music videos by artist"
-msgstr "Prejsť na videoklipy od umelca"
+msgstr "Prejsť na videoklipy od interpreta"
 
 msgctxt "#20401"
 msgid "Play music video"
@@ -14168,7 +14181,7 @@ msgstr "Uložená hudba"
 
 msgctxt "#21884"
 msgid "Query info for all artists"
-msgstr "Aktualizovať informácie všetkých umelcov"
+msgstr "Aktualizovať informácie všetkých interpretov"
 
 msgctxt "#21885"
 msgid "Downloading album information"
@@ -14176,7 +14189,7 @@ msgstr "Preberajú sa informácie o albume"
 
 msgctxt "#21886"
 msgid "Downloading artist information"
-msgstr "Preberajú sa informácie o umelcovi"
+msgstr "Preberajú sa informácie o interpretovi"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/Variables.xml
@@ -14194,17 +14207,17 @@ msgstr "Diskografia"
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#21889"
 msgid "Searching artist"
-msgstr "Vyhľadáva sa umelec"
+msgstr "Vyhľadáva sa interpret"
 
 msgctxt "#21890"
 msgid "Select artist"
-msgstr "Vyberte umelca"
+msgstr "Vyberte interpreta"
 
 #: xbmc/music/dialogs/GUIDialogMusicInfo.cpp
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp xbmc/music/ContextMenus.h
 msgctxt "#21891"
 msgid "Artist information"
-msgstr "Informácie o umelcovi"
+msgstr "Informácie o interpretovi"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#21892"
@@ -14531,7 +14544,7 @@ msgstr "Informácie o albume"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24017"
 msgid "Artist information"
-msgstr "Informácie o umelcovi"
+msgstr "Informácie o interpretovi"
 
 #: xbmc/addons/Addon.cpp addons/skin.estuary/xml/DialogSubtitles.xml
 msgctxt "#24018"
@@ -15623,7 +15636,7 @@ msgstr "Skladateľ"
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#29904"
 msgid "Artist"
-msgstr "Umelec"
+msgstr "Interpret"
 
 #. Conductor of the classic music (if present)
 #: Label of ListItem.Property(Role.Conductor)
@@ -18997,7 +19010,7 @@ msgid ""
 "When enabled, both song and album artists are shown. When disabled, only "
 "album artists are shown and artists that appear only on individual songs "
 "from an album are excluded."
-msgstr "Pokiaľ je to zapnuté, zobrazí sa aj skladba aj umelci albumu. Pokiaľ je to vypnuté, zobrazia sa iba umelci albumu a umelci, ktorí sa objavujú len na samostatných skladbách, sa vynechajú."
+msgstr "Pokiaľ je zapnuté, zobrazujú sa interpreti skladieb aj albumov. Ak je vypnuté, zobrazia sa iba interpreti albumu a interpreti, ktorí sa objavujú len na jednotlivých skladbách, sa vynechajú."
 
 #. Description of setting with label #20192 "Fetch additional information
 #. during updates"
@@ -19006,7 +19019,7 @@ msgctxt "#36256"
 msgid ""
 "Automatically fetch album and artist information from information providers "
 "when adding songs to the library."
-msgstr "Automaticky pri pridávaní skladieb do knižnice prevezme informácie o albume a umelcovi od informačných poskytovateľov."
+msgstr "Automaticky pri pridávaní skladieb do knižnice prevezme informácie o albume a interpretovi od informačných poskytovateľov."
 
 #. Description of setting with label #20193 "Default provider for album
 #. information"
@@ -19020,7 +19033,7 @@ msgstr "Vybrať predvoleného poskytovateľa informácií o albume."
 #: system/settings/settings.xml
 msgctxt "#36258"
 msgid "Select the default artist information provider."
-msgstr "Vybrať predvoleného poskytovateľa informácií o umelcoch."
+msgstr "Vybrať predvoleného poskytovateľa informácií o interpretoch."
 
 #. Description of setting with label #22000 "Update library on startup"
 #: system/settings/settings.xml
@@ -19213,7 +19226,7 @@ msgctxt "#36284"
 msgid ""
 "Read the information belonging to an audio CD, like song title and artist, "
 "from the Internet database freedb.org."
-msgstr "Čítať informáciu prislúchajúcu k audio CD disku, ako napr. názov skladby a umelec, z internetovej databázy freedb.org."
+msgstr "Čítať informáciu prislúchajúcu k audio CD disku, ako napr. názov skladby a interpret, z internetovej databázy freedb.org."
 
 #. Description of setting label #20000 "Saved music folder"
 #: system/settings/settings.xml
@@ -19232,7 +19245,7 @@ msgid ""
 "[B]%B[/B]: Album, [B]%G[/B]: Genre, [B]%Y[/B]: Year, [B]%F[/B]: FileName, "
 "[B]%D[/B]: Duration, [B]%J[/B]: Date, [B]%R[/B]: Rating, [B]%I[/B]: "
 "FileSize."
-msgstr "Mení spôsob ako sú z tagov ukladané skladby. Tagy: [B]%N[/B]: Číslo skladby, [B]%S[/B]: Čislo Disku, [B]%A[/B]: Umelec, [B]%T[/B]: Titul, [B]%B[/B]: Album, [B]%G[/B]: Žáner, [B]%Y[/B]: Rok, [B]%F[/B]: Názov súboru, [B]%D[/B]: Dĺžka, [B]%J[/B]: Dátum, [B]%R[/B]: Hodnotenie, [B]%I[/B]: Veľkosť súboru."
+msgstr "Určuje, akým spôsobom sú z tagov pomenované ukladané skladby. Tagy: [B]%N[/B]: Číslo skladby, [B]%S[/B]: Čislo Disku, [B]%A[/B]: Interpret, [B]%T[/B]: Titul, [B]%B[/B]: Album, [B]%G[/B]: Žáner, [B]%Y[/B]: Rok, [B]%F[/B]: Názov súboru, [B]%D[/B]: Dĺžka, [B]%J[/B]: Dátum, [B]%R[/B]: Hodnotenie, [B]%I[/B]: Veľkosť súboru."
 
 #. Description of setting with label #621 "Encoder"
 #: system/settings/settings.xml
@@ -21283,12 +21296,12 @@ msgstr "hudba"
 #: xbmc/media/MediaType.cpp
 msgctxt "#36916"
 msgid "artist"
-msgstr "umelec"
+msgstr "interpret"
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36917"
 msgid "artists"
-msgstr "umelci"
+msgstr "interpreti"
 
 #: xbmc/media/MediaType.cpp xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#36918"
@@ -21708,7 +21721,7 @@ msgctxt "#38061"
 msgid ""
 "Fetch additional information for albums and artists? This could take some "
 "time so you may prefer to do this later"
-msgstr "Získať dodatočné informácie o albumoch a umelcoch? To môže chvíľu trvať, takže to možno budete chcieť spraviť neskôr"
+msgstr "Získať dodatočné informácie o albumoch a interpretoch? To môže chvíľu trvať, takže to možno budete chcieť spraviť neskôr"
 
 #. Full tag scanning question on library update (by default tags are only
 #. scanned when the file has changed since last time)
@@ -21729,14 +21742,14 @@ msgstr "Nastaviť predvoleného poskytovateľa informácií"
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38064"
 msgid "Set for this artist"
-msgstr "Nastaviť pre tohto umelca"
+msgstr "Nastaviť pre tohto interpreta"
 
 #. Item in selection list #38338 to change the information provider for all
 #. artists in node, related to #20195
 #: xbmc/music/dialogs/GUIDialogInfoProviderSettings.cpp
 msgctxt "#38065"
 msgid "Set for all artists shown"
-msgstr "Nastaviť pre všetkých zobrazených umelcov"
+msgstr "Nastaviť pre všetkých zobrazených interpretov"
 
 #. Item in selection list #38338 to change the information provider for a
 #. specific album, related to #20195

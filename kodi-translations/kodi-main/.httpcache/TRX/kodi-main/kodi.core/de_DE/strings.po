@@ -4,7 +4,7 @@
 # Alexander Scholz, 2017-2018
 # cgtobi <cgtobi@gmail.com>, 2015
 # Christian Spaan, 2016
-# daAnda, 2016-2017,2019
+# daAnda, 2016-2017,2019,2021
 # daAnda, 2015
 # David Vukovic <davu@kodi.tv>, 2019
 # Dejan Dinic, 2016
@@ -35,8 +35,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-14 18:00+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2021-01-31 22:02+0000\n"
+"Last-Translator: ksooo <kai.sommerfeld@gmx.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/teamxbmc/kodi-main/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -530,7 +530,7 @@ msgstr "Diashow"
 #. skin sub-menu
 msgctxt "#130"
 msgid "System info"
-msgstr "Systeminfo"
+msgstr "Systeminformationen"
 
 #: system/settings/settings.xml
 msgctxt "#131"
@@ -800,7 +800,7 @@ msgstr "Aktualisieren"
 
 msgctxt "#185"
 msgid "Searching album"
-msgstr "Suche nach Album"
+msgstr "Album wird gesucht"
 
 #: addons/skin.estuary/xml/DialogPVRGroupManager.xml
 #: xbmc/addons/GUIViewStateAddonBrowser.cpp xbmc/addons/GUIDialogAddonInfo.cpp
@@ -823,7 +823,7 @@ msgstr "Alle auswählen"
 #: xbmc/music/MusicDatabase.cpp xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#189"
 msgid "Scanning media information"
-msgstr "Durchsuche Medieninformationen"
+msgstr "Medieninformationen werden durchsucht"
 
 msgctxt "#190"
 msgid "Save"
@@ -846,7 +846,7 @@ msgstr "Durchsuchen"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#194"
 msgid "Searching..."
-msgstr "Suche ..."
+msgstr "Suche läuft ..."
 
 #: xbmc/addons/guidialogaddoninfo.cpp
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
@@ -860,16 +860,16 @@ msgstr "Film auswählen:"
 
 msgctxt "#197"
 msgid "Querying {0:s} information"
-msgstr "{0:s}-Information wird gesucht ..."
+msgstr "{0:s}-Informationen werden gesucht"
 
 msgctxt "#198"
 msgid "Loading movie details"
-msgstr "Lade Filminformationen"
+msgstr "Filminformationen werden geladen"
 
 #: xbmc/addons/Addon.cpp system/settings/settings.xml
 msgctxt "#199"
 msgid "Web interface"
-msgstr "Weboberfläche"
+msgstr "Web-Oberfläche"
 
 msgctxt "#200"
 msgid "Audio encoders"
@@ -1090,7 +1090,7 @@ msgstr "Vollbild auf Monitor #{0:d}"
 
 msgctxt "#242"
 msgid "Windowed"
-msgstr "Fenstermodus"
+msgstr "Fenster"
 
 #: system/settings/settings.xml
 msgctxt "#243"
@@ -1143,7 +1143,7 @@ msgstr "Stereo Upmix"
 
 msgctxt "#253"
 msgid "Number of channels"
-msgstr "Anzahl der Kanäle"
+msgstr "Anzahl Kanäle"
 
 #: system/settings/settings.xml
 msgctxt "#254"
@@ -1177,7 +1177,7 @@ msgstr "Lesen von Tag-Informationen aktivieren"
 
 msgctxt "#259"
 msgid "Opening"
-msgstr "Öffne"
+msgstr "Öffnen"
 
 msgctxt "#260"
 msgid "Shoutcast"
@@ -1658,7 +1658,7 @@ msgstr "Bildschirmschoner"
 
 msgctxt "#361"
 msgid "Recursive slideshow"
-msgstr "Rekursive Diaschau"
+msgstr "Rekursive Diashow"
 
 msgctxt "#362"
 msgid "Screensaver dim level"
@@ -1882,15 +1882,15 @@ msgstr "Standard"
 
 msgctxt "#410"
 msgid "Accessing weather service"
-msgstr "Verbinde mit Wetterdienst"
+msgstr "Zugriff auf Wetterdienst"
 
 msgctxt "#411"
 msgid "Getting weather for:"
-msgstr "Erhalte Wetterinformationen für:"
+msgstr "Wetterdaten laden für:"
 
 msgctxt "#412"
 msgid "Unable to get weather data"
-msgstr "Wetterinformationen können nicht geladen werden"
+msgstr "Wetterdaten können nicht geladen werden"
 
 msgctxt "#413"
 msgid "Manual"
@@ -1984,15 +1984,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "Aus {0:s} mit {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Kein optisches Laufwerk gefunden"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Um dieses Video abzuspielen, wird ein optisches Laufwerk benötigt "
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr "Dieses Video befindet sich auf einer optischen Disk (z. B. DVD, Blu-ray) und kann nicht abgespielt werden, weil kein entsprechendes Laufwerk im Gerät vorhanden ist."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -2000,7 +2008,7 @@ msgstr "Wechsellaufwerk"
 
 msgctxt "#438"
 msgid "Opening file"
-msgstr "Öffne Datei"
+msgstr "Datei öffnen"
 
 #: system/settings/settings.xml
 msgctxt "#439"
@@ -2047,7 +2055,7 @@ msgstr "Dolby Digital Plus (E-AC3)-fähiger Receiver"
 #: system/settings/settings.xml
 msgctxt "#449"
 msgid "Enabled"
-msgstr "Aktivieren"
+msgstr "Aktiviert"
 
 msgctxt "#450"
 msgid "Columns"
@@ -2272,11 +2280,11 @@ msgstr "Metainformationen werden geladen ..."
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#506"
 msgid "Checking media files..."
-msgstr "Mediendateien werden geprüft"
+msgstr "Mediendateien werden geprüft ..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
-msgstr "Sortieren nach: Gebrauch"
+msgstr "Sortieren nach: Benutzung"
 
 msgctxt "#510"
 msgid "Enable visualisations"
@@ -2548,7 +2556,7 @@ msgstr "Typ"
 
 msgctxt "#565"
 msgid "Usage"
-msgstr "Gebrauch"
+msgstr "Benutzung"
 
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#566"
@@ -2632,7 +2640,7 @@ msgstr "Sortiermethode"
 
 msgctxt "#582"
 msgid "View mode"
-msgstr "Ansichtsmodus"
+msgstr "Ansicht"
 
 msgctxt "#583"
 msgid "Remember views for different folders"
@@ -2786,7 +2794,7 @@ msgstr "Bitrate"
 
 msgctxt "#624"
 msgid "Include track number"
-msgstr "Titelnummer mit einbeziehen"
+msgstr "Track-Nummer mit einbeziehen"
 
 msgctxt "#625"
 msgid "All songs of"
@@ -2798,7 +2806,7 @@ msgstr "Begonnene Serien"
 
 msgctxt "#629"
 msgid "View mode"
-msgstr "Ansichtsmodus"
+msgstr "Ansicht"
 
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#630"
@@ -2813,7 +2821,7 @@ msgstr "Zoom"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#632"
 msgid "Stretch 4:3"
-msgstr "4:3 strecken"
+msgstr "4:3 gestreckt"
 
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#633"
@@ -2823,7 +2831,7 @@ msgstr "Breite Vergrößerung"
 #: system/settings/settings.xml xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#634"
 msgid "Stretch 16:9"
-msgstr "16:9 strecken"
+msgstr "16:9 gestreckt"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#635"
@@ -2847,7 +2855,7 @@ msgstr "Lautstärkeanpassungen"
 #: system/settings/settings.xml
 msgctxt "#639"
 msgid "Use track levels"
-msgstr "Titellautstärke verwenden"
+msgstr "Track-Lautstärke verwenden"
 
 #: system/settings/settings.xml
 msgctxt "#640"
@@ -2872,7 +2880,7 @@ msgstr "Clipping-Schutz auf ReplayGained Dateien vermeiden"
 #: system/settings/settings.xml
 msgctxt "#644"
 msgid "Stretch 16:9 - Nonlinear"
-msgstr "16:9 strecken - nichtlinear"
+msgstr "16:9 gestreckt - nichtlinear"
 
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
@@ -2895,12 +2903,12 @@ msgstr "Videobibliothek importieren ..."
 #. unused?
 msgctxt "#649"
 msgid "Importing"
-msgstr "Importiere"
+msgstr "Importieren"
 
 #. unused?
 msgctxt "#650"
 msgid "Exporting"
-msgstr "Exportiere"
+msgstr "Exportieren"
 
 msgctxt "#651"
 msgid "Browse for library"
@@ -3354,7 +3362,7 @@ msgstr "Audio"
 #: addons/skin.estuary/xml/Variables.xml
 msgctxt "#773"
 msgid "Seeking"
-msgstr "Suche"
+msgstr "Suche läuft"
 
 msgctxt "#774"
 msgid "Slideshow folder"
@@ -3363,7 +3371,7 @@ msgstr "Diashowordner"
 #: system/settings/settings.xml
 msgctxt "#790"
 msgid "Remote control"
-msgstr "Fernbedienung"
+msgstr "Fernsteuerung"
 
 #: system/settings/settings.xml
 msgctxt "#791"
@@ -3438,7 +3446,7 @@ msgstr "Zeichenkette, mit der im Programm-Guide nach passenden Sendungen gesucht
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#806"
 msgid "Fulltext search (or title search only)"
-msgstr "Volltextsuche (oder nur Titel)"
+msgstr "Volltextsuche (oder nur Titelsuche)"
 
 #. special days of week representation value for a timer rule
 #: xbmc/pvr/timers/PVRTimerInfoTag.cpp
@@ -3518,7 +3526,7 @@ msgstr "Beliebige Endzeit"
 #: xbmc/pvr/dialogs/GUIDialogPVRTimerSettings.cpp
 msgctxt "#818"
 msgid "Max recordings"
-msgstr "Max. Aufnahmeanzahl"
+msgstr "Maximale Aufnahmeanzahl"
 
 #. Representation of a one-time timer which has been scheduled by a timer
 #. rule.
@@ -3887,7 +3895,7 @@ msgstr "Netzwerkfreigabe hinzufügen ..."
 
 msgctxt "#1033"
 msgid "Browse for file"
-msgstr "Nach einer Datei suchen"
+msgstr "Nach Datei suchen"
 
 msgctxt "#1034"
 msgid "Submenu"
@@ -3958,7 +3966,7 @@ msgstr "Singles"
 
 msgctxt "#1051"
 msgid "Enter web address"
-msgstr "URL eingeben"
+msgstr "Webadresse eingeben"
 
 #: system/settings/settings.xml
 msgctxt "#1052"
@@ -4188,7 +4196,12 @@ msgstr "Benutzerdefiniertes Audiogerät für Passthrough"
 #: system/settings/settings.xml
 msgctxt "#1302"
 msgid "Volume control steps"
-msgstr "Lautstärkeschritte"
+msgstr "Lautstärkesteuerungsschritte"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr "Windig"
 
 #. Weather token
 msgctxt "#1375"
@@ -4363,7 +4376,7 @@ msgstr "Eis"
 #. Weather token
 msgctxt "#1409"
 msgid "Crystals"
-msgstr "Kristall"
+msgstr "Kristalle"
 
 #. Weather token
 msgctxt "#1410"
@@ -4498,7 +4511,7 @@ msgstr "Sandsturm"
 #. Weather token
 msgctxt "#1436"
 msgid "Blowing"
-msgstr "Blasen"
+msgstr "Blasend"
 
 #. Weather token
 msgctxt "#1437"
@@ -4563,7 +4576,7 @@ msgstr "Niederschlag"
 #. Weather token
 msgctxt "#1449"
 msgid "Partial"
-msgstr "Teil"
+msgstr "Teilweise"
 
 #: system/settings/settings.xml
 msgctxt "#1450"
@@ -4582,7 +4595,7 @@ msgstr "Leere Liste"
 #: xbmc/windows/GUIMediaWindow.cpp
 msgctxt "#2081"
 msgid "Went back to parent list because the active list has been emptied"
-msgstr "Zurück zur Vorgängerliste weil aktive Liste geleert wurde"
+msgstr "Zurück zur Vorgängerliste, weil aktive Liste geleert wurde"
 
 msgctxt "#2101"
 msgid ""
@@ -4606,7 +4619,7 @@ msgstr "Addon-Fehler"
 #: xbmc/interfaces/python/PythonInvoker.cpp
 msgctxt "#2104"
 msgid "Check the log for more information."
-msgstr "Für mehr Informationen, Logdatei einsehen."
+msgstr "Für mehr Informationen Logdatei einsehen."
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10000"
@@ -4785,7 +4798,7 @@ msgstr "Keine Kategorien verfügbar"
 msgctxt "#10047"
 msgid ""
 "Try changing the setting level to see additional categories and settings."
-msgstr "Einstellungsebene ändern, um weitere Kategorien und Einstellungsoptionen zu sehen."
+msgstr "Einstellungsebene ändern, um weitere Kategorien und Einstellungen zu sehen."
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#10048"
@@ -4850,7 +4863,7 @@ msgstr "Zeiger"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10100"
 msgid "Yes / No dialog"
-msgstr "Ja-/Nein-Dialog"
+msgstr "Ja- / Nein-Dialog"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10101"
@@ -5055,7 +5068,7 @@ msgstr "Suchen nach Untertiteln ..."
 
 msgctxt "#10211"
 msgid "Looking for or caching subtitles..."
-msgstr "Suchen oder Zwischenspeichern der Untertitel ..."
+msgstr "Suchen oder Zwischenspeichern von Untertiteln ..."
 
 msgctxt "#10212"
 msgid "terminating"
@@ -5067,7 +5080,7 @@ msgstr "Zwischenspeichern"
 
 msgctxt "#10214"
 msgid "Opening stream"
-msgstr "Öffne Stream"
+msgstr "Stream wird geöffnet"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10500"
@@ -5145,7 +5158,7 @@ msgstr "Teletext"
 
 msgctxt "#10600"
 msgid "PVR guide info"
-msgstr "Programm-Guide-Info"
+msgstr "Programm-Guide-Information"
 
 msgctxt "#10601"
 msgid "PVR recording info"
@@ -5157,11 +5170,11 @@ msgstr "PVR-Timer-Einstellungen"
 
 msgctxt "#10603"
 msgid "PVR group manager"
-msgstr "PVR Gruppenmanager"
+msgstr "PVR-Gruppenmanager"
 
 msgctxt "#10604"
 msgid "PVR channel manager"
-msgstr "PVR Kanalmanager"
+msgstr "PVR-Kanalmanager"
 
 msgctxt "#10605"
 msgid "PVR guide search"
@@ -5169,11 +5182,11 @@ msgstr "PVR-Programm-Guide-Suche"
 
 msgctxt "#10606"
 msgid "PVR channel scan"
-msgstr "PVR Kanalsuche"
+msgstr "PVR-Kanalsuche"
 
 msgctxt "#10607"
 msgid "PVR update progress"
-msgstr "PVR Aktualisierungsfortschritt"
+msgstr "PVR-Aktualisierungsfortschritt"
 
 msgctxt "#10608"
 msgid "PVR OSD channels"
@@ -5580,7 +5593,7 @@ msgstr "Einstellungen und Dateimanager"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#12376"
 msgid "Set as default for all media"
-msgstr "Als Standard für alle Medien setzen"
+msgstr "Als Standardquelle für alle Medien verwenden"
 
 #: xbmc/video/dialogs/GUIDialogAudioSubtitleSettings.cpp
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -6311,12 +6324,12 @@ msgstr "Rekursive Vorschaubilder"
 #: addons/skin.estuary/xml/MyPics.xml
 msgctxt "#13317"
 msgid "View slideshow"
-msgstr "Diaschau starten"
+msgstr "Diashow starten"
 
 #: addons/skin.estuary/xml/MyPics.xml
 msgctxt "#13318"
 msgid "Recursive slideshow"
-msgstr "Rekursive Diaschau"
+msgstr "Rekursive Diashow"
 
 #: system/settings/settings.xml addons/skin.estuary/xml/MyPics.xml
 msgctxt "#13319"
@@ -6380,7 +6393,7 @@ msgstr "Beschriftung ändern"
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13335"
 msgid "Make default"
-msgstr "Als Standard setzen"
+msgstr "Als Standardquelle verwenden"
 
 msgctxt "#13336"
 msgid "Remove button"
@@ -6561,7 +6574,7 @@ msgstr "Öffnen / Schließen"
 #: system/settings/settings.xml
 msgctxt "#13392"
 msgid "Use visualisation if playing audio"
-msgstr "Bei Musikwiedergabe die Visualisierung verwenden"
+msgstr "Bei Musikwiedergabe Visualisierung verwenden"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#13393"
@@ -6619,7 +6632,7 @@ msgstr "Titelposition anzeigen"
 #: xbmc/dialogs/GUIDialogContextMenu.cpp
 msgctxt "#13403"
 msgid "Clear default"
-msgstr "Standard entfernen"
+msgstr "Nicht mehr als Standardquelle verwenden"
 
 #: system/settings/settings.xml
 msgctxt "#13404"
@@ -6754,7 +6767,7 @@ msgstr "Nächstes Video automatisch abspielen"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13434"
 msgid "Play only this"
-msgstr "Nur dies abspielen"
+msgstr "Nur dieses Video abspielen"
 
 #: system/settings/settings.xml
 msgctxt "#13435"
@@ -7184,7 +7197,7 @@ msgstr "Herunterladen der Streamliste ist fehlgeschlagen"
 
 msgctxt "#14007"
 msgid "Downloading playlist file failed"
-msgstr "Herunterladen der Wiedergabeliste fehlgeschlagen"
+msgstr "Herunterladen der Wiedergabeliste ist fehlgeschlagen"
 
 msgctxt "#14009"
 msgid "Games directory"
@@ -7395,7 +7408,7 @@ msgstr "Scan beenden"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#14057"
 msgid "Not possible while scanning for media information"
-msgstr "Nicht möglich während des Durchsuchens"
+msgstr "Nicht möglich während der Suche nach Medieninformationen"
 
 msgctxt "#14058"
 msgid "Film grain effect"
@@ -7567,7 +7580,7 @@ msgstr "Abspielen"
 #: system/settings/settings.xml
 msgctxt "#14099"
 msgid "Eject disc when the CD ripping is complete"
-msgstr "CD auswerfen, wenn das Kopieren beendet wurde"
+msgstr "CD auswerfen, wenn das Rippen beendet wurde"
 
 #: xbmc/music/windows/GUIWindowMusicSongs.cpp
 msgctxt "#14100"
@@ -8200,16 +8213,16 @@ msgstr "Keine Verbindung zum Netzwerkserver"
 
 msgctxt "#15302"
 msgid "No servers found"
-msgstr "Es wurden keine Server gefunden"
+msgstr "Es wurden keine Server gefunden."
 
 #: xbmc/windows/GUIMediaWindow.cpp xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#15303"
 msgid "Workgroup not found"
-msgstr "Es konnte keine Arbeitsgruppe gefunden werden"
+msgstr "Es konnte keine Arbeitsgruppe gefunden werden."
 
 msgctxt "#15310"
 msgid "Opening multi-path source"
-msgstr "Multipfadfreigabe wird geöffnet ..."
+msgstr "Multipfadquelle wird geöffnet ..."
 
 msgctxt "#15311"
 msgid "Path:"
@@ -8341,7 +8354,7 @@ msgstr "Für mehr Details Logdatei einsehen."
 
 msgctxt "#16030"
 msgid "Party mode aborted."
-msgstr "Partymodus abgebrochen."
+msgstr "Partymodus abgebrochen"
 
 msgctxt "#16031"
 msgid "No matching songs in the library."
@@ -8443,7 +8456,7 @@ msgstr "Sortierungstitel bearbeiten"
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16200"
 msgid "Operation was aborted"
-msgstr "Der Vorgang wurde abgebrochen"
+msgstr "Der Vorgang wurde abgebrochen."
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16201"
@@ -8937,7 +8950,7 @@ msgstr "Informationen"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19034"
 msgid "There is already a timer set for this event"
-msgstr "Es existiert bereits ein Timer für dieses Ereignis"
+msgstr "Es existiert bereits ein Timer für dieses Ereignis."
 
 #. message box text stating that a pvr channel could not be played.
 #: xbmc/pvr/PVRGUIActions.cpp xbmc/pvr/PVRManager.cpp
@@ -8966,7 +8979,7 @@ msgstr "Signalqualität anzeigen"
 #: xbmc/pvr/dialogs/GUIDialogPVRChannelManager.cpp
 msgctxt "#19038"
 msgid "Not supported by the PVR backend."
-msgstr "Wird nicht vom PVR-Backend unterstützt."
+msgstr "Wird nicht vom PVR-Backend unterstützt"
 
 #. message box text asking for confirmation to hide a channel.
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -9035,7 +9048,7 @@ msgstr "Ausgeblendete Kanäle anzeigen"
 #: @@@ unused?
 msgctxt "#19052"
 msgid "Move channel to:"
-msgstr "Verschiebe Kanal nach:"
+msgstr "Kanal verschieben nach:"
 
 #. Label for a context menu entry to open recording info dialog
 #: xbmc/pvr/PVRContextMenus.cpp
@@ -9172,7 +9185,7 @@ msgctxt "#19072"
 msgid ""
 "In order to add/update a timer the end date and time must be greater than "
 "the start date and time."
-msgstr ""
+msgstr "Damit der Timer aktualisiert werden kann, müssen Enddatum und -zeit größer sein als Anfangsdatum und -zeit. "
 
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
@@ -9367,7 +9380,7 @@ msgstr "Bitte zu einem anderen Kanal wechseln."
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19103"
 msgid "Go to channel"
-msgstr "Zum Kanal"
+msgstr "Wechseln zu Kanal"
 
 #. label of the help text for the recording folder edit field in PVR timer
 #. settings dialog
@@ -9464,7 +9477,7 @@ msgstr "Kanalsuche"
 #. unused?
 msgctxt "#19118"
 msgid "Can't use PVR functions while searching."
-msgstr "PVR-Funktionen können während der Suche nicht verwendet werden"
+msgstr "PVR-Funktionen können während der Suche nicht verwendet werden."
 
 #. channel scan backend selection dialog text
 #: xbmc/pvr/PVRGUIActions.cpp
@@ -10381,7 +10394,7 @@ msgstr "Ungültige PIN"
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19265"
 msgid "The entered PIN was incorrect."
-msgstr "Die eingegebene PIN ist ungültig"
+msgstr "Die eingegebene PIN ist nicht korrekt."
 
 #. label to use for epg tag title instead of actual event title if the
 #. respective channel is parental locked
@@ -10711,7 +10724,7 @@ msgstr "Backend-Reihenfolge"
 #: system/settings/settings.xml
 msgctxt "#19316"
 msgid "Start group channel numbers from 1"
-msgstr "Kananlnummern in Gruppen mit 1 beginnen"
+msgstr "Kanalnummerierung in Gruppen mit „1“ beginnen"
 
 #. Label for epg grid window "Jump 12 hours back" context menu entry and epg
 #. grid controls dialog help text
@@ -10759,7 +10772,7 @@ msgstr "Gruppenauswahl"
 #: xbmc/pvr/windows/GUIWindowPVRGuide.cpp
 msgctxt "#19322"
 msgid "First channel"
-msgstr "Erster Kanel"
+msgstr "Erster Kanal"
 
 #. Label for epg grid window "Jump to playing channel" context menu entry and
 #. epg grid controls dialog help text
@@ -11125,7 +11138,7 @@ msgstr "Religion"
 #: xbmc/pvr/epg/Epg.cpp
 msgctxt "#19600"
 msgid "Popular culture / Traditional arts"
-msgstr "Beliebte Kultur/Traditionelle Künste"
+msgstr "Beliebte Kultur / Traditionelle Künste"
 
 #. label for "arts/culture" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11173,7 +11186,7 @@ msgstr "Mode"
 #: xbmc/pvr/epg/Epg.cpp xbmc/pvr/dialogs/GUIDialogPVRGuideSearch.cpp
 msgctxt "#19612"
 msgid "Social / Political / Economics"
-msgstr "Sozial/Politisch/Wirtschaft"
+msgstr "Sozial / Politisch / Wirtschaft"
 
 #. label for "social/political/economics" epg subgenre value
 #: xbmc/pvr/epg/Epg.cpp
@@ -11467,7 +11480,7 @@ msgstr "Aufnahmen"
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20008"
 msgid "Screenshots"
-msgstr "Screenshots"
+msgstr "Bildschirmfotos"
 
 msgctxt "#20009"
 msgid "Use Kodi"
@@ -11632,11 +11645,11 @@ msgstr "Achtung!"
 
 msgctxt "#20053"
 msgid "Left master mode"
-msgstr "Master-Modus deaktiviert."
+msgstr "Master-Modus deaktiviert"
 
 msgctxt "#20054"
 msgid "Entered master mode"
-msgstr "Master-Modus aktiviert."
+msgstr "Master-Modus aktiviert"
 
 msgctxt "#20055"
 msgid "Allmusic.com thumb"
@@ -11825,7 +11838,7 @@ msgstr "Informationen für das Album werden abgerufen"
 #: xbmc/music/windows/GUIWindowMusicBase.cpp
 msgctxt "#20099"
 msgid "A CD or track can't be ripped while being played"
-msgstr "Wenn eine CD abgespielt wird, kann sie oder Teile von ihr nicht kopiert werden"
+msgstr "Wenn eine CD abgespielt wird, kann sie nicht gerippt werden"
 
 #: system/settings/settings.xml
 msgctxt "#20100"
@@ -11878,7 +11891,7 @@ msgstr "Letzte Anmeldung: {0:s}"
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20113"
 msgid "Never logged on"
-msgstr "Bisher noch nicht angemeldet"
+msgstr "Noch nie angemeldet"
 
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20114"
@@ -12201,7 +12214,7 @@ msgstr "Bibliotheksaktualisierungen bekanntgeben"
 #: addons/skin.estuary/xml/SkinSettings.xml
 msgctxt "#20189"
 msgid "Enable auto scrolling for plot & review"
-msgstr "Auto Scrolling für Handlungund Kritiken aktivieren"
+msgstr "Auto-Scrolling für Handlung und Kritiken aktivieren"
 
 msgctxt "#20190"
 msgid "Custom"
@@ -12281,7 +12294,7 @@ msgstr "Ordner für Interpreteninformationen"
 #: system/settings/settings.xml
 msgctxt "#20224"
 msgid "Prefer online album art"
-msgstr "Online Albumgrafik bevorzugen"
+msgstr "Online-Albumgrafik bevorzugen"
 
 #. Description of setting with label #20224 "Prefer online album art"
 #: system/settings/settings.xml
@@ -12289,7 +12302,7 @@ msgctxt "#20225"
 msgid ""
 "Where no local album cover exists, online art will be used. Where neither is"
 " available, cover images embedded in music files will be used"
-msgstr "Wenn kein lokales Album-Cover existiert, wird eine online Grafik verwendet. Wenn weder lokale noch online Grafiken verfügbar sind, werden Bilder, die in den Musikdateien eingebettet sind, verwendet."
+msgstr "Wenn kein lokales Album-Cover existiert, wird eine Online-Grafik verwendet. Wenn weder lokale noch Online-Grafiken verfügbar sind, werden Bilder, die in den Musikdateien eingebettet sind, verwendet."
 
 #: system/settings/settings.xml xbmc/music/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#20226"
@@ -12299,7 +12312,7 @@ msgstr "Ordner für Filmkollektionen"
 #: system/settings/settings.xml
 msgctxt "#20228"
 msgid "Use artist sortname when sorting by artist"
-msgstr "Beim Sortieren nach Interpret, Sortiernamen verwenden"
+msgstr "Beim Sortieren nach Interpret Sortiernamen verwenden"
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -12375,7 +12388,7 @@ msgstr "WebDAV-Server (HTTPS)"
 
 msgctxt "#20255"
 msgid "First logon, edit your profile"
-msgstr "Erster Login. Bearbeite Dein Profil."
+msgstr "Erste Anmeldung. Bitte das Profil anpassen."
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20259"
@@ -12444,30 +12457,30 @@ msgstr "Sortiert nach ID"
 
 msgctxt "#20317"
 msgid "Scanning movies using {0:s}"
-msgstr "Durchsuche Filme mit {0:s}"
+msgstr "Filme werden durchsucht mit {0:s}"
 
 msgctxt "#20318"
 msgid "Scanning music videos using {0:s}"
-msgstr "Durchsuche Musikvideos mit {0:s}"
+msgstr "Musikvideos werden durchsucht mit {0:s}"
 
 msgctxt "#20319"
 msgid "Scanning TV shows using {0:s}"
-msgstr "Durchsuche Serien mit {0:s}"
+msgstr "Serien werden durchsucht mit {0:s}"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20320"
 msgid "Scanning artists using {0:s}"
-msgstr "Durchsuche Interpreten mit {0:s}"
+msgstr "Interpreten werden durchsucht mit {0:s}"
 
 #: xbmc/music/infoscanner/MusicInfoScanner.cpp
 msgctxt "#20321"
 msgid "Scanning albums using {0:s}"
-msgstr "Durchsuche Alben mit {0:s}"
+msgstr "Alben werden durchsucht mit {0:s}"
 
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#20322"
 msgid "Content scanning options"
-msgstr "Inhalt-Scanning-Einstellungen"
+msgstr "Einstellungen für Durchsuchen von Inhalten"
 
 #: xbmc/video/windows/GUIWindowVideoNav.cpp
 msgctxt "#20323"
@@ -12476,7 +12489,7 @@ msgstr "Filmhandlung"
 
 msgctxt "#20324"
 msgid "Play part..."
-msgstr "Einzelteil abspielen ..."
+msgstr "Einzelnes Teil abspielen ..."
 
 msgctxt "#20325"
 msgid "Calibration reset"
@@ -12488,11 +12501,11 @@ msgstr "Dies setzt die Kalibrierwerte für {0:s} zurück"
 
 msgctxt "#20327"
 msgid "to its default values."
-msgstr "auf den Standardwert zurück."
+msgstr "auf die Standardwerte."
 
 msgctxt "#20328"
 msgid "Browse for destination"
-msgstr "Nach einem Speicherort durchsuchen ..."
+msgstr "Speicherort festlegen ..."
 
 msgctxt "#20329"
 msgid "Movies are in separate folders that match the movie title"
@@ -12712,7 +12725,7 @@ msgstr "* Die Handlung wird nicht angezeigt. *"
 
 msgctxt "#20371"
 msgid "Set season thumb"
-msgstr "Staffelvorschaubild setzen"
+msgstr "Staffelvorschaubild festlegen"
 
 msgctxt "#20372"
 msgid "Season image"
@@ -12908,7 +12921,7 @@ msgstr "Serienstaffeln reduzieren"
 
 msgctxt "#20413"
 msgid "Get fanart"
-msgstr "Lade Fanart"
+msgstr "Fanart laden"
 
 msgctxt "#20414"
 msgid "Show fanart in video and music libraries"
@@ -12916,7 +12929,7 @@ msgstr "Fanart in Video- und Musikbibliotheken anzeigen"
 
 msgctxt "#20415"
 msgid "Scanning for new content"
-msgstr "Suche neue Inhalte"
+msgstr "Neue Inhalte werden gesucht"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 #: addons/skin.estuary/xml/Variables.xml
@@ -13295,7 +13308,7 @@ msgstr "Unkategorisiert"
 #: system/settings/settings.xml
 msgctxt "#21358"
 msgid "Enable UPnP support"
-msgstr "UPnP-Support aktivieren."
+msgstr "UPnP-Unterstützung aktivieren"
 
 #: xbmc/dialogs/GUIDialogFileBrowser.cpp
 msgctxt "#21359"
@@ -13584,7 +13597,7 @@ msgstr "Intelligente Wiedergabelisten-Regel"
 #: addons/skin.estuary/xml/SmartPlaylistRule.xml
 msgctxt "#21422"
 msgid "Match items where"
-msgstr "Titel angleichen mit"
+msgstr "Einträge passen, wenn"
 
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
 msgctxt "#21423"
@@ -13642,7 +13655,7 @@ msgstr "Name der Wiedergabeliste"
 
 msgctxt "#21434"
 msgid "Find items where"
-msgstr "Suche passende Titel anhand"
+msgstr "Suche passende Einträge anhand"
 
 msgctxt "#21435"
 msgid "Edit"
@@ -14181,7 +14194,7 @@ msgstr "Kopierte Audio-CDs"
 
 msgctxt "#21884"
 msgid "Query info for all artists"
-msgstr "Lade Informationen für alle Interpreten"
+msgstr "Alle Interpreteninformationen laden"
 
 msgctxt "#21885"
 msgid "Downloading album information"
@@ -14266,7 +14279,7 @@ msgstr "Geboren / Gegründet"
 #: system/settings/settings.xml
 msgctxt "#22000"
 msgid "Update library on startup"
-msgstr "Aktualisiere die Bibliothek beim Start"
+msgstr "Bibliothek beim Start aktualisieren"
 
 #: system/settings/settings.xml
 msgctxt "#22001"
@@ -14509,7 +14522,7 @@ msgstr "Skript"
 #: xbmc/addons/Addon.cpp
 msgctxt "#24010"
 msgid "Visualisation"
-msgstr "Visualisierung"
+msgstr "Visualisierungen"
 
 #: xbmc/addons/Addon.cpp
 msgctxt "#24011"
@@ -14701,7 +14714,7 @@ msgstr "Dieses Addon kann nicht deinstalliert werden."
 #: xbmc/addons/Addon.cpp
 msgctxt "#24048"
 msgid "VideoPlayer InputStream"
-msgstr "Videoplayer InputStream Addons"
+msgstr "Videoplayer Inputstream Addons"
 
 #. To show addon as deprecated over icon
 #: addons/skin.estuary/xml/AddonBrowser.xml
@@ -15149,18 +15162,18 @@ msgid ""
 "The configuration of XBMC has been moved to the new location for Kodi. "
 "Please refer to http://kodi.wiki/view/Migration - this message will not be "
 "shown again!"
-msgstr "Die alte XBMC Konfiguration wurde zur Nutzung mit Kodi verschoben. Bitte sehen Sie auf http://kodi.wiki/view/Migration nach - diese Nachricht wird nicht erneut angezeigt werden!"
+msgstr "Die alte XBMC-Konfiguration wurde zur Nutzung mit Kodi verschoben. Bitte auf http://kodi.wiki/view/Migration nachsehen - diese Nachricht wird nicht erneut angezeigt werden!"
 
 #: system/settings/settings.xml
 msgctxt "#24130"
 msgid "Enable parsing for closed captions"
-msgstr "Nach geschlossenen Untertiteln suchen"
+msgstr "Nach Untertiteln mit erklärendem Text suchen"
 
 #: system/settings/settings.xml
 msgctxt "#24131"
 msgid ""
 "Enable to parse for CC in video stream. Puts slightly more load on the CPU"
-msgstr "Aktiviert die Suche nach erklärendem Text in Video-Streams. Erhöht ein wenig die CPU-Last."
+msgstr "Aktiviert die Suche nach erklärendem Text in Video-Streams (sog. closed captions). Erhöht ein wenig die CPU-Last."
 
 #: xbmc/addons/LanguageResource.cpp
 msgctxt "#24132"
@@ -15234,7 +15247,7 @@ msgctxt "#24143"
 msgid ""
 "Installing the Add-on from zip file located at {0:s} failed due to an "
 "invalid structure."
-msgstr "Die Installation des Addons aus der ZIP-Datei von {0:s} ist fehlgeschlagen. Die Datei hat nicht die korrekte Struktur."
+msgstr "Die Installation des Addons aus der ZIP-Datei von {0:s} ist fehlgeschlagen. Der Dateiinhalt hat nicht die korrekte Struktur."
 
 #. Used as an event log description for add-ons that have been uninstalled
 #: xbmc/addons/AddonInstaller.cpp
@@ -15293,7 +15306,7 @@ msgstr "Das Addon ist nicht kompatibel mit dieser Kodi-Version."
 #: apple remote
 msgctxt "#24153"
 msgid "Enable to make the Siri remote match the normal Apple tvOS behavior"
-msgstr "Aktivieren um die Siri remote wie das normale Apple  tvOS agieren zu lassen"
+msgstr "Aktivieren, um die Siri Remote wie das normale Apple tvOS agieren zu lassen"
 
 #: apple remote
 msgctxt "#24154"
@@ -16468,7 +16481,7 @@ msgid ""
 "You have previously enabled the web interface without setting up a password."
 " The web server has been disabled until you either explicitly allow this or "
 "set up authentication. Please review your settings."
-msgstr "Die Weboberfläche wurde ohne Angabe von Benutzername und Passwort aktiviert. Der Webserver wird solange deaktiviert, bis dies explizit erlaubt wird oder Benutzername und Passwort angegeben werden. Bitte Einstellungen überprüfen."
+msgstr "Die Web-Oberfläche wurde ohne Angabe von Benutzername und Passwort aktiviert. Der Webserver wird solange deaktiviert, bis dies explizit erlaubt wird oder Benutzername und Passwort angegeben werden. Bitte Einstellungen überprüfen."
 
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
@@ -17850,7 +17863,7 @@ msgstr "TV"
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36038"
 msgid "Amplifier / AVR device"
-msgstr "Verstärker/AV-Receiver"
+msgstr "Verstärker / AV-Receiver"
 
 #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp system/peripherals.xml
 msgctxt "#36039"
@@ -18035,7 +18048,7 @@ msgid ""
 "Choose which character set is used for displaying text in the user "
 "interface. This doesn't change the character set used for subtitles, for "
 "that go to Player > Language."
-msgstr "Auswahl des Zeichensatzes der Benutzeroberfläche. Dies verändert den Zeichensatz. Dies ändert den Zeichensatz für Untertitel nicht, dieser ist änderbar unter Player > Sprache"
+msgstr "Auswahl des Zeichensatzes der Benutzeroberfläche. Dies ändert nicht den Zeichensatz für Untertitel. Dieser ist änderbar unter Player > Sprache"
 
 #. Description of setting with label #14079 "Timezone country"
 #: system/settings/settings.xml
@@ -18813,7 +18826,7 @@ msgstr "Kategorie mit Einstellungen zur PVR-Wiedergabe und zum Kanalwechsel."
 #: system/settings/settings.xml
 msgctxt "#36227"
 msgid "Switch to full screen display when starting playback of channels."
-msgstr "Auf Vollbild umschalten, wenn TV- oder Radio-Kanal aktiviert wird."
+msgstr "Auf Vollbild umschalten, wenn TV-Kanal oder Radiosender aktiviert wird."
 
 #. Description of setting with label #745 "Background Colour"
 #: system/settings/settings.xml
@@ -19378,7 +19391,7 @@ msgctxt "#36306"
 msgid ""
 "If not using backend channel numbers then start all groups channel numbers "
 "from 1."
-msgstr "Wenn keine Backend-Kanalnummern verwendet werden, beginne gruppenspezifische Kanalnummern mit 1."
+msgstr "Wenn keine Backend-Kanalnummern verwendet werden, gruppenspezifische Kanalnummern mit 1 beginnen."
 
 #. Description of setting with label #13360 "Automatically generate
 #. thumbnails"
@@ -20642,7 +20655,7 @@ msgctxt "#36552"
 msgid ""
 "Defines the number of presentation buffers used by the graphics driver. "
 "Select 2 if the driver uses double buffering or 3 for triple buffering."
-msgstr "Definiert die Anzahl an Anzeigepuffern, die vom Grafiktreiber verwendet werden. 2 auswählen, wenn der Treiber double buffering und 3, falls er triple buffering verwendet."
+msgstr "Definiert die Anzahl an Anzeigepuffern, die vom Grafiktreiber verwendet werden. 2 auswählen, wenn der Treiber \"double buffering\" und 3, falls er \"triple buffering\" verwendet."
 
 #. label of a setting, allowing to specify tonemap method
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -20731,7 +20744,7 @@ msgstr "Die 3D LUT-Datei auswählen, die standardmäßig verwendet werden soll. 
 #: system/settings/settings.xml
 msgctxt "#36566"
 msgid "ICC display profile"
-msgstr "ICC Anzeigeprofil"
+msgstr "ICC-Anzeigeprofil"
 
 #. Description of setting "System -> Video output -> ICC display profile" with
 #. label #36566
@@ -20745,7 +20758,7 @@ msgid ""
 "towards display native black (causing raised black level) and white level "
 "scaling when a different whitepoint from display native is selected (as a "
 "workaround, adjust video brightness down to avoid clipping)."
-msgstr "Wird ein Anzeigeprofil bereitgestellt, so können Videoparameter wie Gamma, Primärfarben und Weißpunkt während der Wiedergabe angepasst werden. Basierend auf diesen Parametern wird ein ICC Quellprofil erstellt und mit dem hier definierten Anzeigeprofil verknüpft. Diese Funktion ist aktuell experimentell und hat noch Schwächen bei der Anpassung von beinahe Schwarzwerten zum Schwarzwert des Anzeigegeräts (verursacht erhöhten Schwarzwert) sowie bei der Verschiebung des Weißwertes, wenn der Weißpunkt von dem des Anzeigegeräts abweicht (zur Umgehung dieses Problems kann die Helligkeit des Videos heruntergesetzt werden)."
+msgstr "Wird ein Anzeigeprofil bereitgestellt, so können Videoparameter wie Gamma, Primärfarben und Weißpunkt während der Wiedergabe angepasst werden. Basierend auf diesen Parametern wird ein ICC-Quellprofil erstellt und mit dem hier definierten Anzeigeprofil verknüpft. Diese Funktion ist aktuell experimentell und hat noch Schwächen bei der Anpassung von Beinahe-Schwarzwerten zum Schwarzwert des Anzeigegeräts (verursacht erhöhten Schwarzwert) sowie bei der Verschiebung des Weißwertes, wenn der Weißpunkt von dem des Anzeigegeräts abweicht (zur Umgehung dieses Problems kann die Helligkeit des Videos heruntergesetzt werden)."
 
 #: system/settings/settings.xml
 msgctxt "#36568"
@@ -21529,7 +21542,7 @@ msgstr "„Alle Einträge“ anzeigen"
 #: system/settings/settings.xml
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Eintrag für „Alle Elemente“ in Verzeichnisses anzeigen, z. B. „Alle Alben“ oder „Alle Staffeln“"
+msgstr "Eintrag für „Alle Elemente“ in Verzeichnissen anzeigen, z. B. „Alle Alben“ oder „Alle Staffeln“"
 
 #. Label of a setting to limit the number of fps used for updating the GUI
 #. while playing videos. This is useful for slow systems that have problems
@@ -21611,7 +21624,7 @@ msgstr "Darstellungen"
 #: xbmc/video/PlayerController.cpp
 msgctxt "#38031"
 msgid "Video stream"
-msgstr "Videospur"
+msgstr "Videostream"
 
 #. Label for an option to select the angle to play if current disc has more
 #. than one angle
@@ -21705,7 +21718,7 @@ msgstr "Alle Mitwirkenden"
 #: system/library/music/musicroles/allroles.xml
 msgctxt "#38046"
 msgid "All roles"
-msgstr "Alle Regeln"
+msgstr "Alle Rollen"
 
 #. Question when forced rescan of music tags needed after upgrade from
 #. previous version of Kodi
@@ -22510,7 +22523,7 @@ msgstr "Zuletzt modifiziert"
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#39120"
 msgid "Skip filename matching for external audio tracks"
-msgstr "Dateinamenvergleich für externe Musikstücke überspringen"
+msgstr "Dateinamenvergleich für externe Tonspuren überspringen"
 
 #. Label for section of settings controling what is shown on the library
 #. windows

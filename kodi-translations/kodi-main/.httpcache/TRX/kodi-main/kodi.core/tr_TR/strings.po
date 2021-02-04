@@ -2,21 +2,23 @@
 # Translators:
 # Aisac <raspberrypi@aisac.de>, 2015
 # Altay Aydın <aaltay734@gmail.com>, 2020
+# Brsn Ek <bkzspam@outlook.com>, 2021
 # BouRock, 2020
+# Brsn Ek <bkzspam@outlook.com>, 2021
 # Jack Elliott <eomuris@gmail.com>, 2017
 # Erhan ERSÖZ <3rhan3rsoz@gmail.com>, 2015
 # Mucahid Zeyrek <mucahid.zeyrek@dhl.com>, 2017
 # Oguz Hans <oguzhanyildizoglu@gmail.com>, 2015
 # Okan KILINC <kilincokan@hotmail.com>, 2015-2016,2018
-# Özgür BASKIN, 2015-2020
+# Özgür BASKIN, 2015-2021
 # Serhat SUT <serhat.sut@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-14 18:00+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2021-02-04 20:33+0000\n"
+"Last-Translator: Özgür BASKIN\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/teamxbmc/kodi-main/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1964,15 +1966,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "{0:s} yönünden {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Optik disk sürücüsü algılanmadı"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Bu videoyu oynatabilmek için optik disk sürücüsüne ihtiyacınız var"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr "Bu video bir optik diskte (örn. DVD, Blu-ray) saklanır ve cihazınızda uygun bir sürücü olmadığından oynatılamaz."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -3943,7 +3953,7 @@ msgstr "İnternet adresini girin"
 #: system/settings/settings.xml
 msgctxt "#1052"
 msgid "Require authentication"
-msgstr ""
+msgstr "Kimlik doğrulama gerektir"
 
 #: system/settings/settings.xml
 msgctxt "#1053"
@@ -4169,6 +4179,11 @@ msgstr "Özel doğrudan geçiş aygıtı"
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "Ses kontrolü adımları"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr "Esintili"
 
 #. Weather token
 msgctxt "#1375"
@@ -4820,7 +4835,7 @@ msgstr "Dosya kaynağını düzenle"
 #: xbmc/video/dialogs/CGUIDialogVideoInfo.cpp
 msgctxt "#10058"
 msgid "Remove tag from library"
-msgstr ""
+msgstr "Etiketi kitaplıktan kaldır"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10099"
@@ -5241,7 +5256,7 @@ msgstr "Oyun OSD"
 
 msgctxt "#10823"
 msgid "Game controllers"
-msgstr "Oyun denetleyicileri"
+msgstr "Oyun kumandaları"
 
 msgctxt "#10824"
 msgid "Game video settings"
@@ -6712,7 +6727,7 @@ msgstr "Donanım hızlandırmasına izin ver - VTBDecoder"
 #: system/settings/settings.xml
 msgctxt "#13430"
 msgid "Allow using DRM PRIME decoder"
-msgstr ""
+msgstr "DRM PRIME kod çözücünün kullanılmasına izin ver"
 
 #: system/settings/settings.xml
 #: xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.cpp
@@ -6754,7 +6769,7 @@ msgstr "VDPAU video mixer tercih et"
 #: system/settings/settings.xml
 msgctxt "#13438"
 msgid "Allow hardware acceleration with DRM PRIME"
-msgstr ""
+msgstr "DRM PRIME ile donanım hızlandırmasına izin ver"
 
 #: system/settings/settings.xml
 msgctxt "#13439"
@@ -7706,12 +7721,12 @@ msgstr "Beyaz liste"
 #: system/settings/settings.xml
 msgctxt "#14127"
 msgid "Allow 3:2 pulldown refresh rates"
-msgstr ""
+msgstr "3:2 pulldown yenileme hızına izin ver"
 
 #: system/settings/settings.xml
 msgctxt "#14128"
 msgid "Allow double refresh rates"
-msgstr ""
+msgstr "Çift yenileme hızına izin ver"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -8504,7 +8519,7 @@ msgstr "Bilinear"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16303"
 msgid "Bicubic (B-Spline)"
-msgstr ""
+msgstr "Bicubic (B-Spline)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16304"
@@ -8559,7 +8574,7 @@ msgstr "VDPAU - Netlik"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16314"
 msgid "Bicubic (Mitchell)"
-msgstr ""
+msgstr "Bicubic (Mitchell)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16315"
@@ -8595,7 +8610,7 @@ msgstr "DXVA"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16321"
 msgid "Bicubic (Catmull-Rom)"
-msgstr ""
+msgstr "Bicubic (Catmull-Rom)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16322"
@@ -8620,7 +8635,7 @@ msgstr "VDPAU - Bob"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16326"
 msgid "Bicubic (0,0.75)"
-msgstr ""
+msgstr "Bicubic (0,0.75)"
 
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16327"
@@ -8640,7 +8655,7 @@ msgstr "VAAPI - Motion compensated"
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
 msgctxt "#16330"
 msgid "Bicubic (0,1.)"
-msgstr ""
+msgstr "Bicubic (0,1.)"
 
 #. Description of OSD video settings for deinterlace method with label #16334
 #: xbmc/video/dialogs/GUIDialogVideoSettings.cpp
@@ -9152,7 +9167,7 @@ msgctxt "#19072"
 msgid ""
 "In order to add/update a timer the end date and time must be greater than "
 "the start date and time."
-msgstr ""
+msgstr "Bir zamanlayıcı ekleyebilmek/değiştirebilmek için bitiş tarihi ve saati, başlangıç tarihi ve saatinden sonra olmalıdır."
 
 #. pvr settings "delay channel switch" setting label
 #: system/settings/settings.xml
@@ -10774,13 +10789,13 @@ msgstr "Git..."
 #: xbmc/pvr/PVRContextMenus.cpp
 msgctxt "#19327"
 msgid "Delete watched"
-msgstr ""
+msgstr "İzlenenleri sil"
 
 #. delete multiple recordings confirmation message box text
 #: xbmc/pvr/PVRGUIActions.cpp
 msgctxt "#19328"
 msgid "Delete all watched recordings in this folder?"
-msgstr ""
+msgstr "Bu klasördeki bütün izlenmiş kayıtlar silinsin mi?"
 
 #. label for PVR settings use backend channel numbers always
 #: system/settings/settings.xml
@@ -13187,7 +13202,7 @@ msgstr "Boş TV programlarını göster"
 #: system/settings/settings.xml
 msgctxt "#20472"
 msgid "Show all performers for music videos"
-msgstr ""
+msgstr "Müzik videoları için bütün sanatçıları göster"
 
 #: system/settings/settings.xml
 msgctxt "#21330"
@@ -13254,7 +13269,7 @@ msgstr "Hiçbir güncelleme bulunamadı"
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#21342"
 msgid "There are currently no versions available for this add-on."
-msgstr ""
+msgstr "Şu anda bu eklenti için mevcut başka bir sürüm yok."
 
 #: system/settings.xml
 msgctxt "#21343"
@@ -14688,7 +14703,7 @@ msgstr "VideoPlayer InputStream"
 #: addons/skin.estuary/xml/DialogAddonInfo.xml
 msgctxt "#24049"
 msgid "Add-on has been marked deprecated in repository."
-msgstr ""
+msgstr "Eklenti depoda kullanım dışı olarak işaretlenmiş."
 
 #: unknown
 msgctxt "#24050"
@@ -14793,7 +14808,7 @@ msgstr "Güncelleme var"
 
 msgctxt "#24069"
 msgid "Versions"
-msgstr ""
+msgstr "Sürümler"
 
 msgctxt "#24070"
 msgid "Add-on couldn't be loaded."
@@ -14892,7 +14907,7 @@ msgstr "Tüm depolar"
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24088"
 msgid "Failed to install repository"
-msgstr ""
+msgstr "Depo yüklenemedi"
 
 msgctxt "#24089"
 msgid "Add-on restarts"
@@ -15084,7 +15099,7 @@ msgstr "Arama dizesi girin"
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24122"
 msgid "Install all updates"
-msgstr ""
+msgstr "Tüm güncellemeleri yükle"
 
 #. Description of setting with label #24105 "Pause when searching for
 #. subtitles"
@@ -15172,7 +15187,7 @@ msgstr "Bu eklentiyi etkinleştirmek ister misiniz?"
 #: xbmc/filesystem/AddonDirectory.cpp
 msgctxt "#24137"
 msgid "Install auto updates only"
-msgstr ""
+msgstr "Yalnızca otomatik güncellemeleri yükle"
 
 #. Button caption in DialogAddoninfo
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
@@ -15328,7 +15343,7 @@ msgstr "Apple tvOS Standardıyla eşleş (Siri kumandası)"
 #: xbmc/addons/gui/GUIHelpers.cpp
 msgctxt "#24164"
 msgid "Addon \"{0:s}\" broken"
-msgstr ""
+msgstr "\"{0:s}\" eklentisi bozuk"
 
 #. Yes/no dialog text with addon broken string value and to ask for use
 #: xbmc/addons/gui/GUIHelpers.cpp
@@ -15336,13 +15351,13 @@ msgctxt "#24165"
 msgid ""
 "Addon marked as broken with following note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do"
 " you want to enable?"
-msgstr ""
+msgstr "Eklenti aşağıdaki notla birlikte bozuk olarak işaretlendi:[CR][B][I]{0:s}[/I][/B][CR][CR]Etkinleştirmek istiyor musunuz?"
 
 #. Header text for yes/no dialog about enable of deprecated addon
 #: xbmc/addons/gui/GUIHelpers.cpp
 msgctxt "#24166"
 msgid "Addon \"{0:s}\" deprecated"
-msgstr ""
+msgstr "\"{0:s}\" eklentisi kullanım dışı"
 
 #. Yes/no dialog text with addon deprecated string value and to ask for use
 #: xbmc/addons/gui/GUIHelpers.cpp
@@ -15350,13 +15365,13 @@ msgctxt "#24167"
 msgid ""
 "Addon marked as deprecated with following "
 "note:[CR][B][I]{0:s}[/I][/B][CR][CR]Do you want to enable?"
-msgstr ""
+msgstr "Eklenti aşağıdaki notla birlikte kullanım dışı olarak işaretlendi:[CR][B][I]{0:s}[/I][/B][CR][CR]Etkinleştirmek istiyor musunuz?"
 
 #. Notification event to show addon marked as deprecated.
 #: xbmc/addons/AddonInstaller.cpp
 msgctxt "#24168"
 msgid "Deprecated: {0:s}"
-msgstr ""
+msgstr "Kullanım dışı: {0:s}"
 
 #. Lifecycle state name, for normal addons (no special). Used also on skin to
 #. compare and identify related state.
@@ -15375,7 +15390,7 @@ msgstr "Normal"
 #: xbmc/guilib/guiinfo/AddonsGUIInfo.cpp
 msgctxt "#24170"
 msgid "Deprecated"
-msgstr ""
+msgstr "Kullanım dışı"
 
 #. Lifecycle state name, for broken and not usable addons. Used also on skin
 #. to compare and identify related state.
@@ -15393,7 +15408,7 @@ msgstr "Bozuk"
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#24180"
 msgid "Minimum: {0:s}{3:s}"
-msgstr ""
+msgstr "Minimum: {0:s}{3:s}"
 
 #. The minimum version, plus the version going to be installed
 #. {3:s} reserved for an empty string or the " (optional)" optional string.
@@ -15401,7 +15416,7 @@ msgstr ""
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
 msgctxt "#24181"
 msgid "Minimum: {0:s} => Install: {2:s}{3:s}"
-msgstr ""
+msgstr "Minimum: {0:s} => Yüklenecek: {2:s}{3:s}"
 
 #. The minimum version, plus the currently installed version
 #. {3:s} reserved for an empty string or the " (optional)" optional string.
@@ -15409,7 +15424,7 @@ msgstr ""
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
 msgctxt "#24182"
 msgid "Minimum: {0:s} / Installed: {1:s}{3:s}"
-msgstr ""
+msgstr "Minimum: {0:s} => Yüklenen: {2:s}{3:s}"
 
 #. The minimum version, the currently installed, plus the updated version
 #. we're going to install
@@ -15418,13 +15433,13 @@ msgstr ""
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
 msgctxt "#24183"
 msgid "Minimum: {0:s} / Installed: {1:s} => Update to: {2:s}{3:s}"
-msgstr ""
+msgstr "Minimum: {0:s} / Yüklenen: {1:s} => Yeni Versiyon: {2:s}{3:s}"
 
 #. used in #24180 - #24183 as {3:s}
 #: xbmc/addons/gui/GUIDialogAddonInfo.cpp
 msgctxt "#24184"
 msgid " (optional)"
-msgstr ""
+msgstr " (isteğe bağlı)"
 
 #. Used as error message in add-on browser when add-on repository data could
 #. not be downloaded
@@ -16448,7 +16463,7 @@ msgid ""
 "You have previously enabled the web interface without setting up a password."
 " The web server has been disabled until you either explicitly allow this or "
 "set up authentication. Please review your settings."
-msgstr ""
+msgstr "Web arayüzünü önceden herhangi bir parola ayarlamadan etkinleştirdiniz. Web sunucusu kesin olarak bu durumu kabul edene kadar veya kimlik doğrulama seçeneği ayarlanana kadar kapalı kalacaktır. Lütfen ayarlarınızı kontrol ediniz."
 
 #: xbmc/network/eventclient.cpp
 msgctxt "#33200"
@@ -16665,22 +16680,22 @@ msgstr "Çalınacak önceki öğe bulunamadı"
 #: xbmc/Application.cpp
 msgctxt "#34220"
 msgid "HDR is OFF"
-msgstr ""
+msgstr "HDR KAPALI"
 
 #: xbmc/Application.cpp
 msgctxt "#34221"
 msgid "Display HDR is Off"
-msgstr ""
+msgstr "HDR Ekranı Kapalı"
 
 #: xbmc/Application.cpp
 msgctxt "#34222"
 msgid "HDR is ON"
-msgstr ""
+msgstr "HDR AÇIK"
 
 #: xbmc/Application.cpp
 msgctxt "#34223"
 msgid "Display HDR is On"
-msgstr ""
+msgstr "HDR Ekranı Açık"
 
 #: xbmc/Application.cpp
 msgctxt "#34224"
@@ -16954,7 +16969,7 @@ msgid ""
 "Use the keyboard or remote to select a controller profile. When prompted, "
 "press the button on your game controller that best matches what you see on "
 "the screen. If you make a mistake you can repeat the process."
-msgstr "Denetleyici profilini seçmek için bir klavye veya uzaktan kumanda kullanın. İstendiğinde, ekranda gördüğünüz ve oyun denetleyicisinde bu eylemi en iyi karşılayan düğmeye basın. Eğer bir hata yaparsanız işlemi tekrarlayabilirsiniz."
+msgstr "Denetleyici profilini seçmek için bir klavye veya uzaktan kumanda kullanın. İstendiğinde, ekranda gördüğünüz ve oyun kumandasında bu eylemi en iyi karşılayan düğmeye basın. Eğer bir hata yaparsanız işlemi tekrarlayabilirsiniz."
 
 #. Title of controller configuration window
 #: addons/skin.estuary/xml/DialogGameControllers.xml
@@ -17137,12 +17152,12 @@ msgstr "{0:s} analog çubuğunu sola hareket ettirin ({1:d})"
 #: system/settings/settings.xml
 msgctxt "#35100"
 msgid "Enable controller support"
-msgstr ""
+msgstr "Denetleyici desteğini etkinleştir"
 
 #: system/peripherals.xml
 msgctxt "#35102"
 msgid "Disable controllers when this device is present"
-msgstr ""
+msgstr "Bu aygıt mevcut iken denetleyicileri devre dışı bırak"
 
 #. Label for mouse buttons. Used in the controller mapping dialog.
 msgctxt "#35103"
@@ -17210,7 +17225,7 @@ msgid ""
 "This allows the keyboard to emulate up to 8 game controllers. If disabled, "
 "the keyboard can still be used to control emulators like DOSBox which "
 "require a full keyboard."
-msgstr "Bu, klavyenin 8 oyun denetleyicisine kadar taklit etmesini sağlar. Devre dışı bırakılırsa, klavye, DOSBox gibi tam klavye gerektiren emülatörleri kontrol etmek için kullanılabilir."
+msgstr "Bu, klavyenin 8 oyun kumandasına kadar taklit etmesini sağlar. Devre dışı bırakılırsa, klavye, DOSBox gibi tam klavye gerektiren emülatörleri kontrol etmek için kullanılabilir."
 
 #. Setting name for number of keyboard players
 #: system/settings/settings.xml
@@ -18101,7 +18116,7 @@ msgctxt "#36128"
 msgid ""
 "This category contains the settings for how the screensaver add-ons are "
 "handled."
-msgstr "Bu kategori ekran koruyucu eklentilerinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori ekran koruyucu eklentilerinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #355 "Wait time"
 #: system/settings/settings.xml
@@ -18172,14 +18187,14 @@ msgstr "Henüz hiçbir bilgi yok."
 msgctxt "#36138"
 msgid ""
 "Section that contains settings related to videos and how they are handled."
-msgstr "Videolar ile ilgili ayarların nasıl işleğeceğini içeren bölüm."
+msgstr "Videolar ile ilgili ayarların nasıl işleyeceğini içeren bölüm."
 
 #. Description of settings category with label #14022 "Library"
 #: system/settings/settings.xml
 msgctxt "#36139"
 msgid ""
 "This category contains the settings for how the video library is handled."
-msgstr "Bu kategori video kitaplığının nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori video kitaplığının nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #14105 "Temperature unit"
 #: system/settings/settings.xml
@@ -18270,7 +18285,7 @@ msgstr "Video kitaplığı veritabanını bir XML dosyasından içeri aktar."
 #: system/settings/settings.xml
 msgctxt "#36151"
 msgid "This category contains the settings for how video playback is handled."
-msgstr "Bu kategori video oynatımının nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori video oynatımının nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #13433 "Play next video automatically"
 #: system/settings/settings.xml
@@ -18432,7 +18447,7 @@ msgstr "Geniş ekranlarda görüntülenecek 4:3 videoların yakınlaştırma dü
 #: system/settings/settings.xml
 msgctxt "#36172"
 msgid "Enable PRIME decoding of video files"
-msgstr ""
+msgstr "Video dosyaları için PRIME kod çözmesini etkinleştir"
 
 #. Description of setting with label #14109 "Short date format"
 #: system/settings/settings.xml
@@ -18459,7 +18474,7 @@ msgstr "Teleteksi 4:3 oranına ölçeklendir."
 msgctxt "#36176"
 msgid ""
 "This category contains the settings for how video file lists are handled."
-msgstr "Bu kategori video dosyası listelerinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori video dosyası listelerinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #22079 "Default select action"
 #: system/settings/settings.xml
@@ -18520,7 +18535,7 @@ msgstr "Başlık, tür gibi kriterleri kitaplık görünümünden kaldırır. Bi
 #: system/settings/settings.xml
 msgctxt "#36184"
 msgid "This category contains the settings for how subtitles are handled."
-msgstr "Bu kategori altyazıların nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori altyazıların nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #14089 "Font to use for text subtitles"
 #: system/settings/settings.xml
@@ -18577,7 +18592,7 @@ msgctxt "#36193"
 msgid ""
 "This category contains the settings for how DVD's, Blu-ray, & CD's are "
 "handled."
-msgstr "Bu kategori DVD'ler, Blu-ray ve CD'lerin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori DVD'ler, Blu-ray ve CD'lerin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #14088 "Play DVDs automatically"
 #: system/settings/settings.xml
@@ -18967,7 +18982,7 @@ msgctxt "#36253"
 msgid ""
 "Section that contains settings related to music files and how they are "
 "handled."
-msgstr "Müzik dosyaları ile ilgili ayarların nasıl işleğeceğini içeren bölüm."
+msgstr "Müzik dosyaları ile ilgili ayarların nasıl işleyeceğini içeren bölüm."
 
 #: system/settings/settings.xml
 msgctxt "#36254"
@@ -19052,7 +19067,7 @@ msgstr "Müzik kitaplığı veritabanını bir XML dosyasından içeri aktar."
 #: system/settings/settings.xml
 msgctxt "#36264"
 msgid "This category contains the settings for how music playback is handled."
-msgstr "Bu kategori müzik çalmanın nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori müzik çalmanın nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #489 "Play next song automatically"
 #: system/settings/settings.xml
@@ -19191,7 +19206,7 @@ msgstr "Küçük resimleri uzak paylaşımlarda ve optik medya üzerinde ara. Bu
 #: system/settings/settings.xml
 msgctxt "#36282"
 msgid "This category contains the settings for how CDs are handled."
-msgstr "Bu kategori CD'lerin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori CD'lerin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #14097 "Audio CD Insert Action"
 #: system/settings/settings.xml
@@ -19344,14 +19359,14 @@ msgstr "Henüz hiçbir bilgi yok."
 msgctxt "#36304"
 msgid ""
 "Section that contains settings related to pictures and how they are handled."
-msgstr "Resimler ile ilgili ayarların nasıl işleğeceğini içeren bölüm."
+msgstr "Resimler ile ilgili ayarların nasıl işleyeceğini içeren bölüm."
 
 #. Description of settings category with label #14081 "File lists"
 #: system/settings/settings.xml
 msgctxt "#36305"
 msgid ""
 "This category contains the settings for how picture file lists are handled."
-msgstr "Bu kategori resim dosyası listelerinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori resim dosyası listelerinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #: system/settings/settings.xml
 msgctxt "#36306"
@@ -19395,7 +19410,7 @@ msgctxt "#36311"
 msgid ""
 "This category contains the settings for how the picture slideshow is "
 "handled."
-msgstr "Bu kategori resim slayt gösterisinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori resim slayt gösterisinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #12378 "Amount of time to display each
 #. image"
@@ -19427,7 +19442,7 @@ msgstr "Hava durumu ile ilgili ayarları içeren bölüm."
 msgctxt "#36316"
 msgid ""
 "This category contains the settings for how the weather service is handled."
-msgstr "Bu kategori hava durumu hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori hava durumu hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of settings category with label #0 "Locations"
 #: system/settings/settings.xml
@@ -19447,7 +19462,7 @@ msgstr "Varsayılan hava durumu bilgisi kaynağını belirtin. Seçenekler için
 #: system/settings/settings.xml
 msgctxt "#36319"
 msgid "Section containing settings for how services are handled."
-msgstr "Hizmetler ile ilgili ayarların nasıl işleğeceğini içeren bölüm."
+msgstr "Hizmetler ile ilgili ayarların nasıl işleyeceğini içeren bölüm."
 
 #. Description of settings category with label #16000 "General"
 #: system/settings/settings.xml
@@ -19468,7 +19483,7 @@ msgctxt "#36322"
 msgid ""
 "This category contains the settings for how the UPnP service is handled. "
 "UPnP is also called DLNA on most consumer electronics."
-msgstr "Bu kategori UPnP hizmetinin nasıl işleğeceği ile ilgili ayarları içerir. UPnP, çoğu tüketici ürününde DLNA olarak da anılmaktadır."
+msgstr "Bu kategori UPnP hizmetinin nasıl işleyeceği ile ilgili ayarları içerir. UPnP, çoğu tüketici ürününde DLNA olarak da anılmaktadır."
 
 #. Description of setting with label #21360 "Share my libraries"
 #: system/settings/settings.xml
@@ -19506,7 +19521,7 @@ msgctxt "#36327"
 msgid ""
 "This category contains the settings for how the web server service and the "
 "application control service is handled."
-msgstr "Bu kategori web sunucusu hizmetinin ve uygulama kontrol hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori web sunucusu hizmetinin ve uygulama kontrol hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #263 "Allow remote control via HTTP"
 #: system/settings/settings.xml
@@ -19527,14 +19542,14 @@ msgstr "Web sunucusu bağlantı noktasını tanımla."
 msgctxt "#36330"
 msgid ""
 "Define the web server username. Must be set when authentication is enabled."
-msgstr ""
+msgstr "Web sunucusu kullanıcı adını tanımla. Kimlik doğrulama etkin olduğunda zorunludur."
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
 "Define the web server password. Must be set when authentication is enabled."
-msgstr ""
+msgstr "Web sunucusu parolası tanımla. Kimlik doğrulama etkin olduğunda zorunludur."
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19548,7 +19563,7 @@ msgctxt "#36333"
 msgid ""
 "This category contains the settings for how the remote control service is "
 "handled."
-msgstr "Bu kategori uzaktan denetim hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori uzaktan denetim hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #791 "Allow remote control from programs
 #. on this system"
@@ -19608,7 +19623,7 @@ msgctxt "#36341"
 msgid ""
 "This category contains the settings for how the Zeroconf network discovery "
 "service is handled, required for AirPlay."
-msgstr "Bu kategori AirPlay için gereken Zeroconf ağ bulma hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori AirPlay için gereken Zeroconf ağ bulma hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #1260 "Announce services to other
 #. systems"
@@ -19645,7 +19660,7 @@ msgctxt "#36346"
 msgid ""
 "This category contains the settings for how the SMB client (Samba) service "
 "is handled."
-msgstr "Bu kategori SMB istemcisi (Samba) hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori SMB istemcisi (Samba) hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #1207 "WINS server"
 #: system/settings/settings.xml
@@ -19750,7 +19765,7 @@ msgstr "Tam renk aralığı (0-255) yerine sınırlı renk aralığı (16-235) k
 #: system/settings/settings.xml
 msgctxt "#36360"
 msgid "This category contains the settings for how audio output is handled."
-msgstr "Bu kategori ses çıkışınin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori ses çıkışınin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #337 "Output configuration"
 #: system/settings/settings.xml
@@ -19857,13 +19872,13 @@ msgctxt "#36373"
 msgid ""
 "Configure how interface sounds are handled, such as menu navigation and "
 "important notifications."
-msgstr "Menü gezintisi ve önemli bildirimler gibi arayüz seslerinin nasıl işleğeceğini yapılandır."
+msgstr "Menü gezintisi ve önemli bildirimler gibi arayüz seslerinin nasıl işleyeceğini yapılandır."
 
 #. Description of settings category with label #15087 "Input"
 #: system/settings/settings.xml
 msgctxt "#36374"
 msgid "This category contains the settings for how input devices are handled."
-msgstr "Bu kategori giriş aygıtlarınin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori giriş aygıtlarının nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #35000 "Peripherals"
 #: system/settings/settings.xml
@@ -19894,7 +19909,7 @@ msgstr "Arabirimi kontrol etmek için bir fare veya dokunmatik ekran aygıtı ku
 #: system/settings/settings.xml
 msgctxt "#36378"
 msgid "Use a game controller to control the interface."
-msgstr ""
+msgstr "Arayüzü kontrol etmek için oyun kumandası kullan."
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -19902,7 +19917,7 @@ msgctxt "#36379"
 msgid ""
 "This category contains the settings for how Internet access is handled. The "
 "default web interface can also be selected here."
-msgstr "Bu kategori internet erişiminin nasıl işleğeceği ile ilgili ayarları içerir. Varsayılan web arabirimi buradan seçilebilir."
+msgstr "Bu kategori internet erişiminin nasıl işleyeceği ile ilgili ayarları içerir. Varsayılan web arabirimi buradan seçilebilir."
 
 #. Description of setting with label #708 "Use proxy server"
 #: system/settings/settings.xml
@@ -20010,7 +20025,7 @@ msgctxt "#36395"
 msgid ""
 "This category contains the settings for how the master lock function is "
 "handled."
-msgstr "Bu kategori yönetici kilit işlevinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori yönetici kilit işlevinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of setting with label #20100 "Master lock code and settings"
 #: system/settings/settings.xml
@@ -20042,7 +20057,7 @@ msgstr "Bu uygulama kapatılmadan önce en fazla yeniden deneme sayısını tan�
 msgctxt "#36399"
 msgid ""
 "This category contains the settings for how the cache function is handled."
-msgstr "Bu kategori önbellek işlevinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori önbellek işlevinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of settings category with label #14025 "Video/Audio/DVD cache -
 #. Hard disk"
@@ -20180,7 +20195,7 @@ msgstr "VDPAU mikseri atlayarak düşük güçlü sistemlerde kaynak tasarrufu s
 #: system/settings/settings.xml
 msgctxt "#36422"
 msgid "Update official add-ons from"
-msgstr ""
+msgstr "Resmi eklentileri buradan güncelle:"
 
 #. Description of setting with label #36422 "Update official add-ons from"
 #: system/settings/settings.xml
@@ -20281,13 +20296,13 @@ msgstr "İşletim sistemi klavye düzenini seçin."
 #: system/settings/settings.xml
 msgctxt "#36437"
 msgid "Official repositories only (default)"
-msgstr ""
+msgstr "Sadece resmi depodan (varsayılan)"
 
 #. Option for setting "System -> Add-ons -> Update official add-ons from"
 #: system/settings/settings.xml
 msgctxt "#36438"
 msgid "Any repositories"
-msgstr ""
+msgstr "Herhangi bir depodan"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -20922,21 +20937,21 @@ msgstr "Video öykünmesi çıkışı duyarlılığı. Şeritleri göstermeyen e
 msgctxt "#36600"
 msgid ""
 "This category contains the settings for how the music library is handled."
-msgstr "Bu kategori müzik kitaplığının nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori müzik kitaplığının nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of settings category with label #14081 "File lists"
 #: system/settings/settings.xml
 msgctxt "#36601"
 msgid ""
 "This category contains the settings for how music file lists are handled."
-msgstr "Bu kategori müzik dosyaları listesinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori müzik dosyaları listesinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of settings category with label #1273 "AirPlay"
 #: system/settings/settings.xml
 msgctxt "#36602"
 msgid ""
 "This category contains the settings for how the AirPlay service is handled."
-msgstr "Bu kategori AirPlay hizmetinin nasıl işleğeceği ile ilgili ayarları içerir."
+msgstr "Bu kategori AirPlay hizmetinin nasıl işleyeceği ile ilgili ayarları içerir."
 
 #. Description of settings category with label #14220 Display
 #: system/settings/settings.xml
@@ -21136,7 +21151,7 @@ msgid ""
 "Anyone who has access to the web interface will be able to completely "
 "control this application and, therefore, this device, so it should never be "
 "exposed on the Internet. A password should be set below. Proceed?"
-msgstr ""
+msgstr "Web arayüzüne erişimi olan herkes bu uygulamayı, hatta bu cihazı kontrol edebilir. Bu sebepten ötürü bu bilgiler internette açığa çıkmamalıdır. Aşağıdan bir parolanın ayarlanması gerekmektedir. Devam edilsin mi?"
 
 #. Text in confirm dialog when enabling setting "Services -> Control -> Allow
 #. remote control from applications on other systems"
@@ -21157,7 +21172,7 @@ msgid ""
 "Anyone who has access to the web interface will be able to completely "
 "control this application and, therefore, this device, so it should be "
 "secured by a password. Are you sure you want to disable authentication?"
-msgstr ""
+msgstr "Web arayüzüne erişimi olan herkes bu uygulamayı, hatta bu cihazı kontrol edebilir. Bu sebepten ötürü bir şifre ile koruması gerekmektedir. Kimlik doğrulamayı devre dışı bırakmak istediğinize emin misiniz?"
 
 #. Text in error dialog when trying to enter an invalid web server
 #. configuration
@@ -21165,7 +21180,7 @@ msgstr ""
 msgctxt "#36635"
 msgid ""
 "If web server authentication is enabled, a password must be entered as well."
-msgstr ""
+msgstr "Eğer web sunucusu Kimlik doğrulaması etkinleştirildiyse bir parola ayarlanması gerekmektedir."
 
 #. Text in error dialog when trying to enter an invalid web server
 #. configuration by enabling authentication without a password set
@@ -21174,7 +21189,7 @@ msgctxt "#36636"
 msgid ""
 "You must first enter a password before web server authentication can be "
 "enabled."
-msgstr ""
+msgstr "Web sunucusu kimlik doğrulaması etkinleştirilmeden önce parolanın ayarlanması gerekmektedir."
 
 #. Text in confirm dialog when installing addon from zip
 #: xbmc/addons/GUIWindowAddonBrowser.cpp
@@ -21182,7 +21197,7 @@ msgctxt "#36637"
 msgid ""
 "Note that add-ons installed from zip (excluding served repositories) will "
 "not auto-update and must be manually updated. Would you like to proceed?"
-msgstr ""
+msgstr "Zip dosyasından yüklenen eklentiler (sunulmuş depolar hariç) otomatik olarak güncellenmeyecektir ve el ile güncellenmeleri gerekecektir. Devam etmek istiyor musunuz?"
 
 #. Description of setting with label #729 "Enable SSL"
 #: system/settings/settings.xml
@@ -21835,7 +21850,7 @@ msgstr "BPM"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#38081"
 msgid "Release status"
-msgstr ""
+msgstr "Yayınlanma durumu"
 
 #. Description of section #14200 "Player""
 #: system/settings/settings.xml
@@ -22000,7 +22015,7 @@ msgstr "Dışarı aktarılacak öğeler"
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38307"
 msgid "Include artwork such as thumbnails and fanart"
-msgstr ""
+msgstr "Küçük resimler ve fanart gibi resimleri dahil et"
 
 #: xbmc/settings/dialogs/GUIDialogLibExportSettings.cpp
 msgctxt "#38308"
@@ -22204,7 +22219,7 @@ msgctxt "#39004"
 msgid ""
 "This category provides access to the windows for source management and "
 "library management facilities"
-msgstr ""
+msgstr "Bu kategori kaynak ve kitaplık yönetimi bölümleri için erişim imkanı sağlar"
 
 #. Description of setting "Videos... with label #14242
 #: system/settings/settings.xml
@@ -22351,7 +22366,7 @@ msgctxt "#39028"
 msgid ""
 "Addon \"{0:s}\"[CR]Origin \"{1:s}\"[CR]Version \"{2:s}\"[CR]- will uninstall"
 " and be replaced. Would you like to proceed?"
-msgstr ""
+msgstr "Eklenti \"{0:s}\"[CR]Kaynak\"{1:s}\"[CR]Versiyon \"{2:s}\"[CR]-kaldırılacak ve değiştirilecek. Devam etmek istiyor musunuz?"
 
 #. Media source, a filter and smart playlist rule option
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
@@ -22485,12 +22500,12 @@ msgstr "Hata ayıklama günlüğünü paylaş"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#39119"
 msgid "Last modified"
-msgstr ""
+msgstr "Son değiştirilme"
 
 #: xbmc/settings/dialogs/GUIDialogContentSettings.cpp
 msgctxt "#39120"
 msgid "Skip filename matching for external audio tracks"
-msgstr ""
+msgstr "Harici ses dosyaları için dosya adı eşleştirmeyi atla"
 
 #. Label for section of settings controling what is shown on the library
 #. windows
@@ -22509,17 +22524,17 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39123"
 msgid "Artwork"
-msgstr "Çizim"
+msgstr "Resim"
 
 #: system/settings/settings.xml
 msgctxt "#39125"
 msgid "Enable tag reading in file view"
-msgstr ""
+msgstr "Dosya görünümünde etiket okumayı etkinleştir"
 
 #: system/settings/settings.xml
 msgctxt "#39127"
 msgid "Use all local image files as artwork"
-msgstr ""
+msgstr "Bütün yerel resim dosyalarını kapak resmi olarak kullan"
 
 #. Description of setting with label #39127 "Use all local image files as
 #. artwork"
@@ -22573,7 +22588,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39135"
 msgid "Thumbnail image files"
-msgstr ""
+msgstr "Küçük resim dosyaları"
 
 #. Description of setting with label #39135 "Thumbnail image files"
 #: system/settings/settings.xml
@@ -22587,7 +22602,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#39137"
 msgid "Artwork level"
-msgstr ""
+msgstr "Resim seviyesi"
 
 #. Description of setting with label #39137 "Artwork level"
 #: system/settings/settings.xml
@@ -22671,7 +22686,7 @@ msgstr ""
 #. Display Hardware scaling filter setting toggle
 msgctxt "#39151"
 msgid "Display hardware scaling filter"
-msgstr ""
+msgstr "Donanım ölçeklendirme filtresini göster"
 
 #. Description
 msgctxt "#39152"
@@ -22683,4 +22698,4 @@ msgstr ""
 #: xbmc/windows/GUIWindowSystemInfo.cpp
 msgctxt "#39153"
 msgid "Windowing system:"
-msgstr ""
+msgstr "Pencereleme sistemi:"

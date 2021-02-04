@@ -9,6 +9,7 @@
 # 陳小昭 <jeremyx@ms9.hinet.net>, 2015-2016
 # Julian Lai <laichiaheng@outlook.com>, 2016
 # L ouies <louies0623@gmail.com>, 2019
+# Morgan Wong <pbodq2@yahoo.com.hk>, 2021
 # peter_ng, 2020
 # Samuel Lin <mubiesam@gmail.com>, 2015
 # Ji Hao Yu <yuhoward1206@outlook.com>, 2015
@@ -18,8 +19,8 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-14 18:00+0000\n"
-"Last-Translator: TeamKODI <transifex.translator@gmail.com>\n"
+"PO-Revision-Date: 2021-01-25 02:29+0000\n"
+"Last-Translator: Morgan Wong <pbodq2@yahoo.com.hk>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/teamxbmc/kodi-main/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -852,7 +853,7 @@ msgstr "載入電影詳細資料"
 #: xbmc/addons/Addon.cpp system/settings/settings.xml
 msgctxt "#199"
 msgid "Web interface"
-msgstr "Web 介面"
+msgstr "Web 介面皮膚"
 
 msgctxt "#200"
 msgid "Audio encoders"
@@ -1177,7 +1178,7 @@ msgstr "腳本輸出"
 #: system/settings/settings.xml
 msgctxt "#263"
 msgid "Allow remote control via HTTP"
-msgstr "允許 HTTP 遠端遙控"
+msgstr "允許 HTTP 遠端遙控 (網頁版Kodi)"
 
 #. Label for a context menu entry / button to start/schedule a recording
 #: xbmc/music/windows/GUIWindowMusicBase.cpp xbmc/pvr/PVRGUIActions.cpp
@@ -1666,7 +1667,7 @@ msgstr "排序：年份"
 
 msgctxt "#367"
 msgid "Sort by: Rating"
-msgstr "排序：評等"
+msgstr "排序：網站評分"
 
 msgctxt "#368"
 msgid "IMDb"
@@ -1967,15 +1968,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "從 {0:s} 在 {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "偵測不到光碟機"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "您需要一台光碟機來播放這個視訊"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr ""
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -2522,7 +2531,7 @@ msgstr "年份"
 #: addons/skin.estuary/xml/DialogFullScreenInfo.xml
 msgctxt "#563"
 msgid "Rating"
-msgstr "評等"
+msgstr "網站評分"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#564"
@@ -2638,7 +2647,7 @@ msgstr "編輯播放列表"
 #: addons/skin.estuary/xml/Includes_MediaMenu.xml
 msgctxt "#587"
 msgid "Filter"
-msgstr "過濾"
+msgstr "篩選"
 
 msgctxt "#588"
 msgid "Cancel party mode"
@@ -3351,7 +3360,7 @@ msgstr "遠端遙控"
 #: system/settings/settings.xml
 msgctxt "#791"
 msgid "Allow remote control by programs on this system"
-msgstr "允許本機的程式遠端遙控"
+msgstr "允許本裝置的其他程式遙控Kodi"
 
 #: system/settings/settings.xml
 msgctxt "#792"
@@ -3946,7 +3955,7 @@ msgstr "輸入網路位址"
 #: system/settings/settings.xml
 msgctxt "#1052"
 msgid "Require authentication"
-msgstr ""
+msgstr "使用身份驗證"
 
 #: system/settings/settings.xml
 msgctxt "#1053"
@@ -3954,7 +3963,7 @@ msgid ""
 "Choose whether requests to the web server require a username and a password,"
 " which must be set below if enabled. It is recommended to always leave this "
 "setting enabled."
-msgstr ""
+msgstr "選擇是否需要帳號及密碼才能登入。建議\"是\"。"
 
 #: system/settings/settings.xml
 msgctxt "#1180"
@@ -4158,7 +4167,7 @@ msgstr "AirTunes"
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 msgctxt "#1275"
 msgid "Filter {0:s}"
-msgstr "過濾{0:s}"
+msgstr "篩選{0:s}"
 
 msgctxt "#1300"
 msgid "Custom audio device"
@@ -4172,6 +4181,11 @@ msgstr "自訂直通輸出裝置"
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "音量控制階數"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr ""
 
 #. Weather token
 msgctxt "#1375"
@@ -4965,12 +4979,12 @@ msgstr "曲目資訊"
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10136"
 msgid "Smart playlist editor"
-msgstr "智慧型播放清單編輯器"
+msgstr "智慧型播放列表編輯器"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10137"
 msgid "Smart playlist rule editor"
-msgstr "智慧型播放清單規則編輯器"
+msgstr "智慧型播放列表規則編輯器"
 
 #: xbmc/guilib/WindowIDs.h
 msgctxt "#10139"
@@ -5857,7 +5871,7 @@ msgstr "電池電量不足"
 #: xbmc/interfaces/legacy/Window.cpp
 msgctxt "#13100"
 msgid "Flicker filter"
-msgstr "閃爍過濾"
+msgstr "閃爍濾鏡"
 
 #: system/settings/settings.xml
 msgctxt "#13101"
@@ -6403,7 +6417,7 @@ msgstr "電影資訊"
 #: xbmc/video/windows/GUIWindowVideoBase.cpp
 msgctxt "#13347"
 msgid "Queue item"
-msgstr "佇列項目"
+msgstr "加進播放列表"
 
 msgctxt "#13348"
 msgid "Search IMDb..."
@@ -6415,7 +6429,7 @@ msgstr "掃描新內容"
 
 msgctxt "#13350"
 msgid "Current playlist"
-msgstr "目前的播放清單"
+msgstr "目前的播放列表"
 
 #: Not used anymore. Use #10523 instead.
 msgctxt "#13351"
@@ -7018,7 +7032,7 @@ msgstr "內嵌式美術圖"
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#13520"
 msgid "Embedded fanart"
-msgstr "內嵌式相關圖片"
+msgstr "內嵌式劇照"
 
 #. Heading for selection of a type of art e.g. "thumb", "poster", "fanart"
 #. etc.
@@ -7984,7 +7998,7 @@ msgstr "應用程式控制"
 #: system/settings/settings.xml
 msgctxt "#14276"
 msgid "Allow remote control from applications on this system"
-msgstr "允許本機的應用程式遠端遙控"
+msgstr "允許本裝置的其他程式遙控Kodi"
 
 #: system/settings/settings.xml
 msgctxt "#14277"
@@ -8421,7 +8435,7 @@ msgstr "管理..."
 #: xbmc/video/dialogs/GUIDialogVideoInfo.cpp
 msgctxt "#16107"
 msgid "Edit sort title"
-msgstr "編輯標題"
+msgstr "編輯類別標題"
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#16200"
@@ -10263,7 +10277,7 @@ msgstr "每日喚醒時間 (HH:MM:SS)"
 #. unused?
 msgctxt "#19249"
 msgid "Filter channels"
-msgstr "過濾頻道"
+msgstr "篩選頻道"
 
 #. Settings -> PVR -> Playback -> Switch to fullscreen value
 #: system/settings/settings.xml
@@ -11703,7 +11717,7 @@ msgstr "確定選擇的資料夾是可寫入的而且新資料夾名稱是有效
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20074"
 msgid "MPAA rating"
-msgstr "MPAA 分級"
+msgstr "美國電影協會分級"
 
 #: xbmc/windows/GUIWindowLoginScreen.cpp
 msgctxt "#20075"
@@ -12777,7 +12791,7 @@ msgstr "最近加入的影集"
 #: xbmc/playlists/SmartPlaylist.cpp
 msgctxt "#20388"
 msgid "Studios"
-msgstr "影片製作公司"
+msgstr "製作公司"
 
 #: xbmc/dialogs/GUIDialogMediaFilter.cpp
 #: xbmc/dialogs/GUIDialogSmartPlaylistEditor.cpp
@@ -17140,7 +17154,7 @@ msgstr "將{0:s}往左移動({1:d})"
 #: system/settings/settings.xml
 msgctxt "#35100"
 msgid "Enable controller support"
-msgstr ""
+msgstr "啟用遊戲手制支援。"
 
 #: system/peripherals.xml
 msgctxt "#35102"
@@ -17485,7 +17499,7 @@ msgstr "暫停 / 繼續"
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
 msgctxt "#35225"
 msgid "Video filter"
-msgstr "影像濾鏡"
+msgstr "視訊篩選"
 
 #. Label of button in the in-game menu for advanced settings
 #: addons/skin.estuary/xml/Custom_1101_SettingsList.xml
@@ -19228,7 +19242,7 @@ msgid ""
 "[B]%B[/B]: Album, [B]%G[/B]: Genre, [B]%Y[/B]: Year, [B]%F[/B]: FileName, "
 "[B]%D[/B]: Duration, [B]%J[/B]: Date, [B]%R[/B]: Rating, [B]%I[/B]: "
 "FileSize."
-msgstr "控制儲存的音樂會如何運用標籤資訊來命名。支援的標籤：[B]%N[/B]：音軌編號, [B]%S[/B]：光碟編號, [B]%A[/B]：演出者, [B]%T[/B]：標題, [B]%B[/B]：專輯, [B]%G[/B]：類別, [B]%Y[/B]：年份, [B]%F[/B]：檔案名稱, [B]%D[/B]：播放時間, [B]%J[/B]：日期, [B]%R[/B]：評等, [B]%I[/B]: 檔案大小。"
+msgstr "控制儲存的音樂會如何運用標籤資訊來命名。支援的標籤：[B]%N[/B]：音軌編號, [B]%S[/B]：光碟編號, [B]%A[/B]：演出者, [B]%T[/B]：標題, [B]%B[/B]：專輯, [B]%G[/B]：類別, [B]%Y[/B]：年份, [B]%F[/B]：檔案名稱, [B]%D[/B]：播放時間, [B]%J[/B]：日期, [B]%R[/B]：評分, [B]%I[/B]: 檔案大小。"
 
 #. Description of setting with label #621 "Encoder"
 #: system/settings/settings.xml
@@ -19479,7 +19493,7 @@ msgctxt "#36323"
 msgid ""
 "Enables the UPnP server. This allows you to stream media in your libraries "
 "to a UPnP client."
-msgstr "啟用 UPnP 服務。此功能可讓您將資料庫內容串流至 UPnP 用戶端。"
+msgstr "啟用 UPnP 伺務器。此功能可讓您將資料庫內容串流至其他 UPnP 用戶端。"
 
 #. Description of setting with label #20188 "Announce library updates"
 #: system/settings/settings.xml
@@ -19493,7 +19507,7 @@ msgctxt "#36325"
 msgid ""
 "Enable the UPnP client. This allows you to stream media from any UPnP server"
 " with a control point and control playback from that server."
-msgstr "啟用 UPnP 用戶端。這將允許您從任何 UPnP 伺服器串流媒體且包含播放控制的功能。"
+msgstr "啟用 UPnP 用戶端。這將允許您從其他 UPnP 伺服器串流媒體至此，且包含播放控制的功能。"
 
 #. Description of setting with label #21361 "Look for remote UPnP players"
 #: system/settings/settings.xml
@@ -19517,7 +19531,7 @@ msgctxt "#36328"
 msgid ""
 "Enable remote users to control this application through the built-in web "
 "server. Never expose the web server port to the Internet."
-msgstr ""
+msgstr "容許用戶透過HTTP控制本Kodi。基於資安考慮，別把埠號開通至公網！"
 
 #. Description of setting with label #730 "Port"
 #: system/settings/settings.xml
@@ -19530,14 +19544,14 @@ msgstr "設定網路伺服器的連接埠。"
 msgctxt "#36330"
 msgid ""
 "Define the web server username. Must be set when authentication is enabled."
-msgstr ""
+msgstr "設定HTTP登入用的帳號。"
 
 #. Description of setting with label #1048 "Password"
 #: system/settings/settings.xml
 msgctxt "#36331"
 msgid ""
 "Define the web server password. Must be set when authentication is enabled."
-msgstr ""
+msgstr "設定HTTP登入用的密碼。"
 
 #. Description of setting with label #199 "Web interface"
 #: system/settings/settings.xml
@@ -19561,7 +19575,7 @@ msgid ""
 "Allow programs on this device to control this application via the JSON-RPC "
 "over WebSocket, JSON-RPC over TCP, or EventServer protocol, without "
 "authentication."
-msgstr ""
+msgstr "本裝置的其他程式可透過JSON-RPC以WebSocket或TCP或EventServer協定來控制Kodi，而無需身份驗證。"
 
 #. Description of setting with label #792 "Port"
 #: system/settings/settings.xml
@@ -19591,7 +19605,7 @@ msgid ""
 "authentication. It allows anyone with access to the network to completely "
 "control this application and, therefore, this device. Never expose these "
 "interfaces to the Internet."
-msgstr ""
+msgstr "網絡上的其他程式可透過JSON-RPC以WebSocket或TCP或EventServer協定來完全控制Kodi甚至本裝置，而無需身份驗證。基於資安考慮，別把這些介面暴露至外網。"
 
 #. Description of setting with label #795 "Initial repeat delay (ms)"
 #: system/settings/settings.xml
@@ -19897,7 +19911,7 @@ msgstr "使用滑鼠或觸控螢幕裝置來控制介面。注意：當沒有安
 #: system/settings/settings.xml
 msgctxt "#36378"
 msgid "Use a game controller to control the interface."
-msgstr ""
+msgstr "使用遊戲控制器去操作Kodi。"
 
 #. Description of settings category with label #798 Internet access
 #: system/settings/settings.xml
@@ -20183,7 +20197,7 @@ msgstr "為節省資源，在低階系統中不進行VDPAU影像處理，但會�
 #: system/settings/settings.xml
 msgctxt "#36422"
 msgid "Update official add-ons from"
-msgstr ""
+msgstr "更新官方附加元件時的來源地"
 
 #. Description of setting with label #36422 "Update official add-ons from"
 #: system/settings/settings.xml
@@ -20194,7 +20208,7 @@ msgid ""
 "add-ons beta repository this option can be switched to [Any repositories] "
 "(bear in mind this is a less secure option and enabling it could cause "
 "incompatibility and crashes)."
-msgstr ""
+msgstr "一般來說，官方的附加元件是不應從非官方元件庫進行更新，是基於安全性及兼容性考量。然而為了測試目的，來源地提供了任何元件庫的選項。"
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -20284,13 +20298,13 @@ msgstr "選擇作業系統鍵盤佈局。"
 #: system/settings/settings.xml
 msgctxt "#36437"
 msgid "Official repositories only (default)"
-msgstr ""
+msgstr "官方元件庫(預設)"
 
 #. Option for setting "System -> Add-ons -> Update official add-ons from"
 #: system/settings/settings.xml
 msgctxt "#36438"
 msgid "Any repositories"
-msgstr ""
+msgstr "任何元件庫"
 
 #. Description of setting "System -> Audio output -> Volume control steps"
 #. with label #1302
@@ -22291,7 +22305,7 @@ msgctxt "#39017"
 msgid ""
 "Enables UPnP. This allows you to stream media in your libraries to a UPnP "
 "client and to detect remote UPnP servers."
-msgstr "啟用UPnp可讓您將資料庫內容串流至UPnP客戶端裝置，並偵測遠端的UPnP伺服器。"
+msgstr "啟用UPnP可讓您將資料庫內容串流至UPnP用戶端裝置，並偵測遠端的UPnP伺服器。"
 
 #: xbmc/addons/GUIDialogAddonInfo.cpp
 msgctxt "#39018"

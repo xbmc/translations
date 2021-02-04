@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-15 16:51+0000\n"
+"PO-Revision-Date: 2021-01-29 14:56+0000\n"
 "Last-Translator: rimas <riks_12@hot.ee>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/teamxbmc/kodi-main/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
@@ -1960,15 +1960,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "{0:s} tuul {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Optilist kettaseadet ei leitud"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Video esitamiseks on vaja optilist kettaseadet"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr "See video on salvestatud optilisele kettale (nt DVD, Blu-ray) ja seda ei saa esitada, kuna antud seadmel pole sobivat draivi."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -4165,6 +4173,11 @@ msgstr "Kohandatud läbiviigu seade"
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "Helitaseme astmed"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr "Tuuline"
 
 #. Weather token
 msgctxt "#1375"
@@ -7707,7 +7720,7 @@ msgstr ""
 #: system/settings/settings.xml
 msgctxt "#14128"
 msgid "Allow double refresh rates"
-msgstr "Lubage kahekordsed värskendussagedused"
+msgstr "Luba kahekordsed värskendussagedused"
 
 #: system/settings/settings.xml
 msgctxt "#14200"
@@ -13820,7 +13833,7 @@ msgstr "Esmasel sisenemisel"
 #: system/settings/settings.xml
 msgctxt "#21472"
 msgid "Include \"All seasons\" and \"Specials\""
-msgstr "Kaasa \"Kõik hooajad\" ja \"Lisaepisoodid\""
+msgstr "Kaasa \"Kõik hooajad\" ja \"Eriepisoodid\""
 
 #. Description of setting with label #21472 "Include All Seasons and Specials"
 #: system/settings/settings.xml
@@ -13828,7 +13841,7 @@ msgctxt "#21473"
 msgid ""
 "Whether or not to consider the items from \"All seasons\" and \"Specials\" "
 "in the unwatched item selection."
-msgstr "Kas „Kõik hooajad” ja „Eriperioodid” üksused lisatakse vaatamata üksuste loendisse."
+msgstr "Kas loendite ”Kõik hooajad” ja ”Eriperioodid” üksused märgitakse mitte vaadatuks."
 
 #. One of the values valid for settings #21472 "Include All Seasons and
 #. Specials"
@@ -16567,7 +16580,7 @@ msgid ""
 "except that after the selected period of time audio enters a suspended "
 "state.[CR][Off] Audio output enters a suspended state. Note: Sounds can be "
 "missed if audio enters suspended state."
-msgstr "Vali käitumine, kui taasesituse või kasutajaliidese jaoks pole heli vaja.[CR][Alati] Väljub pidev kuuldamatu signaal, see hoiab vastuvõtva heliseadme elus uute heli jaoks, kuid see võib blokeerida ka teiste rakenduste heli.[CR][1-10 minutit] Sama mis [Alati], välja arvatud see, et pärast valitud ajavahemiku heli saatmine peatub[CR][Väljas]Heli väljund lülitub ooteseisundisse. Märkus. Ooteseisundis võivad helid jääda märkamata."
+msgstr "Vali käitumine, kui taasesituse või kasutajaliidese jaoks pole heli vaja.[CR][Alati] Väljub pidev kuuldamatu signaal, see hoiab vastuvõtva heliseadme elus uute heli jaoks, kuid see võib blokeerida ka teiste rakenduste heli.[CR][1-10 minutit] Sama mis [Alati], välja arvatud see, et pärast valitud ajavahemiku heli saatmine peatub[CR][Väljas] Heli väljund lülitub ooteseisundisse. Märkus. Ooteseisundis võivad helid jääda märkamata."
 
 #. Indicates if Audio Engine should transmit noise or real silence
 #: system/settings/settings.xml
@@ -19884,7 +19897,7 @@ msgid ""
 "Use a mouse or touch screen device to control the interface. Note: Disabling"
 " will cause you to lose control over this application when no keyboard or "
 "remote is present."
-msgstr "Kasuta liidese juhtimiseks hiirt või puuteekraaniga seadet. Märkus. Selle keelamisel kaob selle rakenduse üle kontrolli, kui klaviatuuri või kaugjuhtimispulti pole."
+msgstr "Kasuta liidese juhtimiseks hiirt või puuteekraaniga seadet. Märkus. Selle keelamisel kaob rakenduse üle kontroll, kui klaviatuuri või kaugjuhtimispulti pole."
 
 #. Description of setting with label #35100 "Enable controller support"
 #: system/settings/settings.xml

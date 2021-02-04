@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-15 07:55+0000\n"
+"PO-Revision-Date: 2021-01-25 13:22+0000\n"
 "Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/teamxbmc/kodi-main/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -1964,15 +1964,23 @@ msgctxt "#434"
 msgid "From {0:s} at {1:d} {2:s}"
 msgstr "От {0:s} с {1:d} {2:s}"
 
+#. Headline of a dialog that pops up when a user tries to play a video that is
+#. located on an optical disc (Blu-ray, DVD) but the current KODI device
+#. doesn't have the according drive
 #: xbmc/Application.cpp
 msgctxt "#435"
 msgid "No optical disc drive detected"
 msgstr "Няма оптично устройство"
 
-#: xbmc/Application.cpp
+#. Message body of a dialog that pops up when a user tries to play a video
+#. that is located on an optical disc (Blu-ray, DVD) but the current KODI
+#. device doesn't have the according drive
+#: xbmc/storage/MediaManager.cpp
 msgctxt "#436"
-msgid "You need an optical disc drive to play this video"
-msgstr "Имате нужда от оптично устройство за това видео"
+msgid ""
+"This video is stored on an optical disc (e.g. DVD, Blu-ray) and cannot be "
+"played as your device does not have an appropriate drive."
+msgstr "Това видео се съхранява на диск (като DVD или Blu-ray) и не може да бъде възпроизведено, тъй като не разполагате с подходящо устройство."
 
 msgctxt "#437"
 msgid "Removable disk"
@@ -4125,7 +4133,7 @@ msgstr "Поддръжка на видео и снимки чрез AirPlay"
 
 msgctxt "#1269"
 msgid "Allow volume control"
-msgstr "Разреши регулирането силата на звука"
+msgstr "Регулиране на силата на звука"
 
 msgctxt "#1270"
 msgid "Enable AirPlay support"
@@ -4139,7 +4147,7 @@ msgstr "Име на устройството"
 #: system/settings/settings.xml
 msgctxt "#1272"
 msgid "Use password protection"
-msgstr "Защити с парола"
+msgstr "Защитаване с парола"
 
 #: system/settings/settings.xml xbmc/network/NetworkServices.cpp
 msgctxt "#1273"
@@ -4169,6 +4177,11 @@ msgstr "Задайте устройство, което да декодира з
 msgctxt "#1302"
 msgid "Volume control steps"
 msgstr "Стъпки за контрол силата на звука"
+
+#. Weather token
+msgctxt "#1374"
+msgid "Breezy"
+msgstr "Прохладно"
 
 #. Weather token
 msgctxt "#1375"
